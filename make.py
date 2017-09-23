@@ -20,7 +20,7 @@ class website_builder(object):
     template_top = 'src/html/tmpl_top.html'
     template_bot = 'src/html/tmpl_bot.html'
     src_dir = 'content/'
-    src_imgs = './src/imgs/'
+    src_imgs = 'src/imgs/'
 
     def __init__(self):
         """Prepare output directory and files"""
@@ -30,7 +30,12 @@ class website_builder(object):
         """Read from src directory and generate output for website"""
         top = self.read(self.template_top)
         self.write(top)
+        sec_name = False
         for markdown_fn in glob.glob('{}*/*.md'.format(self.src_dir)):
+            new_sec_name = re.search('\/([^\/]+)\/[^\/]+\.md', markdown_fn).group(1)
+            if new_sec_name != sec_name:
+                self.start_section(new_sec_name)
+                sec_name = new_sec_name
             self.parse_md(markdown_fn)
         bot = self.read(self.template_bot)
         self.write(bot)
@@ -49,6 +54,10 @@ class website_builder(object):
         fn = raw_fn if raw_fn else self.index_html
         with open(fn, 'ab') as fn_:
             fn_.write(content)
+
+    def start_section(self, sec_name):
+        """Start a linkable section header"""
+        self.write('\n<h1 id="{sec_name}">{sec_name}</h1>\n'.format(sec_name=sec_name))
 
     def parse_md(self, fn):
         """Parse each line of the markdown file"""
@@ -81,7 +90,7 @@ class website_builder(object):
         # Assemble HTML
         classes = 'class="twelve columns"'
         link_html = '<a href="{}"><i>(Source)</i></a>'.format(orig_link) if orig_link else ''
-        header = '<div class="row br"><h4 {}>{} {}</h4></div>'.format(classes, title, link_html)
+        header = '<div class="row br"><h5 {}>{} {}</h5></div>'.format(classes, title, link_html)
         for image_name in glob.glob('{}{}.*'.format(self.src_imgs, base_name)):
             break
         else:
@@ -116,7 +125,8 @@ class website_builder(object):
 
     def other(self, line):
         """Write single line notes/extra information"""
-        logger.debug('No known action for: {}'.format(line))
+        # logger.debug('Writing paragraph for: {}'.format(line))
+        self.write('<p>{}</p>'.format(line))
         pass
 
     def italics(self, raw_line):

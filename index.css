@@ -4,12 +4,20 @@ img {
     margin-bottom: 20px;
 }
 
+.row.br {
+    margin-top: 1.5rem;
+}
+
+li.cd-unstyled-nav-item {
+	list-style-type: none;
+}
+
+li {
+	line-height: normal;
+}
+
 // @media (min-width: 48em) {
 //     .container {
 //         max-width: 46rem;
 //     }
 // }
-
-.row.br {
-    margin-top: 1.5rem;
-}
