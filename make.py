@@ -19,7 +19,7 @@ class website_builder(object):
     index_html = 'index.html'
     template_top = 'src/html/tmpl_top.html'
     template_bot = 'src/html/tmpl_bot.html'
-    src_dir = 'src/'
+    src_dir = 'content/'
     src_imgs = './src/imgs/'
 
     def __init__(self):
@@ -30,7 +30,7 @@ class website_builder(object):
         """Read from src directory and generate output for website"""
         top = self.read(self.template_top)
         self.write(top)
-        for markdown_fn in glob.glob('{}*.md'.format(self.src_dir)):
+        for markdown_fn in glob.glob('{}*/*.md'.format(self.src_dir)):
             self.parse_md(markdown_fn)
         bot = self.read(self.template_bot)
         self.write(bot)
@@ -56,7 +56,7 @@ class website_builder(object):
         for line in self.read(fn, split=True):
             line = self.italics(line)
             if re.match('^#', line):
-                self.create_header(line, fn)
+                self.init_recipe(line, fn)
             elif re.match('^-\s', line):
                 self.track_list_stat('ul')
                 self.append_list_item(line.strip('-').strip())
@@ -69,27 +69,27 @@ class website_builder(object):
             elif len(line) > 0:
                 self.other(line)
         # Add the closing div's
-        self.write('</div><!-- /row -->\n</div><!-- /row.br -->')
+        self.write('\n</div><!-- /columns (list) --></div><!-- /row (recipe) -->\n')
         return line
 
-    def create_header(self, raw_title, full_fn):
+    def init_recipe(self, raw_title, full_fn):
         # Solve for variables in markdown layout
         base_name = re.search('[^\/]+\/([^.\/]+)\.md', full_fn).group(1)
         title = re.search('#+([^#|]+)', raw_title).group(1).strip()
         header = raw_title.split("||")
         orig_link = header[1].strip() if len(header) == 2 else False
         # Assemble HTML
-        source_html = '<a href="{}"><i>(Source)</i></a>'.format(orig_link) if orig_link else ''
-        classes = 'class="col-sm-12 col-md-5"'
-        pre = '\t<div class="row br">\n<h4 {}>{} {}</h4></div>'.format(classes, title, source_html)
+        classes = 'class="twelve columns"'
+        link_html = '<a href="{}"><i>(Source)</i></a>'.format(orig_link) if orig_link else ''
+        header = '<div class="row br"><h4 {}>{} {}</h4></div>'.format(classes, title, link_html)
         for image_name in glob.glob('{}{}.*'.format(self.src_imgs, base_name)):
             break
         else:
             image_name = ''
-        img_html = '<div class="row"><img {} src="{}", alt="{}"/>'.format(
-            classes, image_name, base_name)
-        post = '<div class="col">'
-        self.write('{}\n{}\n{}'.format(pre, img_html, post))
+        img_html = '<div class="row">\n<img {} src="{}", alt="{}"/>'.format(
+            'class="five columns"', image_name, base_name)
+        text_start = '<div class="seven columns">'
+        self.write('\n{}\n{}\n{}'.format(header, img_html, text_start))
 
     def track_list_stat(self, match_list_type):
         """Track the status of the last list type written"""
