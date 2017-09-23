@@ -8,17 +8,17 @@ img {
     margin-top: 1.5rem;
 }
 
-li.cd-unstyled-nav-item {
-	list-style-type: none !important;
-}
-
 li {
 	line-height: normal;
 	margin-bottom: 5px;
 }
 
+li.cd-unstyled-nav-item {
+	list-style-type: none !important;
+}
+
 a.unstyled {
-	color: black;
+	color: black !important;
 }
 
 // @media (min-width: 48em) {
