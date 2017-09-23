@@ -54,6 +54,7 @@ class website_builder(object):
         """Parse each line of the markdown file"""
         self.track_list_stat("init")
         for line in self.read(fn, split=True):
+            line = self.italics(line)
             if re.match('^#', line):
                 self.create_header(line, fn)
             elif re.match('^-\s', line):
@@ -79,14 +80,14 @@ class website_builder(object):
         orig_link = header[1].strip() if len(header) == 2 else False
         # Assemble HTML
         source_html = '<a href="{}"><i>(Source)</i></a>'.format(orig_link) if orig_link else ''
-        pre = '\t<div class="row br">\n<h4>{} {}</h4></div>'.format(title, source_html)
-        img_class = 'col-sm-12 col-md-5'
+        classes = 'class="col-sm-12 col-md-5"'
+        pre = '\t<div class="row br">\n<h4 {}>{} {}</h4></div>'.format(classes, title, source_html)
         for image_name in glob.glob('{}{}.*'.format(self.src_imgs, base_name)):
             break
         else:
             image_name = ''
-        img_html = '<div class="row"><img class="{}" src="{}", alt="{}"/>'.format(
-            img_class, image_name, base_name)
+        img_html = '<div class="row"><img {} src="{}", alt="{}"/>'.format(
+            classes, image_name, base_name)
         post = '<div class="col">'
         self.write('{}\n{}\n{}'.format(pre, img_html, post))
 
@@ -117,6 +118,24 @@ class website_builder(object):
         """Write single line notes/extra information"""
         logger.debug('No known action for: {}'.format(line))
         pass
+
+    def italics(self, raw_line):
+        if '**' in raw_line:
+            line_sections = raw_line.split('**')
+            # count_ln = len(line_sections)
+            init = True if raw_line[1:2] == '**' else False
+            line = ''
+            for ls_, line_sec in enumerate(line_sections):
+                if init:
+                    html = '<i>' if ls_ % 2 == 1 else '</i>'
+                else:
+                    html = ''
+                    init = True
+                line += html + line_sec
+            logger.debug('Italics: {} > `{}`\n'.format(line_sections, line))
+        else:
+            line = raw_line
+        return line
 
 
 if __name__ == '__main__':

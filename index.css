@@ -13,10 +13,10 @@ img {
     height: 100%;
 }
 
-.jumbotron {
+/* .jumbotron {
     text-align: center;
     border-bottom: 0.05rem solid #E5E5E5;
-}
+} */
 
 @media (min-width: 48em) {
     .container {
