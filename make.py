@@ -88,9 +88,10 @@ class website_builder(object):
         header = raw_title.split("||")
         orig_link = header[1].strip() if len(header) == 2 else False
         # Assemble HTML
-        classes = 'class="twelve columns"'
-        link_html = '<a href="{}"><i>(Source)</i></a>'.format(orig_link) if orig_link else ''
-        header = '<div class="row br"><h5 {}>{} {}</h5></div>'.format(classes, title, link_html)
+        classes = 'class="twelve columns" id="recipe-{}"'.format(title)
+        html_lnk = '<a href="{}"><i>(Source)</i></a>'.format(orig_link) if orig_link else ''
+        ttle_lnk = '<a href="#recipe-{title}" class="unstyled"># {title}</a>'.format(title=title)
+        header = '<div class="row br"><h5 {}>{} {}</h5></div>'.format(classes, ttle_lnk, html_lnk)
         for image_name in glob.glob('{}{}.*'.format(self.src_imgs, base_name)):
             break
         else:

@@ -9,11 +9,16 @@ img {
 }
 
 li.cd-unstyled-nav-item {
-	list-style-type: none;
+	list-style-type: none !important;
 }
 
 li {
 	line-height: normal;
+	margin-bottom: 5px;
+}
+
+a.unstyled {
+	color: black;
 }
 
 // @media (min-width: 48em) {
