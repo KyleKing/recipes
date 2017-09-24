@@ -1,11 +1,11 @@
 ## Pasta + Mozzarella
 
-- Box of pasta
-- Bag of Frozen peas
-- Pesto
-- Red pepper flakes
-- Mozzarella ball
-- 1 Tomato
+- box of pasta
+- bag of frozen peas
+- pesto
+- red pepper flakes
+- mozzarella ball
+- 1 tomato
 end
 
 1. Boil the pasta following the directions, then for the last two minutes, add the frozen vegetable to the boiling pasta
