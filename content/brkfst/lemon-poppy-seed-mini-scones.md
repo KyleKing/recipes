@@ -2,8 +2,8 @@
 
 - 1 fresh lemon, *for 1 tsp zest and 1 tbsp juice*
 - 1.25 cups all-purpose flour
-- 1/2 tsp salt
-- 3/4 cup powdered sugar, divided
+- ½ tsp salt
+- ¾ cup powdered sugar, divided
 - 2 tsp baking powder
 - 2 tsp poppy seeds
 - 1 cup heavy whipping cream

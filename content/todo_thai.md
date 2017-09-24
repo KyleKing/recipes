@@ -8,7 +8,7 @@
 - 1/4 cup creamy natural peanut butter
 - 1/4 cup soy sauce
 - 2 tbsp brown sugar
-- 1/2 white onion, sliced
+- ½ white onion, sliced
 - 2 minced cloves garlic
 - 1 sliced green pepper
 - 6 thai chili peppers, seeded

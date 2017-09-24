@@ -3,8 +3,8 @@
 - 2 cloves garlic
 - 1 medium yellow onion
 - 3 ribs celery
-- 1/2 lb (3-4) carrots
-- 1 large (3/4 lb.) chicken breast
+- ½ lb (3-4) carrots
+- 1 large (¾ lb.) chicken breast
 - 1 whole bay leaf
 - 1 tsp dried basil
 - 1 tsp dried thyme

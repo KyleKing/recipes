@@ -1,17 +1,17 @@
 ## Peanut Noodles
 
-- Linguine, Egg Noodles, or Rice
-- Chopped baby carrots
-- Chopped shallots (a.k.a. white base of green onion)
-- *Other vegetables: Peppers, Broccoli, Zucchini, Snow Peas*
+- linguine, egg noodles, or rice
+- chopped baby carrots
+- chopped shallots (a.k.a. white base of green onion)
+- *other vegetables: peppers, broccoli, zucchini, snow peas*
 end
 
 Sauce:
 
-- 6 Tbsp PB
-- 1.5 Tbsp hot chili oil
-- 2 Tbsp sesame oil
-- 7 Tbsp soy sauce
+- 6 tbsp pb
+- 1.5 tbsp hot chili oil
+- 2 tbsp sesame oil
+- 7 tbsp soy sauce
 - 2 tsp cider vinegar (or white wine/rice vinegar)
 - 1" fresh ginger or 1.5 tsp cinnamon, nutmeg, or sugar
 end

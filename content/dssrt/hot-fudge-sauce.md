@@ -2,7 +2,7 @@
 
 - 2 oz unsweetened chocolate
 - 1 tbsp butter
-- 1/3 cup boiling water
+- ⅓ cup boiling water
 - 1 cup sugar
 - 2 tbsp corn syrup
 - 1 tsp vanilla
