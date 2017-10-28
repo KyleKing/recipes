@@ -30,13 +30,29 @@ class website_builder(object):
         """Read from src directory and generate output for website"""
         top = self.read(self.template_top)
         self.write(top)
-        sec_name = False
-        for markdown_fn in glob.glob('{}*/*.md'.format(self.src_dir)):
-            new_sec_name = re.search('\/([^\/]+)\/[^\/]+\.md', markdown_fn).group(1)
-            if new_sec_name != sec_name:
-                self.start_section(new_sec_name)
-                sec_name = new_sec_name
-            self.parse_md(markdown_fn)
+        # Make the Table of Contents, then insert the recipes
+        for make_toc in [True, False]:
+            # Initialize the state of the TOC list
+            if make_toc:
+                self.insert_toc_item('init', '')
+            else:
+                self.insert_toc_item('end', '')
+            # Identify each unique recipe file
+            sec_name = False
+            for markdown_fn in glob.glob('{}*/*.md'.format(self.src_dir)):
+                new_sec_name = re.search('\/([^\/]+)\/[^\/]+\.md', markdown_fn).group(1)
+                # Create the recipe section dividers
+                if new_sec_name != sec_name:
+                    if make_toc:
+                        self.insert_toc_item('section', new_sec_name)
+                    else:
+                        self.start_section(new_sec_name)
+                    sec_name = new_sec_name
+                # Write a link to the recipe or the recipe content
+                if make_toc:
+                    self.insert_toc_item('recipe', markdown_fn)
+                else:
+                    self.parse_md(markdown_fn)
         bot = self.read(self.template_bot)
         self.write(bot)
 
@@ -55,6 +71,41 @@ class website_builder(object):
         with open(fn, 'ab') as fn_:
             fn_.write(content)
 
+    # ---------- Create the Table of Contents ---------
+
+    def insert_toc_item(self, match_list_type, item):
+        """Track the status of the last list type written"""
+        if match_list_type == 'init':
+            self.status = {'init': False, 'section': False, 'recipe': False}
+            self.write('<h3 style="padding-top: 50px;" id="toc">Recipes Table of Contents</h3>')
+        elif match_list_type == 'section':
+            # Close the section section, if a recipe section was written
+            if self.status['init']:
+                self.write('\n\t</ul></li>')
+                self.write('\n</ul>')
+            self.write('\n<ul>\n\t<li><a href="#{}">{}</a><ul>'.format(item, item))
+            self.status['init'] = True
+        elif match_list_type == 'recipe':
+            title, title_id = self.parse_title(item)
+            self.write('\n\t\t<li><a href="#{}">{}</a></li>'.format(title_id, title))
+        elif match_list_type == 'end':
+            # Close the list div and reset the tracker
+            self.write('\n\t</ul></li>')
+            self.write('\n</ul>')
+            self.status = {'init': False, 'section': False, 'recipe': False}
+
+    def parse_title(self, fn):
+        """Retrieve only the title id from the markdown file"""
+        for line in self.read(fn, split=True):
+            if re.match('^#', line):
+                title, title_id = self.make_title(line)
+                break
+        else:
+            return False, False
+        return title, title_id
+
+    # ---------- Insert the recipes ---------
+
     def start_section(self, sec_name):
         """Start a linkable section header"""
         self.write('\n<h1 id="{sec_name}">{sec_name}</h1>\n'.format(sec_name=sec_name))
@@ -63,7 +114,7 @@ class website_builder(object):
         """Parse each line of the markdown file"""
         self.track_list_stat("init")
         for line in self.read(fn, split=True):
-            line = self.italics(line)
+            line = self.check_italics(line)
             if re.match('^#', line):
                 self.init_recipe(line, fn)
             elif re.match('^-\s', line):
@@ -79,18 +130,21 @@ class website_builder(object):
                 self.other(line)
         # Add the closing div's
         self.write('\n</div><!-- /columns (list) --></div><!-- /row (recipe) -->\n')
-        return line
+
+    def make_title(self, line):
+        title = re.search('#+([^#|]+)', line).group(1).strip()
+        return title, 'recipe-{}'.format(title)
 
     def init_recipe(self, raw_title, full_fn):
         # Solve for variables in markdown layout
         base_name = re.search('[^\/]+\/([^.\/]+)\.md', full_fn).group(1)
-        title = re.search('#+([^#|]+)', raw_title).group(1).strip()
+        title, title_id = self.make_title(raw_title)
         header = raw_title.split("||")
         orig_link = header[1].strip() if len(header) == 2 else False
         # Assemble HTML
-        classes = 'class="twelve columns" id="recipe-{}"'.format(title)
+        classes = 'class="twelve columns" id="{}"'.format(title_id)
         html_lnk = '<a href="{}"><i>(Source)</i></a>'.format(orig_link) if orig_link else ''
-        ttle_lnk = '<a href="#recipe-{title}" class="unstyled"># {title}</a>'.format(title=title)
+        ttle_lnk = '<a href="#{}" class="unstyled"># {}</a>'.format(title_id, title)
         header = '<div class="row br"><h5 {}>{} {}</h5></div>'.format(classes, ttle_lnk, html_lnk)
         for image_name in glob.glob('{}{}.*'.format(self.src_imgs, base_name)):
             break
@@ -130,7 +184,7 @@ class website_builder(object):
         self.write('<p>{}</p>'.format(line))
         pass
 
-    def italics(self, raw_line):
+    def check_italics(self, raw_line):
         if '**' in raw_line:
             line_sections = raw_line.split('**')
             # count_ln = len(line_sections)
