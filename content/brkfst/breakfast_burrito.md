@@ -1,11 +1,14 @@
-## Breakfast Burrito || https://www.horizon.com/recipes/black-bean-scramble
+## Breakfast Burrito
 
-- 1 tablespoon chunky salsa
+- 3 eggs
+- ¼ teaspoon ground cumin
+- dash of pepper
+- 2 tablespoon chunky salsa
 - can black beans
-- 2 eggs
-- ¼ teaspoon ground cumin and dash of pepper
-- ¼ cup shredded Mexican cheese
+- spinach or lettuce
+end
 
-1. On medium-high heat, cook the beans and salsa until all liquid has evaporated. Add the eggs, cumin, and pepper.
-2. Once the eggs are nearly done, add half of the cheese
-3. Serve with the rest of the cheese and/or wrapped in a tortilla
+1. On medium heat, cook the eggs, cumin, and pepper
+2. Microwave the chunky salsa and black beans
+3. Serve with toast or in a tortilla
+end
