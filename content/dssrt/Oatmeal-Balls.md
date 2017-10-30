@@ -11,3 +11,5 @@ Combine all ingredients into one bowl, form into balls, and freeze
 end
 
 (Source: the back of a milled flaxseed bag)
+
+<a href="https://tasty.co/compilation/no-bake-energy-bites">More tasty no-bake energy bites from tasty.co!</a>
