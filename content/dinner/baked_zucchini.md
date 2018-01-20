@@ -13,3 +13,5 @@ end
 3. Mix the ingredients in a small bowl then cover the zucchini
 3. Bake for 15 minutes and optionally broil for 2-3 minutes
 end
+
+Alt: just salt, pepper, red pepper flakes, olive oil. 425℉ for 20 minutes
