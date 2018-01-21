@@ -1,8 +1,8 @@
 ## Cake Pops
 
-- Cake Mix
-- Frosting
-- 16 oz Semi-Sweet Chocolate Chips
+- |Cake Mix
+- |Frosting
+- 16 oz |Semi-Sweet Chocolate Chips
 end
 
 1) Bake a cake according to the instructions and let cool.

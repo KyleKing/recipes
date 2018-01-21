@@ -1,10 +1,10 @@
 ## Orzo n' Cheese || http://exploitsofamilitarymama.com/2012/08/slutty-orzo/
 
-- 1 lb ham steak, cubed
-- 16 oz box of orzo
-- bag of frozen broccoli
-- 1 cup parmesan cheese, shredded or grated
-- ¼ cup skim milk
+- 1 lb |ham steak, cubed
+- 16 oz |box of orzo
+- bag of frozen |broccoli
+- 1 cup |parmesan cheese, shredded or grated
+- ¼ cup |skim milk
 end
 
 1) Crisp cubed ham over medium-high heat and in parallel, bring a large pot of water to boil

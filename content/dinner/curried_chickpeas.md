@@ -1,13 +1,13 @@
 ## Curried Chickpeas || http://www.budgetbytes.com/2013/12/curried-chickpeas-spinach/
 
-- 1 small onion (or diced pepper)
-- 1.5 tbsp curry powder
-- 1" fresh ginger or 1 tsp cinnamon or 1 tsp nutmeg
-- 1/4 tsp garlic powder (or 2-3 fresh cloves)
-- 8 oz (full bag) of spinach
-- 15 oz jar of tomato sauce
-- 29 oz can of chickpeas/garbanzo beans
-- rice / naan / etc.
+- 1 |small onion (or diced pepper)
+- 1.5 tbsp |curry powder
+- 1" |fresh ginger (or 1 tsp cinnamon or 1 tsp nutmeg)
+- 1/4 tsp |garlic powder (or 2-3 fresh cloves)
+- 8 oz (full bag) of |spinach
+- 15 oz jar of |tomato sauce
+- 29 oz can of |chickpeas (garbanzo beans)
+- |rice (or naan, etc.)
 end
 
 1. Start cooking the rice then rinse & drain the chickpeas

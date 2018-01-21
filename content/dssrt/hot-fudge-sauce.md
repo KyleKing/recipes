@@ -1,11 +1,11 @@
 ## Hot Fudge Sauce
 
-- 2 oz unsweetened chocolate
-- 1 tbsp butter
-- ⅓ cup boiling water
-- 1 cup sugar
-- 2 tbsp corn syrup
-- 1 tsp vanilla
+- 2 oz |unsweetened chocolate
+- 1 tbsp |butter
+- ⅓ cup |boiling water
+- 1 cup |sugar
+- 2 tbsp |corn syrup
+- 1 tsp |vanilla
 end
 
 1. Melt the chocolate and butter then add the boiling water.

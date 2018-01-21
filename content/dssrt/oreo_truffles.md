@@ -1,8 +1,8 @@
 ## Oreo Truffles || http://www.kraftrecipes.com/recipes/easy-oreo-truffles-95085.aspx
 
-- Package of Oreos (36)
-- 8 oz. Cream Cheese
-- 16 oz Semi-Sweet Chocolate Chips
+- Package of |Oreos (36)
+- 8 oz. |Cream Cheese
+- 16 oz |Semi-Sweet Chocolate Chips
 end
 
 1) With a wooden spoon in a large bowl (or food processor), finely crush the Oreos. Reserve 1/4 cup of cookie crumbs.

@@ -1,8 +1,8 @@
 ## Cocoa-Peanut Butter Smoothie
 
-- yogurt
-- 1-2 spoons of peanut butter
-- banana
-- spoon of cocoa powder
-- & some water or milk to thin the mixture
+- |yogurt
+- 1-2 spoons of |peanut butter
+- |banana
+- spoon of |cocoa powder
+- some |water (or milk) to thin the mixture
 end

@@ -1,7 +1,8 @@
 ## Omelettes || https://tasty.co/recipe/french-omelette
 
-- 3 eggs
-- chive or basil
+- 3 |eggs
+- |chive
+- |basil
 end
 
 1. Beat the eggs together until homogeneous + pinch of salt

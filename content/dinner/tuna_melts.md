@@ -1,9 +1,9 @@
 ## Tuna Melts
 
-- Mayonnaise
-- Canned Tuna
-- English Muffins
-- Your Choice of Cheese slices
+- |Mayonnaise
+- |Canned Tuna
+- |English Muffins
+- Your Choice of |Cheese slices
 end
 
 1. Preheat oven to Broil (~10 min).

@@ -1,14 +1,14 @@
 # Soft Pretzels || http://www.geniuskitchen.com/recipe/real-homemade-soft-pretzels-130301
 
-- 1 tbsp. yeast
-- 1 tbsp. sugar
-- 2 cups warm water
-- 1 cup flour
-- 4 cups flour, mixed with 1 tbsp. salt, more flour if needed
-- 1 egg
-- 1 tbsp. water
-- ½ cup baking soda
-- coarse salt
+- 1 tbsp |yeast
+- 1 tbsp |sugar
+- 2 cups |warm water
+- 1 cup |flour
+- 4 cups |flour, mixed with 1 tbsp. salt, more flour if needed
+- 1 |egg
+- 1 tbsp |water
+- ½ cup |baking soda
+- |coarse salt
 end
 
 1) In large bowl, stir yeast, sugar and warm water. Let rest until yeast is dissolved and is a little foamy.

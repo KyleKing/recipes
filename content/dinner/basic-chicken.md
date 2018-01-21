@@ -9,11 +9,11 @@ end
 
 Optional Seasonings:
 
-- Basic: salt and pepper
-- Tacos: chili powder + cumin + cayenne + paprika
-- Rice: Sriracha + honey (+ broccoli)
-- Sun-Dried Tomato: minced garlic + olive oil + sun-dried tomato paste
-- Korean: gochujang (Korean chili paste) + mayonnaise + sesame oil
-- Coconut Rice Noodle Curry: Thai curry paste + coconut oil
-- Barbecue: barbecue sauce with a side of mashed potatoes
+- Basic: |salt & pepper
+- Tacos: |chili powder + cumin + cayenne + paprika
+- Rice: |Sriracha + honey (+ broccoli)
+- Sun-Dried |Tomato: minced garlic + olive oil + sun-dried tomato paste
+- Korean: |gochujang (Korean chili paste) + mayonnaise + sesame oil
+- Coconut |Rice Noodle Curry: Thai curry paste + coconut oil
+- Barbecue: |barbecue sauce with a side of mashed potatoes
 end

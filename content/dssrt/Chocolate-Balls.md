@@ -1,10 +1,10 @@
 ## No-bake Chocolate-PB-M&M Balls || https://tasty.co/recipe/no-bake-chocolate-peanut-butter-m-m-balls
 
-- ½ cup butter, melted
-- 1.5 cups peanut butter
-- 2.5 cups powdered sugar
-- bag of chocolate chips
-- bag of m&ms
+- ½ cup |butter, melted
+- 1.5 cups |peanut butter
+- 2.5 cups |powdered sugar
+- bag of |chocolate chips
+- bag of |m&ms
 end
 
 1. Mix butter, peanut butter, M&M’s, and powdered sugar until well blended.

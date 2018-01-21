@@ -1,11 +1,11 @@
 ## Pesto-Naan-Pizza
 
-- diced mozzarella
-- diced pepper
-- diced tomato
-- spinach
-- pesto
-- naan
+- |mozzarella, diced
+- |pepper, diced
+- |tomato, diced
+- |spinach
+- |pesto
+- |naan
 end
 
 1. Preheat the oven to 400'

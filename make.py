@@ -25,11 +25,14 @@ class website_builder(object):
     def __init__(self):
         """Prepare output directory and files"""
         open(self.index_html, 'w').close()
+        self.cur_md_title = 'NA'
 
     def make(self):
         """Read from src directory and generate output for website"""
         top = self.read(self.template_top)
         self.write(top)
+        markdown_fns = glob.glob('{}*/*.md'.format(self.src_dir))
+        markdown_fns = sorted(markdown_fns, key=lambda s: s.lower())
         # Make the Table of Contents, then insert the recipes
         for make_toc in [True, False]:
             # Initialize the state of the TOC list
@@ -39,19 +42,22 @@ class website_builder(object):
                 self.insert_toc_item('end', '')
             # Identify each unique recipe file
             sec_name = False
-            for markdown_fn in glob.glob('{}*/*.md'.format(self.src_dir)):
-                new_sec_name = re.search('\/([^\/]+)\/[^\/]+\.md', markdown_fn).group(1)
-                # Create the recipe section dividers
+            for markdown_fn in markdown_fns:
+                new_sec_name = re.search(ur'\/([^\/]+)\/[^\/]+\.md', markdown_fn).group(1)
+                # If new section, create the recipe section dividers
                 if new_sec_name != sec_name:
                     if make_toc:
                         self.insert_toc_item('section', new_sec_name)
                     else:
+                        logger.debug('')
+                        logger.debug('>> Writing Section: {}'.format(new_sec_name))
                         self.start_section(new_sec_name)
                     sec_name = new_sec_name
-                # Write a link to the recipe or the recipe content
                 if make_toc:
+                    # Write a link to the recipe or the recipe content
                     self.insert_toc_item('recipe', markdown_fn)
                 else:
+                    # Create the recipe
                     self.parse_md(markdown_fn)
         bot = self.read(self.template_bot)
         self.write(bot)
@@ -97,7 +103,7 @@ class website_builder(object):
     def parse_title(self, fn):
         """Retrieve only the title id from the markdown file"""
         for line in self.read(fn, split=True):
-            if re.match('^#', line):
+            if re.match(ur'^#', line):
                 title, title_id = self.make_title(line)
                 break
         else:
@@ -115,16 +121,16 @@ class website_builder(object):
         self.track_list_stat("init")
         for line in self.read(fn, split=True):
             line = self.check_italics(line)
-            if re.match('^#', line):
+            if re.match(ur'^#', line):
                 self.init_recipe(line, fn)
-            elif re.match('^-\s', line):
+            elif re.match(ur'^-\s', line):
                 self.track_list_stat('ul')
-                self.append_list_item(line.strip('-').strip())
-            elif re.match('^\d[\.\)]?\s', line):
+                self.append_ingredient(line.strip('-').strip())
+            elif re.match(ur'^\d[\.\)]?\s', line):
                 self.track_list_stat('ol')
                 parsed = re.search('^\d[\.\)]?\s(.+)', line).group(1).strip()
                 self.append_list_item(parsed)
-            elif re.match('^end$', line):
+            elif re.match(ur'^end$', line):
                 self.track_list_stat('end')
             elif len(line) > 0:
                 self.other(line)
@@ -132,12 +138,15 @@ class website_builder(object):
         self.write('\n</div><!-- /columns (list) --></div><!-- /row (recipe) -->\n')
 
     def make_title(self, line):
-        title = re.search('#+([^#|]+)', line).group(1).strip()
+        title = re.search(ur'#+([^#|]+)', line).group(1).strip()
         return title, 'recipe-{}'.format(title)
 
     def init_recipe(self, raw_title, full_fn):
         # Solve for variables in markdown layout
-        base_name = re.search('[^\/]+\/([^.\/]+)\.md', full_fn).group(1)
+        base_name = re.search(ur'[^\/]+\/([^.\/]+)\.md', full_fn).group(1)
+        self.cur_md_title = base_name  # track filename for debugging
+        logger.debug('')
+        logger.debug('> Recipe: {}'.format(self.cur_md_title))
         title, title_id = self.make_title(raw_title)
         header = raw_title.split("||")
         orig_link = header[1].strip() if len(header) == 2 else False
@@ -184,6 +193,18 @@ class website_builder(object):
                 self.write("</ul>")
             self.status = {"ol": False, "ul": False}
 
+    def append_ingredient(self, line):
+        if '|' in line:
+            # Examples from brick_chicken.md
+            # 2 tbsp |fresh sage, finely chopped
+            # 2 tbsp |canola oil |(or sunflower oil)
+            tag = re.match(ur'([^\(+,:]+)', line.split('|')[1]).group(1).strip().title()
+            clean_line = re.sub(ur'\s{2,}', ' ', line.replace('|', ''))  # remove unintended whitespace
+            self.write('<li class="{}">{}</li>'.format(tag, clean_line))
+        else:
+            logger.debug('Error: ({}) no ingredient tag in: {}'.format(self.cur_md_title, line))
+            self.write('<li>{}</li>'.format(line))
+
     def append_list_item(self, line):
         self.write('<li>{}</li>'.format(line))
 
@@ -191,7 +212,6 @@ class website_builder(object):
         """Write single line notes/extra information"""
         # logger.debug('Writing paragraph for: {}'.format(line))
         self.write('<p>{}</p>'.format(line))
-        pass
 
     def check_italics(self, raw_line):
         if '**' in raw_line:
@@ -206,7 +226,8 @@ class website_builder(object):
                     html = ''
                     init = True
                 line += html + line_sec
-            logger.debug('Italics: {} > `{}`\n'.format(line_sections, line))
+            # FIXME:
+            # logger.debug('Italics: {} > `{}`\n'.format(line_sections, line))
         else:
             line = raw_line
         return line

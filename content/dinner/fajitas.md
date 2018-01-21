@@ -2,30 +2,30 @@
 
 Main:
 
-- 3 peppers
-- 3 tomatoes
-- 1 lg. onion
-- can of corn
-- can of black beans
-- 1 lb. chicken (~two breasts)
+- 3 |peppers
+- 3 |tomatoes
+- 1 lg. |onion
+- can |corn
+- can |black beans
+- 1 lb. |chicken (~two breasts)
 end
 
 Seasonings:
 
-- 1 tbsp chili powder
-- 2 tbsp vegetable oil
-- ¼ tsp garlic powder
-- ½ tbsp corn starch
+- 1 tbsp |chili powder
+- 2 tbsp |vegetable oil
+- ¼ tsp |garlic powder
+- ½ tbsp |corn starch
 end
 
 With:
 
-- 10 6-inch tortillas
-- 2 cups of rice
-- ⅓ bag of spinach
-- ½ jar of salsa
-- fresh lime
-- cilantro
+- 10 6-inch |tortillas
+- 2 cups of |rice
+- ⅓ bag of |spinach
+- ½ jar of |salsa
+- |fresh lime
+- |cilantro
 end
 
 1) Defrost the chicken and preheat the oven to 400 degrees

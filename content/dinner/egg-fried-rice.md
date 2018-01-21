@@ -2,8 +2,12 @@
 
 Combine:
 
-- 2 eggs fried in sesame oil
-- peas, sliced broccoli, carrots, etc.
-- 1 cup rice
-- soy sauce and sesame seeds
+- 1 cup |rice
+- 2 |eggs, fried in sesame oil
+- |soy sauce
+- |peas
+- |sliced broccoli
+- |carrots
+- |green onion, etc.
+- |sesame seeds
 end

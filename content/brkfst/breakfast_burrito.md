@@ -1,11 +1,11 @@
 ## Breakfast Burrito
 
-- 3 eggs
-- ¼ teaspoon ground cumin
-- dash of pepper
-- 2 tablespoon chunky salsa
-- can black beans
-- spinach or lettuce
+- 3 |eggs
+- ¼ tsp |ground cumin
+- dash of |pepper
+- 2 tbsp |chunky salsa
+- can |black beans
+- |spinach (or lettuce)
 end
 
 1. On medium heat, cook the eggs, cumin, and pepper

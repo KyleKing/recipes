@@ -1,13 +1,13 @@
 ## Pizza
 
-- bag of pre-kneaded dough
-- olive oil
-- garlic (optional)
-- marinara sauce
-- mozzarella cheese
-- (optional) parmesan cheese, spinach, peppers, tomatoes, etc.
-- (optional) chicken, sausage, pepperoni, etc.
-- red pepper flakes
+- bag of |pre-kneaded dough
+- |olive oil
+- |garlic (optional)
+- |marinara sauce
+- |mozzarella cheese
+- (optional) |parmesan cheese, spinach, peppers, tomatoes, etc.
+- (optional) |chicken, sausage, pepperoni, etc.
+- |red pepper flakes
 end
 
 1. Pre-heat the oven to 400'F

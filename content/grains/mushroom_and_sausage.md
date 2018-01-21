@@ -1,15 +1,15 @@
 ## Sausage and Mushroom Penne Pasta || http://www.budgetbytes.com/2014/04/one-pot-sausage-mushroom-pasta/
 
-- 3-6 links italian sausage
-- 1 small onion
-- 8 oz. container of button mushrooms
-- 28 oz. can of crushed tomatoes
-- 3 cloves of garlic (½ tsp garlic powder)
-- 1 tsp basil
-- 1 tsp oregano
-- ¼ cup parmesan
-- 1 lb box of penne / rigatoni
-- chopped parsley (optional)
+- 3-6 links |italian sausage
+- 1 small |onion
+- 8 oz. container of |button mushrooms
+- 28 oz. can of |crushed tomatoes
+- 3 cloves of |garlic (½ tsp garlic powder)
+- 1 tsp |basil
+- 1 tsp |oregano
+- ¼ cup |parmesan
+- 1 lb box of |penne (or rigatoni)
+- |parsley, chopped
 end
 
 1. In a large pot, cook the sausages in a small amount of olive oil on medium heat until brown on the outside and firm {~5 minutes}

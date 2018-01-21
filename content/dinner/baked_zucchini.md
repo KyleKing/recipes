@@ -1,11 +1,13 @@
 ## Baked Zucchini || http://damndelicious.net/2014/06/21/baked-parmesan-zucchini/
 
-- Classic: (Zucchini + Olive Oil + Red Pepper Flakes)
-- Zucchini
-- Parmesan
-- ¼ teaspoon garlic powder
-- salt and pepper
-- ½ teaspoon each of basil, thyme, and oregano
+- |Zucchini
+- |Parmesan
+- |Olive Oil
+- ¼ tsp |garlic powder
+- ½ tsp |basil
+- ½ tsp |thyme
+- ½ tsp |basil
+- |salt & pepper
 end
 
 1. Preheat oven to 350°F

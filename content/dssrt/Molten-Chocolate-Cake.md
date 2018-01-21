@@ -1,11 +1,13 @@
 ## Molten Chocolate Cake || http://spoonuniversity.com/recipe/valentines-chocolate-cake
 
-- 1 tablespoon unsalted butter, melted
-- 1 70% dark chocolate bar (100g)
-- 7 tablespoons unsalted butter, cut into cubes
-- 2 eggs and 2 egg yolks, room temperature
-- ½ cup sugar
-- ⅔ cup and 2 tablespoons flour
-- ⅛ teaspoons salt
-- for dusting, powdered sugar and cocoa powder
+- 1 tablespoon |unsalted butter, melted
+- 1 70% |dark chocolate bar (100g)
+- 7 tbsp |unsalted butter, cut into cubes
+- 2 |eggs, room temperature
+- 2 |egg yolks
+- ½ cup |sugar
+- ⅔ cup & 2 tbsp |flour
+- ⅛ tsp |salt
+- |powdered sugar, for dusting
+- |cocoa powder, for dusting
 end
