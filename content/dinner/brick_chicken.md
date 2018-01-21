@@ -1,4 +1,4 @@
-## Tuscan Brick Chicken || (Source, Cravings:218) https://smile.amazon.com/Cravings-Recipes-All-Food-Want/dp/1101903910/ref=sr_1_1?ie=UTF8&qid=1516461754&sr=8-1&keywords=cravings
+## Tuscan Brick Chicken || (Cravings:218) https://smile.amazon.com/Cravings-Recipes-All-Food-Want/dp/1101903910/ref=sr_1_1?ie=UTF8&qid=1516461754&sr=8-1&keywords=cravings
 
 - 1/3 cup extra-virgin |olive oil
 - 3 tbsp |fresh rosemary, chopped

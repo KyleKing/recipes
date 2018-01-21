@@ -143,7 +143,16 @@ class website_builder(object):
         orig_link = header[1].strip() if len(header) == 2 else False
         # Assemble HTML
         classes = 'class="twelve columns" id="{}"'.format(title_id)
-        html_lnk = '<a href="{}"><i>(Source)</i></a>'.format(orig_link) if orig_link else ''
+        if orig_link:
+            # Optional custom source name (## ... || (Book Title) https://www.link.to.book)
+            custom_src_exp = ur'\(([^)]+)\)\s*(http.+)'
+            if re.match(custom_src_exp, orig_link):
+                match = re.search(custom_src_exp, orig_link)
+                html_lnk = '<a href="{}"><i>({})</i></a>'.format(match.group(2), match.group(1))
+            else:
+                html_lnk = '<a href="{}"><i>(Source)</i></a>'.format(orig_link)
+        else:
+            html_lnk = ''
         ttle_lnk = '<a href="#{}" class="unstyled"># {}</a>'.format(title_id, title)
         header = '<div class="row br"><h5 {}>{} {}</h5></div>'.format(classes, ttle_lnk, html_lnk)
         for image_name in glob.glob('{}{}.*'.format(self.src_imgs, base_name)):
