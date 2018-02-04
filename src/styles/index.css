@@ -30,6 +30,30 @@ li {
     margin-bottom: 5px;
 }
 
+ul {
+    list-style: none;
+}
+
+ul li.ingredient:before {
+    content: '\2610';
+    margin-right: 5px;
+}
+
+ul li.ingredient.checked:before {
+    content: '\2611';
+    margin-right: 5px;
+}
+
 li.cd-unstyled-nav-item {
     list-style-type: none !important;
 }
+
+/*ul input ul {
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+input {
+    line-height: normal;
+    margin-bottom: 5px;
+}*/

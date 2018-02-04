@@ -1,4 +1,8 @@
-jQuery(document).ready(function($){
+jQuery(document).ready(function($) {
+	//
+	// Slide in Side Navigation inspired by CodyHouse article:
+	//
+
 	//open navigation clicking the menu icon
 	$('.cd-nav-trigger').on('click', function(event){
 		event.preventDefault();
@@ -25,4 +29,27 @@ jQuery(document).ready(function($){
 		$('.cd-nav-container, .cd-overlay').toggleClass('is-visible', bool);
 		$('main').toggleClass('scale-down', bool);
 	}
+
+	//
+	// Click-able ingredient checklist inspired by:
+	// ...
+	//
+
+	// Check item when clicked
+	//open navigation clicking the menu icon
+	$('ul li.ingredient').on('click', function(event){
+	  console.info("click");
+	  console.log(event);
+		event.preventDefault();
+	  // $(event.target).addClass('checked');
+		$(event.target).toggleClass('checked', !event.target.classList.contains('checked'));
+	  console.log(event.target.classList);
+	  console.log($(event.target).attr('id'));
+
+	  console.info('url:');
+	  console.log(window.location.href);
+
+	  window.history.pushState(null, null, window.location.href + '__hello_world');
+	  console.log('test push state');
+	});
 });

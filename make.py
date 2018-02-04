@@ -2,6 +2,8 @@ import glob
 import logging
 import re
 
+debug = True
+
 logger = logging.getLogger(__name__)
 lgr_fn = 'recipes.log'
 formatter = logging.Formatter('%(asctime)s %(filename)s:%(lineno)d\t%(message)s')
@@ -11,6 +13,13 @@ fh = logging.FileHandler(lgr_fn)
 fh.setLevel(logging.DEBUG)
 fh.setFormatter(formatter)
 logger.addHandler(fh)
+
+
+def lgr(msg):
+    global logger, debug
+    if debug:
+        print msg
+    logger.debug(msg)
 
 
 class website_builder(object):
@@ -26,6 +35,7 @@ class website_builder(object):
         """Prepare output directory and files"""
         open(self.index_html, 'w').close()
         self.cur_md_title = 'NA'
+        self.ingredient_counter = 0
 
     def make(self):
         """Read from src directory and generate output for website"""
@@ -49,8 +59,8 @@ class website_builder(object):
                     if make_toc:
                         self.insert_toc_item('section', new_sec_name)
                     else:
-                        logger.debug('')
-                        logger.debug('>> Writing Section: {}'.format(new_sec_name))
+                        lgr('')
+                        lgr('>> Writing Section: {}'.format(new_sec_name))
                         self.start_section(new_sec_name)
                     sec_name = new_sec_name
                 if make_toc:
@@ -118,7 +128,7 @@ class website_builder(object):
 
     def parse_md(self, fn):
         """Parse each line of the markdown file"""
-        self.track_list_stat("init")
+        self.track_list_stat('init')
         for line in self.read(fn, split=True):
             line = self.check_italics(line)
             if re.match(ur'^#', line):
@@ -145,10 +155,10 @@ class website_builder(object):
         # Solve for variables in markdown layout
         base_name = re.search(ur'[^\/]+\/([^.\/]+)\.md', full_fn).group(1)
         self.cur_md_title = base_name  # track filename for debugging
-        logger.debug('')
-        logger.debug('> Recipe: {}'.format(self.cur_md_title))
+        lgr('')
+        lgr('> Recipe: {}'.format(self.cur_md_title))
         title, title_id = self.make_title(raw_title)
-        header = raw_title.split("||")
+        header = raw_title.split('||')
         orig_link = header[1].strip() if len(header) == 2 else False
         # Assemble HTML
         classes = 'class="twelve columns" id="{}"'.format(title_id)
@@ -176,48 +186,67 @@ class website_builder(object):
     def track_list_stat(self, match_list_type):
         """Track the status of the last list type written"""
         if match_list_type == 'init':
-            self.status = {"ol": False, "ul": False}
+            self.status = {'ol': False, 'ul': False}
         elif match_list_type == 'ul':
-            if not self.status["ul"]:
-                self.write("<ul>")
-            self.status = {"ol": False, "ul": True}
+            if not self.status['ul']:
+                self.write('<ul>')
+            self.status = {'ol': False, 'ul': True}
         elif match_list_type == 'ol':
-            if not self.status["ol"]:
-                self.write("<ol>")
-            self.status = {"ol": True, "ul": False}
+            if not self.status['ol']:
+                self.write('<ol>')
+            self.status = {'ol': True, 'ul': False}
         elif match_list_type == 'end':
             # Close the list div and reset the tracker
-            if self.status["ol"]:
-                self.write("</ol>")
-            elif self.status["ul"]:
-                self.write("</ul>")
-            self.status = {"ol": False, "ul": False}
+            if self.status['ol']:
+                self.write('</ol>')
+            elif self.status['ul']:
+                self.write('</ul>')
+            self.status = {'ol': False, 'ul': False}
 
     def append_ingredient(self, line):
+        uniq_id = self.ingredient_counter
+        base_li = '<li id="{}" class="ingredient magic-checkbox'.format(uniq_id)  # *NO CLOSING "
         if '|' in line:
             # Examples from brick_chicken.md
             # 2 tbsp |fresh sage, finely chopped
             # 2 tbsp |canola oil |(or sunflower oil)
-            tag = re.match(ur'([^\(+,:]+)', line.split('|')[1]).group(1).strip().title()
+            tag = re.match(ur'([^\(+,:]+)', line.split('|')[1]).group(1)
+            tag = tag.strip().title().replace(' ', '_')
             clean_line = re.sub(ur'\s{2,}', ' ', line.replace('|', ''))  # remove unintended whitespace
-            self.write('<li class="{}">{}</li>'.format(tag, clean_line))
+            # self.write('<li class="{}"><input id="{}" type="checkbox">{}</input></li>'.format(
+            #     tag, uniq_id, clean_line))
+            self.write('{} {}">{}</li>'.format(base_li, tag, clean_line))
         else:
-            logger.debug('Error: ({}) no ingredient tag in: {}'.format(self.cur_md_title, line))
-            self.write('<li>{}</li>'.format(line))
+            lgr('Error: ({}) no ingredient tag in: {}'.format(self.cur_md_title, line))
+            self.write('{}" id="{}">{}</li>'.format(base_li, uniq_id, line))
+        self.ingredient_counter += 1
 
     def append_list_item(self, line):
         self.write('<li>{}</li>'.format(line))
 
     def other(self, line):
         """Write single line notes/extra information"""
-        # logger.debug('Writing paragraph for: {}'.format(line))
+        # lgr('Writing paragraph for: {}'.format(line))
         self.write('<p>{}</p>'.format(line))
 
     def check_italics(self, raw_line):
-        if '**' in raw_line:
-            line_sections = raw_line.split('**')
-            # count_ln = len(line_sections)
-            init = True if raw_line[1:2] == '**' else False
+        tmp_line = raw_line
+        if '**' in tmp_line:
+            line_sections = tmp_line.split('**')
+            init = True if tmp_line[1:2] == '**' else False
+            line = ''
+            for ls_, line_sec in enumerate(line_sections):
+                if init:
+                    html = '<b>' if ls_ % 2 == 1 else '</b>'
+                else:
+                    html = ''
+                    init = True
+                line += html + line_sec
+            tmp_line = line
+            # lgr('Bold: {} > `{}`\n'.format(line_sections, line))
+        if '*' in tmp_line:
+            line_sections = tmp_line.split('*')
+            init = True if tmp_line[1:2] == '*' else False
             line = ''
             for ls_, line_sec in enumerate(line_sections):
                 if init:
@@ -226,9 +255,8 @@ class website_builder(object):
                     html = ''
                     init = True
                 line += html + line_sec
-            # FIXME:
-            # logger.debug('Italics: {} > `{}`\n'.format(line_sections, line))
-        else:
+            # lgr('Italics: {} > `{}`\n'.format(line_sections, line))
+        if '*' not in raw_line:
             line = raw_line
         return line
 
