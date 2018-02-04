@@ -271,14 +271,13 @@ select:focus {
 label,
 legend {
   display: block;
-  margin-bottom: .5rem;
-  font-weight: 600; }
+  margin-bottom: .5rem;}
 fieldset {
   padding: 0;
   border-width: 0; }
-input[type="checkbox"],
+/*input[type="checkbox"],
 input[type="radio"] {
-  display: inline; }
+  display: inline; }*/
 label > .label-body {
   display: inline-block;
   margin-left: .5rem;

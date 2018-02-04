@@ -205,7 +205,8 @@ class website_builder(object):
 
     def append_ingredient(self, line):
         uniq_id = self.ingredient_counter
-        base_li = '<li id="{}" class="ingredient magic-checkbox'.format(uniq_id)  # *NO CLOSING "
+        # *Note, no closing quotation (")
+        base_li = '<input type="checkbox" name="layout" id="{}" class="ingredient magic-checkbox'.format(uniq_id)
         if '|' in line:
             # Examples from brick_chicken.md
             # 2 tbsp |fresh sage, finely chopped
@@ -215,10 +216,10 @@ class website_builder(object):
             clean_line = re.sub(ur'\s{2,}', ' ', line.replace('|', ''))  # remove unintended whitespace
             # self.write('<li class="{}"><input id="{}" type="checkbox">{}</input></li>'.format(
             #     tag, uniq_id, clean_line))
-            self.write('{} {}">{}</li>'.format(base_li, tag, clean_line))
+            self.write('{} {}"><label for="{}">{}</label>'.format(base_li, tag, uniq_id, clean_line))
         else:
             lgr('Error: ({}) no ingredient tag in: {}'.format(self.cur_md_title, line))
-            self.write('{}" id="{}">{}</li>'.format(base_li, uniq_id, line))
+            self.write('{}"><label for="{}">{}</label>'.format(base_li, uniq_id, line))
         self.ingredient_counter += 1
 
     def append_list_item(self, line):
