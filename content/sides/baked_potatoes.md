@@ -13,7 +13,8 @@ end
 5. Top with cheese, chives, and/or black pepper
 end
 
-Alternative recipe with the Instant Pot (<a href="https://amindfullmom.com/instant-pot-baked-potatoes/">source<\a>):
+Alternative recipe with the Instant Pot (<a href="https://amindfullmom.com/instant-pot-baked-potatoes/">source</a>):
+
 1. Scrub the potatoes clean.
 2. Insert the steamer rack into the instant pot, add 1 cup of (cold) water, then add the potatoes. Make sure the potatoes and water do not touch
 3. Close lid and turn the sealing vent to "sealed." Then use manual mode with high pressure for 12 minutes. Allow for natural release (~8 minutes)

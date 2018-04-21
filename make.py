@@ -149,7 +149,7 @@ class website_builder(object):
 
     def make_title(self, line):
         title = re.search(ur'#+([^#|]+)', line).group(1).strip()
-        return title, 'recipe-{}'.format(title)
+        return title, 'recipe-{}'.format(title.replace(' ', '_'))
 
     def init_recipe(self, raw_title, full_fn):
         # Solve for variables in markdown layout
