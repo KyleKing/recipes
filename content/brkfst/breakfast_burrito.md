@@ -9,6 +9,8 @@
 end
 
 1. On medium heat, cook the eggs, cumin, and pepper
-2. Microwave the chunky salsa and black beans
-3. Serve with toast or in a tortilla
+2. In parallel, cook the tortilla in a large flat pan
+3. Options:
+4. microwave chunky salsa and black beans
+5. Sauté sausage and cook onion and melt cheese with the egg
 end

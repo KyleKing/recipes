@@ -6,10 +6,10 @@
 - |Instant Pot
 end
 
-1. Preheat the oven to 425℉
+1. Preheat the oven to 450℉
 2. Scrub wash and dry the potatoes and poke with a fork to allow steam to escape
 3. Rub oil and salt over the potatoes
-4. Bake on a baking sheet for 45 minutes and until tender inside
+4. Bake on a baking sheet for 60 minutes and until tender inside (45 minutes for smaller potatoes)
 5. Top with cheese, chives, and/or black pepper
 end
 

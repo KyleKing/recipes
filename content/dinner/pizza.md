@@ -10,9 +10,10 @@
 - |red pepper flakes
 end
 
-1. Pre-heat the oven to 400'F
-2. Prep a baking pan with a layer of tin foil, then grease with olive oil and roll out the pizza dough
+1. Pre-heat the oven to 425'F
+2. Grease a baking pan and gently roll out the pizza dough (<a href="https://giphy.com/explore/throwing-dough">optionally toss</a>)
+3. Pre-bake the pizza crust until starting to crisp and cooked-through (7-15 min depending on thickness)
 3. (Optional) In a pan, heat olive oil and garlic, then spread onto the pizza dough
-4. Layer on marinara sauce, spinach (optional), the cheese(s), then toppings
-5. Bake for about 22 minutes, then additional time as needed
+4. Layer on sauce, spinach, cheese(s), and other toppings
+5. Bake for additional 10 min. or as needed
 end
