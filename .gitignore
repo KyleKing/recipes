@@ -1,5 +1,5 @@
-/recipes.log
-/tmp.py
-/src/imgs dev
-/TODO
-/TODO.txt
+*.log
+tmp.*
+
+TODO/*
+dist/*
