@@ -3,9 +3,10 @@
     "browser": true
   },
   "globals": {
-    "jQuery": true,
+    "$": true,
     "Fuse": true,
-    "crel": true
+    "crel": true,
+    "localDB": true
   },
   "parserOptions": {
     "ecmaFeatures": {},
