@@ -1,4 +1,7 @@
+# Remove intermediary files
+/dist/database.json
 *.log
-tmp.*
 
+# Remove WIP
+tmp.*
 TODO/*

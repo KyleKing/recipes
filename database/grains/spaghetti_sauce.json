@@ -1,5 +1,5 @@
 {
-  "alt_ratio": "1/3",
+  "altRatio": "1/3",
   "ingredients": {
     "Brown in Pan": [
       "1 lb hamburger meat"
@@ -16,7 +16,7 @@
       "2 bay leaves",
       "Spaghetti, for plating"
     ],
-    "Sauté in Olive Oil": [
+    "Saute in Olive Oil": [
       "2 onions, chopped",
       "1/2 green pepper, chopped",
       "3 stalks celery, chopped",

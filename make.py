@@ -109,9 +109,10 @@ class site_compiler(object):
         # Store subdirectory grouping
         recipe['group'] = subdir
         # Add recipe title as title case of filename split on underscores
+        recipe['id'] = 'recipe-{}'.format(recipe_title)
         recipe['title'] = recipe_title.replace('_', ' ').title()
         # Adds link to minified image
-        recipe['img_src'] = self.imgs[recipe_title] if recipe_title in self.imgs else ''
+        recipe['imgSrc'] = self.imgs[recipe_title] if recipe_title in self.imgs else ''
         # Standardizes ingredients (accepts either object of arrays or simply array)
         if type(recipe['ingredients']) is list:
             recipe['ingredients'] = {'ingredients': recipe['ingredients']}
@@ -123,8 +124,16 @@ class site_compiler(object):
 
     def dump_json(self):
         """Export the JSON file"""
-        kwargs = {'separators': (',', ':')} if not debug else {'indent': 4}
-        rcps_obj = {'recipes': self.recipes}  # wrap array in object
+        kwargs = {'separators': (',', ':')} if not debug else {'indent': 4, 'separators': (',', ': ')}
+        # Add keys for fuse to search
+        searchKeys = ['notes', 'recipe', 'title']
+        # Get each unique key (section header) for ingredients
+        for recipe in self.recipes:
+            searchKeys.extend(['ingredients.{}'.format(hdr) for hdr in recipe['ingredients'].iterkeys()])
+        searchKeys = list(set(searchKeys))
+        lgr('searchKeys:')
+        lgr(searchKeys)
+        rcps_obj = {'recipes': self.recipes, 'searchKeys': searchKeys}
         json.dump(rcps_obj, open(self.db_fn, 'w'), sort_keys=True, **kwargs)
 
     def json_to_js(self):
