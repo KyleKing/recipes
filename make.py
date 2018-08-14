@@ -51,8 +51,10 @@ class site_compiler(object):
         self.glob_cb('{}/*/*'.format(self.src_dir), self.cp_imgs)
 
         # Combine JSON documents into single file
+        self.groups = []
         self.glob_cb('{}/*/*.json'.format(self.src_dir), self.read_json)
         self.dump_json()
+        self.groups = list(set(self.groups))
         self.json_to_js()
 
     # General utilities
@@ -108,6 +110,7 @@ class site_compiler(object):
             recipe = json.load(fn)
         # Store subdirectory grouping
         recipe['group'] = subdir
+        self.groups.append(recipe['group'])
         # Add recipe title as title case of filename split on underscores
         recipe['id'] = 'recipe-{}'.format(recipe_title)
         recipe['title'] = recipe_title.replace('_', ' ').title()
@@ -117,8 +120,9 @@ class site_compiler(object):
         if type(recipe['ingredients']) is list:
             recipe['ingredients'] = {'ingredients': recipe['ingredients']}
         for header, ingredients in recipe['ingredients'].iteritems():
-            recipe['ingredients'][header] = [ing.strip().lower() for ing in ingredients]
-        # TODO: Identifies errors in source file
+            recipe['ingredients'][header] = [header.title()]
+            recipe['ingredients'][header].extend([ing.strip().lower() for ing in ingredients])
+        # TODO: Identify errors in source file
 
         self.recipes.append(recipe)
 
@@ -139,7 +143,7 @@ class site_compiler(object):
     def json_to_js(self):
         """Add variable declaration so JavaScript can load JSON w/o Cross-Origin Errors for accessing file://"""
         recipes = self.read(self.db_fn)
-        self.write('var localDB = {}'.format(recipes), self.db_fn[:-2])
+        self.write('var groups = {}\nvar localDB = {}'.format(self.groups, recipes), self.db_fn[:-2])
 
 
 if __name__ == '__main__':

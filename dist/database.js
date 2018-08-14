@@ -1,3 +1,4 @@
+var groups = ['dssrt', 'brkfst', 'sides', 'grains', 'meals']
 var localDB = {
     "recipes": [
         {
@@ -6,6 +7,7 @@ var localDB = {
             "imgSrc": "",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "2-4 sweet potatoes, scrubbed clean",
                     "instant pot"
                 ]
@@ -24,6 +26,7 @@ var localDB = {
             "imgSrc": "dist/imgs/sides-baked_zucchini.jpg",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "zucchini",
                     "parmesan",
                     "olive oil",
@@ -51,7 +54,9 @@ var localDB = {
             "id": "recipe-salad",
             "imgSrc": "dist/imgs/sides-salad.jpg",
             "ingredients": {
-                "ingredients": []
+                "ingredients": [
+                    "Ingredients"
+                ]
             },
             "notes": [],
             "recipe": [
@@ -70,6 +75,7 @@ var localDB = {
             "imgSrc": "",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "2-4 russet potatoes, scrubbed clean",
                     "olive oil",
                     "1 tbsp salt",
@@ -92,6 +98,7 @@ var localDB = {
             "imgSrc": "dist/imgs/sides-baked_broccoli.jpg",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "2 tsp olive oil",
                     "salt",
                     "pepper",
@@ -114,6 +121,7 @@ var localDB = {
             "imgSrc": "dist/imgs/sides-baked_potatoes.jpg",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "2-4 russet potatoes, scrubbed clean",
                     "olive oil",
                     "1 tbsp salt"
@@ -136,6 +144,7 @@ var localDB = {
             "imgSrc": "dist/imgs/brkfst-pancakes.jpg",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "2 cups all-purpose flour",
                     "2 teaspoons baking powder",
                     "1/4 teaspoon salt",
@@ -165,6 +174,7 @@ var localDB = {
             "imgSrc": "dist/imgs/brkfst-eggs_benedict.jpg",
             "ingredients": {
                 "FOR THE BENEDICT AND ASSEMBLY": [
+                    "For The Benedict And Assembly",
                     "4 english muffins, split",
                     "8 slices canadian bacon or thick-cut ham",
                     "2 tbsp unsalted butter",
@@ -174,6 +184,7 @@ var localDB = {
                     "pepper"
                 ],
                 "FOR THE HOLLANDAISE": [
+                    "For The Hollandaise",
                     "1/2 cup (1 stick) unsalted butter",
                     "3 large egg yolks",
                     "2 tsp fresh lemon juice (1/4 lemon)",
@@ -182,6 +193,7 @@ var localDB = {
                     "pepper"
                 ],
                 "FOR THE POACHED EGGS": [
+                    "For The Poached Eggs",
                     "1 tbsp white distilled vinegar",
                     "salt, kosher",
                     "8 large eggs",
@@ -213,6 +225,7 @@ var localDB = {
             "imgSrc": "dist/imgs/brkfst-coffee.jpg",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "starbucks caffe verona"
                 ]
             },
@@ -232,6 +245,7 @@ var localDB = {
             "imgSrc": "",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "3 eggs",
                     "chive",
                     "basil"
@@ -254,6 +268,7 @@ var localDB = {
             "imgSrc": "dist/imgs/brkfst-waffles.jpg",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "2.5 cups flour",
                     "4 tsp baking powder",
                     "1/4 cup sugar",
@@ -282,6 +297,7 @@ var localDB = {
             "imgSrc": "",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "3 eggs",
                     "1/4 tsp ground cumin",
                     "pepper",
@@ -307,6 +323,7 @@ var localDB = {
             "imgSrc": "",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "1 fresh lemon, *for 1 tsp zest and 1 tbsp juice*",
                     "1.25 cups all-purpose flour",
                     "1/2 tsp salt",
@@ -335,6 +352,7 @@ var localDB = {
             "imgSrc": "dist/imgs/meals-naan_pizza.jpg",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "2 naan",
                     "olive oil",
                     "pasta sauce",
@@ -363,6 +381,7 @@ var localDB = {
             "imgSrc": "dist/imgs/meals-tuna_melts.jpg",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "mayonnaise",
                     "canned tuna",
                     "english muffins",
@@ -385,6 +404,7 @@ var localDB = {
             "imgSrc": "dist/imgs/meals-brick_chicken.png",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "1/3 cup extra-virgin olive oil",
                     "3 tbsp fresh rosemary, chopped",
                     "2 tbsp fresh sage, finely chopped",
@@ -414,6 +434,7 @@ var localDB = {
             "imgSrc": "dist/imgs/meals-fajitas.jpg",
             "ingredients": {
                 "Main": [
+                    "Main",
                     "3 peppers",
                     "3 tomatoes",
                     "1 lg. onion",
@@ -422,12 +443,14 @@ var localDB = {
                     "1 lb. chicken (~two breasts)"
                 ],
                 "Seasonings": [
+                    "Seasonings",
                     "1 tbsp chili powder",
                     "2 tbsp vegetable oil",
                     "1/4 tsp garlic powder",
                     "1/2 tbsp corn starch"
                 ],
                 "With": [
+                    "With",
                     "10 6-inch tortillas",
                     "2 cups of rice",
                     "1/3 bag of spinach",
@@ -452,10 +475,12 @@ var localDB = {
             "imgSrc": "",
             "ingredients": {
                 "Toppings": [
+                    "Toppings",
                     "tortilla chips",
                     "2 cups grated cheese"
                 ],
                 "soup": [
+                    "Soup",
                     "4 chicken breast, halved",
                     "2 cans of black beans (30 oz), drained",
                     "2 cans of rotel (mexican stewed) tomatoes (30 oz)",
@@ -480,6 +505,7 @@ var localDB = {
             "imgSrc": "dist/imgs/meals-fish.jpg",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "frozen fish fillet",
                     "salt",
                     "pepper",
@@ -503,6 +529,7 @@ var localDB = {
             "imgSrc": "dist/imgs/meals-pizza.jpg",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "bag of pre-kneaded dough",
                     "olive oil",
                     "garlic (optional)",
@@ -531,6 +558,7 @@ var localDB = {
             "imgSrc": "",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "1 lb shrimp",
                     "1/4 cup olive oil",
                     "3 tbsp honey",
@@ -554,6 +582,7 @@ var localDB = {
             "imgSrc": "",
             "ingredients": {
                 "Seasoning Combinations": [
+                    "Seasoning Combinations",
                     "basic: salt & pepper",
                     "tacos: chili powder + cumin + cayenne + paprika",
                     "rice: sriracha + honey (+ broccoli)",
@@ -580,6 +609,7 @@ var localDB = {
             "imgSrc": "dist/imgs/meals-mini_pizza.jpg",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "english muffins (or bagels)",
                     "tomato sauce",
                     "mozzarella cheese",
@@ -602,6 +632,7 @@ var localDB = {
             "imgSrc": "",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "1 tbsp yeast",
                     "1 tbsp sugar",
                     "2 cups warm water",
@@ -632,7 +663,9 @@ var localDB = {
             "id": "recipe-sandwiches",
             "imgSrc": "dist/imgs/meals-sandwiches.jpg",
             "ingredients": {
-                "ingredients": []
+                "ingredients": [
+                    "Ingredients"
+                ]
             },
             "notes": [],
             "recipe": [
@@ -648,6 +681,7 @@ var localDB = {
             "imgSrc": "dist/imgs/meals-chicken_cacciatore.jpg",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "6 qt. instant pot",
                     "4 chicken thighs (2-3 lbs) [needs to fit in one layer]",
                     "salt & pepper",
@@ -682,6 +716,7 @@ var localDB = {
             "imgSrc": "dist/imgs/grains-red_beans_and_rice.jpg",
             "ingredients": {
                 "Base": [
+                    "Base",
                     "rice",
                     "2 16-oz. cans red beans",
                     "1 lb. andouille sausage",
@@ -691,6 +726,7 @@ var localDB = {
                     "1 tbsp. green onions, sliced"
                 ],
                 "Seasonings": [
+                    "Seasonings",
                     "1 tsp garlic powder (or 2 cloves)",
                     "2 tsp. cayenne pepper",
                     "2 sprigs fresh thyme",
@@ -717,6 +753,7 @@ var localDB = {
             "imgSrc": "dist/imgs/grains-dragon_noodles.jpg",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "16 oz bag of lo mein noodles",
                     "some vegetables (sliced pepper, zucchini, carrots, etc)",
                     "1.5 tbsp butter",
@@ -746,18 +783,21 @@ var localDB = {
             "imgSrc": "dist/imgs/grains-peanut_noodles.jpg",
             "ingredients": {
                 "Garnish Options": [
+                    "Garnish Options",
                     "sesame seeds (or peanuts)",
                     "green onions, sliced",
                     "cilantro",
                     "shrimp, *marinated in lime, salt, and garlic powder then saut\u00e9ed*"
                 ],
                 "Peanut Noodles": [
+                    "Peanut Noodles",
                     "linguine, egg noodles, or rice",
                     "chopped baby carrots",
                     "chopped shallots (a.k.a. white base of green onion)",
                     "*other vegetables: peppers, broccoli, zucchini, snow peas*"
                 ],
                 "Sauce": [
+                    "Sauce",
                     "6 tbsp pb",
                     "1.5 tbsp hot chili oil",
                     "2 tbsp sesame oil",
@@ -782,6 +822,7 @@ var localDB = {
             "imgSrc": "",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "1/2 box of spaghetti",
                     "1/4 lb pancetta, diced",
                     "2 tsp olive oil",
@@ -810,6 +851,7 @@ var localDB = {
             "imgSrc": "dist/imgs/grains-mozzarella_pasta.jpg",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "box of pasta",
                     "bag of frozen peas",
                     "pesto",
@@ -835,6 +877,7 @@ var localDB = {
             "imgSrc": "dist/imgs/grains-sesame_noodles_with_wilted_greens.jpg",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "8 oz spaghetti",
                     "1/2 bag of spinach (4 oz)",
                     "2 eggs",
@@ -864,6 +907,7 @@ var localDB = {
             "imgSrc": "dist/imgs/grains-sausage_and_mushroom_penne_pasta.jpg",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "3-6 links italian sausage",
                     "1 small onion",
                     "8 oz. container of button mushrooms",
@@ -895,9 +939,11 @@ var localDB = {
             "imgSrc": "dist/imgs/grains-spaghetti_sauce.jpg",
             "ingredients": {
                 "Brown in Pan": [
+                    "Brown In Pan",
                     "1 lb hamburger meat"
                 ],
                 "Other Ingredients": [
+                    "Other Ingredients",
                     "3 lbs whole tomatoes (2-3 cans)",
                     "1 large can of water",
                     "12 oz tomato paste (2 cans",
@@ -910,6 +956,7 @@ var localDB = {
                     "spaghetti, for plating"
                 ],
                 "Saute in Olive Oil": [
+                    "Saute In Olive Oil",
                     "2 onions, chopped",
                     "1/2 green pepper, chopped",
                     "3 stalks celery, chopped",
@@ -934,6 +981,7 @@ var localDB = {
             "imgSrc": "dist/imgs/grains-fried_rice.jpg",
             "ingredients": {
                 "Combine": [
+                    "Combine",
                     "4 cup day-old rice",
                     "3/4 cup finely chopped onion",
                     "8 ounces chicken chopped",
@@ -963,6 +1011,7 @@ var localDB = {
             "imgSrc": "dist/imgs/grains-orzon_and_cheese.jpg",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "1 lb ham steak, cubed",
                     "16 oz box of orzo",
                     "bag of frozen broccoli",
@@ -985,6 +1034,7 @@ var localDB = {
             "imgSrc": "dist/imgs/grains-curried_chickpeas.jpg",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "1 small onion (or diced pepper)",
                     "1.5 tbsp curry powder",
                     "1 inch fresh ginger (or 1 tsp cinnamon or 1 tsp nutmeg)",
@@ -1011,7 +1061,9 @@ var localDB = {
             "id": "recipe-quinoa_and_stuff",
             "imgSrc": "dist/imgs/grains-quinoa_and_stuff.png",
             "ingredients": {
-                "ingredients": []
+                "ingredients": [
+                    "Ingredients"
+                ]
             },
             "notes": [],
             "recipe": [
@@ -1029,6 +1081,7 @@ var localDB = {
             "imgSrc": "",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "1 tablespoon unsalted butter, melted",
                     "1 70% dark chocolate bar (100g)",
                     "7 tbsp unsalted butter, cut into cubes",
@@ -1054,6 +1107,7 @@ var localDB = {
             "imgSrc": "dist/imgs/dssrt-oreo_truffles.jpg",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "package of oreos (36)",
                     "8 oz. cream cheese",
                     "16 oz semi-sweet chocolate chips"
@@ -1076,6 +1130,7 @@ var localDB = {
             "imgSrc": "dist/imgs/dssrt-cake_pops.jpg",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "cake mix",
                     "frosting",
                     "16 oz semi-sweet chocolate chips"
@@ -1098,6 +1153,7 @@ var localDB = {
             "imgSrc": "dist/imgs/dssrt-oatmeal_balls.jpg",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "1 cup rolled oats",
                     "1/2 cup chocolate chips",
                     "1/2 cup ground flaxseed meal",
@@ -1121,6 +1177,7 @@ var localDB = {
             "imgSrc": "",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "2 oz unsweetened chocolate",
                     "1 tbsp butter",
                     "1/3 cup boiling water",
@@ -1145,6 +1202,7 @@ var localDB = {
             "imgSrc": "",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "1/2 cup butter, melted",
                     "1.5 cups peanut butter",
                     "2.5 cups powdered sugar",
@@ -1168,6 +1226,7 @@ var localDB = {
             "imgSrc": "dist/imgs/dssrt-pb_and_cocoa_smothie.jpg",
             "ingredients": {
                 "ingredients": [
+                    "Ingredients",
                     "yogurt",
                     "1-2 spoons of peanut butter",
                     "banana",
@@ -1188,11 +1247,13 @@ var localDB = {
             "imgSrc": "",
             "ingredients": {
                 "Caramel Sauce": [
+                    "Caramel Sauce",
                     "14 oz bag of caramels (unwrapped)",
                     "14 oz can sweetened condensed milk",
                     "stick of butter"
                 ],
                 "The Krispies": [
+                    "The Krispies",
                     "1.5 sticks butter",
                     "10 cups miniature marshmallows",
                     "10 cups rice krispies"

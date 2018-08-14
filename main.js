@@ -1,28 +1,50 @@
-//
-// Highlight regions matched by Fuse
-// https://github.com/krisk/Fuse/issues/6#issuecomment-352192752
-//
+/*
+>> Highlight Text Matched with Fuse
+ */
 
-// FYI: does not account for overlapping highlighted regions, if that's even possible...
+/**
+ * Wrap matched regions in given string with the highlight CSS class
+ *   Based on: https://github.com/krisk/Fuse/issues/6#issuecomment-352192752
+ *   FYI: does not account for overlapping highlighted regions, if that's even possible...
+ * @param  {String} text    Text matched with Fuse
+ * @param  {Array} regions  Array of arrays with match indexes in [start, stop]
+ * @return {Array}          Array of Crel elements
+ */
 function highlightText( text, regions ) {
   if( !regions ) return text
-
-  const content = []
   let nextStartIdx = 0
+  const content = []
   regions.forEach( ( region ) => {
+    // Add the section between (last match || start) to start of next match
     content.push( crel( 'span', text.substring( nextStartIdx, region[0] ) ) )
+    // Add highlighted section
     content.push( crel( 'span', {'class': 'highlight'}, text.substring( region[0], region[1] + 1 ) ) )
     nextStartIdx = region[1] + 1
   } )
+  // Add final section after last match
   content.push( crel( 'span', text.substring( nextStartIdx ) ) )
   return content
 }
 
-//
-// Create HTML with Crel
-//
+/**
+ * Check for a match in lookup object key and index, then pass to highlight function
+ * @param  {String} item      Raw string
+ * @param  {String} key       Database key in dot syntax for matchObj
+ * @param  {Int} idx          Index of item
+ * @param  {Object} matchObj  Match lookup Object
+ * @return {String || Array}  List of Crel elements or original, raw string
+ */
+const highlightItem = function( item, key, idx, matchObj ) {
+  if ( key in matchObj && matchObj[key].arrayIndices.indexOf( idx ) !== -1 )
+    return( highlightText( item, matchObj[key][String( idx )] ) )
+  return( item )
+}
 
-// Take matches object and create lookup to more efficiently highlight matches in text
+/**
+ * Take matches object and create lookup to more efficiently highlight matches in text
+ * @param  {Object} fuseMatches Subset of local database matched with Fuse
+ * @return {Object}             Optimize object structure to simplify highlighting
+ */
 const unwrapHighlights = function( fuseMatches ) {
   let matchLookup = {}
   for ( let match of fuseMatches ) {
@@ -36,14 +58,17 @@ const unwrapHighlights = function( fuseMatches ) {
   return matchLookup
 }
 
-// Create list of HTML elements for ingredients with interactive checkbox
-const createCheckedItems = function( rcpID, header, list, matches = {'arrayIndices': []} ) {
+/*
+>> Create HTML Content with Crel
+ */
+
+// Create list of HTML elements for ingredients with interactive check box
+const createCheckedItems = function( rcpID, header, list, matchObj = {} ) {
   const ingredients = []
-  for ( let idx = 0; idx < list.length; idx++ ) {
+  for ( let idx = 1; idx < list.length; idx++ ) {
     const uniqID = `${rcpID}-${header.toLowerCase().replace( /\s+/g, '_' )}-${idx}`
     let ingredient = list[idx]
-    if ( matches.arrayIndices.indexOf( idx ) !== -1 )
-      ingredient = highlightText( ingredient, matches[String( idx )] )
+    ingredient = highlightItem( ingredient, `ingredients.${header}`, idx, matchObj )
     ingredients.push( crel( 'input',
       {
         'class': 'ingredient magic-checkbox',
@@ -57,47 +82,29 @@ const createCheckedItems = function( rcpID, header, list, matches = {'arrayIndic
 }
 
 // Create unordered list beneath paragraph header
-const constCreateListGroup = function( rcp, matchLookup = {} ) {
+const constCreateListGroup = function( rcp, matchObj = {} ) {
   let ingredientList = []
   for ( let header of Object.keys( rcp.ingredients ) ) {
-    const ulArgs = [rcp.id, header, rcp.ingredients[header]]
-    // Identify if matches were found in this section
-    const matchKey = `ingredients.${header}`
-    if ( matchKey in matchLookup )
-      ulArgs.push( matchLookup[matchKey] )
-    // Create ingredient section title and checkable items
-    ingredientList.push( crel( 'p', header.toUpperCase() ) )
+    // Highlight section header if match made
+    // FYI: header is duplicated from key to first index of array
+    let customHeader = rcp.ingredients[header][0]
+    customHeader = highlightItem( customHeader, `ingredients.${header}`, 0, matchObj )
+    // Create ingredient section header and checkable items
+    ingredientList.push( crel( 'p',  customHeader ) )
     ingredientList.push( crel( 'ul',
-      createCheckedItems( ...ulArgs )
+      createCheckedItems( rcp.id, header, rcp.ingredients[header], matchObj )
     ) )
   }
   return ingredientList
 }
 
-// // All keys should have known hierarchy
-// const splitDot = function( key, obj ) {
-//   const keys = key.split( '.' )
-//   for ( let idx = 0; idx < keys.length; idx++ ) {
-//     if ( keys[idx] in obj ) {
-//       obj = obj[keys[idx]]
-//       if ( idx === keys.length )
-//         return obj
-//     }
-//   }
-//   return {}
-// }
-
 // Create HTML-list elements based on recipe and key argument
 const createList = function( recipe, key, matchLookup = {} ) {
-  let matches = {'arrayIndices': []}
-  if ( key in matchLookup )
-    matches = matchLookup[key]
   const items = []
   if ( key in recipe ) {
     for ( let idx = 0; idx < recipe[key].length; idx++ ) {
       let item = recipe[key][idx]
-      if ( matches.arrayIndices.indexOf( idx ) !== -1 )
-        item = highlightText( item, matches[String( idx )] )
+      item = highlightItem( item, key, idx, matchLookup )
       items.push( crel( 'li', item ) )
     }
   }
@@ -158,21 +165,14 @@ const updateRecipes = function( recipes ) {
   }
 }
 
-//
-// Search local recipe database
-//
+/*
+>> Search local recipe database
+ */
 
 // TODO: Add text input and button event click to update search results
-// var searchPhrase = 'instant pot'
 
-// FIXME: freeze doesn't highlight for cake pops
-var searchPhrase = 'freeze'
-// // FIXME: Chocolate is missing highlights as well
-// var searchPhrase = 'chocolate
-// // Title highlighting works!
-// var searchPhrase = 'cake'
-// // FIXME: doesn't highlight headers...
-// var searchPhrase = 'ingredients'
+// Highlight headers...
+var searchPhrase = 'KriSPie'
 
 const options = {
   distance: 10000,
