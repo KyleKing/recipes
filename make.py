@@ -7,7 +7,6 @@ import json
 debug = True
 # debug = False
 
-
 logger = logging.getLogger(__name__)
 lgr_fn = 'recipes.log'
 formatter = logging.Formatter('%(asctime)s %(filename)s:%(lineno)d\t%(message)s')
@@ -60,7 +59,12 @@ class site_compiler(object):
     # General utilities
 
     def create_dir(self, dir_pth, rm=False):
-        """General utility for working with directories"""
+        """General utility for working with directories
+
+        dir_pth -- path to output directory
+        rm -- delete existing directory, if one found
+
+        """
         # Remove the initial directory
         if rm and os.path.isdir(dir_pth):
             shutil.rmtree(dir_pth)
@@ -69,22 +73,39 @@ class site_compiler(object):
             os.makedirs(dir_pth)
 
     def read(self, fn, split=False):
-        """Return the contents of a file"""
+        """Return the contents of a file
+
+        fn -- filename
+        split -- split raw text on newline
+
+        """
         with open(fn) as fn_:
             contents = fn_.read()
         return contents.split('\n') if split else contents
 
-    def write(self, content, fn):
-        """Append to target file"""
+    def write(self, fn, content):
+        """Append to target file
+
+        fn -- filename
+        content -- text to append to file
+
+        """
         with open(fn, 'a') as fn_:
             fn_.write(content)
 
     def glob_cb(self, pattern, cb):
-        """Glob given path and use callback on filename"""
+        """Glob given path and use callback on filename
+
+        pattern -- glob pattern
+        cb -- callback function on globbed files
+
+        """
         for fn_src in glob.glob(pattern):
+            # Split *relative* filename to check file type and path
             dot_split = fn_src.split('.')
             path_split = dot_split[0].split('/')
             if len(dot_split) == 2 and len(path_split) == 3:
+                # Pass known path components to callback
                 file_type = dot_split[1].lower()
                 ___, subdir, recipe_title = path_split
                 cb(fn_src, subdir, recipe_title, file_type=file_type)
@@ -94,9 +115,19 @@ class site_compiler(object):
     # Image manipulation utilities
 
     def cp_imgs(self, fn_src, subdir, recipe_title, file_type):
-        """Copy images from source location to destination directory"""
+        """Check if image exists for given recipe and if so, copy to dist directory
+
+        fn_src -- Relative source filename
+        subdir -- Subdirectory
+        recipe_title -- Filename without extension
+        file_type -- File extensions
+
+        """
+        # Only applies image files (non-JSON)
         if file_type != 'json':
+            # Create destination filename
             fn_dest = '{}{}-{}.{}'.format(self.dist_imgs, subdir, recipe_title, file_type)
+            # Track matched image filenames
             self.imgs[recipe_title] = fn_dest
             lgr('Copying `{}` to `{}`'.format(fn_src, fn_dest))
             shutil.copyfile(fn_src, fn_dest)
@@ -104,7 +135,15 @@ class site_compiler(object):
     # JSON File utilities
 
     def read_json(self, fn_src, subdir, recipe_title, **kwargs):
-        """Read JSON and append to database object"""
+        """Read JSON and append to database object
+
+        fn_src -- Relative source filename
+        subdir -- Subdirectory
+        recipe_title -- Filename without extension
+        file_type -- File extensions
+        kwargs -- additional keyword arguments
+
+        """
         lgr('Reading JSON file: `{}`'.format(fn_src))
         with open(fn_src) as fn:
             recipe = json.load(fn)
@@ -120,30 +159,32 @@ class site_compiler(object):
         if type(recipe['ingredients']) is list:
             recipe['ingredients'] = {'ingredients': recipe['ingredients']}
         for header, ingredients in recipe['ingredients'].iteritems():
+            # Add header in list, so Fuse can attempt to find a match
             recipe['ingredients'][header] = [header.title()]
             recipe['ingredients'][header].extend([ing.strip().lower() for ing in ingredients])
-        # TODO: Identify errors in source file
+
+        # TODO: Catch errors in source files
 
         self.recipes.append(recipe)
 
     def dump_json(self):
-        """Export the JSON file"""
-        kwargs = {'separators': (',', ':')} if not debug else {'indent': 4, 'separators': (',', ': ')}
-        # Add keys for fuse to search
+        """Export recipes to a single JSON file"""
+        # Add all unique object keys for Fuse to search
         searchKeys = ['notes', 'recipe', 'title']
         # Get each unique key (section header) for ingredients
         for recipe in self.recipes:
             searchKeys.extend(['ingredients.{}'.format(hdr) for hdr in recipe['ingredients'].iterkeys()])
         searchKeys = list(set(searchKeys))
-        lgr('searchKeys:')
-        lgr(searchKeys)
+        lgr('searchKeys: {}'.format(searchKeys))
+        # Write JSON file
         rcps_obj = {'recipes': self.recipes, 'searchKeys': searchKeys}
+        kwargs = {'separators': (',', ':')} if not debug else {'indent': 4, 'separators': (',', ': ')}
         json.dump(rcps_obj, open(self.db_fn, 'w'), sort_keys=True, **kwargs)
 
     def json_to_js(self):
         """Add variable declaration so JavaScript can load JSON w/o Cross-Origin Errors for accessing file://"""
         recipes = self.read(self.db_fn)
-        self.write('var groups = {}\nvar localDB = {}'.format(self.groups, recipes), self.db_fn[:-2])
+        self.write(self.db_fn[:-2], 'var groups = {}\nvar localDB = {}'.format(self.groups, recipes))
 
 
 if __name__ == '__main__':
