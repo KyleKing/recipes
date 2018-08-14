@@ -42,7 +42,7 @@ const createCheckedItems = function( rcpID, header, list, matches = {'arrayIndic
   for ( let idx = 0; idx < list.length; idx++ ) {
     const uniqID = `${rcpID}-${header.toLowerCase().replace( /\s+/g, '_' )}-${idx}`
     let ingredient = list[idx]
-    if ( idx in matches.arrayIndices )
+    if ( matches.arrayIndices.indexOf( idx ) !== -1 )
       ingredient = highlightText( ingredient, matches[String( idx )] )
     ingredients.push( crel( 'input',
       {
@@ -66,7 +66,7 @@ const constCreateListGroup = function( rcp, matchLookup = {} ) {
     if ( matchKey in matchLookup )
       ulArgs.push( matchLookup[matchKey] )
     // Create ingredient section title and checkable items
-    ingredientList.push( crel( 'p', header ) )
+    ingredientList.push( crel( 'p', header.toUpperCase() ) )
     ingredientList.push( crel( 'ul',
       createCheckedItems( ...ulArgs )
     ) )
@@ -89,17 +89,17 @@ const constCreateListGroup = function( rcp, matchLookup = {} ) {
 
 // Create HTML-list elements based on recipe and key argument
 const createList = function( recipe, key, matchLookup = {} ) {
+  let matches = {'arrayIndices': []}
+  if ( key in matchLookup )
+    matches = matchLookup[key]
   const items = []
   if ( key in recipe ) {
     for ( let idx = 0; idx < recipe[key].length; idx++ ) {
       let item = recipe[key][idx]
-      if ( key in matchLookup && idx in matchLookup[key].arrayIndices )
-        item = highlightText( item, matchLookup[key][String( idx )] )
+      if ( matches.arrayIndices.indexOf( idx ) !== -1 )
+        item = highlightText( item, matches[String( idx )] )
       items.push( crel( 'li', item ) )
     }
-  } else {
-    console.warn( `${key} not found in:` )
-    console.warn( recipe )
   }
   return items
 }
@@ -118,16 +118,29 @@ const updateRecipes = function( recipes ) {
     let titleMatches = []
     if ( 'title' in matchLookup )
       titleMatches = matchLookup.title['0']
+    // Add link to recipe source, if one exists
+    let sourceLink = crel( 'span', '' )
+    if ( rcp.source.indexOf( 'http' )  >= 0 )
+      sourceLink = crel( 'a', {'href': rcp.source}, crel( 'i', '(Source)' ) )
+
+    let additionalNotes = crel( 'span', '' )
+    if ( rcp.notes.length > 0 ) {
+      additionalNotes = crel( 'div',
+        crel( 'p', 'Notes:' ),
+        crel( 'ul', createList( rcp, 'notes', matchLookup ) )
+      )
+    }
     // TODO: Set order that elements are added to DOM
     crel( document.getElementById( 'crel-target' ),
       // Add Recipe Title with Link
-      // TODO: Add source link?
       crel( 'div', {'class': 'row br'},
         crel( 'h5', {'class': 'twelve columns', 'id': rcp.id},
           crel( 'a',
             {'class': 'unstyled', 'href': `#${rcp.id}`, 'id': `${rcp.id}`},
             highlightText( rcp.title, titleMatches )
-          )
+          ),
+          crel( 'span', ' ' ),
+          sourceLink
         )
       ),
       // Add the Image and Recipe
@@ -138,10 +151,7 @@ const updateRecipes = function( recipes ) {
           crel( 'ol',
             createList( rcp, 'recipe', matchLookup )
           ),
-          crel( 'p', 'Notes:' ),
-          crel( 'ul',
-            createList( rcp, 'notes', matchLookup )
-          )
+          additionalNotes
         )
       )
     )
