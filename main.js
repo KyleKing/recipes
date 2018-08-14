@@ -1,69 +1,106 @@
 //
-// Test text highlight function
+// Highlight regions matched by Fuse
 // https://github.com/krisk/Fuse/issues/6#issuecomment-352192752
 //
 
-// Does not account for overlapping highlighted regions, if that exists at all O_o..
-function generateHighlightedText( text, regions ) {
+// FYI: does not account for overlapping highlighted regions, if that's even possible...
+function highlightText( text, regions ) {
   if( !regions ) return text
 
-  var content = '',
-    nextUnhighlightedRegionStartingIndex = 0
-
+  const content = []
+  let nextStartIdx = 0
   regions.forEach( ( region ) => {
-    content += '' +
-      text.substring( nextUnhighlightedRegionStartingIndex, region[0] ) +
-      '<span class="highlight">' +
-        text.substring( region[0], region[1] ) +
-      '</span>' +
-    ''
-    nextUnhighlightedRegionStartingIndex = region[1]
+    content.push( crel( 'span', text.substring( nextStartIdx, region[0] ) ) )
+    content.push( crel( 'span', {'class': 'highlight'}, text.substring( region[0], region[1] + 1 ) ) )
+    nextStartIdx = region[1] + 1
   } )
-
-  content += text.substring( nextUnhighlightedRegionStartingIndex )
-
+  content.push( crel( 'span', text.substring( nextStartIdx ) ) )
   return content
 }
 
-var srcText = 'hello world' // assume this is the srcText
-console.log( generateHighlightedText( srcText, [[1, 3], [6, 8]] ) )
-// h<span class="highlight">el</span>lo <span class="highlight">wo</span>rld
-
 //
-// Test creating HTML with Crel
+// Create HTML with Crel
 //
 
-const createCheckedItem = function( list ) {
-  const items = []
+// Take matches object and create lookup to more efficiently highlight matches in text
+const unwrapHighlights = function( fuseMatches ) {
+  let matchLookup = {}
+  for ( let match of fuseMatches ) {
+    // Initialize match object with list of all arrays matched
+    if ( !( String( match.key ) in matchLookup ) )
+      matchLookup[match.key] = {'arrayIndices': []}
+    // Store match information
+    matchLookup[match.key].arrayIndices.push( match.arrayIndex )
+    matchLookup[match.key][String( match.arrayIndex )] = match.indices
+  }
+  return matchLookup
+}
+
+// Create list of HTML elements for ingredients with interactive checkbox
+const createCheckedItems = function( rcpID, header, list, matches = {'arrayIndices': []} ) {
+  const ingredients = []
   for ( let idx = 0; idx < list.length; idx++ ) {
-    const item = list[idx]
-    items.push( crel( 'input',
+    const uniqID = `${rcpID}-${header.toLowerCase().replace( /\s+/g, '_' )}-${idx}`
+    let ingredient = list[idx]
+    if ( idx in matches.arrayIndices )
+      ingredient = highlightText( ingredient, matches[String( idx )] )
+    ingredients.push( crel( 'input',
       {
-        'class': 'ingredient magic-checkbox INGREDIENT', // TODO: Ingredient name?
-        'id': String( idx ), // TODO: Unique Index for all headers
+        'class': 'ingredient magic-checkbox',
+        'id': uniqID,
         'name': 'layout',
         'type': 'checkbox',
       } ) )
-    items.push( crel( 'label', {'for': String( idx )}, item ) )
+    ingredients.push( crel( 'label', {'for': uniqID}, ingredient ) )
   }
-  return items
+  return ingredients
 }
 
-const constCreateListGroup = function( ingObj ) {
-  let items = []
-  for ( let header of Object.keys( ingObj ) ) {
-    items.push( crel( 'p', header ) )
-    items.push( crel( 'ul',
-      createCheckedItem( ingObj[header] )
+// Create unordered list beneath paragraph header
+const constCreateListGroup = function( rcp, matchLookup = {} ) {
+  let ingredientList = []
+  for ( let header of Object.keys( rcp.ingredients ) ) {
+    const ulArgs = [rcp.id, header, rcp.ingredients[header]]
+    // Identify if matches were found in this section
+    const matchKey = `ingredients.${header}`
+    if ( matchKey in matchLookup )
+      ulArgs.push( matchLookup[matchKey] )
+    // Create ingredient section title and checkable items
+    ingredientList.push( crel( 'p', header ) )
+    ingredientList.push( crel( 'ul',
+      createCheckedItems( ...ulArgs )
     ) )
   }
-  return items
+  return ingredientList
 }
 
-const createList = function( list ) {
+// // All keys should have known hierarchy
+// const splitDot = function( key, obj ) {
+//   const keys = key.split( '.' )
+//   for ( let idx = 0; idx < keys.length; idx++ ) {
+//     if ( keys[idx] in obj ) {
+//       obj = obj[keys[idx]]
+//       if ( idx === keys.length )
+//         return obj
+//     }
+//   }
+//   return {}
+// }
+
+// Create HTML-list elements based on recipe and key argument
+const createList = function( recipe, key, matchLookup = {} ) {
   const items = []
-  for ( let item of list )
-    items.push( crel( 'li', item ) )
+  if ( key in recipe ) {
+    for ( let idx = 0; idx < recipe[key].length; idx++ ) {
+      let item = recipe[key][idx]
+      if ( key in matchLookup && idx in matchLookup[key].arrayIndices )
+        item = highlightText( item, matchLookup[key][String( idx )] )
+      items.push( crel( 'li', item ) )
+    }
+  } else {
+    console.warn( `${key} not found in:` )
+    console.warn( recipe )
+  }
   return items
 }
 
@@ -75,6 +112,12 @@ const updateRecipes = function( recipes ) {
   // Create new container and iterate over recipes
   for ( let recipe of recipes ) {
     const rcp = recipe.item
+    // Identify locations of Fuse matches
+    const matchLookup = unwrapHighlights( recipe.matches )
+    // Identify matching regions in title, if any
+    let titleMatches = []
+    if ( 'title' in matchLookup )
+      titleMatches = matchLookup.title['0']
     // TODO: Set order that elements are added to DOM
     crel( document.getElementById( 'crel-target' ),
       // Add Recipe Title with Link
@@ -83,7 +126,7 @@ const updateRecipes = function( recipes ) {
         crel( 'h5', {'class': 'twelve columns', 'id': rcp.id},
           crel( 'a',
             {'class': 'unstyled', 'href': `#${rcp.id}`, 'id': `${rcp.id}`},
-            `# ${rcp.title}`
+            highlightText( rcp.title, titleMatches )
           )
         )
       ),
@@ -91,13 +134,13 @@ const updateRecipes = function( recipes ) {
       crel( 'div', {'class': 'row'},
         crel( 'img', {'alt': rcp.id, 'class': 'five columns', 'src': rcp.imgSrc} ),
         crel( 'div', {'class': 'seven columns', 'id': rcp.id},
-          constCreateListGroup( rcp.ingredients ),
+          constCreateListGroup( rcp, matchLookup ),
           crel( 'ol',
-            createList( rcp.recipe )
+            createList( rcp, 'recipe', matchLookup )
           ),
           crel( 'p', 'Notes:' ),
           crel( 'ul',
-            createList( rcp.notes )
+            createList( rcp, 'notes', matchLookup )
           )
         )
       )
@@ -106,27 +149,38 @@ const updateRecipes = function( recipes ) {
 }
 
 //
-// Test Searching database
+// Search local recipe database
 //
 
+// TODO: Add text input and button event click to update search results
+// var searchPhrase = 'instant pot'
+
+// FIXME: freeze doesn't highlight for cake pops
+var searchPhrase = 'freeze'
+// // FIXME: Chocolate is missing highlights as well
+// var searchPhrase = 'chocolate
+// // Title highlighting works!
+// var searchPhrase = 'cake'
+// // FIXME: doesn't highlight headers...
+// var searchPhrase = 'ingredients'
+
 const options = {
-  distance: 100,
+  distance: 10000,
   includeMatches: true,
   keys: localDB.searchKeys,
   location: 0,
   maxPatternLength: 32,
-  minMatchCharLength: 4,
+  minMatchCharLength: searchPhrase.length - 1,
   shouldSort: true,
-  threshold: 0.2,
+  threshold: 0.1,
 }
-var fuse = new Fuse( localDB.recipes, options )
-const fuseResult = fuse.search( 'instant pot' )
-console.log( fuseResult )
-// console.log( fuse.search( 'dsrt' ) )
+const fuse = new Fuse( localDB.recipes, options )
+const fuseResults = fuse.search( searchPhrase )
+console.log( 'fuseResults:' )
+console.log( fuseResults )
 
 //
-// Try adding matched recipes to view
+// Add matched recipes to view
 //
 
-updateRecipes( fuseResult )
-
+updateRecipes( fuseResults )

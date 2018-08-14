@@ -15,37 +15,35 @@ a.unstyled {
     color: black !important;
 }
 
+span.highlight {
+    background-color: yellow;
+}
+
 ul {
     margin-bottom: 8px !important;
     margin-top: 0;
+    list-style: none;
 }
-
-ul li ul {
-    margin-bottom: 0;
-    margin-top: 5px;
-}
-
 li {
     line-height: normal;
     margin-bottom: 5px;
 }
-
-ul {
-    list-style: none;
+li.cd-unstyled-nav-item {
+    list-style-type: none !important;
 }
 
 ul li.ingredient:before {
     content: '\2610';
     margin-right: 5px;
 }
-
 ul li.ingredient.checked:before {
     content: '\2611';
     margin-right: 5px;
 }
 
-li.cd-unstyled-nav-item {
-    list-style-type: none !important;
+ul li ul {
+    margin-bottom: 0;
+    margin-top: 5px;
 }
 
 /*ul input ul {
