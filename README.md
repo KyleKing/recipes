@@ -10,6 +10,9 @@ Create interactive website for searching and making lists from user-specified so
 - ~~Add all recipes by default~~
 - ~~Sort alphabetically and with headers~~
 - Add table of contents
+- Revive URL trickery
+    + Implement linking on load, by only loading a specific recipe
+        * Combine all TOC as one list, get index, use index from local database
 - Add Cody House navigation back
 - Add styles for input (fix at top)
     + Test on mobile / localtunnel
