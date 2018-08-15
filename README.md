@@ -42,7 +42,7 @@ Create interactive website for searching and making lists from user-specified so
 
 ## Workflow
 
-1. Create <recipe_title>.json <recipe_title>.<img_format> in respective database directory. See template for all options.
+1. Create a `<recipe_title>.json` and matching `<recipe_title>.<img_format>` in the respective database directory. See `database\__template.json`.
 2. Run `python make.py`
     - Move source images to `dist/imgs/<subdir>-<recipe_title>.<img_format>`
     - Combine JSON documents into single JSON file

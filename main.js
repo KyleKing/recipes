@@ -178,6 +178,41 @@ const insertRecipe = function( isFuseSearch, rcp, titleMatches, sourceLink, addi
 
 }
 
+
+// TODO: Document
+let allRcps = []
+for ( let group of Object.keys( localDB.toc ) )
+  allRcps = [...allRcps, ...localDB.toc[group]]
+
+
+const getRcpByName = function( rcpTtl ) {
+  // FIXME: only works if no Fuse search.
+  console.log( rcpTtl )
+  console.log( allRcps.indexOf( rcpTtl ) )
+  console.log( localDB.recipes[allRcps.indexOf( rcpTtl )] )
+  return localDB.recipes[allRcps.indexOf( rcpTtl )]
+}
+
+/**
+ * Add Table of Contents to HTMl
+ * @return {None}
+ */
+const addToC = function() {
+  // TODO: Document
+  const trgt = document.getElementById( contentDivID )
+  crel( trgt, crel( 'h3', {'id': 'toc', 'style': 'padding-top: 50px'}, 'Recipes Table of Contents' ) )
+
+  for ( let group of Object.keys( localDB.toc ) ) {
+    const titles = []
+    for ( let rcpTtl of localDB.toc[group] )
+      titles.push( crel( 'li', crel( 'a', {'href': `#${getRcpByName( rcpTtl ).id}`}, rcpTtl ) ) )
+    crel( trgt, crel( 'ul', crel( 'li',
+      crel( 'a', {'href': `#${group}`}, group ),
+      crel( 'ul', titles )
+    ) ) )
+  }
+}
+
 /**
  * Recipe initializer
  * @param  {Object} recipes Fuse match with keys 'item' and 'matches'
@@ -197,6 +232,10 @@ const updateRecipes = function( recipes ) {
     isFuseSearch = 'item' in recipes[0] && 'matches' in recipes[0]
   else
     crel( document.getElementById( contentDivID ), crel( 'h1', 'No Matches Found' ) )
+
+  // Add table of contents if no Fuse filtering
+  if ( !isFuseSearch )
+    addToC()
 
   // Create new container and iterate over recipes
   for ( let recipe of recipes ) {
