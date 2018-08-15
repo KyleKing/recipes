@@ -50,10 +50,9 @@ class site_compiler(object):
         self.glob_cb('{}/*/*'.format(self.src_dir), self.cp_imgs)
 
         # Combine JSON documents into single file
-        self.groups = []
+        self.toc = {}
         self.glob_cb('{}/*/*.json'.format(self.src_dir), self.read_json)
         self.dump_json()
-        self.groups = list(set(self.groups))
         self.json_to_js()
 
     # General utilities
@@ -100,7 +99,8 @@ class site_compiler(object):
         cb -- callback function on globbed files
 
         """
-        for fn_src in glob.glob(pattern):
+        # Sort filenames alphabetically
+        for fn_src in sorted(glob.glob(pattern)):
             # Split *relative* filename to check file type and path
             dot_split = fn_src.split('.')
             path_split = dot_split[0].split('/')
@@ -147,12 +147,22 @@ class site_compiler(object):
         lgr('Reading JSON file: `{}`'.format(fn_src))
         with open(fn_src) as fn:
             recipe = json.load(fn)
+
+        # Make sure the minimum keys exist
+        minKeys = ('ingredients', 'notes', 'recipe', 'source')
+        foundKeys = [rcpKey for rcpKey in recipe.iterkeys() if rcpKey in minKeys]
+        if len(foundKeys) != len(minKeys):
+            raise AttributeError('Recipe ({}) has: `{}` but needs at least: `{}`'.format(fn_src, foundKeys, minKeys))
+
         # Store subdirectory grouping
         recipe['group'] = subdir
-        self.groups.append(recipe['group'])
         # Add recipe title as title case of filename split on underscores
         recipe['id'] = 'recipe-{}'.format(recipe_title)
         recipe['title'] = recipe_title.replace('_', ' ').title()
+        # Extend table of contents
+        if (subdir not in self.toc):
+            self.toc[subdir] = []
+        self.toc[subdir].append(recipe['title'])
         # Adds link to minified image
         recipe['imgSrc'] = self.imgs[recipe_title] if recipe_title in self.imgs else ''
         # Standardizes ingredients (accepts either object of arrays or simply array)
@@ -163,28 +173,28 @@ class site_compiler(object):
             recipe['ingredients'][header] = [header.title()]
             recipe['ingredients'][header].extend([ing.strip().lower() for ing in ingredients])
 
-        # TODO: Catch errors in source files
+        # TODO: Catch other errors in source files
 
         self.recipes.append(recipe)
 
     def dump_json(self):
         """Export recipes to a single JSON file"""
         # Add all unique object keys for Fuse to search
-        searchKeys = ['notes', 'recipe', 'title']
+        searchKeys = ['notes', 'recipe', 'title', 'group']
         # Get each unique key (section header) for ingredients
         for recipe in self.recipes:
             searchKeys.extend(['ingredients.{}'.format(hdr) for hdr in recipe['ingredients'].iterkeys()])
         searchKeys = list(set(searchKeys))
         lgr('searchKeys: {}'.format(searchKeys))
         # Write JSON file
-        rcps_obj = {'recipes': self.recipes, 'searchKeys': searchKeys}
+        rcps_obj = {'recipes': self.recipes, 'searchKeys': searchKeys, 'toc': self.toc}
         kwargs = {'separators': (',', ':')} if not debug else {'indent': 4, 'separators': (',', ': ')}
         json.dump(rcps_obj, open(self.db_fn, 'w'), sort_keys=True, **kwargs)
 
     def json_to_js(self):
         """Add variable declaration so JavaScript can load JSON w/o Cross-Origin Errors for accessing file://"""
         recipes = self.read(self.db_fn)
-        self.write(self.db_fn[:-2], 'var groups = {}\nvar localDB = {}'.format(self.groups, recipes))
+        self.write(self.db_fn[:-2], 'var localDB = {}'.format(recipes))
 
 
 if __name__ == '__main__':

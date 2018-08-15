@@ -1,3 +1,5 @@
+var contentDivID = 'crel-content'  // TODO: convert to OOP/Class and store in state
+
 /*
 >> Highlight Text Matched with Fuse
  */
@@ -130,12 +132,58 @@ const createList = function( rcp, key, matchLookup = {} ) {
 }
 
 /**
+ * Generate HTML for each recipe
+ * @param  {Bool} isFuseSearch             TODO: convert to OOP/Class to store in state
+ * @param  {Object} rcp                    Local database entry from original JSON file
+ * @param  {String ||Array} titleMatches   Title with highlighting, if any
+ * @param  {Array} sourceLink              Crel HTML elements for source link, if any
+ * @param  {Array} additionalNotes         Crel HTML elements for notes section, if any
+ * @param  {Object} matchLookup            Optional match lookup object for highlighting
+ * @return {None}                          Creates HTML elements under content div
+ */
+const insertRecipe = function( isFuseSearch, rcp, titleMatches, sourceLink, additionalNotes, matchLookup = {} ) {
+
+  const group = rcp.group
+  if ( !isFuseSearch && localDB.toc[group].indexOf( rcp.title ) === 0 ) {
+    crel( document.getElementById( contentDivID ),
+      crel( 'h1', {'id': group}, group )
+    )
+  }
+
+  crel( document.getElementById( contentDivID ),
+    crel( 'div', {'class': 'row br'},
+      // Add Recipe title and link to source, if any
+      crel( 'h5', {'class': 'twelve columns', 'id': rcp.id},
+        crel( 'a',
+          {'class': 'unstyled', 'href': `#${rcp.id}`, 'id': `${rcp.id}`},
+          highlightText( rcp.title, titleMatches )
+        ),
+        crel( 'span', ' ' ),
+        sourceLink
+      )
+    ),
+    crel( 'div', {'class': 'row'},
+      // Add the reference image
+      crel( 'img', {'alt': rcp.id, 'class': 'five columns', 'src': rcp.imgSrc} ),
+      // Add ingredients and recipe
+      crel( 'div', {'class': 'seven columns', 'id': rcp.id},
+        constCreateListGroup( rcp, matchLookup ),
+        crel( 'ol',
+          createList( rcp, 'recipe', matchLookup )
+        ),
+        additionalNotes
+      )
+    )
+  )
+
+}
+
+/**
  * Recipe initializer
  * @param  {Object} recipes Fuse match with keys 'item' and 'matches'
  * @return {None}           Creates HTML elements in DOM
  */
 const updateRecipes = function( recipes ) {
-  const contentDivID = 'crel-content'
   // Tear down last recipe container
   const el = document.getElementById( contentDivID )
   if ( el )
@@ -143,11 +191,22 @@ const updateRecipes = function( recipes ) {
   // Initialize new content div
   crel( document.getElementById( 'crel-target' ), crel( 'div', {'id': contentDivID} ) )
 
+  // Input could be raw local database or filtered matches from Fuse
+  let isFuseSearch = false
+  if ( recipes.length > 0 )
+    isFuseSearch = 'item' in recipes[0] && 'matches' in recipes[0]
+  else
+    crel( document.getElementById( contentDivID ), crel( 'h1', 'No Matches Found' ) )
+
   // Create new container and iterate over recipes
   for ( let recipe of recipes ) {
-
-    const rcp = recipe.item
-    const matchLookup = unwrapHighlights( recipe.matches )
+    // Initialize loop
+    let rcp = recipe
+    let matchLookup = {}
+    if ( isFuseSearch ) {
+      rcp = rcp.item
+      matchLookup = unwrapHighlights( recipe.matches )
+    }
 
     // Identify matching regions in title, if any
     let titleMatches = []
@@ -166,34 +225,9 @@ const updateRecipes = function( recipes ) {
       )
     }
 
-    // Generate HTML
-    crel( document.getElementById( contentDivID ),
-      crel( 'div', {'class': 'row br'},
-        // Add Recipe title and link to source, if any
-        crel( 'h5', {'class': 'twelve columns', 'id': rcp.id},
-          crel( 'a',
-            {'class': 'unstyled', 'href': `#${rcp.id}`, 'id': `${rcp.id}`},
-            highlightText( rcp.title, titleMatches )
-          ),
-          crel( 'span', ' ' ),
-          sourceLink
-        )
-      ),
-      crel( 'div', {'class': 'row'},
-        // Add the reference image
-        crel( 'img', {'alt': rcp.id, 'class': 'five columns', 'src': rcp.imgSrc} ),
-        // Add ingredients and recipe
-        crel( 'div', {'class': 'seven columns', 'id': rcp.id},
-          constCreateListGroup( rcp, matchLookup ),
-          crel( 'ol',
-            createList( rcp, 'recipe', matchLookup )
-          ),
-          additionalNotes
-        )
-      )
-    )
+    // Generate HTML for each recipe
+    insertRecipe( isFuseSearch, rcp, titleMatches, sourceLink, additionalNotes, matchLookup )
   }
-
 }
 
 /*
@@ -206,6 +240,7 @@ const updateRecipes = function( recipes ) {
  * @return {None}                Updates HTML content with matched elements
  */
 const search = function( searchPhrase ) {
+  // Set options to be strict and limit fuzziness of search
   const options = {
     distance: 10000,
     includeMatches: true,
@@ -216,14 +251,19 @@ const search = function( searchPhrase ) {
     shouldSort: true,
     threshold: 0.1,
   }
+  // Search database with Fuse
   const fuse = new Fuse( localDB.recipes, options )
   const fuseResults = fuse.search( searchPhrase )
-
-  console.log( 'fuseResults:' )
-  console.log( fuseResults )
-
   // Add matched recipes to view
   updateRecipes( fuseResults )
+}
+
+/**
+ * Initialize application
+ * @return {None}
+ */
+const init = function() {
+  updateRecipes( localDB.recipes )
 }
 
 /*
@@ -232,8 +272,14 @@ const search = function( searchPhrase ) {
 
 const node = document.getElementById( 'search-input' )
 node.addEventListener( 'keyup', ( event ) => {
-  if ( node.value.length === 0 )
-    console.log( 'INIT!' )  // TODO: Show all recipes
-  else if ( event.key === 'Enter' )
-    search( node.value )
+  // Either load all recipes or apply search phrase from input
+  if ( event.key === 'Enter' ) {
+    if ( node.value.length === 0 )
+      init()
+    else
+      search( node.value )
+  }
 } )
+
+// On ready, initialize application
+init()
