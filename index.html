@@ -8,18 +8,24 @@
 		<meta name="description" content="Basic Recipes">
 		<link rel="icon" href="src/favicon.ico">
 		<!-- Styles -->
-		<link href="src/styles/normalize.css" rel="stylesheet">
+		<!-- <link href='http://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,300,700' rel='stylesheet' type='text/css'> -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet">
+		<!-- WARN: Newer version of Skeleton conflicts with CSS for check box -->
+		<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" rel="stylesheet"> -->
 		<link href="src/styles/skeleton.css" rel="stylesheet">
 		<link href="src/styles/checkbox.css" rel="stylesheet">
 		<link href="src/styles/codyhouse.css" rel="stylesheet">
 		<link href="src/styles/index.css" rel="stylesheet">
-		<!-- <link href='http://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,300,700' rel='stylesheet' type='text/css'> -->
-		<script src="src/js/modernizr.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 	</head>
 	<body>
 		<main>
 			<section class="cd-section index cd-selected">
 				<div class="container recipes cd-content">
+					<section id="search-area">
+						 <input id="search-input" type="text" autofocus=True maxlength="32" placeholder="Search Recipes (Press Enter)"
+						 				style="margin-top: 10px; width: 100%"/>
+					</section>
 					<div id="crel-target"></div>
 				</div>
 			</section>

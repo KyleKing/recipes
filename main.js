@@ -64,18 +64,19 @@ const unwrapHighlights = function( fuseMatches ) {
 
 /**
  * Create list of HTML elements for ingredients with interactive check box
+ * @param  {String} rcpID    Recipe title from JSON filename
  * @param  {String} header   Key for ingredients
  * @param  {Array} list      List of all ingredients
  * @param  {Object} matchObj Optional match lookup object for highlighting
  * @return {Array}           Crel HTML elements
  */
-const createCheckedItems = function( header, list, matchObj = {} ) {
+const createCheckedItems = function( rcpID, header, list, matchObj = {} ) {
   const ingredients = []
   for ( let idx = 1; idx < list.length; idx++ ) {
     // Highlight matched text, if any
     list[idx] = highlightItem( list[idx], `ingredients.${header}`, idx, matchObj )
     // Add input (checkbox) then matched label with unique ID linking both
-    const uniqID = `${header.toLowerCase().replace( /\s+/g, '_' )}-${idx}`
+    const uniqID = `${rcpID}-${header.toLowerCase().replace( /\s+/g, '_' )}-${idx}`
     ingredients.push( crel( 'input', {
       'class': 'ingredient magic-checkbox',
       'id': uniqID,
@@ -103,7 +104,7 @@ const constCreateListGroup = function( rcp, matchObj = {} ) {
     // Create ingredient section header and checkable items
     ingredientList.push( crel( 'p',  customHeader ) )
     ingredientList.push( crel( 'ul',
-      createCheckedItems( header, rcp.ingredients[header], matchObj )
+      createCheckedItems( rcp.id, header, rcp.ingredients[header], matchObj )
     ) )
   }
   return ingredientList
@@ -134,10 +135,13 @@ const createList = function( rcp, key, matchLookup = {} ) {
  * @return {None}           Creates HTML elements in DOM
  */
 const updateRecipes = function( recipes ) {
-  // Delete last recipe container to repopulate recipes
-  const el = document.getElementById( 'crel-content' )
+  const contentDivID = 'crel-content'
+  // Tear down last recipe container
+  const el = document.getElementById( contentDivID )
   if ( el )
     el.remove()
+  // Initialize new content div
+  crel( document.getElementById( 'crel-target' ), crel( 'div', {'id': contentDivID} ) )
 
   // Create new container and iterate over recipes
   for ( let recipe of recipes ) {
@@ -163,7 +167,7 @@ const updateRecipes = function( recipes ) {
     }
 
     // Generate HTML
-    crel( document.getElementById( 'crel-target' ),
+    crel( document.getElementById( contentDivID ),
       crel( 'div', {'class': 'row br'},
         // Add Recipe title and link to source, if any
         crel( 'h5', {'class': 'twelve columns', 'id': rcp.id},
@@ -222,7 +226,14 @@ const search = function( searchPhrase ) {
   updateRecipes( fuseResults )
 }
 
-// TODO: Add text input and button event click to update search results
-search( 'KriSPie' )
+/*
+>> Add event detection for search
+ */
 
-
+const node = document.getElementById( 'search-input' )
+node.addEventListener( 'keyup', ( event ) => {
+  if ( node.value.length === 0 )
+    console.log( 'INIT!' )  // TODO: Show all recipes
+  else if ( event.key === 'Enter' )
+    search( node.value )
+} )
