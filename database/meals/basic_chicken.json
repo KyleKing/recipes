@@ -1,0 +1,22 @@
+{
+  "ingredients": {
+    "Seasoning Combinations": [
+      "Basic: salt & pepper",
+      "Tacos: chili powder + cumin + cayenne + paprika",
+      "Rice: Sriracha + honey (+ broccoli)",
+      "Sun-Dried Tomato: minced garlic + olive oil + sun-dried tomato paste",
+      "Korean: Gochujang (Korean chili paste) + mayonnaise + sesame oil",
+      "Coconut Rice Noodle Curry: Thai curry paste + coconut oil",
+      "Barbecue: barbecue sauce with a side of mashed potatoes"
+    ]
+  },
+  "notes": [],
+  "recipe": [
+    "Preheat oven to 350℉ (~10 min)",
+    "Cover chicken in olive oil and choice of seasonings",
+    "Place in oven on tin foil covered pan for 15 minutes",
+    "Flip and bake for 12 more minutes",
+    "Alt: bake at 400°F and flip around 12 minutes then cook for 8 more minutes"
+  ],
+  "source": "https://www.craftsy.com/blog/2014/04/baked-chicken-breast-recipe/"
+}

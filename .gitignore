@@ -1,5 +1,8 @@
-/recipes.log
-/tmp.py
-/src/imgs dev
-/TODO
-/TODO.txt
+# Remove intermediary files
+/dist/database.json
+*.log
+
+# Remove WIP
+tmp.*
+TODO/*
+/config.codekit3

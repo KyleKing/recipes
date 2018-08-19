@@ -1,8 +1,13 @@
+"""Generate JSON Database from Source JSON Files."""
+
 import glob
+import json
 import logging
-import re
+import os
+import shutil
 
 debug = True
+# debug = False
 
 logger = logging.getLogger(__name__)
 lgr_fn = 'recipes.log'
@@ -16,252 +21,185 @@ logger.addHandler(fh)
 
 
 def lgr(msg):
+    """General Logger Function."""
     global logger, debug
     if debug:
         print msg
     logger.debug(msg)
 
 
-class website_builder(object):
-    """Create a new index.html file based on raw markdown templates"""
+class SiteCompiler(object):
+    """Build recipe source files for distribution."""
 
-    index_html = 'index.html'
-    template_top = 'src/html/tmpl_top.html'
-    template_bot = 'src/html/tmpl_bot.html'
-    src_dir = 'content/'
-    src_imgs = 'src/imgs/'
+    dist_dir = 'dist/'
+    dist_imgs = 'dist/imgs/'
+    src_dir = 'database/'
 
     def __init__(self):
-        """Prepare output directory and files"""
-        open(self.index_html, 'w').close()
-        self.cur_md_title = 'NA'
-        self.ingredient_counter = 0
+        """Initialize class."""
+        self.imgs = {}     # dict mapping recipe to image file
+        self.recipes = []  # list of all recipes
+        self.db_fn = '{}database.json'.format(self.dist_dir)
+
+        self.make()
 
     def make(self):
-        """Read from src directory and generate output for website"""
-        top = self.read(self.template_top)
-        self.write(top)
-        markdown_fns = glob.glob('{}*/*.md'.format(self.src_dir))
-        markdown_fns = sorted(markdown_fns, key=lambda s: s.lower())
-        # Make the Table of Contents, then insert the recipes
-        for make_toc in [True, False]:
-            # Initialize the state of the TOC list
-            if make_toc:
-                self.insert_toc_item('init', '')
-            else:
-                self.insert_toc_item('end', '')
-            # Identify each unique recipe file
-            sec_name = False
-            for markdown_fn in markdown_fns:
-                new_sec_name = re.search(ur'\/([^\/]+)\/[^\/]+\.md', markdown_fn).group(1)
-                # If new section, create the recipe section dividers
-                if new_sec_name != sec_name:
-                    if make_toc:
-                        self.insert_toc_item('section', new_sec_name)
-                    else:
-                        lgr('')
-                        lgr('>> Writing Section: {}'.format(new_sec_name))
-                        self.start_section(new_sec_name)
-                    sec_name = new_sec_name
-                if make_toc:
-                    # Write a link to the recipe or the recipe content
-                    self.insert_toc_item('recipe', markdown_fn)
-                else:
-                    # Create the recipe
-                    self.parse_md(markdown_fn)
-        bot = self.read(self.template_bot)
-        self.write(bot)
+        """Compile dist resources."""
+        # Configure output directory structure
+        self.create_dir(self.dist_dir, rm=True)
+        self.create_dir(self.dist_imgs)
+
+        # Copy source images into destination directory
+        self.glob_cb('{}/*/*'.format(self.src_dir), self.cp_imgs)
+
+        # Combine JSON documents into single file
+        self.toc = {}
+        self.glob_cb('{}/*/*.json'.format(self.src_dir), self.read_json)
+        self.dump_json()
+        self.json_to_js()
+
+    # General utilities
+
+    def create_dir(self, dir_pth, rm=False):
+        """General utility for working with directories.
+
+        dir_pth -- path to output directory
+        rm -- delete existing directory, if one found
+
+        """
+        # Remove the initial directory
+        if rm and os.path.isdir(dir_pth):
+            shutil.rmtree(dir_pth)
+        # Attempt to create a directory if one does not already exist
+        if not os.path.isdir(dir_pth):
+            os.makedirs(dir_pth)
 
     def read(self, fn, split=False):
-        """Return the contents of a file"""
+        """Return the contents of a file.
+
+        fn -- filename
+        split -- split raw text on newline
+
+        """
         with open(fn) as fn_:
             contents = fn_.read()
-        if split:
-            return contents.split('\n')
-        else:
-            return contents
+        return contents.split('\n') if split else contents
 
-    def write(self, content, raw_fn=False):
-        """Append to the html file"""
-        fn = raw_fn if raw_fn else self.index_html
-        with open(fn, 'ab') as fn_:
+    def write(self, fn, content):
+        """Append to target file.
+
+        fn -- filename
+        content -- text to append to file
+
+        """
+        with open(fn, 'a') as fn_:
             fn_.write(content)
 
-    # ---------- Create the Table of Contents ---------
+    def glob_cb(self, pattern, cb):
+        """Glob given path and use callback on filename.
 
-    def insert_toc_item(self, match_list_type, item):
-        """Track the status of the last list type written"""
-        if match_list_type == 'init':
-            self.status = {'init': False, 'section': False, 'recipe': False}
-            self.write('<h3 style="padding-top: 50px;" id="toc">Recipes Table of Contents</h3>')
-        elif match_list_type == 'section':
-            # Close the section section, if a recipe section was written
-            if self.status['init']:
-                self.write('\n\t</ul></li>')
-                self.write('\n</ul>')
-            self.write('\n<ul>\n\t<li><a href="#{}">{}</a><ul>'.format(item, item))
-            self.status['init'] = True
-        elif match_list_type == 'recipe':
-            title, title_id = self.parse_title(item)
-            self.write('\n\t\t<li><a href="#{}">{}</a></li>'.format(title_id, title))
-        elif match_list_type == 'end':
-            # Close the list div and reset the tracker
-            self.write('\n\t</ul></li>')
-            self.write('\n</ul>')
-            self.status = {'init': False, 'section': False, 'recipe': False}
+        pattern -- glob pattern
+        cb -- callback function on globbed files
 
-    def parse_title(self, fn):
-        """Retrieve only the title id from the markdown file"""
-        for line in self.read(fn, split=True):
-            if re.match(ur'^#', line):
-                title, title_id = self.make_title(line)
-                break
-        else:
-            return False, False
-        return title, title_id
-
-    # ---------- Insert the recipes ---------
-
-    def start_section(self, sec_name):
-        """Start a linkable section header"""
-        self.write('\n<h1 id="{sec_name}">{sec_name}</h1>\n'.format(sec_name=sec_name))
-
-    def parse_md(self, fn):
-        """Parse each line of the markdown file"""
-        self.track_list_stat('init')
-        for line in self.read(fn, split=True):
-            line = self.check_italics(line)
-            if re.match(ur'^#', line):
-                self.init_recipe(line, fn)
-            elif re.match(ur'^-\s', line):
-                self.track_list_stat('ul')
-                self.append_ingredient(line.strip('-').strip())
-            elif re.match(ur'^\d[\.\)]?\s', line):
-                self.track_list_stat('ol')
-                parsed = re.search('^\d[\.\)]?\s(.+)', line).group(1).strip()
-                self.append_list_item(parsed)
-            elif re.match(ur'^end$', line):
-                self.track_list_stat('end')
-            elif len(line) > 0:
-                self.other(line)
-        # Add the closing div's
-        self.write('\n</div><!-- /columns (list) --></div><!-- /row (recipe) -->\n')
-
-    def make_title(self, line):
-        title = re.search(ur'#+([^#|]+)', line).group(1).strip()
-        return title, 'recipe-{}'.format(title.replace(' ', '_'))
-
-    def init_recipe(self, raw_title, full_fn):
-        # Solve for variables in markdown layout
-        base_name = re.search(ur'[^\/]+\/([^.\/]+)\.md', full_fn).group(1)
-        self.cur_md_title = base_name  # track filename for debugging
-        lgr('')
-        lgr('> Recipe: {}'.format(self.cur_md_title))
-        title, title_id = self.make_title(raw_title)
-        header = raw_title.split('||')
-        orig_link = header[1].strip() if len(header) == 2 else False
-        # Assemble HTML
-        classes = 'class="twelve columns" id="{}"'.format(title_id)
-        if orig_link:
-            # Optional custom source name (## ... || (Book Title) https://www.link.to.book)
-            custom_src_exp = ur'\(([^)]+)\)\s*(http.+)'
-            if re.match(custom_src_exp, orig_link):
-                match = re.search(custom_src_exp, orig_link)
-                html_lnk = '<a href="{}"><i>({})</i></a>'.format(match.group(2), match.group(1))
+        """
+        # Sort filenames alphabetically
+        for fn_src in sorted(glob.glob(pattern)):
+            # Split *relative* filename to check file type and path
+            dot_split = fn_src.split('.')
+            path_split = dot_split[0].split('/')
+            if len(dot_split) == 2 and len(path_split) == 3:
+                # Pass known path components to callback
+                file_type = dot_split[1].lower()
+                ___, subdir, recipe_title = path_split
+                cb(fn_src, subdir, recipe_title, file_type=file_type)
             else:
-                html_lnk = '<a href="{}"><i>(Source)</i></a>'.format(orig_link)
-        else:
-            html_lnk = ''
-        ttle_lnk = '<a href="#{}" class="unstyled"># {}</a>'.format(title_id, title)
-        header = '<div class="row br"><h5 {}>{} {}</h5></div>'.format(classes, ttle_lnk, html_lnk)
-        for image_name in glob.glob('{}{}.*'.format(self.src_imgs, base_name)):
-            break
-        else:
-            image_name = ''
-        img_html = '<div class="row">\n<img {} src="{}", alt="{}"/>'.format(
-            'class="five columns"', image_name, base_name)
-        text_start = '<div class="seven columns">'
-        self.write('\n{}\n{}\n{}'.format(header, img_html, text_start))
+                lgr('Unparseable fn: `{}`'.format(fn_src))
 
-    def track_list_stat(self, match_list_type):
-        """Track the status of the last list type written"""
-        if match_list_type == 'init':
-            self.status = {'ol': False, 'ul': False}
-        elif match_list_type == 'ul':
-            if not self.status['ul']:
-                self.write('<ul>')
-            self.status = {'ol': False, 'ul': True}
-        elif match_list_type == 'ol':
-            if not self.status['ol']:
-                self.write('<ol>')
-            self.status = {'ol': True, 'ul': False}
-        elif match_list_type == 'end':
-            # Close the list div and reset the tracker
-            if self.status['ol']:
-                self.write('</ol>')
-            elif self.status['ul']:
-                self.write('</ul>')
-            self.status = {'ol': False, 'ul': False}
+    # Image manipulation utilities
 
-    def append_ingredient(self, line):
-        uniq_id = self.ingredient_counter
-        # *Note, no closing quotation (")
-        base_li = '<input type="checkbox" name="layout" id="{}" class="ingredient magic-checkbox'.format(uniq_id)
-        if '|' in line:
-            # Examples from brick_chicken.md
-            # 2 tbsp |fresh sage, finely chopped
-            # 2 tbsp |canola oil |(or sunflower oil)
-            tag = re.match(ur'([^\(+,:]+)', line.split('|')[1]).group(1)
-            tag = tag.strip().title().replace(' ', '_')
-            clean_line = re.sub(ur'\s{2,}', ' ', line.replace('|', ''))  # remove unintended whitespace
-            # self.write('<li class="{}"><input id="{}" type="checkbox">{}</input></li>'.format(
-            #     tag, uniq_id, clean_line))
-            self.write('{} {}"><label for="{}">{}</label>'.format(base_li, tag, uniq_id, clean_line))
-        else:
-            lgr('Error: ({}) no ingredient tag in: {}'.format(self.cur_md_title, line))
-            self.write('{}"><label for="{}">{}</label>'.format(base_li, uniq_id, line))
-        self.ingredient_counter += 1
+    def cp_imgs(self, fn_src, subdir, recipe_title, file_type):
+        """Check if image exists for given recipe and if so, copy to dist directory.
 
-    def append_list_item(self, line):
-        self.write('<li>{}</li>'.format(line))
+        fn_src -- Relative source filename
+        subdir -- Subdirectory
+        recipe_title -- Filename without extension
+        file_type -- File extensions
 
-    def other(self, line):
-        """Write single line notes/extra information"""
-        # lgr('Writing paragraph for: {}'.format(line))
-        self.write('<p>{}</p>'.format(line))
+        """
+        # Only applies image files (non-JSON)
+        if file_type != 'json':
+            # Create destination filename
+            fn_dest = '{}{}-{}.{}'.format(self.dist_imgs, subdir, recipe_title, file_type)
+            # Track matched image filenames
+            self.imgs[recipe_title] = fn_dest
+            lgr('Copying `{}` to `{}`'.format(fn_src, fn_dest))
+            shutil.copyfile(fn_src, fn_dest)
 
-    def check_italics(self, raw_line):
-        tmp_line = raw_line
-        if '**' in tmp_line:
-            line_sections = tmp_line.split('**')
-            init = True if tmp_line[1:2] == '**' else False
-            line = ''
-            for ls_, line_sec in enumerate(line_sections):
-                if init:
-                    html = '<b>' if ls_ % 2 == 1 else '</b>'
-                else:
-                    html = ''
-                    init = True
-                line += html + line_sec
-            tmp_line = line
-            # lgr('Bold: {} > `{}`\n'.format(line_sections, line))
-        if '*' in tmp_line:
-            line_sections = tmp_line.split('*')
-            init = True if tmp_line[1:2] == '*' else False
-            line = ''
-            for ls_, line_sec in enumerate(line_sections):
-                if init:
-                    html = '<i>' if ls_ % 2 == 1 else '</i>'
-                else:
-                    html = ''
-                    init = True
-                line += html + line_sec
-            # lgr('Italics: {} > `{}`\n'.format(line_sections, line))
-        if '*' not in raw_line:
-            line = raw_line
-        return line
+    # JSON File utilities
+
+    def read_json(self, fn_src, subdir, recipe_title, **kwargs):
+        """Read JSON and append to database object.
+
+        fn_src -- Relative source filename
+        subdir -- Subdirectory
+        recipe_title -- Filename without extension
+        file_type -- File extensions
+        kwargs -- additional keyword arguments
+
+        """
+        lgr('Reading JSON file: `{}`'.format(fn_src))
+        with open(fn_src) as fn:
+            recipe = json.load(fn)
+
+        # Make sure the minimum keys exist
+        min_keys = ('ingredients', 'notes', 'recipe', 'source')
+        found_keys = [rcpKey for rcpKey in recipe.iterkeys() if rcpKey in min_keys]
+        if len(found_keys) != len(min_keys):
+            raise AttributeError('Recipe ({}) has: `{}` but needs at least: `{}`'.format(fn_src, found_keys, min_keys))
+
+        # Store subdirectory grouping
+        recipe['group'] = subdir
+        # Add recipe title as title case of filename split on underscores
+        recipe['id'] = 'recipe-{}'.format(recipe_title)
+        recipe['title'] = recipe_title.replace('_', ' ').title()
+        # Extend table of contents
+        if (subdir not in self.toc):
+            self.toc[subdir] = []
+        self.toc[subdir].append(recipe['title'])
+        # Adds link to minified image
+        recipe['imgSrc'] = self.imgs[recipe_title] if recipe_title in self.imgs else ''
+        # Standardizes ingredients (accepts either object of arrays or simply array)
+        if type(recipe['ingredients']) is list:
+            recipe['ingredients'] = {'ingredients': recipe['ingredients']}
+        for header, ingredients in recipe['ingredients'].iteritems():
+            # Add header in list, so Fuse can attempt to find a match
+            recipe['ingredients'][header] = [header.title()]
+            recipe['ingredients'][header].extend([ing.strip().lower() for ing in ingredients])
+
+        # TODO: Catch other errors in source files
+
+        self.recipes.append(recipe)
+
+    def dump_json(self):
+        """Export recipes to a single JSON file."""
+        # Add all unique object keys for Fuse to search
+        search_keys = ['notes', 'recipe', 'title', 'group']
+        # Get each unique key (section header) for ingredients
+        for recipe in self.recipes:
+            search_keys.extend(['ingredients.{}'.format(hdr) for hdr in recipe['ingredients'].iterkeys()])
+        search_keys = list(set(search_keys))
+        lgr('search_keys: {}'.format(search_keys))
+        # Write JSON file
+        rcps_obj = {'recipes': self.recipes, 'search_keys': search_keys, 'toc': self.toc}
+        kwargs = {'separators': (',', ':')} if not debug else {'indent': 4, 'separators': (',', ': ')}
+        json.dump(rcps_obj, open(self.db_fn, 'w'), sort_keys=True, **kwargs)
+
+    def json_to_js(self):
+        """Add variable declaration so JavaScript can load JSON w/o Cross-Origin Errors for accessing file://."""
+        recipes = self.read(self.db_fn)
+        self.write(self.db_fn[:-2], 'var localDB = {}'.format(recipes))
 
 
 if __name__ == '__main__':
     open(lgr_fn, 'w').close()
-    website_builder().make()
+    SiteCompiler()
