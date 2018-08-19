@@ -22,14 +22,15 @@ Create interactive website for searching and making lists from user-specified so
 - ~~Add search input bar and search on enter~~
 - ~~Add all recipes by default~~
 - ~~Sort alphabetically and with headers~~
-- ~~Add table of contents~~
+- ~~Add table of contents using intermediary list with same index-mapping as localDB~~
 - ~~Refactor for OOP~~
-- Revive (some) URL trickery
-    + Implement linking on load, by only loading a specific recipe
-        * Combine all TOC as one list, get index, use index from local database
-- Add Cody House navigation back
-    + Add styles for input (only fixed at top if actively searching)
-        * Add x button to clear the input
+- ~~Revive (some) URL trickery~~
+    + ~~Smooth scroll to recipe~~
+    + ~~WONT FIX: smooth scroll to header ~~
+    + Fix recipe linking on load
+-  ~~Add Cody House navigation back ~~
+- Add styles for input (only fixed at top if actively searching)
+    + Add x button to clear the input
 - Add scroll indicator at bottom
 
 - Lazy load images (which library?)

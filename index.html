@@ -8,7 +8,7 @@
 		<meta name="description" content="Basic Recipes">
 		<link rel="icon" href="src/favicon.ico">
 		<!-- Styles -->
-		<!-- <link href='http://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,300,700' rel='stylesheet' type='text/css'> -->
+		<link href='http://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet">
 		<!-- WARN: Newer version of Skeleton conflicts with CSS for check box -->
 		<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" rel="stylesheet"> -->
@@ -16,10 +16,10 @@
 		<link href="src/styles/checkbox.css" rel="stylesheet">
 		<link href="src/styles/codyhouse.css" rel="stylesheet">
 		<link href="src/styles/index.css" rel="stylesheet">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 	</head>
 	<body>
 		<span id="top"></span>
+		<a href="#cd-nav" class="cd-nav-trigger">Menu<span></span></a>
 		<main>
 			<section class="cd-section index cd-selected">
 				<div class="container recipes cd-content">
@@ -38,7 +38,66 @@
 				</footer>
 			</section>
 		</main>
+		<nav class="cd-nav-container" id="cd-nav">
+			<header>
+				<h3>Navigation</h3>
+				<a href="#0" class="cd-close-nav">Close</a>
+			</header>
+			<ul class="cd-nav">
+				<li class="cd-unstyled-nav-item cd-selected" data-menu="top">
+					<a href="#toc">
+						<span>
+							<img class="nc-icon outline" src="src/icons/up-arrow.png" style="height: 64px; width: 64px;">
+						</span>
+						<em>table of contents</em>
+					</a>
+				</li>
+				<li class="cd-unstyled-nav-item" data-menu="brkfst">
+					<a href="#brkfst">
+						<span>
+							<img class="nc-icon outline" src="src/icons/croisant.png" style="height: 64px; width: 64px;">
+							<!-- <img class="nc-icon outline" src="src/icons/donut.png" style="height: 64px; width: 64px;"> -->
+						</span>
+						<em>brkfst</em>
+					</a>
+				</li>
+				<li class="cd-unstyled-nav-item" data-menu="sides">
+					<a href="#sides">
+						<span>
+							<img class="nc-icon outline" src="src/icons/dining-room-furniture-of-a-table-with-chairs.png" style="height: 64px; width: 64px;">
+						</span>
+						<em>sides</em>
+					</a>
+				</li>
+				<li class="cd-unstyled-nav-item" data-menu="grains">
+					<a href="#grains">
+						<span>
+							<img class="nc-icon outline" src="src/icons/rice-bowl.png" style="height: 64px; width: 64px;">
+						</span>
+						<em>grains</em>
+					</a>
+				</li>
+				<li class="cd-unstyled-nav-item" data-menu="meals">
+					<a href="#meals">
+						<span>
+							<img class="nc-icon outline" src="src/icons/bell-covering-hot-dish.png" style="height: 64px; width: 64px;">
+						</span>
+						<em>meals</em>
+					</a>
+				</li>
+				<li class="cd-unstyled-nav-item" data-menu="dssrt">
+					<a href="#dssrt">
+						<span>
+							<img class="nc-icon outline" src="src/icons/cupcake.png" style="height: 64px; width: 64px;">
+						</span>
+						<em>dssrt</em>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="cd-overlay"></div>
 		<!-- Load Dependencies -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 		<script
 			src="https://code.jquery.com/jquery-2.2.4.min.js"
 			integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="

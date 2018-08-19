@@ -56,6 +56,10 @@ input {
     margin-bottom: 5px;
 }*/
 
+footer {
+    padding-top: 20px;
+}
+
 .hide-while-loading {
     display: none;
 }
