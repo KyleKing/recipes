@@ -11,7 +11,7 @@ import Recipe from './Recipe.js'
 const addToC = function( contentDivID ) {
   // Create header for ToC
   const trgt = document.getElementById( contentDivID )
-  crel( trgt, crel( 'h3', {'id': 'toc', 'style': 'padding-top: 50px'}, 'Recipes Table of Contents' ) )
+  crel( trgt, crel( 'h3', {'id': 'toc'}, 'Recipes Table of Contents' ) )
 
   // Unwrap the toc object into a single list of recipe titles
   let allRcps = []

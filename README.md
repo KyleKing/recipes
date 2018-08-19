@@ -26,11 +26,11 @@ Create interactive website for searching and making lists from user-specified so
 - ~~Refactor for OOP~~
 - ~~Revive (some) URL trickery~~
     + ~~Smooth scroll to recipe~~
-    + ~~WONT FIX: smooth scroll to header ~~
+    + ~~WONT FIX: smooth scroll to header~~
     + Fix recipe linking on load
--  ~~Add Cody House navigation back ~~
-- Add styles for input (only fixed at top if actively searching)
-    + Add x button to clear the input
+-  ~~Add Cody House navigation back~~
+- ~~Add styles for input (only fixed at top if actively searching)~~
+    + ~~Add x button to clear the input~~
 - Add scroll indicator at bottom
 
 - Lazy load images (which library?)

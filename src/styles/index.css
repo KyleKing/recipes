@@ -63,3 +63,15 @@ footer {
 .hide-while-loading {
     display: none;
 }
+
+/* Configure Search Input */
+#search-area {
+    background-color: #FFFFFFE8;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+#search-input {
+    margin: 20px 0;
+    width: 100%;
+}
