@@ -1,8 +1,10 @@
+"""Generate JSON Database from Source JSON Files."""
+
 import glob
+import json
 import logging
 import os
 import shutil
-import json
 
 debug = True
 # debug = False
@@ -19,21 +21,22 @@ logger.addHandler(fh)
 
 
 def lgr(msg):
+    """General Logger Function."""
     global logger, debug
     if debug:
         print msg
     logger.debug(msg)
 
 
-class site_compiler(object):
-    """Build recipe source files for distribution"""
+class SiteCompiler(object):
+    """Build recipe source files for distribution."""
 
     dist_dir = 'dist/'
     dist_imgs = 'dist/imgs/'
     src_dir = 'database/'
 
     def __init__(self):
-        """Initialize class"""
+        """Initialize class."""
         self.imgs = {}     # dict mapping recipe to image file
         self.recipes = []  # list of all recipes
         self.db_fn = '{}database.json'.format(self.dist_dir)
@@ -41,7 +44,7 @@ class site_compiler(object):
         self.make()
 
     def make(self):
-        """Compile dist resources"""
+        """Compile dist resources."""
         # Configure output directory structure
         self.create_dir(self.dist_dir, rm=True)
         self.create_dir(self.dist_imgs)
@@ -58,7 +61,7 @@ class site_compiler(object):
     # General utilities
 
     def create_dir(self, dir_pth, rm=False):
-        """General utility for working with directories
+        """General utility for working with directories.
 
         dir_pth -- path to output directory
         rm -- delete existing directory, if one found
@@ -72,7 +75,7 @@ class site_compiler(object):
             os.makedirs(dir_pth)
 
     def read(self, fn, split=False):
-        """Return the contents of a file
+        """Return the contents of a file.
 
         fn -- filename
         split -- split raw text on newline
@@ -83,7 +86,7 @@ class site_compiler(object):
         return contents.split('\n') if split else contents
 
     def write(self, fn, content):
-        """Append to target file
+        """Append to target file.
 
         fn -- filename
         content -- text to append to file
@@ -93,7 +96,7 @@ class site_compiler(object):
             fn_.write(content)
 
     def glob_cb(self, pattern, cb):
-        """Glob given path and use callback on filename
+        """Glob given path and use callback on filename.
 
         pattern -- glob pattern
         cb -- callback function on globbed files
@@ -115,7 +118,7 @@ class site_compiler(object):
     # Image manipulation utilities
 
     def cp_imgs(self, fn_src, subdir, recipe_title, file_type):
-        """Check if image exists for given recipe and if so, copy to dist directory
+        """Check if image exists for given recipe and if so, copy to dist directory.
 
         fn_src -- Relative source filename
         subdir -- Subdirectory
@@ -135,7 +138,7 @@ class site_compiler(object):
     # JSON File utilities
 
     def read_json(self, fn_src, subdir, recipe_title, **kwargs):
-        """Read JSON and append to database object
+        """Read JSON and append to database object.
 
         fn_src -- Relative source filename
         subdir -- Subdirectory
@@ -149,10 +152,10 @@ class site_compiler(object):
             recipe = json.load(fn)
 
         # Make sure the minimum keys exist
-        minKeys = ('ingredients', 'notes', 'recipe', 'source')
-        foundKeys = [rcpKey for rcpKey in recipe.iterkeys() if rcpKey in minKeys]
-        if len(foundKeys) != len(minKeys):
-            raise AttributeError('Recipe ({}) has: `{}` but needs at least: `{}`'.format(fn_src, foundKeys, minKeys))
+        min_keys = ('ingredients', 'notes', 'recipe', 'source')
+        found_keys = [rcpKey for rcpKey in recipe.iterkeys() if rcpKey in min_keys]
+        if len(found_keys) != len(min_keys):
+            raise AttributeError('Recipe ({}) has: `{}` but needs at least: `{}`'.format(fn_src, found_keys, min_keys))
 
         # Store subdirectory grouping
         recipe['group'] = subdir
@@ -178,25 +181,25 @@ class site_compiler(object):
         self.recipes.append(recipe)
 
     def dump_json(self):
-        """Export recipes to a single JSON file"""
+        """Export recipes to a single JSON file."""
         # Add all unique object keys for Fuse to search
-        searchKeys = ['notes', 'recipe', 'title', 'group']
+        search_keys = ['notes', 'recipe', 'title', 'group']
         # Get each unique key (section header) for ingredients
         for recipe in self.recipes:
-            searchKeys.extend(['ingredients.{}'.format(hdr) for hdr in recipe['ingredients'].iterkeys()])
-        searchKeys = list(set(searchKeys))
-        lgr('searchKeys: {}'.format(searchKeys))
+            search_keys.extend(['ingredients.{}'.format(hdr) for hdr in recipe['ingredients'].iterkeys()])
+        search_keys = list(set(search_keys))
+        lgr('search_keys: {}'.format(search_keys))
         # Write JSON file
-        rcps_obj = {'recipes': self.recipes, 'searchKeys': searchKeys, 'toc': self.toc}
+        rcps_obj = {'recipes': self.recipes, 'search_keys': search_keys, 'toc': self.toc}
         kwargs = {'separators': (',', ':')} if not debug else {'indent': 4, 'separators': (',', ': ')}
         json.dump(rcps_obj, open(self.db_fn, 'w'), sort_keys=True, **kwargs)
 
     def json_to_js(self):
-        """Add variable declaration so JavaScript can load JSON w/o Cross-Origin Errors for accessing file://"""
+        """Add variable declaration so JavaScript can load JSON w/o Cross-Origin Errors for accessing file://."""
         recipes = self.read(self.db_fn)
         self.write(self.db_fn[:-2], 'var localDB = {}'.format(recipes))
 
 
 if __name__ == '__main__':
     open(lgr_fn, 'w').close()
-    site_compiler()
+    SiteCompiler()

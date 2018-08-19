@@ -11,7 +11,7 @@
   "parserOptions": {
     "ecmaFeatures": {},
     "ecmaVersion": 7,
-    "sourceType": "script"
+    "sourceType": "module"
   },
   "rules": {
     "camelcase": 2,

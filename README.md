@@ -2,6 +2,19 @@
 
 Create interactive website for searching and making lists from user-specified source files
 
+<details>
+    <summary>Click to Open TOC</summary>
+<!-- MarkdownTOC autolink="true" markdown_preview="github" -->
+
+- [Development](#development)
+- [Dev-Lower Priority](#dev-lower-priority)
+- [Workflow](#workflow)
+- [Libraries](#libraries)
+    - [Cool, but didn't use](#cool-but-didnt-use)
+
+<!-- /MarkdownTOC -->
+</details>
+
 ## Development
 
 - ~~Generate content with Crel~~
@@ -9,13 +22,16 @@ Create interactive website for searching and making lists from user-specified so
 - ~~Add search input bar and search on enter~~
 - ~~Add all recipes by default~~
 - ~~Sort alphabetically and with headers~~
-- Add table of contents
-- Revive URL trickery
+- ~~Add table of contents~~
+- ~~Refactor for OOP~~
+- Revive (some) URL trickery
     + Implement linking on load, by only loading a specific recipe
         * Combine all TOC as one list, get index, use index from local database
 - Add Cody House navigation back
-- Add styles for input (fix at top)
-    + Test on mobile / localtunnel
+    + Add styles for input (only fixed at top if actively searching)
+        * Add x button to clear the input
+- Add scroll indicator at bottom
+
 - Lazy load images (which library?)
     + Guides
         * Medium: https://medium.freecodecamp.org/using-svg-as-placeholders-more-image-loading-techniques-bed1b810ab2c
@@ -27,14 +43,21 @@ Create interactive website for searching and making lists from user-specified so
         * primitive.nextgen: https://github.com/cielito-lindo-productions/primitive.nextgen
         * justlazy: http://fhopeman.github.io/justlazy/#demo
         * beLazy: http://dinbror.dk/blazy/
-- Try out different font face
-- Replace Skeleton with standard flex-grid: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
-    + Have image/ingredients/recipes/notes wrap
+- Add flex-grid
+    + Wrap TOC
+    + Wrap Image, Ingredients, Recipe?
+    + Guide: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
+- Mess with CSS
+    + Try out different font face
+    + Replace Skeleton?
+        * Fix conflict of Skeleton with check boxes
 
-- Add 'make' mode with recipe in horizontal orientation
+- Add `make` mode with recipe in horizontal orientation
     + Can rotation of screen be locked with HTML?
         * https://stackoverflow.com/questions/43634583/prevent-landscape-orientation-mobile-website
         * https://www.google.com/search?rlz=1CDGOYI_enUS633US633&hl=en-US&ei=Jo1sW464M6Ht5gKBtKmwDA&q=ios+safari+prevent+web+mobile+rotation&oq=ios+safari+prevent+web+mobile+rotation
+    + Track check box progress in URL (and cross out steps)
+    + Add 'alt-ratio' toggle switch for common alternate ratio (maybe custom input with suggested ratio?)
 
 ## Dev-Lower Priority
 
