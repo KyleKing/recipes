@@ -16,8 +16,8 @@ export default class {
     // Initialize lookup dictionary
     let matchLookup = {}
     if ( this.isFuseSearch ) {
-      rcp = rcp.item
       matchLookup = this.hltr.unwrapHighlights( rcp.matches )
+      rcp = rcp.item
     }
 
     // Identify matching regions in title, if any
@@ -89,7 +89,6 @@ export default class {
         )
       )
     )
-
   }
 
   // Create list of HTML elements for ingredients with interactive check box

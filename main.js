@@ -6,6 +6,7 @@ import Recipe from './Recipe.js'
 >> Create Table of Contents, Headers, and Recipes
  */
 
+
 // Add Table of Contents to HTMl
 const addToC = function( contentDivID ) {
   // Create header for ToC
@@ -34,6 +35,7 @@ const addToC = function( contentDivID ) {
   }
 }
 
+
 // Recipe initializer
 const updateRecipes = function( recipes ) {
   const contentDivID = 'crel-content'
@@ -60,6 +62,7 @@ const updateRecipes = function( recipes ) {
     new Recipe( isFuseSearch, contentDivID, recipe )
 }
 
+
 // Wrapper for searching database
 const search = function( searchPhrase ) {
   // Set options to be strict and limit fuzziness of search
@@ -73,17 +76,19 @@ const search = function( searchPhrase ) {
     shouldSort: true,
     threshold: 0.1,
   }
-  // // Search database with Fuse
-  // const fuse = new Fuse( localDB.recipes, options )
-  // const fuseResults = fuse.search( searchPhrase )
-  // // Add matched recipes to view
-  // updateRecipes( fuseResults )
+  // Search database with Fuse
+  const fuse = new Fuse( localDB.recipes, options )
+  const fuseResults = fuse.search( searchPhrase )
+  // Add matched recipes to view
+  updateRecipes( fuseResults )
 }
+
 
 // Initialize application
 const init = function() {
   updateRecipes( localDB.recipes )
 }
+
 
 // Add event detection for search
 const node = document.getElementById( 'search-input' )
@@ -96,6 +101,7 @@ node.addEventListener( 'keyup', ( event ) => {
       search( node.value )
   }
 } )
+
 
 // On ready, initialize application
 window.onload = function() {
