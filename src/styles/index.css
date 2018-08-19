@@ -55,3 +55,7 @@ input {
     line-height: normal;
     margin-bottom: 5px;
 }*/
+
+.hide-while-loading {
+    display: none;
+}

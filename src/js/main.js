@@ -33,6 +33,8 @@ const addToC = function( contentDivID ) {
       crel( 'ul', titles )
     ) ) )
   }
+  // Add last link to Footer
+  crel( trgt, crel( 'ul', crel( 'li', crel( 'a', {'href': '#footer'}, 'Footer' ) ) ) )
 }
 
 
@@ -90,15 +92,20 @@ const init = function() {
 }
 
 
+/*
+>> Handle Application Load and Events
+ */
+
+
 // Add event detection for search
-const node = document.getElementById( 'search-input' )
-node.addEventListener( 'keyup', ( event ) => {
+const nodeInputSearch = document.getElementById( 'search-input' )
+nodeInputSearch.addEventListener( 'keyup', ( event ) => {
   // Either load all recipes or apply search phrase from input
   if ( event.key === 'Enter' ) {
-    if ( node.value.length === 0 )
+    if ( nodeInputSearch.value.length === 0 )
       init()
     else
-      search( node.value )
+      search( nodeInputSearch.value )
   }
 } )
 
@@ -106,4 +113,7 @@ node.addEventListener( 'keyup', ( event ) => {
 // On ready, initialize application
 window.onload = function() {
   init()
+  $( 'footer' ).removeClass( 'hide-while-loading' )
+  registerSmoothScroll()
+  registerIngredientClick()
 }
