@@ -1,140 +1,109 @@
-jQuery( document ).ready( ( $ ) => {
-  //
-  // Slide in Side Navigation inspired by CodyHouse article:
-  //
+'use strict'
 
-  function toggleNav( bool ) {
-    $( '.cd-nav-container, .cd-overlay' ).toggleClass( 'is-visible', bool )
-    $( 'main' ).toggleClass( 'scale-down', bool )
-  }
-  // Open navigation clicking the menu icon
-  $( '.cd-nav-trigger' ).on( 'click', ( event ) => {
-    event.preventDefault()
-    toggleNav( true )
-  } )
-  // Close the navigation
-  $( '.cd-close-nav, .cd-overlay' ).on( 'click', ( event ) => {
-    event.preventDefault()
-    toggleNav( false )
-  } )
-  // Select a new section
-  $( '.cd-nav li' ).on( 'click', function() {
-    var target = $( this )
-    // var sectionTarget = target.data('menu');
-    if ( !target.hasClass( 'cd-selected' ) ) {
-      // if user has selected a section different from the one alredy visible
-      // update the navigation -> assign the .cd-selected class to the selected item
-      target.addClass( 'cd-selected' ).siblings( '.cd-selected' ).removeClass( 'cd-selected' )
-    }
-    toggleNav( false )
-  } )
+import Recipe from './Recipe.js'
+
+/*
+>> Create Table of Contents, Headers, and Recipes
+ */
 
 
-  //
-  // Click-able ingredient checklist with saved state in URL
-  //
+// Add Table of Contents to HTMl
+const addToC = function( contentDivID ) {
+  // Create header for ToC
+  const trgt = document.getElementById( contentDivID )
+  crel( trgt, crel( 'h3', {'id': 'toc', 'style': 'padding-top: 50px'}, 'Recipes Table of Contents' ) )
 
-  function parseURL( fullUrl ) {
-    // Initialize URL components for export
-    var urlComps = new Object()
-    urlComps.tagBR = '\?tag='
-    urlComps.ingBR = '\?ingredients='
-    urlComps.ingredients = []
-    urlComps.tag = ''
-    // Separate ingredient list from rest of URL
-    var components = fullUrl.split( '\?' )
-    for ( var idx = 0; idx < components.length; idx ++ ) {
-      var comp = '?' + components[idx]
-      if ( comp.indexOf( urlComps.ingBR ) >= 0 ) {
-        // Create list of ingredients from URL
-        urlComps.ingredients = comp.split( urlComps.ingBR )[1].split( ',' )
-        // console.log('urlComps.ingredients: ' + urlComps.ingredients);
-        // console.log(comp.split(urlComps.ingBR));
-      } else if ( comp.indexOf( urlComps.tagBR ) >= 0 ) {
-        // Parse the linked recipe tag
-        urlComps.tag = comp.split( urlComps.tagBR )[1]
-        // console.log('urlComps.tag: ' + urlComps.tag);
-        // console.log(comp.split(urlComps.tagBR));
-      } else {
-        // FIXME: Without the tag, the URL can't be updated...
-        urlComps.baseUrl = comp.slice( 1 ).split( '#' )[0] + '#'
-        // console.log('urlComps.baseUrl: ' + urlComps.baseUrl);
-      }
-    }
-    return( urlComps )
+  // Unwrap the toc object into a single list of recipe titles
+  let allRcps = []
+  for ( let group of Object.keys( localDB.toc ) )
+    allRcps = [...allRcps, ...localDB.toc[group]]
+
+  // Use the recipe title index in allRcps to get the full recipe index in localDB
+  const getRcpByName = function( rcpTtl ) {
+    return localDB.recipes[allRcps.indexOf( rcpTtl )]
   }
 
-  // Check item when clicked
-  //  open navigation clicking the menu icon
-  $( '.ingredient' ).on( 'click', ( event ) => {
-    // For debugging:
-    var fullUrl = window.location.href
-    if ( fullUrl.search( 'Users/kyleking' ) )
-      console.log( 'Current url: ' + fullUrl )
-      // console.log(event);
-      // console.log(event.target.classList);
-
-    // Either add or remove ingredient ID and set check box value appropriately
-    var comps = parseURL( fullUrl )
-    var ingID = $( event.target ).attr( 'id' )
-    if ( event.currentTarget.checked ) {
-      if ( comps.ingredients.length === 0 )
-        comps.ingredients = [ingID]
-      else
-        comps.ingredients.push( ingID )
-
-    } else {
-      // console.log('idx:');
-      // console.log(ingID);
-      // console.log(comps.ingredients);
-      // console.log(comps.ingredients.indexOf(ingID));
-      comps.ingredients.splice( comps.ingredients.indexOf( ingID ), 1 )
-    }
-    comps.ingredients.sort()
-    var finalUrl = comps.baseUrl + comps.ingBR + comps.ingredients.join( ',' ) +
-                   comps.tagBR + comps.tag
-    window.history.pushState( null, null, finalUrl )
-    console.log( 'Final url: ' + finalUrl + '\n' )
-  } )
-
-  // Read ingredients state and update check boxes:
-  var fullUrl = window.location.href
-  var ingredients = parseURL( fullUrl ).ingredients
-  for ( var idx = 0; idx < ingredients.length; idx++ ) {
-    var ingID  = ingredients[idx]
-    if ( fullUrl.search( 'file:/' ) ) {
-      console.log( 'Toggling? #' + ingID )
-      console.log( $( '#' + ingID ) )
-    }
-    $( '#' + ingID ).prop( 'checked', true )
+  // Add link for each recipe per group/heading
+  for ( let group of Object.keys( localDB.toc ) ) {
+    const titles = []
+    for ( let rcpTtl of localDB.toc[group] )
+      titles.push( crel( 'li', crel( 'a', {'href': `#${getRcpByName( rcpTtl ).id}`}, rcpTtl ) ) )
+    crel( trgt, crel( 'ul', crel( 'li',
+      crel( 'a', {'href': `#${group}`}, group ),
+      crel( 'ul', titles )
+    ) ) )
   }
+}
 
 
-  //
-  // Over-ride Anchor Linking
-  //
+// Recipe initializer
+const updateRecipes = function( recipes ) {
+  const contentDivID = 'crel-content'
+  // Tear down last recipe container
+  const el = document.getElementById( contentDivID )
+  if ( el )
+    el.remove()
+  // Initialize new content container
+  crel( document.getElementById( 'crel-target' ), crel( 'div', {'id': contentDivID} ) )
 
-  // Identify and scroll to the linked recipe
-  var anchor = parseURL( window.location.href ).tag
-  console.log( 'Scrolling to anchor: ' + anchor )
-  if ( anchor.length > 0 ) {
-    console.log( 'Scrolling!' )
-    document.getElementById( anchor ).scrollIntoView( {behavior: 'smooth', block: 'start'} )
+  // Parse input as either raw local database or filtered matches from Fuse
+  let isFuseSearch = false
+  if ( recipes.length > 0 )
+    isFuseSearch = 'item' in recipes[0] && 'matches' in recipes[0]
+  else
+    crel( document.getElementById( contentDivID ), crel( 'h1', 'No Matches Found' ) )
+
+  // Add table of contents if no Fuse filtering
+  if ( recipes.length > 0 && !isFuseSearch )
+    addToC( contentDivID )
+
+  // Create recipes
+  for ( let recipe of recipes )
+    new Recipe( isFuseSearch, contentDivID, recipe )
+}
+
+
+// Wrapper for searching database
+const search = function( searchPhrase ) {
+  // Set options to be strict and limit fuzziness of search
+  const options = {
+    distance: 10000,
+    includeMatches: true,
+    keys: localDB.searchKeys,
+    location: 0,
+    maxPatternLength: 32,
+    minMatchCharLength: searchPhrase.length - 1,
+    shouldSort: true,
+    threshold: 0.1,
   }
-  // Over-ride internal HTML linking from <a> tags
-  $( 'a' ).on( 'click', ( event ) => {
-    var tag = event.target.hash.replace( '#', '' )  // or use <str>.slice(1);
-    // // If the id is for the cody house panel, ignore (e.g. cd-nav, cd-.*, etc.)
-    // if (tag.indexOf('cd-') != 0) {
-    // Only use for recipe links
-    if ( tag.indexOf( 'recipe-' ) === 0 ) {
-      event.preventDefault()
-      var comps = parseURL( window.location.href )
-      var finalUrl = comps.baseUrl + comps.ingBR + comps.ingredients.join( ',' ) +
-                     comps.tagBR + tag.replace( ' ', '_' )
-      console.log( 'Scrolling to new tag: ' + tag + ' for finalUrl: ' + finalUrl )
-      document.getElementById( tag ).scrollIntoView( {behavior: 'smooth', block: 'start'} )
-      window.history.pushState( null, null, finalUrl )
-    }
-  } )
+  // Search database with Fuse
+  const fuse = new Fuse( localDB.recipes, options )
+  const fuseResults = fuse.search( searchPhrase )
+  // Add matched recipes to view
+  updateRecipes( fuseResults )
+}
+
+
+// Initialize application
+const init = function() {
+  updateRecipes( localDB.recipes )
+}
+
+
+// Add event detection for search
+const node = document.getElementById( 'search-input' )
+node.addEventListener( 'keyup', ( event ) => {
+  // Either load all recipes or apply search phrase from input
+  if ( event.key === 'Enter' ) {
+    if ( node.value.length === 0 )
+      init()
+    else
+      search( node.value )
+  }
 } )
+
+
+// On ready, initialize application
+window.onload = function() {
+  init()
+}
