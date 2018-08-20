@@ -1132,6 +1132,35 @@ var localDB = {
             "title": "Tuna Melts"
         },
         {
+            "group": "other",
+            "id": "recipe-cast_iron_care",
+            "imgSrc": "dist/imgs/other-cast_iron_care.jpg",
+            "ingredients": {
+                "ingredients": [
+                    "Ingredients",
+                    "canola or flaxseed oil",
+                    "salt"
+                ]
+            },
+            "notes": [
+                "Similar care for a Wok or Pizza stone"
+            ],
+            "recipe": [
+                "<b>Seasoning:</b>",
+                "Coat with a thin layer of oil",
+                "Bake at 450F for ~1 hour. This will create a hard glassy layer",
+                "<b>Regular Care:</b>",
+                "Clean while still warm and use hot water and a scrub brush (optionally use salt for extra abrasion), but avoid any soap",
+                "Towel dry, then heat to boil off any excess water",
+                "Put on a thin later of oil and heat until smoking to prevent the oil from turning rancid",
+                "<b>Notes on Use:</b>",
+                "Always pre-heat the skillet for room temperature food",
+                "Limit the amount of acidic foods to protect the seasoning"
+            ],
+            "source": "https://www.youtube.com/watch?v=KLGSLCaksdY",
+            "title": "Cast Iron Care"
+        },
+        {
             "group": "sides",
             "id": "recipe-baked_broccoli",
             "imgSrc": "dist/imgs/sides-baked_broccoli.jpg",
@@ -1343,6 +1372,9 @@ var localDB = {
             "Shrimp Tacos",
             "Slow Cooker Chicken Tortilla Soup",
             "Tuna Melts"
+        ],
+        "other": [
+            "Cast Iron Care"
         ],
         "sides": [
             "Baked Broccoli",
