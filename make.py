@@ -87,8 +87,18 @@ class SiteCompiler(object):
             contents = fn_.read()
         return contents.split('\n') if split else contents
 
-    def write(self, fn, content):
+    def append(self, fn, content):
         """Append to target file.
+
+        fn -- filename
+        content -- text to append to file
+
+        """
+        with open(fn, 'a') as fn_:
+            fn_.write(content)
+
+    def write(self, fn, content):
+        """Write to target file.
 
         fn -- filename
         content -- text to append to file
