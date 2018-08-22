@@ -6,8 +6,10 @@ import logging
 import os
 import shutil
 
+
 debug = True
-# debug = False
+rmDist = False
+
 
 logger = logging.getLogger(__name__)
 lgr_fn = 'recipes.log'
@@ -46,7 +48,7 @@ class SiteCompiler(object):
     def make(self):
         """Compile dist resources."""
         # Configure output directory structure
-        self.create_dir(self.dist_dir, rm=True)
+        self.create_dir(self.dist_dir, rm=rmDist)
         self.create_dir(self.dist_imgs)
 
         # Copy source images into destination directory
@@ -132,8 +134,11 @@ class SiteCompiler(object):
             fn_dest = '{}{}-{}.{}'.format(self.dist_imgs, subdir, recipe_title, file_type)
             # Track matched image filenames
             self.imgs[recipe_title] = fn_dest
-            lgr('Copying `{}` to `{}`'.format(fn_src, fn_dest))
-            shutil.copyfile(fn_src, fn_dest)
+            lbl = 'NOT'
+            if not os.path.isfile(fn_dest):
+                lbl = '>>>'
+                shutil.copyfile(fn_src, fn_dest)
+            lgr('{} Copying `{}` to `{}`'.format(lbl, fn_src, fn_dest))
 
     # JSON File utilities
 
