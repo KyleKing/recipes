@@ -982,10 +982,7 @@ var localDB = {
             ],
             "recipe": [
                 "Bake the chicken with olive oil, salt, pepper, and garlic",
-                "",
-                "TODO",
-                "",
-                ""
+                "Lay everything out on the Naan and cover in Tzatziki"
             ],
             "source": "",
             "title": "Gyros"

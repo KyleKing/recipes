@@ -104,7 +104,7 @@ class SiteCompiler(object):
         content -- text to append to file
 
         """
-        with open(fn, 'a') as fn_:
+        with open(fn, 'w') as fn_:
             fn_.write(content)
 
     def glob_cb(self, pattern, cb):
@@ -163,7 +163,7 @@ class SiteCompiler(object):
 
         """
         lgr('Reading JSON file: `{}`'.format(fn_src))
-        with open(fn_src) as fn:
+        with open(fn_src, 'r') as fn:
             recipe = json.load(fn)
 
         # Make sure the minimum keys exist
