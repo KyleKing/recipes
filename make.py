@@ -189,8 +189,8 @@ class SiteCompiler(object):
             search_keys.extend(['ingredients.{}'.format(hdr) for hdr in recipe['ingredients'].iterkeys()])
         search_keys = list(set(search_keys))
         lgr('search_keys: {}'.format(search_keys))
-        # Write JSON file
-        rcps_obj = {'recipes': self.recipes, 'search_keys': search_keys, 'toc': self.toc}
+        # Write JSON file (FYI: Camelcase variables for JS output)
+        rcps_obj = {'recipes': self.recipes, 'searchKeys': search_keys, 'toc': self.toc}
         kwargs = {'separators': (',', ':')} if not debug else {'indent': 4, 'separators': (',', ': ')}
         json.dump(rcps_obj, open(self.db_fn, 'w'), sort_keys=True, **kwargs)
 

@@ -82,7 +82,8 @@ $( document ).ready( () => {
   z-index: 99;
 }
     ```
-
+- Why does tapping on top menu bar not scroll to top?
+    + ~~Maybe get rid of smooth scroll? {Yeah}~~
 - Lazy load images (which library?)
     + Guides
         * Medium: https://medium.freecodecamp.org/using-svg-as-placeholders-more-image-loading-techniques-bed1b810ab2c

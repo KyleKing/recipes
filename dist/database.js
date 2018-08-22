@@ -232,34 +232,6 @@ var localDB = {
         },
         {
             "group": "dssrt",
-            "id": "recipe-caramel_rice_krispies_bar",
-            "imgSrc": "",
-            "ingredients": {
-                "Caramel Sauce": [
-                    "Caramel Sauce",
-                    "14 oz bag of caramels (unwrapped)",
-                    "14 oz can sweetened condensed milk",
-                    "stick of butter"
-                ],
-                "The Krispies": [
-                    "The Krispies",
-                    "1.5 sticks butter",
-                    "10 cups miniature marshmallows",
-                    "10 cups rice krispies"
-                ]
-            },
-            "notes": [],
-            "recipe": [
-                "Combine *half of the* caramels, **half of the** condensed milk, and a **half** stick of butter then microwave for 2 minutes. Stir and continue to heat until smooth",
-                "In another bowl, melt 6 tbsp butter with 4 cups marshmallows for 70 sec. Stir until smooth and pour over 5 cups of cereal - stir until coated",
-                "Place in a greased 9 x 13 inch glass dish and sprinkle two cups of marshmallows over cereal mixture, then carefully pour caramel over top.",
-                "Refrigerate to cool, then repeat to make the second layer with the rest of the ingredients. Refrigerate until entirely firm"
-            ],
-            "source": "",
-            "title": "Caramel Rice Krispies Bar"
-        },
-        {
-            "group": "dssrt",
             "id": "recipe-chocolate-pb-m&m_balls",
             "imgSrc": "",
             "ingredients": {
@@ -285,7 +257,7 @@ var localDB = {
         {
             "group": "dssrt",
             "id": "recipe-hot_fudge_sauce",
-            "imgSrc": "",
+            "imgSrc": "dist/imgs/dssrt-hot_fudge_sauce.jpg",
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
@@ -438,7 +410,7 @@ var localDB = {
                     "Ingredients",
                     "16 oz bag of lo mein noodles",
                     "some vegetables (sliced pepper, zucchini, carrots, etc)",
-                    "1.5 tbsp butter",
+                    "1 tbsp butter",
                     "1 tsp of red pepper flakes",
                     "3 eggs",
                     "4 tbsp soy sauce",
@@ -860,6 +832,33 @@ var localDB = {
         },
         {
             "group": "meals",
+            "id": "recipe-enchiladas",
+            "imgSrc": "dist/imgs/meals-enchiladas.png",
+            "ingredients": {
+                "ingredients": [
+                    "Ingredients",
+                    "tortillas",
+                    "1 can of enchilada sauce",
+                    "1 chicken breast or rotisserie chicken",
+                    "shredded cheese",
+                    "1 can black beans, strained",
+                    "other vegetables"
+                ]
+            },
+            "notes": [
+                "Other recommended vegetables include: onion, cilantro, diced tomato, and/or diced green chilies"
+            ],
+            "recipe": [
+                "Bake the chicken (if not already cooked)",
+                "Preheat the oven to 375F",
+                "Roll the cooked chicken, cheese, beans, and other vegetables with the flap side down, then pour enchilada sauce over top",
+                "Bake for 25 minutes"
+            ],
+            "source": "",
+            "title": "Enchiladas"
+        },
+        {
+            "group": "meals",
             "id": "recipe-fajitas",
             "imgSrc": "dist/imgs/meals-fajitas.jpg",
             "ingredients": {
@@ -1132,6 +1131,35 @@ var localDB = {
             "title": "Tuna Melts"
         },
         {
+            "group": "other",
+            "id": "recipe-cast_iron_care",
+            "imgSrc": "dist/imgs/other-cast_iron_care.jpg",
+            "ingredients": {
+                "ingredients": [
+                    "Ingredients",
+                    "canola or flaxseed oil",
+                    "salt"
+                ]
+            },
+            "notes": [
+                "Similar care for a Wok or Pizza stone"
+            ],
+            "recipe": [
+                "<b>Seasoning:</b>",
+                "Coat with a thin layer of oil",
+                "Bake at 450F for ~1 hour. This will create a hard glassy layer",
+                "<b>Regular Care:</b>",
+                "Clean while still warm and use hot water and a scrub brush (optionally use salt for extra abrasion), but avoid any soap",
+                "Towel dry, then heat to boil off any excess water",
+                "Put on a thin later of oil and heat until smoking to prevent the oil from turning rancid",
+                "<b>Notes on Use:</b>",
+                "Always pre-heat the skillet for room temperature food",
+                "Limit the amount of acidic foods to protect the seasoning"
+            ],
+            "source": "https://www.youtube.com/watch?v=KLGSLCaksdY",
+            "title": "Cast Iron Care"
+        },
+        {
             "group": "sides",
             "id": "recipe-baked_broccoli",
             "imgSrc": "dist/imgs/sides-baked_broccoli.jpg",
@@ -1272,14 +1300,12 @@ var localDB = {
     "searchKeys": [
         "ingredients.Garnish Options",
         "recipe",
-        "ingredients.Caramel Sauce",
         "ingredients.Base",
         "ingredients.FOR THE BENEDICT AND ASSEMBLY",
         "group",
         "title",
         "ingredients.Toppings",
         "ingredients.FOR THE HOLLANDAISE",
-        "ingredients.The Krispies",
         "ingredients.Saute in Olive Oil",
         "ingredients.Seasoning Combinations",
         "ingredients.Other Ingredients",
@@ -1307,7 +1333,6 @@ var localDB = {
         ],
         "dssrt": [
             "Cake Pops",
-            "Caramel Rice Krispies Bar",
             "Chocolate-Pb-M&M Balls",
             "Hot Fudge Sauce",
             "Molten Chocolate Cake",
@@ -1333,6 +1358,7 @@ var localDB = {
             "Basic Chicken",
             "Brick Chicken",
             "Chicken Cacciatore",
+            "Enchiladas",
             "Fajitas",
             "Fish",
             "Mini Pizza",
@@ -1343,6 +1369,9 @@ var localDB = {
             "Shrimp Tacos",
             "Slow Cooker Chicken Tortilla Soup",
             "Tuna Melts"
+        ],
+        "other": [
+            "Cast Iron Care"
         ],
         "sides": [
             "Baked Broccoli",

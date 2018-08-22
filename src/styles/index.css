@@ -67,11 +67,18 @@ footer {
 /* Configure Search Input */
 #search-area {
     background-color: #FFFFFFE8;
-    position: sticky;
+    position: -webkit-sticky;
+    position:         sticky;
     top: 0;
     width: 100%;
 }
+
 #search-input {
     margin: 20px 0;
-    width: 100%;
+    width: 90%;
+}
+@media only screen and (max-width: 1024px) {
+    #search-input {
+        width: 80%;
+    }
 }
