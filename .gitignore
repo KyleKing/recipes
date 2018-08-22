@@ -4,5 +4,7 @@
 
 # Remove WIP
 tmp.*
-TODO/*
+TODO/
+archive/
 /config.codekit3
+

@@ -67,7 +67,8 @@ footer {
 /* Configure Search Input */
 #search-area {
     background-color: #FFFFFFE8;
-    position: sticky;
+    position: -webkit-sticky;
+    position:         sticky;
     top: 0;
     width: 100%;
 }

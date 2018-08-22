@@ -114,9 +114,8 @@ jQuery( document ).ready( ( $ ) => {
   // Select a new section
   $( '.cd-nav li' ).on( 'click', function() {
     var target = $( this )
-    // var sectionTarget = target.data('menu');
     if ( !target.hasClass( 'cd-selected' ) ) {
-      // if user has selected a section different from the one alredy visible
+      // if user has selected a section different from the one already visible
       // update the navigation -> assign the .cd-selected class to the selected item
       target.addClass( 'cd-selected' ).siblings( '.cd-selected' ).removeClass( 'cd-selected' )
     }
@@ -169,8 +168,8 @@ const registerIngredientClick = function() {
     // For debugging:
     const fullUrl = window.location.href
     console.log( 'Current url: ' + fullUrl )
-    // console.log(event);
-    // console.log(event.target.classList);
+    // console.log(event)
+    // console.log(event.target.classList)
 
     // Either add or remove ingredient ID and set check box value appropriately
     const comps = parseURL( fullUrl )
@@ -210,30 +209,6 @@ const registerIngredientClick = function() {
 }
 
 
-// Override Anchor Linking from ToC
-const registerSmoothScroll = function() {
-  // TODO: trigger smooth scroll from completion of Crel HTML generation
-  // // Identify and scroll to the linked recipe
-  // const anchor = parseURL( window.location.href ).tag
-  // if ( anchor.length > 0 )
-  //   document.getElementById( anchor ).scrollIntoView( {behavior: 'smooth', block: 'start'} )
-
-  // Override internal HTML linking from <a> tags
-  $( 'a' ).on( 'click', ( event ) => {
-    const tag = event.target.hash.replace( '#', '' )  // or use <str>.slice(1);
-    // Ignore links from CodyHouse Panel and Section Headers. Only apply to Recipes
-    if ( tag.indexOf( 'recipe-' ) === 0 ) {
-      event.preventDefault()
-      const comps = parseURL( window.location.href )
-      const finalUrl = comps.baseUrl + comps.ingBR + comps.ingredients.join( ',' ) +
-                       comps.tagBR + tag.replace( ' ', '_' )
-      document.getElementById( tag ).scrollIntoView( {behavior: 'smooth', block: 'start'} )
-      window.history.pushState( null, null, finalUrl )
-    }
-  } )
-}
-
-
 /*
 >> Handle Application Load and Events
  */
@@ -251,11 +226,19 @@ nodeInputSearch.addEventListener( 'keyup', ( event ) => {
   }
 } )
 
+document.addEventListener ( 'keydown', ( event ) => {
+  if ( event.metaKey && event.code === 'KeyF' ) {
+    event.preventDefault()
+    const input = document.getElementById( 'search-input' )
+    input.focus()
+    input.setSelectionRange( 0, input.value.length )
+  }
+} )
+
 
 // On ready, initialize application
 window.onload = function() {
   init()
   $( 'footer' ).removeClass( 'hide-while-loading' )
-  registerSmoothScroll()
   registerIngredientClick()
 }
