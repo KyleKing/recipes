@@ -6,8 +6,10 @@ import logging
 import os
 import shutil
 
+
 debug = True
-# debug = False
+rmDist = False
+
 
 logger = logging.getLogger(__name__)
 lgr_fn = 'recipes.log'
@@ -46,7 +48,7 @@ class SiteCompiler(object):
     def make(self):
         """Compile dist resources."""
         # Configure output directory structure
-        self.create_dir(self.dist_dir, rm=True)
+        self.create_dir(self.dist_dir, rm=rmDist)
         self.create_dir(self.dist_imgs)
 
         # Copy source images into destination directory
@@ -85,7 +87,7 @@ class SiteCompiler(object):
             contents = fn_.read()
         return contents.split('\n') if split else contents
 
-    def write(self, fn, content):
+    def append(self, fn, content):
         """Append to target file.
 
         fn -- filename
@@ -93,6 +95,16 @@ class SiteCompiler(object):
 
         """
         with open(fn, 'a') as fn_:
+            fn_.write(content)
+
+    def write(self, fn, content):
+        """Write to target file.
+
+        fn -- filename
+        content -- text to append to file
+
+        """
+        with open(fn, 'w') as fn_:
             fn_.write(content)
 
     def glob_cb(self, pattern, cb):
@@ -132,8 +144,11 @@ class SiteCompiler(object):
             fn_dest = '{}{}-{}.{}'.format(self.dist_imgs, subdir, recipe_title, file_type)
             # Track matched image filenames
             self.imgs[recipe_title] = fn_dest
-            lgr('Copying `{}` to `{}`'.format(fn_src, fn_dest))
-            shutil.copyfile(fn_src, fn_dest)
+            lbl = 'NOT'
+            if not os.path.isfile(fn_dest):
+                lbl = '>>>'
+                shutil.copyfile(fn_src, fn_dest)
+            lgr('{} Copying `{}` to `{}`'.format(lbl, fn_src, fn_dest))
 
     # JSON File utilities
 
@@ -148,7 +163,7 @@ class SiteCompiler(object):
 
         """
         lgr('Reading JSON file: `{}`'.format(fn_src))
-        with open(fn_src) as fn:
+        with open(fn_src, 'r') as fn:
             recipe = json.load(fn)
 
         # Make sure the minimum keys exist

@@ -7,17 +7,16 @@ var localDB = {
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
+                    "tortilla",
                     "3 eggs",
-                    "1/4 tsp ground cumin",
-                    "pepper",
-                    "2 tbsp chunky salsa",
-                    "1 can black beans",
-                    "spinach (or lettuce)"
+                    "sausage, saute",
+                    "spinach"
                 ]
             },
             "notes": [
-                "Alt: microwave chunky salsa and black beans",
-                "Alt: Saut\u00e9 sausage. Add onion and cheese (pepper jack) to the eggs"
+                "Alt: microwave chunky salsa (or diced tomatoes) and black beans from a can with 1/4 tsp ground cumin",
+                "Alt: Add onion and cheese (pepper jack) when cooking the eggs",
+                "Also, add pepper, garlic powder, basil, and/or oregano"
             ],
             "recipe": [
                 "On medium heat, cook the eggs, cumin, and pepper",
@@ -206,6 +205,38 @@ var localDB = {
             ],
             "source": "http://www.geniuskitchen.com/recipe/the-best-belgian-waffles-63071",
             "title": "Waffles"
+        },
+        {
+            "group": "dssrt",
+            "id": "recipe-biscotti",
+            "imgSrc": "dist/imgs/dssrt-biscotti.jpg",
+            "ingredients": {
+                "ingredients": [
+                    "Ingredients",
+                    "6 tbsp butter",
+                    "2/3 cup sugar",
+                    "1/4 tsp salt",
+                    "2 tsp vanilla extract",
+                    "1.5 tsp baking powder",
+                    "2 eggs",
+                    "2 cups flour",
+                    "1.5 cups chocolate chips"
+                ]
+            },
+            "notes": [
+                "The King Arthur website has a number of tasty recipes like chocolate dipped biscotti"
+            ],
+            "recipe": [
+                "Preheat oven to 350. Lightly grease a baking sheet",
+                "In a medium-sized bowl, beat the butter, sugar, salt, vanilla, and baking powder until the mixture is smooth and creamy. Beat in the eggs and add the flower at low speed. Stir until smooth",
+                "Divide the dough in half and with wet hands, shape into two logs 2 in wide, 10 in long, and about 1 in thick",
+                "Bake for 25-30 minutes, remove, and allow to cool for 30 minutes. Carefully transfer to a cutting board",
+                "Reduce the oven temperature to 325",
+                "With a wet paper towel, lightly dampen the logs and wait another 5 minutes before using a serrated knife to slice into 1/2-3/4 in. wide biscotti. Note that putting too much vertical pressure with the knife can cause the biscotti to crumble. Make sure to move the knife back and forth instead",
+                "Return the slices to the baking sheet, standing them up with 1/2 in between them so air can circulate. Return the biscotti to the oven and bake for 25-30 minutes, until they feel very dry and are beginning to turn golden. Transfer them to a rack to cool"
+            ],
+            "source": "https://www.kingarthurflour.com/recipes/vanilla-biscotti-recipe",
+            "title": "Biscotti"
         },
         {
             "group": "dssrt",
@@ -571,7 +602,7 @@ var localDB = {
         {
             "group": "grains",
             "id": "recipe-red_beans_and_rice",
-            "imgSrc": "dist/imgs/grains-red_beans_and_rice.jpg",
+            "imgSrc": "",
             "ingredients": {
                 "Base": [
                     "Base",
@@ -593,9 +624,7 @@ var localDB = {
                     "2 tsp. hot sauce"
                 ]
             },
-            "notes": [
-                "(Image from <a href=\"https://commons.wikimedia.org/wiki/File:Red_beans_and_rice.jpg\">Wikipedia</a>)"
-            ],
+            "notes": [],
             "recipe": [
                 "In a medium pot over medium heat, heat oil. Slice the sausage and cook in the pot until slightly browned.",
                 "Add onion, bell pepper, and celery and cook cook until slightly softened for about 4 minutes.",
@@ -669,7 +698,7 @@ var localDB = {
         {
             "group": "grains",
             "id": "recipe-spaghetti_cacio_e_cepe",
-            "imgSrc": "",
+            "imgSrc": "dist/imgs/grains-spaghetti_cacio_e_cepe.jpg",
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
@@ -839,7 +868,7 @@ var localDB = {
                     "Ingredients",
                     "tortillas",
                     "1 can of enchilada sauce",
-                    "1 chicken breast or rotisserie chicken",
+                    "2-3 chicken breast or rotisserie chicken",
                     "shredded cheese",
                     "1 can black beans, strained",
                     "other vegetables"
@@ -921,6 +950,42 @@ var localDB = {
             ],
             "source": "http://cookthestory.com/how-to-cook-fish-from-frozen/",
             "title": "Fish"
+        },
+        {
+            "group": "meals",
+            "id": "recipe-gyros",
+            "imgSrc": "dist/imgs/meals-gyros.jpg",
+            "ingredients": {
+                "Chicken": [
+                    "Chicken",
+                    "1-2 chicken breast (should be lamb)",
+                    "2 naan slices",
+                    "1/2 onion",
+                    "2 tomatoes",
+                    "fries",
+                    "lettuce"
+                ],
+                "Tzatziki Sauce": [
+                    "Tzatziki Sauce",
+                    "1 cup plain yogurt",
+                    "1/2 cucumber peeled, seeded, and finely diced",
+                    "1 tbsp olive oil",
+                    "1 tbsp dill, chopped",
+                    "1 tbsp mint, chopped",
+                    "1 tbsp fresh lemon juice",
+                    "1 garlic clove, minced",
+                    "1/2 tsp salt"
+                ]
+            },
+            "notes": [
+                "From the Joy of Cooking page 567"
+            ],
+            "recipe": [
+                "Bake the chicken with olive oil, salt, pepper, and garlic",
+                "Lay everything out on the Naan and cover in Tzatziki"
+            ],
+            "source": "",
+            "title": "Gyros"
         },
         {
             "group": "meals",
@@ -1106,6 +1171,30 @@ var localDB = {
             ],
             "source": "",
             "title": "Slow Cooker Chicken Tortilla Soup"
+        },
+        {
+            "group": "meals",
+            "id": "recipe-tomato_mozzarella_caprese",
+            "imgSrc": "dist/imgs/meals-tomato_mozzarella_caprese.jpg",
+            "ingredients": {
+                "ingredients": [
+                    "Ingredients",
+                    "tomato, sliced",
+                    "mozzarella ball, sliced",
+                    "extra virgin olive oil, the good stuff",
+                    "basil",
+                    "oregano",
+                    "ground pepper",
+                    "baguette"
+                ]
+            },
+            "notes": [],
+            "recipe": [
+                "Slice the tomatoes and mozzarella. Drizzle olive oil on top with a small amount of balsamic vinegar",
+                "For the bread, add a bowl of ground pepper and olive oil for dipping"
+            ],
+            "source": "",
+            "title": "Tomato Mozzarella Caprese"
         },
         {
             "group": "meals",
@@ -1301,12 +1390,14 @@ var localDB = {
         "ingredients.Garnish Options",
         "recipe",
         "ingredients.Base",
+        "ingredients.Tzatziki Sauce",
         "ingredients.FOR THE BENEDICT AND ASSEMBLY",
         "group",
         "title",
+        "ingredients.Saute in Olive Oil",
         "ingredients.Toppings",
         "ingredients.FOR THE HOLLANDAISE",
-        "ingredients.Saute in Olive Oil",
+        "ingredients.Chicken",
         "ingredients.Seasoning Combinations",
         "ingredients.Other Ingredients",
         "ingredients.Sauce",
@@ -1332,6 +1423,7 @@ var localDB = {
             "Waffles"
         ],
         "dssrt": [
+            "Biscotti",
             "Cake Pops",
             "Chocolate-Pb-M&M Balls",
             "Hot Fudge Sauce",
@@ -1361,6 +1453,7 @@ var localDB = {
             "Enchiladas",
             "Fajitas",
             "Fish",
+            "Gyros",
             "Mini Pizza",
             "Naan Pizza",
             "Pizza",
@@ -1368,6 +1461,7 @@ var localDB = {
             "Sandwiches",
             "Shrimp Tacos",
             "Slow Cooker Chicken Tortilla Soup",
+            "Tomato Mozzarella Caprese",
             "Tuna Melts"
         ],
         "other": [
