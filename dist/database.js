@@ -1,16 +1,18 @@
 var localDB = {
     "recipes": [
         {
-            "group": "brkfst",
+            "group": "breakfast",
             "id": "recipe-breakfast_burrito",
-            "imgSrc": "",
+            "imgSrc": "dist/imgs/breakfast-breakfast_burrito.jpg",
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
-                    "tortilla",
+                    "tortilla (large or small)",
                     "3 eggs",
-                    "sausage, saute",
-                    "spinach"
+                    "1/4 cup cheese",
+                    "1 sausage, sauted",
+                    "taco seasoning",
+                    "handful of spinach"
                 ]
             },
             "notes": [
@@ -19,16 +21,15 @@ var localDB = {
                 "Also, add pepper, garlic powder, basil, and/or oregano"
             ],
             "recipe": [
-                "On medium heat, cook the eggs, cumin, and pepper",
-                "In parallel, cook the tortilla in a large flat pan"
+                "On medium heat, cook the eggs the eggs and in a second pan, heat the tortillas"
             ],
             "source": "",
             "title": "Breakfast Burrito"
         },
         {
-            "group": "brkfst",
+            "group": "breakfast",
             "id": "recipe-coffee",
-            "imgSrc": "dist/imgs/brkfst-coffee.jpg",
+            "imgSrc": "dist/imgs/breakfast-coffee.jpg",
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
@@ -47,9 +48,9 @@ var localDB = {
         },
         {
             "altRatio": "1/2",
-            "group": "brkfst",
+            "group": "breakfast",
             "id": "recipe-eggs_benedict",
-            "imgSrc": "dist/imgs/brkfst-eggs_benedict.jpg",
+            "imgSrc": "dist/imgs/breakfast-eggs_benedict.jpg",
             "ingredients": {
                 "FOR THE BENEDICT AND ASSEMBLY": [
                     "For The Benedict And Assembly",
@@ -98,7 +99,7 @@ var localDB = {
             "title": "Eggs Benedict"
         },
         {
-            "group": "brkfst",
+            "group": "breakfast",
             "id": "recipe-lemon_poppy_seed_mini_scones",
             "imgSrc": "",
             "ingredients": {
@@ -126,7 +127,7 @@ var localDB = {
             "title": "Lemon Poppy Seed Mini Scones"
         },
         {
-            "group": "brkfst",
+            "group": "breakfast",
             "id": "recipe-omelette",
             "imgSrc": "",
             "ingredients": {
@@ -149,9 +150,9 @@ var localDB = {
             "title": "Omelette"
         },
         {
-            "group": "brkfst",
+            "group": "breakfast",
             "id": "recipe-pancakes",
-            "imgSrc": "dist/imgs/brkfst-pancakes.jpg",
+            "imgSrc": "dist/imgs/breakfast-pancakes.jpg",
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
@@ -178,9 +179,9 @@ var localDB = {
             "title": "Pancakes"
         },
         {
-            "group": "brkfst",
+            "group": "breakfast",
             "id": "recipe-waffles",
-            "imgSrc": "dist/imgs/brkfst-waffles.jpg",
+            "imgSrc": "dist/imgs/breakfast-waffles.jpg",
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
@@ -207,9 +208,9 @@ var localDB = {
             "title": "Waffles"
         },
         {
-            "group": "dssrt",
+            "group": "dessert",
             "id": "recipe-biscotti",
-            "imgSrc": "dist/imgs/dssrt-biscotti.jpg",
+            "imgSrc": "dist/imgs/dessert-biscotti.jpg",
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
@@ -239,9 +240,9 @@ var localDB = {
             "title": "Biscotti"
         },
         {
-            "group": "dssrt",
+            "group": "dessert",
             "id": "recipe-cake_pops",
-            "imgSrc": "dist/imgs/dssrt-cake_pops.jpg",
+            "imgSrc": "dist/imgs/dessert-cake_pops.jpg",
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
@@ -262,7 +263,7 @@ var localDB = {
             "title": "Cake Pops"
         },
         {
-            "group": "dssrt",
+            "group": "dessert",
             "id": "recipe-chocolate-pb-m&m_balls",
             "imgSrc": "",
             "ingredients": {
@@ -286,9 +287,9 @@ var localDB = {
             "title": "Chocolate-Pb-M&M Balls"
         },
         {
-            "group": "dssrt",
+            "group": "dessert",
             "id": "recipe-hot_fudge_sauce",
-            "imgSrc": "dist/imgs/dssrt-hot_fudge_sauce.jpg",
+            "imgSrc": "dist/imgs/dessert-hot_fudge_sauce.jpg",
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
@@ -311,7 +312,7 @@ var localDB = {
             "title": "Hot Fudge Sauce"
         },
         {
-            "group": "dssrt",
+            "group": "dessert",
             "id": "recipe-molten_chocolate_cake",
             "imgSrc": "",
             "ingredients": {
@@ -337,9 +338,9 @@ var localDB = {
             "title": "Molten Chocolate Cake"
         },
         {
-            "group": "dssrt",
+            "group": "dessert",
             "id": "recipe-oatmeal_balls",
-            "imgSrc": "dist/imgs/dssrt-oatmeal_balls.jpg",
+            "imgSrc": "dist/imgs/dessert-oatmeal_balls.jpg",
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
@@ -361,9 +362,9 @@ var localDB = {
             "title": "Oatmeal Balls"
         },
         {
-            "group": "dssrt",
+            "group": "dessert",
             "id": "recipe-oreo_truffles",
-            "imgSrc": "dist/imgs/dssrt-oreo_truffles.jpg",
+            "imgSrc": "dist/imgs/dessert-oreo_truffles.jpg",
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
@@ -384,9 +385,9 @@ var localDB = {
             "title": "Oreo Truffles"
         },
         {
-            "group": "dssrt",
+            "group": "dessert",
             "id": "recipe-pb_and_cocoa_smothie",
-            "imgSrc": "dist/imgs/dssrt-pb_and_cocoa_smothie.jpg",
+            "imgSrc": "dist/imgs/dessert-pb_and_cocoa_smothie.jpg",
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
@@ -740,7 +741,7 @@ var localDB = {
                     "1 large can of water",
                     "12 oz tomato paste (2 cans",
                     "1 tbsp basil",
-                    "1 tbsp worcestershire sauce (recommend 2-3 tbsp)",
+                    "1 tbsp worcestershire sauce (they use a lot)",
                     "1 tsp salt",
                     "1/2 tsp pepper",
                     "1/2 tbsp tabasco sauce",
@@ -989,6 +990,28 @@ var localDB = {
         },
         {
             "group": "meals",
+            "id": "recipe-jambon_beurre",
+            "imgSrc": "dist/imgs/meals-jambon_beurre.png",
+            "ingredients": {
+                "ingredients": [
+                    "Ingredients",
+                    "baguette",
+                    "ham",
+                    "gruyere cheese",
+                    "butter"
+                ]
+            },
+            "notes": [
+                "The essential French ham sandwich"
+            ],
+            "recipe": [
+                "Don't skimp on the butter"
+            ],
+            "source": "https://www.youtube.com/watch?v=ge49xawecJk",
+            "title": "Jambon Beurre"
+        },
+        {
+            "group": "meals",
             "id": "recipe-mini_pizza",
             "imgSrc": "dist/imgs/meals-mini_pizza.jpg",
             "ingredients": {
@@ -1120,6 +1143,41 @@ var localDB = {
         },
         {
             "group": "meals",
+            "id": "recipe-shrimp_creole",
+            "imgSrc": "dist/imgs/meals-shrimp_creole.jpg",
+            "ingredients": {
+                "ingredients": [
+                    "Ingredients",
+                    "2 (32 oz) can of tomato sauce",
+                    "1/4 lb butter",
+                    "3 onions",
+                    "3 stalks celery",
+                    "3 toes garlic",
+                    "1 (28-30 oz) can of tomatoes",
+                    "2 bay leaves",
+                    "1 tsp tobasco sauce",
+                    "1 tbsp fresh thyme",
+                    "1/2 bunch parsely, chopped",
+                    "2 lbs raw shrimp, peeled",
+                    "white rice",
+                    "pinch of saffron"
+                ]
+            },
+            "notes": [
+                "Alex's family recipe"
+            ],
+            "recipe": [
+                "Reduce tomato sauce by 3/4 (bake uncovered in 350 oven - for an hour or two). Then replace evaporated water so sauce is at original volume (~24 oz / 3 cups water)",
+                "In butter, saute the onion, celery, and un-chopped garlic",
+                "Add tomatoes and spices (bay leaves, Tobasco, and thyme",
+                "Cook 1 hour at 350",
+                "Add parsely and shrimp. Cook 15 more minutes. Serve over white rice with a pinch of saffron"
+            ],
+            "source": "",
+            "title": "Shrimp Creole"
+        },
+        {
+            "group": "meals",
             "id": "recipe-shrimp_tacos",
             "imgSrc": "",
             "ingredients": {
@@ -1141,6 +1199,48 @@ var localDB = {
             ],
             "source": "http://www.yummly.co/recipe/Honey-Lime-Shrimp-Tacos-1576139",
             "title": "Shrimp Tacos"
+        },
+        {
+            "group": "meals",
+            "id": "recipe-slow_cooker_chicken_mango_curry",
+            "imgSrc": "",
+            "ingredients": {
+                "Blender": [
+                    "Blender",
+                    "2 cups frozen mango chunks",
+                    "1 small onion, quartered",
+                    "4 cloves garlic",
+                    "2 tbsp brown sugar",
+                    "1 tsp rice vinegar",
+                    "1 tsp freshly grated ginger",
+                    "1 tsp red pepper flakes",
+                    "3 tbsp yellow curry paste",
+                    "1/2 cup chicken broth"
+                ],
+                "Curry": [
+                    "Curry",
+                    "1 can coconut milk",
+                    "1.5 lbs chicken breast, cubed",
+                    "1 red onion, sliced",
+                    "1/2 cup roasted cashews"
+                ],
+                "Optional Garnish": [
+                    "Optional Garnish",
+                    "cilantro",
+                    "red chili",
+                    "lime wedge"
+                ]
+            },
+            "notes": [],
+            "recipe": [
+                "In a blender, combine the above ingredients and blend until smooth",
+                "Transfer to the slow cooker and stir in the coconut milk, chicken, and red onion",
+                "Cook on low for 8 hours",
+                "Add the remaining mangoes and cover to thaw",
+                "Add the cashews and serve over rice with choice of garnish"
+            ],
+            "source": "http://www.oliviascuisine.com/slow-cooker-chicken-mango-curry/",
+            "title": "Slow Cooker Chicken Mango Curry"
         },
         {
             "group": "meals",
@@ -1218,35 +1318,6 @@ var localDB = {
             ],
             "source": "",
             "title": "Tuna Melts"
-        },
-        {
-            "group": "other",
-            "id": "recipe-cast_iron_care",
-            "imgSrc": "dist/imgs/other-cast_iron_care.jpg",
-            "ingredients": {
-                "ingredients": [
-                    "Ingredients",
-                    "canola or flaxseed oil",
-                    "salt"
-                ]
-            },
-            "notes": [
-                "Similar care for a Wok or Pizza stone"
-            ],
-            "recipe": [
-                "<b>Seasoning:</b>",
-                "Coat with a thin layer of oil",
-                "Bake at 450F for ~1 hour. This will create a hard glassy layer",
-                "<b>Regular Care:</b>",
-                "Clean while still warm and use hot water and a scrub brush (optionally use salt for extra abrasion), but avoid any soap",
-                "Towel dry, then heat to boil off any excess water",
-                "Put on a thin later of oil and heat until smoking to prevent the oil from turning rancid",
-                "<b>Notes on Use:</b>",
-                "Always pre-heat the skillet for room temperature food",
-                "Limit the amount of acidic foods to protect the seasoning"
-            ],
-            "source": "https://www.youtube.com/watch?v=KLGSLCaksdY",
-            "title": "Cast Iron Care"
         },
         {
             "group": "sides",
@@ -1384,9 +1455,39 @@ var localDB = {
             ],
             "source": "https://amindfullmom.com/instant-pot-baked-sweet-potatoes/",
             "title": "Sweet Potatoes"
+        },
+        {
+            "group": "tools",
+            "id": "recipe-cast_iron_care",
+            "imgSrc": "dist/imgs/tools-cast_iron_care.jpg",
+            "ingredients": {
+                "ingredients": [
+                    "Ingredients",
+                    "canola or flaxseed oil",
+                    "salt"
+                ]
+            },
+            "notes": [
+                "Similar care for a Wok or Pizza stone"
+            ],
+            "recipe": [
+                "<b>Seasoning:</b>",
+                "Coat with a thin layer of oil",
+                "Bake at 450F for ~1 hour. This will create a hard glassy layer",
+                "<b>Regular Care:</b>",
+                "Clean while still warm and use hot water and a scrub brush (optionally use salt for extra abrasion), but avoid any soap",
+                "Towel dry, then heat to boil off any excess water",
+                "Put on a thin later of oil and heat until smoking to prevent the oil from turning rancid",
+                "<b>Notes on Use:</b>",
+                "Always pre-heat the skillet for room temperature food",
+                "Limit the amount of acidic foods to protect the seasoning"
+            ],
+            "source": "https://www.youtube.com/watch?v=KLGSLCaksdY",
+            "title": "Cast Iron Care"
         }
     ],
     "searchKeys": [
+        "ingredients.Blender",
         "ingredients.Garnish Options",
         "recipe",
         "ingredients.Base",
@@ -1403,7 +1504,9 @@ var localDB = {
         "ingredients.Sauce",
         "ingredients.Peanut Noodles",
         "ingredients.ingredients",
+        "ingredients.Optional Garnish",
         "ingredients.Brown in Pan",
+        "ingredients.Curry",
         "ingredients.soup",
         "notes",
         "ingredients.FOR THE POACHED EGGS",
@@ -1413,7 +1516,7 @@ var localDB = {
         "ingredients.With"
     ],
     "toc": {
-        "brkfst": [
+        "breakfast": [
             "Breakfast Burrito",
             "Coffee",
             "Eggs Benedict",
@@ -1422,7 +1525,7 @@ var localDB = {
             "Pancakes",
             "Waffles"
         ],
-        "dssrt": [
+        "dessert": [
             "Biscotti",
             "Cake Pops",
             "Chocolate-Pb-M&M Balls",
@@ -1454,18 +1557,18 @@ var localDB = {
             "Fajitas",
             "Fish",
             "Gyros",
+            "Jambon Beurre",
             "Mini Pizza",
             "Naan Pizza",
             "Pizza",
             "Pretzels",
             "Sandwiches",
+            "Shrimp Creole",
             "Shrimp Tacos",
+            "Slow Cooker Chicken Mango Curry",
             "Slow Cooker Chicken Tortilla Soup",
             "Tomato Mozzarella Caprese",
             "Tuna Melts"
-        ],
-        "other": [
-            "Cast Iron Care"
         ],
         "sides": [
             "Baked Broccoli",
@@ -1474,6 +1577,9 @@ var localDB = {
             "Baked Zucchini",
             "Salad",
             "Sweet Potatoes"
+        ],
+        "tools": [
+            "Cast Iron Care"
         ]
     }
 }

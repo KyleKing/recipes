@@ -210,11 +210,63 @@ const registerIngredientClick = function() {
 
 
 /*
+>> WIP: Handle Scroll
+ */
+
+// Based on: https://stackoverflow.com/a/18660968/3219667
+function isLinkInternal( link ) {
+  var tmp = document.createElement( 'a' )
+  tmp.href = link
+  return tmp.host === window.location.host
+}
+
+// Return the full element height including margin
+// Docs: https://plainjs.com/javascript/styles/getting-width-and-height-of-an-element-23/
+const elHeight = function( el ) {
+  const style = window.getComputedStyle ? getComputedStyle( el, null ) : el.currentStyle
+  const marginTop = parseInt( style.marginTop ) || 0
+  const marginBottom = parseInt( style.marginBottom ) || 0
+  return el.offsetHeight + marginTop + marginBottom
+}
+
+// Wrapper for scroll with calculated offset for height of the search bar
+const scrollTo = function( el, nav = document.getElementById( 'search-input' ) ) {
+  const scrollPos = el.getBoundingClientRect().top
+  const navOffset = elHeight( nav ) + 5
+  window.scrollBy( 0, Math.round( scrollPos - navOffset ) )
+}
+
+// Override Anchor Linking from ToC
+const registerSmoothScroll = function() {
+  // TODO: trigger smooth scroll from completion of Crel HTML generation
+  // // Identify and scroll to the linked recipe
+  // const anchor = parseURL( window.location.href ).tag
+  // if ( anchor.length > 0 )
+  //   document.getElementById( anchor ).scrollIntoView( {behavior: 'smooth', block: 'start'} )
+
+  // Override internal HTML linking from <a> tags
+  $( 'a' ).on( 'click', ( event ) => {
+    // Only apply to internal links
+    // console.log( event.currentTarget )
+    if( isLinkInternal( event.currentTarget.href ) ) {
+      event.preventDefault()
+      const tag = event.currentTarget.hash.replace( '#', '' )  // or use <str>.slice(1);
+      scrollTo( document.getElementById( tag ) )
+
+      // const comps = parseURL( window.location.href )
+      // const finalUrl = comps.baseUrl + comps.ingBR + comps.ingredients.join( ',' ) +
+      //                  comps.tagBR + tag.replace( ' ', '_' )
+      // window.history.pushState( null, null, finalUrl )
+    }
+  } )
+}
+
+/*
 >> Handle Application Load and Events
  */
 
 
-// Add event detection for search
+// Add event detection of enter key when typing in search bar
 const nodeInputSearch = document.getElementById( 'search-input' )
 nodeInputSearch.addEventListener( 'keyup', ( event ) => {
   // Either load all recipes or apply search phrase from input
@@ -226,7 +278,9 @@ nodeInputSearch.addEventListener( 'keyup', ( event ) => {
   }
 } )
 
-document.addEventListener ( 'keydown', ( event ) => {
+// Use Meta + F to select input search bar
+document.addEventListener( 'keydown', ( event ) => {
+  // console.log( event.code )
   if ( event.metaKey && event.code === 'KeyF' ) {
     event.preventDefault()
     const input = document.getElementById( 'search-input' )
@@ -235,10 +289,20 @@ document.addEventListener ( 'keydown', ( event ) => {
   }
 } )
 
+// Update scroll progress bar on scroll
+window.addEventListener( 'scroll', () => {
+  const winheight = $( document ).height()
+  const wintop = $( document ).scrollTop()
+  const totalScroll = ( wintop / winheight ) * 100
+  // console.log( `total scroll: ${totalScroll} | winheight: ${winheight} | with wintop: ${wintop}` )
+  $( '.progressBar' ).css( 'width', totalScroll + '%' )
+} )
+
 
 // On ready, initialize application
 window.onload = function() {
   init()
   $( 'footer' ).removeClass( 'hide-while-loading' )
   registerIngredientClick()
+  registerSmoothScroll()
 }

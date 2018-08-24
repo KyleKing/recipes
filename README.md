@@ -17,73 +17,17 @@ Create interactive website for searching and making lists from user-specified so
 
 ## Development
 
-- ~~Generate content with Crel~~
-- ~~Highlight matches~~
-- ~~Add search input bar and search on enter~~
-- ~~Add all recipes by default~~
-- ~~Sort alphabetically and with headers~~
-- ~~Add table of contents using intermediary list with same index-mapping as localDB~~
-- ~~Refactor for OOP~~
 - ~~Revive (some) URL trickery~~
-    + ~~Smooth scroll to recipe~~
-    + ~~WONT FIX: smooth scroll to header~~
+    + ~~Scroll to recipe~~
     + Fix recipe linking on load
--  ~~Add Cody House navigation back~~
-- ~~Add styles for input (only fixed at top if actively searching)~~
-    + ~~Add x button to clear the input~~
-
 - Add `make` mode with recipe in horizontal orientation
     + Can rotation of screen be locked with HTML?
         * https://stackoverflow.com/questions/43634583/prevent-landscape-orientation-mobile-website
         * https://www.google.com/search?rlz=1CDGOYI_enUS633US633&hl=en-US&ei=Jo1sW464M6Ht5gKBtKmwDA&q=ios+safari+prevent+web+mobile+rotation&oq=ios+safari+prevent+web+mobile+rotation
     + Track check box progress in URL (and cross out steps)
     + Add 'alt-ratio' toggle switch for common alternate ratio (maybe custom input with suggested ratio?)
-
-- Add scroll indicator at bottom
-    + https://codepen.io/k33k00/pen/ByeyVB
-    ```html
-<div class="progressContainer">
-    <div class="progressBar"></div>
-</div>
-    ```
-    ```js
-$( document ).ready( () => {
-  $( document ).scroll( () => {
-    const winheight = $( document ).height(),
-      wintop = $( document ).scrollTop()
-    const totalScroll = ( wintop / winheight ) * 100
-    // console.log( `total scroll: ${totalScroll} | winheight: ${winheight} | with wintop: ${wintop}` )
-    $( '.progressBar' ).css( 'width', totalScroll + '%' )
-  } )
-} )
-    ```
-    ```css
-.progressContainer {
-  background-color: #ededed;
-  bottom: 0px;
-  content: "";
-  display: table;
-  height: 0.25em;
-  left: 230px;
-  margin-bottom: 0px;
-  overflow: hidden;
-  position: fixed;
-  table-layout: fixed;
-  width: 100%;
-}
-.progressBar {
-  float: left;
-  height: 100%;
-  max-width: 100%;
-  -webkit-transition: width 0.6s ease;
-  -o-transition: width 0.6s ease;
-  transition: width 0.6s ease;
-  width: 0%;
-  z-index: 99;
-}
-    ```
 - Why does tapping on top menu bar not scroll to top?
-    + ~~Maybe get rid of smooth scroll? {Yeah}~~
+    + Probably Cody House, try again on mobile
 - Lazy load images (which library?)
     + Guides
         * Medium: https://medium.freecodecamp.org/using-svg-as-placeholders-more-image-loading-techniques-bed1b810ab2c
