@@ -93,38 +93,6 @@ const init = function() {
 
 
 /*
->> Slide in Side Navigation inspired by CodyHouse article:
- */
-
-jQuery( document ).ready( ( $ ) => {
-  function toggleNav( bool ) {
-    $( '.cd-nav-container, .cd-overlay' ).toggleClass( 'is-visible', bool )
-    $( 'main' ).toggleClass( 'scale-down', bool )
-  }
-  // Open navigation clicking the menu icon
-  $( '.cd-nav-trigger' ).on( 'click', ( event ) => {
-    event.preventDefault()
-    toggleNav( true )
-  } )
-  // Close the navigation
-  $( '.cd-close-nav, .cd-overlay' ).on( 'click', ( event ) => {
-    event.preventDefault()
-    toggleNav( false )
-  } )
-  // Select a new section
-  $( '.cd-nav li' ).on( 'click', function() {
-    var target = $( this )
-    if ( !target.hasClass( 'cd-selected' ) ) {
-      // if user has selected a section different from the one already visible
-      // update the navigation -> assign the .cd-selected class to the selected item
-      target.addClass( 'cd-selected' ).siblings( '.cd-selected' ).removeClass( 'cd-selected' )
-    }
-    toggleNav( false )
-  } )
-} )
-
-
-/*
 >> Manipulate URL
  */
 
@@ -162,55 +130,55 @@ function parseURL( fullUrl ) {
   return( urlComps )
 }
 
-const registerIngredientClick = function() {
-  // Catch click event for ingredient
-  $( '.ingredient' ).on( 'click', ( event ) => {
-    // For debugging:
-    const fullUrl = window.location.href
-    console.log( 'Current url: ' + fullUrl )
-    // console.log(event)
-    // console.log(event.target.classList)
+// const registerIngredientClick = function() {
+//   // Catch click event for ingredient
+//   $( '.ingredient' ).on( 'click', ( event ) => {
+//     // For debugging:
+//     const fullUrl = window.location.href
+//     console.log( 'Current url: ' + fullUrl )
+//     // console.log(event)
+//     // console.log(event.target.classList)
 
-    // Either add or remove ingredient ID and set check box value appropriately
-    const comps = parseURL( fullUrl )
-    const ingID = $( event.target ).attr( 'id' )
-    if ( event.currentTarget.checked ) {
-      if ( comps.ingredients.length === 0 )
-        comps.ingredients = [ingID]
-      else
-        comps.ingredients.push( ingID )
+//     // Either add or remove ingredient ID and set check box value appropriately
+//     const comps = parseURL( fullUrl )
+//     const ingID = $( event.target ).attr( 'id' )
+//     if ( event.currentTarget.checked ) {
+//       if ( comps.ingredients.length === 0 )
+//         comps.ingredients = [ingID]
+//       else
+//         comps.ingredients.push( ingID )
 
-    } else {
-      // console.log('idx:');
-      // console.log(ingID);
-      // console.log(comps.ingredients);
-      // console.log(comps.ingredients.indexOf(ingID));
-      comps.ingredients.splice( comps.ingredients.indexOf( ingID ), 1 )
-    }
-    comps.ingredients.sort()
-    const finalUrl = comps.baseUrl + comps.ingBR + comps.ingredients.join( ',' ) +
-                     comps.tagBR + comps.tag
-    window.history.pushState( null, null, finalUrl )
-    console.log( 'Final url: ' + finalUrl + '\n' )
-  } )
+//     } else {
+//       // console.log('idx:');
+//       // console.log(ingID);
+//       // console.log(comps.ingredients);
+//       // console.log(comps.ingredients.indexOf(ingID));
+//       comps.ingredients.splice( comps.ingredients.indexOf( ingID ), 1 )
+//     }
+//     comps.ingredients.sort()
+//     const finalUrl = comps.baseUrl + comps.ingBR + comps.ingredients.join( ',' ) +
+//                      comps.tagBR + comps.tag
+//     window.history.pushState( null, null, finalUrl )
+//     console.log( 'Final url: ' + finalUrl + '\n' )
+//   } )
 
-  // TODO: Implement only for 'Make' mode:
-  // // Read ingredients state and update check boxes:
-  // const fullUrl = window.location.href
-  // const ingredients = parseURL( fullUrl ).ingredients
-  // for ( let idx = 0; idx < ingredients.length; idx++ ) {
-  //   const ingID  = ingredients[idx]
-  //   if ( fullUrl.search( 'file:/' ) ) {
-  //     console.log( 'Toggling? #' + ingID )
-  //     console.log( $( '#' + ingID ) )
-  //   }
-  //   $( '#' + ingID ).prop( 'checked', true )
-  // }
-}
+//   // TODO: Implement only for 'Make' mode:
+//   // // Read ingredients state and update check boxes:
+//   // const fullUrl = window.location.href
+//   // const ingredients = parseURL( fullUrl ).ingredients
+//   // for ( let idx = 0; idx < ingredients.length; idx++ ) {
+//   //   const ingID  = ingredients[idx]
+//   //   if ( fullUrl.search( 'file:/' ) ) {
+//   //     console.log( 'Toggling? #' + ingID )
+//   //     console.log( $( '#' + ingID ) )
+//   //   }
+//   //   $( '#' + ingID ).prop( 'checked', true )
+//   // }
+// }
 
 
 /*
->> WIP: Handle Scroll
+>> Handle Scroll Events
  */
 
 // Based on: https://stackoverflow.com/a/18660968/3219667
@@ -253,6 +221,7 @@ const registerSmoothScroll = function() {
       const tag = event.currentTarget.hash.replace( '#', '' )  // or use <str>.slice(1);
       scrollTo( document.getElementById( tag ) )
 
+      // TODO: Add recipe linking to URL
       // const comps = parseURL( window.location.href )
       // const finalUrl = comps.baseUrl + comps.ingBR + comps.ingredients.join( ',' ) +
       //                  comps.tagBR + tag.replace( ' ', '_' )
@@ -260,6 +229,16 @@ const registerSmoothScroll = function() {
     }
   } )
 }
+
+// Update scroll progress bar on scroll
+window.addEventListener( 'scroll', () => {
+  const winheight = $( document ).height()
+  const wintop = $( document ).scrollTop()
+  const totalScroll = ( wintop / winheight ) * 100
+  // console.log( `total scroll: ${totalScroll} | winheight: ${winheight} | with wintop: ${wintop}` )
+  $( '.progressBar' ).css( 'width', totalScroll + '%' )
+} )
+
 
 /*
 >> Handle Application Load and Events
@@ -274,6 +253,7 @@ nodeInputSearch.addEventListener( 'keyup', ( event ) => {
     if ( nodeInputSearch.value.length === 0 )
       init()
     else
+      // TODO: add search to URL?
       search( nodeInputSearch.value )
   }
 } )
@@ -289,20 +269,12 @@ document.addEventListener( 'keydown', ( event ) => {
   }
 } )
 
-// Update scroll progress bar on scroll
-window.addEventListener( 'scroll', () => {
-  const winheight = $( document ).height()
-  const wintop = $( document ).scrollTop()
-  const totalScroll = ( wintop / winheight ) * 100
-  // console.log( `total scroll: ${totalScroll} | winheight: ${winheight} | with wintop: ${wintop}` )
-  $( '.progressBar' ).css( 'width', totalScroll + '%' )
-} )
-
 
 // On ready, initialize application
 window.onload = function() {
   init()
   $( 'footer' ).removeClass( 'hide-while-loading' )
-  registerIngredientClick()
+  // TODO: Disabled for now - use in 'Make' mode
+  // registerIngredientClick()
   registerSmoothScroll()
 }
