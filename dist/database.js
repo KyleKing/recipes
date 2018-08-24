@@ -3,14 +3,16 @@ var localDB = {
         {
             "group": "brkfst",
             "id": "recipe-breakfast_burrito",
-            "imgSrc": "",
+            "imgSrc": "dist/imgs/brkfst-breakfast_burrito.jpg",
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
-                    "tortilla",
+                    "tortilla (large or small)",
                     "3 eggs",
-                    "sausage, saute",
-                    "spinach"
+                    "1/4 cup cheese",
+                    "1 sausage, sauted",
+                    "taco seasoning",
+                    "handful of spinach"
                 ]
             },
             "notes": [
@@ -19,8 +21,7 @@ var localDB = {
                 "Also, add pepper, garlic powder, basil, and/or oregano"
             ],
             "recipe": [
-                "On medium heat, cook the eggs, cumin, and pepper",
-                "In parallel, cook the tortilla in a large flat pan"
+                "On medium heat, cook the eggs the eggs and in a second pan, heat the tortillas"
             ],
             "source": "",
             "title": "Breakfast Burrito"
@@ -989,6 +990,28 @@ var localDB = {
         },
         {
             "group": "meals",
+            "id": "recipe-jambon_beurre",
+            "imgSrc": "dist/imgs/meals-jambon_beurre.png",
+            "ingredients": {
+                "ingredients": [
+                    "Ingredients",
+                    "baguette",
+                    "ham",
+                    "gruyere cheese",
+                    "butter"
+                ]
+            },
+            "notes": [
+                "The essential French ham sandwich"
+            ],
+            "recipe": [
+                "Don't skimp on the butter"
+            ],
+            "source": "https://www.youtube.com/watch?v=ge49xawecJk",
+            "title": "Jambon Beurre"
+        },
+        {
+            "group": "meals",
             "id": "recipe-mini_pizza",
             "imgSrc": "dist/imgs/meals-mini_pizza.jpg",
             "ingredients": {
@@ -1120,6 +1143,31 @@ var localDB = {
         },
         {
             "group": "meals",
+            "id": "recipe-shrimp_creole",
+            "imgSrc": "dist/imgs/meals-shrimp_creole.jpg",
+            "ingredients": {
+                "ingredients": [
+                    "Ingredients",
+                    "1 cup flour",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "notes": [],
+            "recipe": [
+                "Place sugar in sauce",
+                "",
+                "",
+                "",
+                ""
+            ],
+            "source": "",
+            "title": "Shrimp Creole"
+        },
+        {
+            "group": "meals",
             "id": "recipe-shrimp_tacos",
             "imgSrc": "",
             "ingredients": {
@@ -1141,6 +1189,48 @@ var localDB = {
             ],
             "source": "http://www.yummly.co/recipe/Honey-Lime-Shrimp-Tacos-1576139",
             "title": "Shrimp Tacos"
+        },
+        {
+            "group": "meals",
+            "id": "recipe-slow_cooker_chicken_mango_curry",
+            "imgSrc": "",
+            "ingredients": {
+                "Blender": [
+                    "Blender",
+                    "2 cups frozen mango chunks",
+                    "1 small onion, quartered",
+                    "4 cloves garlic",
+                    "2 tbsp brown sugar",
+                    "1 tsp rice vinegar",
+                    "1 tsp freshly grated ginger",
+                    "1 tsp red pepper flakes",
+                    "3 tbsp yellow curry paste",
+                    "1/2 cup chicken broth"
+                ],
+                "Curry": [
+                    "Curry",
+                    "1 can coconut milk",
+                    "1.5 lbs chicken breast, cubed",
+                    "1 red onion, sliced",
+                    "1/2 cup roasted cashews"
+                ],
+                "Optional Garnish": [
+                    "Optional Garnish",
+                    "cilantro",
+                    "red chili",
+                    "lime wedge"
+                ]
+            },
+            "notes": [],
+            "recipe": [
+                "In a blender, combine the above ingredients and blend until smooth",
+                "Transfer to the slow cooker and stir in the coconut milk, chicken, and red onion",
+                "Cook on low for 8 hours",
+                "Add the remaining mangoes and cover to thaw",
+                "Add the cashews and serve over rice with choice of garnish"
+            ],
+            "source": "http://www.oliviascuisine.com/slow-cooker-chicken-mango-curry/",
+            "title": "Slow Cooker Chicken Mango Curry"
         },
         {
             "group": "meals",
@@ -1218,35 +1308,6 @@ var localDB = {
             ],
             "source": "",
             "title": "Tuna Melts"
-        },
-        {
-            "group": "other",
-            "id": "recipe-cast_iron_care",
-            "imgSrc": "dist/imgs/other-cast_iron_care.jpg",
-            "ingredients": {
-                "ingredients": [
-                    "Ingredients",
-                    "canola or flaxseed oil",
-                    "salt"
-                ]
-            },
-            "notes": [
-                "Similar care for a Wok or Pizza stone"
-            ],
-            "recipe": [
-                "<b>Seasoning:</b>",
-                "Coat with a thin layer of oil",
-                "Bake at 450F for ~1 hour. This will create a hard glassy layer",
-                "<b>Regular Care:</b>",
-                "Clean while still warm and use hot water and a scrub brush (optionally use salt for extra abrasion), but avoid any soap",
-                "Towel dry, then heat to boil off any excess water",
-                "Put on a thin later of oil and heat until smoking to prevent the oil from turning rancid",
-                "<b>Notes on Use:</b>",
-                "Always pre-heat the skillet for room temperature food",
-                "Limit the amount of acidic foods to protect the seasoning"
-            ],
-            "source": "https://www.youtube.com/watch?v=KLGSLCaksdY",
-            "title": "Cast Iron Care"
         },
         {
             "group": "sides",
@@ -1384,9 +1445,39 @@ var localDB = {
             ],
             "source": "https://amindfullmom.com/instant-pot-baked-sweet-potatoes/",
             "title": "Sweet Potatoes"
+        },
+        {
+            "group": "tools",
+            "id": "recipe-cast_iron_care",
+            "imgSrc": "dist/imgs/tools-cast_iron_care.jpg",
+            "ingredients": {
+                "ingredients": [
+                    "Ingredients",
+                    "canola or flaxseed oil",
+                    "salt"
+                ]
+            },
+            "notes": [
+                "Similar care for a Wok or Pizza stone"
+            ],
+            "recipe": [
+                "<b>Seasoning:</b>",
+                "Coat with a thin layer of oil",
+                "Bake at 450F for ~1 hour. This will create a hard glassy layer",
+                "<b>Regular Care:</b>",
+                "Clean while still warm and use hot water and a scrub brush (optionally use salt for extra abrasion), but avoid any soap",
+                "Towel dry, then heat to boil off any excess water",
+                "Put on a thin later of oil and heat until smoking to prevent the oil from turning rancid",
+                "<b>Notes on Use:</b>",
+                "Always pre-heat the skillet for room temperature food",
+                "Limit the amount of acidic foods to protect the seasoning"
+            ],
+            "source": "https://www.youtube.com/watch?v=KLGSLCaksdY",
+            "title": "Cast Iron Care"
         }
     ],
     "searchKeys": [
+        "ingredients.Blender",
         "ingredients.Garnish Options",
         "recipe",
         "ingredients.Base",
@@ -1403,7 +1494,9 @@ var localDB = {
         "ingredients.Sauce",
         "ingredients.Peanut Noodles",
         "ingredients.ingredients",
+        "ingredients.Optional Garnish",
         "ingredients.Brown in Pan",
+        "ingredients.Curry",
         "ingredients.soup",
         "notes",
         "ingredients.FOR THE POACHED EGGS",
@@ -1454,18 +1547,18 @@ var localDB = {
             "Fajitas",
             "Fish",
             "Gyros",
+            "Jambon Beurre",
             "Mini Pizza",
             "Naan Pizza",
             "Pizza",
             "Pretzels",
             "Sandwiches",
+            "Shrimp Creole",
             "Shrimp Tacos",
+            "Slow Cooker Chicken Mango Curry",
             "Slow Cooker Chicken Tortilla Soup",
             "Tomato Mozzarella Caprese",
             "Tuna Melts"
-        ],
-        "other": [
-            "Cast Iron Care"
         ],
         "sides": [
             "Baked Broccoli",
@@ -1474,6 +1567,9 @@ var localDB = {
             "Baked Zucchini",
             "Salad",
             "Sweet Potatoes"
+        ],
+        "tools": [
+            "Cast Iron Care"
         ]
     }
 }
