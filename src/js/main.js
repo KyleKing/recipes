@@ -214,7 +214,7 @@ const registerIngredientClick = function() {
  */
 
 
-// Add event detection for search
+// Add event detection of enter key when typing in search bar
 const nodeInputSearch = document.getElementById( 'search-input' )
 nodeInputSearch.addEventListener( 'keyup', ( event ) => {
   // Either load all recipes or apply search phrase from input
@@ -226,7 +226,8 @@ nodeInputSearch.addEventListener( 'keyup', ( event ) => {
   }
 } )
 
-document.addEventListener ( 'keydown', ( event ) => {
+// Use Meta + F to select input search bar
+document.addEventListener( 'keydown', ( event ) => {
   if ( event.metaKey && event.code === 'KeyF' ) {
     event.preventDefault()
     const input = document.getElementById( 'search-input' )
@@ -235,10 +236,20 @@ document.addEventListener ( 'keydown', ( event ) => {
   }
 } )
 
+// Update scroll progress bar on scroll
+window.addEventListener( 'scroll', () => {
+  const winheight = $( document ).height()
+  const wintop = $( document ).scrollTop()
+  const totalScroll = ( wintop / winheight ) * 100
+  // console.log( `total scroll: ${totalScroll} | winheight: ${winheight} | with wintop: ${wintop}` )
+  $( '.progressBar' ).css( 'width', totalScroll + '%' )
+} )
+
 
 // On ready, initialize application
 window.onload = function() {
   init()
   $( 'footer' ).removeClass( 'hide-while-loading' )
   registerIngredientClick()
+  registerSmoothScroll()
 }
