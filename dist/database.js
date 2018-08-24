@@ -741,7 +741,7 @@ var localDB = {
                     "1 large can of water",
                     "12 oz tomato paste (2 cans",
                     "1 tbsp basil",
-                    "1 tbsp worcestershire sauce (recommend 2-3 tbsp)",
+                    "1 tbsp worcestershire sauce (they use a lot)",
                     "1 tsp salt",
                     "1/2 tsp pepper",
                     "1/2 tbsp tabasco sauce",
@@ -1148,12 +1148,30 @@ var localDB = {
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
-                    "todo"
+                    "2 (32 oz) can of tomato sauce",
+                    "1/4 lb butter",
+                    "3 onions",
+                    "3 stalks celery",
+                    "3 toes garlic",
+                    "1 (28-30 oz) can of tomatoes",
+                    "2 bay leaves",
+                    "1 tsp tobasco sauce",
+                    "1 tbsp fresh thyme",
+                    "1/2 bunch parsely, chopped",
+                    "2 lbs raw shrimp, peeled",
+                    "white rice",
+                    "pinch of saffron"
                 ]
             },
-            "notes": [],
+            "notes": [
+                "Alex's family recipe"
+            ],
             "recipe": [
-                "TODO"
+                "Reduce tomato sauce by 3/4 (bake uncovered in 350 oven - for an hour or two). Then replace evaporated water so sauce is at original volume (~24 oz / 3 cups water)",
+                "In butter, saute the onion, celery, and un-chopped garlic",
+                "Add tomatoes and spices (bay leaves, Tobasco, and thyme",
+                "Cook 1 hour at 350",
+                "Add parsely and shrimp. Cook 15 more minutes. Serve over white rice with a pinch of saffron"
             ],
             "source": "",
             "title": "Shrimp Creole"

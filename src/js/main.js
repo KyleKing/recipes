@@ -247,7 +247,7 @@ const registerSmoothScroll = function() {
   // Override internal HTML linking from <a> tags
   $( 'a' ).on( 'click', ( event ) => {
     // Only apply to internal links
-    console.log( event.currentTarget )
+    // console.log( event.currentTarget )
     if( isLinkInternal( event.currentTarget.href ) ) {
       event.preventDefault()
       const tag = event.currentTarget.hash.replace( '#', '' )  // or use <str>.slice(1);
