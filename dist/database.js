@@ -1,9 +1,9 @@
 var localDB = {
     "recipes": [
         {
-            "group": "brkfst",
+            "group": "breakfast",
             "id": "recipe-breakfast_burrito",
-            "imgSrc": "dist/imgs/brkfst-breakfast_burrito.jpg",
+            "imgSrc": "dist/imgs/breakfast-breakfast_burrito.jpg",
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
@@ -27,9 +27,9 @@ var localDB = {
             "title": "Breakfast Burrito"
         },
         {
-            "group": "brkfst",
+            "group": "breakfast",
             "id": "recipe-coffee",
-            "imgSrc": "dist/imgs/brkfst-coffee.jpg",
+            "imgSrc": "dist/imgs/breakfast-coffee.jpg",
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
@@ -48,9 +48,9 @@ var localDB = {
         },
         {
             "altRatio": "1/2",
-            "group": "brkfst",
+            "group": "breakfast",
             "id": "recipe-eggs_benedict",
-            "imgSrc": "dist/imgs/brkfst-eggs_benedict.jpg",
+            "imgSrc": "dist/imgs/breakfast-eggs_benedict.jpg",
             "ingredients": {
                 "FOR THE BENEDICT AND ASSEMBLY": [
                     "For The Benedict And Assembly",
@@ -99,7 +99,7 @@ var localDB = {
             "title": "Eggs Benedict"
         },
         {
-            "group": "brkfst",
+            "group": "breakfast",
             "id": "recipe-lemon_poppy_seed_mini_scones",
             "imgSrc": "",
             "ingredients": {
@@ -127,7 +127,7 @@ var localDB = {
             "title": "Lemon Poppy Seed Mini Scones"
         },
         {
-            "group": "brkfst",
+            "group": "breakfast",
             "id": "recipe-omelette",
             "imgSrc": "",
             "ingredients": {
@@ -150,9 +150,9 @@ var localDB = {
             "title": "Omelette"
         },
         {
-            "group": "brkfst",
+            "group": "breakfast",
             "id": "recipe-pancakes",
-            "imgSrc": "dist/imgs/brkfst-pancakes.jpg",
+            "imgSrc": "dist/imgs/breakfast-pancakes.jpg",
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
@@ -179,9 +179,9 @@ var localDB = {
             "title": "Pancakes"
         },
         {
-            "group": "brkfst",
+            "group": "breakfast",
             "id": "recipe-waffles",
-            "imgSrc": "dist/imgs/brkfst-waffles.jpg",
+            "imgSrc": "dist/imgs/breakfast-waffles.jpg",
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
@@ -208,9 +208,9 @@ var localDB = {
             "title": "Waffles"
         },
         {
-            "group": "dssrt",
+            "group": "dessert",
             "id": "recipe-biscotti",
-            "imgSrc": "dist/imgs/dssrt-biscotti.jpg",
+            "imgSrc": "dist/imgs/dessert-biscotti.jpg",
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
@@ -240,9 +240,9 @@ var localDB = {
             "title": "Biscotti"
         },
         {
-            "group": "dssrt",
+            "group": "dessert",
             "id": "recipe-cake_pops",
-            "imgSrc": "dist/imgs/dssrt-cake_pops.jpg",
+            "imgSrc": "dist/imgs/dessert-cake_pops.jpg",
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
@@ -263,7 +263,7 @@ var localDB = {
             "title": "Cake Pops"
         },
         {
-            "group": "dssrt",
+            "group": "dessert",
             "id": "recipe-chocolate-pb-m&m_balls",
             "imgSrc": "",
             "ingredients": {
@@ -287,9 +287,9 @@ var localDB = {
             "title": "Chocolate-Pb-M&M Balls"
         },
         {
-            "group": "dssrt",
+            "group": "dessert",
             "id": "recipe-hot_fudge_sauce",
-            "imgSrc": "dist/imgs/dssrt-hot_fudge_sauce.jpg",
+            "imgSrc": "dist/imgs/dessert-hot_fudge_sauce.jpg",
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
@@ -312,7 +312,7 @@ var localDB = {
             "title": "Hot Fudge Sauce"
         },
         {
-            "group": "dssrt",
+            "group": "dessert",
             "id": "recipe-molten_chocolate_cake",
             "imgSrc": "",
             "ingredients": {
@@ -338,9 +338,9 @@ var localDB = {
             "title": "Molten Chocolate Cake"
         },
         {
-            "group": "dssrt",
+            "group": "dessert",
             "id": "recipe-oatmeal_balls",
-            "imgSrc": "dist/imgs/dssrt-oatmeal_balls.jpg",
+            "imgSrc": "dist/imgs/dessert-oatmeal_balls.jpg",
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
@@ -362,9 +362,9 @@ var localDB = {
             "title": "Oatmeal Balls"
         },
         {
-            "group": "dssrt",
+            "group": "dessert",
             "id": "recipe-oreo_truffles",
-            "imgSrc": "dist/imgs/dssrt-oreo_truffles.jpg",
+            "imgSrc": "dist/imgs/dessert-oreo_truffles.jpg",
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
@@ -385,9 +385,9 @@ var localDB = {
             "title": "Oreo Truffles"
         },
         {
-            "group": "dssrt",
+            "group": "dessert",
             "id": "recipe-pb_and_cocoa_smothie",
-            "imgSrc": "dist/imgs/dssrt-pb_and_cocoa_smothie.jpg",
+            "imgSrc": "dist/imgs/dessert-pb_and_cocoa_smothie.jpg",
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
@@ -1148,20 +1148,12 @@ var localDB = {
             "ingredients": {
                 "ingredients": [
                     "Ingredients",
-                    "1 cup flour",
-                    "",
-                    "",
-                    "",
-                    ""
+                    "todo"
                 ]
             },
             "notes": [],
             "recipe": [
-                "Place sugar in sauce",
-                "",
-                "",
-                "",
-                ""
+                "TODO"
             ],
             "source": "",
             "title": "Shrimp Creole"
@@ -1506,7 +1498,7 @@ var localDB = {
         "ingredients.With"
     ],
     "toc": {
-        "brkfst": [
+        "breakfast": [
             "Breakfast Burrito",
             "Coffee",
             "Eggs Benedict",
@@ -1515,7 +1507,7 @@ var localDB = {
             "Pancakes",
             "Waffles"
         ],
-        "dssrt": [
+        "dessert": [
             "Biscotti",
             "Cake Pops",
             "Chocolate-Pb-M&M Balls",
