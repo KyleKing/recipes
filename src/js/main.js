@@ -33,8 +33,6 @@ const addToC = function( contentDivID ) {
       crel( 'ul', titles )
     ) ) )
   }
-  // Add last link to Footer
-  crel( trgt, crel( 'ul', crel( 'li', crel( 'a', {'href': '#footer'}, 'Footer' ) ) ) )
 }
 
 
@@ -181,6 +179,8 @@ function parseURL( fullUrl ) {
 >> Handle Scroll Events
  */
 
+
+
 // Based on: https://stackoverflow.com/a/18660968/3219667
 function isLinkInternal( link ) {
   var tmp = document.createElement( 'a' )
@@ -247,21 +247,19 @@ window.addEventListener( 'scroll', () => {
 
 // Add event detection of enter key when typing in search bar
 const nodeInputSearch = document.getElementById( 'search-input' )
-nodeInputSearch.addEventListener( 'keyup', ( event ) => {
+nodeInputSearch.addEventListener( 'keyup', ( ) => {
   // Either load all recipes or apply search phrase from input
-  if ( event.key === 'Enter' ) {
-    if ( nodeInputSearch.value.length === 0 )
-      init()
-    else
-      // TODO: add search to URL?
-      search( nodeInputSearch.value )
-  }
+  if ( nodeInputSearch.value.length === 0 )
+    init()
+  else
+    // TODO: add search to URL?
+    search( nodeInputSearch.value )
 } )
 
 // Use Meta + F to select input search bar
 document.addEventListener( 'keydown', ( event ) => {
   // console.log( event.code )
-  if ( event.metaKey && event.code === 'KeyF' ) {
+  if ( ( event.metaKey || event.ctrlKey ) && event.code === 'KeyF' ) {
     event.preventDefault()
     const input = document.getElementById( 'search-input' )
     input.focus()

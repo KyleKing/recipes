@@ -75,7 +75,8 @@ footer {
 }
 
 #search-input {
-    margin: 20px 0 5px 0;
+    /*margin: 20px 0 5px 0;*/
+    display: inline-block;
     width: 90%;
 }
 @media only screen and (max-width: 1024px) {
@@ -91,7 +92,7 @@ footer {
     bottom: 0;
     content: '';
     display: table;
-    height: 0.25em;
+    height: 0.5em;
     margin-bottom: 0;
     overflow: hidden;
     position: fixed;
@@ -102,10 +103,29 @@ footer {
     float: left;
     height: 100%;
     max-width: 100%;
-    -webkit-transition: width 0.6s ease;
-         -o-transition: width 0.6s ease;
-            transition: width 0.6s ease;
+    -webkit-transition: width 0.1s ease;
+         -o-transition: width 0.1s ease;
+            transition: width 0.1s ease;
     width: 0;
     z-index: 99;
     background-color: #394A81;
+}
+
+
+/* Add styling for scroll-to-top button */
+
+#scroll-to-top {
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    /*margin-left: 5%;*/
+    float: right;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    background: rgba(232, 98, 86, 0.8) url(../top-arrow.svg) no-repeat center 50%;
+}
+
+#scroll-to-top:hover {
+    background-color: #E86256;
+    opacity: 1;
 }
