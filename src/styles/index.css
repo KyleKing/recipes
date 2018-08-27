@@ -84,6 +84,15 @@ footer {
         width: 80%;
     }
 }
+/* Prevent iOS zoom on input
+    src: https://stackoverflow.com/a/16255670/3219667 */
+/*@media screen and (-webkit-min-device-pixel-ratio:0) {*/
+@supports (-webkit-overflow-scrolling: touch) {
+    select,textarea,input {
+        font-size: 16px;
+        background: #EEEEEE;
+    }
+}
 
 /* Scroll Indicator */
 
