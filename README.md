@@ -17,28 +17,19 @@ Create interactive website for searching and making lists from user-specified so
 
 ## Development
 
-- ~~Revive (some) URL trickery~~
-    + ~~Scroll to recipe~~
-    + Fix recipe linking on load
 - Add `make` mode with recipe in horizontal orientation
+    + Fix recipe linking on load
     + Can rotation of screen be locked with HTML?
         * https://stackoverflow.com/questions/43634583/prevent-landscape-orientation-mobile-website
         * https://www.google.com/search?rlz=1CDGOYI_enUS633US633&hl=en-US&ei=Jo1sW464M6Ht5gKBtKmwDA&q=ios+safari+prevent+web+mobile+rotation&oq=ios+safari+prevent+web+mobile+rotation
     + Track check box progress in URL (and cross out steps)
     + Add 'alt-ratio' toggle switch for common alternate ratio (maybe custom input with suggested ratio?)
-- Why does tapping on top menu bar not scroll to top?
-    + Probably Cody House, try again on mobile
-- Lazy load images (which library?)
-    + Guides
-        * Medium: https://medium.freecodecamp.org/using-svg-as-placeholders-more-image-loading-techniques-bed1b810ab2c
-        * Trivago Engineer: https://matthias-endler.de/2017/image-previews/
-        * Demo of simple, artistic outlines: https://codepen.io/ainalem/details/aLKxjm
-    + Libraries
-        * *SQIP* (SVG-based LQIP): https://github.com/technopagan/sqip
-        * geometrize: https://www.geometrize.co.uk/
-        * primitive.nextgen: https://github.com/cielito-lindo-productions/primitive.nextgen
-        * justlazy: http://fhopeman.github.io/justlazy/#demo
-        * beLazy: http://dinbror.dk/blazy/
+
+## Dev-Lower Priority
+
+- Add highlight for matches to 'group' (i.e. 'Brkfst') [Maybe insert highlighted text before recipe title?]
+- Move to raw React to replace Crel
+    - Look into React image lazy loaders: https://github.com/bluebill1049/react-simple-img
 - Add flex-grid
     + Wrap TOC
     + Wrap Image, Ingredients, Recipe?
@@ -47,10 +38,6 @@ Create interactive website for searching and making lists from user-specified so
     + Try out different font face
     + Replace Skeleton?
         * Fix conflict of Skeleton with check boxes
-
-## Dev-Lower Priority
-
-- Add highlight for matches to 'group' (i.e. 'Brkfst') [Maybe insert highlighted text before recipe title?]
 
 ## Workflow
 

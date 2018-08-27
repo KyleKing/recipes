@@ -6,8 +6,9 @@
     "$": true,
     "Fuse": true,
     "crel": true,
+    "jQuery": true,
     "localDB": true,
-    "jQuery": true
+    "LazyLoad": true
   },
   "parserOptions": {
     "ecmaFeatures": {},

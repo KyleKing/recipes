@@ -4,8 +4,8 @@ import glob
 import json
 import logging
 import os
+import re
 import shutil
-
 
 debug = True
 rmDist = False
@@ -182,7 +182,17 @@ class SiteCompiler(object):
             self.toc[subdir] = []
         self.toc[subdir].append(recipe['title'])
         # Adds link to minified image
-        recipe['imgSrc'] = self.imgs[recipe_title] if recipe_title in self.imgs else ''
+        if recipe_title in self.imgs:
+            recipe['imgSrc'] = self.imgs[recipe_title]
+            output = re.sub(ur'\/([^\.\/]+)\..{3,4}', r'/placeholder-\1.svg', self.imgs[recipe_title])
+            recipe['imgPlaceholder'] = output
+            if not os.path.isfile(output):
+                sqipCLI = '/Users/kyleking/.nvm/versions/node/v7.8.0/bin/sqip'
+                logger.info('Creating placeholder image: {}'.format(output))
+                os.system('{} -o {} {}'.format(sqipCLI, output, recipe['imgSrc']))
+        else:
+            recipe['imgSrc'] = ''
+            recipe['imgPlaceholder'] = ''
         # Standardizes ingredients (accepts either object of arrays or simply array)
         if type(recipe['ingredients']) is list:
             recipe['ingredients'] = {'ingredients': recipe['ingredients']}

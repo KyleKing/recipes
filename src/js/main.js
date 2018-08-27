@@ -87,6 +87,8 @@ const search = function( searchPhrase ) {
 // Initialize application
 const init = function() {
   updateRecipes( localDB.recipes )
+  // Update lazy loading after DOM creation
+  myLazyLoad.update()
 }
 
 
@@ -267,6 +269,10 @@ document.addEventListener( 'keydown', ( event ) => {
   }
 } )
 
+// Initialize the Lazy Image Loader
+var myLazyLoad = new LazyLoad( {
+  'elements_selector': '.lazy',
+} )
 
 // On ready, initialize application
 window.onload = function() {

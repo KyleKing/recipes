@@ -78,7 +78,10 @@ export default class {
       ),
       crel( 'div', {'class': 'row'},
         // Add the reference image
-        crel( 'img', {'alt': rcp.id, 'class': 'five columns', 'src': rcp.imgSrc} ),
+        crel( 'img', {
+          'alt': rcp.id, 'class': 'five columns lazy',
+          'data-src': rcp.imgSrc, 'src': rcp.imgPlaceholder,
+        } ),
         // Add ingredients and recipe
         crel( 'div', {'class': 'seven columns', 'id': rcp.id},
           this.constCreateListGroup( rcp, matchLookup ),

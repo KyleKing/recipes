@@ -3,6 +3,7 @@ var localDB = {
         {
             "group": "breakfast",
             "id": "recipe-breakfast_burrito",
+            "imgPlaceholder": "dist/imgs/placeholder-breakfast-breakfast_burrito.svg",
             "imgSrc": "dist/imgs/breakfast-breakfast_burrito.jpg",
             "ingredients": {
                 "ingredients": [
@@ -29,6 +30,7 @@ var localDB = {
         {
             "group": "breakfast",
             "id": "recipe-coffee",
+            "imgPlaceholder": "dist/imgs/placeholder-breakfast-coffee.svg",
             "imgSrc": "dist/imgs/breakfast-coffee.jpg",
             "ingredients": {
                 "ingredients": [
@@ -50,6 +52,7 @@ var localDB = {
             "altRatio": "1/2",
             "group": "breakfast",
             "id": "recipe-eggs_benedict",
+            "imgPlaceholder": "dist/imgs/placeholder-breakfast-eggs_benedict.svg",
             "imgSrc": "dist/imgs/breakfast-eggs_benedict.jpg",
             "ingredients": {
                 "FOR THE BENEDICT AND ASSEMBLY": [
@@ -101,6 +104,7 @@ var localDB = {
         {
             "group": "breakfast",
             "id": "recipe-lemon_poppy_seed_mini_scones",
+            "imgPlaceholder": "",
             "imgSrc": "",
             "ingredients": {
                 "ingredients": [
@@ -129,6 +133,7 @@ var localDB = {
         {
             "group": "breakfast",
             "id": "recipe-omelette",
+            "imgPlaceholder": "",
             "imgSrc": "",
             "ingredients": {
                 "ingredients": [
@@ -152,6 +157,7 @@ var localDB = {
         {
             "group": "breakfast",
             "id": "recipe-pancakes",
+            "imgPlaceholder": "dist/imgs/placeholder-breakfast-pancakes.svg",
             "imgSrc": "dist/imgs/breakfast-pancakes.jpg",
             "ingredients": {
                 "ingredients": [
@@ -181,6 +187,7 @@ var localDB = {
         {
             "group": "breakfast",
             "id": "recipe-waffles",
+            "imgPlaceholder": "dist/imgs/placeholder-breakfast-waffles.svg",
             "imgSrc": "dist/imgs/breakfast-waffles.jpg",
             "ingredients": {
                 "ingredients": [
@@ -210,6 +217,7 @@ var localDB = {
         {
             "group": "dessert",
             "id": "recipe-biscotti",
+            "imgPlaceholder": "dist/imgs/placeholder-dessert-biscotti.svg",
             "imgSrc": "dist/imgs/dessert-biscotti.jpg",
             "ingredients": {
                 "ingredients": [
@@ -242,6 +250,7 @@ var localDB = {
         {
             "group": "dessert",
             "id": "recipe-cake_pops",
+            "imgPlaceholder": "dist/imgs/placeholder-dessert-cake_pops.svg",
             "imgSrc": "dist/imgs/dessert-cake_pops.jpg",
             "ingredients": {
                 "ingredients": [
@@ -265,6 +274,7 @@ var localDB = {
         {
             "group": "dessert",
             "id": "recipe-chocolate-pb-m&m_balls",
+            "imgPlaceholder": "",
             "imgSrc": "",
             "ingredients": {
                 "ingredients": [
@@ -289,6 +299,7 @@ var localDB = {
         {
             "group": "dessert",
             "id": "recipe-hot_fudge_sauce",
+            "imgPlaceholder": "dist/imgs/placeholder-dessert-hot_fudge_sauce.svg",
             "imgSrc": "dist/imgs/dessert-hot_fudge_sauce.jpg",
             "ingredients": {
                 "ingredients": [
@@ -314,6 +325,7 @@ var localDB = {
         {
             "group": "dessert",
             "id": "recipe-molten_chocolate_cake",
+            "imgPlaceholder": "",
             "imgSrc": "",
             "ingredients": {
                 "ingredients": [
@@ -340,6 +352,7 @@ var localDB = {
         {
             "group": "dessert",
             "id": "recipe-oatmeal_balls",
+            "imgPlaceholder": "dist/imgs/placeholder-dessert-oatmeal_balls.svg",
             "imgSrc": "dist/imgs/dessert-oatmeal_balls.jpg",
             "ingredients": {
                 "ingredients": [
@@ -364,6 +377,7 @@ var localDB = {
         {
             "group": "dessert",
             "id": "recipe-oreo_truffles",
+            "imgPlaceholder": "dist/imgs/placeholder-dessert-oreo_truffles.svg",
             "imgSrc": "dist/imgs/dessert-oreo_truffles.jpg",
             "ingredients": {
                 "ingredients": [
@@ -387,6 +401,7 @@ var localDB = {
         {
             "group": "dessert",
             "id": "recipe-pb_and_cocoa_smothie",
+            "imgPlaceholder": "dist/imgs/placeholder-dessert-pb_and_cocoa_smothie.svg",
             "imgSrc": "dist/imgs/dessert-pb_and_cocoa_smothie.jpg",
             "ingredients": {
                 "ingredients": [
@@ -408,6 +423,7 @@ var localDB = {
         {
             "group": "grains",
             "id": "recipe-curried_chickpeas",
+            "imgPlaceholder": "dist/imgs/placeholder-grains-curried_chickpeas.svg",
             "imgSrc": "dist/imgs/grains-curried_chickpeas.jpg",
             "ingredients": {
                 "ingredients": [
@@ -436,6 +452,7 @@ var localDB = {
         {
             "group": "grains",
             "id": "recipe-dragon_noodles",
+            "imgPlaceholder": "dist/imgs/placeholder-grains-dragon_noodles.svg",
             "imgSrc": "dist/imgs/grains-dragon_noodles.jpg",
             "ingredients": {
                 "ingredients": [
@@ -466,6 +483,7 @@ var localDB = {
         {
             "group": "grains",
             "id": "recipe-fried_rice",
+            "imgPlaceholder": "dist/imgs/placeholder-grains-fried_rice.svg",
             "imgSrc": "dist/imgs/grains-fried_rice.jpg",
             "ingredients": {
                 "Combine": [
@@ -496,6 +514,7 @@ var localDB = {
         {
             "group": "grains",
             "id": "recipe-mozzarella_pasta",
+            "imgPlaceholder": "dist/imgs/placeholder-grains-mozzarella_pasta.svg",
             "imgSrc": "dist/imgs/grains-mozzarella_pasta.jpg",
             "ingredients": {
                 "ingredients": [
@@ -522,6 +541,7 @@ var localDB = {
         {
             "group": "grains",
             "id": "recipe-orzon_and_cheese",
+            "imgPlaceholder": "dist/imgs/placeholder-grains-orzon_and_cheese.svg",
             "imgSrc": "dist/imgs/grains-orzon_and_cheese.jpg",
             "ingredients": {
                 "ingredients": [
@@ -545,6 +565,7 @@ var localDB = {
         {
             "group": "grains",
             "id": "recipe-peanut_noodles",
+            "imgPlaceholder": "dist/imgs/placeholder-grains-peanut_noodles.svg",
             "imgSrc": "dist/imgs/grains-peanut_noodles.jpg",
             "ingredients": {
                 "Garnish Options": [
@@ -584,6 +605,7 @@ var localDB = {
         {
             "group": "grains",
             "id": "recipe-quinoa_and_stuff",
+            "imgPlaceholder": "dist/imgs/placeholder-grains-quinoa_and_stuff.svg",
             "imgSrc": "dist/imgs/grains-quinoa_and_stuff.png",
             "ingredients": {
                 "ingredients": [
@@ -603,6 +625,7 @@ var localDB = {
         {
             "group": "grains",
             "id": "recipe-red_beans_and_rice",
+            "imgPlaceholder": "",
             "imgSrc": "",
             "ingredients": {
                 "Base": [
@@ -638,6 +661,7 @@ var localDB = {
         {
             "group": "grains",
             "id": "recipe-sausage_and_mushroom_penne_pasta",
+            "imgPlaceholder": "dist/imgs/placeholder-grains-sausage_and_mushroom_penne_pasta.svg",
             "imgSrc": "dist/imgs/grains-sausage_and_mushroom_penne_pasta.jpg",
             "ingredients": {
                 "ingredients": [
@@ -669,6 +693,7 @@ var localDB = {
         {
             "group": "grains",
             "id": "recipe-sesame_noodles_with_wilted_greens",
+            "imgPlaceholder": "dist/imgs/placeholder-grains-sesame_noodles_with_wilted_greens.svg",
             "imgSrc": "dist/imgs/grains-sesame_noodles_with_wilted_greens.jpg",
             "ingredients": {
                 "ingredients": [
@@ -699,6 +724,7 @@ var localDB = {
         {
             "group": "grains",
             "id": "recipe-spaghetti_cacio_e_cepe",
+            "imgPlaceholder": "dist/imgs/placeholder-grains-spaghetti_cacio_e_cepe.svg",
             "imgSrc": "dist/imgs/grains-spaghetti_cacio_e_cepe.jpg",
             "ingredients": {
                 "ingredients": [
@@ -729,6 +755,7 @@ var localDB = {
             "altRatio": "1/3",
             "group": "grains",
             "id": "recipe-spaghetti_sauce",
+            "imgPlaceholder": "dist/imgs/placeholder-grains-spaghetti_sauce.svg",
             "imgSrc": "dist/imgs/grains-spaghetti_sauce.jpg",
             "ingredients": {
                 "Brown in Pan": [
@@ -771,6 +798,7 @@ var localDB = {
         {
             "group": "meals",
             "id": "recipe-basic_chicken",
+            "imgPlaceholder": "",
             "imgSrc": "",
             "ingredients": {
                 "Seasoning Combinations": [
@@ -798,6 +826,7 @@ var localDB = {
         {
             "group": "meals",
             "id": "recipe-brick_chicken",
+            "imgPlaceholder": "dist/imgs/placeholder-meals-brick_chicken.svg",
             "imgSrc": "dist/imgs/meals-brick_chicken.png",
             "ingredients": {
                 "ingredients": [
@@ -828,6 +857,7 @@ var localDB = {
         {
             "group": "meals",
             "id": "recipe-chicken_cacciatore",
+            "imgPlaceholder": "dist/imgs/placeholder-meals-chicken_cacciatore.svg",
             "imgSrc": "dist/imgs/meals-chicken_cacciatore.jpg",
             "ingredients": {
                 "ingredients": [
@@ -863,6 +893,7 @@ var localDB = {
         {
             "group": "meals",
             "id": "recipe-enchiladas",
+            "imgPlaceholder": "dist/imgs/placeholder-meals-enchiladas.svg",
             "imgSrc": "dist/imgs/meals-enchiladas.png",
             "ingredients": {
                 "ingredients": [
@@ -890,6 +921,7 @@ var localDB = {
         {
             "group": "meals",
             "id": "recipe-fajitas",
+            "imgPlaceholder": "dist/imgs/placeholder-meals-fajitas.svg",
             "imgSrc": "dist/imgs/meals-fajitas.jpg",
             "ingredients": {
                 "Main": [
@@ -931,6 +963,7 @@ var localDB = {
         {
             "group": "meals",
             "id": "recipe-fish",
+            "imgPlaceholder": "dist/imgs/placeholder-meals-fish.svg",
             "imgSrc": "dist/imgs/meals-fish.jpg",
             "ingredients": {
                 "ingredients": [
@@ -955,6 +988,7 @@ var localDB = {
         {
             "group": "meals",
             "id": "recipe-gyros",
+            "imgPlaceholder": "dist/imgs/placeholder-meals-gyros.svg",
             "imgSrc": "dist/imgs/meals-gyros.jpg",
             "ingredients": {
                 "Chicken": [
@@ -991,6 +1025,7 @@ var localDB = {
         {
             "group": "meals",
             "id": "recipe-jambon_beurre",
+            "imgPlaceholder": "dist/imgs/placeholder-meals-jambon_beurre.svg",
             "imgSrc": "dist/imgs/meals-jambon_beurre.png",
             "ingredients": {
                 "ingredients": [
@@ -1013,6 +1048,7 @@ var localDB = {
         {
             "group": "meals",
             "id": "recipe-mini_pizza",
+            "imgPlaceholder": "dist/imgs/placeholder-meals-mini_pizza.svg",
             "imgSrc": "dist/imgs/meals-mini_pizza.jpg",
             "ingredients": {
                 "ingredients": [
@@ -1037,6 +1073,7 @@ var localDB = {
             "altRatio": "2",
             "group": "meals",
             "id": "recipe-naan_pizza",
+            "imgPlaceholder": "dist/imgs/placeholder-meals-naan_pizza.svg",
             "imgSrc": "dist/imgs/meals-naan_pizza.jpg",
             "ingredients": {
                 "ingredients": [
@@ -1066,6 +1103,7 @@ var localDB = {
         {
             "group": "meals",
             "id": "recipe-pizza",
+            "imgPlaceholder": "dist/imgs/placeholder-meals-pizza.svg",
             "imgSrc": "dist/imgs/meals-pizza.jpg",
             "ingredients": {
                 "ingredients": [
@@ -1095,6 +1133,7 @@ var localDB = {
         {
             "group": "meals",
             "id": "recipe-pretzels",
+            "imgPlaceholder": "",
             "imgSrc": "",
             "ingredients": {
                 "ingredients": [
@@ -1127,6 +1166,7 @@ var localDB = {
         {
             "group": "meals",
             "id": "recipe-sandwiches",
+            "imgPlaceholder": "dist/imgs/placeholder-meals-sandwiches.svg",
             "imgSrc": "dist/imgs/meals-sandwiches.jpg",
             "ingredients": {
                 "ingredients": [
@@ -1144,6 +1184,7 @@ var localDB = {
         {
             "group": "meals",
             "id": "recipe-shrimp_creole",
+            "imgPlaceholder": "dist/imgs/placeholder-meals-shrimp_creole.svg",
             "imgSrc": "dist/imgs/meals-shrimp_creole.jpg",
             "ingredients": {
                 "ingredients": [
@@ -1179,6 +1220,7 @@ var localDB = {
         {
             "group": "meals",
             "id": "recipe-shrimp_tacos",
+            "imgPlaceholder": "",
             "imgSrc": "",
             "ingredients": {
                 "ingredients": [
@@ -1203,6 +1245,7 @@ var localDB = {
         {
             "group": "meals",
             "id": "recipe-slow_cooker_chicken_mango_curry",
+            "imgPlaceholder": "",
             "imgSrc": "",
             "ingredients": {
                 "Blender": [
@@ -1245,7 +1288,8 @@ var localDB = {
         {
             "group": "meals",
             "id": "recipe-slow_cooker_chicken_tortilla_soup",
-            "imgSrc": "",
+            "imgPlaceholder": "dist/imgs/placeholder-meals-slow_cooker_chicken_tortilla_soup.svg",
+            "imgSrc": "dist/imgs/meals-slow_cooker_chicken_tortilla_soup.jpg",
             "ingredients": {
                 "Toppings": [
                     "Toppings",
@@ -1254,9 +1298,9 @@ var localDB = {
                 ],
                 "soup": [
                     "Soup",
-                    "4 chicken breast, halved",
-                    "2 cans of black beans (30 oz), drained",
-                    "2 cans of rotel (mexican stewed) tomatoes (30 oz)",
+                    "2 large chicken breast, halved",
+                    "2 cans of black beans (30 oz)",
+                    "3 cans of original rotel diced tomatoes and green chilies (30 oz)",
                     "1 cup salsa",
                     "4 oz green chilies, chopped",
                     "14.5 oz can tomato sauce"
@@ -1266,7 +1310,7 @@ var localDB = {
                 "(Source: Becky Harder - Monument, CO)"
             ],
             "recipe": [
-                "Combine all soup ingredients in large slow cooker, then cover and cook on low for 8 hours",
+                "Halve the chicken breasts, then combine all the ingredients (undrained) into a crock pot (*makes exactly 3 Qt). Cover and cook on low for 8 hours",
                 "Just before serving, slice the chicken breasts into bite size pieces and return to soup"
             ],
             "source": "",
@@ -1275,6 +1319,7 @@ var localDB = {
         {
             "group": "meals",
             "id": "recipe-tomato_mozzarella_caprese",
+            "imgPlaceholder": "dist/imgs/placeholder-meals-tomato_mozzarella_caprese.svg",
             "imgSrc": "dist/imgs/meals-tomato_mozzarella_caprese.jpg",
             "ingredients": {
                 "ingredients": [
@@ -1299,6 +1344,7 @@ var localDB = {
         {
             "group": "meals",
             "id": "recipe-tuna_melts",
+            "imgPlaceholder": "dist/imgs/placeholder-meals-tuna_melts.svg",
             "imgSrc": "dist/imgs/meals-tuna_melts.jpg",
             "ingredients": {
                 "ingredients": [
@@ -1322,6 +1368,7 @@ var localDB = {
         {
             "group": "sides",
             "id": "recipe-baked_broccoli",
+            "imgPlaceholder": "dist/imgs/placeholder-sides-baked_broccoli.svg",
             "imgSrc": "dist/imgs/sides-baked_broccoli.jpg",
             "ingredients": {
                 "ingredients": [
@@ -1345,6 +1392,7 @@ var localDB = {
         {
             "group": "sides",
             "id": "recipe-baked_potatoes",
+            "imgPlaceholder": "dist/imgs/placeholder-sides-baked_potatoes.svg",
             "imgSrc": "dist/imgs/sides-baked_potatoes.jpg",
             "ingredients": {
                 "ingredients": [
@@ -1368,6 +1416,7 @@ var localDB = {
         {
             "group": "sides",
             "id": "recipe-baked_potatoes_instant_pot",
+            "imgPlaceholder": "",
             "imgSrc": "",
             "ingredients": {
                 "ingredients": [
@@ -1391,6 +1440,7 @@ var localDB = {
         {
             "group": "sides",
             "id": "recipe-baked_zucchini",
+            "imgPlaceholder": "dist/imgs/placeholder-sides-baked_zucchini.svg",
             "imgSrc": "dist/imgs/sides-baked_zucchini.jpg",
             "ingredients": {
                 "ingredients": [
@@ -1420,6 +1470,7 @@ var localDB = {
         {
             "group": "sides",
             "id": "recipe-salad",
+            "imgPlaceholder": "dist/imgs/placeholder-sides-salad.svg",
             "imgSrc": "dist/imgs/sides-salad.jpg",
             "ingredients": {
                 "ingredients": [
@@ -1440,6 +1491,7 @@ var localDB = {
         {
             "group": "sides",
             "id": "recipe-sweet_potatoes",
+            "imgPlaceholder": "",
             "imgSrc": "",
             "ingredients": {
                 "ingredients": [
@@ -1459,6 +1511,7 @@ var localDB = {
         {
             "group": "tools",
             "id": "recipe-cast_iron_care",
+            "imgPlaceholder": "dist/imgs/placeholder-tools-cast_iron_care.svg",
             "imgSrc": "dist/imgs/tools-cast_iron_care.jpg",
             "ingredients": {
                 "ingredients": [
