@@ -188,7 +188,7 @@ class SiteCompiler(object):
             recipe['imgPlaceholder'] = output
             if not os.path.isfile(output):
                 sqipCLI = '/Users/kyleking/.nvm/versions/node/v7.8.0/bin/sqip'
-                logger.info('Creating placeholder image: {}'.format(output))
+                lgr('Creating placeholder image: {}'.format(output))
                 os.system('{} -o {} {}'.format(sqipCLI, output, recipe['imgSrc']))
         else:
             recipe['imgSrc'] = ''

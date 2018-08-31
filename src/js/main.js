@@ -2,6 +2,11 @@
 
 import Recipe from './Recipe.js'
 
+// Initialize the Lazy Image Loader
+var myLazyLoad = new LazyLoad( {
+  'elements_selector': '.lazy',
+} )
+
 /*
 >> Create Table of Contents, Headers, and Recipes
  */
@@ -87,8 +92,6 @@ const search = function( searchPhrase ) {
 // Initialize application
 const init = function() {
   updateRecipes( localDB.recipes )
-  // Update lazy loading after DOM creation
-  myLazyLoad.update()
 }
 
 
@@ -256,6 +259,8 @@ nodeInputSearch.addEventListener( 'keyup', ( ) => {
   else
     // TODO: add search to URL?
     search( nodeInputSearch.value )
+  // Update lazy loading after DOM changes
+  myLazyLoad.update()
 } )
 
 // Use Meta + F to select input search bar
@@ -269,11 +274,6 @@ document.addEventListener( 'keydown', ( event ) => {
   }
 } )
 
-// Initialize the Lazy Image Loader
-var myLazyLoad = new LazyLoad( {
-  'elements_selector': '.lazy',
-} )
-
 // On ready, initialize application
 window.onload = function() {
   init()
@@ -281,4 +281,6 @@ window.onload = function() {
   // TODO: Disabled for now - use in 'Make' mode
   // registerIngredientClick()
   registerSmoothScroll()
+  // Update lazy loading after DOM creation
+  myLazyLoad.update()
 }
