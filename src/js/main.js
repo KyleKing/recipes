@@ -82,8 +82,8 @@ const search = function( searchPhrase ) {
     shouldSort: true,
     threshold: 0.1,
   }
-  // Search database with Fuse
-  const fuse = new Fuse( localDB.recipes, options )
+  // Search database with Fuse - Use JSON parse hack to create a deep copy
+  const fuse = new Fuse( JSON.parse( JSON.stringify( localDB.recipes ) ), options )
   const fuseResults = fuse.search( searchPhrase )
   // Add matched recipes to view
   updateRecipes( fuseResults )

@@ -98,7 +98,7 @@ export default class {
   createCheckedItems ( rcpID, header, list, matchObj = {} ) {
     const ingredients = []
     for ( let idx = 1; idx < list.length; idx++ ) {
-    // Highlight matched text, if any
+      // Highlight matched text, if any
       list[idx] = this.hltr.highlightItem( list[idx], `ingredients.${header}`, idx, matchObj )
       // Add input (checkbox) then matched label with unique ID linking both
       const uniqID = `${rcpID}-${header.toLowerCase().replace( /\s+/g, '_' )}-${idx}`
