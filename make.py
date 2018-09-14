@@ -26,7 +26,7 @@ def lgr(msg):
     """General Logger Function."""
     global logger, debug
     if debug:
-        print msg
+        print(msg)
     logger.debug(msg)
 
 
@@ -163,12 +163,12 @@ class SiteCompiler(object):
 
         """
         lgr('Reading JSON file: `{}`'.format(fn_src))
-        with open(fn_src, 'r') as fn:
+        with open(fn_src, 'r', encoding='utf-8') as fn:
             recipe = json.load(fn)
 
         # Make sure the minimum keys exist
         min_keys = ('ingredients', 'notes', 'recipe', 'source')
-        found_keys = [rcpKey for rcpKey in recipe.iterkeys() if rcpKey in min_keys]
+        found_keys = [rcpKey for rcpKey in recipe if rcpKey in min_keys]
         if len(found_keys) != len(min_keys):
             raise AttributeError('Recipe ({}) has: `{}` but needs at least: `{}`'.format(fn_src, found_keys, min_keys))
 
@@ -184,7 +184,7 @@ class SiteCompiler(object):
         # Adds link to minified image
         if recipe_title in self.imgs:
             recipe['imgSrc'] = self.imgs[recipe_title]
-            output = re.sub(ur'\/([^\.\/]+)\..{3,4}', r'/placeholder-\1.svg', self.imgs[recipe_title])
+            output = re.sub(r'\/([^\.\/]+)\..{3,4}', r'/placeholder-\1.svg', self.imgs[recipe_title])
             recipe['imgPlaceholder'] = output
             if not os.path.isfile(output):
                 sqipCLI = '/Users/kyleking/.nvm/versions/node/v7.8.0/bin/sqip'
@@ -196,7 +196,7 @@ class SiteCompiler(object):
         # Standardizes ingredients (accepts either object of arrays or simply array)
         if type(recipe['ingredients']) is list:
             recipe['ingredients'] = {'ingredients': recipe['ingredients']}
-        for header, ingredients in recipe['ingredients'].iteritems():
+        for header, ingredients in recipe['ingredients'].items():
             # Add header in list, so Fuse can attempt to find a match
             recipe['ingredients'][header] = [header.title()]
             recipe['ingredients'][header].extend([ing.strip().lower() for ing in ingredients])
@@ -211,7 +211,7 @@ class SiteCompiler(object):
         search_keys = ['notes', 'recipe', 'title', 'group']
         # Get each unique key (section header) for ingredients
         for recipe in self.recipes:
-            search_keys.extend(['ingredients.{}'.format(hdr) for hdr in recipe['ingredients'].iterkeys()])
+            search_keys.extend(['ingredients.{}'.format(hdr) for hdr in recipe['ingredients']])
         search_keys = list(set(search_keys))
         lgr('search_keys: {}'.format(search_keys))
         # Write JSON file (FYI: Camelcase variables for JS output)

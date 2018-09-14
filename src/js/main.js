@@ -72,6 +72,7 @@ const updateRecipes = function( recipes ) {
 const search = function( searchPhrase ) {
   // Set options to be strict and limit fuzziness of search
   const options = {
+    caseSensitive: false,
     distance: 10000,
     includeMatches: true,
     keys: localDB.searchKeys,
