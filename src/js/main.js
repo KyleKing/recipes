@@ -2,6 +2,7 @@
 
 import {initContent, searchRecipes} from './Content.js'
 import RegisterScroll from './RegisterScroll.js'
+import {RegisterURLHandler, updateSearch} from './URL.js'
 
 // Initialize the Lazy Image Loader
 var myLazyLoad = new LazyLoad( {
@@ -14,9 +15,10 @@ nodeInputSearch.addEventListener( 'keyup', ( ) => {
   // Either load all recipes or apply search phrase from input
   if ( nodeInputSearch.value.length === 0 )
     initContent()
-  else
-    // TODO: add search to URL?
+  else {
     searchRecipes( nodeInputSearch.value )
+    updateSearch( nodeInputSearch.value ) // add search to URL?
+  }
   // Update lazy loading after DOM changes
   myLazyLoad.update()
 } )
@@ -33,7 +35,7 @@ document.addEventListener( 'keydown', ( event ) => {
 
 // On ready, initialize application
 window.onload = function() {
-  initContent()
+  RegisterURLHandler( nodeInputSearch, initContent, searchRecipes )
   $( 'footer' ).removeClass( 'hide-while-loading' )
   // registerIngredientClick()    // TODO: Disabled for now - use in 'Make' mode
   RegisterScroll()
