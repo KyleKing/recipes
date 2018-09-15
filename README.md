@@ -6,23 +6,30 @@ Create interactive website for searching and making lists from user-specified so
     <summary>Click to Open TOC</summary>
 <!-- MarkdownTOC autolink="true" markdown_preview="github" -->
 
-- [Development](#development)
-- [Workflow](#workflow)
+- [Quick Start](#quick-start)
+- [Development - Archive](#development---archive)
 - [Libraries](#libraries)
     - [Cool, but didn't use](#cool-but-didnt-use)
 
 <!-- /MarkdownTOC -->
 </details>
 
-## Development
+## Quick Start
 
-- Add `make` mode with recipe in horizontal orientation
-    + Fix recipe linking on load
-    + Can rotation of screen be locked with HTML?
-        * https://stackoverflow.com/questions/43634583/prevent-landscape-orientation-mobile-website
-        * https://www.google.com/search?rlz=1CDGOYI_enUS633US633&hl=en-US&ei=Jo1sW464M6Ht5gKBtKmwDA&q=ios+safari+prevent+web+mobile+rotation&oq=ios+safari+prevent+web+mobile+rotation
-    + Track check box progress in URL (and cross out steps)
-    + Add 'alt-ratio' toggle switch for common alternate ratio (maybe custom input with suggested ratio?)
+1. Create a new `<recipe_title>.json` and matching `<recipe_title>.<img_format>` in the respective database subdirectory (i.e. breakfast/)
+    - See `database\__template.json` as an example JSON file
+2. Run `python make.py`, which will:
+    - Move source images to `dist/imgs/<subdir>-<recipe_title>.<img_format>`
+    - Combine JSON documents into single JSON file
+        + Add recipe title from filename split on underscore
+        + Add link to minified image
+        + Standardize ingredients
+        + Identify errors in source file
+    - The JSON file is then converted to a JS file to get around XHR restrictions
+3. With the updated database, open index.html in a browser
+
+## Development - Archive
+
 - Add flex-grid?
     + Wrap TOC
     + Wrap Image, Ingredients, Recipe?
@@ -31,28 +38,22 @@ Create interactive website for searching and making lists from user-specified so
     + Try out different font face
     + Replace Skeleton?
         * Fix conflict of Skeleton with check boxes
-- Move to raw React to replace Crel
-    - Look into React image lazy loaders: https://github.com/verlok/lazyload#usage-with-react
-
-## Workflow
-
-1. Create a `<recipe_title>.json` and matching `<recipe_title>.<img_format>` in the respective database subdirectory (i.e. breakfast/). See `database\__template.json`.
-2. Run `python make.py`, which will:
-    - Move source images to `dist/imgs/<subdir>-<recipe_title>.<img_format>`
-    - Combine JSON documents into single JSON file
-        + Add recipe title from filename split on underscore
-        + Add link to minified image
-        + Standardize ingredients
-        + Identify errors in source file
-3. Open index.html in a browser
+- Add `make` mode with a single recipe in horizontal orientation
+    + Can rotation of screen be locked with HTML?
+        * https://stackoverflow.com/questions/43634583/prevent-landscape-orientation-mobile-website
+        * https://www.google.com/search?rlz=1CDGOYI_enUS633US633&hl=en-US&ei=Jo1sW464M6Ht5gKBtKmwDA&q=ios+safari+prevent+web+mobile+rotation&oq=ios+safari+prevent+web+mobile+rotation
+    + Track make mode using URL
+    + Keep state of ingredient check in URL
+        * Possibly also cross out steps as completed?
+    + Add 'alt-ratio' toggle to update ingredient amounts
 
 ## Libraries
 
 - Crel for DOM creation: https://github.com/KoryNunn/crel
 - Fuse for fuzzy-search: http://fusejs.io/
 - Lazy Load: https://github.com/verlok/lazyload
-- Inspiration from CodyHouse:
 
 ### Cool, but didn't use
 
 - Bearhug: https://github.com/jharding/bearhug
+- CodyHouse: https://codyhouse.co/gem/3d-bold-navigation

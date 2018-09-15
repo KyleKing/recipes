@@ -1,11 +1,10 @@
 # Remove intermediary files
 /dist/database.json
+/dist/database.js
 *.log
 
-# Remove WIP
+# Ignore WIP files and folders
 tmp.*
 TODO/
 archive/
 /config.codekit3
-
-/dist/database.js
