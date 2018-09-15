@@ -1,5 +1,7 @@
 'use strict'
 
+import ScrollTo from './ScrollTo.js'
+
 /*
 >> Manipulate URL
  */
@@ -13,7 +15,8 @@ const getArg = function( comp, br ) {
 }
 
 // Workaround limitations of tag to store object for saved state
-export function parseURL( fullUrl ) {
+function parseURL() {
+  const fullUrl = window.location.href
   // console.log( 'Crrnt URL: ' + fullUrl )
   const br = '\?'
   // Initialize URL components for export
@@ -46,7 +49,7 @@ export function parseURL( fullUrl ) {
 }
 
 // Workaround limitations of tag to store object for saved state
-export function formAndPushURL( comps ) {
+function formAndPushURL( comps ) {
   comps.ingredients.sort()
 
   let finalUrl = comps.baseUrl + comps.other + '#'
@@ -67,7 +70,7 @@ export function formAndPushURL( comps ) {
 //   // Catch click event for ingredient
 //   $( '.ingredient' ).on( 'click', ( event ) => {
 //     // Either add or remove ingredient ID and set check box value appropriately
-//     const comps = parseURL( window.location.href )
+//     const comps = parseURL()
 //     const ingID = $( event.target ).attr( 'id' )
 //     if ( event.currentTarget.checked ) {
 //       if ( comps.ingredients.length === 0 )
@@ -97,20 +100,36 @@ export function formAndPushURL( comps ) {
 //   // }
 // }
 
+// [Tag and Ingredients] are mutually exclusive with search
 export function updateSearch( phrase ) {
-  const comps = parseURL( window.location.href )
+  const comps = parseURL()
+  comps.ingredients = []
   comps.search = encodeURIComponent( phrase.trim() )
+  comps.tag = ''
+  formAndPushURL( comps )
+}
+export function updateRecipe( tag ) {
+  const comps = parseURL()
+  comps.search = ''
+  comps.tag = encodeURIComponent( tag )
   formAndPushURL( comps )
 }
 
 // Use the URL to initialize the application
-export function RegisterURLHandler( input, init, search ) {
-  const comps = parseURL( window.location.href )
+export function registerURLHandler( input, init, search ) {
+  const comps = parseURL()
   if ( comps.search.length > 0 ) {
     input.value = decodeURI( comps.search )
     search( comps.search )
   } else {
-    // Check if recipe is linked, then create scroll to event on timeout
+    window.addEventListener( 'updateRecipes-complete', () => {
+      // Check if recipe is linked, then create scroll to event on timeout
+      if ( comps.tag.length > 0 ) {
+        // Timeout enables DOM to finish drawing
+        window.setTimeout( ScrollTo, 10, document.getElementById( comps.tag ) )
+      }
+    }, false )
+
     init()
   }
 }

@@ -6,6 +6,7 @@
   	"optimize-regex"
   ],
   "globals": {
+    "Promise": true,
     "$": true,
     "Fuse": true,
     "crel": true,

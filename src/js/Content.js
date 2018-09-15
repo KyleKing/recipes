@@ -56,9 +56,10 @@ const updateRecipes = function( recipes ) {
   if ( recipes.length > 0 && !isFuseSearch )
     addToC( contentDivID )
 
-  // Create recipes
+  // Create Recipes
   for ( let recipe of recipes )
     new Recipe( isFuseSearch, contentDivID, recipe )
+  window.dispatchEvent( new Event( 'updateRecipes-complete' ) )
 }
 
 
