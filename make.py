@@ -163,7 +163,8 @@ class SiteCompiler(object):
 
         """
         lgr('Reading JSON file: `{}`'.format(fn_src))
-        with open(fn_src, 'r', encoding='utf-8') as fn:
+        # with open(fn_src, 'r', encoding='utf-8') as fn:  # Python 3 only
+        with open(fn_src, 'r') as fn:
             recipe = json.load(fn)
 
         # Make sure the minimum keys exist
@@ -187,7 +188,7 @@ class SiteCompiler(object):
             output = re.sub(r'\/([^\.\/]+)\..{3,4}', r'/placeholder-\1.svg', self.imgs[recipe_title])
             recipe['imgPlaceholder'] = output
             if not os.path.isfile(output):
-                sqipCLI = '/Users/kyleking/.nvm/versions/node/v7.8.0/bin/sqip'
+                sqipCLI = '/Users/kyleking/.nvm/versions/node/v8.10.0/bin/sqip'
                 lgr('Creating placeholder image: {}'.format(output))
                 os.system('{} -o {} {}'.format(sqipCLI, output, recipe['imgSrc']))
         else:
