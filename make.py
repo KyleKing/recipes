@@ -185,12 +185,15 @@ class SiteCompiler(object):
         # Adds link to minified image
         if recipe_title in self.imgs:
             recipe['imgSrc'] = self.imgs[recipe_title]
-            output = re.sub(r'\/([^\.\/]+)\..{3,4}', r'/placeholder-\1.svg', self.imgs[recipe_title])
-            recipe['imgPlaceholder'] = output
-            if not os.path.isfile(output):
-                sqipCLI = '/Users/kyleking/.nvm/versions/node/v8.10.0/bin/sqip'
-                lgr('Creating placeholder image: {}'.format(output))
-                os.system('{} -o {} {}'.format(sqipCLI, output, recipe['imgSrc']))
+            if 'heic' in recipe['imgSrc'].lower():
+                raise ValueError('Cannot parse .HEIC files: {}'.format(recipe['imgSrc']))
+            else:
+                output = re.sub(r'\/([^\.\/]+)\..{3,4}', r'/placeholder-\1.svg', recipe['imgSrc'])
+                recipe['imgPlaceholder'] = output
+                if not os.path.isfile(output):
+                    sqipCLI = '/Users/kyleking/.nvm/versions/node/v8.10.0/bin/sqip'
+                    lgr('Creating placeholder image: {}'.format(output))
+                    lgr(os.system('{} -o {} {}'.format(sqipCLI, output, recipe['imgSrc'])))
         else:
             recipe['imgSrc'] = ''
             recipe['imgPlaceholder'] = ''
