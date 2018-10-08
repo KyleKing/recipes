@@ -191,9 +191,9 @@ class SiteCompiler(object):
                 output = re.sub(r'\/([^\.\/]+)\..{3,4}', r'/placeholder-\1.svg', recipe['imgSrc'])
                 recipe['imgPlaceholder'] = output
                 if not os.path.isfile(output):
-                    sqipCLI = '/Users/kyleking/.nvm/versions/node/v8.10.0/bin/sqip'
+                    squip_cli = '/Users/kyleking/.nvm/versions/node/v8.10.0/bin/sqip'
                     lgr('Creating placeholder image: {}'.format(output))
-                    lgr(os.system('{} -o {} {}'.format(sqipCLI, output, recipe['imgSrc'])))
+                    lgr(os.system('{} -o {} {}'.format(squip_cli, output, recipe['imgSrc'])))
         else:
             recipe['imgSrc'] = ''
             recipe['imgPlaceholder'] = ''
