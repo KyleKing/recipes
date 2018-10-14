@@ -8,3 +8,11 @@ tmp.*
 TODO/
 archive/
 /config.codekit3
+
+# Ignore images in source directory
+/database/*/*.jpg
+/database/*/*.JPG
+/database/*/*.jpeg
+/database/*/*.JPEG
+/database/*/*.png
+/database/*/*.PNG
