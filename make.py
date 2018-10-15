@@ -220,7 +220,7 @@ class SiteCompiler(object):
         lgr('search_keys: {}'.format(search_keys))
         # Write JSON file (FYI: Camelcase variables for JS output)
         rcps_obj = {'recipes': self.recipes, 'searchKeys': search_keys, 'toc': self.toc}
-        kwargs = {'separators': (',', ':')} if not debug else {'indent': 4, 'separators': (',', ': ')}
+        kwargs = {'separators': (',', ':')} if not debug else {'indent': 0, 'separators': (',', ': ')}
         json.dump(rcps_obj, open(self.db_fn, 'w'), sort_keys=True, **kwargs)
 
     def json_to_js(self):

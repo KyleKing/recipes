@@ -1,6 +1,5 @@
 # Remove intermediary files
 /dist/database.json
-/dist/database.js
 *.log
 
 # Ignore WIP files and folders
