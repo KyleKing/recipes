@@ -1874,6 +1874,26 @@ var localDB = {
 },
 {
 "group": "meals",
+"id": "recipe-quick_skillet_meals",
+"imgPlaceholder": "dist/imgs/placeholder-meals-quick_skillet_meals.svg",
+"imgSrc": "dist/imgs/meals-quick_skillet_meals.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients"
+]
+},
+"notes": [],
+"recipe": [
+">> Chicken",
+"Pull out the chicken breasts from the fridge. Heat the skillet to medium-high heat with a bit of olive oil. Flip and coat the opposite side",
+"Once hot, place the chicken on the skillet, season with olive oil, pepper, salt, thyme, and rosemary",
+"Don't move the chicken and let it sear one side. Once starting to brown, flip and let sit until fully cooked"
+],
+"source": "",
+"title": "Quick Skillet Meals"
+},
+{
+"group": "meals",
 "id": "recipe-roasted_vegetables",
 "imgPlaceholder": "dist/imgs/placeholder-meals-roasted_vegetables.svg",
 "imgSrc": "dist/imgs/meals-roasted_vegetables.jpg",
@@ -2464,8 +2484,8 @@ var localDB = {
 {
 "group": "sushi",
 "id": "recipe-california_rolls",
-"imgPlaceholder": "",
-"imgSrc": "",
+"imgPlaceholder": "dist/imgs/placeholder-sushi-california_rolls.svg",
+"imgSrc": "dist/imgs/sushi-california_rolls.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -2493,8 +2513,8 @@ var localDB = {
 {
 "group": "sushi",
 "id": "recipe-canned_spicy_tuna_roll",
-"imgPlaceholder": "",
-"imgSrc": "",
+"imgPlaceholder": "dist/imgs/placeholder-sushi-canned_spicy_tuna_roll.svg",
+"imgSrc": "dist/imgs/sushi-canned_spicy_tuna_roll.jpg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -2859,6 +2879,7 @@ var localDB = {
 "Nori Vegetable Wraps",
 "Pizza",
 "Pretzels",
+"Quick Skillet Meals",
 "Roasted Vegetables",
 "Shrimp Creole",
 "Shrimp Tacos",
