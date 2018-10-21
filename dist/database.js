@@ -668,6 +668,48 @@ var localDB = {
 },
 {
 "group": "dessert",
+"id": "recipe-oatmeal_raisin_cookies",
+"imgPlaceholder": "dist/imgs/placeholder-dessert-oatmeal_raisin_cookies.svg",
+"imgSrc": "dist/imgs/dessert-oatmeal_raisin_cookies.png",
+"ingredients": {
+"1 - In a medium bowl, whisk:": [
+"1 - In A Medium Bowl, Whisk:",
+"1.75 cups flour",
+"3/4 tsp baking soda",
+"3/4 tsp baking powder",
+"1/2 tsp salt",
+"1/2 tsp ground cinnamon",
+"1/2 tsp nutmeg"
+],
+"2 - In a large bowl, combine:": [
+"2 - In A Large Bowl, Combine:",
+"2 sticks butter, room temperature",
+"1/4 cup sugar",
+"1.5 cups brown sugar, packed",
+"2 eggs",
+"2.5 tsp vanilla"
+],
+"3 - (Combine both bowls) then add:": [
+"3 - (Combine Both Bowls) Then Add:",
+"3.5 cups oatmeal",
+"1 cup raisins"
+]
+},
+"notes": [
+"Source: page 767-768 of the Joy of Cooking",
+"For oatmeal chocolate chip cookies, ignore the nutmeg and cinnamon and use 1 cup chocolate chips instead of raisins"
+],
+"recipe": [
+"Preheat oven to 350'F",
+"Whisk part 1. With a wooden spoon combine part 2. Then in the large bowl, combine 1 and 2 then 3",
+"Bake for 12-14 minutes on a light colored cooking sheet. When done, let sit for a few minutes then place on a cooling rack",
+"I typically bake half (1 cookie sheet of 16-24 cookies) then freeze the rest of the dough to make at a later date"
+],
+"source": "",
+"title": "Oatmeal Raisin Cookies"
+},
+{
+"group": "dessert",
 "id": "recipe-oreo_truffles",
 "imgPlaceholder": "dist/imgs/placeholder-dessert-oreo_truffles.svg",
 "imgSrc": "dist/imgs/dessert-oreo_truffles.jpg",
@@ -1158,6 +1200,31 @@ var localDB = {
 },
 {
 "group": "meals",
+"id": "recipe-baked-fish",
+"imgPlaceholder": "dist/imgs/placeholder-meals-baked-fish.svg",
+"imgSrc": "dist/imgs/meals-baked-fish.jpg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"frozen fish fillet",
+"salt",
+"pepper",
+"lemon juice",
+"olive oil"
+]
+},
+"notes": [],
+"recipe": [
+"Preheat oven to 450\u2109 (~10 min)",
+"While still frozen, remove any ice crystals with cold water and place in a tin foil covered pan. Cover with olive oil and bake for 4 minutes",
+"Remove from the oven and cover with salt, pepper, and lemon juice",
+"Return to the oven for 8-12 minutes based on thickness"
+],
+"source": "http://cookthestory.com/how-to-cook-fish-from-frozen/",
+"title": "Baked-Fish"
+},
+{
+"group": "meals",
 "id": "recipe-baked_ziti",
 "imgPlaceholder": "",
 "imgSrc": "",
@@ -1522,31 +1589,6 @@ var localDB = {
 },
 {
 "group": "meals",
-"id": "recipe-fish",
-"imgPlaceholder": "dist/imgs/placeholder-meals-fish.svg",
-"imgSrc": "dist/imgs/meals-fish.jpg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"frozen fish fillet",
-"salt",
-"pepper",
-"lemon juice",
-"olive oil"
-]
-},
-"notes": [],
-"recipe": [
-"Preheat oven to 450\u2109 (~10 min)",
-"While still frozen, remove any ice crystals with cold water and place in a tin foil covered pan. Cover with olive oil and bake for 4 minutes",
-"Remove from the oven and cover with salt, pepper, and lemon juice",
-"Return to the oven for 8-12 minutes based on thickness"
-],
-"source": "http://cookthestory.com/how-to-cook-fish-from-frozen/",
-"title": "Fish"
-},
-{
-"group": "meals",
 "id": "recipe-gyros",
 "imgPlaceholder": "dist/imgs/placeholder-meals-gyros.svg",
 "imgSrc": "dist/imgs/meals-gyros.jpg",
@@ -1876,7 +1918,7 @@ var localDB = {
 "group": "meals",
 "id": "recipe-quick_skillet_meals",
 "imgPlaceholder": "dist/imgs/placeholder-meals-quick_skillet_meals.svg",
-"imgSrc": "dist/imgs/meals-quick_skillet_meals.jpeg",
+"imgSrc": "dist/imgs/meals-quick_skillet_meals.png",
 "ingredients": {
 "ingredients": [
 "Ingredients"
@@ -1887,7 +1929,12 @@ var localDB = {
 ">> Chicken",
 "Pull out the chicken breasts from the fridge. Heat the skillet to medium-high heat with a bit of olive oil. Flip and coat the opposite side",
 "Once hot, place the chicken on the skillet, season with olive oil, pepper, salt, thyme, and rosemary",
-"Don't move the chicken and let it sear one side. Once starting to brown, flip and let sit until fully cooked"
+"Don't move the chicken and let it sear one side. Once starting to brown, flip and let sit until fully cooked",
+">> White Fish",
+"Note: use a metal fish spatula to keep the crispy bits attached to the fish",
+"Heat the cast iron skillet on medium-high heat with Extra olive oil (to held reduce sticking). Take out the fish fillets",
+"Season one side of the fish with Parsley, Thyme, Salt, and Pepper. Place season-side down for 2-3 minutes",
+"Season the opposite side, flip, and sear for 2-3 more minutes, then serve immediately"
 ],
 "source": "",
 "title": "Quick Skillet Meals"
@@ -1909,7 +1956,8 @@ var localDB = {
 "potatoes",
 "sweet potatoes",
 "carrots",
-"broccoli"
+"broccoli",
+"mushrooms"
 ]
 },
 "notes": [
@@ -1917,10 +1965,39 @@ var localDB = {
 ],
 "recipe": [
 "Cut the vegetables to roughly the same size, then toss with plenty of olive oil and spices",
-"Bake at 425 for 1 hour (**At 30 minutes add the broccoli and carrots)"
+"Bake at 425 for 1 hour (**For the last 30 minutes, add the broccoli, carrots, and/or mushrooms)"
 ],
 "source": "",
 "title": "Roasted Vegetables"
+},
+{
+"group": "meals",
+"id": "recipe-seafood_scampi",
+"imgPlaceholder": "dist/imgs/placeholder-meals-seafood_scampi.svg",
+"imgSrc": "dist/imgs/meals-seafood_scampi.jpg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"pasta",
+"cooked shrimp",
+"spinach, peas, or etc.",
+"olive oil",
+"garlic powder",
+"italian seasoning",
+"parsley",
+"parmesan cheese",
+"lemon juice",
+"red pepper flakes (optional)"
+]
+},
+"notes": [
+"You can use imitation crab meat in place of shrimp"
+],
+"recipe": [
+"Make the pasta according to directions. Drain pot then add all ingredients, stir, and heat until warm"
+],
+"source": "",
+"title": "Seafood Scampi"
 },
 {
 "group": "meals",
@@ -2765,52 +2842,55 @@ var localDB = {
 }
 ],
 "searchKeys": [
-"ingredients.1. BROWNIE LAYER",
-"ingredients.3-Curry Roasted Sweet Potatoes",
-"ingredients.Combine-Cookie Topping",
-"ingredients.Blender",
-"ingredients.Garnish Options",
-"recipe",
 "ingredients.Base",
-"ingredients.toppings",
-"ingredients.Tzatziki Sauce",
-"ingredients.FOR THE BENEDICT AND ASSEMBLY",
-"ingredients.Streusel",
-"group",
 "title",
-"ingredients.Chicken",
-"ingredients.Combine-Cookie Spread",
-"ingredients.Toppings",
-"ingredients.FOR THE HOLLANDAISE",
-"ingredients.2-Roasted Sriracha & Soy Sauce Chickpeas",
-"ingredients.5-Chili-Lime Kale",
-"ingredients.2. CARAMEL LAYER",
-"ingredients.Saute in Olive Oil",
 "ingredients.Seasoning Combinations",
-"ingredients.Other Ingredients",
-"ingredients.Sauce",
-"ingredients.Peanut Noodles",
-"ingredients.ingredients",
-"ingredients.Optional Garnish",
-"ingredients.1-Garlic Roasted Broccoli",
-"ingredients.Brown in Pan",
+"ingredients.Chicken",
 "ingredients.4. CHOCOLATE GLAZE",
-"ingredients.Curry",
-"ingredients.FOR SERVING",
-"ingredients.soup",
-"ingredients.DRESSING + SALAD",
+"ingredients.1. BROWNIE LAYER",
 "notes",
-"ingredients.6-Optional",
-"ingredients.FOR THE POACHED EGGS",
-"ingredients.combinations",
-"ingredients.With",
-"ingredients.Seasonings",
-"ingredients.Combine",
-"ingredients.muffins",
+"ingredients.Garnish Options",
 "ingredients.4-Quinoa",
-"ingredients.Main",
+"ingredients.Toppings",
+"ingredients.3-Curry Roasted Sweet Potatoes",
+"ingredients.Seasonings",
+"ingredients.FOR THE BENEDICT AND ASSEMBLY",
+"ingredients.Curry",
+"ingredients.Other Ingredients",
+"ingredients.1-Garlic Roasted Broccoli",
+"ingredients.Sauce",
+"ingredients.6-Optional",
+"ingredients.combinations",
+"ingredients.2-Roasted Sriracha & Soy Sauce Chickpeas",
+"ingredients.FOR SERVING",
+"ingredients.Brown in Pan",
 "ingredients.3. COOKIE DOUGH LAYER",
-"ingredients.BUFFALO CHICKPEAS"
+"ingredients.Combine",
+"ingredients.Peanut Noodles",
+"ingredients.FOR THE POACHED EGGS",
+"ingredients.Optional Garnish",
+"ingredients.FOR THE HOLLANDAISE",
+"ingredients.2. CARAMEL LAYER",
+"ingredients.BUFFALO CHICKPEAS",
+"ingredients.3 - (Combine both bowls) then add:",
+"ingredients.Saute in Olive Oil",
+"ingredients.5-Chili-Lime Kale",
+"recipe",
+"ingredients.Combine-Cookie Spread",
+"ingredients.Main",
+"ingredients.1 - In a medium bowl, whisk:",
+"ingredients.Blender",
+"group",
+"ingredients.ingredients",
+"ingredients.Tzatziki Sauce",
+"ingredients.muffins",
+"ingredients.Streusel",
+"ingredients.2 - In a large bowl, combine:",
+"ingredients.toppings",
+"ingredients.DRESSING + SALAD",
+"ingredients.With",
+"ingredients.Combine-Cookie Topping",
+"ingredients.soup"
 ],
 "toc": {
 "breakfast": [
@@ -2838,6 +2918,7 @@ var localDB = {
 "Hot Fudge Sauce",
 "Molten Chocolate Cake",
 "Oatmeal Balls",
+"Oatmeal Raisin Cookies",
 "Oreo Truffles",
 "Peanut Butter And Cocoa Smothie",
 "Toasted Marshmallow Brownie Crinkles"
@@ -2858,6 +2939,7 @@ var localDB = {
 "Spaghetti Sauce"
 ],
 "meals": [
+"Baked-Fish",
 "Baked Ziti",
 "Brick Chicken",
 "Chicken",
@@ -2869,7 +2951,6 @@ var localDB = {
 "Crab Cakes",
 "Enchiladas",
 "Fajitas",
-"Fish",
 "Gyros",
 "Jambon Beurre",
 "Karens Roasted Veggie Bowls",
@@ -2881,6 +2962,7 @@ var localDB = {
 "Pretzels",
 "Quick Skillet Meals",
 "Roasted Vegetables",
+"Seafood Scampi",
 "Shrimp Creole",
 "Shrimp Tacos",
 "Slow Cooker Chicken Mango Curry",
