@@ -7,6 +7,7 @@
   ],
   "globals": {
     "Promise": true,
+    "he": true,
     "$": true,
     "Fuse": true,
     "crel": true,

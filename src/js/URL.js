@@ -104,14 +104,14 @@ function formAndPushURL( comps ) {
 export function updateSearch( phrase ) {
   const comps = parseURL()
   comps.ingredients = []
-  comps.search = encodeURIComponent( phrase.trim() )
+  comps.search = he.encode( phrase.trim() )
   comps.tag = ''
   formAndPushURL( comps )
 }
 export function updateRecipe( tag ) {
   const comps = parseURL()
   comps.search = ''
-  comps.tag = encodeURIComponent( tag )
+  comps.tag = he.encode( tag )
   formAndPushURL( comps )
 }
 
@@ -119,7 +119,7 @@ export function updateRecipe( tag ) {
 export function registerURLHandler( input, init, search ) {
   const comps = parseURL()
   if ( comps.search.length > 0 ) {
-    input.value = decodeURI( comps.search )
+    input.value = he.decode( comps.search )
     search( comps.search )
   } else {
     window.addEventListener( 'updateRecipes-complete', () => {

@@ -9,28 +9,39 @@ var myLazyLoad = new LazyLoad( {
   'elements_selector': '.lazy',
 } )
 
-// Initialize event detection for key entry in search bar
-const nodeInputSearch = document.getElementById( 'search-input' )
-nodeInputSearch.addEventListener( 'keyup', ( ) => {
-  // Either load all recipes or apply search phrase from input
-  const val = nodeInputSearch.value
+const applySearchInput = function( val ) {
   if ( val.length === 0 )
     initContent()
-  else if ( val[0] === ':' ) {
-    // Note: this keeps search state. Could search crab, then type :23 to filter
-    if ( val.length > 1 ) {
-      const ratings = val.slice( 1 ).split( '' ).map( rating => `rating-${rating}` )
-      document.querySelectorAll( '.rating-row' ).forEach( ( el ) => {
+  else {
+    // If too many values, treat whole string as search
+    let vals = val.split( ':' )
+    if ( vals.length > 2  )
+      vals = [val]
+    // Use the first, ':' input for typical plain text search
+    if ( val[0] !== ':' ) {
+      updateSearch( val ) // add search phrase to URL
+      searchRecipes( vals[0] )
+    } else
+      vals = ['', val.slice( 1 )]
+
+    // If second argument, apply star filter
+    if ( vals.length === 2 && vals[1].length > 0 ) {
+      const ratings = vals[1].split( '' ).map( rating => `rating-${rating}` )
+      document.querySelectorAll( '.rated-row' ).forEach( ( el ) => {
         if ( ratings.indexOf( el.classList[1] ) !== -1 )
           el.classList.remove( 'hide' )
         else
           el.classList.add( 'hide' )
       } )
     }
-  } else {
-    updateSearch( val ) // add search phrase to URL
-    searchRecipes( val )
   }
+}
+
+// Initialize event detection for key entry in search bar
+const nodeInputSearch = document.getElementById( 'search-input' )
+nodeInputSearch.addEventListener( 'keyup', ( ) => {
+  // Either load all recipes or apply search phrase from input
+  applySearchInput( nodeInputSearch.value )
   // Update lazy loading after DOM changes
   myLazyLoad.update()
 } )
@@ -47,7 +58,7 @@ document.addEventListener( 'keydown', ( event ) => {
 
 // On ready, initialize application
 window.onload = function() {
-  registerURLHandler( nodeInputSearch, initContent, searchRecipes )
+  registerURLHandler( nodeInputSearch, initContent, applySearchInput )
   $( 'footer' ).removeClass( 'hide-while-loading' )
   // registerIngredientClick()    // FYI: Disabled for now - use in 'Make' mode
   RegisterScroll()

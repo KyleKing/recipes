@@ -75,7 +75,7 @@ export default class {
     // Create HTML for each recipe (title, image, ingredients, instructions)
     crel( document.getElementById( this.contentDivID ),
       // Group within rating so that hiding/showing is easier
-      crel( 'div', {'class': `rating-row rating-${rcp.rating}`},
+      crel( 'div', {'class': `rated-row rating-${rcp.rating}`},
         crel( 'div', {'class': 'row br'},
           // Add Recipe title and link to source, if any
           crel( 'h5', {'class': 'twelve columns', 'id': rcp.id},
