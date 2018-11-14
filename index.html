@@ -28,6 +28,9 @@
 		<link rel="icon" type="image/png" sizes="228x228" href="dist/icons/app-icon@228x228.png">
 		<meta name="theme-color" content="#FFFFFF">
 
+		<!-- Font  -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT" crossorigin="anonymous">
 		<!-- Styles -->
 		<link href='https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet">
@@ -47,7 +50,7 @@
 			<section class="cd-section index cd-selected">
 				<div class="container recipes cd-content">
 					<section id="search-area">
-						<input id="search-input" type="search" autofocus=True maxlength="32" placeholder="Search Recipes"/>
+						<input id="search-input" type="search" autofocus=True maxlength="32" placeholder="Search Recipes or use ':123' to filter by star"/>
 						<a href="#top" id="scroll-to-top"></a>
 					</section>
 					<div id="crel-target"></div>
@@ -65,11 +68,12 @@
 		</div>
 		<!-- Load Dependencies -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-		<script
+		<!-- <script
 			src="https://code.jquery.com/jquery-2.2.4.min.js"
 			integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
 			crossorigin="anonymous"
-		as="script"></script>
+		as="script"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/crel/3.1.0/crel.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/10.15.0/lazyload.min.js"></script>

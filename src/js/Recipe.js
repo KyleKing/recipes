@@ -53,6 +53,14 @@ export default class {
     return items
   }
 
+  // Generic generator of HTML-list elements based on recipe and key argument
+  addRating ( rcp ) {
+    const stars = []
+    for ( let idx = 0; idx < rcp.rating; idx++ )
+      stars.push( crel( 'i', {'class': 'fas fa-star'} ) )
+    return stars
+  }
+
   // Generate HTML for each recipe
   insertRecipe ( rcp, titleMatches, sourceLink, additionalNotes, matchLookup = {} ) {
     const group = rcp.group
@@ -63,32 +71,38 @@ export default class {
       )
     }
 
+
     // Create HTML for each recipe (title, image, ingredients, instructions)
     crel( document.getElementById( this.contentDivID ),
-      crel( 'div', {'class': 'row br'},
-        // Add Recipe title and link to source, if any
-        crel( 'h5', {'class': 'twelve columns', 'id': rcp.id},
-          crel( 'a',
-            {'class': 'unstyled', 'href': `#${rcp.id}`, 'id': `${rcp.id}`},
-            this.hltr.highlightText( rcp.title, titleMatches )
-          ),
-          crel( 'span', ' ' ),
-          sourceLink
-        )
-      ),
-      crel( 'div', {'class': 'row'},
-        // Add the reference image
-        crel( 'img', {
-          'alt': rcp.id, 'class': 'five columns lazy',
-          'data-src': rcp.imgSrc, 'src': rcp.imgPlaceholder,
-        } ),
-        // Add ingredients and recipe
-        crel( 'div', {'class': 'seven columns', 'id': rcp.id},
-          this.constCreateListGroup( rcp, matchLookup ),
-          crel( 'ol',
-            this.createList( rcp, 'recipe', matchLookup )
-          ),
-          additionalNotes
+      // Group within rating so that hiding/showing is easier
+      crel( 'div', {'class': `rating-row rating-${rcp.rating}`},
+        crel( 'div', {'class': 'row br'},
+          // Add Recipe title and link to source, if any
+          crel( 'h5', {'class': 'twelve columns', 'id': rcp.id},
+            crel( 'a',
+              {'class': 'unstyled', 'href': `#${rcp.id}`, 'id': `${rcp.id}`},
+              this.hltr.highlightText( rcp.title, titleMatches )
+            ),
+            crel( 'span', ' ' ),
+            sourceLink,
+            crel( 'span', ' ' ),
+            this.addRating( rcp )
+          )
+        ),
+        crel( 'div', {'class': 'row'},
+          // Add the reference image
+          crel( 'img', {
+            'alt': rcp.id, 'class': 'five columns lazy',
+            'data-src': rcp.imgSrc, 'src': rcp.imgPlaceholder,
+          } ),
+          // Add ingredients and recipe
+          crel( 'div', {'class': 'seven columns', 'id': rcp.id},
+            this.constCreateListGroup( rcp, matchLookup ),
+            crel( 'ol',
+              this.createList( rcp, 'recipe', matchLookup )
+            ),
+            additionalNotes
+          )
         )
       )
     )

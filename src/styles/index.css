@@ -138,3 +138,9 @@ footer {
     background-color: #E86256;
     opacity: 1;
 }
+
+
+/* Use class to toggle recipe hiding */
+.hide {
+    display: none !important;
+}

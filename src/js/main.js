@@ -13,11 +13,23 @@ var myLazyLoad = new LazyLoad( {
 const nodeInputSearch = document.getElementById( 'search-input' )
 nodeInputSearch.addEventListener( 'keyup', ( ) => {
   // Either load all recipes or apply search phrase from input
-  if ( nodeInputSearch.value.length === 0 )
+  const val = nodeInputSearch.value
+  if ( val.length === 0 )
     initContent()
-  else {
-    updateSearch( nodeInputSearch.value ) // add search phrase to URL
-    searchRecipes( nodeInputSearch.value )
+  else if ( val[0] === ':' ) {
+    // Note: this keeps search state. Could search crab, then type :23 to filter
+    if ( val.length > 1 ) {
+      const ratings = val.slice( 1 ).split( '' ).map( rating => `rating-${rating}` )
+      document.querySelectorAll( '.rating-row' ).forEach( ( el ) => {
+        if ( ratings.indexOf( el.classList[1] ) !== -1 )
+          el.classList.remove( 'hide' )
+        else
+          el.classList.add( 'hide' )
+      } )
+    }
+  } else {
+    updateSearch( val ) // add search phrase to URL
+    searchRecipes( val )
   }
   // Update lazy loading after DOM changes
   myLazyLoad.update()

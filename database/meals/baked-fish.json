@@ -6,10 +6,13 @@
     "lemon juice",
     "olive oil"
   ],
-  "notes": [],
+  "notes": [
+    "For refrigerated fish, bake at 400F for 25-30 minutes for large fillets (>1 inch tall) and 15-20 for thin ones"
+  ],
+  "rating": 1,
   "recipe": [
     "Preheat oven to 450℉ (~10 min)",
-    "While still frozen, remove any ice crystals with cold water and place in a tin foil covered pan. Cover with olive oil and bake for 4 minutes",
+    "While still frozen, place in a tin foil covered pan. Cover with olive oil and bake for 4 minutes",
     "Remove from the oven and cover with salt, pepper, and lemon juice",
     "Return to the oven for 8-12 minutes based on thickness"
   ],
