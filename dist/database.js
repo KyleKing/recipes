@@ -43,7 +43,7 @@ var localDB = {
 "I don't drink coffee, so this is actually sort of useful",
 "Photo by Isaac Benhesed on Unsplash"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Fill to line 2 with water, then add 3 large tbsp of coffee over filter"
 ],
@@ -87,7 +87,7 @@ var localDB = {
 "notes": [
 "The tricky part of this recipe is to get everything hot and served at the same time."
 ],
-"rating": 2,
+"rating": 3,
 "recipe": [
 "Melt butter, pour in glass juicer, prep lemon and cayenne in cup then check blender speed. Let cool slightly if using a plastic blender",
 "Cut up fruit for side dish and prep table",
@@ -179,7 +179,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [],
 "source": "https://www.modernhoney.com/the-oatmeal-love-bar/",
 "title": "Oatmeal"
@@ -233,7 +233,7 @@ var localDB = {
 "A grated apple mixed into the batter will keep the pancakes moist longer if you need to cook them ahead and bring them to the table all at once",
 "For blueberry pancakes, sprinkle fresh or thawed frozen blueberries over the batter after you pour it on the griddle. Mixing frozen blueberries into the batter before scooping will turn it blue and streaky."
 ],
-"rating": 1,
+"rating": 2,
 "recipe": [
 "Beat the eggs and milk until light and foamy, about 3 minutes at high speed of a stand or hand mixer. Stir in the butter or vegetable oil",
 "Whisk the dry ingredients together to evenly distribute the salt, baking powder and sweetener",
@@ -423,7 +423,7 @@ var localDB = {
 "notes": [
 "The King Arthur website has a number of tasty recipes like chocolate dipped biscotti"
 ],
-"rating": 2,
+"rating": 3,
 "recipe": [
 "Preheat oven to 350. Lightly grease a baking sheet",
 "In a medium-sized bowl, beat the butter, sugar, salt, vanilla, and baking powder until the mixture is smooth and creamy. Beat in the eggs and add the flower at low speed. Stir until smooth",
@@ -624,7 +624,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 2,
+"rating": 3,
 "recipe": [
 "Melt the chocolate and butter then add the boiling water.",
 "Stir well and add the sugar and corn syrup",
@@ -804,7 +804,7 @@ var localDB = {
 "Chrissy Teigen Cravings, 243",
 "Sometimes you can find bags of peanut butter and chocolate chips, which gives you 2/3 cup leftover for snacking :)"
 ],
-"rating": 2,
+"rating": 1,
 "recipe": [
 "Preheat oven to 350 and butter a 10 inch iron skillet",
 "With a wooden spoon, beat together the butter, peanut butter, brown sugar, and granulated sugar until creamy",
@@ -1154,7 +1154,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 2,
 "recipe": [
 "In a large pot, cook the sausages in a small amount of olive oil on medium heat until brown on the outside and firm {~5 minutes}",
 "Dice and prep the garlic, onions, and mushrooms. In parallel turn the heat off on the browning sausage to let cool",
@@ -1266,7 +1266,7 @@ var localDB = {
 "notes": [
 "Leftovers freeze well. This makes at least 10 portions at 1x"
 ],
-"rating": 2,
+"rating": 3,
 "recipe": [
 "Chop and saut\u00e9 the ingredients",
 "Use the same pan to brown the hamburger meat and preheat the oven to 350",
@@ -1325,7 +1325,7 @@ var localDB = {
 "notes": [
 "Alex's family recipe"
 ],
-"rating": 2,
+"rating": 1,
 "recipe": [
 "Prepare pasta according to the instructions",
 "Add spinach during the last minute of cook time, then drain the pasta and spinach. Place back in the pot",
@@ -1360,7 +1360,7 @@ var localDB = {
 "notes": [
 "Chrissy Teigen Cravings, 218"
 ],
-"rating": 2,
+"rating": 3,
 "recipe": [
 "In a large bowl, combine everything except for the canola oil and quartered lemons. Pat the chicken dry then rub with the marinade. Refrigerate for 2-24 hours.",
 "Heat a large cast iron skillet over medium-high heat. Add the canola oil, the chicken (skin-side down), and then weigh down with the bricks.",
@@ -1425,7 +1425,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 2,
+"rating": 1,
 "recipe": [
 "Season chicken thighs with salt & pepper. Place olive oil in instant pot and put thighs skin-side down. Use **Saut\u00e9** setting for 4 minutes.",
 "Remove chicken thighs and add bell pepper, onion, and garlic. **Saut\u00e9** setting for 3 minutes.",
@@ -1461,7 +1461,7 @@ var localDB = {
 "notes": [
 "Chrissy Teigen Cravings"
 ],
-"rating": 2,
+"rating": 1,
 "recipe": [
 "In a big pot, heat oil over medium-high heat. Add the onion; stir and cook until softened (6-8 min)",
 "Add the carrots, celery, garlic, thyme, salt, and pepper until the carrots soften (~5 minutes)",
@@ -1499,7 +1499,7 @@ var localDB = {
 "notes": [
 "Note: If you\u2019re using rotisserie chicken or precooked chicken, prepare the taco sauce as directed, then add the shredded cooked chicken and let it simmer for 10 to 15 minutes to really soak in the sauce"
 ],
-"rating": 2,
+"rating": 1,
 "recipe": [
 "Season chicken breasts with the salt and pepper",
 "In a large skillet, heat the olive oil over medium heat. Cook the chicken until golden, about 3 minutes per side. Add the onion and cook, stirring, until slightly translucent, about 2 minutes. Stir in the tomatoes with their juices, lime juice, garlic, chili powder, vinegar, cumin, oregano, and sugar. Reduce the heat and simmer, uncovered, stirring frequently, until the chicken is cooked through, about 15 minutes.",
@@ -1664,7 +1664,7 @@ var localDB = {
 "notes": [
 "Other recommended vegetables include: onion, cilantro, diced tomato, and/or diced green chilies"
 ],
-"rating": 2,
+"rating": 3,
 "recipe": [
 "Bake the chicken (if not already cooked)",
 "Preheat the oven to 375F",
@@ -1748,7 +1748,7 @@ var localDB = {
 "From the Joy of Cooking page 567",
 "Store bought Tzatziki makes this much easier because it's hard to get the right amount of Dill"
 ],
-"rating": 2,
+"rating": 1,
 "recipe": [
 "Bake the chicken with olive oil, salt, pepper, and garlic",
 "Lay everything out on the Naan and cover in Tzatziki"
@@ -1834,7 +1834,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 2,
+"rating": 1,
 "recipe": [
 ">> Roasting",
 "Preheat oven to 400F.\u00a0Line a large baking sheet with parchment paper",
@@ -2043,7 +2043,7 @@ var localDB = {
 "notes": [
 "From Cravings by Chrissy Teigen, page 51-52. Also includes recipe for crackers"
 ],
-"rating": 2,
+"rating": 1,
 "recipe": [
 "In a saucepan, bring the broth and milk to a simmer. Keep at simmer",
 "Prep the carrots and potato",
@@ -2104,7 +2104,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 2,
 "recipe": [
 ">> Chicken",
 "Pull out the chicken breasts from the fridge. Heat the skillet to medium-high heat with a bit of olive oil. Flip and coat the opposite side",
@@ -2351,7 +2351,7 @@ var localDB = {
 "notes": [
 "(Source: Becky Harder - Monument, CO)"
 ],
-"rating": 2,
+"rating": 1,
 "recipe": [
 "Halve the chicken breasts, then combine all the ingredients (undrained) into a crock pot (*makes exactly 3 Qt). Cover and cook on low for 8 hours",
 "Just before serving, slice the chicken breasts into bite size pieces and return to soup"
@@ -2382,7 +2382,7 @@ var localDB = {
 "notes": [
 "Chrissy Teigen Cravings"
 ],
-"rating": 2,
+"rating": 1,
 "recipe": [
 "Pierce sweet potatoes with a fork. (Originally: in a wet paper towel microwave on high for 12-13 minutes) Instead, try using the instant pot for 12 minutes at high pressure and low heat (TBD)",
 "When cool, peel and mash in a medium bowl until smooth. Stir in ricotta and 1 tsp salt. Mix with a fork and scatter in flour until doughy mixture",
@@ -2545,7 +2545,7 @@ var localDB = {
 "notes": [
 "Alt: just salt, pepper, red pepper flakes, olive oil. 425\u2109 for 20 minutes"
 ],
-"rating": 2,
+"rating": 1,
 "recipe": [
 "Preheat oven to 350\u00b0F",
 "On a tin foil covered pan, halve the zucchini and lightly coat with olive oil",
@@ -2641,7 +2641,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 2,
+"rating": 1,
 "recipe": [
 "In a medium mixing bowl, add the tomatoes, garlic, basil, vinegar, olive oil, cheese, salt, and pepper",
 "Mix thoroughly and let sit for at least 15 minutes at room temperature to let the flavors marinate",
@@ -2669,7 +2669,7 @@ var localDB = {
 "notes": [
 "Cook about one sweet potato per person"
 ],
-"rating": 2,
+"rating": 1,
 "recipe": [
 "Preheat the oven to 425F",
 "Peel the sweet potatoes and cut them into similarly sized fry-shaped pieces",
@@ -2724,7 +2724,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 2,
+"rating": 1,
 "recipe": [
 "Heat chicken and franks until hot",
 "Stir in cream cheese and ranch",
@@ -2792,7 +2792,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 2,
+"rating": 1,
 "recipe": [
 "Rinse the rice in a strainer for ~2 min. Shake dry",
 "In the instant pot, even distribute the rice in the water",
@@ -2816,7 +2816,7 @@ var localDB = {
 "notes": [
 "Link for rolling Uramaki: https://youtu.be/hfNhqawvSr8?t=2m50s"
 ],
-"rating": 2,
+"rating": 1,
 "recipe": [
 "Lay out a bamboo rolling mat, cutting board, knife, and small bowl of water",
 "Either place a sheet of plastic wrap down or put a bag over the bamboo rolling mat to make it easier to clean",
@@ -3131,70 +3131,70 @@ var localDB = {
 }
 ],
 "searchKeys": [
-"ingredients.2. CARAMEL LAYER",
-"ingredients.4-Quinoa",
-"ingredients.ingredients",
-"ingredients.FOR SERVING",
-"ingredients.4. CHOCOLATE GLAZE",
-"ingredients.Main",
-"ingredients.Chicken",
-"ingredients.3 - (Combine both bowls) then add:",
-"ingredients.FOR THE HOLLANDAISE",
-"ingredients.Tzatziki Sauce",
-"ingredients.FOR THE POACHED EGGS",
-"ingredients.Optional Garnish",
-"ingredients.1 - In a medium bowl, whisk:",
-"ingredients.toppings",
-"ingredients.DRESSING + SALAD",
-"ingredients.combinations",
-"ingredients.else",
-"ingredients.Peanut Noodles",
-"ingredients.soup",
-"ingredients.sauce",
-"ingredients.With",
-"ingredients.2 - In a large bowl, combine:",
-"ingredients.Curry",
-"ingredients.Combine",
-"ingredients.Base",
-"ingredients.Other Ingredients",
 "ingredients.Combine-Cookie Spread",
-"ingredients.Brown in Pan",
-"ingredients.Seasonings",
-"ingredients.6-Optional",
-"recipe",
 "ingredients.5-Chili-Lime Kale",
 "ingredients.dressing",
-"ingredients.Garnish Options",
-"group",
-"ingredients.Saute in Olive Oil",
-"ingredients.Seasoning Combinations",
-"ingredients.BUFFALO CHICKPEAS",
-"ingredients.Streusel",
-"ingredients.1. BROWNIE LAYER",
 "ingredients.FOR THE BENEDICT AND ASSEMBLY",
-"ingredients.Combine-Cookie Topping",
-"ingredients.3. COOKIE DOUGH LAYER",
-"ingredients.Sauce",
-"ingredients.2-Roasted Sriracha & Soy Sauce Chickpeas",
-"ingredients.Blender",
-"ingredients.Toppings",
-"ingredients.gnocchi",
+"ingredients.2. CARAMEL LAYER",
+"ingredients.Streusel",
 "notes",
-"title",
+"ingredients.Sauce",
+"ingredients.3 - (Combine both bowls) then add:",
+"ingredients.Base",
+"ingredients.Other Ingredients",
+"ingredients.Combine",
+"ingredients.muffins",
+"ingredients.else",
+"ingredients.BUFFALO CHICKPEAS",
+"ingredients.FOR THE POACHED EGGS",
+"ingredients.Blender",
+"ingredients.sauce",
+"ingredients.1. BROWNIE LAYER",
+"ingredients.1 - In a medium bowl, whisk:",
+"ingredients.FOR THE HOLLANDAISE",
+"ingredients.gnocchi",
+"ingredients.Main",
 "ingredients.1-Garlic Roasted Broccoli",
+"ingredients.Peanut Noodles",
+"ingredients.Tzatziki Sauce",
+"ingredients.4. CHOCOLATE GLAZE",
+"ingredients.With",
+"ingredients.Chicken",
+"ingredients.Brown in Pan",
+"ingredients.ingredients",
+"group",
+"ingredients.6-Optional",
 "ingredients.3-Curry Roasted Sweet Potatoes",
-"ingredients.muffins"
+"ingredients.combinations",
+"ingredients.Toppings",
+"ingredients.toppings",
+"recipe",
+"title",
+"ingredients.Garnish Options",
+"ingredients.Seasonings",
+"ingredients.FOR SERVING",
+"ingredients.DRESSING + SALAD",
+"ingredients.2-Roasted Sriracha & Soy Sauce Chickpeas",
+"ingredients.3. COOKIE DOUGH LAYER",
+"ingredients.Saute in Olive Oil",
+"ingredients.Optional Garnish",
+"ingredients.soup",
+"ingredients.Curry",
+"ingredients.Seasoning Combinations",
+"ingredients.Combine-Cookie Topping",
+"ingredients.4-Quinoa",
+"ingredients.2 - In a large bowl, combine:"
 ],
 "toc": {
 "breakfast": [
 "recipe-breakfast_burrito:Breakfast Burrito:1",
-"recipe-coffee:Coffee:1",
-"recipe-eggs_benedict:Eggs Benedict:2",
+"recipe-coffee:Coffee:0",
+"recipe-eggs_benedict:Eggs Benedict:3",
 "recipe-hard_boiled_eggs:Hard Boiled Eggs:1",
 "recipe-lemon_poppy_seed_mini_scones:Lemon Poppy Seed Mini Scones:1",
-"recipe-oatmeal:Oatmeal:1",
+"recipe-oatmeal:Oatmeal:0",
 "recipe-omelette:Omelette:1",
-"recipe-pancakes_king_arthur:Pancakes King Arthur:1",
+"recipe-pancakes_king_arthur:Pancakes King Arthur:2",
 "recipe-pancakes_new_york_times:Pancakes New York Times:1",
 "recipe-waffles:Waffles:1"
 ],
@@ -3202,19 +3202,19 @@ var localDB = {
 "recipe-apple_crisp:Apple Crisp:1",
 "recipe-baked_apples:Baked Apples:1",
 "recipe-banana_bread:Banana Bread:2",
-"recipe-biscotti:Biscotti:2",
+"recipe-biscotti:Biscotti:3",
 "recipe-cake_pops:Cake Pops:1",
 "recipe-chocolate-pb-m&m_balls:Chocolate-Pb-M&M Balls:1",
 "recipe-collens_peanut_butter_bars:Collens Peanut Butter Bars:1",
 "recipe-cookie_dough_billionaire_bars:Cookie Dough Billionaire Bars:1",
 "recipe-flourless_chocolate_cake:Flourless Chocolate Cake:2",
-"recipe-hot_fudge_sauce:Hot Fudge Sauce:2",
+"recipe-hot_fudge_sauce:Hot Fudge Sauce:3",
 "recipe-molten_chocolate_cake:Molten Chocolate Cake:1",
 "recipe-oatmeal_balls:Oatmeal Balls:1",
 "recipe-oatmeal_raisin_cookies:Oatmeal Raisin Cookies:2",
 "recipe-oreo_truffles:Oreo Truffles:1",
 "recipe-peanut_butter_and_cocoa_smothie:Peanut Butter And Cocoa Smothie:1",
-"recipe-skillet_peanut_butter_chocolate_chip_blondies:Skillet Peanut Butter Chocolate Chip Blondies:2",
+"recipe-skillet_peanut_butter_chocolate_chip_blondies:Skillet Peanut Butter Chocolate Chip Blondies:1",
 "recipe-toasted_marshmallow_brownie_crinkles:Toasted Marshmallow Brownie Crinkles:1"
 ],
 "grains": [
@@ -3227,44 +3227,44 @@ var localDB = {
 "recipe-peanut_noodles:Peanut Noodles:1",
 "recipe-quinoa_and_stuff:Quinoa And Stuff:1",
 "recipe-red_beans_and_rice:Red Beans And Rice:1",
-"recipe-sausage_and_mushroom_penne_pasta:Sausage And Mushroom Penne Pasta:1",
+"recipe-sausage_and_mushroom_penne_pasta:Sausage And Mushroom Penne Pasta:2",
 "recipe-sesame_noodles_with_wilted_greens:Sesame Noodles With Wilted Greens:1",
 "recipe-spaghetti_cacio_e_cepe:Spaghetti Cacio E Cepe:2",
-"recipe-spaghetti_sauce:Spaghetti Sauce:2"
+"recipe-spaghetti_sauce:Spaghetti Sauce:3"
 ],
 "meals": [
 "recipe-baked-fish:Baked-Fish:1",
-"recipe-baked_ziti:Baked Ziti:2",
-"recipe-brick_chicken:Brick Chicken:2",
+"recipe-baked_ziti:Baked Ziti:1",
+"recipe-brick_chicken:Brick Chicken:3",
 "recipe-chicken:Chicken:1",
-"recipe-chicken_cacciatore:Chicken Cacciatore:2",
-"recipe-chicken_noodle_soup:Chicken Noodle Soup:2",
-"recipe-chicken_tacos:Chicken Tacos:2",
+"recipe-chicken_cacciatore:Chicken Cacciatore:1",
+"recipe-chicken_noodle_soup:Chicken Noodle Soup:1",
+"recipe-chicken_tacos:Chicken Tacos:1",
 "recipe-chickpea_and_spinach_salad:Chickpea And Spinach Salad:1",
 "recipe-chickpea_salad_wrap:Chickpea Salad Wrap:1",
 "recipe-chickpea_spicy_buffalo_wrap:Chickpea Spicy Buffalo Wrap:1",
 "recipe-crab_cakes:Crab Cakes:2",
-"recipe-enchiladas:Enchiladas:2",
+"recipe-enchiladas:Enchiladas:3",
 "recipe-fajitas:Fajitas:1",
-"recipe-gyros:Gyros:2",
+"recipe-gyros:Gyros:1",
 "recipe-jambon_beurre:Jambon Beurre:1",
-"recipe-karens_roasted_veggie_bowls:Karens Roasted Veggie Bowls:2",
+"recipe-karens_roasted_veggie_bowls:Karens Roasted Veggie Bowls:1",
 "recipe-mediterranean_chicken:Mediterranean Chicken:1",
 "recipe-mini_pizza:Mini Pizza:1",
 "recipe-naan_pizza:Naan Pizza:1",
 "recipe-nori_vegetable_wraps:Nori Vegetable Wraps:1",
 "recipe-pizza:Pizza:2",
-"recipe-pot_pie_soup:Pot Pie Soup:2",
+"recipe-pot_pie_soup:Pot Pie Soup:1",
 "recipe-pretzels:Pretzels:1",
-"recipe-quick_skillet_meals:Quick Skillet Meals:1",
+"recipe-quick_skillet_meals:Quick Skillet Meals:2",
 "recipe-roasted_vegetables:Roasted Vegetables:2",
 "recipe-sesame_chicken_noodles:Sesame Chicken Noodles:1",
 "recipe-shrimp_creole:Shrimp Creole:3",
 "recipe-shrimp_scampi:Shrimp Scampi:1",
 "recipe-shrimp_tacos:Shrimp Tacos:1",
 "recipe-slow_cooker_chicken_mango_curry:Slow Cooker Chicken Mango Curry:1",
-"recipe-slow_cooker_chicken_tortilla_soup:Slow Cooker Chicken Tortilla Soup:2",
-"recipe-sweet_potato_gnocchi:Sweet Potato Gnocchi:2",
+"recipe-slow_cooker_chicken_tortilla_soup:Slow Cooker Chicken Tortilla Soup:1",
+"recipe-sweet_potato_gnocchi:Sweet Potato Gnocchi:1",
 "recipe-tomato_mozzarella_caprese:Tomato Mozzarella Caprese:1",
 "recipe-tuna_melts:Tuna Melts:1"
 ],
@@ -3272,19 +3272,19 @@ var localDB = {
 "recipe-baked_broccoli:Baked Broccoli:1",
 "recipe-baked_potatoes:Baked Potatoes:1",
 "recipe-baked_potatoes_instant_pot:Baked Potatoes Instant Pot:1",
-"recipe-baked_zucchini:Baked Zucchini:2",
+"recipe-baked_zucchini:Baked Zucchini:1",
 "recipe-basmati_rice:Basmati Rice:1",
 "recipe-blueberry_sour_cream_muffins:Blueberry Sour Cream Muffins:2",
-"recipe-bruschetta:Bruschetta:2",
-"recipe-crispy_baked_sweet_potato_fries:Crispy Baked Sweet Potato Fries:2",
+"recipe-bruschetta:Bruschetta:1",
+"recipe-crispy_baked_sweet_potato_fries:Crispy Baked Sweet Potato Fries:1",
 "recipe-guacamole:Guacamole:1",
-"recipe-karens_spicy_chicken_dip:Karens Spicy Chicken Dip:2",
+"recipe-karens_spicy_chicken_dip:Karens Spicy Chicken Dip:1",
 "recipe-salad:Salad:1",
 "recipe-sweet_potatoes:Sweet Potatoes:1"
 ],
 "sushi": [
-"recipe-_rice: Rice:2",
-"recipe-_rolling: Rolling:2",
+"recipe-_rice: Rice:1",
+"recipe-_rolling: Rolling:1",
 "recipe-california_rolls:California Rolls:1",
 "recipe-canned_spicy_tuna_roll:Canned Spicy Tuna Roll:1",
 "recipe-onigiri:Onigiri:1",

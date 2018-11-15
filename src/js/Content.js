@@ -28,12 +28,11 @@ const addToC = function( contentDivID ) {
     const titles = []
     for ( let tocItem of localDB.toc[group] ) {
       const splitToc = tocItem.split( ':' )
-      console.log( splitToc, tocItem)
       titles.push(
         crel( 'li', {'class': `rated-row rating-${splitToc[2]}`},
           crel( 'a', {'href': `#${splitToc[0]}`},
-            crel( 'span', `${splitToc[1]} ` ),
-            crel( 'span', addStars( Number( splitToc[2] ) ) )
+            crel( 'span', addStars( Number( splitToc[2] ) ) ),
+            crel( 'span', `${splitToc[1]} ` )
           )
         )
       )
