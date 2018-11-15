@@ -781,6 +781,43 @@ var localDB = {
 },
 {
 "group": "dessert",
+"id": "recipe-skillet_peanut_butter_chocolate_chip_blondies",
+"imgPlaceholder": "dist/imgs/placeholder-dessert-skillet_peanut_butter_chocolate_chip_blondies.svg",
+"imgSrc": "dist/imgs/dessert-skillet_peanut_butter_chocolate_chip_blondies.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1 stick butter, slightly softened",
+"2/3 cup crunchy peanut butter",
+"3/4 light brown sugar, packed",
+"2/3 cup granulated sugar",
+"2 tsp vanilla extract",
+"2 eggs",
+"1.25 cups flour",
+"1 tsp salt",
+"1 tsp baking powder",
+"2/3 cup peanut butter chips",
+"2/3 cup chocolate chips (milk or dark)"
+]
+},
+"notes": [
+"Chrissy Teigen Cravings, 243",
+"Sometimes you can find bags of peanut butter and chocolate chips, which gives you 2/3 cup leftover for snacking :)"
+],
+"rating": 2,
+"recipe": [
+"Preheat oven to 350 and butter a 10 inch iron skillet",
+"With a wooden spoon, beat together the butter, peanut butter, brown sugar, and granulated sugar until creamy",
+"Add the vanilla, then beat in one egg at a time.",
+"In a small bowl, whisk together the flour, salt, and backing powder. Add the flour mixture to the main mix",
+"Mix in the peanut butter and chocolate chips",
+"Spread the batter into the skillet and bake for 40-45 (when the center is soft and gooey, but outside is golden brown)"
+],
+"source": "",
+"title": "Skillet Peanut Butter Chocolate Chip Blondies"
+},
+{
+"group": "dessert",
 "id": "recipe-toasted_marshmallow_brownie_crinkles",
 "imgPlaceholder": "dist/imgs/placeholder-dessert-toasted_marshmallow_brownie_crinkles.svg",
 "imgSrc": "dist/imgs/dessert-toasted_marshmallow_brownie_crinkles.jpg",
@@ -1180,7 +1217,9 @@ var localDB = {
 "3 cups baby arugula"
 ]
 },
-"notes": [],
+"notes": [
+"Chrissy Teigen Cravings, 78"
+],
 "rating": 2,
 "recipe": [
 "Start a large pot of water to boil and prep the cheese, garlic, and lemon juice.",
@@ -1189,7 +1228,7 @@ var localDB = {
 "Combine the lemon juice, spaghetti, and Parmesan cheese. Add a small amount of pasta water as needed to help melt the cheese.",
 "Add the baby arugula and allow to wilt for 2 minutes."
 ],
-"source": "(Cravings:78) https://smile.amazon.com/Cravings-Recipes-All-Food-Want/dp/1101903910/ref=sr_1_1?ie=UTF8&qid=1516461754&sr=8-1&keywords=cravings",
+"source": "",
 "title": "Spaghetti Cacio E Cepe"
 },
 {
@@ -1318,7 +1357,9 @@ var localDB = {
 "cast iron skillet"
 ]
 },
-"notes": [],
+"notes": [
+"Chrissy Teigen Cravings, 218"
+],
 "rating": 2,
 "recipe": [
 "In a large bowl, combine everything except for the canola oil and quartered lemons. Pat the chicken dry then rub with the marinade. Refrigerate for 2-24 hours.",
@@ -1326,7 +1367,7 @@ var localDB = {
 "Cook for 7 minutes. Remove the bricks and flip the chicken. Cook for 7-9 minutes. Check that the chicken is fully cooked by piercing the thickest part with a knife and verify that none of the juices are pink.",
 "Remove the chicken, then sear the quartered lemons for 2 minutes on each side in the hot pan."
 ],
-"source": "(Cravings:218) https://smile.amazon.com/Cravings-Recipes-All-Food-Want/dp/1101903910/ref=sr_1_1?ie=UTF8&qid=1516461754&sr=8-1&keywords=cravings",
+"source": "",
 "title": "Brick Chicken"
 },
 {
@@ -1394,6 +1435,42 @@ var localDB = {
 ],
 "source": "(Essential Instant Pot:69) https://smile.amazon.com/Essential-Instant-Pot-Cookbook-Foolproof/dp/0399580883/ref=sr_1_1_sspa?ie=UTF8&qid=1516461807&sr=8-1-spons&keywords=essential+instant+pot&psc=1",
 "title": "Chicken Cacciatore"
+},
+{
+"group": "meals",
+"id": "recipe-chicken_noodle_soup",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"2 tbsp extra virgin olive oil",
+"1 medium onion, chopped",
+"5 medium carrots, coined",
+"6 celery stalks, cut into half moons",
+"2 tbsp garlic, minced",
+"1 tsp thyme, chopped",
+"1 tbsp salt",
+"1 tsp pepper",
+"1 bay leaf,",
+"10 cups chicken broth",
+"3 ounces wide egg noodles, cooked",
+"rotisserie chicken meat, shredded"
+]
+},
+"notes": [
+"Chrissy Teigen Cravings"
+],
+"rating": 2,
+"recipe": [
+"In a big pot, heat oil over medium-high heat. Add the onion; stir and cook until softened (6-8 min)",
+"Add the carrots, celery, garlic, thyme, salt, and pepper until the carrots soften (~5 minutes)",
+"Add the bay leaf and chicken broth. Boil and reduce heat to simmer for 45 minutes",
+"Shred the chicken and cook the noodles",
+"At 45 minutes, stir in the chicken and cooked noodles. Heat for 5-10 min then toss the bay leaf and serve"
+],
+"source": "",
+"title": "Chicken Noodle Soup"
 },
 {
 "group": "meals",
@@ -1964,7 +2041,7 @@ var localDB = {
 ]
 },
 "notes": [
-"From Cravings by Chrissy Teigen, page 51-52. Also includes "
+"From Cravings by Chrissy Teigen, page 51-52. Also includes recipe for crackers"
 ],
 "rating": 2,
 "recipe": [
@@ -2073,6 +2150,45 @@ var localDB = {
 ],
 "source": "",
 "title": "Roasted Vegetables"
+},
+{
+"group": "meals",
+"id": "recipe-sesame_chicken_noodles",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"dressing": [
+"Dressing",
+"1 tsp sesame oil",
+"1/4 cup peanut oil",
+"1/4 cup tahini",
+"3 tbsp soy sauce",
+"2 tbsp red wine vinegar",
+"2 tsp chili oil",
+"1 tsp honey",
+"1/2 tsp cayenne pepper",
+"1 garlic clove, minced"
+],
+"else": [
+"Else",
+"1 chicken breast",
+"8 ounces fettuccine",
+"1 tsp sesame oil",
+"2 scallions, thinly sliced"
+]
+},
+"notes": [
+"Chrissy Teigen Cravings, 78"
+],
+"rating": 1,
+"recipe": [
+"Fill a large saucepan 2/3 full of water and bring to a boil. Add the chicken breast and remove from heat. Cover and let chicken sit until tender (15 minutes); check for done-ness and when done remove and place onto a plate",
+"With the same water, bring it back to a boil. Add the fettuccine and cook according to directions.",
+"In a medium bowl, which together the sauce until smooth.",
+"Rinse the noodles until cool, then pat dry. Toss the noodles with the remaining 1 tsp sesame oil. Shred the chicken by hand and toss with the noodles. Finally coat with the dressing"
+],
+"source": "",
+"title": "Sesame Chicken Noodles"
 },
 {
 "group": "meals",
@@ -2242,6 +2358,43 @@ var localDB = {
 ],
 "source": "",
 "title": "Slow Cooker Chicken Tortilla Soup"
+},
+{
+"group": "meals",
+"id": "recipe-sweet_potato_gnocchi",
+"imgPlaceholder": "dist/imgs/placeholder-meals-sweet_potato_gnocchi.svg",
+"imgSrc": "dist/imgs/meals-sweet_potato_gnocchi.jpeg",
+"ingredients": {
+"gnocchi": [
+"Gnocchi",
+"1 large sweet potato",
+"1/3 cup whole milk ricotta cheese",
+"3/4 cup flour"
+],
+"sauce": [
+"Sauce",
+"1/3-2/3 stick butter",
+"1/4 cup fresh sage leaves",
+"1/2 finely grated parmesan",
+"salt and pepper"
+]
+},
+"notes": [
+"Chrissy Teigen Cravings"
+],
+"rating": 2,
+"recipe": [
+"Pierce sweet potatoes with a fork. (Originally: in a wet paper towel microwave on high for 12-13 minutes) Instead, try using the instant pot for 12 minutes at high pressure and low heat (TBD)",
+"When cool, peel and mash in a medium bowl until smooth. Stir in ricotta and 1 tsp salt. Mix with a fork and scatter in flour until doughy mixture",
+"Bring a gallon of water to boil over high heat",
+"Lightly flour work surface and gently knead the dough 10 times folding 90 degrees each time.",
+"Divide the dough into three equal pieces; gently roll each into a ball then into a log roughly 12 in x 1 in diameter. Cut the log crosswise/diagonally into 12 pieces (36 total)",
+"Drop the gnocchi into the boiling water and stir for the first minute. Cook until they float to the surface (4-5 min)",
+"In parallel, in a large skillet, melt the butter over medium heat. When the foam subsides add the sage and cook until the sage is crispy and the butter is browned (3 min)",
+"Scoop the gnocchi out with a strainer and add to the skillet. Add the Parmesan and salt and pepper to taste."
+],
+"source": "",
+"title": "Sweet Potato Gnocchi"
 },
 {
 "group": "meals",
@@ -2978,55 +3131,59 @@ var localDB = {
 }
 ],
 "searchKeys": [
-"ingredients.3-Curry Roasted Sweet Potatoes",
-"ingredients.ingredients",
-"ingredients.FOR SERVING",
-"ingredients.Curry",
-"ingredients.Base",
-"ingredients.Combine",
-"ingredients.Other Ingredients",
-"ingredients.3. COOKIE DOUGH LAYER",
-"ingredients.1 - In a medium bowl, whisk:",
-"recipe",
-"ingredients.4. CHOCOLATE GLAZE",
-"ingredients.DRESSING + SALAD",
-"ingredients.Brown in Pan",
-"ingredients.5-Chili-Lime Kale",
 "notes",
-"ingredients.FOR THE HOLLANDAISE",
-"ingredients.2-Roasted Sriracha & Soy Sauce Chickpeas",
-"ingredients.4-Quinoa",
-"ingredients.Optional Garnish",
-"ingredients.1. BROWNIE LAYER",
-"ingredients.Saute in Olive Oil",
-"ingredients.Seasoning Combinations",
-"ingredients.Seasonings",
-"ingredients.With",
-"ingredients.Combine-Cookie Spread",
-"ingredients.BUFFALO CHICKPEAS",
-"ingredients.Garnish Options",
-"ingredients.Peanut Noodles",
 "ingredients.muffins",
-"ingredients.3 - (Combine both bowls) then add:",
-"ingredients.Chicken",
-"ingredients.Streusel",
-"ingredients.2. CARAMEL LAYER",
-"ingredients.soup",
-"group",
-"ingredients.6-Optional",
-"ingredients.toppings",
+"ingredients.Peanut Noodles",
+"ingredients.Saute in Olive Oil",
+"ingredients.With",
+"ingredients.1 - In a medium bowl, whisk:",
+"ingredients.FOR THE HOLLANDAISE",
+"title",
+"ingredients.gnocchi",
 "ingredients.FOR THE BENEDICT AND ASSEMBLY",
+"ingredients.Other Ingredients",
+"ingredients.soup",
+"ingredients.Seasonings",
+"ingredients.2-Roasted Sriracha & Soy Sauce Chickpeas",
+"ingredients.4. CHOCOLATE GLAZE",
+"ingredients.FOR THE POACHED EGGS",
+"ingredients.1-Garlic Roasted Broccoli",
+"ingredients.Curry",
+"ingredients.2. CARAMEL LAYER",
+"ingredients.Seasoning Combinations",
+"ingredients.Combine-Cookie Spread",
+"ingredients.3-Curry Roasted Sweet Potatoes",
+"ingredients.Chicken",
+"ingredients.ingredients",
+"ingredients.3. COOKIE DOUGH LAYER",
+"ingredients.Optional Garnish",
+"ingredients.else",
+"ingredients.5-Chili-Lime Kale",
+"ingredients.Garnish Options",
+"ingredients.Toppings",
+"ingredients.BUFFALO CHICKPEAS",
+"group",
+"ingredients.Base",
+"ingredients.4-Quinoa",
+"recipe",
+"ingredients.Sauce",
+"ingredients.Combine",
+"ingredients.Blender",
+"ingredients.sauce",
+"ingredients.1. BROWNIE LAYER",
+"ingredients.Brown in Pan",
 "ingredients.combinations",
+"ingredients.DRESSING + SALAD",
+"ingredients.3 - (Combine both bowls) then add:",
+"ingredients.Main",
+"ingredients.6-Optional",
+"ingredients.Streusel",
+"ingredients.dressing",
+"ingredients.Combine-Cookie Topping",
 "ingredients.2 - In a large bowl, combine:",
 "ingredients.Tzatziki Sauce",
-"ingredients.FOR THE POACHED EGGS",
-"ingredients.Combine-Cookie Topping",
-"ingredients.Blender",
-"ingredients.Sauce",
-"ingredients.Toppings",
-"title",
-"ingredients.1-Garlic Roasted Broccoli",
-"ingredients.Main"
+"ingredients.toppings",
+"ingredients.FOR SERVING"
 ],
 "toc": {
 "breakfast": [
@@ -3057,6 +3214,7 @@ var localDB = {
 "Oatmeal Raisin Cookies",
 "Oreo Truffles",
 "Peanut Butter And Cocoa Smothie",
+"Skillet Peanut Butter Chocolate Chip Blondies",
 "Toasted Marshmallow Brownie Crinkles"
 ],
 "grains": [
@@ -3080,6 +3238,7 @@ var localDB = {
 "Brick Chicken",
 "Chicken",
 "Chicken Cacciatore",
+"Chicken Noodle Soup",
 "Chicken Tacos",
 "Chickpea And Spinach Salad",
 "Chickpea Salad Wrap",
@@ -3099,11 +3258,13 @@ var localDB = {
 "Pretzels",
 "Quick Skillet Meals",
 "Roasted Vegetables",
+"Sesame Chicken Noodles",
 "Shrimp Creole",
 "Shrimp Scampi",
 "Shrimp Tacos",
 "Slow Cooker Chicken Mango Curry",
 "Slow Cooker Chicken Tortilla Soup",
+"Sweet Potato Gnocchi",
 "Tomato Mozzarella Caprese",
 "Tuna Melts"
 ],
