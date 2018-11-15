@@ -1,6 +1,7 @@
 'use strict'
 
 import Recipe from './Recipe.js'
+import {addStars} from './Helpers.js'
 
 /*
 >> Create Table of Contents, Headers, and Recipes
@@ -17,16 +18,26 @@ const addToC = function( contentDivID ) {
   for ( let group of Object.keys( localDB.toc ) )
     allRcps = [...allRcps, ...localDB.toc[group]]
 
-  // Use the recipe title index in allRcps to get the full recipe index in localDB
-  const getRcpByName = function( rcpTtl ) {
-    return localDB.recipes[allRcps.indexOf( rcpTtl )]
-  }
+  // // Use the recipe title index in allRcps to get the full recipe index in localDB
+  // const getRcpByName = function( rcpTtl ) {
+  //   return localDB.recipes[allRcps.indexOf( rcpTtl )]
+  // }
 
   // Add link for each recipe per group/heading
   for ( let group of Object.keys( localDB.toc ) ) {
     const titles = []
-    for ( let rcpTtl of localDB.toc[group] )
-      titles.push( crel( 'li', crel( 'a', {'href': `#${getRcpByName( rcpTtl ).id}`}, rcpTtl ) ) )
+    for ( let tocItem of localDB.toc[group] ) {
+      const splitToc = tocItem.split( ':' )
+      console.log( splitToc, tocItem)
+      titles.push(
+        crel( 'li', {'class': `rated-row rating-${splitToc[2]}`},
+          crel( 'a', {'href': `#${splitToc[0]}`},
+            crel( 'span', `${splitToc[1]} ` ),
+            crel( 'span', addStars( Number( splitToc[2] ) ) )
+          )
+        )
+      )
+    }
     crel( trgt, crel( 'ul', crel( 'li',
       crel( 'a', {'href': `#${group}`}, group ),
       crel( 'ul', titles )

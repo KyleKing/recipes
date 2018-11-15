@@ -1,6 +1,7 @@
 'use strict'
 
 import Highlighter from './Highlighter.js'
+import {addStars} from './Helpers.js'
 
 // Default Recipe class
 export default class {
@@ -53,14 +54,6 @@ export default class {
     return items
   }
 
-  // Generic generator of HTML-list elements based on recipe and key argument
-  addRating ( rcp ) {
-    const stars = []
-    for ( let idx = 0; idx < rcp.rating; idx++ )
-      stars.push( crel( 'i', {'class': 'fas fa-star'} ) )
-    return stars
-  }
-
   // Generate HTML for each recipe
   insertRecipe ( rcp, titleMatches, sourceLink, additionalNotes, matchLookup = {} ) {
     const group = rcp.group
@@ -86,7 +79,7 @@ export default class {
             crel( 'span', ' ' ),
             sourceLink,
             crel( 'span', ' ' ),
-            this.addRating( rcp )
+            addStars( rcp.rating )
           )
         ),
         crel( 'div', {'class': 'row'},

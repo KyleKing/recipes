@@ -181,7 +181,7 @@ class SiteCompiler(object):
         # Extend table of contents
         if (subdir not in self.toc):
             self.toc[subdir] = []
-        self.toc[subdir].append(recipe['title'])
+        self.toc[subdir].append('{}:{}:{}'.format(recipe['id'], recipe['title'], recipe['rating']))
         # Adds link to minified image
         if recipe_title in self.imgs:
             recipe['imgSrc'] = self.imgs[recipe_title]
