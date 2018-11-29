@@ -139,6 +139,11 @@ footer {
     opacity: 1;
 }
 
+/* Style Table of Contents */
+.empty-stars i {
+    color: #ececec;
+}
+
 
 /* Use class to toggle recipe hiding */
 .hide {

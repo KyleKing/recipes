@@ -32,7 +32,8 @@ const addToC = function( contentDivID ) {
         crel( 'li', {'class': `rated-row rating-${splitToc[2]}`},
           crel( 'a', {'href': `#${splitToc[0]}`},
             crel( 'span', addStars( Number( splitToc[2] ) ) ),
-            crel( 'span', `${splitToc[1]} ` )
+            crel( 'span', {'class': 'empty-stars'}, addStars( 3 - Number( splitToc[2] ) ) ),
+            crel( 'span', {'style': 'padding-left: 2px'}, `${splitToc[1]} ` )
           )
         )
       )
