@@ -43,7 +43,7 @@ var localDB = {
 "I don't drink coffee, so this is actually sort of useful",
 "Photo by Isaac Benhesed on Unsplash"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Fill to line 2 with water, then add 3 large tbsp of coffee over filter"
 ],
@@ -146,7 +146,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Preheat oven to 400\u00baF and line a baking sheet with parchment. Prep the lemon and place the zest and juice separately to the side",
 "In a large bowl, stir together the flour, salt, *1/4* cup powdered sugar, baking powder, poppy seeds, and 1 tsp lemon zest",
@@ -179,7 +179,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [],
 "source": "https://www.modernhoney.com/the-oatmeal-love-bar/",
 "title": "Oatmeal"
@@ -358,7 +358,7 @@ var localDB = {
 "notes": [
 "Try to look for Rome Beauty, Golden Delicious, Jonagold, or TBD"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Preheat oven to 375F",
 "Core the apples leaving the bottom 1/2 inch intact",
@@ -477,7 +477,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Mix butter, peanut butter, M&M\u2019s, and powdered sugar until well blended.",
 "Roll 1 inch balls and freeze for 20 minutes",
@@ -511,7 +511,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Preheat oven to 350",
 "Press 24 cookie dough pieces into a 9x13 pan",
@@ -564,7 +564,7 @@ var localDB = {
 "notes": [
 "Cut with a hot dry knife before serving. Keep refrigerated in one layer as the caramel layer will start to ooze as these come to room temperature"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Preheat oven to 325F, line an 8\u00d78 inch pan with non-stick foil or use regular foil and spray with non-stick spray",
 ">> Brownie Batter",
@@ -606,6 +606,43 @@ var localDB = {
 ],
 "source": "https://theviewfromgreatisland.com/belgian-chocolate-cake-gluten-free/",
 "title": "Flourless Chocolate Cake"
+},
+{
+"group": "dessert",
+"id": "recipe-gingerbread_cookies",
+"imgPlaceholder": "dist/imgs/placeholder-dessert-gingerbread_cookies.svg",
+"imgSrc": "dist/imgs/dessert-gingerbread_cookies.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1 cup light brown sugar",
+"1 cup light molasses",
+"1 cup vegetable shortening",
+"1 tbsp baking soda",
+"1 egg, lightly beaten",
+"1\u20444 tsp salt",
+"2 tsp baking powder",
+"1 tbsp ground ginger",
+"1\u20442 tsp ground cinnamon",
+"1\u20442 tsp ground cloves",
+"4 cups all-purpose flour, more for rolling dough",
+"royal icing and cinnamon candies, for decorating"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"In a small saucepan, combine brown sugar, molasses and shortening. Place over medium-low heat and stir just until mixture is melted and smooth",
+"Remove from heat and mix in baking soda and 1/4 cup cold water. Set aside and allow to cool to room temperature",
+"Add egg, salt, baking powder, ginger, cinnamon and cloves; stir to mix well",
+"Add 4 cups flour and mix well, adding up to 1/2 cup more if dough seems sticky. Shape into a ball, cover and refrigerate for at least 2 hours and up to 24 hours.",
+"Preheat oven to 350 degrees. Line baking sheets with parchment paper and set aside.",
+"On a lightly floured surface, roll out dough to 1/4-inch thickness, and cut into gingerbread shapes with a 5-inch-long cookie cutter",
+"Arrange on baking sheets 1.5 inches apart, and bake until risen and no longer shiny, about 10 minutes.",
+"Remove from heat and allow cookies to cool. If desired, decorate with royal icing and cinnamon candies. Store in an airtight container."
+],
+"source": "https://cooking.nytimes.com/recipes/1015813-gingerbread-cookies",
+"title": "Gingerbread Cookies"
 },
 {
 "group": "dessert",
@@ -655,7 +692,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "TODO"
 ],
@@ -726,7 +763,7 @@ var localDB = {
 "recipe": [
 "Preheat oven to 350'F",
 "Whisk part 1. With a wooden spoon combine part 2. Then in the large bowl, combine 1 and 2 then 3",
-"Bake for 12-14 minutes on a light colored cooking sheet. When done, let sit for a few minutes then place on a cooling rack"
+"Bake for 12 minutes (or 14 from frozen) on a light colored cooking sheet. When done, let sit for a few minutes then place on a cooling rack"
 ],
 "source": "",
 "title": "Oatmeal Raisin Cookies"
@@ -1240,13 +1277,13 @@ var localDB = {
 "ingredients": {
 "Brown in Pan": [
 "Brown In Pan",
-"1 lb hamburger meat"
+"1 lb lean hamburger meat"
 ],
 "Other Ingredients": [
 "Other Ingredients",
 "3 lbs whole tomatoes (2-3 cans)",
 "1 large can of water",
-"12 oz tomato paste (2 cans",
+"12 oz tomato paste (2 cans)",
 "1 tbsp basil",
 "1 tbsp worcestershire sauce (they use a lot)",
 "1 tsp salt",
@@ -1260,7 +1297,8 @@ var localDB = {
 "2 onions, chopped",
 "1/2 green pepper, chopped",
 "3 stalks celery, chopped",
-"5 cloves garlic, chopped"
+"5 cloves garlic, chopped",
+"3 carrot sticks, peeled and coined"
 ]
 },
 "notes": [
@@ -1325,7 +1363,7 @@ var localDB = {
 "notes": [
 "Alex's family recipe"
 ],
-"rating": 1,
+"rating": 2,
 "recipe": [
 "Prepare pasta according to the instructions",
 "Add spinach during the last minute of cook time, then drain the pasta and spinach. Place back in the pot",
@@ -1461,7 +1499,7 @@ var localDB = {
 "notes": [
 "Chrissy Teigen Cravings"
 ],
-"rating": 1,
+"rating": 2,
 "recipe": [
 "In a big pot, heat oil over medium-high heat. Add the onion; stir and cook until softened (6-8 min)",
 "Add the carrots, celery, garlic, thyme, salt, and pepper until the carrots soften (~5 minutes)",
@@ -1499,7 +1537,7 @@ var localDB = {
 "notes": [
 "Note: If you\u2019re using rotisserie chicken or precooked chicken, prepare the taco sauce as directed, then add the shredded cooked chicken and let it simmer for 10 to 15 minutes to really soak in the sauce"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Season chicken breasts with the salt and pepper",
 "In a large skillet, heat the olive oil over medium heat. Cook the chicken until golden, about 3 minutes per side. Add the onion and cook, stirring, until slightly translucent, about 2 minutes. Stir in the tomatoes with their juices, lime juice, garlic, chili powder, vinegar, cumin, oregano, and sugar. Reduce the heat and simmer, uncovered, stirring frequently, until the chicken is cooked through, about 15 minutes.",
@@ -1528,7 +1566,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "In a large bowl combine the spinach, chickpeas, bell pepper, and scallions",
 "Whisk together the lemon juice, olive oil, salt, and pepper and pour over the chickpea/spinach mixture. Toss to evenly coat"
@@ -1558,7 +1596,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Pat chickpeas dry, making sure no excess moisture remains from washing them",
 "Combine all chickpea salad ingredients in a large bowl, and mix until everything is well combined",
@@ -1598,7 +1636,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Make dressing by adding hummus, maple syrup, and lemon juice to a mixing bowl and whisking to combine. Add hot water until thick but pourable. Toss with chopped lettuce",
 "To make chickpeas, add drained, dried chickpeas to a separate mixing bowl. Add oil, 3 tbsp* of the hot sauce, garlic powder, and salt - toss to combine",
@@ -1834,7 +1872,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 2,
 "recipe": [
 ">> Roasting",
 "Preheat oven to 400F.\u00a0Line a large baking sheet with parchment paper",
@@ -1884,7 +1922,7 @@ var localDB = {
 "notes": [
 "Source: La Madeleine email"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Preheat oven to 450 and line baking sheet pan with parchment paper",
 "In a medium bowl, add the potatoes, peppers, and onion. Toss with 2 tbsp extra virgin olive oil, half the spices, salt, and pepper. Spread around the edges of the baking sheet leaving the middle empty",
@@ -1977,7 +2015,7 @@ var localDB = {
 "To make roasted red peppers, hold them over a burner with tongs until charred. Put in a glass bowl with lid to let them steam and to make remove the char easier. Source: https://www.thekitchn.com/how-to-roast-peppers-3-ways-234734",
 "Other vegetables worth trying: red cabbage, radish, asparagus spears, zucchini, or sprouts"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "The original recipe uses nori, but wraps work too. Layer on the hummus, then top with ingredients"
 ],
@@ -2082,7 +2120,7 @@ var localDB = {
 "Food Network: http://www.foodnetwork.com/recipes/food-network-kitchen/almost-famous-soft-pretzels-recipe-1972733",
 "Food Network Alt: http://www.foodnetwork.com/recipes/alton-brown/homemade-soft-pretzels-recipe-1948242"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "In large bowl, stir yeast, sugar and warm water. Let rest until yeast is dissolved and is a little foamy.",
 "Stir in 1 cup flour. Then rest of flour mixed with the 1 tbsp salt. Knead on lightly floured surface until smooth. Place in oiled bowl, rolling around until all oiled. Cover and let rise till doubled in size.",
@@ -2160,29 +2198,30 @@ var localDB = {
 "dressing": [
 "Dressing",
 "1 tsp sesame oil",
-"1/4 cup peanut oil",
+"1/4 cup peanut oil or sunflower oil?",
 "1/4 cup tahini",
 "3 tbsp soy sauce",
 "2 tbsp red wine vinegar",
 "2 tsp chili oil",
 "1 tsp honey",
-"1/2 tsp cayenne pepper",
+"1/2 tsp cayenne pepper or red pepper flakes",
 "1 garlic clove, minced"
 ],
 "else": [
 "Else",
 "1 chicken breast",
-"8 ounces fettuccine",
+"8 ounces fettuccine (1/2 container)",
 "1 tsp sesame oil",
 "2 scallions, thinly sliced"
 ]
 },
 "notes": [
-"Chrissy Teigen Cravings, 78"
+"Chrissy Teigen Cravings, 78",
+"The chili oil and the vinegar came through too strong, so I just ditched the dressing and went with pesto. Not sure what changes I would make"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
-"Fill a large saucepan 2/3 full of water and bring to a boil. Add the chicken breast and remove from heat. Cover and let chicken sit until tender (15 minutes); check for done-ness and when done remove and place onto a plate",
+"Fill a large pot 2/3 full of water and bring to a boil. Add the chicken breast and remove from heat. Cover and let chicken sit until tender (15 minutes); check for done-ness and when done remove and place onto a plate",
 "With the same water, bring it back to a boil. Add the fettuccine and cook according to directions.",
 "In a medium bowl, which together the sauce until smooth.",
 "Rinse the noodles until cool, then pat dry. Toss the noodles with the remaining 1 tsp sesame oil. Shred the chicken by hand and toss with the noodles. Finally coat with the dressing"
@@ -2316,7 +2355,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "In a blender, combine the above ingredients and blend until smooth",
 "Transfer to the slow cooker and stir in the coconut milk, chicken, and red onion",
@@ -2351,7 +2390,7 @@ var localDB = {
 "notes": [
 "(Source: Becky Harder - Monument, CO)"
 ],
-"rating": 1,
+"rating": 2,
 "recipe": [
 "Halve the chicken breasts, then combine all the ingredients (undrained) into a crock pot (*makes exactly 3 Qt). Cover and cook on low for 8 hours",
 "Just before serving, slice the chicken breasts into bite size pieces and return to soup"
@@ -2446,6 +2485,32 @@ var localDB = {
 ],
 "source": "",
 "title": "Tuna Melts"
+},
+{
+"group": "sides",
+"id": "recipe-aunt_laura's_spicy_chicken_dip",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1 large can chicken",
+"1 cup frank's red hot sauce",
+"8 oz block cream cheese",
+"1/2 cup ranch dressing",
+"1/4 cup cheddar cheese"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"Heat chicken and franks until hot",
+"Stir in cream cheese and ranch",
+"Mix in 1/2 of cheese and use the rest on top",
+"Broil to heat thoroughly"
+],
+"source": "",
+"title": "Aunt Laura'S Spicy Chicken Dip"
 },
 {
 "group": "sides",
@@ -2710,32 +2775,6 @@ var localDB = {
 },
 {
 "group": "sides",
-"id": "recipe-karens_spicy_chicken_dip",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"1 large can chicken",
-"1 cup frank's red hot sauce",
-"8 oz block cream cheese",
-"1/2 cup ranch dressing",
-"1/4 cup cheddar cheese"
-]
-},
-"notes": [],
-"rating": 1,
-"recipe": [
-"Heat chicken and franks until hot",
-"Stir in cream cheese and ranch",
-"Mix in 1/2 of cheese and use the rest on top",
-"Broil to heat thoroughly"
-],
-"source": "",
-"title": "Karens Spicy Chicken Dip"
-},
-{
-"group": "sides",
 "id": "recipe-salad",
 "imgPlaceholder": "dist/imgs/placeholder-sides-salad.svg",
 "imgSrc": "dist/imgs/sides-salad.jpg",
@@ -2847,11 +2886,10 @@ var localDB = {
 "6 sticks surimi (imitation crab)",
 "1/2 avocado",
 "cucumber",
-"masago (flying fish roe) or tobikko",
 "sesame seeds",
 "sushi rice",
 "nori",
-"masago (capelin roe) (optional)"
+"masago (flying fish roe) or tobikko"
 ]
 },
 "notes": [
@@ -2861,7 +2899,7 @@ var localDB = {
 "rating": 1,
 "recipe": [
 "Cut the Nori sheet in half. Spread rice over the nori and top with sesame seeds, then flip rice side down",
-"Add strips of the Surimi, avocaod, cucumber, and choice of fish roe then roll"
+"Add strips of the Surimi, avocado, cucumber, and choice of fish roe then roll"
 ],
 "source": "https://makemysushi.com/Recipes/how-to-make-california-sushi-rolls",
 "title": "California Rolls"
@@ -2951,8 +2989,8 @@ var localDB = {
 {
 "group": "sushi",
 "id": "recipe-shrimp_spicy_rolls",
-"imgPlaceholder": "",
-"imgSrc": "",
+"imgPlaceholder": "dist/imgs/placeholder-sushi-shrimp_spicy_rolls.svg",
+"imgSrc": "dist/imgs/sushi-shrimp_spicy_rolls.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -3131,68 +3169,68 @@ var localDB = {
 }
 ],
 "searchKeys": [
-"ingredients.Combine-Cookie Spread",
-"ingredients.5-Chili-Lime Kale",
-"ingredients.dressing",
-"ingredients.FOR THE BENEDICT AND ASSEMBLY",
-"ingredients.2. CARAMEL LAYER",
-"ingredients.Streusel",
-"notes",
-"ingredients.Sauce",
-"ingredients.3 - (Combine both bowls) then add:",
-"ingredients.Base",
-"ingredients.Other Ingredients",
-"ingredients.Combine",
-"ingredients.muffins",
-"ingredients.else",
-"ingredients.BUFFALO CHICKPEAS",
-"ingredients.FOR THE POACHED EGGS",
-"ingredients.Blender",
-"ingredients.sauce",
-"ingredients.1. BROWNIE LAYER",
-"ingredients.1 - In a medium bowl, whisk:",
-"ingredients.FOR THE HOLLANDAISE",
-"ingredients.gnocchi",
-"ingredients.Main",
-"ingredients.1-Garlic Roasted Broccoli",
-"ingredients.Peanut Noodles",
-"ingredients.Tzatziki Sauce",
-"ingredients.4. CHOCOLATE GLAZE",
-"ingredients.With",
-"ingredients.Chicken",
-"ingredients.Brown in Pan",
-"ingredients.ingredients",
-"group",
-"ingredients.6-Optional",
-"ingredients.3-Curry Roasted Sweet Potatoes",
-"ingredients.combinations",
-"ingredients.Toppings",
-"ingredients.toppings",
-"recipe",
-"title",
-"ingredients.Garnish Options",
-"ingredients.Seasonings",
-"ingredients.FOR SERVING",
-"ingredients.DRESSING + SALAD",
-"ingredients.2-Roasted Sriracha & Soy Sauce Chickpeas",
-"ingredients.3. COOKIE DOUGH LAYER",
-"ingredients.Saute in Olive Oil",
-"ingredients.Optional Garnish",
-"ingredients.soup",
-"ingredients.Curry",
-"ingredients.Seasoning Combinations",
-"ingredients.Combine-Cookie Topping",
 "ingredients.4-Quinoa",
-"ingredients.2 - In a large bowl, combine:"
+"ingredients.5-Chili-Lime Kale",
+"ingredients.1. BROWNIE LAYER",
+"ingredients.ingredients",
+"ingredients.With",
+"ingredients.Combine-Cookie Topping",
+"notes",
+"ingredients.6-Optional",
+"ingredients.Garnish Options",
+"ingredients.Other Ingredients",
+"ingredients.3. COOKIE DOUGH LAYER",
+"title",
+"ingredients.Base",
+"ingredients.4. CHOCOLATE GLAZE",
+"ingredients.gnocchi",
+"ingredients.Sauce",
+"ingredients.else",
+"ingredients.3-Curry Roasted Sweet Potatoes",
+"group",
+"ingredients.Optional Garnish",
+"ingredients.1 - In a medium bowl, whisk:",
+"ingredients.FOR THE POACHED EGGS",
+"ingredients.Main",
+"ingredients.combinations",
+"ingredients.2-Roasted Sriracha & Soy Sauce Chickpeas",
+"ingredients.3 - (Combine both bowls) then add:",
+"ingredients.Combine",
+"ingredients.FOR SERVING",
+"ingredients.soup",
+"ingredients.FOR THE HOLLANDAISE",
+"ingredients.Saute in Olive Oil",
+"ingredients.Streusel",
+"ingredients.Curry",
+"ingredients.Combine-Cookie Spread",
+"ingredients.toppings",
+"ingredients.Tzatziki Sauce",
+"ingredients.dressing",
+"ingredients.Peanut Noodles",
+"ingredients.Toppings",
+"ingredients.Blender",
+"ingredients.Brown in Pan",
+"ingredients.Seasonings",
+"recipe",
+"ingredients.1-Garlic Roasted Broccoli",
+"ingredients.FOR THE BENEDICT AND ASSEMBLY",
+"ingredients.DRESSING + SALAD",
+"ingredients.2. CARAMEL LAYER",
+"ingredients.BUFFALO CHICKPEAS",
+"ingredients.2 - In a large bowl, combine:",
+"ingredients.Chicken",
+"ingredients.Seasoning Combinations",
+"ingredients.sauce",
+"ingredients.muffins"
 ],
 "toc": {
 "breakfast": [
 "recipe-breakfast_burrito:Breakfast Burrito:1",
-"recipe-coffee:Coffee:0",
+"recipe-coffee:Coffee:1",
 "recipe-eggs_benedict:Eggs Benedict:3",
 "recipe-hard_boiled_eggs:Hard Boiled Eggs:1",
-"recipe-lemon_poppy_seed_mini_scones:Lemon Poppy Seed Mini Scones:1",
-"recipe-oatmeal:Oatmeal:0",
+"recipe-lemon_poppy_seed_mini_scones:Lemon Poppy Seed Mini Scones:0",
+"recipe-oatmeal:Oatmeal:1",
 "recipe-omelette:Omelette:1",
 "recipe-pancakes_king_arthur:Pancakes King Arthur:2",
 "recipe-pancakes_new_york_times:Pancakes New York Times:1",
@@ -3200,16 +3238,17 @@ var localDB = {
 ],
 "dessert": [
 "recipe-apple_crisp:Apple Crisp:1",
-"recipe-baked_apples:Baked Apples:1",
+"recipe-baked_apples:Baked Apples:0",
 "recipe-banana_bread:Banana Bread:2",
 "recipe-biscotti:Biscotti:3",
 "recipe-cake_pops:Cake Pops:1",
-"recipe-chocolate-pb-m&m_balls:Chocolate-Pb-M&M Balls:1",
-"recipe-collens_peanut_butter_bars:Collens Peanut Butter Bars:1",
-"recipe-cookie_dough_billionaire_bars:Cookie Dough Billionaire Bars:1",
+"recipe-chocolate-pb-m&m_balls:Chocolate-Pb-M&M Balls:0",
+"recipe-collens_peanut_butter_bars:Collens Peanut Butter Bars:0",
+"recipe-cookie_dough_billionaire_bars:Cookie Dough Billionaire Bars:0",
 "recipe-flourless_chocolate_cake:Flourless Chocolate Cake:2",
+"recipe-gingerbread_cookies:Gingerbread Cookies:1",
 "recipe-hot_fudge_sauce:Hot Fudge Sauce:3",
-"recipe-molten_chocolate_cake:Molten Chocolate Cake:1",
+"recipe-molten_chocolate_cake:Molten Chocolate Cake:0",
 "recipe-oatmeal_balls:Oatmeal Balls:1",
 "recipe-oatmeal_raisin_cookies:Oatmeal Raisin Cookies:2",
 "recipe-oreo_truffles:Oreo Truffles:1",
@@ -3234,41 +3273,42 @@ var localDB = {
 ],
 "meals": [
 "recipe-baked-fish:Baked-Fish:1",
-"recipe-baked_ziti:Baked Ziti:1",
+"recipe-baked_ziti:Baked Ziti:2",
 "recipe-brick_chicken:Brick Chicken:3",
 "recipe-chicken:Chicken:1",
 "recipe-chicken_cacciatore:Chicken Cacciatore:1",
-"recipe-chicken_noodle_soup:Chicken Noodle Soup:1",
-"recipe-chicken_tacos:Chicken Tacos:1",
-"recipe-chickpea_and_spinach_salad:Chickpea And Spinach Salad:1",
-"recipe-chickpea_salad_wrap:Chickpea Salad Wrap:1",
-"recipe-chickpea_spicy_buffalo_wrap:Chickpea Spicy Buffalo Wrap:1",
+"recipe-chicken_noodle_soup:Chicken Noodle Soup:2",
+"recipe-chicken_tacos:Chicken Tacos:0",
+"recipe-chickpea_and_spinach_salad:Chickpea And Spinach Salad:0",
+"recipe-chickpea_salad_wrap:Chickpea Salad Wrap:0",
+"recipe-chickpea_spicy_buffalo_wrap:Chickpea Spicy Buffalo Wrap:0",
 "recipe-crab_cakes:Crab Cakes:2",
 "recipe-enchiladas:Enchiladas:3",
 "recipe-fajitas:Fajitas:1",
 "recipe-gyros:Gyros:1",
 "recipe-jambon_beurre:Jambon Beurre:1",
-"recipe-karens_roasted_veggie_bowls:Karens Roasted Veggie Bowls:1",
-"recipe-mediterranean_chicken:Mediterranean Chicken:1",
+"recipe-karens_roasted_veggie_bowls:Karens Roasted Veggie Bowls:2",
+"recipe-mediterranean_chicken:Mediterranean Chicken:0",
 "recipe-mini_pizza:Mini Pizza:1",
 "recipe-naan_pizza:Naan Pizza:1",
-"recipe-nori_vegetable_wraps:Nori Vegetable Wraps:1",
+"recipe-nori_vegetable_wraps:Nori Vegetable Wraps:0",
 "recipe-pizza:Pizza:2",
 "recipe-pot_pie_soup:Pot Pie Soup:1",
-"recipe-pretzels:Pretzels:1",
+"recipe-pretzels:Pretzels:0",
 "recipe-quick_skillet_meals:Quick Skillet Meals:2",
 "recipe-roasted_vegetables:Roasted Vegetables:2",
-"recipe-sesame_chicken_noodles:Sesame Chicken Noodles:1",
+"recipe-sesame_chicken_noodles:Sesame Chicken Noodles:0",
 "recipe-shrimp_creole:Shrimp Creole:3",
 "recipe-shrimp_scampi:Shrimp Scampi:1",
 "recipe-shrimp_tacos:Shrimp Tacos:1",
-"recipe-slow_cooker_chicken_mango_curry:Slow Cooker Chicken Mango Curry:1",
-"recipe-slow_cooker_chicken_tortilla_soup:Slow Cooker Chicken Tortilla Soup:1",
+"recipe-slow_cooker_chicken_mango_curry:Slow Cooker Chicken Mango Curry:0",
+"recipe-slow_cooker_chicken_tortilla_soup:Slow Cooker Chicken Tortilla Soup:2",
 "recipe-sweet_potato_gnocchi:Sweet Potato Gnocchi:1",
 "recipe-tomato_mozzarella_caprese:Tomato Mozzarella Caprese:1",
 "recipe-tuna_melts:Tuna Melts:1"
 ],
 "sides": [
+"recipe-aunt_laura's_spicy_chicken_dip:Aunt Laura'S Spicy Chicken Dip:1",
 "recipe-baked_broccoli:Baked Broccoli:1",
 "recipe-baked_potatoes:Baked Potatoes:1",
 "recipe-baked_potatoes_instant_pot:Baked Potatoes Instant Pot:1",
@@ -3278,7 +3318,6 @@ var localDB = {
 "recipe-bruschetta:Bruschetta:1",
 "recipe-crispy_baked_sweet_potato_fries:Crispy Baked Sweet Potato Fries:1",
 "recipe-guacamole:Guacamole:1",
-"recipe-karens_spicy_chicken_dip:Karens Spicy Chicken Dip:1",
 "recipe-salad:Salad:1",
 "recipe-sweet_potatoes:Sweet Potatoes:1"
 ],
