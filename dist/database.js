@@ -1447,6 +1447,52 @@ var localDB = {
 },
 {
 "group": "meals",
+"id": "recipe-chana_masala",
+"imgPlaceholder": "dist/imgs/placeholder-meals-chana_masala.svg",
+"imgSrc": "dist/imgs/meals-chana_masala.jpeg",
+"ingredients": {
+"Indian Simmer Sauce": [
+"Indian Simmer Sauce",
+"1 tbsp sunflower oil",
+"1 large yellow onion, diced",
+"1/4 tsp garlic powder",
+"1/4 tsp grated ginger",
+"1/2 tsp kosher salt",
+"1 tsp coriander",
+"~1/3 tbsp ground cumin",
+"1/4 tsp cayenne pepper*",
+"1/4 tsp ground tumeric",
+"~1/3 tbsp sweet paprika",
+"~1/3 tbsp garam masala*",
+"1 small (15oz) can whole tomatoes and liquid",
+"1/3 cup water"
+],
+"Ingredients": [
+"Ingredients",
+"2 cans chickpeas, rinsed and drained",
+"2 tbsp lemon juice",
+"2 tbsp cilantro, chopped (plus more for garnish)",
+"(optional) 6 cups baby spinach",
+"(optional) 2 cups potatoes, cubed",
+"(optional) 2 cups frozen green peas",
+"steamed rice"
+]
+},
+"notes": [
+"Source: The Essential Instant Pot Cookbook page 39"
+],
+"rating": 1,
+"recipe": [
+"Select the Saute setting and cook the onions, garlic, ginger, and salt for ~7 minutes. Add the rest of the spices for another minute",
+"By hand, crush the tomatoes and mix together. Stir in the water. Cook for 15 minutes on high pressure, then quick release",
+"Add chickpeas and any optional ingredients. Cook for 5 min at high pressure, then natural release after ~5 minutes",
+"Stir in the lemon juice and cilantro. Serve on rice or naan with the extra cilantro garnish"
+],
+"source": "https://smile.amazon.com/Essential-Instant-Pot-Cookbook-Foolproof/dp/0399580883",
+"title": "Chana Masala"
+},
+{
+"group": "meals",
 "id": "recipe-chicken",
 "imgPlaceholder": "dist/imgs/placeholder-meals-chicken.svg",
 "imgSrc": "dist/imgs/meals-chicken.jpg",
@@ -1473,6 +1519,57 @@ var localDB = {
 ],
 "source": "https://www.craftsy.com/blog/2014/04/baked-chicken-breast-recipe/",
 "title": "Chicken"
+},
+{
+"group": "meals",
+"id": "recipe-chicken_and_dumplings",
+"imgPlaceholder": "dist/imgs/placeholder-meals-chicken_and_dumplings.svg",
+"imgSrc": "dist/imgs/meals-chicken_and_dumplings.jpeg",
+"ingredients": {
+"dumplings": [
+"Dumplings",
+"1 cup all-purpose flour",
+"1/2 cup bread crumbs",
+"2 tsp baking powder",
+"3/4 tsp kosher salt",
+"1/2 tsp pepper",
+"1 small shallot, minced",
+"1.5 tbsp parsley, finely chopped",
+"1/3 cup whole milk",
+"1 large egg",
+"2 tbsp unsalted butter, melted (~20s in microwave)"
+],
+"soup": [
+"Soup",
+"2 cups broth, split",
+"2 lbs skinless chicken breasts",
+"1.5 cups frozen peas",
+"2 tbsp unsalted butter",
+"3 large carrots, coined",
+"2 celery stalks, coined",
+"1 yellow onion, diced",
+"1 tsp kosher salt"
+]
+},
+"notes": [
+"Source: The Essential Instant Pot Cookbook page 55",
+"TO make breadcrumbs, leave bread out uncovered to dry, then freeze. When you need it, just microwave it for 20 seconds and toss in a food processor (definitely don't use a grater...)"
+],
+"rating": 2,
+"recipe": [
+"Prep the vegetables",
+"Arrange the chicken breasts in a single layer with 1 cup of broth in the instant pot. Set to Meat or Poultry for 7-8 min & high pressure",
+"Make the dumpling dough: In a bowl, stir together the flour, bread crumbs, baking powder, salt, pepper, shallot, and parsley.",
+"In the center of the mixture, add the milk, egg, and melted butter. With a fork, gradually mix the dry ingredients into the wet until evenly absorbed. Cover and place in the fridge",
+"Quick release the chicken and transfer to the cutting board. Pour the broth into a microwave-safe tupperware (you can store leftovers in it later) and combine with the peas and remaining cup of broth",
+"Select the saute option and melt 2 tbsp of butter, then add carrots, celery, onion, and salt. Saute for 5 minutes. In parallel, microwave the broth and peas for 3 minutes",
+"Shred the chicken into bite-size pieces",
+"Return the shredded chicken and the hot broth and peas to the pot. Add more broth if needed until at least submerged",
+"Add large tablespoons of the dumpling dough, spacing evenly",
+"Cover the pot with a glass lid and cook for 15 minutes"
+],
+"source": "https://smile.amazon.com/Essential-Instant-Pot-Cookbook-Foolproof/dp/0399580883",
+"title": "Chicken And Dumplings"
 },
 {
 "group": "meals",
@@ -2216,7 +2313,8 @@ var localDB = {
 ]
 },
 "notes": [
-"Try also cremini mushrooms, butternut squash, yellow squash, zucchini, red bell pepper, and red onion"
+"Try also cremini mushrooms, butternut squash, yellow squash, zucchini, red bell pepper, and red onion",
+"AKA 'Baked Vegetables'"
 ],
 "rating": 2,
 "recipe": [
@@ -2587,21 +2685,25 @@ var localDB = {
 "ingredients": {
 "ingredients": [
 "Ingredients",
-"2 tsp olive oil",
-"salt",
-"pepper",
-"1 clove garlic, minced",
-"lemon juice"
+"thyme",
+"rosemary",
+"salt and pepper",
+"garlic powder",
+"olive oil",
+"broccoli"
 ]
 },
-"notes": [],
-"rating": 1,
+"notes": [
+"Simpler version of roasted vegetables with just Broccoli",
+"Previously made with salt, pepper, and garlic. Once done, topped with lemon juice"
+],
+"rating": 2,
 "recipe": [
 "Preheat oven to 400\u2109",
 "Cut the Broccoli into florets and mix with oil and seasonings in a medium bowl",
-"Bake for 20 minutes, then top with lemon juice"
+"Bake for 40 minutes"
 ],
-"source": "http://allrecipes.com/recipe/144346/roasted-garlic-lemon-broccoli/",
+"source": "",
 "title": "Baked Broccoli"
 },
 {
@@ -3261,59 +3363,62 @@ var localDB = {
 }
 ],
 "searchKeys": [
-"ingredients.Saute in Olive Oil",
-"ingredients.2. CARAMEL LAYER",
-"ingredients.combinations",
-"ingredients.2 - In a large bowl, combine:",
-"ingredients.Other Ingredients",
 "ingredients.Toppings",
-"ingredients.1 - In a medium bowl, whisk:",
-"ingredients.Streusel",
-"ingredients.1-Garlic Roasted Broccoli",
-"ingredients.Combine",
-"ingredients.FOR THE HOLLANDAISE",
-"ingredients.Sauce",
-"ingredients.sauce",
-"notes",
-"ingredients.3. COOKIE DOUGH LAYER",
-"ingredients.Optional Garnish",
-"ingredients.Combine-Cookie Topping",
-"ingredients.Seasoning Combinations",
-"ingredients.4. CHOCOLATE GLAZE",
-"ingredients.FOR THE POACHED EGGS",
-"ingredients.Garnish Options",
-"ingredients.Base",
 "ingredients.FOR THE BENEDICT AND ASSEMBLY",
+"ingredients.FOR SERVING",
 "ingredients.With",
-"ingredients.BUFFALO CHICKPEAS",
+"ingredients.2-Roasted Sriracha & Soy Sauce Chickpeas",
+"ingredients.4. CHOCOLATE GLAZE",
+"ingredients.FOR THE HOLLANDAISE",
+"ingredients.2. CARAMEL LAYER",
+"ingredients.1-Garlic Roasted Broccoli",
+"ingredients.Tzatziki Sauce",
+"ingredients.Peanut Noodles",
+"ingredients.ingredients",
+"ingredients.Other Ingredients",
+"ingredients.Indian Simmer Sauce",
+"ingredients.muffins",
+"ingredients.Chicken",
+"ingredients.2 - In a large bowl, combine:",
+"ingredients.dressing",
+"ingredients.Streusel",
+"ingredients.dumplings",
+"ingredients.Combine-Cookie Topping",
+"ingredients.Combine",
+"ingredients.Seasonings",
+"ingredients.soup",
+"ingredients.5-Chili-Lime Kale",
 "ingredients.Curry",
+"ingredients.3-Curry Roasted Sweet Potatoes",
+"ingredients.sauce",
+"ingredients.Sauce",
+"ingredients.Saute in Olive Oil",
+"ingredients.Blender",
+"ingredients.BUFFALO CHICKPEAS",
+"ingredients.combinations",
+"recipe",
+"group",
+"ingredients.FOR THE POACHED EGGS",
+"ingredients.else",
+"ingredients.gnocchi",
+"notes",
+"ingredients.Base",
+"ingredients.3 - (Combine both bowls) then add:",
+"ingredients.Garnish Options",
+"title",
+"ingredients.1 - In a medium bowl, whisk:",
+"ingredients.Main",
+"ingredients.3. COOKIE DOUGH LAYER",
+"ingredients.Combine-Cookie Spread",
 "ingredients.4-Quinoa",
 "ingredients.1. BROWNIE LAYER",
-"ingredients.Main",
 "ingredients.6-Optional",
-"ingredients.Peanut Noodles",
-"ingredients.else",
-"ingredients.Combine-Cookie Spread",
-"group",
-"ingredients.3 - (Combine both bowls) then add:",
-"ingredients.5-Chili-Lime Kale",
-"ingredients.Tzatziki Sauce",
-"ingredients.Chicken",
-"ingredients.3-Curry Roasted Sweet Potatoes",
-"ingredients.FOR SERVING",
-"ingredients.dressing",
-"ingredients.toppings",
-"recipe",
-"ingredients.Blender",
-"ingredients.muffins",
 "ingredients.DRESSING + SALAD",
-"ingredients.ingredients",
-"ingredients.gnocchi",
-"ingredients.Seasonings",
+"ingredients.Seasoning Combinations",
+"ingredients.Optional Garnish",
 "ingredients.Brown in Pan",
-"title",
-"ingredients.soup",
-"ingredients.2-Roasted Sriracha & Soy Sauce Chickpeas"
+"ingredients.Ingredients",
+"ingredients.toppings"
 ],
 "toc": {
 "breakfast": [
@@ -3368,7 +3473,9 @@ var localDB = {
 "recipe-baked-fish:Baked-Fish:1",
 "recipe-baked_ziti:Baked Ziti:2",
 "recipe-brick_chicken:Brick Chicken:3",
+"recipe-chana_masala:Chana Masala:1",
 "recipe-chicken:Chicken:1",
+"recipe-chicken_and_dumplings:Chicken And Dumplings:2",
 "recipe-chicken_cacciatore:Chicken Cacciatore:1",
 "recipe-chicken_noodle_soup:Chicken Noodle Soup:2",
 "recipe-chicken_tacos:Chicken Tacos:0",
@@ -3403,7 +3510,7 @@ var localDB = {
 ],
 "sides": [
 "recipe-aunt_laura's_spicy_chicken_dip:Aunt Laura'S Spicy Chicken Dip:1",
-"recipe-baked_broccoli:Baked Broccoli:1",
+"recipe-baked_broccoli:Baked Broccoli:2",
 "recipe-baked_potatoes:Baked Potatoes:1",
 "recipe-baked_potatoes_instant_pot:Baked Potatoes Instant Pot:1",
 "recipe-baked_zucchini:Baked Zucchini:1",
