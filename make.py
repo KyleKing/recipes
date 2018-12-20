@@ -163,8 +163,8 @@ class SiteCompiler(object):
 
         """
         lgr('Reading JSON file: `{}`'.format(fn_src))
-        # with open(fn_src, 'r', encoding='utf-8') as fn:  # Python 3 only
-        with open(fn_src, 'r') as fn:
+        # with open(fn_src, 'r') as fn:
+        with open(fn_src, 'r', encoding='utf-8') as fn:  # Python 3 only
             recipe = json.load(fn)
 
         # Make sure the minimum keys exist

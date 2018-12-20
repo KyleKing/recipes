@@ -211,41 +211,6 @@ var localDB = {
 },
 {
 "group": "breakfast",
-"id": "recipe-pancakes_king_arthur",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"2 large eggs",
-"1 1/4 cups milk*",
-"3 tablespoons melted butter or vegetable oil",
-"1 1/2 cups king arthur unbleached all-purpose flour",
-"3/4 teaspoon salt",
-"2 teaspoons baking powder",
-"2 tablespoons sugar or 1/4 cup malted milk powder"
-]
-},
-"notes": [
-"*Use 1 cup milk if you're baking under hot, humid conditions, or if you're going to let the batter rest longer than 15 minutes. Use up to 1 1/4 cups milk in cold, dry conditions",
-"To make waffles, substitute 2 tablespoons melted butter or vegetable oil for 2 tablespoons of the milk. Cook waffles as directed with your waffle iron. Hint - if you try to open the iron and it doesn't open easily, the waffle isn't done yet.",
-"For a whole grain breakfast treat, replace 1/2 cup of the all-purpose flour with 1/2 cup of ground oats.",
-"A grated apple mixed into the batter will keep the pancakes moist longer if you need to cook them ahead and bring them to the table all at once",
-"For blueberry pancakes, sprinkle fresh or thawed frozen blueberries over the batter after you pour it on the griddle. Mixing frozen blueberries into the batter before scooping will turn it blue and streaky."
-],
-"rating": 2,
-"recipe": [
-"Beat the eggs and milk until light and foamy, about 3 minutes at high speed of a stand or hand mixer. Stir in the butter or vegetable oil",
-"Whisk the dry ingredients together to evenly distribute the salt, baking powder and sweetener",
-"Gently and quickly mix into the egg and milk mixture. Let the batter rest for at least 15 minutes, while the griddle is heating; it'll thicken slightly",
-"Heat a heavy frying pan over medium heat, or set an electric griddle to 375F. Lightly grease frying pan or griddle. The pan or griddle is ready if a drop of water will skitter across the surface, evaporating immediately",
-"Drop 1/4 cupfuls of batter onto the lightly greased griddle. Bake on one side until bubbles begin to form and break, about 2 minutes; then turn the pancakes and cook the other side until brown, about 1 1/2 to 2 minutes. Turn over only once"
-],
-"source": "https://www.kingarthurflour.com/recipes/simply-perfect-pancakes-recipe",
-"title": "Pancakes King Arthur"
-},
-{
-"group": "breakfast",
 "id": "recipe-pancakes_new_york_times",
 "imgPlaceholder": "dist/imgs/placeholder-breakfast-pancakes_new_york_times.svg",
 "imgSrc": "dist/imgs/breakfast-pancakes_new_york_times.jpg",
@@ -264,7 +229,7 @@ var localDB = {
 "notes": [
 "Try adding: oatmeal, chopped walnuts, peanut butter, flaxseed, banana, blueberry"
 ],
-"rating": 1,
+"rating": 2,
 "recipe": [
 "Mix dry ingredients in a bowl",
 "Combine, eggs and 1.5 cups milk then stir in butter (melted and let cool)",
@@ -526,6 +491,38 @@ var localDB = {
 },
 {
 "group": "dessert",
+"id": "recipe-chocolatines",
+"imgPlaceholder": "dist/imgs/placeholder-dessert-chocolatines.svg",
+"imgSrc": "dist/imgs/dessert-chocolatines.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1/2 box saltines",
+"2 sticks butter",
+"1 cup brown sugar, packed",
+"at least 2 cups of chocolate chips (any type)",
+"optional toppings: nuts, candy canes, chocolate chips, pretzels, etc."
+]
+},
+"notes": [
+"Source: Alex's family recipe"
+],
+"rating": 1,
+"recipe": [
+"Preheat the oven to 350 F",
+"Line a large baking sheet with tin foil and apply non-stick spray",
+"Spread out saltines in a single layer",
+"In a large pot, melt the butter then mix with the brown sugar and bring to a boil. Once at a boil, simmer on low heat for 4 minutes without stirring",
+"Pour the butter and brown sugar over the saltines. Spread evenly with a spatula then put in the oven for 5 minutes",
+"Take out of the oven and sprinkle with chocolate chips. The residual heat will melt the chips so they can be spread into a thin layer with a spatula",
+"Add any additional toppings, then freeze for at least 1 hour",
+"Break into bite size chunks! Can be stored in the fridge or on the counter"
+],
+"source": "",
+"title": "Chocolatines"
+},
+{
+"group": "dessert",
 "id": "recipe-collens_peanut_butter_bars",
 "imgPlaceholder": "",
 "imgSrc": "",
@@ -690,20 +687,22 @@ var localDB = {
 "ingredients": [
 "Ingredients",
 "2 oz unsweetened chocolate",
-"1 tbsp butter",
+"2 tbsp butter",
 "1/3 cup boiling water",
 "1 cup sugar",
 "2 tbsp corn syrup",
 "1 tsp vanilla"
 ]
 },
-"notes": [],
+"notes": [
+"Nano's (Alex's Family) recipe"
+],
 "rating": 3,
 "recipe": [
-"Melt the chocolate and butter then add the boiling water.",
-"Stir well and add the sugar and corn syrup",
-"Once well mixed, let the mixture boil (but not too furiously). Maintain a boil for 3.5 - 4 minutes without stirring",
-"Reduce heat to a simmer for a final minute"
+"Melt butter and chocolate over low heat. Stir and blend well, then add the boiling water",
+"Stir and blend well, then add the sugar and corn syrup",
+"Let the sauce come to a boil, stirring slowly over low heat. Simmer for about 5 minutes, stirring occasionally",
+"Add vanilla"
 ],
 "source": "",
 "title": "Hot Fudge Sauce"
@@ -1451,6 +1450,15 @@ var localDB = {
 "imgPlaceholder": "dist/imgs/placeholder-meals-chana_masala.svg",
 "imgSrc": "dist/imgs/meals-chana_masala.jpeg",
 "ingredients": {
+"DIY Garam Masala": [
+"Diy Garam Masala",
+"1 tbsp ground cumin",
+"1.5 tsp ground coriander",
+"1.5 tsp ground black pepper",
+"1 tsp ground cinnamon",
+"1/2 tsp ground cloves",
+"1/2 tsp ground nutmeg"
+],
 "Indian Simmer Sauce": [
 "Indian Simmer Sauce",
 "1 tbsp sunflower oil",
@@ -1479,7 +1487,8 @@ var localDB = {
 ]
 },
 "notes": [
-"Source: The Essential Instant Pot Cookbook page 39"
+"Source: The Essential Instant Pot Cookbook page 39",
+"DIY Garam Masala from: https://www.allrecipes.com/recipe/142967/easy-garam-masala/"
 ],
 "rating": 1,
 "recipe": [
@@ -1930,6 +1939,41 @@ var localDB = {
 },
 {
 "group": "meals",
+"id": "recipe-honey_and_soy_glazed_chicken_thighs",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"2 tbsp canola oil",
+"1 tbsp minced garlic",
+"1 tbsp minced ginger",
+"6 tbsp low-sodium soy sauce",
+"5 tbsp mild honey",
+"3 tbsp unsalted butter",
+"kosher salt",
+"black pepper",
+"8 bone-in, skin-on chicken thighs (about 3 pounds)",
+"lemon wedges, for serving"
+]
+},
+"notes": [],
+"rating": 0,
+"recipe": [
+"Preheat oven to 425 degrees",
+"Heat 1 tablespoon oil in a small saucepan over low heat. Add the garlic and ginger and cook until softened (~3 min)",
+"Add the soy sauce and honey and simmer, until reduced and slightly thickened (~10 min)",
+"Turn off the heat then whisk in the butter. Season with salt and pepper",
+"In a medium bowl, coat the chicken with salt and pepper, then toss with half the glaze and remaining 1 tablespoon oil",
+"Arrange in an even layer, skin side up, on a a baking shined lined with foil and roast 15 min",
+"Brush the chicken all over with 2 tablespoons of the remaining glaze. Roast until golden and cooked through (~10 min)",
+"Drizzle the chicken with the remaining glaze and serve with lemon wedges"
+],
+"source": "https://cooking.nytimes.com/recipes/1019804-honey-and-soy-glazed-chicken-thighs?action=click&module=Global%20Search%20Recipe%20Card&pgType=search&rank=1",
+"title": "Honey And Soy Glazed Chicken Thighs"
+},
+{
+"group": "meals",
 "id": "recipe-jambon_beurre",
 "imgPlaceholder": "dist/imgs/placeholder-meals-jambon_beurre.svg",
 "imgSrc": "dist/imgs/meals-jambon_beurre.jpg",
@@ -2372,18 +2416,18 @@ var localDB = {
 "ingredients": {
 "ingredients": [
 "Ingredients",
-"2 (32 oz) can of tomato sauce",
-"1/4 lb butter",
-"3 onions",
-"3 stalks celery",
-"3 toes garlic",
-"1 (28-30 oz) can of tomatoes",
-"2 bay leaves",
-"1 tsp tobasco sauce",
-"1 tbsp fresh thyme",
-"1/2 bunch parsely, chopped",
-"2 lbs raw shrimp, peeled",
-"white rice",
+"1 (32 oz) can of tomato sauce",
+"1/2 stick butter",
+"1.5 onions, diced",
+"1.5 stalks celery, half rings",
+"1.5 garlic cloves",
+"1 (15 oz) can whole tomatoes, cut",
+"1 bay leaf",
+"1/2 tsp tabasco sauce",
+"1/2 tbsp fresh thyme",
+"1/4 bunch parsley, chopped",
+"1 lbs raw shrimp, peeled and deveined",
+"white rice and/or side baguette",
 "pinch of saffron"
 ]
 },
@@ -2393,10 +2437,11 @@ var localDB = {
 "rating": 3,
 "recipe": [
 "Reduce tomato sauce by 3/4 (bake uncovered in 350 oven - for an hour or two). Then replace evaporated water so sauce is at original volume (~24 oz / 3 cups water)",
-"In butter, saute the onion, celery, and un-chopped garlic",
-"Add tomatoes and spices (bay leaves, Tobasco, and thyme",
-"Cook 1 hour at 350",
-"Add parsely and shrimp. Cook 15 more minutes. Serve over white rice with a pinch of saffron"
+"In butter, saute the onion, celery, and garlic",
+"COmbine sauted ingredients, sliced tomatoes, and spices with tomato sauce from oven",
+"Bake covered for 30 min, then uncover for 30 min",
+"(*Once cooled, can be stored in fridge overnight)",
+"On stove top, bring to a boil. Add parsley and shrimp then cook for 15 more minutes. Serve over white rice with a pinch of saffron"
 ],
 "source": "",
 "title": "Shrimp Creole"
@@ -3363,62 +3408,63 @@ var localDB = {
 }
 ],
 "searchKeys": [
-"ingredients.Toppings",
 "ingredients.FOR THE BENEDICT AND ASSEMBLY",
 "ingredients.FOR SERVING",
-"ingredients.With",
-"ingredients.2-Roasted Sriracha & Soy Sauce Chickpeas",
-"ingredients.4. CHOCOLATE GLAZE",
-"ingredients.FOR THE HOLLANDAISE",
-"ingredients.2. CARAMEL LAYER",
-"ingredients.1-Garlic Roasted Broccoli",
-"ingredients.Tzatziki Sauce",
-"ingredients.Peanut Noodles",
-"ingredients.ingredients",
-"ingredients.Other Ingredients",
-"ingredients.Indian Simmer Sauce",
-"ingredients.muffins",
-"ingredients.Chicken",
-"ingredients.2 - In a large bowl, combine:",
-"ingredients.dressing",
-"ingredients.Streusel",
-"ingredients.dumplings",
-"ingredients.Combine-Cookie Topping",
-"ingredients.Combine",
-"ingredients.Seasonings",
-"ingredients.soup",
-"ingredients.5-Chili-Lime Kale",
-"ingredients.Curry",
-"ingredients.3-Curry Roasted Sweet Potatoes",
-"ingredients.sauce",
-"ingredients.Sauce",
-"ingredients.Saute in Olive Oil",
-"ingredients.Blender",
-"ingredients.BUFFALO CHICKPEAS",
-"ingredients.combinations",
-"recipe",
-"group",
-"ingredients.FOR THE POACHED EGGS",
-"ingredients.else",
-"ingredients.gnocchi",
-"notes",
-"ingredients.Base",
-"ingredients.3 - (Combine both bowls) then add:",
-"ingredients.Garnish Options",
-"title",
-"ingredients.1 - In a medium bowl, whisk:",
-"ingredients.Main",
 "ingredients.3. COOKIE DOUGH LAYER",
-"ingredients.Combine-Cookie Spread",
-"ingredients.4-Quinoa",
 "ingredients.1. BROWNIE LAYER",
-"ingredients.6-Optional",
-"ingredients.DRESSING + SALAD",
-"ingredients.Seasoning Combinations",
+"ingredients.Toppings",
+"ingredients.2. CARAMEL LAYER",
+"ingredients.1 - In a medium bowl, whisk:",
+"ingredients.toppings",
+"ingredients.Chicken",
 "ingredients.Optional Garnish",
+"ingredients.1-Garlic Roasted Broccoli",
+"ingredients.gnocchi",
+"ingredients.else",
 "ingredients.Brown in Pan",
 "ingredients.Ingredients",
-"ingredients.toppings"
+"ingredients.2-Roasted Sriracha & Soy Sauce Chickpeas",
+"ingredients.Saute in Olive Oil",
+"ingredients.dressing",
+"ingredients.dumplings",
+"ingredients.Sauce",
+"ingredients.BUFFALO CHICKPEAS",
+"ingredients.3-Curry Roasted Sweet Potatoes",
+"ingredients.Combine-Cookie Spread",
+"ingredients.4-Quinoa",
+"ingredients.combinations",
+"ingredients.2 - In a large bowl, combine:",
+"ingredients.4. CHOCOLATE GLAZE",
+"ingredients.Other Ingredients",
+"ingredients.Curry",
+"ingredients.Garnish Options",
+"ingredients.Tzatziki Sauce",
+"ingredients.3 - (Combine both bowls) then add:",
+"ingredients.DIY Garam Masala",
+"ingredients.soup",
+"ingredients.muffins",
+"ingredients.Seasoning Combinations",
+"title",
+"ingredients.Peanut Noodles",
+"ingredients.Base",
+"ingredients.Main",
+"ingredients.FOR THE HOLLANDAISE",
+"ingredients.Indian Simmer Sauce",
+"ingredients.sauce",
+"notes",
+"ingredients.FOR THE POACHED EGGS",
+"ingredients.5-Chili-Lime Kale",
+"ingredients.Combine-Cookie Topping",
+"ingredients.DRESSING + SALAD",
+"recipe",
+"ingredients.Streusel",
+"ingredients.ingredients",
+"ingredients.Blender",
+"ingredients.With",
+"ingredients.6-Optional",
+"ingredients.Combine",
+"ingredients.Seasonings",
+"group"
 ],
 "toc": {
 "breakfast": [
@@ -3429,8 +3475,7 @@ var localDB = {
 "recipe-lemon_poppy_seed_mini_scones:Lemon Poppy Seed Mini Scones:0",
 "recipe-oatmeal:Oatmeal:1",
 "recipe-omelette:Omelette:1",
-"recipe-pancakes_king_arthur:Pancakes King Arthur:2",
-"recipe-pancakes_new_york_times:Pancakes New York Times:1",
+"recipe-pancakes_new_york_times:Pancakes New York Times:2",
 "recipe-waffles:Waffles:1"
 ],
 "dessert": [
@@ -3441,6 +3486,7 @@ var localDB = {
 "recipe-cake_pops:Cake Pops:1",
 "recipe-chocolate-pb-m&m_balls:Chocolate-Pb-M&M Balls:0",
 "recipe-chocolate_chip_cookies:Chocolate Chip Cookies:1",
+"recipe-chocolatines:Chocolatines:1",
 "recipe-collens_peanut_butter_bars:Collens Peanut Butter Bars:0",
 "recipe-cookie_dough_billionaire_bars:Cookie Dough Billionaire Bars:0",
 "recipe-flourless_chocolate_cake:Flourless Chocolate Cake:2",
@@ -3486,6 +3532,7 @@ var localDB = {
 "recipe-enchiladas:Enchiladas:3",
 "recipe-fajitas:Fajitas:1",
 "recipe-gyros:Gyros:1",
+"recipe-honey_and_soy_glazed_chicken_thighs:Honey And Soy Glazed Chicken Thighs:0",
 "recipe-jambon_beurre:Jambon Beurre:1",
 "recipe-karens_roasted_veggie_bowls:Karens Roasted Veggie Bowls:2",
 "recipe-mediterranean_chicken:Mediterranean Chicken:0",

@@ -1,29 +1,31 @@
 {
   "ingredients": [
-    "2 (32 oz) can of tomato sauce",
-    "1/4 lb butter",
-    "3 onions",
-    "3 stalks celery",
-    "3 toes garlic",
-    "1 (28-30 oz) can of tomatoes",
-    "2 bay leaves",
-    "1 tsp Tobasco sauce",
-    "1 tbsp fresh thyme",
-    "1/2 bunch parsely, chopped",
-    "2 lbs raw shrimp, peeled",
-    "white rice",
+    "1 (32 oz) can of tomato sauce",
+    "1/2 stick butter",
+    "1.5 onions, diced",
+    "1.5 stalks celery, half rings",
+    "1.5 garlic cloves",
+    "1 (15 oz) can whole tomatoes, cut",
+    "1 bay leaf",
+    "1/2 tsp Tabasco sauce",
+    "1/2 tbsp fresh thyme",
+    "1/4 bunch parsley, chopped",
+    "1 lbs raw shrimp, peeled and deveined",
+    "white rice and/or side baguette",
     "pinch of saffron"
   ],
   "notes": [
-    "Alex's family recipe"
+    "Alex's family recipe",
+    "This recipe has been cut in half, which serves 3-4 people"
   ],
   "rating": 3,
   "recipe": [
     "Reduce tomato sauce by 3/4 (bake uncovered in 350 oven - for an hour or two). Then replace evaporated water so sauce is at original volume (~24 oz / 3 cups water)",
-    "In butter, saute the onion, celery, and un-chopped garlic",
-    "Add tomatoes and spices (bay leaves, Tobasco, and thyme",
-    "Cook 1 hour at 350",
-    "Add parsely and shrimp. Cook 15 more minutes. Serve over white rice with a pinch of saffron"
+    "In butter, saute the onion, celery, and garlic",
+    "COmbine sauted ingredients, sliced tomatoes, and spices with tomato sauce from oven",
+    "Bake covered for 30 min, then uncover for 30 min",
+    "(*Once cooled, can be stored in fridge overnight)",
+    "On stove top, bring to a boil. Add parsley and shrimp then cook for 15 more minutes. Serve over white rice with a pinch of saffron"
   ],
   "source": ""
 }
