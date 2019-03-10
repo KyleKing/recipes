@@ -1,12 +1,7 @@
-# Remove intermediary files
-/dist/database.json
+# Ignore intermediary files
+dist/database.json
+config.codekit3
 *.log
-
-# Ignore WIP files and folders
-tmp.*
-TODO/
-archive/
-/config.codekit3
 
 # Ignore images in source directory
 /database/*/*.jpg
