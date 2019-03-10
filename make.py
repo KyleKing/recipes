@@ -15,21 +15,8 @@ rmDist = False
 lgr_fn = 'recipes.log'
 logger = logging.getLogger(__name__)
 
-logger.setLevel(logging.DEBUG)
-fh = logging.FileHandler(lgr_fn, mode='w')
-fh.setLevel(logging.DEBUG)
-fh.setFormatter(logging.Formatter('%(asctime)s %(filename)s:%(lineno)d\t%(message)s'))
-logger.addHandler(fh)
 
-ch = logging.StreamHandler()
-ch.setLevel(logging.DEBUG)
-ch.setFormatter(logging.Formatter('%(message)s'))
-logger.addHandler(ch)
-
-logger.debug('Running with options: debug:{} / rmDist:{}'.format(debug, rmDist))
-
-
-class SiteCompiler(object):
+class SiteCompiler:
     """Build JavaScript database file and compile images for distribution."""
 
     DIR_DIST = Path.cwd() / 'dist'
@@ -171,7 +158,7 @@ class SiteCompiler(object):
 
         """
         pth = PurePath(img_src)
-        return str(pth.parent / 'placeholder-{}.svg'.format(pth.name.split('.')[0]))
+        return str(pth.parent / 'placeholder_{}.svg'.format(pth.name.split('.')[0]))
 
     # JSON File utilities
 
@@ -240,7 +227,7 @@ class SiteCompiler(object):
         logger.debug('search_keys: {}'.format(search_keys))
         # Write JSON file (FYI: Camel-case variables for JS output)
         rcps_obj = {'recipes': self.recipes, 'searchKeys': search_keys, 'toc': self.toc}
-        kwargs = {'separators': (',', ':')} if not debug else {'indent': 0, 'separators': (',', ': ')}
+        kwargs = {'indent': 0, 'separators': (',', ': ')} if debug else {'separators': (',', ':')}
         json.dump(rcps_obj, self.db_fn.open(mode='w'), sort_keys=True, **kwargs)
 
     def json_to_js(self):
@@ -259,4 +246,16 @@ class SiteCompiler(object):
 
 
 if __name__ == '__main__':
+    logger.setLevel(logging.DEBUG)
+    fh = logging.FileHandler(lgr_fn, mode='w')
+    fh.setLevel(logging.DEBUG)
+    fh.setFormatter(logging.Formatter('%(asctime)s %(filename)s:%(lineno)d\t%(message)s'))
+    logger.addHandler(fh)
+
+    ch = logging.StreamHandler()
+    ch.setLevel(logging.DEBUG)
+    ch.setFormatter(logging.Formatter('%(message)s'))
+    logger.addHandler(ch)
+
+    logger.debug('Running with options: debug:{} / rmDist:{}'.format(debug, rmDist))
     SiteCompiler()

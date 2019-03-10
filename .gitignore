@@ -2,6 +2,7 @@
 dist/database.json
 config.codekit3
 *.log
+*.pyc
 
 # Ignore images in source directory
 /database/*/*.jpg
