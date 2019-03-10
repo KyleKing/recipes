@@ -3,7 +3,7 @@ var localDB = {
 {
 "group": "breakfast",
 "id": "recipe-breakfast_burrito",
-"imgPlaceholder": "dist/imgs/placeholder-breakfast-breakfast_burrito.svg",
+"imgPlaceholder": "dist/imgs/placeholder_breakfast-breakfast_burrito.svg",
 "imgSrc": "dist/imgs/breakfast-breakfast_burrito.jpeg",
 "ingredients": {
 "ingredients": [
@@ -32,7 +32,7 @@ var localDB = {
 "altRatio": "1/2",
 "group": "breakfast",
 "id": "recipe-eggs_benedict",
-"imgPlaceholder": "dist/imgs/placeholder-breakfast-eggs_benedict.svg",
+"imgPlaceholder": "dist/imgs/placeholder_breakfast-eggs_benedict.svg",
 "imgSrc": "dist/imgs/breakfast-eggs_benedict.jpg",
 "ingredients": {
 "FOR THE BENEDICT AND ASSEMBLY": [
@@ -85,7 +85,7 @@ var localDB = {
 {
 "group": "breakfast",
 "id": "recipe-hard_boiled_eggs",
-"imgPlaceholder": "dist/imgs/placeholder-breakfast-hard_boiled_eggs.svg",
+"imgPlaceholder": "dist/imgs/placeholder_breakfast-hard_boiled_eggs.svg",
 "imgSrc": "dist/imgs/breakfast-hard_boiled_eggs.jpeg",
 "ingredients": {
 "ingredients": [
@@ -139,7 +139,7 @@ var localDB = {
 {
 "group": "breakfast",
 "id": "recipe-oatmeal",
-"imgPlaceholder": "dist/imgs/placeholder-breakfast-oatmeal.svg",
+"imgPlaceholder": "dist/imgs/placeholder_breakfast-oatmeal.svg",
 "imgSrc": "dist/imgs/breakfast-oatmeal.jpeg",
 "ingredients": {
 "combinations": [
@@ -190,7 +190,7 @@ var localDB = {
 {
 "group": "breakfast",
 "id": "recipe-pancakes_new_york_times",
-"imgPlaceholder": "dist/imgs/placeholder-breakfast-pancakes_new_york_times.svg",
+"imgPlaceholder": "dist/imgs/placeholder_breakfast-pancakes_new_york_times.svg",
 "imgSrc": "dist/imgs/breakfast-pancakes_new_york_times.jpg",
 "ingredients": {
 "ingredients": [
@@ -221,7 +221,7 @@ var localDB = {
 {
 "group": "breakfast",
 "id": "recipe-waffles",
-"imgPlaceholder": "dist/imgs/placeholder-breakfast-waffles.svg",
+"imgPlaceholder": "dist/imgs/placeholder_breakfast-waffles.svg",
 "imgSrc": "dist/imgs/breakfast-waffles.jpg",
 "ingredients": {
 "ingredients": [
@@ -252,7 +252,7 @@ var localDB = {
 {
 "group": "dessert",
 "id": "recipe-apple_crisp",
-"imgPlaceholder": "dist/imgs/placeholder-dessert-apple_crisp.svg",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-apple_crisp.svg",
 "imgSrc": "dist/imgs/dessert-apple_crisp.png",
 "ingredients": {
 "ingredients": [
@@ -315,7 +315,7 @@ var localDB = {
 {
 "group": "dessert",
 "id": "recipe-banana_bread",
-"imgPlaceholder": "dist/imgs/placeholder-dessert-banana_bread.svg",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-banana_bread.svg",
 "imgSrc": "dist/imgs/dessert-banana_bread.jpg",
 "ingredients": {
 "ingredients": [
@@ -348,7 +348,7 @@ var localDB = {
 {
 "group": "dessert",
 "id": "recipe-biscotti",
-"imgPlaceholder": "dist/imgs/placeholder-dessert-biscotti.svg",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-biscotti.svg",
 "imgSrc": "dist/imgs/dessert-biscotti.jpg",
 "ingredients": {
 "ingredients": [
@@ -381,8 +381,49 @@ var localDB = {
 },
 {
 "group": "dessert",
+"id": "recipe-blueberry_sour_cream_muffins",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"Streusel": [
+"Streusel",
+"1/2 cup light brown sugar",
+"1/3 cup all-purpose flour",
+"2 tbsp unsalted butter, softened",
+"1 tsp cinnamon"
+],
+"muffins": [
+"Muffins",
+"1/2 cup butter",
+"1.25 cups brown or white sugar",
+"2 eggs",
+"3 cups flour",
+"2 tsp baking powder",
+"1/2 tsp salt",
+"1/2 cup milk",
+"2 cups blueberries"
+]
+},
+"notes": [
+"Muffin source was from a picture of a cookbook, but I'm not sure which it came from. The title was: Mrs. Pulsford's Blueberry Muffins",
+"Streusel topping source: https://www.foodandwine.com/recipes/blueberry-sour-cream-muffins"
+],
+"rating": 2,
+"recipe": [
+">> Streusel",
+"In a medium bowl, combine the brown sugar, flour, butter, and cinnamon. Rub with your fingers to form coarse crumbs then refrigerate until ready to use",
+">> Muffins",
+"Cream butter and sugar until fluffy. Add eggs, one at a time and beat well. Sift dry ingredients together and add alternately with milk. Stir in blueberries. ",
+"Pour into greased muffin cups and sprinkle with the streusel topping",
+"Bake at 375F for thirty minutes"
+],
+"source": "",
+"title": "Blueberry Sour Cream Muffins"
+},
+{
+"group": "dessert",
 "id": "recipe-cake_pops",
-"imgPlaceholder": "dist/imgs/placeholder-dessert-cake_pops.svg",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-cake_pops.svg",
 "imgSrc": "dist/imgs/dessert-cake_pops.jpg",
 "ingredients": {
 "ingredients": [
@@ -433,7 +474,7 @@ var localDB = {
 {
 "group": "dessert",
 "id": "recipe-chocolate_chip_cookies",
-"imgPlaceholder": "dist/imgs/placeholder-dessert-chocolate_chip_cookies.svg",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-chocolate_chip_cookies.svg",
 "imgSrc": "dist/imgs/dessert-chocolate_chip_cookies.jpeg",
 "ingredients": {
 "ingredients": [
@@ -470,7 +511,7 @@ var localDB = {
 {
 "group": "dessert",
 "id": "recipe-chocolatines",
-"imgPlaceholder": "dist/imgs/placeholder-dessert-chocolatines.svg",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-chocolatines.svg",
 "imgSrc": "dist/imgs/dessert-chocolatines.jpeg",
 "ingredients": {
 "ingredients": [
@@ -622,7 +663,7 @@ var localDB = {
 {
 "group": "dessert",
 "id": "recipe-gingerbread_cookies",
-"imgPlaceholder": "dist/imgs/placeholder-dessert-gingerbread_cookies.svg",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-gingerbread_cookies.svg",
 "imgSrc": "dist/imgs/dessert-gingerbread_cookies.jpeg",
 "ingredients": {
 "ingredients": [
@@ -659,7 +700,7 @@ var localDB = {
 {
 "group": "dessert",
 "id": "recipe-hot_fudge_sauce",
-"imgPlaceholder": "dist/imgs/placeholder-dessert-hot_fudge_sauce.svg",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-hot_fudge_sauce.svg",
 "imgSrc": "dist/imgs/dessert-hot_fudge_sauce.jpeg",
 "ingredients": {
 "ingredients": [
@@ -688,7 +729,7 @@ var localDB = {
 {
 "group": "dessert",
 "id": "recipe-molten_chocolate_cake",
-"imgPlaceholder": "dist/imgs/placeholder-dessert-molten_chocolate_cake.svg",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-molten_chocolate_cake.svg",
 "imgSrc": "dist/imgs/dessert-molten_chocolate_cake.jpeg",
 "ingredients": {
 "ingredients": [
@@ -727,7 +768,7 @@ var localDB = {
 {
 "group": "dessert",
 "id": "recipe-oatmeal_balls",
-"imgPlaceholder": "dist/imgs/placeholder-dessert-oatmeal_balls.svg",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-oatmeal_balls.svg",
 "imgSrc": "dist/imgs/dessert-oatmeal_balls.jpg",
 "ingredients": {
 "ingredients": [
@@ -753,7 +794,7 @@ var localDB = {
 {
 "group": "dessert",
 "id": "recipe-oatmeal_raisin_cookies",
-"imgPlaceholder": "dist/imgs/placeholder-dessert-oatmeal_raisin_cookies.svg",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-oatmeal_raisin_cookies.svg",
 "imgSrc": "dist/imgs/dessert-oatmeal_raisin_cookies.png",
 "ingredients": {
 "1 - In a medium bowl, whisk:": [
@@ -796,7 +837,7 @@ var localDB = {
 {
 "group": "dessert",
 "id": "recipe-oreo_truffles",
-"imgPlaceholder": "dist/imgs/placeholder-dessert-oreo_truffles.svg",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-oreo_truffles.svg",
 "imgSrc": "dist/imgs/dessert-oreo_truffles.jpg",
 "ingredients": {
 "ingredients": [
@@ -821,7 +862,7 @@ var localDB = {
 {
 "group": "dessert",
 "id": "recipe-peanut_butter_and_cocoa_smothie",
-"imgPlaceholder": "dist/imgs/placeholder-dessert-peanut_butter_and_cocoa_smothie.svg",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-peanut_butter_and_cocoa_smothie.svg",
 "imgSrc": "dist/imgs/dessert-peanut_butter_and_cocoa_smothie.jpg",
 "ingredients": {
 "ingredients": [
@@ -844,7 +885,7 @@ var localDB = {
 {
 "group": "dessert",
 "id": "recipe-skillet_peanut_butter_chocolate_chip_blondies",
-"imgPlaceholder": "dist/imgs/placeholder-dessert-skillet_peanut_butter_chocolate_chip_blondies.svg",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-skillet_peanut_butter_chocolate_chip_blondies.svg",
 "imgSrc": "dist/imgs/dessert-skillet_peanut_butter_chocolate_chip_blondies.jpeg",
 "ingredients": {
 "ingredients": [
@@ -881,7 +922,7 @@ var localDB = {
 {
 "group": "dessert",
 "id": "recipe-toasted_marshmallow_brownie_crinkles",
-"imgPlaceholder": "dist/imgs/placeholder-dessert-toasted_marshmallow_brownie_crinkles.svg",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-toasted_marshmallow_brownie_crinkles.svg",
 "imgSrc": "dist/imgs/dessert-toasted_marshmallow_brownie_crinkles.jpg",
 "ingredients": {
 "ingredients": [
@@ -921,10 +962,211 @@ var localDB = {
 "title": "Toasted Marshmallow Brownie Crinkles"
 },
 {
-"group": "grains",
+"group": "meals",
+"id": "recipe-gyros",
+"imgPlaceholder": "dist/imgs/placeholder_meals-gyros.svg",
+"imgSrc": "dist/imgs/meals-gyros.jpg",
+"ingredients": {
+"Chicken": [
+"Chicken",
+"1-2 chicken breast (should be lamb)",
+"2 naan slices",
+"1/2 onion",
+"2 tomatoes",
+"fries",
+"lettuce"
+],
+"Tzatziki Sauce": [
+"Tzatziki Sauce",
+"1 cup plain yogurt",
+"1/2 cucumber peeled, seeded, and finely diced",
+"1 tbsp olive oil",
+"1 tbsp dill, chopped",
+"1 tbsp mint, chopped",
+"1 tbsp fresh lemon juice",
+"1 garlic clove, minced",
+"1/2 tsp salt"
+]
+},
+"notes": [
+"From the Joy of Cooking page 567",
+"Store bought Tzatziki makes this much easier because it's hard to get the right amount of Dill"
+],
+"rating": 1,
+"recipe": [
+"Bake the chicken with olive oil, salt, pepper, and garlic",
+"Lay everything out on the Naan and cover in Tzatziki"
+],
+"source": "",
+"title": "Gyros"
+},
+{
+"group": "meals",
+"id": "recipe-jambon_beurre",
+"imgPlaceholder": "dist/imgs/placeholder_meals-jambon_beurre.svg",
+"imgSrc": "dist/imgs/meals-jambon_beurre.jpg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"baguette",
+"ham",
+"gruyere cheese",
+"butter"
+]
+},
+"notes": [
+"The essential French ham sandwich"
+],
+"rating": 1,
+"recipe": [
+"Don't skimp on the butter"
+],
+"source": "https://www.youtube.com/watch?v=ge49xawecJk",
+"title": "Jambon Beurre"
+},
+{
+"group": "meals",
+"id": "recipe-nori_vegetable_wraps",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"hummus",
+"siracha",
+"carrot, peeled with a vegetable peeler",
+"spinach, arugula, and/or baby kale",
+"1/2 avocado",
+"cucumber (optional)",
+"roasted red pepper (optional)",
+"nori, pita, tortilla, or naan"
+]
+},
+"notes": [
+"To make roasted red peppers, hold them over a burner with tongs until charred. Put in a glass bowl with lid to let them steam and to make remove the char easier. Source: https://www.thekitchn.com/how-to-roast-peppers-3-ways-234734",
+"Other vegetables worth trying: red cabbage, radish, asparagus spears, zucchini, or sprouts"
+],
+"rating": 0,
+"recipe": [
+"The original recipe uses nori, but wraps work too. Layer on the hummus, then top with ingredients"
+],
+"source": "http://ahouseinthehills.com/2013/04/25/nori-veggie-wraps-my-everyday-staple/",
+"title": "Nori Vegetable Wraps"
+},
+{
+"group": "meals",
+"id": "recipe-quick_skillet_meals",
+"imgPlaceholder": "dist/imgs/placeholder_meals-quick_skillet_meals.svg",
+"imgSrc": "dist/imgs/meals-quick_skillet_meals.png",
+"ingredients": {
+"ingredients": [
+"Ingredients"
+]
+},
+"notes": [],
+"rating": 2,
+"recipe": [
+">> Chicken",
+"Pull out the chicken breasts from the fridge. Heat the skillet to medium-high heat with a bit of olive oil. Flip and coat the opposite side",
+"Once hot, place the chicken on the skillet, season with olive oil, pepper, salt, thyme, and rosemary",
+"Don't move the chicken and let it sear one side. Once starting to brown, flip and let sit until fully cooked",
+">> White Fish",
+"Note: use a metal fish spatula to keep the crispy bits attached to the fish",
+"Heat the cast iron skillet on medium-high heat with Extra olive oil (to held reduce sticking). Take out the fish fillets",
+"Season one side of the fish with Parsley, Thyme, Salt, and Pepper. Place season-side down for 2-3 minutes",
+"Season the opposite side, flip, and sear for 2-3 more minutes, then serve immediately"
+],
+"source": "",
+"title": "Quick Skillet Meals"
+},
+{
+"group": "meals",
+"id": "recipe-tomato_mozzarella_caprese",
+"imgPlaceholder": "dist/imgs/placeholder_meals-tomato_mozzarella_caprese.svg",
+"imgSrc": "dist/imgs/meals-tomato_mozzarella_caprese.jpg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"tomato, sliced",
+"mozzarella ball, sliced",
+"extra virgin olive oil, the good stuff",
+"basil",
+"oregano",
+"ground pepper",
+"baguette"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"Slice the tomatoes and mozzarella. Drizzle olive oil on top with a small amount of balsamic vinegar",
+"For the bread, add a bowl of ground pepper and olive oil for dipping"
+],
+"source": "",
+"title": "Tomato Mozzarella Caprese"
+},
+{
+"group": "meals",
+"id": "recipe-tuna_melts",
+"imgPlaceholder": "dist/imgs/placeholder_meals-tuna_melts.svg",
+"imgSrc": "dist/imgs/meals-tuna_melts.jpg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"mayonnaise",
+"canned tuna",
+"english muffins",
+"your choice of cheese slices"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"Preheat oven to Broil (~10 min).",
+"Mix one spoon of mayo with a can of tuna.",
+"Start toasting English Muffins on 3.",
+"On a foil-lined pan, cover the toasted muffins with the tuna, then a slice of cheese. Broil until the cheese has melted."
+],
+"source": "",
+"title": "Tuna Melts"
+},
+{
+"group": "pasta",
+"id": "recipe-baked_ziti",
+"imgPlaceholder": "dist/imgs/placeholder_pasta-baked_ziti.svg",
+"imgSrc": "dist/imgs/pasta-baked_ziti.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"ziti noodles",
+"6 oz spinach",
+"1 jar (1 pound 9 ounces) pasta sauce",
+"1 cup ricotta cheese",
+"1\u20442 cup parmesan",
+"1\u20442 tsp garlic powder",
+"1\u20444 tsp pepper",
+"1 cup shredded mozzarella, divided"
+]
+},
+"notes": [
+"Alex's family recipe"
+],
+"rating": 2,
+"recipe": [
+"Prepare pasta according to the instructions",
+"Add spinach during the last minute of cook time, then drain the pasta and spinach. Place back in the pot",
+"Stir the pasta sauce, ricotta, Parmesan, garlic, black pepper, and 1\u20442 cup mozzarella",
+"Spoon pasta mixture into 9x13 inch pan and sprinkle the rest of the mozzarella on top",
+"Back at 350 degrees for 30 min"
+],
+"source": "",
+"title": "Baked Ziti"
+},
+{
+"group": "pasta",
 "id": "recipe-cherry_tomato_spaghetti",
-"imgPlaceholder": "dist/imgs/placeholder-grains-cherry_tomato_spaghetti.svg",
-"imgSrc": "dist/imgs/grains-cherry_tomato_spaghetti.jpeg",
+"imgPlaceholder": "dist/imgs/placeholder_pasta-cherry_tomato_spaghetti.svg",
+"imgSrc": "dist/imgs/pasta-cherry_tomato_spaghetti.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -950,40 +1192,10 @@ var localDB = {
 "title": "Cherry Tomato Spaghetti"
 },
 {
-"group": "grains",
-"id": "recipe-curried_chickpeas",
-"imgPlaceholder": "dist/imgs/placeholder-grains-curried_chickpeas.svg",
-"imgSrc": "dist/imgs/grains-curried_chickpeas.jpg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"1 small onion (or diced pepper)",
-"1.5 tbsp curry powder",
-"1 inch fresh ginger (or 1 tsp cinnamon or 1 tsp nutmeg)",
-"1/4 tsp garlic powder (or 2-3 fresh cloves)",
-"8 oz (full bag) of spinach",
-"15 oz jar of tomato sauce",
-"29 oz can of chickpeas (garbanzo beans)",
-"rice (or naan, etc.)"
-]
-},
-"notes": [],
-"rating": 1,
-"recipe": [
-"Start cooking the rice then rinse & drain the chickpeas",
-"In a large skillet on medium heat, saut\u00e9 the diced onion for 4 minutes with a small amount of olive oil",
-"Add the garlic powder, ginger (cinnamon), and curry powder then cook for an additional minute",
-"Add 1/4 cup water and all of the spinach",
-"Once the spinach has wilted, add the tomato sauce and garbanzo beans. Cook for 5 more minutes"
-],
-"source": "http://www.budgetbytes.com/2013/12/curried-chickpeas-spinach/",
-"title": "Curried Chickpeas"
-},
-{
-"group": "grains",
+"group": "pasta",
 "id": "recipe-dragon_noodles",
-"imgPlaceholder": "dist/imgs/placeholder-grains-dragon_noodles.svg",
-"imgSrc": "dist/imgs/grains-dragon_noodles.jpg",
+"imgPlaceholder": "dist/imgs/placeholder_pasta-dragon_noodles.svg",
+"imgSrc": "dist/imgs/pasta-dragon_noodles.jpg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -1012,46 +1224,10 @@ var localDB = {
 "title": "Dragon Noodles"
 },
 {
-"group": "grains",
-"id": "recipe-fried_rice",
-"imgPlaceholder": "dist/imgs/placeholder-grains-fried_rice.svg",
-"imgSrc": "dist/imgs/grains-fried_rice.jpeg",
-"ingredients": {
-"Combine": [
-"Combine",
-"2 cups day-old rice",
-"1 chicken breast chopped (or shrimp, etc)",
-"1-2 bag(s) frozen oriental vegetables",
-"1/2 bag frozen peas",
-"finely chopped onion, carrots, broccoli",
-"3 eggs",
-"1 tsp soy sauce",
-"1 tsp sesame oil",
-"garlic",
-"kosher salt",
-"optional: 4 green onions, chopped",
-"optional: bean sprouts"
-]
-},
-"notes": [
-"Based on: http://www.geniuskitchen.com/recipe/chinese-fried-rice-38748"
-],
-"rating": 3,
-"recipe": [
-"Prep the rice at least 1 day before and store in the fridge",
-"On medium-high heat with a small amount of oil, cook the chicken first, then start adding the vegetables. Add in the seasonings and cook until everything is defrosted and cooked",
-"Lower to medium heat, add the rice and soy sauce",
-"In a separate pan (or in the middle of a wok), use sesame oil and scramble the eggs into small chunks",
-"Mix in the eggs, and optional toppings (green onion, beans sprouts, etc)"
-],
-"source": "",
-"title": "Fried Rice"
-},
-{
-"group": "grains",
+"group": "pasta",
 "id": "recipe-mozzarella_pasta",
-"imgPlaceholder": "dist/imgs/placeholder-grains-mozzarella_pasta.svg",
-"imgSrc": "dist/imgs/grains-mozzarella_pasta.jpg",
+"imgPlaceholder": "dist/imgs/placeholder_pasta-mozzarella_pasta.svg",
+"imgSrc": "dist/imgs/pasta-mozzarella_pasta.jpg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -1076,10 +1252,10 @@ var localDB = {
 "title": "Mozzarella Pasta"
 },
 {
-"group": "grains",
+"group": "pasta",
 "id": "recipe-orzo_and_cheese",
-"imgPlaceholder": "dist/imgs/placeholder-grains-orzo_and_cheese.svg",
-"imgSrc": "dist/imgs/grains-orzo_and_cheese.jpg",
+"imgPlaceholder": "dist/imgs/placeholder_pasta-orzo_and_cheese.svg",
+"imgSrc": "dist/imgs/pasta-orzo_and_cheese.jpg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -1101,10 +1277,10 @@ var localDB = {
 "title": "Orzo And Cheese"
 },
 {
-"group": "grains",
+"group": "pasta",
 "id": "recipe-peanut_noodles",
-"imgPlaceholder": "dist/imgs/placeholder-grains-peanut_noodles.svg",
-"imgSrc": "dist/imgs/grains-peanut_noodles.jpg",
+"imgPlaceholder": "dist/imgs/placeholder_pasta-peanut_noodles.svg",
+"imgSrc": "dist/imgs/pasta-peanut_noodles.jpg",
 "ingredients": {
 "Garnish Options": [
 "Garnish Options",
@@ -1142,68 +1318,10 @@ var localDB = {
 "title": "Peanut Noodles"
 },
 {
-"group": "grains",
-"id": "recipe-quinoa_and_stuff",
-"imgPlaceholder": "dist/imgs/placeholder-grains-quinoa_and_stuff.svg",
-"imgSrc": "dist/imgs/grains-quinoa_and_stuff.png",
-"ingredients": {
-"ingredients": [
-"Ingredients"
-]
-},
-"notes": [],
-"rating": 1,
-"recipe": [
-"Prepare Quinoa: Bring 2 cups water and 1 cup quinoa to a boil. Cover with lid and cook for 15 minutes on low. Remove from heat and let sit for 5 minutes",
-"(optionally) saut\u00e9e peppers and onions",
-"In a tupperware, combine a can each of black beans, tomatoes, and corn and microwave for ~2 minutes",
-"Mix everything together with your choice(s) of salsa, red pepper flakes, Sriracha, avocado chunks, lettuce, curry powder, etc."
-],
-"source": "",
-"title": "Quinoa And Stuff"
-},
-{
-"group": "grains",
-"id": "recipe-red_beans_and_rice",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"Base": [
-"Base",
-"rice",
-"2 16-oz. cans red beans",
-"1 lb. andouille sausage",
-"3 celery, chopped",
-"bell pepper",
-"onion",
-"1 tbsp. green onions, sliced"
-],
-"Seasonings": [
-"Seasonings",
-"1 tsp garlic powder (or 2 cloves)",
-"2 tsp. cayenne pepper",
-"2 sprigs fresh thyme",
-"1 tsp. dried oregano",
-"salt & pepper",
-"2 tsp. hot sauce"
-]
-},
-"notes": [],
-"rating": 1,
-"recipe": [
-"In a medium pot over medium heat, heat oil. Slice the sausage and cook in the pot until slightly browned.",
-"Add onion, bell pepper, and celery and cook cook until slightly softened for about 4 minutes.",
-"Stir in the the seasonings and beans. Simmer for 10 minutes.",
-"Serve over rice and garnish with green onions."
-],
-"source": "http://www.delish.com/cooking/recipe-ideas/recipes/a54954/easy-red-beans-and-rice-recipe/",
-"title": "Red Beans And Rice"
-},
-{
-"group": "grains",
+"group": "pasta",
 "id": "recipe-sausage_and_mushroom_penne_pasta",
-"imgPlaceholder": "dist/imgs/placeholder-grains-sausage_and_mushroom_penne_pasta.svg",
-"imgSrc": "dist/imgs/grains-sausage_and_mushroom_penne_pasta.jpg",
+"imgPlaceholder": "dist/imgs/placeholder_pasta-sausage_and_mushroom_penne_pasta.svg",
+"imgSrc": "dist/imgs/pasta-sausage_and_mushroom_penne_pasta.jpg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -1233,10 +1351,10 @@ var localDB = {
 "title": "Sausage And Mushroom Penne Pasta"
 },
 {
-"group": "grains",
+"group": "pasta",
 "id": "recipe-sesame_noodles_with_wilted_greens",
-"imgPlaceholder": "dist/imgs/placeholder-grains-sesame_noodles_with_wilted_greens.svg",
-"imgSrc": "dist/imgs/grains-sesame_noodles_with_wilted_greens.jpg",
+"imgPlaceholder": "dist/imgs/placeholder_pasta-sesame_noodles_with_wilted_greens.svg",
+"imgSrc": "dist/imgs/pasta-sesame_noodles_with_wilted_greens.jpg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -1265,10 +1383,10 @@ var localDB = {
 "title": "Sesame Noodles With Wilted Greens"
 },
 {
-"group": "grains",
+"group": "pasta",
 "id": "recipe-spaghetti_cacio_e_cepe",
-"imgPlaceholder": "dist/imgs/placeholder-grains-spaghetti_cacio_e_cepe.svg",
-"imgSrc": "dist/imgs/grains-spaghetti_cacio_e_cepe.jpg",
+"imgPlaceholder": "dist/imgs/placeholder_pasta-spaghetti_cacio_e_cepe.svg",
+"imgSrc": "dist/imgs/pasta-spaghetti_cacio_e_cepe.jpg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -1299,10 +1417,10 @@ var localDB = {
 },
 {
 "altRatio": "1/3",
-"group": "grains",
+"group": "pasta",
 "id": "recipe-spaghetti_sauce",
-"imgPlaceholder": "dist/imgs/placeholder-grains-spaghetti_sauce.svg",
-"imgSrc": "dist/imgs/grains-spaghetti_sauce.jpg",
+"imgPlaceholder": "dist/imgs/placeholder_pasta-spaghetti_sauce.svg",
+"imgSrc": "dist/imgs/pasta-spaghetti_sauce.jpg",
 "ingredients": {
 "Brown in Pan": [
 "Brown In Pan",
@@ -1344,70 +1462,99 @@ var localDB = {
 "title": "Spaghetti Sauce"
 },
 {
-"group": "meals",
-"id": "recipe-baked-fish",
-"imgPlaceholder": "dist/imgs/placeholder-meals-baked-fish.svg",
-"imgSrc": "dist/imgs/meals-baked-fish.jpg",
+"group": "pizza",
+"id": "recipe-mini_pizza",
+"imgPlaceholder": "dist/imgs/placeholder_pizza-mini_pizza.svg",
+"imgSrc": "dist/imgs/pizza-mini_pizza.jpg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
-"frozen fish fillet",
-"salt",
-"pepper",
-"lemon juice",
-"olive oil"
+"english muffins (or bagels)",
+"tomato sauce",
+"mozzarella cheese",
+"spinach",
+"toppings (parmesan cheese, pepperoni, red pepper flakes, etc.)"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"Preheat oven to 400\u2109 and lightly toast the choice of grain",
+"Place on a tin foil covered pan and cover with chosen ingredients",
+"Bake for 10 minutes or until the cheese is fully melted"
+],
+"source": "",
+"title": "Mini Pizza"
+},
+{
+"altRatio": "2",
+"group": "pizza",
+"id": "recipe-naan_pizza",
+"imgPlaceholder": "dist/imgs/placeholder_pizza-naan_pizza.svg",
+"imgSrc": "dist/imgs/pizza-naan_pizza.jpg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"2 naan",
+"olive oil",
+"pasta sauce",
+"red pepper flakes",
+"1/2 ball mozzarella, sliced into chunks",
+"1 tomato, sliced",
+"fresh basil"
 ]
 },
 "notes": [
-"For refrigerated fish, bake at 400F for 25-30 minutes for large fillets (>1 inch tall) and 15-20 for thin ones"
+"Can also be made with grape tomatoes",
+"Add the red pepper flakes to the sauce before baking",
+"Optionally, add olive oil to the naan before the pasta sauce and/or garlic"
 ],
 "rating": 1,
 "recipe": [
-"Preheat oven to 450\u2109 (~10 min)",
-"While still frozen, place in a tin foil covered pan. Cover with olive oil and bake for 4 minutes",
-"Remove from the oven and cover with salt, pepper, and lemon juice",
-"Return to the oven for 8-12 minutes based on thickness"
+"Preheat oven to 425 and place a shelf on the top rack. Cover a baking sheet in tin foil",
+"Prep the naan pizza and place in the oven for 12-16 minutes",
+"Plenty of options to mix this up. This just happened to be leftovers from other meals"
 ],
-"source": "http://cookthestory.com/how-to-cook-fish-from-frozen/",
-"title": "Baked-Fish"
+"source": "",
+"title": "Naan Pizza"
 },
 {
-"group": "meals",
-"id": "recipe-baked_ziti",
-"imgPlaceholder": "dist/imgs/placeholder-meals-baked_ziti.svg",
-"imgSrc": "dist/imgs/meals-baked_ziti.jpeg",
+"group": "pizza",
+"id": "recipe-pizza",
+"imgPlaceholder": "dist/imgs/placeholder_pizza-pizza.svg",
+"imgSrc": "dist/imgs/pizza-pizza.jpg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
-"ziti noodles",
-"6 oz spinach",
-"1 jar (1 pound 9 ounces) pasta sauce",
-"1 cup ricotta cheese",
-"1\u20442 cup parmesan",
-"1\u20442 tsp garlic powder",
-"1\u20444 tsp pepper",
-"1 cup shredded mozzarella, divided"
+"bag of pre-kneaded dough (trader joe's is best)",
+"olive oil",
+"marinara sauce",
+"mozzarella cheese",
+"(optional) parmesan cheese, feta",
+"(optional) spinach, peppers, tomatoes, etc.",
+"(optional) chicken, sausage, pepperoni, etc.",
+"(optional) red pepper flakes, basil"
 ]
 },
-"notes": [
-"Alex's family recipe"
-],
+"notes": [],
 "rating": 2,
 "recipe": [
-"Prepare pasta according to the instructions",
-"Add spinach during the last minute of cook time, then drain the pasta and spinach. Place back in the pot",
-"Stir the pasta sauce, ricotta, Parmesan, garlic, black pepper, and 1\u20442 cup mozzarella",
-"Spoon pasta mixture into 9x13 inch pan and sprinkle the rest of the mozzarella on top",
-"Back at 350 degrees for 30 min"
+"Let the dough rest at room temperature for 20 minutes",
+"Preheat the oven to 425F",
+"Using flour, gently spread out the pizza dough without overworking it",
+"Spread a spoonful of olive oil on the dough",
+"Add a thin layer of sauce (less than you think) then the toppings",
+"If using a pizza stone, see notes below. Cook at 425F for 6-8 minutes",
+"If using a baking sheet, cook for 22 minutes at 425F"
 ],
 "source": "",
-"title": "Baked Ziti"
+"title": "Pizza"
 },
 {
-"group": "meals",
+"group": "poultry",
 "id": "recipe-brick_chicken",
-"imgPlaceholder": "dist/imgs/placeholder-meals-brick_chicken.svg",
-"imgSrc": "dist/imgs/meals-brick_chicken.png",
+"imgPlaceholder": "dist/imgs/placeholder_poultry-brick_chicken.svg",
+"imgSrc": "dist/imgs/poultry-brick_chicken.png",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -1438,10 +1585,1503 @@ var localDB = {
 "title": "Brick Chicken"
 },
 {
-"group": "meals",
+"group": "poultry",
+"id": "recipe-chicken",
+"imgPlaceholder": "dist/imgs/placeholder_poultry-chicken.svg",
+"imgSrc": "dist/imgs/poultry-chicken.jpg",
+"ingredients": {
+"Seasoning Combinations": [
+"Seasoning Combinations",
+"basic: salt & pepper",
+"tacos: chili powder + cumin + cayenne + paprika",
+"rice: sriracha + honey (+ broccoli)",
+"sun-dried tomato: minced garlic + olive oil + sun-dried tomato paste",
+"korean: gochujang (korean chili paste) + mayonnaise + sesame oil",
+"coconut rice noodle curry: thai curry paste + coconut oil",
+"barbecue: barbecue sauce with a side of mashed potatoes"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"Preheat oven to 350\u2109 (~10 min)",
+"Cover chicken in olive oil and choice of seasonings",
+"Place in oven on tin foil covered pan for 15 minutes",
+"Flip and bake for 12 more minutes",
+"Alt: bake at 400\u00b0F and flip around 12 minutes then cook for 8 more minutes"
+],
+"source": "https://www.craftsy.com/blog/2014/04/baked-chicken-breast-recipe/",
+"title": "Chicken"
+},
+{
+"group": "poultry",
+"id": "recipe-chicken_cacciatore",
+"imgPlaceholder": "dist/imgs/placeholder_poultry-chicken_cacciatore.svg",
+"imgSrc": "dist/imgs/poultry-chicken_cacciatore.jpg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"6 qt. instant pot",
+"4 chicken thighs (2-3 lbs) [needs to fit in one layer]",
+"salt & pepper",
+"1 tbsp olive oil",
+"1 red bell pepper, sliced lengthwise into strips",
+"1 yellow onion, sliced",
+"3 cloves of garlic, chopped",
+"can diced tomatoes + liquid",
+"1/2 cup red wine",
+"1/4 cup water (or chicken broth)",
+"2 tbsp tomato paste",
+"1.5 tbsp italian seasoning",
+"1/2 tsp red pepper flakes",
+"1 bay leaf",
+"great with a baguette, rice, etc."
+]
+},
+"notes": [],
+"rating": 2,
+"recipe": [
+"Season chicken thighs with salt & pepper. Place olive oil in instant pot and put thighs skin-side down. Use **Saut\u00e9** setting for 4 minutes.",
+"Remove chicken thighs and add bell pepper, onion, and garlic. **Saut\u00e9** setting for 3 minutes.",
+"Add tomatoes and liquid, wine, water (broth), tomato paste, Italian seasoning, red pepper flakes, and bay leaf, combine. Add the chicken back to pot and fully coat in liquid - make sure chicken sits in one layer.",
+"Seal and select **Meat** to cook for 12 minutes at high pressure, then quick release steam",
+"Remove the lid and choose saute for 10 minutes. This will help reduce the sauce"
+],
+"source": "(Essential Instant Pot:69) https://smile.amazon.com/Essential-Instant-Pot-Cookbook-Foolproof/dp/0399580883/ref=sr_1_1_sspa?ie=UTF8&qid=1516461807&sr=8-1-spons&keywords=essential+instant+pot&psc=1",
+"title": "Chicken Cacciatore"
+},
+{
+"group": "poultry",
+"id": "recipe-chicken_tacos",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1.5 pounds chicken breast",
+"1/2 tsp salt",
+"1/4 tsp freshly ground black pepper",
+"2 tbsps extra-virgin olive oil",
+"1/4 cup chopped white onion",
+"1 (14.5 ounce) can diced tomatoes with juices",
+"1/3 cup fresh lime juice",
+"2 garlic cloves, minced",
+"1 tbsp chili powder",
+"2 tsps red wine vinegar",
+"1 tsp ground cumin",
+"1 tsp dried oregano",
+"1/2 tsp sugar",
+"8 to 12 tortilla shells of your choosing (we like 6-inch corn tortillas)"
+]
+},
+"notes": [
+"Note: If you\u2019re using rotisserie chicken or precooked chicken, prepare the taco sauce as directed, then add the shredded cooked chicken and let it simmer for 10 to 15 minutes to really soak in the sauce"
+],
+"rating": 0,
+"recipe": [
+"Season chicken breasts with the salt and pepper",
+"In a large skillet, heat the olive oil over medium heat. Cook the chicken until golden, about 3 minutes per side. Add the onion and cook, stirring, until slightly translucent, about 2 minutes. Stir in the tomatoes with their juices, lime juice, garlic, chili powder, vinegar, cumin, oregano, and sugar. Reduce the heat and simmer, uncovered, stirring frequently, until the chicken is cooked through, about 15 minutes.",
+"Transfer the chicken to a cutting board. Use two forks to shred the meat, then transfer it back to the skillet. To allow the taco sauce to really seep into the shredded chicken, simmer for 5 to 8 minutes more.",
+"If you\u2019re using soft shells, warm the tortillas, sandwiched between damp paper towels, for about 30 seconds in the microwave. If you\u2019re using hard shells, put them in a 250\u00b0F oven until warm, about 5 minutes"
+],
+"source": "https://www.giadzy.com/posts/recipes/452042/taco-tuesday-chicken-tacos",
+"title": "Chicken Tacos"
+},
+{
+"group": "poultry",
+"id": "recipe-enchiladas",
+"imgPlaceholder": "dist/imgs/placeholder_poultry-enchiladas.svg",
+"imgSrc": "dist/imgs/poultry-enchiladas.png",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"tortillas",
+"1 can of enchilada sauce",
+"2-3 chicken breast or rotisserie chicken",
+"shredded cheese",
+"1 can black beans, strained",
+"other vegetables"
+]
+},
+"notes": [
+"Other recommended vegetables include: onion, cilantro, diced tomato, and/or diced green chilies"
+],
+"rating": 3,
+"recipe": [
+"Bake the chicken (if not already cooked)",
+"Preheat the oven to 375F",
+"Roll the cooked chicken, cheese, beans, and other vegetables with the flap side down, then pour enchilada sauce over top",
+"Bake for 25 minutes"
+],
+"source": "",
+"title": "Enchiladas"
+},
+{
+"group": "poultry",
+"id": "recipe-fajitas",
+"imgPlaceholder": "dist/imgs/placeholder_poultry-fajitas.svg",
+"imgSrc": "dist/imgs/poultry-fajitas.jpg",
+"ingredients": {
+"Main": [
+"Main",
+"3 peppers",
+"3 tomatoes",
+"1 lg. onion",
+"1 can corn",
+"1 can black beans",
+"1 lb. chicken (~two breasts)"
+],
+"Seasonings": [
+"Seasonings",
+"1 tbsp chili powder",
+"2 tbsp vegetable oil",
+"1/4 tsp garlic powder",
+"1/2 tbsp corn starch"
+],
+"With": [
+"With",
+"10 6-inch tortillas",
+"2 cups of rice",
+"1/3 bag of spinach",
+"1/2 jar of salsa",
+"1 fresh lime",
+"cilantro"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"Defrost the chicken and preheat the oven to 400 degrees",
+"Cut the peppers, onions, tomatoes, and chicken into 1/4 inch strips and fill a 9 x 13 inch casserole dish. Add the beans and corn, then cover with the seasonings and olive oil. Mix by hand",
+"Bake for 30 minutes and start the rice",
+"Crisp the tortillas in the pan so everything can be served hot!"
+],
+"source": "http://www.budgetbytes.com/2013/02/oven-fajitas/",
+"title": "Fajitas"
+},
+{
+"group": "poultry",
+"id": "recipe-honey_and_soy_glazed_chicken_thighs",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"2 tbsp canola oil",
+"1 tbsp minced garlic",
+"1 tbsp minced ginger",
+"6 tbsp low-sodium soy sauce",
+"5 tbsp mild honey",
+"3 tbsp unsalted butter",
+"kosher salt",
+"black pepper",
+"8 bone-in, skin-on chicken thighs (about 3 pounds)",
+"lemon wedges, for serving"
+]
+},
+"notes": [],
+"rating": 0,
+"recipe": [
+"Preheat oven to 425 degrees",
+"Heat 1 tablespoon oil in a small saucepan over low heat. Add the garlic and ginger and cook until softened (~3 min)",
+"Add the soy sauce and honey and simmer, until reduced and slightly thickened (~10 min)",
+"Turn off the heat then whisk in the butter. Season with salt and pepper",
+"In a medium bowl, coat the chicken with salt and pepper, then toss with half the glaze and remaining 1 tablespoon oil",
+"Arrange in an even layer, skin side up, on a a baking shined lined with foil and roast 15 min",
+"Brush the chicken all over with 2 tablespoons of the remaining glaze. Roast until golden and cooked through (~10 min)",
+"Drizzle the chicken with the remaining glaze and serve with lemon wedges"
+],
+"source": "https://cooking.nytimes.com/recipes/1019804-honey-and-soy-glazed-chicken-thighs?action=click&module=Global%20Search%20Recipe%20Card&pgType=search&rank=1",
+"title": "Honey And Soy Glazed Chicken Thighs"
+},
+{
+"group": "poultry",
+"id": "recipe-mediterranean_chicken",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"2 cups red potatoes, quartered",
+"1 red bell pepper, sliced",
+"1 yellow bell pepper sliced",
+"1 cup onion peeled and sliced",
+"4 tbsp extra virgin olive oil, halved",
+"1 tsp marjoram, halved",
+"1/2 tsp crushed red pepper flakes, halved",
+"kosher salt",
+"freshly ground black pepper",
+"4 chicken breasts, bone-in & halved",
+"2 cups grape tomatoes",
+"1/2 pitted kalamata olives, halved",
+"1 lemon",
+"1/2 cup fresh parsely, chopped"
+]
+},
+"notes": [
+"Source: La Madeleine email"
+],
+"rating": 0,
+"recipe": [
+"Preheat oven to 450 and line baking sheet pan with parchment paper",
+"In a medium bowl, add the potatoes, peppers, and onion. Toss with 2 tbsp extra virgin olive oil, half the spices, salt, and pepper. Spread around the edges of the baking sheet leaving the middle empty",
+"Add the chicken to the bowl and rub with the other half of the olive oil, spices, salt, and pepper",
+"Leaving buffer, arrange the chicken in the middle of the pan",
+"Lower oven to 400 and roast",
+"After 30 minutes, add tomatoes and olives",
+"Roast an additional 10-15 minutes until potatoes are fork-tender and chicken is thoroughly cooked",
+"Remove from oven and place in a serving bowl. Drizzle any pan juices over the chicken, then sprinkle with parsley, lemon juice, and lemon zest"
+],
+"source": "",
+"title": "Mediterranean Chicken"
+},
+{
+"group": "poultry",
+"id": "recipe-paremesan_chicken_breasts",
+"imgPlaceholder": "dist/imgs/placeholder_poultry-paremesan_chicken_breasts.svg",
+"imgSrc": "dist/imgs/poultry-paremesan_chicken_breasts.jpeg",
+"ingredients": {
+"other": [
+"Other",
+"4 chicken breasts",
+"1.5 cups parmesan, finely grated",
+"extra paprika for sprinkling"
+],
+"sauce": [
+"Sauce",
+"1/4 cup olive oil",
+"6 cloves garlic, minced",
+"1.5 tsp paprika",
+"1 tsp kosher salt",
+"1/2 tsp ground black pepper",
+"1/4 tsp cayenne pepper"
+]
+},
+"notes": [
+"Chrissy Teigen Cravings Hungry for More, 202"
+],
+"rating": 2,
+"recipe": [
+"Preheat oven to 400F",
+"In a small bowl, combine the sauce ingredients and coat the chicken. Sprinkle with Parmesan",
+"Bake on a foil-lined sheet for 15 minutes, then broil for 3-4 minutes to brown and sizzle the cheese. Let rest for 5 minutes",
+"sprinkle with a little extra paprika"
+],
+"source": "",
+"title": "Paremesan Chicken Breasts"
+},
+{
+"group": "poultry",
+"id": "recipe-sesame_chicken_noodles",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"dressing": [
+"Dressing",
+"1 tsp sesame oil",
+"1/4 cup peanut oil or sunflower oil?",
+"1/4 cup tahini",
+"3 tbsp soy sauce",
+"2 tbsp red wine vinegar",
+"2 tsp chili oil",
+"1 tsp honey",
+"1/2 tsp cayenne pepper or red pepper flakes",
+"1 garlic clove, minced"
+],
+"else": [
+"Else",
+"1 chicken breast",
+"8 ounces fettuccine (1/2 container)",
+"1 tsp sesame oil",
+"2 scallions, thinly sliced"
+]
+},
+"notes": [
+"Chrissy Teigen Cravings, 78",
+"The chili oil and the vinegar came through too strong, so I just ditched the dressing and went with pesto. Not sure what changes I would make"
+],
+"rating": 0,
+"recipe": [
+"Fill a large pot 2/3 full of water and bring to a boil. Add the chicken breast and remove from heat. Cover and let chicken sit until tender (15 minutes); check for done-ness and when done remove and place onto a plate",
+"With the same water, bring it back to a boil. Add the fettuccine and cook according to directions.",
+"In a medium bowl, which together the sauce until smooth.",
+"Rinse the noodles until cool, then pat dry. Toss the noodles with the remaining 1 tsp sesame oil. Shred the chicken by hand and toss with the noodles. Finally coat with the dressing"
+],
+"source": "",
+"title": "Sesame Chicken Noodles"
+},
+{
+"group": "poultry",
+"id": "recipe-teryaki_chicken",
+"imgPlaceholder": "dist/imgs/placeholder_poultry-teryaki_chicken.svg",
+"imgSrc": "dist/imgs/poultry-teryaki_chicken.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"2-3 large chicken breasts",
+"corn starch",
+"frozen broccoli",
+"rice",
+"3/4 cup teriyaki sauce",
+"sesame seeds"
+]
+},
+"notes": [
+"Teriyaki sauce is roughly 1:1 mirin to soy sauce and optionally ginger"
+],
+"rating": 2,
+"recipe": [
+"Start the rice and heat a pan with refined Sesame or Sunflower oil (high heat)",
+"Slice the chicken at a 45 degree angle then cut in half so you have chunks are roughly 50% wider than a pink eraser",
+"Toss the chicken with the corn starch, then fry in the pan until the outer surfaces are no longer raw",
+"Finish cooking the chicken in the sauce",
+"Prep the broccoli and serve"
+],
+"source": "",
+"title": "Teryaki Chicken"
+},
+{
+"group": "rice",
+"id": "recipe-basmati_rice",
+"imgPlaceholder": "dist/imgs/placeholder_rice-basmati_rice.svg",
+"imgSrc": "dist/imgs/rice-basmati_rice.png",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1 cup basmati rice",
+"1 cup water",
+"1/2 tbsp olive oil",
+"chopped green onions (optional)",
+"parsely (optional)",
+"instant pot"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"Rinse the Basmati rice with cold water. Add rice, water, and oil to instant pot. Cook for 8 minutes on high pressure, then allow 5 minutes for natural pressure release",
+"Toss with the green onions and parsely"
+],
+"source": "https://mommyshomecooking.com/instant-pot-fluffy-rice/",
+"title": "Basmati Rice"
+},
+{
+"group": "rice",
+"id": "recipe-fried_rice",
+"imgPlaceholder": "dist/imgs/placeholder_rice-fried_rice.svg",
+"imgSrc": "dist/imgs/rice-fried_rice.jpeg",
+"ingredients": {
+"Combine": [
+"Combine",
+"2 cups day-old rice",
+"1 chicken breast chopped (or shrimp, etc)",
+"1-2 bag(s) frozen oriental vegetables",
+"1/2 bag frozen peas",
+"finely chopped onion, carrots, broccoli",
+"3 eggs",
+"1 tsp soy sauce",
+"1 tsp sesame oil",
+"garlic",
+"kosher salt",
+"optional: 4 green onions, chopped",
+"optional: bean sprouts"
+]
+},
+"notes": [
+"Based on: http://www.geniuskitchen.com/recipe/chinese-fried-rice-38748"
+],
+"rating": 3,
+"recipe": [
+"Prep the rice at least 1 day before and store in the fridge",
+"On medium-high heat with a small amount of oil, cook the chicken first, then start adding the vegetables. Add in the seasonings and cook until everything is defrosted and cooked",
+"Lower to medium heat, add the rice and soy sauce",
+"In a separate pan (or in the middle of a wok), use sesame oil and scramble the eggs into small chunks",
+"Mix in the eggs, and optional toppings (green onion, beans sprouts, etc)"
+],
+"source": "",
+"title": "Fried Rice"
+},
+{
+"group": "rice",
+"id": "recipe-quinoa_and_stuff",
+"imgPlaceholder": "dist/imgs/placeholder_rice-quinoa_and_stuff.svg",
+"imgSrc": "dist/imgs/rice-quinoa_and_stuff.png",
+"ingredients": {
+"ingredients": [
+"Ingredients"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"Prepare Quinoa: Bring 2 cups water and 1 cup quinoa to a boil. Cover with lid and cook for 15 minutes on low. Remove from heat and let sit for 5 minutes",
+"(optionally) saut\u00e9e peppers and onions",
+"In a tupperware, combine a can each of black beans, tomatoes, and corn and microwave for ~2 minutes",
+"Mix everything together with your choice(s) of salsa, red pepper flakes, Sriracha, avocado chunks, lettuce, curry powder, etc."
+],
+"source": "",
+"title": "Quinoa And Stuff"
+},
+{
+"group": "rice",
+"id": "recipe-red_beans_and_rice",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"Base": [
+"Base",
+"rice",
+"2 16-oz. cans red beans",
+"1 lb. andouille sausage",
+"3 celery, chopped",
+"bell pepper",
+"onion",
+"1 tbsp. green onions, sliced"
+],
+"Seasonings": [
+"Seasonings",
+"1 tsp garlic powder (or 2 cloves)",
+"2 tsp. cayenne pepper",
+"2 sprigs fresh thyme",
+"1 tsp. dried oregano",
+"salt & pepper",
+"2 tsp. hot sauce"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"In a medium pot over medium heat, heat oil. Slice the sausage and cook in the pot until slightly browned.",
+"Add onion, bell pepper, and celery and cook cook until slightly softened for about 4 minutes.",
+"Stir in the the seasonings and beans. Simmer for 10 minutes.",
+"Serve over rice and garnish with green onions."
+],
+"source": "http://www.delish.com/cooking/recipe-ideas/recipes/a54954/easy-red-beans-and-rice-recipe/",
+"title": "Red Beans And Rice"
+},
+{
+"group": "seafood",
+"id": "recipe-baked-fish",
+"imgPlaceholder": "dist/imgs/placeholder_seafood-baked-fish.svg",
+"imgSrc": "dist/imgs/seafood-baked-fish.jpg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"frozen fish fillet",
+"salt",
+"pepper",
+"lemon juice",
+"olive oil"
+]
+},
+"notes": [
+"For refrigerated fish, bake at 400F for 25-30 minutes for large fillets (>1 inch tall) and 15-20 for thin ones"
+],
+"rating": 1,
+"recipe": [
+"Preheat oven to 450\u2109 (~10 min)",
+"While still frozen, place in a tin foil covered pan. Cover with olive oil and bake for 4 minutes",
+"Remove from the oven and cover with salt, pepper, and lemon juice",
+"Return to the oven for 8-12 minutes based on thickness"
+],
+"source": "http://cookthestory.com/how-to-cook-fish-from-frozen/",
+"title": "Baked-Fish"
+},
+{
+"group": "seafood",
+"id": "recipe-crab_cakes",
+"imgPlaceholder": "dist/imgs/placeholder_seafood-crab_cakes.svg",
+"imgSrc": "dist/imgs/seafood-crab_cakes.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1/4 cup mayonnaise",
+"2 scallions, thinly sliced",
+"1 large egg, lightly beaten",
+"1 tbsp dijon mustard",
+"2 tsps fresh lemon juice plus wedges",
+"1.5 tsps old bay seasoning",
+"1/2 jalapenno, seeded, finely chopped",
+"1 pound lump crab meat, picked over",
+"3/4 and 1/2 cup panko (japanese breadcrumbs), divided",
+"1 tbsp thinly sliced chives",
+"1/4 tsp kosher salt",
+"1/8 tsp freshly ground black pepper",
+"1 head bibb lettuce",
+"2 tbsps vegetable oil"
+]
+},
+"notes": [],
+"rating": 2,
+"recipe": [
+"Whisk first 7 ingredients in a medium bowl. Add crab and fold to blend. Stir in 3/4 cup panko, chives, salt, and pepper",
+"Divide into 6 equal portions and form each into 1 inch-thick patties, then refrigerate for at least 10 minutes",
+"Heat oil in a large skillet over medium heat",
+"Place remaining 1/2 cup panko on a plate can coat the cakes. Fry until golden brown and crisp, 3-4 minutes per side",
+"Arrange atop lettuce and serve with lemon wedges"
+],
+"source": "https://www.epicurious.com/recipes/food/views/baltimore-crab-cakes-366711",
+"title": "Crab Cakes"
+},
+{
+"group": "seafood",
+"id": "recipe-shrimp_creole",
+"imgPlaceholder": "dist/imgs/placeholder_seafood-shrimp_creole.svg",
+"imgSrc": "dist/imgs/seafood-shrimp_creole.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1 (32 oz) can of tomato sauce",
+"1/2 stick butter",
+"1.5 onions, diced",
+"1.5 stalks celery, half rings",
+"1.5 garlic cloves",
+"1 (15 oz) can whole tomatoes, cut",
+"1 bay leaf",
+"1/2 tsp tabasco sauce",
+"1/2 tbsp fresh thyme",
+"1/4 bunch parsley, chopped",
+"1 lbs raw shrimp, peeled and deveined",
+"white rice and/or side baguette",
+"pinch of saffron"
+]
+},
+"notes": [
+"Alex's family recipe",
+"This recipe has been cut in half, which serves 3-4 people"
+],
+"rating": 3,
+"recipe": [
+"Reduce tomato sauce by 3/4 (bake uncovered in 350 oven - ~90 minutes). Add water back to original volume",
+"In butter, saute the onion, celery, and garlic",
+"Add sauted ingredients, sliced tomatoes, and spices to the pot with tomato sauce from the oven",
+"Bake covered for 30 min; uncover and bake for 30 additional minutes",
+"(*Can stop here to store overnight in the fridge)",
+"Bring to a boil. Add parsley and shrimp then cook for 5 more minutes. Serve over white rice with a pinch of saffron"
+],
+"source": "",
+"title": "Shrimp Creole"
+},
+{
+"group": "seafood",
+"id": "recipe-shrimp_scampi",
+"imgPlaceholder": "dist/imgs/placeholder_seafood-shrimp_scampi.svg",
+"imgSrc": "dist/imgs/seafood-shrimp_scampi.jpg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"pasta",
+"cooked shrimp",
+"spinach, peas, or etc.",
+"olive oil",
+"garlic powder",
+"italian seasoning",
+"parsley",
+"parmesan cheese",
+"lemon juice",
+"red pepper flakes (optional)"
+]
+},
+"notes": [
+"You can use imitation crab meat in place of shrimp"
+],
+"rating": 1,
+"recipe": [
+"Make the pasta according to directions. Drain pot then add all ingredients, stir, and heat until warm"
+],
+"source": "",
+"title": "Shrimp Scampi"
+},
+{
+"group": "seafood",
+"id": "recipe-shrimp_tacos",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1 lb shrimp",
+"1/4 cup olive oil",
+"3 tbsp honey",
+"1 lime, juiced",
+"3 cloves garlic",
+"1/2 tsp each of salt & pepper"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"Whisk together olive oil, honey, lime juice, garlic, salt, and pepper, then pour the marinade over the shrimp and marinate for at least 30 minutes in the fridge",
+"Skewer and grill for 6-8 minutes or cook in a skillet for ~6 minutes",
+"Place grilled shrimp in tortilla and top with slaw and slices of avocado"
+],
+"source": "http://www.yummly.co/recipe/Honey-Lime-Shrimp-Tacos-1576139",
+"title": "Shrimp Tacos"
+},
+{
+"group": "sides",
+"id": "recipe-aunt_laura's_spicy_chicken_dip",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1 large can chicken",
+"1 cup frank's red hot sauce",
+"8 oz block cream cheese",
+"1/2 cup ranch dressing",
+"1/4 cup cheddar cheese"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"Heat chicken and franks until hot",
+"Stir in cream cheese and ranch",
+"Mix in 1/2 of cheese and use the rest on top",
+"Broil to heat thoroughly"
+],
+"source": "",
+"title": "Aunt Laura'S Spicy Chicken Dip"
+},
+{
+"group": "sides",
+"id": "recipe-bruschetta",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1 baguette, cut in half length-wise and toasted",
+"2 tsps minced garlic or ~1/4 tsp garlic powder",
+"3 tbsp extra-virgin olive oil",
+"1\u20444 cup grated parmesan cheese",
+"2.5 cups minced roma tomatoes (cut so fine its almost a paste)",
+"1\u20443 cup thinly sliced fresh basil leaf",
+"2 tbsp balsamic vinegar",
+"1\u20442 tsp salt",
+"1 tsp fresh ground pepper"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"In a medium mixing bowl, add the tomatoes, garlic, basil, vinegar, olive oil, cheese, salt, and pepper",
+"Mix thoroughly and let sit for at least 15 minutes at room temperature to let the flavors marinate",
+"Slice the bread into individual pieces and spoon the mixture on top"
+],
+"source": "https://www.geniuskitchen.com/recipe/best-ever-bruschetta-443987",
+"title": "Bruschetta"
+},
+{
+"group": "sides",
+"id": "recipe-pretzels",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1 tbsp yeast",
+"1 tbsp sugar",
+"2 cups warm water",
+"1 cup flour",
+"4 cups flour, mixed with 1 tbsp. salt, more flour if needed",
+"1 egg",
+"1 tbsp water",
+"1/2 cup baking soda",
+"coarse salt"
+]
+},
+"notes": [
+"Thanks to Andrew P's comments for a more pretzel-recipe",
+"Other Sources:",
+"Once Upon a Chef: https://www.onceuponachef.com/recipes/soft-pretzels.html",
+"Food Network: http://www.foodnetwork.com/recipes/food-network-kitchen/almost-famous-soft-pretzels-recipe-1972733",
+"Food Network Alt: http://www.foodnetwork.com/recipes/alton-brown/homemade-soft-pretzels-recipe-1948242"
+],
+"rating": 0,
+"recipe": [
+"In large bowl, stir yeast, sugar and warm water. Let rest until yeast is dissolved and is a little foamy.",
+"Stir in 1 cup flour. Then rest of flour mixed with the 1 tbsp salt. Knead on lightly floured surface until smooth. Place in oiled bowl, rolling around until all oiled. Cover and let rise till doubled in size.",
+"Remove and briefly knead again, gently. Cut into 8 pieces, roll each piece into 28 inch ropes, shape into pretzels and place on greased cookie sheet. Cover and let rise 15 minutes.",
+"Simmer 8 cups of water with 1/2 cup of baking soda. Dunk each pretzel for 30 seconds. Replace back onto greased cookie sheet.",
+"Brush each with eggwash (1 egg beaten with 1 tbsp. water), sprinkle with coarse salt. Bake in preheated 425\u00ba oven for 21 minutes"
+],
+"source": "http://www.geniuskitchen.com/recipe/real-homemade-soft-pretzels-130301",
+"title": "Pretzels"
+},
+{
+"group": "soup",
+"id": "recipe-chicken_and_dumplings",
+"imgPlaceholder": "dist/imgs/placeholder_soup-chicken_and_dumplings.svg",
+"imgSrc": "dist/imgs/soup-chicken_and_dumplings.jpeg",
+"ingredients": {
+"dumplings": [
+"Dumplings",
+"1 cup all-purpose flour",
+"1/2 cup bread crumbs",
+"2 tsp baking powder",
+"3/4 tsp kosher salt",
+"1/2 tsp pepper",
+"1 small shallot, minced",
+"1.5 tbsp parsley, finely chopped",
+"1/3 cup whole milk",
+"1 large egg",
+"2 tbsp unsalted butter, melted (~20s in microwave)"
+],
+"soup": [
+"Soup",
+"2 cups broth, split",
+"2 lbs skinless chicken breasts",
+"1.5 cups frozen peas",
+"2 tbsp unsalted butter",
+"3 large carrots, coined",
+"2 celery stalks, coined",
+"1 yellow onion, diced",
+"1 tsp kosher salt"
+]
+},
+"notes": [
+"Source: The Essential Instant Pot Cookbook page 55",
+"TO make breadcrumbs, leave bread out uncovered to dry, then freeze. When you need it, just microwave it for 20 seconds and toss in a food processor (definitely don't use a grater...)"
+],
+"rating": 2,
+"recipe": [
+"Prep the vegetables",
+"Arrange the chicken breasts in a single layer with 1 cup of broth in the instant pot. Set to Meat or Poultry for 7-8 min & high pressure",
+"Make the dumpling dough: In a bowl, stir together the flour, bread crumbs, baking powder, salt, pepper, shallot, and parsley.",
+"In the center of the mixture, add the milk, egg, and melted butter. With a fork, gradually mix the dry ingredients into the wet until evenly absorbed. Cover and place in the fridge",
+"Quick release the chicken and transfer to the cutting board. Pour the broth into a microwave-safe tupperware (you can store leftovers in it later) and combine with the peas and remaining cup of broth",
+"Select the saute option and melt 2 tbsp of butter, then add carrots, celery, onion, and salt. Saute for 5 minutes. In parallel, microwave the broth and peas for 3 minutes",
+"Shred the chicken into bite-size pieces",
+"Return the shredded chicken and the hot broth and peas to the pot. Add more broth if needed until at least submerged",
+"Add large tablespoons of the dumpling dough, spacing evenly",
+"Cover the pot with a glass lid and cook for 15 minutes"
+],
+"source": "https://smile.amazon.com/Essential-Instant-Pot-Cookbook-Foolproof/dp/0399580883",
+"title": "Chicken And Dumplings"
+},
+{
+"group": "soup",
+"id": "recipe-chicken_noodle_soup",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"2 tbsp extra virgin olive oil",
+"1 medium onion, chopped",
+"5 medium carrots, coined",
+"6 celery stalks, cut into half moons",
+"2 tbsp garlic, minced",
+"1 tsp thyme, chopped",
+"1 tbsp salt",
+"1 tsp pepper",
+"1 bay leaf,",
+"10 cups chicken broth",
+"3 ounces wide egg noodles, cooked",
+"rotisserie chicken meat, shredded"
+]
+},
+"notes": [
+"Chrissy Teigen Cravings"
+],
+"rating": 2,
+"recipe": [
+"In a big pot, heat oil over medium-high heat. Add the onion; stir and cook until softened (6-8 min)",
+"Add the carrots, celery, garlic, thyme, salt, and pepper until the carrots soften (~5 minutes)",
+"Add the bay leaf and chicken broth. Boil and reduce heat to simmer for 45 minutes",
+"Shred the chicken and cook the noodles",
+"At 45 minutes, stir in the chicken and cooked noodles. Heat for 5-10 min then toss the bay leaf and serve"
+],
+"source": "",
+"title": "Chicken Noodle Soup"
+},
+{
+"group": "soup",
+"id": "recipe-french_onion_soup",
+"imgPlaceholder": "dist/imgs/placeholder_soup-french_onion_soup.svg",
+"imgSrc": "dist/imgs/soup-french_onion_soup.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1.5 tbsp olive oil",
+"3.5 tbsp butter",
+"5 cups onions (~1.5 lbs), thinly sliced",
+"3 thyme sprigs",
+"4 cloves garlic",
+"1 tbsp flour",
+"5/8 cup dry red wine",
+"3 cups beef broth",
+"3/4 soy sauce",
+"1/2 tsp kosher salt",
+"baguette or 2 large croissants, cut into bite-size cubes",
+"3/8 lb gruyere or swiss cheese, grated"
+]
+},
+"notes": [
+"Chrissy Teigen Cravings Hungry for More, 48",
+"Originally recipe serves four, but this recipe is modified to serve two"
+],
+"rating": 3,
+"recipe": [
+"In >4 qt pot, heat the oil and butter on high. Add the onions and thyme. Stir often and cook for ~15 minutes until the onions begin to shrink, but light in color",
+"Reduce the heat to med-low, add the garlic and cook until the onions are golden brown and tender (~20 min)",
+"Add the flour and cook for about 3 minutes",
+"Increase the heat to medium, add the wine and bring to a boil. Cook until evaporated (~5 min). Discard the Thyme",
+"Increase the heat to high, add the broth, soy sauce, and salt. Bring to a boil then reduce to a simmer. Simmer for 45 minutes",
+"While simmering, preheat the oven to 400F. Bake the bite-size bread chunks for ~6 min (9 min @ 350 for the croissants)",
+"Set the oven to broil. Add 1/4 cup cheese in the bottom of two oven-safe soup crocks. Add the soup, the baguette crisps, then cover with the remaining cheese",
+"Broil until the cheese slightly browns and begins bubbling"
+],
+"source": "https://smile.amazon.com/dp/B01MR8VVAZ/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1",
+"title": "French Onion Soup"
+},
+{
+"group": "soup",
+"id": "recipe-johns_chili",
+"imgPlaceholder": "dist/imgs/placeholder_soup-johns_chili.svg",
+"imgSrc": "dist/imgs/soup-johns_chili.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1 lb ground turkey",
+"1 medium onion, chopped",
+"1 cup mushrooms, chopped",
+"2 tbsp (lawry's) seasoning salt",
+"3 tbsp chili powder",
+"1 tsp cayenne pepper",
+"3 cloves garlic, minced",
+"2 cups water",
+"2 (15 oz) cans tomato sauce",
+"2 (15 oz) cans kidney beans",
+"2 tbsp light brown sugar",
+"(optional) 1 can (15 oz) whole tomatoes, crushed",
+"(optional) plain yogurt"
+]
+},
+"notes": [
+"Chrissy Teigen Cravings, 148",
+"Serves 6-8"
+],
+"rating": 2,
+"recipe": [
+"Heat a large pot over medium heat. Add the ground turkey, onion, mushrooms, seasoning salt, chili powder, and cayenne",
+"Cook for 8 min. Add the garlic and cook for 1 additional min",
+"Add 2 cups water, the tomato sauce, kidney beans, brown sugar, and bring to a boil",
+"Reduce heat to medium-low and simmer for 35-45 min to thicken slightly and flavor-mingle"
+],
+"source": "https://smile.amazon.com/Cravings-Recipes-All-Food-Want/dp/1101903910",
+"title": "Johns Chili"
+},
+{
+"group": "soup",
+"id": "recipe-pot_pie_soup",
+"imgPlaceholder": "dist/imgs/placeholder_soup-pot_pie_soup.svg",
+"imgSrc": "dist/imgs/soup-pot_pie_soup.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"6 cups low sodium chicken broth",
+"2 cups whole milk",
+"2 sticks unsalted butter, cut into chunks",
+"2 tbsp minced garlic (3 cloves)",
+"1 cup flour",
+"4 tsp salt",
+"1.5 tsp ground pepper",
+"1 large russet potato, peeled and 1/2 inch cubes",
+"1/2 lb (2 cups) carrots, diced",
+"1 cup frozen peas",
+"1 cup frozen pearl onions",
+"1/4 lb deli ham, sliced",
+"1 lb (3 cups) rotisserie chicken, cubed",
+"1/2 cup heavy cream"
+]
+},
+"notes": [
+"From Cravings by Chrissy Teigen, page 51-52. Also includes recipe for crackers"
+],
+"rating": 1,
+"recipe": [
+"In a saucepan, bring the broth and milk to a simmer. Keep at simmer",
+"Prep the carrots and potato",
+"In a large pot, melt the butter at medium-high heat until foamy. Add the garlic, stir for 1 minutes. Add the flour and reduce to medium until foaming again (2-3 min).",
+"Whisk in the milk-broth mixture. Add the salt and pepper. Bring to a boil, then reduce the heat for 5 minutes.",
+"Add the potato, carrots, peas, pearl onions, and ham. Simmer until the potatoes and carrots are tender (~20 minutes).",
+"Stir in the chicken and cream then heat for a final 5 minutes",
+"Serve with a baguette or the crust crackers from the same cookbook recipe"
+],
+"source": "",
+"title": "Pot Pie Soup"
+},
+{
+"group": "soup",
+"id": "recipe-slow_cooker_chicken_mango_curry",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"Blender": [
+"Blender",
+"2 cups frozen mango chunks",
+"1 small onion, quartered",
+"4 cloves garlic",
+"2 tbsp brown sugar",
+"1 tsp rice vinegar",
+"1 tsp freshly grated ginger",
+"1 tsp red pepper flakes",
+"3 tbsp yellow curry paste",
+"1/2 cup chicken broth"
+],
+"Curry": [
+"Curry",
+"1 can coconut milk",
+"1.5 lbs chicken breast, cubed",
+"1 red onion, sliced",
+"1/2 cup roasted cashews"
+],
+"Optional Garnish": [
+"Optional Garnish",
+"cilantro",
+"red chili",
+"lime wedge"
+]
+},
+"notes": [],
+"rating": 0,
+"recipe": [
+"In a blender, combine the above ingredients and blend until smooth",
+"Transfer to the slow cooker and stir in the coconut milk, chicken, and red onion",
+"Cook on low for 8 hours",
+"Add the remaining mangoes and cover to thaw",
+"Add the cashews and serve over rice with choice of garnish"
+],
+"source": "http://www.oliviascuisine.com/slow-cooker-chicken-mango-curry/",
+"title": "Slow Cooker Chicken Mango Curry"
+},
+{
+"group": "soup",
+"id": "recipe-slow_cooker_chicken_tortilla_soup",
+"imgPlaceholder": "dist/imgs/placeholder_soup-slow_cooker_chicken_tortilla_soup.svg",
+"imgSrc": "dist/imgs/soup-slow_cooker_chicken_tortilla_soup.jpg",
+"ingredients": {
+"Toppings": [
+"Toppings",
+"tortilla chips",
+"2 cups grated cheese"
+],
+"soup": [
+"Soup",
+"2 large chicken breast, halved",
+"2 cans of black beans (30 oz)",
+"3 cans of original rotel diced tomatoes and green chilies (30 oz)",
+"1 cup salsa",
+"4 oz green chilies, chopped",
+"14.5 oz can tomato sauce"
+]
+},
+"notes": [
+"(Source: Becky Harder - Monument, CO)"
+],
+"rating": 2,
+"recipe": [
+"Halve the chicken breasts, then combine all the ingredients (undrained) into a crock pot (*makes exactly 3 Qt). Cover and cook on low for 8 hours",
+"Just before serving, slice the chicken breasts into bite size pieces and return to soup"
+],
+"source": "",
+"title": "Slow Cooker Chicken Tortilla Soup"
+},
+{
+"group": "sushi",
+"id": "recipe-_rice",
+"imgPlaceholder": "dist/imgs/placeholder_sushi-_rice.svg",
+"imgSrc": "dist/imgs/sushi-_rice.jpg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1 cup sushi rice, rinsed",
+"1.5 cups water",
+"3 tbsp rice vinegar (or 1 tbsp cider vinegar)",
+"instant pot"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"Rinse the rice in a strainer for ~2 min. Shake dry",
+"In the instant pot, even distribute the rice in the water",
+"Set to rice/low pressure for 12 minutes",
+"When done, gently stir in the rice vinegar",
+"Spread the rice into a thin layer on a wooden cutting board and let cool for 10 minutes"
+],
+"source": "https://recipes.instantpot.com/recipe/pressure-cooker-sushi-rice/",
+"title": " Rice"
+},
+{
+"group": "sushi",
+"id": "recipe-_rolling",
+"imgPlaceholder": "dist/imgs/placeholder_sushi-_rolling.svg",
+"imgSrc": "dist/imgs/sushi-_rolling.jpg",
+"ingredients": {
+"ingredients": [
+"Ingredients"
+]
+},
+"notes": [
+"Link for rolling Uramaki: https://youtu.be/hfNhqawvSr8?t=2m50s"
+],
+"rating": 1,
+"recipe": [
+"Lay out a bamboo rolling mat, cutting board, knife, and small bowl of water",
+"Either place a sheet of plastic wrap down or put a bag over the bamboo rolling mat to make it easier to clean",
+"Place the nori shiny side down",
+"Dampen your fingers to prevent sticking, then spread the rice into a thin layer (don't press down to firmly). Leave ~1/2 inch exposed nori at the end",
+"> Maki Rolls",
+"Add the ingredients on top of the rice in lengthwise",
+"Dampen the exposed nori, then roll keeping the ingredients in place with your index fingers. The nori should stick to itself at the end",
+"> Uramaki (Inside Out Roll)",
+"Flip the nori and rice over, then add the ingredients in lengthwise",
+"By hand start rolling with the side out. When done, use the bamboo mat to give the roll its shape",
+"Press the roll while vertical, rotate 90' press again, then roll back to the original position to press one last time",
+"> Both",
+"Cut in half three times for a total of 8 rolls. Wet a knife to make the cuts easier and use a sawing motion",
+"Serve with wasabi and pickled ginger"
+],
+"source": "https://www.chowhound.com/recipes/salmon-avocado-maki-31555",
+"title": " Rolling"
+},
+{
+"group": "sushi",
+"id": "recipe-california_rolls",
+"imgPlaceholder": "dist/imgs/placeholder_sushi-california_rolls.svg",
+"imgSrc": "dist/imgs/sushi-california_rolls.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"6 sticks surimi (imitation crab)",
+"1/2 avocado",
+"cucumber",
+"sesame seeds",
+"sushi rice",
+"nori",
+"masago (flying fish roe) or tobikko"
+]
+},
+"notes": [
+"tobiko is just fish eggs with corn syrup and food coloring",
+"See more detailed guide: https://www.justonecookbook.com/california-roll/"
+],
+"rating": 1,
+"recipe": [
+"Cut the Nori sheet in half. Spread rice over the nori and top with sesame seeds, then flip rice side down",
+"Add strips of the Surimi, avocado, cucumber, and choice of fish roe then roll"
+],
+"source": "https://makemysushi.com/Recipes/how-to-make-california-sushi-rolls",
+"title": "California Rolls"
+},
+{
+"group": "sushi",
+"id": "recipe-canned_spicy_tuna_roll",
+"imgPlaceholder": "dist/imgs/placeholder_sushi-canned_spicy_tuna_roll.svg",
+"imgSrc": "dist/imgs/sushi-canned_spicy_tuna_roll.jpg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1 tbsp mayo",
+"1 tsp chili sauce (sriracha)",
+"1 tsp toasted sesame oil",
+"1/2 tsp lemon juice (optional)",
+"spoon of masago (fish roe) (optional)",
+"a bit of soy sauce (optional)",
+"can tuna",
+"sesame seeds",
+"cucumber",
+"2 green onions, cut into thin rounds for topping",
+"sushi rice",
+"nori"
+]
+},
+"notes": [
+"See guide on using raw tuna: "
+],
+"rating": 1,
+"recipe": [
+"Mix the sauce, then add and mix with the canned tuna",
+"Cut the Nori sheet in half. Spread rice over the nori and top with sesame seeds, then flip rice side down",
+"Add the spicy tuna and cucumber and roll",
+"Top with a dab of spicy mayo and green onion round"
+],
+"source": "https://makemysushi.com/Recipes/canned-spicy-tuna-sushi-roll-twist",
+"title": "Canned Spicy Tuna Roll"
+},
+{
+"group": "sushi",
+"id": "recipe-onigiri",
+"imgPlaceholder": "dist/imgs/placeholder_sushi-onigiri.svg",
+"imgSrc": "dist/imgs/sushi-onigiri.jpg",
+"ingredients": {
+"ingredients": [
+"Ingredients"
+]
+},
+"notes": [
+"Ingredient ideas: http://wildgreensandsardines.com/2015/06/smoked-salmon-onigiri.html"
+],
+"rating": 1,
+"recipe": [
+"Spread the rice into a circle, then fill with the selected ingredients",
+"Use plastic wrap to shape the ball into a triangular shape, then add a strip of nori to hold the base"
+],
+"source": "",
+"title": "Onigiri"
+},
+{
+"group": "sushi",
+"id": "recipe-shrimp_and_avocado",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"cooked shrimp",
+"cucumber",
+"1/5 avocado, peeled and mashed",
+"1 tbsps fresh cilantro, finely chopped",
+"chives",
+"sushi rice",
+"wasabi",
+"nori"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"Spread rice over the nori, then with rice-side up, add the fillings. Roll"
+],
+"source": "https://www.geniuskitchen.com/recipe/avocado-and-shrimp-sushi-331300",
+"title": "Shrimp And Avocado"
+},
+{
+"group": "sushi",
+"id": "recipe-shrimp_nigiri",
+"imgPlaceholder": "dist/imgs/placeholder_sushi-shrimp_nigiri.svg",
+"imgSrc": "dist/imgs/sushi-shrimp_nigiri.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"shrimp",
+"skewer"
+]
+},
+"notes": [],
+"rating": 2,
+"recipe": [
+"Skewer the shrimp between the belly and shell to keep them straight",
+"Boil for 2-3 minutes until pink",
+"Cool in a bowl of ice water",
+"Peel off the legs, then the shell leaving the tail",
+"Cut from the head to the tail only down to the intestine. Remove with the tip of the knife without piercing",
+"Flatten out the shrimp and trim the tail"
+],
+"source": "http://www.foodrepublic.com/recipes/how-to-cook-shrimp-for-nigiri-sushi/",
+"title": "Shrimp Nigiri"
+},
+{
+"group": "sushi",
+"id": "recipe-shrimp_spicy_rolls",
+"imgPlaceholder": "dist/imgs/placeholder_sushi-shrimp_spicy_rolls.svg",
+"imgSrc": "dist/imgs/sushi-shrimp_spicy_rolls.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"cooked shrimp, chopped",
+"cucumber",
+"mayo",
+"sriracha",
+"sushi rice",
+"wasabi",
+"nori"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"Cut the Nori sheet in half. Spread rice over the nori, then flip rice side down",
+"Add the fillings and roll. Drizzle with extra spicy mayo sauce on top"
+],
+"source": "http://fromgatetoplate.com/2014/04/14/spicy-shrimp-sushi-rolls/",
+"title": "Shrimp Spicy Rolls"
+},
+{
+"group": "sushi",
+"id": "recipe-smoked_salmon_nigiri",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"smoked salmon",
+"sushi rice",
+"nori"
+]
+},
+"notes": [
+"Look for smoked salmon with the most visible white fat lines"
+],
+"rating": 1,
+"recipe": [
+"Slice salmon into pieces to cover the sushi rice. Will look best with the fat lines running diagonally when wrapped",
+"Using two index fingers and your thumb shape a bite size clump of sushi rice",
+"Optionally add a bit of wasabi underneath the salmon",
+"Using your second hand's thumb and index finger, wrap the salmon over the rice"
+],
+"source": "https://makemysushi.com/Recipes/make-smoked-salmon-nigiri",
+"title": "Smoked Salmon Nigiri"
+},
+{
+"group": "sushi",
+"id": "recipe-smoked_salmon_rolls",
+"imgPlaceholder": "dist/imgs/placeholder_sushi-smoked_salmon_rolls.svg",
+"imgSrc": "dist/imgs/sushi-smoked_salmon_rolls.jpg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"smoked salmon",
+"avocado",
+"carrot",
+"cucumber",
+"wasabi"
+]
+},
+"notes": [
+"Can mix rice vinegar or lemon juice to help prevent the avocado from browning"
+],
+"rating": 1,
+"recipe": [
+"Sliced all ingredients into long strips then roll"
+],
+"source": "",
+"title": "Smoked Salmon Rolls"
+},
+{
+"group": "sushi",
+"id": "recipe-vegetable_rolls",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"cucumber",
+"carrots",
+"avocado",
+"sushi rice",
+"wasabi",
+"nori"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"Spread rice over the nori, then with rice-side up, add the fillings. Roll"
+],
+"source": "",
+"title": "Vegetable Rolls"
+},
+{
+"group": "tools",
+"id": "recipe-cast_iron_care",
+"imgPlaceholder": "dist/imgs/placeholder_tools-cast_iron_care.svg",
+"imgSrc": "dist/imgs/tools-cast_iron_care.jpg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"canola or flaxseed oil",
+"salt"
+]
+},
+"notes": [],
+"rating": 0,
+"recipe": [
+">> Seasoning:",
+"Coat with a thin layer of oil",
+"Bake at 450F for ~1 hour. This will create a hard glassy layer",
+">> Regular Care:",
+"Clean while still warm and use hot water and a scrub brush (optionally use salt for extra abrasion), but avoid any soap",
+"Towel dry, then heat to boil off any excess water",
+"Put on a thin later of oil and heat until smoking to prevent the oil from turning rancid",
+">> Notes on Use:",
+"Always pre-heat the skillet for room temperature food",
+"Limit the amount of acidic foods to protect the seasoning"
+],
+"source": "https://www.youtube.com/watch?v=KLGSLCaksdY",
+"title": "Cast Iron Care"
+},
+{
+"group": "tools",
+"id": "recipe-pizza_stone_care",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients"
+]
+},
+"notes": [],
+"rating": 0,
+"recipe": [
+">> Regular Use:",
+"Put the cold pizza stone in a cold oven then preheat (if a cold pizza stone goes in a hot oven it may crack)",
+"Prep the pizza on a Pizza Peel/Spatula with a bit of cornmeal or flour. Transfer to the pizza stone and generally cook for 6-8 minutes at 425",
+"Remove and transfer to a cutting board to slice",
+">> Cleaning:",
+"Let cool in the oven, then scrub with a little water, and towel dry. Minimize water if possible",
+"The pizza stone can be stored in the oven and should always be stored flat"
+],
+"source": "https://www.napoleongrills.com/blog/articles/id/4329/how-to-use-and-clean-a-pizza-stone",
+"title": "Pizza Stone Care"
+},
+{
+"group": "tools",
+"id": "recipe-wok_care",
+"imgPlaceholder": "dist/imgs/placeholder_tools-wok_care.svg",
+"imgSrc": "dist/imgs/tools-wok_care.jpg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"vegetable, corn, or peanut oil"
+]
+},
+"notes": [
+"Most electric stoves can't get hot enough for a Wok, so cook in small batches to properly sear meat or vegetables",
+"General advice on cooking in a wok: https://www.epicurious.com/expert-advice/how-to-cook-with-a-wok-article"
+],
+"rating": 0,
+"recipe": [
+">> Regular Care:",
+"Clean while still warm and use hot water and a scrub brush",
+"Towel dry, then heat to boil off any excess water. Then seal with a thin later of oil",
+">> Cooking Advice:",
+"Pre-heat until flicked water quickly evaporates. Use cold oil with a high smoke point such as peanut oil",
+"Make sure all ingredients are really dry (use a salad spinner or paper towels)"
+],
+"source": "https://lifehacker.com/how-to-buy-and-take-care-of-a-wok-1786021430",
+"title": "Wok Care"
+},
+{
+"group": "veggie",
+"id": "recipe-baked_broccoli",
+"imgPlaceholder": "dist/imgs/placeholder_veggie-baked_broccoli.svg",
+"imgSrc": "dist/imgs/veggie-baked_broccoli.jpg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"thyme",
+"rosemary",
+"salt and pepper",
+"garlic powder",
+"olive oil",
+"broccoli"
+]
+},
+"notes": [
+"Simpler version of roasted vegetables with just Broccoli",
+"Previously made with salt, pepper, and garlic. Once done, topped with lemon juice"
+],
+"rating": 2,
+"recipe": [
+"Preheat oven to 400\u2109",
+"Cut the Broccoli into florets and mix with oil and seasonings in a medium bowl",
+"Bake for 40 minutes"
+],
+"source": "",
+"title": "Baked Broccoli"
+},
+{
+"group": "veggie",
+"id": "recipe-baked_potatoes",
+"imgPlaceholder": "dist/imgs/placeholder_veggie-baked_potatoes.svg",
+"imgSrc": "dist/imgs/veggie-baked_potatoes.jpg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"2-4 russet potatoes, scrubbed clean",
+"olive oil",
+"1 tbsp salt"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"Preheat the oven to 450\u2109",
+"Scrub wash and dry the potatoes and poke with a fork to allow steam to escape",
+"Rub oil and salt over the potatoes",
+"Bake on a baking sheet for 60 minutes and until tender inside (45 minutes for smaller potatoes)",
+"Top with cheese, chives, and/or black pepper"
+],
+"source": "https://www.tastesoflizzyt.com/oven-baked-potatoes/",
+"title": "Baked Potatoes"
+},
+{
+"group": "veggie",
+"id": "recipe-baked_potatoes_instant_pot",
+"imgPlaceholder": "dist/imgs/placeholder_veggie-baked_potatoes_instant_pot.svg",
+"imgSrc": "dist/imgs/veggie-baked_potatoes_instant_pot.png",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"2-4 russet potatoes, scrubbed clean",
+"olive oil",
+"1 tbsp salt",
+"instant pot"
+]
+},
+"notes": [
+"For smaller potatoes, use 15 minutes"
+],
+"rating": 1,
+"recipe": [
+"Scrub the potatoes clean.",
+"Insert the steamer rack into the instant pot, add 1 cup of (cold) water, then add the potatoes. Make sure the potatoes and water do not touch",
+"Close lid and turn the sealing vent to 'sealed.' Then use manual mode with high pressure for 20 minutes. Allow for natural release (~5 minutes)",
+"The potatoes can be quartered or cooked whole. For a crispy skin place in the oven at 400\u2109 for 8 minutes. Serve with whatever toppings you prefer."
+],
+"source": "https://amindfullmom.com/instant-pot-baked-potatoes/",
+"title": "Baked Potatoes Instant Pot"
+},
+{
+"group": "veggie",
+"id": "recipe-baked_zucchini",
+"imgPlaceholder": "dist/imgs/placeholder_veggie-baked_zucchini.svg",
+"imgSrc": "dist/imgs/veggie-baked_zucchini.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"zucchini",
+"parmesan",
+"olive oil",
+"1/4 tsp garlic powder",
+"1/2 tsp basil",
+"1/2 tsp thyme",
+"salt & pepper"
+]
+},
+"notes": [
+"Alt: just salt, pepper, red pepper flakes, olive oil. 425\u2109 for 20 minutes"
+],
+"rating": 1,
+"recipe": [
+"Preheat oven to 350\u00b0F",
+"On a tin foil covered pan, halve the zucchini and lightly coat with olive oil",
+"Mix the ingredients in a small bowl then cover the zucchini",
+"Bake for 15 minutes and optionally broil for 2-3 minutes"
+],
+"source": "http://damndelicious.net/2014/06/21/baked-parmesan-zucchini/",
+"title": "Baked Zucchini"
+},
+{
+"group": "veggie",
 "id": "recipe-chana_masala",
-"imgPlaceholder": "dist/imgs/placeholder-meals-chana_masala.svg",
-"imgSrc": "dist/imgs/meals-chana_masala.jpeg",
+"imgPlaceholder": "dist/imgs/placeholder_veggie-chana_masala.svg",
+"imgSrc": "dist/imgs/veggie-chana_masala.jpeg",
 "ingredients": {
 "DIY Garam Masala": [
 "Diy Garam Masala",
@@ -1494,197 +3134,7 @@ var localDB = {
 "title": "Chana Masala"
 },
 {
-"group": "meals",
-"id": "recipe-chicken",
-"imgPlaceholder": "dist/imgs/placeholder-meals-chicken.svg",
-"imgSrc": "dist/imgs/meals-chicken.jpg",
-"ingredients": {
-"Seasoning Combinations": [
-"Seasoning Combinations",
-"basic: salt & pepper",
-"tacos: chili powder + cumin + cayenne + paprika",
-"rice: sriracha + honey (+ broccoli)",
-"sun-dried tomato: minced garlic + olive oil + sun-dried tomato paste",
-"korean: gochujang (korean chili paste) + mayonnaise + sesame oil",
-"coconut rice noodle curry: thai curry paste + coconut oil",
-"barbecue: barbecue sauce with a side of mashed potatoes"
-]
-},
-"notes": [],
-"rating": 1,
-"recipe": [
-"Preheat oven to 350\u2109 (~10 min)",
-"Cover chicken in olive oil and choice of seasonings",
-"Place in oven on tin foil covered pan for 15 minutes",
-"Flip and bake for 12 more minutes",
-"Alt: bake at 400\u00b0F and flip around 12 minutes then cook for 8 more minutes"
-],
-"source": "https://www.craftsy.com/blog/2014/04/baked-chicken-breast-recipe/",
-"title": "Chicken"
-},
-{
-"group": "meals",
-"id": "recipe-chicken_and_dumplings",
-"imgPlaceholder": "dist/imgs/placeholder-meals-chicken_and_dumplings.svg",
-"imgSrc": "dist/imgs/meals-chicken_and_dumplings.jpeg",
-"ingredients": {
-"dumplings": [
-"Dumplings",
-"1 cup all-purpose flour",
-"1/2 cup bread crumbs",
-"2 tsp baking powder",
-"3/4 tsp kosher salt",
-"1/2 tsp pepper",
-"1 small shallot, minced",
-"1.5 tbsp parsley, finely chopped",
-"1/3 cup whole milk",
-"1 large egg",
-"2 tbsp unsalted butter, melted (~20s in microwave)"
-],
-"soup": [
-"Soup",
-"2 cups broth, split",
-"2 lbs skinless chicken breasts",
-"1.5 cups frozen peas",
-"2 tbsp unsalted butter",
-"3 large carrots, coined",
-"2 celery stalks, coined",
-"1 yellow onion, diced",
-"1 tsp kosher salt"
-]
-},
-"notes": [
-"Source: The Essential Instant Pot Cookbook page 55",
-"TO make breadcrumbs, leave bread out uncovered to dry, then freeze. When you need it, just microwave it for 20 seconds and toss in a food processor (definitely don't use a grater...)"
-],
-"rating": 2,
-"recipe": [
-"Prep the vegetables",
-"Arrange the chicken breasts in a single layer with 1 cup of broth in the instant pot. Set to Meat or Poultry for 7-8 min & high pressure",
-"Make the dumpling dough: In a bowl, stir together the flour, bread crumbs, baking powder, salt, pepper, shallot, and parsley.",
-"In the center of the mixture, add the milk, egg, and melted butter. With a fork, gradually mix the dry ingredients into the wet until evenly absorbed. Cover and place in the fridge",
-"Quick release the chicken and transfer to the cutting board. Pour the broth into a microwave-safe tupperware (you can store leftovers in it later) and combine with the peas and remaining cup of broth",
-"Select the saute option and melt 2 tbsp of butter, then add carrots, celery, onion, and salt. Saute for 5 minutes. In parallel, microwave the broth and peas for 3 minutes",
-"Shred the chicken into bite-size pieces",
-"Return the shredded chicken and the hot broth and peas to the pot. Add more broth if needed until at least submerged",
-"Add large tablespoons of the dumpling dough, spacing evenly",
-"Cover the pot with a glass lid and cook for 15 minutes"
-],
-"source": "https://smile.amazon.com/Essential-Instant-Pot-Cookbook-Foolproof/dp/0399580883",
-"title": "Chicken And Dumplings"
-},
-{
-"group": "meals",
-"id": "recipe-chicken_cacciatore",
-"imgPlaceholder": "dist/imgs/placeholder-meals-chicken_cacciatore.svg",
-"imgSrc": "dist/imgs/meals-chicken_cacciatore.jpg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"6 qt. instant pot",
-"4 chicken thighs (2-3 lbs) [needs to fit in one layer]",
-"salt & pepper",
-"1 tbsp olive oil",
-"1 red bell pepper, sliced lengthwise into strips",
-"1 yellow onion, sliced",
-"3 cloves of garlic, chopped",
-"can diced tomatoes + liquid",
-"1/2 cup red wine",
-"1/4 cup water (or chicken broth)",
-"2 tbsp tomato paste",
-"1.5 tbsp italian seasoning",
-"1/2 tsp red pepper flakes",
-"1 bay leaf",
-"great with a baguette, rice, etc."
-]
-},
-"notes": [],
-"rating": 2,
-"recipe": [
-"Season chicken thighs with salt & pepper. Place olive oil in instant pot and put thighs skin-side down. Use **Saut\u00e9** setting for 4 minutes.",
-"Remove chicken thighs and add bell pepper, onion, and garlic. **Saut\u00e9** setting for 3 minutes.",
-"Add tomatoes and liquid, wine, water (broth), tomato paste, Italian seasoning, red pepper flakes, and bay leaf, combine. Add the chicken back to pot and fully coat in liquid - make sure chicken sits in one layer.",
-"Seal and select **Meat** to cook for 12 minutes at high pressure, then quick release steam",
-"Remove the lid and choose saute for 10 minutes. This will help reduce the sauce"
-],
-"source": "(Essential Instant Pot:69) https://smile.amazon.com/Essential-Instant-Pot-Cookbook-Foolproof/dp/0399580883/ref=sr_1_1_sspa?ie=UTF8&qid=1516461807&sr=8-1-spons&keywords=essential+instant+pot&psc=1",
-"title": "Chicken Cacciatore"
-},
-{
-"group": "meals",
-"id": "recipe-chicken_noodle_soup",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"2 tbsp extra virgin olive oil",
-"1 medium onion, chopped",
-"5 medium carrots, coined",
-"6 celery stalks, cut into half moons",
-"2 tbsp garlic, minced",
-"1 tsp thyme, chopped",
-"1 tbsp salt",
-"1 tsp pepper",
-"1 bay leaf,",
-"10 cups chicken broth",
-"3 ounces wide egg noodles, cooked",
-"rotisserie chicken meat, shredded"
-]
-},
-"notes": [
-"Chrissy Teigen Cravings"
-],
-"rating": 2,
-"recipe": [
-"In a big pot, heat oil over medium-high heat. Add the onion; stir and cook until softened (6-8 min)",
-"Add the carrots, celery, garlic, thyme, salt, and pepper until the carrots soften (~5 minutes)",
-"Add the bay leaf and chicken broth. Boil and reduce heat to simmer for 45 minutes",
-"Shred the chicken and cook the noodles",
-"At 45 minutes, stir in the chicken and cooked noodles. Heat for 5-10 min then toss the bay leaf and serve"
-],
-"source": "",
-"title": "Chicken Noodle Soup"
-},
-{
-"group": "meals",
-"id": "recipe-chicken_tacos",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"1.5 pounds chicken breast",
-"1/2 tsp salt",
-"1/4 tsp freshly ground black pepper",
-"2 tbsps extra-virgin olive oil",
-"1/4 cup chopped white onion",
-"1 (14.5 ounce) can diced tomatoes with juices",
-"1/3 cup fresh lime juice",
-"2 garlic cloves, minced",
-"1 tbsp chili powder",
-"2 tsps red wine vinegar",
-"1 tsp ground cumin",
-"1 tsp dried oregano",
-"1/2 tsp sugar",
-"8 to 12 tortilla shells of your choosing (we like 6-inch corn tortillas)"
-]
-},
-"notes": [
-"Note: If you\u2019re using rotisserie chicken or precooked chicken, prepare the taco sauce as directed, then add the shredded cooked chicken and let it simmer for 10 to 15 minutes to really soak in the sauce"
-],
-"rating": 0,
-"recipe": [
-"Season chicken breasts with the salt and pepper",
-"In a large skillet, heat the olive oil over medium heat. Cook the chicken until golden, about 3 minutes per side. Add the onion and cook, stirring, until slightly translucent, about 2 minutes. Stir in the tomatoes with their juices, lime juice, garlic, chili powder, vinegar, cumin, oregano, and sugar. Reduce the heat and simmer, uncovered, stirring frequently, until the chicken is cooked through, about 15 minutes.",
-"Transfer the chicken to a cutting board. Use two forks to shred the meat, then transfer it back to the skillet. To allow the taco sauce to really seep into the shredded chicken, simmer for 5 to 8 minutes more.",
-"If you\u2019re using soft shells, warm the tortillas, sandwiched between damp paper towels, for about 30 seconds in the microwave. If you\u2019re using hard shells, put them in a 250\u00b0F oven until warm, about 5 minutes"
-],
-"source": "https://www.giadzy.com/posts/recipes/452042/taco-tuesday-chicken-tacos",
-"title": "Chicken Tacos"
-},
-{
-"group": "meals",
+"group": "veggie",
 "id": "recipe-chickpea_and_spinach_salad",
 "imgPlaceholder": "",
 "imgSrc": "",
@@ -1711,7 +3161,7 @@ var localDB = {
 "title": "Chickpea And Spinach Salad"
 },
 {
-"group": "meals",
+"group": "veggie",
 "id": "recipe-chickpea_salad_wrap",
 "imgPlaceholder": "",
 "imgSrc": "",
@@ -1742,7 +3192,7 @@ var localDB = {
 "title": "Chickpea Salad Wrap"
 },
 {
-"group": "meals",
+"group": "veggie",
 "id": "recipe-chickpea_spicy_buffalo_wrap",
 "imgPlaceholder": "",
 "imgSrc": "",
@@ -1784,290 +3234,95 @@ var localDB = {
 "title": "Chickpea Spicy Buffalo Wrap"
 },
 {
-"group": "meals",
-"id": "recipe-crab_cakes",
-"imgPlaceholder": "dist/imgs/placeholder-meals-crab_cakes.svg",
-"imgSrc": "dist/imgs/meals-crab_cakes.jpeg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"1/4 cup mayonnaise",
-"2 scallions, thinly sliced",
-"1 large egg, lightly beaten",
-"1 tbsp dijon mustard",
-"2 tsps fresh lemon juice plus wedges",
-"1.5 tsps old bay seasoning",
-"1/2 jalapenno, seeded, finely chopped",
-"1 pound lump crab meat, picked over",
-"3/4 and 1/2 cup panko (japanese breadcrumbs), divided",
-"1 tbsp thinly sliced chives",
-"1/4 tsp kosher salt",
-"1/8 tsp freshly ground black pepper",
-"1 head bibb lettuce",
-"2 tbsps vegetable oil"
-]
-},
-"notes": [],
-"rating": 2,
-"recipe": [
-"Whisk first 7 ingredients in a medium bowl. Add crab and fold to blend. Stir in 3/4 cup panko, chives, salt, and pepper",
-"Divide into 6 equal portions and form each into 1 inch-thick patties, then refrigerate for at least 10 minutes",
-"Heat oil in a large skillet over medium heat",
-"Place remaining 1/2 cup panko on a plate can coat the cakes. Fry until golden brown and crisp, 3-4 minutes per side",
-"Arrange atop lettuce and serve with lemon wedges"
-],
-"source": "https://www.epicurious.com/recipes/food/views/baltimore-crab-cakes-366711",
-"title": "Crab Cakes"
-},
-{
-"group": "meals",
-"id": "recipe-enchiladas",
-"imgPlaceholder": "dist/imgs/placeholder-meals-enchiladas.svg",
-"imgSrc": "dist/imgs/meals-enchiladas.png",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"tortillas",
-"1 can of enchilada sauce",
-"2-3 chicken breast or rotisserie chicken",
-"shredded cheese",
-"1 can black beans, strained",
-"other vegetables"
-]
-},
-"notes": [
-"Other recommended vegetables include: onion, cilantro, diced tomato, and/or diced green chilies"
-],
-"rating": 3,
-"recipe": [
-"Bake the chicken (if not already cooked)",
-"Preheat the oven to 375F",
-"Roll the cooked chicken, cheese, beans, and other vegetables with the flap side down, then pour enchilada sauce over top",
-"Bake for 25 minutes"
-],
-"source": "",
-"title": "Enchiladas"
-},
-{
-"group": "meals",
-"id": "recipe-fajitas",
-"imgPlaceholder": "dist/imgs/placeholder-meals-fajitas.svg",
-"imgSrc": "dist/imgs/meals-fajitas.jpg",
-"ingredients": {
-"Main": [
-"Main",
-"3 peppers",
-"3 tomatoes",
-"1 lg. onion",
-"1 can corn",
-"1 can black beans",
-"1 lb. chicken (~two breasts)"
-],
-"Seasonings": [
-"Seasonings",
-"1 tbsp chili powder",
-"2 tbsp vegetable oil",
-"1/4 tsp garlic powder",
-"1/2 tbsp corn starch"
-],
-"With": [
-"With",
-"10 6-inch tortillas",
-"2 cups of rice",
-"1/3 bag of spinach",
-"1/2 jar of salsa",
-"1 fresh lime",
-"cilantro"
-]
-},
-"notes": [],
-"rating": 1,
-"recipe": [
-"Defrost the chicken and preheat the oven to 400 degrees",
-"Cut the peppers, onions, tomatoes, and chicken into 1/4 inch strips and fill a 9 x 13 inch casserole dish. Add the beans and corn, then cover with the seasonings and olive oil. Mix by hand",
-"Bake for 30 minutes and start the rice",
-"Crisp the tortillas in the pan so everything can be served hot!"
-],
-"source": "http://www.budgetbytes.com/2013/02/oven-fajitas/",
-"title": "Fajitas"
-},
-{
-"group": "meals",
-"id": "recipe-french_onion_soup",
-"imgPlaceholder": "dist/imgs/placeholder-meals-french_onion_soup.svg",
-"imgSrc": "dist/imgs/meals-french_onion_soup.jpeg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"1.5 tbsp olive oil",
-"3.5 tbsp butter",
-"5 cups onions (~1.5 lbs), thinly sliced",
-"3 thyme sprigs",
-"4 cloves garlic",
-"1 tbsp flour",
-"5/8 cup dry red wine",
-"3 cups beef broth",
-"3/4 soy sauce",
-"1/2 tsp kosher salt",
-"baguette or 2 large croissants, cut into bite-size cubes",
-"3/8 lb gruyere or swiss cheese, grated"
-]
-},
-"notes": [
-"Chrissy Teigen Cravings Hungry for More, 48",
-"Originally recipe serves four, but this recipe is modified to serve two"
-],
-"rating": 3,
-"recipe": [
-"In >4 qt pot, heat the oil and butter on high. Add the onions and thyme. Stir often and cook for ~15 minutes until the onions begin to shrink, but light in color",
-"Reduce the heat to med-low, add the garlic and cook until the onions are golden brown and tender (~20 min)",
-"Add the flour and cook for about 3 minutes",
-"Increase the heat to medium, add the wine and bring to a boil. Cook until evaporated (~5 min). Discard the Thyme",
-"Increase the heat to high, add the broth, soy sauce, and salt. Bring to a boil then reduce to a simmer. Simmer for 45 minutes",
-"While simmering, preheat the oven to 400F. Bake the bite-size bread chunks for ~6 min (9 min @ 350 for the croissants)",
-"Set the oven to broil. Add 1/4 cup cheese in the bottom of two oven-safe soup crocks. Add the soup, the baguette crisps, then cover with the remaining cheese",
-"Broil until the cheese slightly browns and begins bubbling"
-],
-"source": "https://smile.amazon.com/dp/B01MR8VVAZ/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1",
-"title": "French Onion Soup"
-},
-{
-"group": "meals",
-"id": "recipe-gyros",
-"imgPlaceholder": "dist/imgs/placeholder-meals-gyros.svg",
-"imgSrc": "dist/imgs/meals-gyros.jpg",
-"ingredients": {
-"Chicken": [
-"Chicken",
-"1-2 chicken breast (should be lamb)",
-"2 naan slices",
-"1/2 onion",
-"2 tomatoes",
-"fries",
-"lettuce"
-],
-"Tzatziki Sauce": [
-"Tzatziki Sauce",
-"1 cup plain yogurt",
-"1/2 cucumber peeled, seeded, and finely diced",
-"1 tbsp olive oil",
-"1 tbsp dill, chopped",
-"1 tbsp mint, chopped",
-"1 tbsp fresh lemon juice",
-"1 garlic clove, minced",
-"1/2 tsp salt"
-]
-},
-"notes": [
-"From the Joy of Cooking page 567",
-"Store bought Tzatziki makes this much easier because it's hard to get the right amount of Dill"
-],
-"rating": 1,
-"recipe": [
-"Bake the chicken with olive oil, salt, pepper, and garlic",
-"Lay everything out on the Naan and cover in Tzatziki"
-],
-"source": "",
-"title": "Gyros"
-},
-{
-"group": "meals",
-"id": "recipe-honey_and_soy_glazed_chicken_thighs",
+"group": "veggie",
+"id": "recipe-crispy_baked_sweet_potato_fries",
 "imgPlaceholder": "",
 "imgSrc": "",
 "ingredients": {
 "ingredients": [
 "Ingredients",
-"2 tbsp canola oil",
-"1 tbsp minced garlic",
-"1 tbsp minced ginger",
-"6 tbsp low-sodium soy sauce",
-"5 tbsp mild honey",
-"3 tbsp unsalted butter",
-"kosher salt",
-"black pepper",
-"8 bone-in, skin-on chicken thighs (about 3 pounds)",
-"lemon wedges, for serving"
-]
-},
-"notes": [],
-"rating": 0,
-"recipe": [
-"Preheat oven to 425 degrees",
-"Heat 1 tablespoon oil in a small saucepan over low heat. Add the garlic and ginger and cook until softened (~3 min)",
-"Add the soy sauce and honey and simmer, until reduced and slightly thickened (~10 min)",
-"Turn off the heat then whisk in the butter. Season with salt and pepper",
-"In a medium bowl, coat the chicken with salt and pepper, then toss with half the glaze and remaining 1 tablespoon oil",
-"Arrange in an even layer, skin side up, on a a baking shined lined with foil and roast 15 min",
-"Brush the chicken all over with 2 tablespoons of the remaining glaze. Roast until golden and cooked through (~10 min)",
-"Drizzle the chicken with the remaining glaze and serve with lemon wedges"
-],
-"source": "https://cooking.nytimes.com/recipes/1019804-honey-and-soy-glazed-chicken-thighs?action=click&module=Global%20Search%20Recipe%20Card&pgType=search&rank=1",
-"title": "Honey And Soy Glazed Chicken Thighs"
-},
-{
-"group": "meals",
-"id": "recipe-jambon_beurre",
-"imgPlaceholder": "dist/imgs/placeholder-meals-jambon_beurre.svg",
-"imgSrc": "dist/imgs/meals-jambon_beurre.jpg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"baguette",
-"ham",
-"gruyere cheese",
-"butter"
+"sweet potatoes",
+"sprinkle of corn starch (optional)",
+"olive oil to lightly cover each fry",
+"salt",
+"pepper",
+"and some of cayenne pepper, paprika, curry powder, or garlic"
 ]
 },
 "notes": [
-"The essential French ham sandwich"
+"Cook about one sweet potato per person"
 ],
 "rating": 1,
 "recipe": [
-"Don't skimp on the butter"
+"Preheat the oven to 425F",
+"Peel the sweet potatoes and cut them into similarly sized fry-shaped pieces",
+"Toss the uncooked fries into a mixing bowl with the oil, and spices, and optional corn starch. Toss until all fries are evenly coated",
+"Pour the fries onto a dark non-stick baking sheet in a single layer",
+"Bake for 15 minutes, flip all fries with a spatula, then bake for 10-15 minutes until crisp. The fries should go from shiny orange to matte and rougher texture"
 ],
-"source": "https://www.youtube.com/watch?v=ge49xawecJk",
-"title": "Jambon Beurre"
+"source": "https://cookieandkate.com/2010/baked-sweet-potato-fries/",
+"title": "Crispy Baked Sweet Potato Fries"
 },
 {
-"group": "meals",
-"id": "recipe-johns_chili",
-"imgPlaceholder": "dist/imgs/placeholder-meals-johns_chili.svg",
-"imgSrc": "dist/imgs/meals-johns_chili.jpeg",
+"group": "veggie",
+"id": "recipe-curried_chickpeas",
+"imgPlaceholder": "dist/imgs/placeholder_veggie-curried_chickpeas.svg",
+"imgSrc": "dist/imgs/veggie-curried_chickpeas.jpg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
-"1 lb ground turkey",
-"1 medium onion, chopped",
-"1 cup mushrooms, chopped",
-"2 tbsp (lawry's) seasoning salt",
-"3 tbsp chili powder",
-"1 tsp cayenne pepper",
-"3 cloves garlic, minced",
-"2 cups water",
-"2 (15 oz) cans tomato sauce",
-"2 (15 oz) cans kidney beans",
-"2 tbsp light brown sugar",
-"(optional) 1 can (15 oz) whole tomatoes, crushed",
-"(optional) plain yogurt"
+"1 small onion (or diced pepper)",
+"1.5 tbsp curry powder",
+"1 inch fresh ginger (or 1 tsp cinnamon or 1 tsp nutmeg)",
+"1/4 tsp garlic powder (or 2-3 fresh cloves)",
+"8 oz (full bag) of spinach",
+"15 oz jar of tomato sauce",
+"29 oz can of chickpeas (garbanzo beans)",
+"rice (or naan, etc.)"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"Start cooking the rice then rinse & drain the chickpeas",
+"In a large skillet on medium heat, saut\u00e9 the diced onion for 4 minutes with a small amount of olive oil",
+"Add the garlic powder, ginger (cinnamon), and curry powder then cook for an additional minute",
+"Add 1/4 cup water and all of the spinach",
+"Once the spinach has wilted, add the tomato sauce and garbanzo beans. Cook for 5 more minutes"
+],
+"source": "http://www.budgetbytes.com/2013/12/curried-chickpeas-spinach/",
+"title": "Curried Chickpeas"
+},
+{
+"group": "veggie",
+"id": "recipe-guacamole",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"2 ripe avocados",
+"1 tbsp lemon juice",
+"1/8 cup of minced red onion",
+"2 tbsp cilantro, finely chopped",
+"1/2 tsp kosher salt",
+"1/2 tsp black pepper",
+"some tomato, chopped"
 ]
 },
 "notes": [
-"Chrissy Teigen Cravings, 148",
-"Serves 6-8"
+"See the source for more ideas with chilis, salsa, etc"
 ],
-"rating": 2,
+"rating": 1,
 "recipe": [
-"Heat a large pot over medium heat. Add the ground turkey, onion, mushrooms, seasoning salt, chili powder, and cayenne",
-"Cook for 8 min. Add the garlic and cook for 1 additional min",
-"Add 2 cups water, the tomato sauce, kidney beans, brown sugar, and bring to a boil",
-"Reduce heat to medium-low and simmer for 35-45 min to thicken slightly and flavor-mingle"
+"Cut the avocados in half, remove the core, then scoop out the flesh with a spoon in one pass. Mash with a fork",
+"Mix with everything else, then cover with plastic wrap to prevent contact with air"
 ],
-"source": "https://smile.amazon.com/Cravings-Recipes-All-Food-Want/dp/1101903910",
-"title": "Johns Chili"
+"source": "https://www.simplyrecipes.com/recipes/perfect_guacamole/",
+"title": "Guacamole"
 },
 {
-"group": "meals",
+"group": "veggie",
 "id": "recipe-karens_roasted_veggie_bowls",
 "imgPlaceholder": "",
 "imgSrc": "",
@@ -2144,272 +3399,10 @@ var localDB = {
 "title": "Karens Roasted Veggie Bowls"
 },
 {
-"group": "meals",
-"id": "recipe-mediterranean_chicken",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"2 cups red potatoes, quartered",
-"1 red bell pepper, sliced",
-"1 yellow bell pepper sliced",
-"1 cup onion peeled and sliced",
-"4 tbsp extra virgin olive oil, halved",
-"1 tsp marjoram, halved",
-"1/2 tsp crushed red pepper flakes, halved",
-"kosher salt",
-"freshly ground black pepper",
-"4 chicken breasts, bone-in & halved",
-"2 cups grape tomatoes",
-"1/2 pitted kalamata olives, halved",
-"1 lemon",
-"1/2 cup fresh parsely, chopped"
-]
-},
-"notes": [
-"Source: La Madeleine email"
-],
-"rating": 0,
-"recipe": [
-"Preheat oven to 450 and line baking sheet pan with parchment paper",
-"In a medium bowl, add the potatoes, peppers, and onion. Toss with 2 tbsp extra virgin olive oil, half the spices, salt, and pepper. Spread around the edges of the baking sheet leaving the middle empty",
-"Add the chicken to the bowl and rub with the other half of the olive oil, spices, salt, and pepper",
-"Leaving buffer, arrange the chicken in the middle of the pan",
-"Lower oven to 400 and roast",
-"After 30 minutes, add tomatoes and olives",
-"Roast an additional 10-15 minutes until potatoes are fork-tender and chicken is thoroughly cooked",
-"Remove from oven and place in a serving bowl. Drizzle any pan juices over the chicken, then sprinkle with parsley, lemon juice, and lemon zest"
-],
-"source": "",
-"title": "Mediterranean Chicken"
-},
-{
-"group": "meals",
-"id": "recipe-mini_pizza",
-"imgPlaceholder": "dist/imgs/placeholder-meals-mini_pizza.svg",
-"imgSrc": "dist/imgs/meals-mini_pizza.jpg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"english muffins (or bagels)",
-"tomato sauce",
-"mozzarella cheese",
-"spinach",
-"toppings (parmesan cheese, pepperoni, red pepper flakes, etc.)"
-]
-},
-"notes": [],
-"rating": 1,
-"recipe": [
-"Preheat oven to 400\u2109 and lightly toast the choice of grain",
-"Place on a tin foil covered pan and cover with chosen ingredients",
-"Bake for 10 minutes or until the cheese is fully melted"
-],
-"source": "",
-"title": "Mini Pizza"
-},
-{
-"altRatio": "2",
-"group": "meals",
-"id": "recipe-naan_pizza",
-"imgPlaceholder": "dist/imgs/placeholder-meals-naan_pizza.svg",
-"imgSrc": "dist/imgs/meals-naan_pizza.jpg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"2 naan",
-"olive oil",
-"pasta sauce",
-"red pepper flakes",
-"1/2 ball mozzarella, sliced into chunks",
-"1 tomato, sliced",
-"fresh basil"
-]
-},
-"notes": [
-"Can also be made with grape tomatoes",
-"Add the red pepper flakes to the sauce before baking",
-"Optionally, add olive oil to the naan before the pasta sauce and/or garlic"
-],
-"rating": 1,
-"recipe": [
-"Preheat oven to 425 and place a shelf on the top rack. Cover a baking sheet in tin foil",
-"Prep the naan pizza and place in the oven for 12-16 minutes",
-"Plenty of options to mix this up. This just happened to be leftovers from other meals"
-],
-"source": "",
-"title": "Naan Pizza"
-},
-{
-"group": "meals",
-"id": "recipe-nori_vegetable_wraps",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"hummus",
-"siracha",
-"carrot, peeled with a vegetable peeler",
-"spinach, arugula, and/or baby kale",
-"1/2 avocado",
-"cucumber (optional)",
-"roasted red pepper (optional)",
-"nori, pita, tortilla, or naan"
-]
-},
-"notes": [
-"To make roasted red peppers, hold them over a burner with tongs until charred. Put in a glass bowl with lid to let them steam and to make remove the char easier. Source: https://www.thekitchn.com/how-to-roast-peppers-3-ways-234734",
-"Other vegetables worth trying: red cabbage, radish, asparagus spears, zucchini, or sprouts"
-],
-"rating": 0,
-"recipe": [
-"The original recipe uses nori, but wraps work too. Layer on the hummus, then top with ingredients"
-],
-"source": "http://ahouseinthehills.com/2013/04/25/nori-veggie-wraps-my-everyday-staple/",
-"title": "Nori Vegetable Wraps"
-},
-{
-"group": "meals",
-"id": "recipe-pizza",
-"imgPlaceholder": "dist/imgs/placeholder-meals-pizza.svg",
-"imgSrc": "dist/imgs/meals-pizza.jpg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"bag of pre-kneaded dough (trader joe's is best)",
-"olive oil",
-"marinara sauce",
-"mozzarella cheese",
-"(optional) parmesan cheese, feta",
-"(optional) spinach, peppers, tomatoes, etc.",
-"(optional) chicken, sausage, pepperoni, etc.",
-"(optional) red pepper flakes, basil"
-]
-},
-"notes": [],
-"rating": 2,
-"recipe": [
-"Let the dough rest at room temperature for 20 minutes",
-"Preheat the oven to 425F",
-"Using flour, gently spread out the pizza dough without overworking it",
-"Spread a spoonful of olive oil on the dough",
-"Add a thin layer of sauce (less than you think) then the toppings",
-"If using a pizza stone, see notes below. Cook at 425F for 6-8 minutes",
-"If using a baking sheet, cook for 22 minutes at 425F"
-],
-"source": "",
-"title": "Pizza"
-},
-{
-"group": "meals",
-"id": "recipe-pot_pie_soup",
-"imgPlaceholder": "dist/imgs/placeholder-meals-pot_pie_soup.svg",
-"imgSrc": "dist/imgs/meals-pot_pie_soup.jpeg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"6 cups low sodium chicken broth",
-"2 cups whole milk",
-"2 sticks unsalted butter, cut into chunks",
-"2 tbsp minced garlic (3 cloves)",
-"1 cup flour",
-"4 tsp salt",
-"1.5 tsp ground pepper",
-"1 large russet potato, peeled and 1/2 inch cubes",
-"1/2 lb (2 cups) carrots, diced",
-"1 cup frozen peas",
-"1 cup frozen pearl onions",
-"1/4 lb deli ham, sliced",
-"1 lb (3 cups) rotisserie chicken, cubed",
-"1/2 cup heavy cream"
-]
-},
-"notes": [
-"From Cravings by Chrissy Teigen, page 51-52. Also includes recipe for crackers"
-],
-"rating": 1,
-"recipe": [
-"In a saucepan, bring the broth and milk to a simmer. Keep at simmer",
-"Prep the carrots and potato",
-"In a large pot, melt the butter at medium-high heat until foamy. Add the garlic, stir for 1 minutes. Add the flour and reduce to medium until foaming again (2-3 min).",
-"Whisk in the milk-broth mixture. Add the salt and pepper. Bring to a boil, then reduce the heat for 5 minutes.",
-"Add the potato, carrots, peas, pearl onions, and ham. Simmer until the potatoes and carrots are tender (~20 minutes).",
-"Stir in the chicken and cream then heat for a final 5 minutes",
-"Serve with a baguette or the crust crackers from the same cookbook recipe"
-],
-"source": "",
-"title": "Pot Pie Soup"
-},
-{
-"group": "meals",
-"id": "recipe-pretzels",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"1 tbsp yeast",
-"1 tbsp sugar",
-"2 cups warm water",
-"1 cup flour",
-"4 cups flour, mixed with 1 tbsp. salt, more flour if needed",
-"1 egg",
-"1 tbsp water",
-"1/2 cup baking soda",
-"coarse salt"
-]
-},
-"notes": [
-"Thanks to Andrew P's comments for a more pretzel-recipe",
-"Other Sources:",
-"Once Upon a Chef: https://www.onceuponachef.com/recipes/soft-pretzels.html",
-"Food Network: http://www.foodnetwork.com/recipes/food-network-kitchen/almost-famous-soft-pretzels-recipe-1972733",
-"Food Network Alt: http://www.foodnetwork.com/recipes/alton-brown/homemade-soft-pretzels-recipe-1948242"
-],
-"rating": 0,
-"recipe": [
-"In large bowl, stir yeast, sugar and warm water. Let rest until yeast is dissolved and is a little foamy.",
-"Stir in 1 cup flour. Then rest of flour mixed with the 1 tbsp salt. Knead on lightly floured surface until smooth. Place in oiled bowl, rolling around until all oiled. Cover and let rise till doubled in size.",
-"Remove and briefly knead again, gently. Cut into 8 pieces, roll each piece into 28 inch ropes, shape into pretzels and place on greased cookie sheet. Cover and let rise 15 minutes.",
-"Simmer 8 cups of water with 1/2 cup of baking soda. Dunk each pretzel for 30 seconds. Replace back onto greased cookie sheet.",
-"Brush each with eggwash (1 egg beaten with 1 tbsp. water), sprinkle with coarse salt. Bake in preheated 425\u00ba oven for 21 minutes"
-],
-"source": "http://www.geniuskitchen.com/recipe/real-homemade-soft-pretzels-130301",
-"title": "Pretzels"
-},
-{
-"group": "meals",
-"id": "recipe-quick_skillet_meals",
-"imgPlaceholder": "dist/imgs/placeholder-meals-quick_skillet_meals.svg",
-"imgSrc": "dist/imgs/meals-quick_skillet_meals.png",
-"ingredients": {
-"ingredients": [
-"Ingredients"
-]
-},
-"notes": [],
-"rating": 2,
-"recipe": [
-">> Chicken",
-"Pull out the chicken breasts from the fridge. Heat the skillet to medium-high heat with a bit of olive oil. Flip and coat the opposite side",
-"Once hot, place the chicken on the skillet, season with olive oil, pepper, salt, thyme, and rosemary",
-"Don't move the chicken and let it sear one side. Once starting to brown, flip and let sit until fully cooked",
-">> White Fish",
-"Note: use a metal fish spatula to keep the crispy bits attached to the fish",
-"Heat the cast iron skillet on medium-high heat with Extra olive oil (to held reduce sticking). Take out the fish fillets",
-"Season one side of the fish with Parsley, Thyme, Salt, and Pepper. Place season-side down for 2-3 minutes",
-"Season the opposite side, flip, and sear for 2-3 more minutes, then serve immediately"
-],
-"source": "",
-"title": "Quick Skillet Meals"
-},
-{
-"group": "meals",
+"group": "veggie",
 "id": "recipe-roasted_vegetables",
-"imgPlaceholder": "dist/imgs/placeholder-meals-roasted_vegetables.svg",
-"imgSrc": "dist/imgs/meals-roasted_vegetables.jpg",
+"imgPlaceholder": "dist/imgs/placeholder_veggie-roasted_vegetables.svg",
+"imgSrc": "dist/imgs/veggie-roasted_vegetables.jpg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -2439,221 +3432,32 @@ var localDB = {
 "title": "Roasted Vegetables"
 },
 {
-"group": "meals",
-"id": "recipe-sesame_chicken_noodles",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"dressing": [
-"Dressing",
-"1 tsp sesame oil",
-"1/4 cup peanut oil or sunflower oil?",
-"1/4 cup tahini",
-"3 tbsp soy sauce",
-"2 tbsp red wine vinegar",
-"2 tsp chili oil",
-"1 tsp honey",
-"1/2 tsp cayenne pepper or red pepper flakes",
-"1 garlic clove, minced"
-],
-"else": [
-"Else",
-"1 chicken breast",
-"8 ounces fettuccine (1/2 container)",
-"1 tsp sesame oil",
-"2 scallions, thinly sliced"
-]
-},
-"notes": [
-"Chrissy Teigen Cravings, 78",
-"The chili oil and the vinegar came through too strong, so I just ditched the dressing and went with pesto. Not sure what changes I would make"
-],
-"rating": 0,
-"recipe": [
-"Fill a large pot 2/3 full of water and bring to a boil. Add the chicken breast and remove from heat. Cover and let chicken sit until tender (15 minutes); check for done-ness and when done remove and place onto a plate",
-"With the same water, bring it back to a boil. Add the fettuccine and cook according to directions.",
-"In a medium bowl, which together the sauce until smooth.",
-"Rinse the noodles until cool, then pat dry. Toss the noodles with the remaining 1 tsp sesame oil. Shred the chicken by hand and toss with the noodles. Finally coat with the dressing"
-],
-"source": "",
-"title": "Sesame Chicken Noodles"
-},
-{
-"group": "meals",
-"id": "recipe-shrimp_creole",
-"imgPlaceholder": "dist/imgs/placeholder-meals-shrimp_creole.svg",
-"imgSrc": "dist/imgs/meals-shrimp_creole.jpeg",
+"group": "veggie",
+"id": "recipe-salad",
+"imgPlaceholder": "dist/imgs/placeholder_veggie-salad.svg",
+"imgSrc": "dist/imgs/veggie-salad.jpg",
 "ingredients": {
 "ingredients": [
-"Ingredients",
-"1 (32 oz) can of tomato sauce",
-"1/2 stick butter",
-"1.5 onions, diced",
-"1.5 stalks celery, half rings",
-"1.5 garlic cloves",
-"1 (15 oz) can whole tomatoes, cut",
-"1 bay leaf",
-"1/2 tsp tabasco sauce",
-"1/2 tbsp fresh thyme",
-"1/4 bunch parsley, chopped",
-"1 lbs raw shrimp, peeled and deveined",
-"white rice and/or side baguette",
-"pinch of saffron"
-]
-},
-"notes": [
-"Alex's family recipe",
-"This recipe has been cut in half, which serves 3-4 people"
-],
-"rating": 3,
-"recipe": [
-"Reduce tomato sauce by 3/4 (bake uncovered in 350 oven - ~90 minutes). Add water back to original volume",
-"In butter, saute the onion, celery, and garlic",
-"Add sauted ingredients, sliced tomatoes, and spices to the pot with tomato sauce from the oven",
-"Bake covered for 30 min; uncover and bake for 30 additional minutes",
-"(*Can stop here to store overnight in the fridge)",
-"Bring to a boil. Add parsley and shrimp then cook for 5 more minutes. Serve over white rice with a pinch of saffron"
-],
-"source": "",
-"title": "Shrimp Creole"
-},
-{
-"group": "meals",
-"id": "recipe-shrimp_scampi",
-"imgPlaceholder": "dist/imgs/placeholder-meals-shrimp_scampi.svg",
-"imgSrc": "dist/imgs/meals-shrimp_scampi.jpg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"pasta",
-"cooked shrimp",
-"spinach, peas, or etc.",
-"olive oil",
-"garlic powder",
-"italian seasoning",
-"parsley",
-"parmesan cheese",
-"lemon juice",
-"red pepper flakes (optional)"
-]
-},
-"notes": [
-"You can use imitation crab meat in place of shrimp"
-],
-"rating": 1,
-"recipe": [
-"Make the pasta according to directions. Drain pot then add all ingredients, stir, and heat until warm"
-],
-"source": "",
-"title": "Shrimp Scampi"
-},
-{
-"group": "meals",
-"id": "recipe-shrimp_tacos",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"1 lb shrimp",
-"1/4 cup olive oil",
-"3 tbsp honey",
-"1 lime, juiced",
-"3 cloves garlic",
-"1/2 tsp each of salt & pepper"
+"Ingredients"
 ]
 },
 "notes": [],
 "rating": 1,
 "recipe": [
-"Whisk together olive oil, honey, lime juice, garlic, salt, and pepper, then pour the marinade over the shrimp and marinate for at least 30 minutes in the fridge",
-"Skewer and grill for 6-8 minutes or cook in a skillet for ~6 minutes",
-"Place grilled shrimp in tortilla and top with slaw and slices of avocado"
-],
-"source": "http://www.yummly.co/recipe/Honey-Lime-Shrimp-Tacos-1576139",
-"title": "Shrimp Tacos"
-},
-{
-"group": "meals",
-"id": "recipe-slow_cooker_chicken_mango_curry",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"Blender": [
-"Blender",
-"2 cups frozen mango chunks",
-"1 small onion, quartered",
-"4 cloves garlic",
-"2 tbsp brown sugar",
-"1 tsp rice vinegar",
-"1 tsp freshly grated ginger",
-"1 tsp red pepper flakes",
-"3 tbsp yellow curry paste",
-"1/2 cup chicken broth"
-],
-"Curry": [
-"Curry",
-"1 can coconut milk",
-"1.5 lbs chicken breast, cubed",
-"1 red onion, sliced",
-"1/2 cup roasted cashews"
-],
-"Optional Garnish": [
-"Optional Garnish",
-"cilantro",
-"red chili",
-"lime wedge"
-]
-},
-"notes": [],
-"rating": 0,
-"recipe": [
-"In a blender, combine the above ingredients and blend until smooth",
-"Transfer to the slow cooker and stir in the coconut milk, chicken, and red onion",
-"Cook on low for 8 hours",
-"Add the remaining mangoes and cover to thaw",
-"Add the cashews and serve over rice with choice of garnish"
-],
-"source": "http://www.oliviascuisine.com/slow-cooker-chicken-mango-curry/",
-"title": "Slow Cooker Chicken Mango Curry"
-},
-{
-"group": "meals",
-"id": "recipe-slow_cooker_chicken_tortilla_soup",
-"imgPlaceholder": "dist/imgs/placeholder-meals-slow_cooker_chicken_tortilla_soup.svg",
-"imgSrc": "dist/imgs/meals-slow_cooker_chicken_tortilla_soup.jpg",
-"ingredients": {
-"Toppings": [
-"Toppings",
-"tortilla chips",
-"2 cups grated cheese"
-],
-"soup": [
-"Soup",
-"2 large chicken breast, halved",
-"2 cans of black beans (30 oz)",
-"3 cans of original rotel diced tomatoes and green chilies (30 oz)",
-"1 cup salsa",
-"4 oz green chilies, chopped",
-"14.5 oz can tomato sauce"
-]
-},
-"notes": [
-"(Source: Becky Harder - Monument, CO)"
-],
-"rating": 2,
-"recipe": [
-"Halve the chicken breasts, then combine all the ingredients (undrained) into a crock pot (*makes exactly 3 Qt). Cover and cook on low for 8 hours",
-"Just before serving, slice the chicken breasts into bite size pieces and return to soup"
+"Strawberry: strawberry, spinach, feta, walnuts/pecans/almonds",
+"Greek: lettuce, peppers, cucumber, onion, feta, cherry tomatoes, chickpeas (opt)",
+"Caesar: lettuce, Parmesan, croutons",
+"Option 4: spinach, onion, tomato, feta, watercress",
+"Basic: light zesty Italian dressing/raspberry vinaigrette + vegetables (tomato, cucumber, pepper, etc.) + rotisserie chicken"
 ],
 "source": "",
-"title": "Slow Cooker Chicken Tortilla Soup"
+"title": "Salad"
 },
 {
-"group": "meals",
+"group": "veggie",
 "id": "recipe-sweet_potato_gnocchi",
-"imgPlaceholder": "dist/imgs/placeholder-meals-sweet_potato_gnocchi.svg",
-"imgSrc": "dist/imgs/meals-sweet_potato_gnocchi.jpeg",
+"imgPlaceholder": "dist/imgs/placeholder_veggie-sweet_potato_gnocchi.svg",
+"imgSrc": "dist/imgs/veggie-sweet_potato_gnocchi.jpeg",
 "ingredients": {
 "gnocchi": [
 "Gnocchi",
@@ -2687,435 +3491,7 @@ var localDB = {
 "title": "Sweet Potato Gnocchi"
 },
 {
-"group": "meals",
-"id": "recipe-teryaki_chicken",
-"imgPlaceholder": "dist/imgs/placeholder-meals-teryaki_chicken.svg",
-"imgSrc": "dist/imgs/meals-teryaki_chicken.jpeg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"2-3 large chicken breasts",
-"corn starch",
-"frozen broccoli",
-"rice",
-"3/4 cup teriyaki sauce",
-"sesame seeds"
-]
-},
-"notes": [
-"Teriyaki sauce is roughly 1:1 mirin to soy sauce and optionally ginger"
-],
-"rating": 2,
-"recipe": [
-"Start the rice and heat a pan with refined Sesame or Sunflower oil (high heat)",
-"Slice the chicken at a 45 degree angle then cut in half so you have chunks are roughly 50% wider than a pink eraser",
-"Toss the chicken with the corn starch, then fry in the pan until the outer surfaces are no longer raw",
-"Finish cooking the chicken in the sauce",
-"Prep the broccoli and serve"
-],
-"source": "",
-"title": "Teryaki Chicken"
-},
-{
-"group": "meals",
-"id": "recipe-tomato_mozzarella_caprese",
-"imgPlaceholder": "dist/imgs/placeholder-meals-tomato_mozzarella_caprese.svg",
-"imgSrc": "dist/imgs/meals-tomato_mozzarella_caprese.jpg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"tomato, sliced",
-"mozzarella ball, sliced",
-"extra virgin olive oil, the good stuff",
-"basil",
-"oregano",
-"ground pepper",
-"baguette"
-]
-},
-"notes": [],
-"rating": 1,
-"recipe": [
-"Slice the tomatoes and mozzarella. Drizzle olive oil on top with a small amount of balsamic vinegar",
-"For the bread, add a bowl of ground pepper and olive oil for dipping"
-],
-"source": "",
-"title": "Tomato Mozzarella Caprese"
-},
-{
-"group": "meals",
-"id": "recipe-tuna_melts",
-"imgPlaceholder": "dist/imgs/placeholder-meals-tuna_melts.svg",
-"imgSrc": "dist/imgs/meals-tuna_melts.jpg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"mayonnaise",
-"canned tuna",
-"english muffins",
-"your choice of cheese slices"
-]
-},
-"notes": [],
-"rating": 1,
-"recipe": [
-"Preheat oven to Broil (~10 min).",
-"Mix one spoon of mayo with a can of tuna.",
-"Start toasting English Muffins on 3.",
-"On a foil-lined pan, cover the toasted muffins with the tuna, then a slice of cheese. Broil until the cheese has melted."
-],
-"source": "",
-"title": "Tuna Melts"
-},
-{
-"group": "poultry",
-"id": "recipe-paremesan_chicken_breasts",
-"imgPlaceholder": "dist/imgs/placeholder-poultry-paremesan_chicken_breasts.svg",
-"imgSrc": "dist/imgs/poultry-paremesan_chicken_breasts.jpeg",
-"ingredients": {
-"other": [
-"Other",
-"4 chicken breasts",
-"1.5 cups parmesan, finely grated",
-"extra paprika for sprinkling"
-],
-"sauce": [
-"Sauce",
-"1/4 cup olive oil",
-"6 cloves garlic, minced",
-"1.5 tsp paprika",
-"1 tsp kosher salt",
-"1/2 tsp ground black pepper",
-"1/4 tsp cayenne pepper"
-]
-},
-"notes": [
-"Chrissy Teigen Cravings Hungry for More, 202"
-],
-"rating": 2,
-"recipe": [
-"Preheat oven to 400F",
-"In a small bowl, combine the sauce ingredients and coat the chicken. Sprinkle with Parmesan",
-"Bake on a foil-lined sheet for 15 minutes, then broil for 3-4 minutes to brown and sizzle the cheese. Let rest for 5 minutes",
-"sprinkle with a little extra paprika"
-],
-"source": "",
-"title": "Paremesan Chicken Breasts"
-},
-{
-"group": "sides",
-"id": "recipe-aunt_laura's_spicy_chicken_dip",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"1 large can chicken",
-"1 cup frank's red hot sauce",
-"8 oz block cream cheese",
-"1/2 cup ranch dressing",
-"1/4 cup cheddar cheese"
-]
-},
-"notes": [],
-"rating": 1,
-"recipe": [
-"Heat chicken and franks until hot",
-"Stir in cream cheese and ranch",
-"Mix in 1/2 of cheese and use the rest on top",
-"Broil to heat thoroughly"
-],
-"source": "",
-"title": "Aunt Laura'S Spicy Chicken Dip"
-},
-{
-"group": "sides",
-"id": "recipe-baked_broccoli",
-"imgPlaceholder": "dist/imgs/placeholder-sides-baked_broccoli.svg",
-"imgSrc": "dist/imgs/sides-baked_broccoli.jpg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"thyme",
-"rosemary",
-"salt and pepper",
-"garlic powder",
-"olive oil",
-"broccoli"
-]
-},
-"notes": [
-"Simpler version of roasted vegetables with just Broccoli",
-"Previously made with salt, pepper, and garlic. Once done, topped with lemon juice"
-],
-"rating": 2,
-"recipe": [
-"Preheat oven to 400\u2109",
-"Cut the Broccoli into florets and mix with oil and seasonings in a medium bowl",
-"Bake for 40 minutes"
-],
-"source": "",
-"title": "Baked Broccoli"
-},
-{
-"group": "sides",
-"id": "recipe-baked_potatoes",
-"imgPlaceholder": "dist/imgs/placeholder-sides-baked_potatoes.svg",
-"imgSrc": "dist/imgs/sides-baked_potatoes.jpg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"2-4 russet potatoes, scrubbed clean",
-"olive oil",
-"1 tbsp salt"
-]
-},
-"notes": [],
-"rating": 1,
-"recipe": [
-"Preheat the oven to 450\u2109",
-"Scrub wash and dry the potatoes and poke with a fork to allow steam to escape",
-"Rub oil and salt over the potatoes",
-"Bake on a baking sheet for 60 minutes and until tender inside (45 minutes for smaller potatoes)",
-"Top with cheese, chives, and/or black pepper"
-],
-"source": "https://www.tastesoflizzyt.com/oven-baked-potatoes/",
-"title": "Baked Potatoes"
-},
-{
-"group": "sides",
-"id": "recipe-baked_potatoes_instant_pot",
-"imgPlaceholder": "dist/imgs/placeholder-sides-baked_potatoes_instant_pot.svg",
-"imgSrc": "dist/imgs/sides-baked_potatoes_instant_pot.png",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"2-4 russet potatoes, scrubbed clean",
-"olive oil",
-"1 tbsp salt",
-"instant pot"
-]
-},
-"notes": [
-"For smaller potatoes, use 15 minutes"
-],
-"rating": 1,
-"recipe": [
-"Scrub the potatoes clean.",
-"Insert the steamer rack into the instant pot, add 1 cup of (cold) water, then add the potatoes. Make sure the potatoes and water do not touch",
-"Close lid and turn the sealing vent to 'sealed.' Then use manual mode with high pressure for 20 minutes. Allow for natural release (~5 minutes)",
-"The potatoes can be quartered or cooked whole. For a crispy skin place in the oven at 400\u2109 for 8 minutes. Serve with whatever toppings you prefer."
-],
-"source": "https://amindfullmom.com/instant-pot-baked-potatoes/",
-"title": "Baked Potatoes Instant Pot"
-},
-{
-"group": "sides",
-"id": "recipe-baked_zucchini",
-"imgPlaceholder": "dist/imgs/placeholder-sides-baked_zucchini.svg",
-"imgSrc": "dist/imgs/sides-baked_zucchini.jpeg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"zucchini",
-"parmesan",
-"olive oil",
-"1/4 tsp garlic powder",
-"1/2 tsp basil",
-"1/2 tsp thyme",
-"salt & pepper"
-]
-},
-"notes": [
-"Alt: just salt, pepper, red pepper flakes, olive oil. 425\u2109 for 20 minutes"
-],
-"rating": 1,
-"recipe": [
-"Preheat oven to 350\u00b0F",
-"On a tin foil covered pan, halve the zucchini and lightly coat with olive oil",
-"Mix the ingredients in a small bowl then cover the zucchini",
-"Bake for 15 minutes and optionally broil for 2-3 minutes"
-],
-"source": "http://damndelicious.net/2014/06/21/baked-parmesan-zucchini/",
-"title": "Baked Zucchini"
-},
-{
-"group": "sides",
-"id": "recipe-basmati_rice",
-"imgPlaceholder": "dist/imgs/placeholder-sides-basmati_rice.svg",
-"imgSrc": "dist/imgs/sides-basmati_rice.png",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"1 cup basmati rice",
-"1 cup water",
-"1/2 tbsp olive oil",
-"chopped green onions (optional)",
-"parsely (optional)",
-"instant pot"
-]
-},
-"notes": [],
-"rating": 1,
-"recipe": [
-"Rinse the Basmati rice with cold water. Add rice, water, and oil to instant pot. Cook for 8 minutes on high pressure, then allow 5 minutes for natural pressure release",
-"Toss with the green onions and parsely"
-],
-"source": "https://mommyshomecooking.com/instant-pot-fluffy-rice/",
-"title": "Basmati Rice"
-},
-{
-"group": "sides",
-"id": "recipe-blueberry_sour_cream_muffins",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"Streusel": [
-"Streusel",
-"1/2 cup light brown sugar",
-"1/3 cup all-purpose flour",
-"2 tbsp unsalted butter, softened",
-"1 tsp cinnamon"
-],
-"muffins": [
-"Muffins",
-"1/2 cup butter",
-"1.25 cups brown or white sugar",
-"2 eggs",
-"3 cups flour",
-"2 tsp baking powder",
-"1/2 tsp salt",
-"1/2 cup milk",
-"2 cups blueberries"
-]
-},
-"notes": [
-"Muffin source was from a picture of a cookbook, but I'm not sure which it came from. The title was: Mrs. Pulsford's Blueberry Muffins",
-"Streusel topping source: https://www.foodandwine.com/recipes/blueberry-sour-cream-muffins"
-],
-"rating": 2,
-"recipe": [
-">> Streusel",
-"In a medium bowl, combine the brown sugar, flour, butter, and cinnamon. Rub with your fingers to form coarse crumbs then refrigerate until ready to use",
-">> Muffins",
-"Cream butter and sugar until fluffy. Add eggs, one at a time and beat well. Sift dry ingredients together and add alternately with milk. Stir in blueberries. ",
-"Pour into greased muffin cups and sprinkle with the streusel topping",
-"Bake at 375F for thirty minutes"
-],
-"source": "",
-"title": "Blueberry Sour Cream Muffins"
-},
-{
-"group": "sides",
-"id": "recipe-bruschetta",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"1 baguette, cut in half length-wise and toasted",
-"2 tsps minced garlic or ~1/4 tsp garlic powder",
-"3 tbsp extra-virgin olive oil",
-"1\u20444 cup grated parmesan cheese",
-"2.5 cups minced roma tomatoes (cut so fine its almost a paste)",
-"1\u20443 cup thinly sliced fresh basil leaf",
-"2 tbsp balsamic vinegar",
-"1\u20442 tsp salt",
-"1 tsp fresh ground pepper"
-]
-},
-"notes": [],
-"rating": 1,
-"recipe": [
-"In a medium mixing bowl, add the tomatoes, garlic, basil, vinegar, olive oil, cheese, salt, and pepper",
-"Mix thoroughly and let sit for at least 15 minutes at room temperature to let the flavors marinate",
-"Slice the bread into individual pieces and spoon the mixture on top"
-],
-"source": "https://www.geniuskitchen.com/recipe/best-ever-bruschetta-443987",
-"title": "Bruschetta"
-},
-{
-"group": "sides",
-"id": "recipe-crispy_baked_sweet_potato_fries",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"sweet potatoes",
-"sprinkle of corn starch (optional)",
-"olive oil to lightly cover each fry",
-"salt",
-"pepper",
-"and some of cayenne pepper, paprika, curry powder, or garlic"
-]
-},
-"notes": [
-"Cook about one sweet potato per person"
-],
-"rating": 1,
-"recipe": [
-"Preheat the oven to 425F",
-"Peel the sweet potatoes and cut them into similarly sized fry-shaped pieces",
-"Toss the uncooked fries into a mixing bowl with the oil, and spices, and optional corn starch. Toss until all fries are evenly coated",
-"Pour the fries onto a dark non-stick baking sheet in a single layer",
-"Bake for 15 minutes, flip all fries with a spatula, then bake for 10-15 minutes until crisp. The fries should go from shiny orange to matte and rougher texture"
-],
-"source": "https://cookieandkate.com/2010/baked-sweet-potato-fries/",
-"title": "Crispy Baked Sweet Potato Fries"
-},
-{
-"group": "sides",
-"id": "recipe-guacamole",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"2 ripe avocados",
-"1 tbsp lemon juice",
-"1/8 cup of minced red onion",
-"2 tbsp cilantro, finely chopped",
-"1/2 tsp kosher salt",
-"1/2 tsp black pepper",
-"some tomato, chopped"
-]
-},
-"notes": [
-"See the source for more ideas with chilis, salsa, etc"
-],
-"rating": 1,
-"recipe": [
-"Cut the avocados in half, remove the core, then scoop out the flesh with a spoon in one pass. Mash with a fork",
-"Mix with everything else, then cover with plastic wrap to prevent contact with air"
-],
-"source": "https://www.simplyrecipes.com/recipes/perfect_guacamole/",
-"title": "Guacamole"
-},
-{
-"group": "sides",
-"id": "recipe-salad",
-"imgPlaceholder": "dist/imgs/placeholder-sides-salad.svg",
-"imgSrc": "dist/imgs/sides-salad.jpg",
-"ingredients": {
-"ingredients": [
-"Ingredients"
-]
-},
-"notes": [],
-"rating": 1,
-"recipe": [
-"Strawberry: strawberry, spinach, feta, walnuts/pecans/almonds",
-"Greek: lettuce, peppers, cucumber, onion, feta, cherry tomatoes, chickpeas (opt)",
-"Caesar: lettuce, Parmesan, croutons",
-"Option 4: spinach, onion, tomato, feta, watercress",
-"Basic: light zesty Italian dressing/raspberry vinaigrette + vegetables (tomato, cucumber, pepper, etc.) + rotisserie chicken"
-],
-"source": "",
-"title": "Salad"
-},
-{
-"group": "sides",
+"group": "veggie",
 "id": "recipe-sweet_potatoes",
 "imgPlaceholder": "",
 "imgSrc": "",
@@ -3134,382 +3510,6 @@ var localDB = {
 ],
 "source": "https://amindfullmom.com/instant-pot-baked-sweet-potatoes/",
 "title": "Sweet Potatoes"
-},
-{
-"group": "sushi",
-"id": "recipe-_rice",
-"imgPlaceholder": "dist/imgs/placeholder-sushi-_rice.svg",
-"imgSrc": "dist/imgs/sushi-_rice.jpg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"1 cup sushi rice, rinsed",
-"1.5 cups water",
-"3 tbsp rice vinegar (or 1 tbsp cider vinegar)",
-"instant pot"
-]
-},
-"notes": [],
-"rating": 1,
-"recipe": [
-"Rinse the rice in a strainer for ~2 min. Shake dry",
-"In the instant pot, even distribute the rice in the water",
-"Set to rice/low pressure for 12 minutes",
-"When done, gently stir in the rice vinegar",
-"Spread the rice into a thin layer on a wooden cutting board and let cool for 10 minutes"
-],
-"source": "https://recipes.instantpot.com/recipe/pressure-cooker-sushi-rice/",
-"title": " Rice"
-},
-{
-"group": "sushi",
-"id": "recipe-_rolling",
-"imgPlaceholder": "dist/imgs/placeholder-sushi-_rolling.svg",
-"imgSrc": "dist/imgs/sushi-_rolling.jpg",
-"ingredients": {
-"ingredients": [
-"Ingredients"
-]
-},
-"notes": [
-"Link for rolling Uramaki: https://youtu.be/hfNhqawvSr8?t=2m50s"
-],
-"rating": 1,
-"recipe": [
-"Lay out a bamboo rolling mat, cutting board, knife, and small bowl of water",
-"Either place a sheet of plastic wrap down or put a bag over the bamboo rolling mat to make it easier to clean",
-"Place the nori shiny side down",
-"Dampen your fingers to prevent sticking, then spread the rice into a thin layer (don't press down to firmly). Leave ~1/2 inch exposed nori at the end",
-"> Maki Rolls",
-"Add the ingredients on top of the rice in lengthwise",
-"Dampen the exposed nori, then roll keeping the ingredients in place with your index fingers. The nori should stick to itself at the end",
-"> Uramaki (Inside Out Roll)",
-"Flip the nori and rice over, then add the ingredients in lengthwise",
-"By hand start rolling with the side out. When done, use the bamboo mat to give the roll its shape",
-"Press the roll while vertical, rotate 90' press again, then roll back to the original position to press one last time",
-"> Both",
-"Cut in half three times for a total of 8 rolls. Wet a knife to make the cuts easier and use a sawing motion",
-"Serve with wasabi and pickled ginger"
-],
-"source": "https://www.chowhound.com/recipes/salmon-avocado-maki-31555",
-"title": " Rolling"
-},
-{
-"group": "sushi",
-"id": "recipe-california_rolls",
-"imgPlaceholder": "dist/imgs/placeholder-sushi-california_rolls.svg",
-"imgSrc": "dist/imgs/sushi-california_rolls.jpeg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"6 sticks surimi (imitation crab)",
-"1/2 avocado",
-"cucumber",
-"sesame seeds",
-"sushi rice",
-"nori",
-"masago (flying fish roe) or tobikko"
-]
-},
-"notes": [
-"tobiko is just fish eggs with corn syrup and food coloring",
-"See more detailed guide: https://www.justonecookbook.com/california-roll/"
-],
-"rating": 1,
-"recipe": [
-"Cut the Nori sheet in half. Spread rice over the nori and top with sesame seeds, then flip rice side down",
-"Add strips of the Surimi, avocado, cucumber, and choice of fish roe then roll"
-],
-"source": "https://makemysushi.com/Recipes/how-to-make-california-sushi-rolls",
-"title": "California Rolls"
-},
-{
-"group": "sushi",
-"id": "recipe-canned_spicy_tuna_roll",
-"imgPlaceholder": "dist/imgs/placeholder-sushi-canned_spicy_tuna_roll.svg",
-"imgSrc": "dist/imgs/sushi-canned_spicy_tuna_roll.jpg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"1 tbsp mayo",
-"1 tsp chili sauce (sriracha)",
-"1 tsp toasted sesame oil",
-"1/2 tsp lemon juice (optional)",
-"spoon of masago (fish roe) (optional)",
-"a bit of soy sauce (optional)",
-"can tuna",
-"sesame seeds",
-"cucumber",
-"2 green onions, cut into thin rounds for topping",
-"sushi rice",
-"nori"
-]
-},
-"notes": [
-"See guide on using raw tuna: "
-],
-"rating": 1,
-"recipe": [
-"Mix the sauce, then add and mix with the canned tuna",
-"Cut the Nori sheet in half. Spread rice over the nori and top with sesame seeds, then flip rice side down",
-"Add the spicy tuna and cucumber and roll",
-"Top with a dab of spicy mayo and green onion round"
-],
-"source": "https://makemysushi.com/Recipes/canned-spicy-tuna-sushi-roll-twist",
-"title": "Canned Spicy Tuna Roll"
-},
-{
-"group": "sushi",
-"id": "recipe-onigiri",
-"imgPlaceholder": "dist/imgs/placeholder-sushi-onigiri.svg",
-"imgSrc": "dist/imgs/sushi-onigiri.jpg",
-"ingredients": {
-"ingredients": [
-"Ingredients"
-]
-},
-"notes": [
-"Ingredient ideas: http://wildgreensandsardines.com/2015/06/smoked-salmon-onigiri.html"
-],
-"rating": 1,
-"recipe": [
-"Spread the rice into a circle, then fill with the selected ingredients",
-"Use plastic wrap to shape the ball into a triangular shape, then add a strip of nori to hold the base"
-],
-"source": "",
-"title": "Onigiri"
-},
-{
-"group": "sushi",
-"id": "recipe-shrimp_and_avocado",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"cooked shrimp",
-"cucumber",
-"1/5 avocado, peeled and mashed",
-"1 tbsps fresh cilantro, finely chopped",
-"chives",
-"sushi rice",
-"wasabi",
-"nori"
-]
-},
-"notes": [],
-"rating": 1,
-"recipe": [
-"Spread rice over the nori, then with rice-side up, add the fillings. Roll"
-],
-"source": "https://www.geniuskitchen.com/recipe/avocado-and-shrimp-sushi-331300",
-"title": "Shrimp And Avocado"
-},
-{
-"group": "sushi",
-"id": "recipe-shrimp_nigiri",
-"imgPlaceholder": "dist/imgs/placeholder-sushi-shrimp_nigiri.svg",
-"imgSrc": "dist/imgs/sushi-shrimp_nigiri.jpeg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"shrimp",
-"skewer"
-]
-},
-"notes": [],
-"rating": 2,
-"recipe": [
-"Skewer the shrimp between the belly and shell to keep them straight",
-"Boil for 2-3 minutes until pink",
-"Cool in a bowl of ice water",
-"Peel off the legs, then the shell leaving the tail",
-"Cut from the head to the tail only down to the intestine. Remove with the tip of the knife without piercing",
-"Flatten out the shrimp and trim the tail"
-],
-"source": "http://www.foodrepublic.com/recipes/how-to-cook-shrimp-for-nigiri-sushi/",
-"title": "Shrimp Nigiri"
-},
-{
-"group": "sushi",
-"id": "recipe-shrimp_spicy_rolls",
-"imgPlaceholder": "dist/imgs/placeholder-sushi-shrimp_spicy_rolls.svg",
-"imgSrc": "dist/imgs/sushi-shrimp_spicy_rolls.jpeg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"cooked shrimp, chopped",
-"cucumber",
-"mayo",
-"sriracha",
-"sushi rice",
-"wasabi",
-"nori"
-]
-},
-"notes": [],
-"rating": 1,
-"recipe": [
-"Cut the Nori sheet in half. Spread rice over the nori, then flip rice side down",
-"Add the fillings and roll. Drizzle with extra spicy mayo sauce on top"
-],
-"source": "http://fromgatetoplate.com/2014/04/14/spicy-shrimp-sushi-rolls/",
-"title": "Shrimp Spicy Rolls"
-},
-{
-"group": "sushi",
-"id": "recipe-smoked_salmon_nigiri",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"smoked salmon",
-"sushi rice",
-"nori"
-]
-},
-"notes": [
-"Look for smoked salmon with the most visible white fat lines"
-],
-"rating": 1,
-"recipe": [
-"Slice salmon into pieces to cover the sushi rice. Will look best with the fat lines running diagonally when wrapped",
-"Using two index fingers and your thumb shape a bite size clump of sushi rice",
-"Optionally add a bit of wasabi underneath the salmon",
-"Using your second hand's thumb and index finger, wrap the salmon over the rice"
-],
-"source": "https://makemysushi.com/Recipes/make-smoked-salmon-nigiri",
-"title": "Smoked Salmon Nigiri"
-},
-{
-"group": "sushi",
-"id": "recipe-smoked_salmon_rolls",
-"imgPlaceholder": "dist/imgs/placeholder-sushi-smoked_salmon_rolls.svg",
-"imgSrc": "dist/imgs/sushi-smoked_salmon_rolls.jpg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"smoked salmon",
-"avocado",
-"carrot",
-"cucumber",
-"wasabi"
-]
-},
-"notes": [
-"Can mix rice vinegar or lemon juice to help prevent the avocado from browning"
-],
-"rating": 1,
-"recipe": [
-"Sliced all ingredients into long strips then roll"
-],
-"source": "",
-"title": "Smoked Salmon Rolls"
-},
-{
-"group": "sushi",
-"id": "recipe-vegetable_rolls",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"cucumber",
-"carrots",
-"avocado",
-"sushi rice",
-"wasabi",
-"nori"
-]
-},
-"notes": [],
-"rating": 1,
-"recipe": [
-"Spread rice over the nori, then with rice-side up, add the fillings. Roll"
-],
-"source": "",
-"title": "Vegetable Rolls"
-},
-{
-"group": "tools",
-"id": "recipe-cast_iron_care",
-"imgPlaceholder": "dist/imgs/placeholder-tools-cast_iron_care.svg",
-"imgSrc": "dist/imgs/tools-cast_iron_care.jpg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"canola or flaxseed oil",
-"salt"
-]
-},
-"notes": [],
-"rating": 0,
-"recipe": [
-">> Seasoning:",
-"Coat with a thin layer of oil",
-"Bake at 450F for ~1 hour. This will create a hard glassy layer",
-">> Regular Care:",
-"Clean while still warm and use hot water and a scrub brush (optionally use salt for extra abrasion), but avoid any soap",
-"Towel dry, then heat to boil off any excess water",
-"Put on a thin later of oil and heat until smoking to prevent the oil from turning rancid",
-">> Notes on Use:",
-"Always pre-heat the skillet for room temperature food",
-"Limit the amount of acidic foods to protect the seasoning"
-],
-"source": "https://www.youtube.com/watch?v=KLGSLCaksdY",
-"title": "Cast Iron Care"
-},
-{
-"group": "tools",
-"id": "recipe-pizza_stone_care",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"ingredients": [
-"Ingredients"
-]
-},
-"notes": [],
-"rating": 0,
-"recipe": [
-">> Regular Use:",
-"Put the cold pizza stone in a cold oven then preheat (if a cold pizza stone goes in a hot oven it may crack)",
-"Prep the pizza on a Pizza Peel/Spatula with a bit of cornmeal or flour. Transfer to the pizza stone and generally cook for 6-8 minutes at 425",
-"Remove and transfer to a cutting board to slice",
-">> Cleaning:",
-"Let cool in the oven, then scrub with a little water, and towel dry. Minimize water if possible",
-"The pizza stone can be stored in the oven and should always be stored flat"
-],
-"source": "https://www.napoleongrills.com/blog/articles/id/4329/how-to-use-and-clean-a-pizza-stone",
-"title": "Pizza Stone Care"
-},
-{
-"group": "tools",
-"id": "recipe-wok_care",
-"imgPlaceholder": "dist/imgs/placeholder-tools-wok_care.svg",
-"imgSrc": "dist/imgs/tools-wok_care.jpg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"vegetable, corn, or peanut oil"
-]
-},
-"notes": [
-"Most electric stoves can't get hot enough for a Wok, so cook in small batches to properly sear meat or vegetables",
-"General advice on cooking in a wok: https://www.epicurious.com/expert-advice/how-to-cook-with-a-wok-article"
-],
-"rating": 0,
-"recipe": [
-">> Regular Care:",
-"Clean while still warm and use hot water and a scrub brush",
-"Towel dry, then heat to boil off any excess water. Then seal with a thin later of oil",
-">> Cooking Advice:",
-"Pre-heat until flicked water quickly evaporates. Use cold oil with a high smoke point such as peanut oil",
-"Make sure all ingredients are really dry (use a salad spinner or paper towels)"
-],
-"source": "https://lifehacker.com/how-to-buy-and-take-care-of-a-wok-1786021430",
-"title": "Wok Care"
 }
 ],
 "searchKeys": [
@@ -3588,6 +3588,7 @@ var localDB = {
 "recipe-baked_apples:Baked Apples:0",
 "recipe-banana_bread:Banana Bread:2",
 "recipe-biscotti:Biscotti:3",
+"recipe-blueberry_sour_cream_muffins:Blueberry Sour Cream Muffins:2",
 "recipe-cake_pops:Cake Pops:1",
 "recipe-chocolate-pb-m&m_balls:Chocolate-Pb-M&M Balls:0",
 "recipe-chocolate_chip_cookies:Chocolate Chip Cookies:1",
@@ -3605,79 +3606,70 @@ var localDB = {
 "recipe-skillet_peanut_butter_chocolate_chip_blondies:Skillet Peanut Butter Chocolate Chip Blondies:1",
 "recipe-toasted_marshmallow_brownie_crinkles:Toasted Marshmallow Brownie Crinkles:1"
 ],
-"grains": [
+"meals": [
+"recipe-gyros:Gyros:1",
+"recipe-jambon_beurre:Jambon Beurre:1",
+"recipe-nori_vegetable_wraps:Nori Vegetable Wraps:0",
+"recipe-quick_skillet_meals:Quick Skillet Meals:2",
+"recipe-tomato_mozzarella_caprese:Tomato Mozzarella Caprese:1",
+"recipe-tuna_melts:Tuna Melts:1"
+],
+"pasta": [
+"recipe-baked_ziti:Baked Ziti:2",
 "recipe-cherry_tomato_spaghetti:Cherry Tomato Spaghetti:1",
-"recipe-curried_chickpeas:Curried Chickpeas:1",
 "recipe-dragon_noodles:Dragon Noodles:1",
-"recipe-fried_rice:Fried Rice:3",
 "recipe-mozzarella_pasta:Mozzarella Pasta:1",
 "recipe-orzo_and_cheese:Orzo And Cheese:1",
 "recipe-peanut_noodles:Peanut Noodles:1",
-"recipe-quinoa_and_stuff:Quinoa And Stuff:1",
-"recipe-red_beans_and_rice:Red Beans And Rice:1",
 "recipe-sausage_and_mushroom_penne_pasta:Sausage And Mushroom Penne Pasta:2",
 "recipe-sesame_noodles_with_wilted_greens:Sesame Noodles With Wilted Greens:1",
 "recipe-spaghetti_cacio_e_cepe:Spaghetti Cacio E Cepe:2",
 "recipe-spaghetti_sauce:Spaghetti Sauce:3"
 ],
-"meals": [
-"recipe-baked-fish:Baked-Fish:1",
-"recipe-baked_ziti:Baked Ziti:2",
-"recipe-brick_chicken:Brick Chicken:3",
-"recipe-chana_masala:Chana Masala:1",
-"recipe-chicken:Chicken:1",
-"recipe-chicken_and_dumplings:Chicken And Dumplings:2",
-"recipe-chicken_cacciatore:Chicken Cacciatore:2",
-"recipe-chicken_noodle_soup:Chicken Noodle Soup:2",
-"recipe-chicken_tacos:Chicken Tacos:0",
-"recipe-chickpea_and_spinach_salad:Chickpea And Spinach Salad:0",
-"recipe-chickpea_salad_wrap:Chickpea Salad Wrap:0",
-"recipe-chickpea_spicy_buffalo_wrap:Chickpea Spicy Buffalo Wrap:0",
-"recipe-crab_cakes:Crab Cakes:2",
-"recipe-enchiladas:Enchiladas:3",
-"recipe-fajitas:Fajitas:1",
-"recipe-french_onion_soup:French Onion Soup:3",
-"recipe-gyros:Gyros:1",
-"recipe-honey_and_soy_glazed_chicken_thighs:Honey And Soy Glazed Chicken Thighs:0",
-"recipe-jambon_beurre:Jambon Beurre:1",
-"recipe-johns_chili:Johns Chili:2",
-"recipe-karens_roasted_veggie_bowls:Karens Roasted Veggie Bowls:2",
-"recipe-mediterranean_chicken:Mediterranean Chicken:0",
+"pizza": [
 "recipe-mini_pizza:Mini Pizza:1",
 "recipe-naan_pizza:Naan Pizza:1",
-"recipe-nori_vegetable_wraps:Nori Vegetable Wraps:0",
-"recipe-pizza:Pizza:2",
-"recipe-pot_pie_soup:Pot Pie Soup:1",
-"recipe-pretzels:Pretzels:0",
-"recipe-quick_skillet_meals:Quick Skillet Meals:2",
-"recipe-roasted_vegetables:Roasted Vegetables:2",
-"recipe-sesame_chicken_noodles:Sesame Chicken Noodles:0",
-"recipe-shrimp_creole:Shrimp Creole:3",
-"recipe-shrimp_scampi:Shrimp Scampi:1",
-"recipe-shrimp_tacos:Shrimp Tacos:1",
-"recipe-slow_cooker_chicken_mango_curry:Slow Cooker Chicken Mango Curry:0",
-"recipe-slow_cooker_chicken_tortilla_soup:Slow Cooker Chicken Tortilla Soup:2",
-"recipe-sweet_potato_gnocchi:Sweet Potato Gnocchi:1",
-"recipe-teryaki_chicken:Teryaki Chicken:2",
-"recipe-tomato_mozzarella_caprese:Tomato Mozzarella Caprese:1",
-"recipe-tuna_melts:Tuna Melts:1"
+"recipe-pizza:Pizza:2"
 ],
 "poultry": [
-"recipe-paremesan_chicken_breasts:Paremesan Chicken Breasts:2"
+"recipe-brick_chicken:Brick Chicken:3",
+"recipe-chicken:Chicken:1",
+"recipe-chicken_cacciatore:Chicken Cacciatore:2",
+"recipe-chicken_tacos:Chicken Tacos:0",
+"recipe-enchiladas:Enchiladas:3",
+"recipe-fajitas:Fajitas:1",
+"recipe-honey_and_soy_glazed_chicken_thighs:Honey And Soy Glazed Chicken Thighs:0",
+"recipe-mediterranean_chicken:Mediterranean Chicken:0",
+"recipe-paremesan_chicken_breasts:Paremesan Chicken Breasts:2",
+"recipe-sesame_chicken_noodles:Sesame Chicken Noodles:0",
+"recipe-teryaki_chicken:Teryaki Chicken:2"
+],
+"rice": [
+"recipe-basmati_rice:Basmati Rice:1",
+"recipe-fried_rice:Fried Rice:3",
+"recipe-quinoa_and_stuff:Quinoa And Stuff:1",
+"recipe-red_beans_and_rice:Red Beans And Rice:1"
+],
+"seafood": [
+"recipe-baked-fish:Baked-Fish:1",
+"recipe-crab_cakes:Crab Cakes:2",
+"recipe-shrimp_creole:Shrimp Creole:3",
+"recipe-shrimp_scampi:Shrimp Scampi:1",
+"recipe-shrimp_tacos:Shrimp Tacos:1"
 ],
 "sides": [
 "recipe-aunt_laura's_spicy_chicken_dip:Aunt Laura'S Spicy Chicken Dip:1",
-"recipe-baked_broccoli:Baked Broccoli:2",
-"recipe-baked_potatoes:Baked Potatoes:1",
-"recipe-baked_potatoes_instant_pot:Baked Potatoes Instant Pot:1",
-"recipe-baked_zucchini:Baked Zucchini:1",
-"recipe-basmati_rice:Basmati Rice:1",
-"recipe-blueberry_sour_cream_muffins:Blueberry Sour Cream Muffins:2",
 "recipe-bruschetta:Bruschetta:1",
-"recipe-crispy_baked_sweet_potato_fries:Crispy Baked Sweet Potato Fries:1",
-"recipe-guacamole:Guacamole:1",
-"recipe-salad:Salad:1",
-"recipe-sweet_potatoes:Sweet Potatoes:1"
+"recipe-pretzels:Pretzels:0"
+],
+"soup": [
+"recipe-chicken_and_dumplings:Chicken And Dumplings:2",
+"recipe-chicken_noodle_soup:Chicken Noodle Soup:2",
+"recipe-french_onion_soup:French Onion Soup:3",
+"recipe-johns_chili:Johns Chili:2",
+"recipe-pot_pie_soup:Pot Pie Soup:1",
+"recipe-slow_cooker_chicken_mango_curry:Slow Cooker Chicken Mango Curry:0",
+"recipe-slow_cooker_chicken_tortilla_soup:Slow Cooker Chicken Tortilla Soup:2"
 ],
 "sushi": [
 "recipe-_rice: Rice:1",
@@ -3696,6 +3688,24 @@ var localDB = {
 "recipe-cast_iron_care:Cast Iron Care:0",
 "recipe-pizza_stone_care:Pizza Stone Care:0",
 "recipe-wok_care:Wok Care:0"
+],
+"veggie": [
+"recipe-baked_broccoli:Baked Broccoli:2",
+"recipe-baked_potatoes:Baked Potatoes:1",
+"recipe-baked_potatoes_instant_pot:Baked Potatoes Instant Pot:1",
+"recipe-baked_zucchini:Baked Zucchini:1",
+"recipe-chana_masala:Chana Masala:1",
+"recipe-chickpea_and_spinach_salad:Chickpea And Spinach Salad:0",
+"recipe-chickpea_salad_wrap:Chickpea Salad Wrap:0",
+"recipe-chickpea_spicy_buffalo_wrap:Chickpea Spicy Buffalo Wrap:0",
+"recipe-crispy_baked_sweet_potato_fries:Crispy Baked Sweet Potato Fries:1",
+"recipe-curried_chickpeas:Curried Chickpeas:1",
+"recipe-guacamole:Guacamole:1",
+"recipe-karens_roasted_veggie_bowls:Karens Roasted Veggie Bowls:2",
+"recipe-roasted_vegetables:Roasted Vegetables:2",
+"recipe-salad:Salad:1",
+"recipe-sweet_potato_gnocchi:Sweet Potato Gnocchi:1",
+"recipe-sweet_potatoes:Sweet Potatoes:1"
 ]
 }
 }

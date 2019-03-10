@@ -24,9 +24,13 @@ class SiteCompiler:
     DIR_SRC = Path.cwd() / 'database'
 
     def __init__(self):
-        """Initialize class."""
-        self.imgs = {}     # dict mapping recipe to image file
-        self.recipes = []  # list of all recipes
+        """Initialize class and initiate make()."""
+        # Dict mapping formatted recipe title to image file either before/after filtering
+        self.imgs_raw = {}
+        self.imgs_filt = {}
+        # List of all recipes
+        self.recipes = []
+        # Intermediary JSON file with all recipes combined
         self.db_fn = self.DIR_DIST / 'database.json'
 
         self.make()
@@ -85,7 +89,7 @@ class SiteCompiler:
         cb -- callback function on matched files
 
         """
-        # Parse filenames and pass to callback. Sort to minimize diff
+        # Parse filenames and pass to callback. Sort to minimize diff-changes
         for fn_src in sorted(pth.glob(pattern)):
             recipe_title = fn_src.name.split('.')[0]
             sub_dir = self.get_n_parent_dirs(fn_src)
@@ -125,7 +129,7 @@ class SiteCompiler:
         if file_type in ['.jpeg', '.jpg', '.png']:
             # Track matched image filenames
             fn_dest = self.format_img_name(sub_dir, recipe_title, file_type)
-            self.imgs[recipe_title] = self.get_relative_dir(fn_dest)
+            self.imgs_raw[recipe_title] = self.get_relative_dir(fn_dest)
             # If the image does not exist of if the source image has been updated, copy to the output location
             lbl = 'NOT'
             if not fn_dest.is_file() or fn_src.stat().st_size != fn_dest.stat().st_size:
@@ -191,8 +195,9 @@ class SiteCompiler:
             self.toc[sub_dir] = []
         self.toc[sub_dir].append('{}:{}:{}'.format(recipe['id'], recipe['title'], recipe['rating']))
         # Adds link to minified image
-        if recipe_title in self.imgs:
-            recipe['imgSrc'] = self.imgs[recipe_title]
+        if recipe_title in self.imgs_raw:
+            self.imgs_filt[recipe_title] = self.imgs_raw[recipe_title]
+            recipe['imgSrc'] = self.imgs_filt[recipe_title]
             recipe['imgPlaceholder'] = self.format_svg_name(recipe['imgSrc'])
             outPth = Path(recipe['imgPlaceholder'])
             if not outPth.is_file():
@@ -237,7 +242,7 @@ class SiteCompiler:
     def remove_old_files(self):
         """Remove any image files no longer linked to source data."""
         logger.debug('\n# Checking if any files need to be removed')
-        images = [_fn for _fn in self.imgs.values()]
+        images = [_fn for _fn in self.imgs_filt.values()]
         images.extend([self.format_svg_name(_fn) for _fn in images])  # Add SVG filenames
         for img_fn in self.DIR_DIST_IMGS.glob('*'):
             if self.get_relative_dir(img_fn) not in images:
