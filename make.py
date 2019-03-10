@@ -1,9 +1,11 @@
-"""Generate JSON Database from Source JSON Files."""
+"""Generate JS Database file from source Recipe files (JSON)."""
 
 import json
 import logging
-import os
 import shutil
+import subprocess
+import sys
+from os import path
 from pathlib import Path, PurePath
 
 # Debugging Options
@@ -28,7 +30,7 @@ logger.debug('Running with options: debug:{} / rmDist:{}'.format(debug, rmDist))
 
 
 class SiteCompiler(object):
-    """Build recipe source files for distribution."""
+    """Build JavaScript database file and compile images for distribution."""
 
     DIR_DIST = Path.cwd() / 'dist'
     DIR_DIST_IMGS = Path.cwd() / 'dist/imgs'
@@ -111,7 +113,7 @@ class SiteCompiler(object):
         count -- Number of directories to traverse
 
         """
-        return os.path.sep.join(str(pth.parent).split(os.path.sep)[-count:])
+        return path.sep.join(str(pth.parent).split(path.sep)[-count:])
 
     def get_relative_dir(self, pth):
         """Return the string relative of the provided Path object compared to the cwd.
@@ -119,7 +121,7 @@ class SiteCompiler(object):
         pth -- Path object
 
         """
-        return str(pth).replace(str(Path.cwd()), '').strip(os.path.sep)
+        return str(pth).replace(str(Path.cwd()), '').strip(path.sep)
 
     # Image manipulation utilities
 
@@ -134,14 +136,19 @@ class SiteCompiler(object):
         """
         # Only applies to specific types of image files
         if file_type in ['.jpeg', '.jpg', '.png']:
-            # Create destination filename
-            fn_dest = self.format_img_name(sub_dir, recipe_title, file_type)
             # Track matched image filenames
+            fn_dest = self.format_img_name(sub_dir, recipe_title, file_type)
             self.imgs[recipe_title] = self.get_relative_dir(fn_dest)
+            # If the image does not exist of if the source image has been updated, copy to the output location
             lbl = 'NOT'
-            if not fn_dest.is_file():
+            if not fn_dest.is_file() or fn_src.stat().st_size != fn_dest.stat().st_size:
                 lbl = '> >'
                 shutil.copyfile(fn_src, fn_dest)
+                # Check if the SVG file exists and needs to be removed and recreated later
+                svg_fn = Path(self.format_svg_name(fn_dest))
+                if svg_fn.is_file():
+                    logger.debug('\tRemoving outdated SVG placeholder: {}'.format(svg_fn))
+                    svg_fn.unlink()
             logger.debug('{} Copying `{}` to `{}`'.format(lbl, fn_src, fn_dest))
         elif file_type in ['.json', '']:
             pass  # Note: hidden (./.*) files have an empty filetype
@@ -204,7 +211,9 @@ class SiteCompiler(object):
             if not outPth.is_file():
                 squip_cli = Path.home() / '.nvm/versions/node/v8.10.0/bin/sqip'
                 logger.debug('Creating placeholder image: {} for {}'.format(outPth, recipe['imgSrc']))
-                logger.debug(os.system('{} -o {} {}'.format(squip_cli, outPth, recipe['imgSrc'])))
+                retcode = subprocess.call('{} -o {} {}'.format(squip_cli, outPth, recipe['imgSrc']), shell=True)
+                if retcode < 0:
+                    logger.debug('Error in subprocess ({})'.format(retcode), file=sys.stderr)
         else:
             recipe['imgSrc'] = ''
             recipe['imgPlaceholder'] = ''
