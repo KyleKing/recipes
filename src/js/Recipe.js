@@ -58,7 +58,8 @@ export default class {
   insertRecipe ( rcp, titleMatches, sourceLink, additionalNotes, matchLookup = {} ) {
     const group = rcp.group
     // See if section title is needed
-    if ( !this.isFuseSearch && localDB.toc[group].indexOf( rcp.title ) === 0 ) {
+    const firstRecipe = localDB.tocLookup[group].indexOf( rcp.title ) === 0
+    if ( !this.isFuseSearch && firstRecipe ) {
       crel( document.getElementById( this.contentDivID ),
         crel( 'h1', {'id': group}, group )
       )

@@ -14,7 +14,7 @@ export default function( el, nav = document.getElementById( 'search-input' ) ) {
   console.log( el )
   if ( el != null ) {
     const scrollPos = el.getBoundingClientRect().top
-    const navOffset = elHeight( nav ) + 5
+    const navOffset = elHeight( nav ) + 15
     window.scrollBy( 0, Math.round( scrollPos - navOffset ) )
   }
 }

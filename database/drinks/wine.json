@@ -1,0 +1,39 @@
+{
+  "ingredients": {
+    "1-sparkling wine": [
+      " X/10 TBD"
+    ],
+    "2-light-bodied white": [
+      " X/10 TBD"
+    ],
+    "3-full-bodied white": [
+      " X/10 TBD"
+    ],
+    "4-aromatic-sweet white": [
+      " X/10 TBD"
+    ],
+    "5-rose": [
+      " 8/10 - Barton & Guestier Cotes de Provence 'Passport'"
+    ],
+    "6-light-bodied red": [
+      " X/10 TBD"
+    ],
+    "7-medium-bodied red": [
+      " X/10 TBD"
+    ],
+    "8-full-bodied red": [
+      " X/10 TBD"
+    ],
+    "9-dessert wine": [
+      " X/10 TBD"
+    ]
+  },
+  "notes": [
+    "Just a tracker of wines that we've bought and had an opinion on",
+    "The \"(Source)\" link (wine-searcher.com) was used for estimated ratings"
+  ],
+  "rating": 3,
+  "recipe": [
+  ],
+  "source": "https://www.wine-searcher.com/"
+}

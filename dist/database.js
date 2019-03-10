@@ -962,6 +962,58 @@ var localDB = {
 "title": "Toasted Marshmallow Brownie Crinkles"
 },
 {
+"group": "drinks",
+"id": "recipe-wine",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"1-sparkling wine": [
+"1-Sparkling Wine",
+"x/10 tbd"
+],
+"2-light-bodied white": [
+"2-Light-Bodied White",
+"x/10 tbd"
+],
+"3-full-bodied white": [
+"3-Full-Bodied White",
+"x/10 tbd"
+],
+"4-aromatic-sweet white": [
+"4-Aromatic-Sweet White",
+"x/10 tbd"
+],
+"5-rose": [
+"5-Rose",
+"8/10 - barton & guestier cotes de provence 'passport'"
+],
+"6-light-bodied red": [
+"6-Light-Bodied Red",
+"x/10 tbd"
+],
+"7-medium-bodied red": [
+"7-Medium-Bodied Red",
+"x/10 tbd"
+],
+"8-full-bodied red": [
+"8-Full-Bodied Red",
+"x/10 tbd"
+],
+"9-dessert wine": [
+"9-Dessert Wine",
+"x/10 tbd"
+]
+},
+"notes": [
+"Just a tracker of wines that we've bought and had an opinion on",
+"The \"(Source)\" link (wine-searcher.com) was used for estimated ratings"
+],
+"rating": 3,
+"recipe": [],
+"source": "https://www.wine-searcher.com/",
+"title": "Wine"
+},
+{
 "group": "meals",
 "id": "recipe-gyros",
 "imgPlaceholder": "dist/imgs/placeholder_meals-gyros.svg",
@@ -1052,6 +1104,26 @@ var localDB = {
 ],
 "source": "http://ahouseinthehills.com/2013/04/25/nori-veggie-wraps-my-everyday-staple/",
 "title": "Nori Vegetable Wraps"
+},
+{
+"group": "meals",
+"id": "recipe-oven-baked_sausage",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"sausage"
+]
+},
+"notes": [],
+"rating": 2,
+"recipe": [
+"Pre-heat oven to 400F",
+"Cover pan with tin foil and bake for 15 minutes, flip, then bake for an additional 5-10 minutes based on sausage size"
+],
+"source": "https://wearenotfoodies.com/oven-baking-sausage-quick-easy-and-minimal-mess/",
+"title": "Oven-Baked Sausage"
 },
 {
 "group": "meals",
@@ -1909,6 +1981,35 @@ var localDB = {
 ],
 "source": "",
 "title": "Sesame Chicken Noodles"
+},
+{
+"group": "poultry",
+"id": "recipe-sriracha_chicken",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"chicken, pan-seared",
+"rice",
+"cucumber, chopped",
+"carrot, chopped",
+"3 tsp, garlic, minced or powder",
+"3 tsp soy sauce",
+"2 tsp sriracha or sriracha mayo",
+"1 tsp sugar",
+"1 tsp lime juice",
+"cilantro, chopped",
+"(optional) chopped thai chilies"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"Cook chicken and rice, then toss with ingredients"
+],
+"source": "",
+"title": "Sriracha Chicken"
 },
 {
 "group": "poultry",
@@ -3516,17 +3617,26 @@ var localDB = {
 "group",
 "ingredients.1 - In a medium bowl, whisk:",
 "ingredients.1-Garlic Roasted Broccoli",
+"ingredients.1-sparkling wine",
 "ingredients.1. BROWNIE LAYER",
 "ingredients.2 - In a large bowl, combine:",
 "ingredients.2-Roasted Sriracha & Soy Sauce Chickpeas",
+"ingredients.2-light-bodied white",
 "ingredients.2. CARAMEL LAYER",
 "ingredients.3 - (Combine both bowls) then add:",
 "ingredients.3-Curry Roasted Sweet Potatoes",
+"ingredients.3-full-bodied white",
 "ingredients.3. COOKIE DOUGH LAYER",
 "ingredients.4-Quinoa",
+"ingredients.4-aromatic-sweet white",
 "ingredients.4. CHOCOLATE GLAZE",
 "ingredients.5-Chili-Lime Kale",
+"ingredients.5-rose",
 "ingredients.6-Optional",
+"ingredients.6-light-bodied red",
+"ingredients.7-medium-bodied red",
+"ingredients.8-full-bodied red",
+"ingredients.9-dessert wine",
 "ingredients.BUFFALO CHICKPEAS",
 "ingredients.Base",
 "ingredients.Blender",
@@ -3606,10 +3716,14 @@ var localDB = {
 "recipe-skillet_peanut_butter_chocolate_chip_blondies:Skillet Peanut Butter Chocolate Chip Blondies:1",
 "recipe-toasted_marshmallow_brownie_crinkles:Toasted Marshmallow Brownie Crinkles:1"
 ],
+"drinks": [
+"recipe-wine:Wine:3"
+],
 "meals": [
 "recipe-gyros:Gyros:1",
 "recipe-jambon_beurre:Jambon Beurre:1",
 "recipe-nori_vegetable_wraps:Nori Vegetable Wraps:0",
+"recipe-oven-baked_sausage:Oven-Baked Sausage:2",
 "recipe-quick_skillet_meals:Quick Skillet Meals:2",
 "recipe-tomato_mozzarella_caprese:Tomato Mozzarella Caprese:1",
 "recipe-tuna_melts:Tuna Melts:1"
@@ -3642,6 +3756,7 @@ var localDB = {
 "recipe-mediterranean_chicken:Mediterranean Chicken:0",
 "recipe-paremesan_chicken_breasts:Paremesan Chicken Breasts:2",
 "recipe-sesame_chicken_noodles:Sesame Chicken Noodles:0",
+"recipe-sriracha_chicken:Sriracha Chicken:1",
 "recipe-teryaki_chicken:Teryaki Chicken:2"
 ],
 "rice": [
@@ -3706,6 +3821,147 @@ var localDB = {
 "recipe-salad:Salad:1",
 "recipe-sweet_potato_gnocchi:Sweet Potato Gnocchi:1",
 "recipe-sweet_potatoes:Sweet Potatoes:1"
+]
+},
+"tocLookup": {
+"breakfast": [
+"Breakfast Burrito",
+"Eggs Benedict",
+"Hard Boiled Eggs",
+"Lemon Poppy Seed Mini Scones",
+"Oatmeal",
+"Omelette",
+"Pancakes New York Times",
+"Waffles"
+],
+"dessert": [
+"Apple Crisp",
+"Baked Apples",
+"Banana Bread",
+"Biscotti",
+"Blueberry Sour Cream Muffins",
+"Cake Pops",
+"Chocolate-Pb-M&M Balls",
+"Chocolate Chip Cookies",
+"Chocolatines",
+"Collens Peanut Butter Bars",
+"Cookie Dough Billionaire Bars",
+"Flourless Chocolate Cake",
+"Gingerbread Cookies",
+"Hot Fudge Sauce",
+"Molten Chocolate Cake",
+"Oatmeal Balls",
+"Oatmeal Raisin Cookies",
+"Oreo Truffles",
+"Peanut Butter And Cocoa Smothie",
+"Skillet Peanut Butter Chocolate Chip Blondies",
+"Toasted Marshmallow Brownie Crinkles"
+],
+"drinks": [
+"Wine"
+],
+"meals": [
+"Gyros",
+"Jambon Beurre",
+"Nori Vegetable Wraps",
+"Oven-Baked Sausage",
+"Quick Skillet Meals",
+"Tomato Mozzarella Caprese",
+"Tuna Melts"
+],
+"pasta": [
+"Baked Ziti",
+"Cherry Tomato Spaghetti",
+"Dragon Noodles",
+"Mozzarella Pasta",
+"Orzo And Cheese",
+"Peanut Noodles",
+"Sausage And Mushroom Penne Pasta",
+"Sesame Noodles With Wilted Greens",
+"Spaghetti Cacio E Cepe",
+"Spaghetti Sauce"
+],
+"pizza": [
+"Mini Pizza",
+"Naan Pizza",
+"Pizza"
+],
+"poultry": [
+"Brick Chicken",
+"Chicken",
+"Chicken Cacciatore",
+"Chicken Tacos",
+"Enchiladas",
+"Fajitas",
+"Honey And Soy Glazed Chicken Thighs",
+"Mediterranean Chicken",
+"Paremesan Chicken Breasts",
+"Sesame Chicken Noodles",
+"Sriracha Chicken",
+"Teryaki Chicken"
+],
+"rice": [
+"Basmati Rice",
+"Fried Rice",
+"Quinoa And Stuff",
+"Red Beans And Rice"
+],
+"seafood": [
+"Baked-Fish",
+"Crab Cakes",
+"Shrimp Creole",
+"Shrimp Scampi",
+"Shrimp Tacos"
+],
+"sides": [
+"Aunt Laura'S Spicy Chicken Dip",
+"Bruschetta",
+"Pretzels"
+],
+"soup": [
+"Chicken And Dumplings",
+"Chicken Noodle Soup",
+"French Onion Soup",
+"Johns Chili",
+"Pot Pie Soup",
+"Slow Cooker Chicken Mango Curry",
+"Slow Cooker Chicken Tortilla Soup"
+],
+"sushi": [
+" Rice",
+" Rolling",
+"California Rolls",
+"Canned Spicy Tuna Roll",
+"Onigiri",
+"Shrimp And Avocado",
+"Shrimp Nigiri",
+"Shrimp Spicy Rolls",
+"Smoked Salmon Nigiri",
+"Smoked Salmon Rolls",
+"Vegetable Rolls"
+],
+"tools": [
+"Cast Iron Care",
+"Pizza Stone Care",
+"Wok Care"
+],
+"veggie": [
+"Baked Broccoli",
+"Baked Potatoes",
+"Baked Potatoes Instant Pot",
+"Baked Zucchini",
+"Chana Masala",
+"Chickpea And Spinach Salad",
+"Chickpea Salad Wrap",
+"Chickpea Spicy Buffalo Wrap",
+"Crispy Baked Sweet Potato Fries",
+"Curried Chickpeas",
+"Guacamole",
+"Karens Roasted Veggie Bowls",
+"Roasted Vegetables",
+"Salad",
+"Sweet Potato Gnocchi",
+"Sweet Potatoes"
 ]
 }
 }

@@ -46,7 +46,8 @@ class SiteCompiler:
         self.glob_cb(self.DIR_SRC, '*/*', self.cp_imgs)
 
         # Combine JSON documents into single file
-        self.toc = {}
+        self.toc = {}  # includes colon-separated href, title, and rating
+        self.toc_lookup = {}  # only recipe title
         self.glob_cb(self.DIR_SRC, '*/*.json', self.read_json)
         self.dump_json()
         self.json_to_js()
@@ -193,7 +194,9 @@ class SiteCompiler:
         # Extend table of contents
         if (sub_dir not in self.toc):
             self.toc[sub_dir] = []
+            self.toc_lookup[sub_dir] = []
         self.toc[sub_dir].append('{}:{}:{}'.format(recipe['id'], recipe['title'], recipe['rating']))
+        self.toc_lookup[sub_dir].append(recipe['title'])
         # Adds link to minified image
         if recipe_title in self.imgs_raw:
             self.imgs_filt[recipe_title] = self.imgs_raw[recipe_title]
@@ -231,7 +234,7 @@ class SiteCompiler:
         search_keys = sorted(list(set(search_keys)))
         logger.debug('search_keys: {}'.format(search_keys))
         # Write JSON file (FYI: Camel-case variables for JS output)
-        rcps_obj = {'recipes': self.recipes, 'searchKeys': search_keys, 'toc': self.toc}
+        rcps_obj = {'recipes': self.recipes, 'searchKeys': search_keys, 'toc': self.toc, 'tocLookup': self.toc_lookup}
         kwargs = {'indent': 0, 'separators': (',', ': ')} if debug else {'separators': (',', ':')}
         json.dump(rcps_obj, self.db_fn.open(mode='w'), sort_keys=True, **kwargs)
 
