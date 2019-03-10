@@ -3,9 +3,8 @@
 import json
 import logging
 import os
-import re
 import shutil
-from pathlib import Path
+from pathlib import Path, PurePath
 
 # Debugging Options
 debug = True
@@ -31,32 +30,36 @@ logger.debug('Running with options: debug:{} / rmDist:{}'.format(debug, rmDist))
 class SiteCompiler(object):
     """Build recipe source files for distribution."""
 
-    dist_dir = Path.cwd() / 'dist'
-    dist_imgs = Path.cwd() / 'dist/imgs'
-    src_dir = Path.cwd() / 'database'
+    DIR_DIST = Path.cwd() / 'dist'
+    DIR_DIST_IMGS = Path.cwd() / 'dist/imgs'
+    DIR_SRC = Path.cwd() / 'database'
 
     def __init__(self):
         """Initialize class."""
         self.imgs = {}     # dict mapping recipe to image file
         self.recipes = []  # list of all recipes
-        self.db_fn = self.dist_dir / 'database.json'
+        self.db_fn = self.DIR_DIST / 'database.json'
 
         self.make()
 
     def make(self):
         """Compile dist resources."""
         # Configure output directory structure
-        self.create_dir(self.dist_dir, rm=rmDist)
-        self.create_dir(self.dist_imgs)
+        self.create_dir(self.DIR_DIST, rm=rmDist)
+        self.create_dir(self.DIR_DIST_IMGS)
 
         # Copy source images into destination directory
-        self.glob_cb(self.src_dir, '*/*', self.cp_imgs)
+        logger.debug('\n# Copying images from {} to {}'.format(self.DIR_SRC, self.DIR_DIST))
+        self.glob_cb(self.DIR_SRC, '*/*', self.cp_imgs)
 
         # Combine JSON documents into single file
         self.toc = {}
-        self.glob_cb(self.src_dir, '*/*.json', self.read_json)
+        self.glob_cb(self.DIR_SRC, '*/*.json', self.read_json)
         self.dump_json()
         self.json_to_js()
+
+        # Cleanup files from previous builds
+        self.remove_old_files()
 
     # General utilities
 
@@ -129,10 +132,10 @@ class SiteCompiler(object):
         file_type -- Lowercase file extension name
 
         """
-        # Only applies image files (non-JSON)
+        # Only applies to specific types of image files
         if file_type in ['.jpeg', '.jpg', '.png']:
             # Create destination filename
-            fn_dest = self.dist_imgs / '{}-{}{}'.format(sub_dir, recipe_title, file_type)
+            fn_dest = self.format_img_name(sub_dir, recipe_title, file_type)
             # Track matched image filenames
             self.imgs[recipe_title] = self.get_relative_dir(fn_dest)
             lbl = 'NOT'
@@ -144,6 +147,24 @@ class SiteCompiler(object):
             pass  # Note: hidden (./.*) files have an empty filetype
         else:
             logger.debug('WARN: Skipping filetype: {} / {}'.format(file_type, fn_src))
+
+    def format_img_name(self, sub_dir, recipe_title, file_type):
+        """Return the image filename based subdirectory and recipe title.
+
+        sub_dir -- String, sub_directory
+        recipe_title -- Filename without extension
+
+        """
+        return self.DIR_DIST_IMGS / '{}-{}{}'.format(sub_dir, recipe_title, file_type)
+
+    def format_svg_name(self, img_src):
+        """Return the SVG filename based on the source image filename.
+
+        img_src -- Path to the image file
+
+        """
+        pth = PurePath(img_src)
+        return str(pth.parent / 'placeholder-{}.svg'.format(pth.name.split('.')[0]))
 
     # JSON File utilities
 
@@ -157,7 +178,7 @@ class SiteCompiler(object):
         kwargs -- additional keyword arguments
 
         """
-        logger.debug('Reading JSON file: `{}`'.format(fn_src))
+        logger.debug('Reading Recipe: `{}`'.format(fn_src))
         recipe = json.loads(fn_src.read_text())
 
         # Make sure the minimum keys exist
@@ -178,9 +199,8 @@ class SiteCompiler(object):
         # Adds link to minified image
         if recipe_title in self.imgs:
             recipe['imgSrc'] = self.imgs[recipe_title]
-            output = re.sub(r'\/([^\.\/]+)\..{3,4}', r'/placeholder-\1.svg', recipe['imgSrc'])
-            recipe['imgPlaceholder'] = output
-            outPth = Path(output)
+            recipe['imgPlaceholder'] = self.format_svg_name(recipe['imgSrc'])
+            outPth = Path(recipe['imgPlaceholder'])
             if not outPth.is_file():
                 squip_cli = Path.home() / '.nvm/versions/node/v8.10.0/bin/sqip'
                 logger.debug('Creating placeholder image: {} for {}'.format(outPth, recipe['imgSrc']))
@@ -202,6 +222,7 @@ class SiteCompiler(object):
 
     def dump_json(self):
         """Export recipes to a single JSON file."""
+        logger.debug('\n# Exporting recipes to a single summary file')
         # Get each unique key (section header) for ingredients
         search_keys = ['notes', 'recipe', 'title', 'group']
         for recipe in self.recipes:
@@ -216,6 +237,16 @@ class SiteCompiler(object):
     def json_to_js(self):
         """Reformat JSON file as JS with variable declaration, so file can be loaded without Cross-Origin Errors."""
         self.write(Path(str(self.db_fn)[:-2]), 'var localDB = {}'.format(self.db_fn.read_text()))
+
+    def remove_old_files(self):
+        """Remove any image files no longer linked to source data."""
+        logger.debug('\n# Checking if any files need to be removed')
+        images = [_fn for _fn in self.imgs.values()]
+        images.extend([self.format_svg_name(_fn) for _fn in images])  # Add SVG filenames
+        for img_fn in self.DIR_DIST_IMGS.glob('*'):
+            if self.get_relative_dir(img_fn) not in images:
+                logger.debug('Removing unused image file: {}'.format(img_fn))
+                Path(img_fn).unlink()
 
 
 if __name__ == '__main__':
