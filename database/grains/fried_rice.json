@@ -1,26 +1,30 @@
 {
   "ingredients": {
     "Combine": [
-      "4 cup day-old rice",
-      "3/4 cup finely chopped onion",
-      "8 ounces chicken chopped",
-      "1/2 cup finely chopped carrot",
-      "1/2 cup frozen peas",
-      "1/2 cup sliced broccoli",
-      "4 chopped green onion",
-      "Bean sprouts",
+      "2 cups day-old rice",
+      "1 chicken breast chopped (or shrimp, etc)",
+      "1-2 bag(s) frozen oriental vegetables",
+      "1/2 bag frozen peas",
+      "finely chopped onion, carrots, broccoli",
+      "3 eggs",
       "1 tsp soy sauce",
       "1 tsp sesame oil",
-      "1 egg lightly beaten"
+      "garlic",
+      "kosher salt",
+      "optional: 4 green onions, chopped",
+      "optional: bean sprouts"
     ]
   },
-  "notes": [],
-  "rating": 2,
+  "notes": [
+    "Based on: http://www.geniuskitchen.com/recipe/chinese-fried-rice-38748"
+  ],
+  "rating": 3,
   "recipe": [
     "Prep the rice at least 1 day before and store in the fridge",
-    "On medium-high heat, heat 1 tbsp oil and char onions (8-10 min), then add meat, carrots, peas, and other vegetables for 2-5 minutes additional minutes",
-    "Set to medium heat, mix in the bean sprouts and green onion and stir fry for 3 min",
-    "Clear space in the middle. Add soy sauce, sesame oil, and the egg. Once firm, chop into small pieces, add additional soy sauce, and mix one last time"
+    "On medium-high heat with a small amount of oil, cook the chicken first, then start adding the vegetables. Add in the seasonings and cook until everything is defrosted and cooked",
+    "Lower to medium heat, add the rice and soy sauce",
+    "In a separate pan (or in the middle of a wok), use sesame oil and scramble the eggs into small chunks",
+    "Mix in the eggs, and optional toppings (green onion, beans sprouts, etc)"
   ],
-  "source": "http://www.geniuskitchen.com/recipe/chinese-fried-rice-38748"
+  "source": ""
 }

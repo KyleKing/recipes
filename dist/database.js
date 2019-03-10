@@ -4,7 +4,7 @@ var localDB = {
 "group": "breakfast",
 "id": "recipe-breakfast_burrito",
 "imgPlaceholder": "dist/imgs/placeholder-breakfast-breakfast_burrito.svg",
-"imgSrc": "dist/imgs/breakfast-breakfast_burrito.jpg",
+"imgSrc": "dist/imgs/breakfast-breakfast_burrito.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -27,28 +27,6 @@ var localDB = {
 ],
 "source": "",
 "title": "Breakfast Burrito"
-},
-{
-"group": "breakfast",
-"id": "recipe-coffee",
-"imgPlaceholder": "dist/imgs/placeholder-breakfast-coffee.svg",
-"imgSrc": "dist/imgs/breakfast-coffee.jpg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"starbucks caffe verona"
-]
-},
-"notes": [
-"I don't drink coffee, so this is actually sort of useful",
-"Photo by Isaac Benhesed on Unsplash"
-],
-"rating": 1,
-"recipe": [
-"Fill to line 2 with water, then add 3 large tbsp of coffee over filter"
-],
-"source": "",
-"title": "Coffee"
 },
 {
 "altRatio": "1/2",
@@ -1037,32 +1015,36 @@ var localDB = {
 "group": "grains",
 "id": "recipe-fried_rice",
 "imgPlaceholder": "dist/imgs/placeholder-grains-fried_rice.svg",
-"imgSrc": "dist/imgs/grains-fried_rice.jpg",
+"imgSrc": "dist/imgs/grains-fried_rice.jpeg",
 "ingredients": {
 "Combine": [
 "Combine",
-"4 cup day-old rice",
-"3/4 cup finely chopped onion",
-"8 ounces chicken chopped",
-"1/2 cup finely chopped carrot",
-"1/2 cup frozen peas",
-"1/2 cup sliced broccoli",
-"4 chopped green onion",
-"bean sprouts",
+"2 cups day-old rice",
+"1 chicken breast chopped (or shrimp, etc)",
+"1-2 bag(s) frozen oriental vegetables",
+"1/2 bag frozen peas",
+"finely chopped onion, carrots, broccoli",
+"3 eggs",
 "1 tsp soy sauce",
 "1 tsp sesame oil",
-"1 egg lightly beaten"
+"garlic",
+"kosher salt",
+"optional: 4 green onions, chopped",
+"optional: bean sprouts"
 ]
 },
-"notes": [],
-"rating": 2,
+"notes": [
+"Based on: http://www.geniuskitchen.com/recipe/chinese-fried-rice-38748"
+],
+"rating": 3,
 "recipe": [
 "Prep the rice at least 1 day before and store in the fridge",
-"On medium-high heat, heat 1 tbsp oil and char onions (8-10 min), then add meat, carrots, peas, and other vegetables for 2-5 minutes additional minutes",
-"Set to medium heat, mix in the bean sprouts and green onion and stir fry for 3 min",
-"Clear space in the middle. Add soy sauce, sesame oil, and the egg. Once firm, chop into small pieces, add additional soy sauce, and mix one last time"
+"On medium-high heat with a small amount of oil, cook the chicken first, then start adding the vegetables. Add in the seasonings and cook until everything is defrosted and cooked",
+"Lower to medium heat, add the rice and soy sauce",
+"In a separate pan (or in the middle of a wok), use sesame oil and scramble the eggs into small chunks",
+"Mix in the eggs, and optional toppings (green onion, beans sprouts, etc)"
 ],
-"source": "http://www.geniuskitchen.com/recipe/chinese-fried-rice-38748",
+"source": "",
 "title": "Fried Rice"
 },
 {
@@ -1392,8 +1374,8 @@ var localDB = {
 {
 "group": "meals",
 "id": "recipe-baked_ziti",
-"imgPlaceholder": "",
-"imgSrc": "",
+"imgPlaceholder": "dist/imgs/placeholder-meals-baked_ziti.svg",
+"imgSrc": "dist/imgs/meals-baked_ziti.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -2786,6 +2768,41 @@ var localDB = {
 "title": "Tuna Melts"
 },
 {
+"group": "poultry",
+"id": "recipe-paremesan_chicken_breasts",
+"imgPlaceholder": "dist/imgs/placeholder-poultry-paremesan_chicken_breasts.svg",
+"imgSrc": "dist/imgs/poultry-paremesan_chicken_breasts.jpeg",
+"ingredients": {
+"other": [
+"Other",
+"4 chicken breasts",
+"1.5 cups parmesan, finely grated",
+"extra paprika for sprinkling"
+],
+"sauce": [
+"Sauce",
+"1/4 cup olive oil",
+"6 cloves garlic, minced",
+"1.5 tsp paprika",
+"1 tsp kosher salt",
+"1/2 tsp ground black pepper",
+"1/4 tsp cayenne pepper"
+]
+},
+"notes": [
+"Chrissy Teigen Cravings Hungry for More, 202"
+],
+"rating": 2,
+"recipe": [
+"Preheat oven to 400F",
+"In a small bowl, combine the sauce ingredients and coat the chicken. Sprinkle with Parmesan",
+"Bake on a foil-lined sheet for 15 minutes, then broil for 3-4 minutes to brown and sizzle the cheese. Let rest for 5 minutes",
+"sprinkle with a little extra paprika"
+],
+"source": "",
+"title": "Paremesan Chicken Breasts"
+},
+{
 "group": "sides",
 "id": "recipe-aunt_laura's_spicy_chicken_dip",
 "imgPlaceholder": "",
@@ -3496,68 +3513,68 @@ var localDB = {
 }
 ],
 "searchKeys": [
+"ingredients.Ingredients",
+"ingredients.Curry",
+"ingredients.dressing",
+"ingredients.Seasonings",
+"ingredients.2-Roasted Sriracha & Soy Sauce Chickpeas",
+"ingredients.gnocchi",
+"title",
+"ingredients.FOR THE BENEDICT AND ASSEMBLY",
+"ingredients.1. BROWNIE LAYER",
+"ingredients.DIY Garam Masala",
+"ingredients.soup",
+"ingredients.FOR THE POACHED EGGS",
+"ingredients.1 - In a medium bowl, whisk:",
+"notes",
+"ingredients.Optional Garnish",
+"ingredients.Other Ingredients",
+"ingredients.toppings",
+"ingredients.ingredients",
+"ingredients.sauce",
+"ingredients.2 - In a large bowl, combine:",
+"ingredients.Peanut Noodles",
+"ingredients.Brown in Pan",
+"ingredients.BUFFALO CHICKPEAS",
+"ingredients.muffins",
+"ingredients.Garnish Options",
+"ingredients.Combine",
+"ingredients.3 - (Combine both bowls) then add:",
+"ingredients.FOR THE HOLLANDAISE",
+"ingredients.Blender",
+"group",
+"ingredients.Indian Simmer Sauce",
+"ingredients.dumplings",
+"ingredients.FOR SERVING",
+"recipe",
+"ingredients.6-Optional",
+"ingredients.Sauce",
+"ingredients.DRESSING + SALAD",
+"ingredients.Chicken",
+"ingredients.3-Curry Roasted Sweet Potatoes",
+"ingredients.Combine-Cookie Topping",
+"ingredients.other",
+"ingredients.Tzatziki Sauce",
+"ingredients.4-Quinoa",
+"ingredients.Saute in Olive Oil",
+"ingredients.4. CHOCOLATE GLAZE",
+"ingredients.5-Chili-Lime Kale",
+"ingredients.Combine-Cookie Spread",
+"ingredients.Main",
+"ingredients.else",
+"ingredients.Toppings",
+"ingredients.Streusel",
+"ingredients.2. CARAMEL LAYER",
+"ingredients.1-Garlic Roasted Broccoli",
 "ingredients.With",
 "ingredients.Seasoning Combinations",
-"notes",
-"ingredients.Blender",
-"ingredients.FOR THE POACHED EGGS",
-"ingredients.Main",
-"ingredients.1 - In a medium bowl, whisk:",
-"ingredients.Toppings",
-"ingredients.Optional Garnish",
-"ingredients.combinations",
-"ingredients.Saute in Olive Oil",
-"ingredients.soup",
-"ingredients.Ingredients",
-"ingredients.gnocchi",
-"ingredients.Combine",
-"ingredients.Other Ingredients",
-"ingredients.FOR SERVING",
-"ingredients.Indian Simmer Sauce",
-"ingredients.2. CARAMEL LAYER",
-"ingredients.2-Roasted Sriracha & Soy Sauce Chickpeas",
-"ingredients.toppings",
-"ingredients.BUFFALO CHICKPEAS",
-"ingredients.2 - In a large bowl, combine:",
-"ingredients.else",
-"ingredients.FOR THE HOLLANDAISE",
-"ingredients.Chicken",
-"ingredients.3 - (Combine both bowls) then add:",
-"ingredients.FOR THE BENEDICT AND ASSEMBLY",
-"recipe",
-"ingredients.Combine-Cookie Topping",
-"ingredients.Seasonings",
-"ingredients.Tzatziki Sauce",
-"title",
-"ingredients.Combine-Cookie Spread",
-"ingredients.5-Chili-Lime Kale",
-"ingredients.6-Optional",
-"ingredients.DRESSING + SALAD",
-"ingredients.Streusel",
-"group",
-"ingredients.Base",
-"ingredients.Garnish Options",
-"ingredients.1. BROWNIE LAYER",
-"ingredients.Curry",
-"ingredients.4. CHOCOLATE GLAZE",
-"ingredients.3-Curry Roasted Sweet Potatoes",
-"ingredients.Brown in Pan",
-"ingredients.4-Quinoa",
-"ingredients.sauce",
-"ingredients.Sauce",
-"ingredients.dumplings",
-"ingredients.muffins",
-"ingredients.dressing",
-"ingredients.Peanut Noodles",
-"ingredients.1-Garlic Roasted Broccoli",
 "ingredients.3. COOKIE DOUGH LAYER",
-"ingredients.ingredients",
-"ingredients.DIY Garam Masala"
+"ingredients.Base",
+"ingredients.combinations"
 ],
 "toc": {
 "breakfast": [
 "recipe-breakfast_burrito:Breakfast Burrito:1",
-"recipe-coffee:Coffee:1",
 "recipe-eggs_benedict:Eggs Benedict:3",
 "recipe-hard_boiled_eggs:Hard Boiled Eggs:1",
 "recipe-lemon_poppy_seed_mini_scones:Lemon Poppy Seed Mini Scones:0",
@@ -3592,7 +3609,7 @@ var localDB = {
 "recipe-cherry_tomato_spaghetti:Cherry Tomato Spaghetti:1",
 "recipe-curried_chickpeas:Curried Chickpeas:1",
 "recipe-dragon_noodles:Dragon Noodles:1",
-"recipe-fried_rice:Fried Rice:2",
+"recipe-fried_rice:Fried Rice:3",
 "recipe-mozzarella_pasta:Mozzarella Pasta:1",
 "recipe-orzo_and_cheese:Orzo And Cheese:1",
 "recipe-peanut_noodles:Peanut Noodles:1",
@@ -3644,6 +3661,9 @@ var localDB = {
 "recipe-teryaki_chicken:Teryaki Chicken:2",
 "recipe-tomato_mozzarella_caprese:Tomato Mozzarella Caprese:1",
 "recipe-tuna_melts:Tuna Melts:1"
+],
+"poultry": [
+"recipe-paremesan_chicken_breasts:Paremesan Chicken Breasts:2"
 ],
 "sides": [
 "recipe-aunt_laura's_spicy_chicken_dip:Aunt Laura'S Spicy Chicken Dip:1",

@@ -7,27 +7,25 @@ import os
 import re
 import shutil
 
+# Debugging Options
 debug = True
 rmDist = False
 
-
-logger = logging.getLogger(__name__)
 lgr_fn = 'recipes.log'
-formatter = logging.Formatter('%(asctime)s %(filename)s:%(lineno)d\t%(message)s')
+logger = logging.getLogger(__name__)
 
 logger.setLevel(logging.DEBUG)
-fh = logging.FileHandler(lgr_fn)
+fh = logging.FileHandler(lgr_fn, mode='w')
 fh.setLevel(logging.DEBUG)
-fh.setFormatter(formatter)
+fh.setFormatter(logging.Formatter('%(asctime)s %(filename)s:%(lineno)d\t%(message)s'))
 logger.addHandler(fh)
 
+ch = logging.StreamHandler()
+ch.setLevel(logging.DEBUG)
+ch.setFormatter(logging.Formatter('%(message)s'))
+logger.addHandler(ch)
 
-def lgr(msg):
-    """General Logger Function."""
-    global logger, debug
-    if debug:
-        print(msg)
-    logger.debug(msg)
+logger.debug('Running with options: debug:{} / rmDist:{}'.format(debug, rmDist))
 
 
 class SiteCompiler(object):
@@ -125,7 +123,7 @@ class SiteCompiler(object):
                 ___, subdir, recipe_title = path_split
                 cb(fn_src, subdir, recipe_title, file_type=file_type)
             else:
-                lgr('Unparseable fn: `{}`'.format(fn_src))
+                logger.debug('Unparseable fn: `{}`'.format(fn_src))
 
     # Image manipulation utilities
 
@@ -146,9 +144,9 @@ class SiteCompiler(object):
             self.imgs[recipe_title] = fn_dest
             lbl = 'NOT'
             if not os.path.isfile(fn_dest):
-                lbl = '>>>'
+                lbl = '> >'
                 shutil.copyfile(fn_src, fn_dest)
-            lgr('{} Copying `{}` to `{}`'.format(lbl, fn_src, fn_dest))
+            logger.debug('{} Copying `{}` to `{}`'.format(lbl, fn_src, fn_dest))
 
     # JSON File utilities
 
@@ -162,7 +160,7 @@ class SiteCompiler(object):
         kwargs -- additional keyword arguments
 
         """
-        lgr('Reading JSON file: `{}`'.format(fn_src))
+        logger.debug('Reading JSON file: `{}`'.format(fn_src))
         # with open(fn_src, 'r') as fn:
         with open(fn_src, 'r', encoding='utf-8') as fn:  # Python 3 only
             recipe = json.load(fn)
@@ -192,8 +190,8 @@ class SiteCompiler(object):
                 recipe['imgPlaceholder'] = output
                 if not os.path.isfile(output):
                     squip_cli = '/Users/kyleking/.nvm/versions/node/v8.10.0/bin/sqip'
-                    lgr('Creating placeholder image: {}'.format(output))
-                    lgr(os.system('{} -o {} {}'.format(squip_cli, output, recipe['imgSrc'])))
+                    logger.debug('Creating placeholder image: {}'.format(output))
+                    logger.debug(os.system('{} -o {} {}'.format(squip_cli, output, recipe['imgSrc'])))
         else:
             recipe['imgSrc'] = ''
             recipe['imgPlaceholder'] = ''
@@ -217,8 +215,8 @@ class SiteCompiler(object):
         for recipe in self.recipes:
             search_keys.extend(['ingredients.{}'.format(hdr) for hdr in recipe['ingredients']])
         search_keys = list(set(search_keys))
-        lgr('search_keys: {}'.format(search_keys))
-        # Write JSON file (FYI: Camelcase variables for JS output)
+        logger.debug('search_keys: {}'.format(search_keys))
+        # Write JSON file (FYI: Camel-case variables for JS output)
         rcps_obj = {'recipes': self.recipes, 'searchKeys': search_keys, 'toc': self.toc}
         kwargs = {'separators': (',', ':')} if not debug else {'indent': 0, 'separators': (',', ': ')}
         json.dump(rcps_obj, open(self.db_fn, 'w'), sort_keys=True, **kwargs)
@@ -230,5 +228,4 @@ class SiteCompiler(object):
 
 
 if __name__ == '__main__':
-    open(lgr_fn, 'w').close()
     SiteCompiler()
