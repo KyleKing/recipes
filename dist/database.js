@@ -1761,6 +1761,28 @@ var localDB = {
 },
 {
 "group": "poultry",
+"id": "recipe-chicken_tikka_masala",
+"imgPlaceholder": "dist/imgs/placeholder_poultry-chicken_tikka_masala.svg",
+"imgSrc": "dist/imgs/poultry-chicken_tikka_masala.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"chicken",
+"trader joe's tikka masala simmer sauce",
+"rice",
+"cilantro"
+]
+},
+"notes": [],
+"rating": 2,
+"recipe": [
+"Cook the rice. Cube and cook the chicken (on a cast iron skillet) then simmer for 3-5 minutes in the sauce"
+],
+"source": "",
+"title": "Chicken Tikka Masala"
+},
+{
+"group": "poultry",
 "id": "recipe-enchiladas",
 "imgPlaceholder": "dist/imgs/placeholder_poultry-enchiladas.svg",
 "imgSrc": "dist/imgs/poultry-enchiladas.png",
@@ -2159,6 +2181,42 @@ var localDB = {
 ],
 "source": "http://www.delish.com/cooking/recipe-ideas/recipes/a54954/easy-red-beans-and-rice-recipe/",
 "title": "Red Beans And Rice"
+},
+{
+"group": "rice",
+"id": "recipe-spicy_cajun_sausage_and_rice",
+"imgPlaceholder": "dist/imgs/placeholder_rice-spicy_cajun_sausage_and_rice.svg",
+"imgSrc": "dist/imgs/rice-spicy_cajun_sausage_and_rice.jpeg",
+"ingredients": {
+"main": [
+"Main",
+"brown rice",
+"sausage",
+"canned black beans",
+"canned diced tomatoes"
+],
+"seasoning": [
+"Seasoning",
+"2 tsp salt",
+"2 tsp garlic powder",
+"2.5 tsp paprika",
+"1 tsp ground black pepper",
+"1 tsp onion powder",
+"1 tsp cayenne pepper",
+"1.25 tsp dried oregano",
+"1.25 tsp dried thyme",
+"1/2 tsp red pepper flakes"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"Cook the rice",
+"Bake the sausage (see directions below. 400F for 15 min, then flip for ~10)",
+"Mix the seasoning (unless you already have Cajun seasoning) and toss together"
+],
+"source": "https://www.allrecipes.com/recipe/149221/cajun-spice-mix/",
+"title": "Spicy Cajun Sausage And Rice"
 },
 {
 "group": "seafood",
@@ -3673,9 +3731,11 @@ var localDB = {
 "ingredients.else",
 "ingredients.gnocchi",
 "ingredients.ingredients",
+"ingredients.main",
 "ingredients.muffins",
 "ingredients.other",
 "ingredients.sauce",
+"ingredients.seasoning",
 "ingredients.soup",
 "ingredients.toppings",
 "notes",
@@ -3750,6 +3810,7 @@ var localDB = {
 "recipe-chicken:Chicken:1",
 "recipe-chicken_cacciatore:Chicken Cacciatore:2",
 "recipe-chicken_tacos:Chicken Tacos:0",
+"recipe-chicken_tikka_masala:Chicken Tikka Masala:2",
 "recipe-enchiladas:Enchiladas:3",
 "recipe-fajitas:Fajitas:1",
 "recipe-honey_and_soy_glazed_chicken_thighs:Honey And Soy Glazed Chicken Thighs:0",
@@ -3763,7 +3824,8 @@ var localDB = {
 "recipe-basmati_rice:Basmati Rice:1",
 "recipe-fried_rice:Fried Rice:3",
 "recipe-quinoa_and_stuff:Quinoa And Stuff:1",
-"recipe-red_beans_and_rice:Red Beans And Rice:1"
+"recipe-red_beans_and_rice:Red Beans And Rice:1",
+"recipe-spicy_cajun_sausage_and_rice:Spicy Cajun Sausage And Rice:1"
 ],
 "seafood": [
 "recipe-baked-fish:Baked-Fish:1",
@@ -3891,6 +3953,7 @@ var localDB = {
 "Chicken",
 "Chicken Cacciatore",
 "Chicken Tacos",
+"Chicken Tikka Masala",
 "Enchiladas",
 "Fajitas",
 "Honey And Soy Glazed Chicken Thighs",
@@ -3904,7 +3967,8 @@ var localDB = {
 "Basmati Rice",
 "Fried Rice",
 "Quinoa And Stuff",
-"Red Beans And Rice"
+"Red Beans And Rice",
+"Spicy Cajun Sausage And Rice"
 ],
 "seafood": [
 "Baked-Fish",
