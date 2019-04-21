@@ -191,7 +191,7 @@ var localDB = {
 "group": "breakfast",
 "id": "recipe-pancakes_new_york_times",
 "imgPlaceholder": "dist/imgs/placeholder_breakfast-pancakes_new_york_times.svg",
-"imgSrc": "dist/imgs/breakfast-pancakes_new_york_times.jpg",
+"imgSrc": "dist/imgs/breakfast-pancakes_new_york_times.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -200,7 +200,7 @@ var localDB = {
 "1/4 teaspoon salt",
 "1 tablespoon sugar",
 "2 eggs",
-"2 cups milk",
+"1.5 cups milk",
 "2 tablespoons melted and cooled butter"
 ]
 },
@@ -210,10 +210,11 @@ var localDB = {
 "rating": 2,
 "recipe": [
 "Mix dry ingredients in a bowl",
-"Combine, eggs and 1.5 cups milk then stir in butter (melted and let cool)",
-"Gently stir the liquid mix into the dry ingredient bowl {Mix only enough to moisten flour; don't worry about a few lumps. If batter seems thick, add a little more milk}",
+"Combine 1.5 cups milk and butter (melted and let cool). Gently mix in the eggs.",
+"Gently stir the liquid mix into the dry ingredient bowl. {Don't overwork and gently mix until mostly combined. If batter seems thick, add a little more milk}",
 "Spray a griddle or large skillet and heat over medium-low heat",
-"Measure out 1/3 cup of batter. Flip when bubbles begin to form on the edges (2-4 minutes), then lightly brown on the opposite side"
+"Measure out 1/3 cup of batter. Flip when bubbles begin to form on the edges (2-4 minutes), then lightly brown on the opposite side",
+"The pancakes are best cooked without anything inside. So add the blueberries and other toppings after"
 ],
 "source": "https://cooking.nytimes.com/recipes/1893-everyday-pancakes",
 "title": "Pancakes New York Times"
@@ -1621,6 +1622,37 @@ var localDB = {
 ],
 "source": "",
 "title": "Pizza"
+},
+{
+"group": "poultry",
+"id": "recipe-baked_chicken_and_potatoes",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"2 tbsp olive oil",
+"8 chicken thighs (bone-in, skin-on)",
+"1 lb baby potatoes cleaned, cut in halves or quarters",
+"1 red onion, chopped",
+"2 cloves garlic, minced",
+"2 tsp oregano",
+"2 tsp thyme",
+"1/2 tsp paprika",
+"salt",
+"ground black pepper"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"Preheat the oven to 425F",
+"Oil a roasting pan",
+"Toss all the ingredients in a big bowl then spread out on the pan",
+"Roast for 45 minutes or until the chicken is completely cooked through"
+],
+"source": "https://aseasyasapplepie.com/one-pan-baked-chicken-and-potatoes/",
+"title": "Baked Chicken And Potatoes"
 },
 {
 "group": "poultry",
@@ -3594,7 +3626,7 @@ var localDB = {
 "group": "veggie",
 "id": "recipe-salad",
 "imgPlaceholder": "dist/imgs/placeholder_veggie-salad.svg",
-"imgSrc": "dist/imgs/veggie-salad.jpg",
+"imgSrc": "dist/imgs/veggie-salad.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients"
@@ -3604,9 +3636,10 @@ var localDB = {
 "rating": 1,
 "recipe": [
 "Strawberry: strawberry, spinach, feta, walnuts/pecans/almonds",
+"Basic Feta: spinach, onion, tomato, feta, watercress",
+"Arugula/Lime: Strawberries, Tomatoes, Onion, Arugula, Lime, Olive Oil, Feta Crumbles (optional: black beans)",
 "Greek: lettuce, peppers, cucumber, onion, feta, cherry tomatoes, chickpeas (opt)",
 "Caesar: lettuce, Parmesan, croutons",
-"Option 4: spinach, onion, tomato, feta, watercress",
 "Basic: light zesty Italian dressing/raspberry vinaigrette + vegetables (tomato, cucumber, pepper, etc.) + rotisserie chicken"
 ],
 "source": "",
@@ -3806,6 +3839,7 @@ var localDB = {
 "recipe-pizza:Pizza:2"
 ],
 "poultry": [
+"recipe-baked_chicken_and_potatoes:Baked Chicken And Potatoes:1",
 "recipe-brick_chicken:Brick Chicken:3",
 "recipe-chicken:Chicken:1",
 "recipe-chicken_cacciatore:Chicken Cacciatore:2",
@@ -3949,6 +3983,7 @@ var localDB = {
 "Pizza"
 ],
 "poultry": [
+"Baked Chicken And Potatoes",
 "Brick Chicken",
 "Chicken",
 "Chicken Cacciatore",
