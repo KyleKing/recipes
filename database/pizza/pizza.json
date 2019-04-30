@@ -1,7 +1,6 @@
 {
   "ingredients": [
     "bag of pre-kneaded dough (Trader Joe's is best)",
-    "olive oil",
     "marinara sauce",
     "mozzarella cheese",
     "(optional) Parmesan cheese, feta",
@@ -9,16 +8,20 @@
     "(optional) chicken, sausage, pepperoni, etc.",
     "(optional) red pepper flakes, basil"
   ],
-  "notes": [],
+  "notes": [
+    "If using a baking sheet, cook for 22 minutes at 425F"
+  ],
   "rating": 2,
   "recipe": [
     "Let the dough rest at room temperature for 20 minutes",
-    "Preheat the oven to 425F",
-    "Using flour, gently spread out the pizza dough without overworking it",
-    "Spread a spoonful of olive oil on the dough",
+    "Put the cold pizza stone in a cold oven then preheat to 425",
+    "Stretch out the dough, working initially flat, then pull and spin the dough until at least 12 inches in diameter",
+    "Put a thin layer of flour on the pizza peel. Work quickly to prevent the dough from absorbing the flour and sticking. Additionally, regularly shake the peel to make sure the pizza slides around easily",
     "Add a thin layer of sauce (less than you think) then the toppings",
-    "If using a pizza stone, see notes below. Cook at 425F for 6-8 minutes",
-    "If using a baking sheet, cook for 22 minutes at 425F"
+    "With a jittery back and forth motion, slide the pizza onto the stone",
+    "Bake for 6-8 minutes",
+    "Transfer to an over-sized cutting board to slice",
+    "Wash the peel with soap and water. See the Tools/Pizza Stone section for stone care"
   ],
-  "source": ""
+  "source": "https://www.google.com/search?q=how+to+pizza+peel+avoid+sticking&oq=how+to+pizza+peel+avoid+sticking&aqs=chrome..69i57.3880j0j1&sourceid=chrome&ie=UTF-8#kpvalbx=1"
 }

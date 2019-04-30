@@ -1600,7 +1600,6 @@ var localDB = {
 "ingredients": [
 "Ingredients",
 "bag of pre-kneaded dough (trader joe's is best)",
-"olive oil",
 "marinara sauce",
 "mozzarella cheese",
 "(optional) parmesan cheese, feta",
@@ -1609,18 +1608,22 @@ var localDB = {
 "(optional) red pepper flakes, basil"
 ]
 },
-"notes": [],
+"notes": [
+"If using a baking sheet, cook for 22 minutes at 425F"
+],
 "rating": 2,
 "recipe": [
 "Let the dough rest at room temperature for 20 minutes",
-"Preheat the oven to 425F",
-"Using flour, gently spread out the pizza dough without overworking it",
-"Spread a spoonful of olive oil on the dough",
+"Put the cold pizza stone in a cold oven then preheat to 425",
+"Stretch out the dough, working initially flat, then pull and spin the dough until at least 12 inches in diameter",
+"Put a thin layer of flour on the pizza peel. Work quickly to prevent the dough from absorbing the flour and sticking. Additionally, regularly shake the peel to make sure the pizza slides around easily",
 "Add a thin layer of sauce (less than you think) then the toppings",
-"If using a pizza stone, see notes below. Cook at 425F for 6-8 minutes",
-"If using a baking sheet, cook for 22 minutes at 425F"
+"With a jittery back and forth motion, slide the pizza onto the stone",
+"Bake for 6-8 minutes",
+"Transfer to an over-sized cutting board to slice",
+"Wash the peel with soap and water. See the Tools/Pizza Stone section for stone care"
 ],
-"source": "",
+"source": "https://www.google.com/search?q=how+to+pizza+peel+avoid+sticking&oq=how+to+pizza+peel+avoid+sticking&aqs=chrome..69i57.3880j0j1&sourceid=chrome&ie=UTF-8#kpvalbx=1",
 "title": "Pizza"
 },
 {
@@ -3109,8 +3112,8 @@ var localDB = {
 {
 "group": "tools",
 "id": "recipe-pizza_stone_care",
-"imgPlaceholder": "",
-"imgSrc": "",
+"imgPlaceholder": "dist/imgs/placeholder_tools-pizza_stone_care.svg",
+"imgSrc": "dist/imgs/tools-pizza_stone_care.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients"
@@ -3121,41 +3124,13 @@ var localDB = {
 "recipe": [
 ">> Regular Use:",
 "Put the cold pizza stone in a cold oven then preheat (if a cold pizza stone goes in a hot oven it may crack)",
-"Prep the pizza on a Pizza Peel/Spatula with a bit of cornmeal or flour. Transfer to the pizza stone and generally cook for 6-8 minutes at 425",
-"Remove and transfer to a cutting board to slice",
+"See the general Pizza recipe for a recipe",
 ">> Cleaning:",
-"Let cool in the oven, then scrub with a little water, and towel dry. Minimize water if possible",
+"Let the pizza stone cool in the oven, then scrub with a little water, and towel dry. Minimize water if possible",
 "The pizza stone can be stored in the oven and should always be stored flat"
 ],
 "source": "https://www.napoleongrills.com/blog/articles/id/4329/how-to-use-and-clean-a-pizza-stone",
 "title": "Pizza Stone Care"
-},
-{
-"group": "tools",
-"id": "recipe-wok_care",
-"imgPlaceholder": "dist/imgs/placeholder_tools-wok_care.svg",
-"imgSrc": "dist/imgs/tools-wok_care.jpg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"vegetable, corn, or peanut oil"
-]
-},
-"notes": [
-"Most electric stoves can't get hot enough for a Wok, so cook in small batches to properly sear meat or vegetables",
-"General advice on cooking in a wok: https://www.epicurious.com/expert-advice/how-to-cook-with-a-wok-article"
-],
-"rating": 0,
-"recipe": [
-">> Regular Care:",
-"Clean while still warm and use hot water and a scrub brush",
-"Towel dry, then heat to boil off any excess water. Then seal with a thin later of oil",
-">> Cooking Advice:",
-"Pre-heat until flicked water quickly evaporates. Use cold oil with a high smoke point such as peanut oil",
-"Make sure all ingredients are really dry (use a salad spinner or paper towels)"
-],
-"source": "https://lifehacker.com/how-to-buy-and-take-care-of-a-wok-1786021430",
-"title": "Wok Care"
 },
 {
 "group": "veggie",
@@ -3897,8 +3872,7 @@ var localDB = {
 ],
 "tools": [
 "recipe-cast_iron_care:Cast Iron Care:0",
-"recipe-pizza_stone_care:Pizza Stone Care:0",
-"recipe-wok_care:Wok Care:0"
+"recipe-pizza_stone_care:Pizza Stone Care:0"
 ],
 "veggie": [
 "recipe-baked_broccoli:Baked Broccoli:2",
@@ -4041,8 +4015,7 @@ var localDB = {
 ],
 "tools": [
 "Cast Iron Care",
-"Pizza Stone Care",
-"Wok Care"
+"Pizza Stone Care"
 ],
 "veggie": [
 "Baked Broccoli",
