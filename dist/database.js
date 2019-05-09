@@ -2356,8 +2356,8 @@ var localDB = {
 {
 "group": "seafood",
 "id": "recipe-baked-fish",
-"imgPlaceholder": "",
-"imgSrc": "",
+"imgPlaceholder": "dist/imgs/placeholder_seafood-baked-fish.svg",
+"imgSrc": "dist/imgs/seafood-baked-fish.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
