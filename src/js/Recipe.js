@@ -33,7 +33,7 @@ export default class {
     let additionalNotes = crel( 'span', '' )
     if ( rcp.notes.length > 0 ) {
       additionalNotes = crel( 'div',
-        crel( 'p', 'Notes:' ),
+        crel( 'h6', 'Notes:' ),
         crel( 'ul', this.createList( rcp, 'notes', matchLookup ) )
       )
     }
@@ -130,7 +130,7 @@ export default class {
       let customHeader = rcp.ingredients[header][0]
       customHeader = this.hltr.highlightItem( customHeader, `ingredients.${header}`, 0, matchObj )
       // Create ingredient section header and checkable items
-      ingredientList.push( crel( 'p',  customHeader ) )
+      ingredientList.push( crel( 'h6',  customHeader ) )
       ingredientList.push( crel( 'ul',
         this.createCheckedItems( rcp.id, header, rcp.ingredients[header], matchObj )
       ) )

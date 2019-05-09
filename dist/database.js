@@ -3225,7 +3225,7 @@ var localDB = {
 "Fun fact, dishwasher's need cleaning too",
 "Also see Consumer Reports https://www.consumerreports.org/dishwashers/how-to-clean-a-dishwasher/"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 ">> Once a month",
 "Wash the filter with warm water, dish soap, and an old toothbrush. Rinse with clean water and air dry",
@@ -3360,7 +3360,7 @@ var localDB = {
 "notes": [
 "Alt: just salt, pepper, red pepper flakes, olive oil. 425\u2109 for 20 minutes"
 ],
-"rating": 1,
+"rating": 3,
 "recipe": [
 "Preheat oven to 350\u00b0F",
 "On a tin foil covered pan, halve the zucchini and lightly coat with olive oil",
@@ -4010,14 +4010,14 @@ var localDB = {
 ],
 "tools": [
 "recipe-cast_iron_care:Cast Iron Care:0",
-"recipe-dishwasher:Dishwasher:1",
+"recipe-dishwasher:Dishwasher:0",
 "recipe-pizza_stone_care:Pizza Stone Care:0"
 ],
 "veggie": [
 "recipe-baked_broccoli:Baked Broccoli:2",
 "recipe-baked_potatoes:Baked Potatoes:1",
 "recipe-baked_potatoes_instant_pot:Baked Potatoes Instant Pot:1",
-"recipe-baked_zucchini:Baked Zucchini:1",
+"recipe-baked_zucchini:Baked Zucchini:3",
 "recipe-chana_masala:Chana Masala:1",
 "recipe-chickpea_greek_salad_wrap:Chickpea Greek Salad Wrap:2",
 "recipe-chickpea_salad_wrap:Chickpea Salad Wrap:2",

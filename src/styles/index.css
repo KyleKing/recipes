@@ -11,12 +11,22 @@ h1 {
     margin-top: 20px;
 }
 
+h6 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
 a.unstyled {
     color: black !important;
 }
 
 span.highlight {
     background-color: yellow;
+}
+
+ol {
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
 
 ul {
