@@ -970,19 +970,19 @@ var localDB = {
 "ingredients": {
 "1-sparkling wine": [
 "1-Sparkling Wine",
-"x/10 tbd"
+"--/10 --"
 ],
 "2-light-bodied white": [
 "2-Light-Bodied White",
-"x/10 tbd"
+"--/10 --"
 ],
 "3-full-bodied white": [
 "3-Full-Bodied White",
-"x/10 tbd"
+"--/10 --"
 ],
 "4-aromatic-sweet white": [
 "4-Aromatic-Sweet White",
-"x/10 tbd"
+"--/10 --"
 ],
 "5-rose": [
 "5-Rose",
@@ -990,19 +990,19 @@ var localDB = {
 ],
 "6-light-bodied red": [
 "6-Light-Bodied Red",
-"x/10 tbd"
+"--/10 --"
 ],
 "7-medium-bodied red": [
 "7-Medium-Bodied Red",
-"x/10 tbd"
+"--/10 --"
 ],
 "8-full-bodied red": [
 "8-Full-Bodied Red",
-"x/10 tbd"
+"--/10 --"
 ],
 "9-dessert wine": [
 "9-Dessert Wine",
-"x/10 tbd"
+"--/10 --"
 ]
 },
 "notes": [
@@ -1013,6 +1013,105 @@ var localDB = {
 "recipe": [],
 "source": "https://www.wine-searcher.com/",
 "title": "Wine"
+},
+{
+"group": "ice_cream",
+"id": "recipe-chocolate_peanut_butter",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"(tbd) peanut butter",
+"1/4 cup packed dark brown sugar",
+"2/3 cup cocoa powder, sifted",
+"1/2 cup granulated sugar",
+"pinch salt",
+"1 cup whole milk",
+"2 cups heavy cream",
+"1/2 tablespoon pure vanilla extract",
+"cuisinart ice cream maker"
+]
+},
+"notes": [
+"Can also be made without peanut butter",
+"From the Cuisinart Ice Cream Manual"
+],
+"rating": 3,
+"recipe": [
+"In a large bowl, whisk together the dry ingredients. Add the milk and beat until combined.",
+"Gently mix in the heavy cream and vanilla. Cover and refrigerate for at least 1 hour",
+"Pour the mixture into the ice cream maker and let spin until thickened (15-20 min). If desired, slowly add the peanut butter 1 spoon full at a time for the last 5 minutes. Freeze in an air tight container"
+],
+"source": "https://www.cuisinart.com/share/pdf/manuals/ice-21.pdf",
+"title": "Chocolate Peanut Butter"
+},
+{
+"group": "ice_cream",
+"id": "recipe-mint_chocolate_chunk",
+"imgPlaceholder": "dist/imgs/placeholder_ice_cream-mint_chocolate_chunk.svg",
+"imgSrc": "dist/imgs/ice_cream-mint_chocolate_chunk.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"3/4 cup granulated sugar",
+"pinch salt",
+"1 cup whole milk",
+"2 tbsp peppermint extract",
+"(tbd) tsp green food coloring",
+"3/4 teaspoon pure vanilla extract",
+"2 cups heavy cream",
+"(optional) 10-12 chopped peppermint patties",
+"1-1.5 cups chocolate chunks/chips",
+"cuisinart ice cream maker"
+]
+},
+"notes": [
+"Probably better with real mint. The extract just ends up with a fake mint flavor. See Cuisinart recipe for how to prep with fresh mint leaves"
+],
+"rating": 2,
+"recipe": [
+"In a large bowl, whisk together the dry ingredients. Add the milk and beat until combined.",
+"Gently mix in the heavy cream and vanilla. Cover and refrigerate for at least 1 hour",
+"Pour the mixture into the ice cream maker and let spin until thickened (15-20 min).",
+"Five minutes before mixing is completed, gradually add the chocolate chunks and/or peppermint patties and let mix in completely"
+],
+"source": "https://www.cuisinart.com/share/pdf/manuals/ice-21.pdf",
+"title": "Mint Chocolate Chunk"
+},
+{
+"group": "ice_cream",
+"id": "recipe-smores_ice_cream",
+"imgPlaceholder": "dist/imgs/placeholder_ice_cream-smores_ice_cream.svg",
+"imgSrc": "dist/imgs/ice_cream-smores_ice_cream.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1/2 cup cocoa powder, sifted",
+"1/3 cup granulated sugar",
+"1/4 cup packed dark brown sugar",
+"pinch salt",
+"2/3 cup whole milk",
+"1.5 cups heavy cream",
+"3/4 teaspoon pure vanilla extract",
+"2 cup marshmallow cream (e.g. fluff\u00ae)",
+"2 full graham cracker sheets, crushed",
+"2 ounces milk chocolate (1\u22153 cup chips), melted and reserved at room temperature",
+"cuisinart ice cream maker"
+]
+},
+"notes": [
+"Tip: If marshmallow cream is too stiff, warm slightly in microwave before adding to freezer bowl."
+],
+"rating": 3,
+"recipe": [
+"In a large bowl, whisk together cocoa powder, granulated sugar, brown sugar, and salt. Add the milk and beat until combined.",
+"Gently mix in the heavy cream and vanilla. Cover and refrigerate for at least 1 hour",
+"Pour the mixture into the ice cream maker and let spin until thickened (15-20 min).",
+"Five minutes before mixing is completed, gradually add the marshmallow cream, one spoonful at a time. Once mixed, slowly add the crushed graham crackers and melted chocolate and let mix in completely"
+],
+"source": "https://www.cuisinart.com/share/pdf/manuals/ice-21.pdf",
+"title": "Smores Ice Cream"
 },
 {
 "group": "meals",
@@ -1217,7 +1316,7 @@ var localDB = {
 "1 cup ricotta cheese",
 "1\u20442 cup parmesan",
 "1\u20442 tsp garlic powder",
-"1\u20444 tsp pepper",
+"1\u20444 tsp black pepper",
 "1 cup shredded mozzarella, divided"
 ]
 },
@@ -1229,7 +1328,7 @@ var localDB = {
 "Prepare pasta according to the instructions",
 "Add spinach during the last minute of cook time, then drain the pasta and spinach. Place back in the pot",
 "Stir the pasta sauce, ricotta, Parmesan, garlic, black pepper, and 1\u20442 cup mozzarella",
-"Spoon pasta mixture into 9x13 inch pan and sprinkle the rest of the mozzarella on top",
+"Spoon pasta mixture into 9x13 inch pan and sprinkle the remaining 1/2 cup of mozzarella on top",
 "Back at 350 degrees for 30 min"
 ],
 "source": "",
@@ -3111,6 +3210,34 @@ var localDB = {
 },
 {
 "group": "tools",
+"id": "recipe-dishwasher",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"old toothbrush",
+"baking soda",
+"(optional) lemi shine"
+]
+},
+"notes": [
+"Fun fact, dishwasher's need cleaning too",
+"Also see Consumer Reports https://www.consumerreports.org/dishwashers/how-to-clean-a-dishwasher/"
+],
+"rating": 1,
+"recipe": [
+">> Once a month",
+"Wash the filter with warm water, dish soap, and an old toothbrush. Rinse with clean water and air dry",
+"Wipe and dry the sealing surfaces. Wipe and check the sprayer holes",
+">> If Odor",
+"Sprinkle baking soda on the bottom of the washer, let it sit overnight, then run a normal load while the dishwasher is empty (Vinegar can damage the rubber seals, don't listen to the Internet)"
+],
+"source": "https://www.cnet.com/how-to/how-to-clean-your-dishwasher-like-a-boss/",
+"title": "Dishwasher"
+},
+{
+"group": "tools",
 "id": "recipe-pizza_stone_care",
 "imgPlaceholder": "dist/imgs/placeholder_tools-pizza_stone_care.svg",
 "imgSrc": "dist/imgs/tools-pizza_stone_care.jpeg",
@@ -3301,57 +3428,63 @@ var localDB = {
 },
 {
 "group": "veggie",
-"id": "recipe-chickpea_and_spinach_salad",
-"imgPlaceholder": "",
-"imgSrc": "",
+"id": "recipe-chickpea_greek_salad_wrap",
+"imgPlaceholder": "dist/imgs/placeholder_veggie-chickpea_greek_salad_wrap.svg",
+"imgSrc": "dist/imgs/veggie-chickpea_greek_salad_wrap.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
-"7 ounces fresh baby spinach leaves, chopped",
-"(29 ounce) can of chickpeas, drained and rinsed",
-"1 red bell pepper, seeded, ribs removed, and chopped - medium dice",
-"1.5 tbsp scallion, finely chopped",
-"1/4 cup lemon juice",
-"1/3 cup extra-virgin olive oil",
-"1/4 tsp salt",
-"1/8 tsp freshly ground black pepper"
+"1 can chickpeas, drained",
+"1-2 small tomatoes, chopped",
+"1/2 cucumber, chopped",
+"olive oil, drizzle",
+"1/2 tsp lemon juice",
+"feta crumbles",
+"salt and pepper",
+"pita pocket",
+"(optional) red onion, chopped",
+"(optional) fresh dill, minced"
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 2,
 "recipe": [
-"In a large bowl combine the spinach, chickpeas, bell pepper, and scallions",
-"Whisk together the lemon juice, olive oil, salt, and pepper and pour over the chickpea/spinach mixture. Toss to evenly coat"
+"Slightly mash the chickpeas with a fork",
+"Mix all ingredients together then wrap in pita"
 ],
-"source": "https://www.queenofmykitchen.com/chickpea-spinach-salad/",
-"title": "Chickpea And Spinach Salad"
+"source": "",
+"title": "Chickpea Greek Salad Wrap"
 },
 {
 "group": "veggie",
 "id": "recipe-chickpea_salad_wrap",
-"imgPlaceholder": "",
-"imgSrc": "",
+"imgPlaceholder": "dist/imgs/placeholder_veggie-chickpea_salad_wrap.svg",
+"imgSrc": "dist/imgs/veggie-chickpea_salad_wrap.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
-"1 can chickpeas, drained and rinsed",
-"1/2 cup mayo",
-"1/2 cup celery, sliced",
+"1 can of chickpeas, patted dry",
+"1/4 cup mayo",
+"3 celery, sliced",
 "1/2 cup grapes, halved",
-"1/2 cup walnuts, chopped",
 "1/3 cup sweet onions, diced",
-"1 tbsp lemon juice",
+"1/2 tbsp lemon juice",
 "1/2 tsp salt",
 "1/4 tsp pepper",
-"2-3 cups spinach",
-"some sort of wrap"
+"2-3 cups spinach (~1/2 bag), mildly chopped",
+"tortilla or pita pocket",
+"(optional) 1/2 cup walnuts, chopped",
+"(optional) 1/2 red bell pepper, diced",
+"(optional) 1.5 tbsp scallion, finely chopped"
 ]
 },
-"notes": [],
-"rating": 0,
+"notes": [
+"this can be kind of a wet recipe, so make sure to pat everything dry (chickpeas, celery, etc)"
+],
+"rating": 2,
 "recipe": [
 "Pat chickpeas dry, making sure no excess moisture remains from washing them",
-"Combine all chickpea salad ingredients in a large bowl, and mix until everything is well combined",
+"Combine all ingredients in a medium bowl and mix until everything is well combined",
 "On the wrap, layer about 1/2 cup of spinach and 1 cup of chickpea salad"
 ],
 "source": "https://www.brewinghappiness.com/5-minute-chickpea-salad-wraps/",
@@ -3787,6 +3920,11 @@ var localDB = {
 "drinks": [
 "recipe-wine:Wine:3"
 ],
+"ice_cream": [
+"recipe-chocolate_peanut_butter:Chocolate Peanut Butter:3",
+"recipe-mint_chocolate_chunk:Mint Chocolate Chunk:2",
+"recipe-smores_ice_cream:Smores Ice Cream:3"
+],
 "meals": [
 "recipe-gyros:Gyros:1",
 "recipe-jambon_beurre:Jambon Beurre:1",
@@ -3872,6 +4010,7 @@ var localDB = {
 ],
 "tools": [
 "recipe-cast_iron_care:Cast Iron Care:0",
+"recipe-dishwasher:Dishwasher:1",
 "recipe-pizza_stone_care:Pizza Stone Care:0"
 ],
 "veggie": [
@@ -3880,8 +4019,8 @@ var localDB = {
 "recipe-baked_potatoes_instant_pot:Baked Potatoes Instant Pot:1",
 "recipe-baked_zucchini:Baked Zucchini:1",
 "recipe-chana_masala:Chana Masala:1",
-"recipe-chickpea_and_spinach_salad:Chickpea And Spinach Salad:0",
-"recipe-chickpea_salad_wrap:Chickpea Salad Wrap:0",
+"recipe-chickpea_greek_salad_wrap:Chickpea Greek Salad Wrap:2",
+"recipe-chickpea_salad_wrap:Chickpea Salad Wrap:2",
 "recipe-chickpea_spicy_buffalo_wrap:Chickpea Spicy Buffalo Wrap:0",
 "recipe-crispy_baked_sweet_potato_fries:Crispy Baked Sweet Potato Fries:1",
 "recipe-curried_chickpeas:Curried Chickpeas:1",
@@ -3929,6 +4068,11 @@ var localDB = {
 ],
 "drinks": [
 "Wine"
+],
+"ice_cream": [
+"Chocolate Peanut Butter",
+"Mint Chocolate Chunk",
+"Smores Ice Cream"
 ],
 "meals": [
 "Gyros",
@@ -4015,6 +4159,7 @@ var localDB = {
 ],
 "tools": [
 "Cast Iron Care",
+"Dishwasher",
 "Pizza Stone Care"
 ],
 "veggie": [
@@ -4023,7 +4168,7 @@ var localDB = {
 "Baked Potatoes Instant Pot",
 "Baked Zucchini",
 "Chana Masala",
-"Chickpea And Spinach Salad",
+"Chickpea Greek Salad Wrap",
 "Chickpea Salad Wrap",
 "Chickpea Spicy Buffalo Wrap",
 "Crispy Baked Sweet Potato Fries",
