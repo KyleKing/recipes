@@ -248,7 +248,8 @@ class SiteCompiler:
         images = [_fn for _fn in self.imgs_filt.values()]
         images.extend([self.format_svg_name(_fn) for _fn in images])  # Add SVG filenames
         for img_fn in self.DIR_DIST_IMGS.glob('*'):
-            if self.get_relative_dir(img_fn) not in images:
+            matched = self.get_relative_dir(img_fn) in images
+            if not matched:
                 logger.debug('Removing unused image file: {}'.format(img_fn))
                 Path(img_fn).unlink()
 

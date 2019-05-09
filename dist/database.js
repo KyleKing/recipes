@@ -965,8 +965,8 @@ var localDB = {
 {
 "group": "drinks",
 "id": "recipe-wine",
-"imgPlaceholder": "",
-"imgSrc": "",
+"imgPlaceholder": "dist/imgs/placeholder_drinks-wine.svg",
+"imgSrc": "dist/imgs/drinks-wine.jpg",
 "ingredients": {
 "1-sparkling wine": [
 "1-Sparkling Wine",
@@ -1007,7 +1007,8 @@ var localDB = {
 },
 "notes": [
 "Just a tracker of wines that we've bought and had an opinion on",
-"The \"(Source)\" link (wine-searcher.com) was used for estimated ratings"
+"The \"(Source)\" link (wine-searcher.com) was used for estimated ratings",
+"Image Source: https://www.etsy.com/listing/101490371/wine-rack-16-bottle-ladders-set-of-3"
 ],
 "rating": 3,
 "recipe": [],
@@ -2355,29 +2356,27 @@ var localDB = {
 {
 "group": "seafood",
 "id": "recipe-baked-fish",
-"imgPlaceholder": "dist/imgs/placeholder_seafood-baked-fish.svg",
-"imgSrc": "dist/imgs/seafood-baked-fish.jpg",
+"imgPlaceholder": "",
+"imgSrc": "",
 "ingredients": {
 "ingredients": [
 "Ingredients",
-"frozen fish fillet",
+"fish fillet",
 "salt",
-"pepper",
-"lemon juice",
+"black pepper",
 "olive oil"
 ]
 },
 "notes": [
-"For refrigerated fish, bake at 400F for 25-30 minutes for large fillets (>1 inch tall) and 15-20 for thin ones"
+"For (thin) frozen fillet, bake at 450F for 4 minutes, then flip and bake for 8-12 min. Cover with olive oil, salt, and pepper. Frozen Recipe Source: http://cookthestory.com/how-to-cook-fish-from-frozen/"
 ],
 "rating": 1,
 "recipe": [
-"Preheat oven to 450\u2109 (~10 min)",
-"While still frozen, place in a tin foil covered pan. Cover with olive oil and bake for 4 minutes",
-"Remove from the oven and cover with salt, pepper, and lemon juice",
-"Return to the oven for 8-12 minutes based on thickness"
+"Preheat oven to 400F",
+"Cover a baking sheet with tin foil and prep the fish",
+"Bake 25-30 minutes for large fillets (>1 inch tall) and 15-20 for thin ones"
 ],
-"source": "http://cookthestory.com/how-to-cook-fish-from-frozen/",
+"source": "",
 "title": "Baked-Fish"
 },
 {

@@ -1,20 +1,18 @@
 {
   "ingredients": [
-    "frozen fish fillet",
+    "fish fillet",
     "salt",
-    "pepper",
-    "lemon juice",
+    "black pepper",
     "olive oil"
   ],
   "notes": [
-    "For refrigerated fish, bake at 400F for 25-30 minutes for large fillets (>1 inch tall) and 15-20 for thin ones"
+    "For (thin) frozen fillet, bake at 450F for 4 minutes, then flip and bake for 8-12 min. Cover with olive oil, salt, and pepper. Frozen Recipe Source: http://cookthestory.com/how-to-cook-fish-from-frozen/"
   ],
   "rating": 1,
   "recipe": [
-    "Preheat oven to 450℉ (~10 min)",
-    "While still frozen, place in a tin foil covered pan. Cover with olive oil and bake for 4 minutes",
-    "Remove from the oven and cover with salt, pepper, and lemon juice",
-    "Return to the oven for 8-12 minutes based on thickness"
+    "Preheat oven to 400F",
+    "Cover a baking sheet with tin foil and prep the fish",
+    "Bake 25-30 minutes for large fillets (>1 inch tall) and 15-20 for thin ones"
   ],
-  "source": "http://cookthestory.com/how-to-cook-fish-from-frozen/"
+  "source": ""
 }
