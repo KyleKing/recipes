@@ -511,6 +511,43 @@ var localDB = {
 },
 {
 "group": "dessert",
+"id": "recipe-chocolate_frosting_recipe",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-chocolate_frosting_recipe.svg",
+"imgSrc": "dist/imgs/dessert-chocolate_frosting_recipe.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1.75 cups unsweetened cocoa powder, sifted",
+"1.5 cups powdered sugar",
+"2 cups powdered sugar, sifted",
+"(optional) 1 tsp espresso powder",
+"1 cup heavy cream",
+"1 cup unsalted butter, very soft",
+"1/8 tsp salt",
+"2 tsp vanilla extract",
+"(optional) betty crocker double fudge boxed cake mix",
+"(optional) raspberry jelly"
+]
+},
+"notes": [
+"Yield: 4 1/2 cups, enough to frost 2 dozen cupcakes, or fill/frost an 8-9 in layer cake",
+"Never frost a warm cake: the frosting will sink in, or the cake will tear (chill or freeze the cake for 30 min if needed)"
+],
+"rating": 3,
+"recipe": [
+"(Optional) Make a cake with 2-3 round layers",
+"(Optional) For the fruit filling between the layers, warm up the jelly until liquid-like and spread over the cake. Poke a few vertical holes so the jelly gets inside",
+"Then frost!",
+"In a medium bowl, add the cocoa powder and *1.5 cups powdered sugar (and optional espresso powder)",
+"Bring the cream to a simmer on the stove or in the microwave, and whisk into the cocoa mixture. Whisk until smooth (non-grainy). Set aside to cool to room temp",
+"In a large bowl, beat together the butter, salt, and *2 cups of sifted powdered sugar until smooth and fluffy. Then mix in the vanilla",
+"With the mixer running on low speed, add the cocoa mixture a spoonful at a time until it's all incorporated. Scrape the bowl, then beat at medium speed for an additional minute"
+],
+"source": "https://www.kingarthurflour.com/recipes/super-simple-chocolate-frosting-recipe",
+"title": "Chocolate Frosting Recipe"
+},
+{
+"group": "dessert",
 "id": "recipe-chocolatines",
 "imgPlaceholder": "dist/imgs/placeholder_dessert-chocolatines.svg",
 "imgSrc": "dist/imgs/dessert-chocolatines.jpeg",
@@ -1023,7 +1060,6 @@ var localDB = {
 "ingredients": {
 "ingredients": [
 "Ingredients",
-"(tbd) peanut butter",
 "1/4 cup packed dark brown sugar",
 "2/3 cup cocoa powder, sifted",
 "1/2 cup granulated sugar",
@@ -1031,18 +1067,20 @@ var localDB = {
 "1 cup whole milk",
 "2 cups heavy cream",
 "1/2 tablespoon pure vanilla extract",
+"(optional) ~4 small spoonfuls peanut butter",
 "cuisinart ice cream maker"
 ]
 },
 "notes": [
-"Can also be made without peanut butter",
+"Originally, microwaved the peanut butter for 10 seconds and added to the chocolate while mixing",
 "From the Cuisinart Ice Cream Manual"
 ],
 "rating": 3,
 "recipe": [
 "In a large bowl, whisk together the dry ingredients. Add the milk and beat until combined.",
-"Gently mix in the heavy cream and vanilla. Cover and refrigerate for at least 1 hour",
-"Pour the mixture into the ice cream maker and let spin until thickened (15-20 min). If desired, slowly add the peanut butter 1 spoon full at a time for the last 5 minutes. Freeze in an air tight container"
+"Gently mix in the heavy cream and vanilla. Cover and refrigerate for at least 1 hour (preferably overnight)",
+"Pour the mixture into the ice cream maker and let spin until thickened (15-20 min)",
+"(Haven't tested yet, but probably will work better) Freeze in an air tight container for ~30 min. then mix the peanut butter in with a knife"
 ],
 "source": "https://www.cuisinart.com/share/pdf/manuals/ice-21.pdf",
 "title": "Chocolate Peanut Butter"
@@ -1073,7 +1111,7 @@ var localDB = {
 "rating": 2,
 "recipe": [
 "In a large bowl, whisk together the dry ingredients. Add the milk and beat until combined.",
-"Gently mix in the heavy cream and vanilla. Cover and refrigerate for at least 1 hour",
+"Gently mix in the heavy cream and vanilla. Cover and refrigerate for at least 1 hour (preferably overnight)",
 "Pour the mixture into the ice cream maker and let spin until thickened (15-20 min).",
 "Five minutes before mixing is completed, gradually add the chocolate chunks and/or peppermint patties and let mix in completely"
 ],
@@ -1107,7 +1145,7 @@ var localDB = {
 "rating": 3,
 "recipe": [
 "In a large bowl, whisk together cocoa powder, granulated sugar, brown sugar, and salt. Add the milk and beat until combined.",
-"Gently mix in the heavy cream and vanilla. Cover and refrigerate for at least 1 hour",
+"Gently mix in the heavy cream and vanilla. Cover and refrigerate for at least 1 hour (preferably overnight)",
 "Pour the mixture into the ice cream maker and let spin until thickened (15-20 min).",
 "Five minutes before mixing is completed, gradually add the marshmallow cream, one spoonful at a time. Once mixed, slowly add the crushed graham crackers and melted chocolate and let mix in completely"
 ],
@@ -2768,6 +2806,47 @@ var localDB = {
 },
 {
 "group": "soup",
+"id": "recipe-parmesan_minestrone",
+"imgPlaceholder": "dist/imgs/placeholder_soup-parmesan_minestrone.svg",
+"imgSrc": "dist/imgs/soup-parmesan_minestrone.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"3 tbsp olive oil",
+"1 large yellow onion, cut into 1/2 in dice",
+"2 medium carrots, cut into 1/2 in dice",
+"2 celery sticks, cut into 1/2 in dice",
+"7 cups vegetable or chicken broth",
+"1 (28-oz) can of diced tomatoes (keep juice)",
+"1 (15-oz) can cannellini (navy) beans, drained and rinsed",
+"1 (15-oz) can green beans (keep juice)",
+"1 tsp dried basil",
+"1 tsp dried oregano",
+"2.5 tsp salt",
+"1/2 tsp black pepper",
+"1/4 tsp red pepper flakes",
+"2/3 cup pasta wheels (~1/2 cup elbow)",
+"1 cup parmigiano-reggiano cheese, plus more for garnish",
+"serve with baguette or toast"
+]
+},
+"notes": [
+"Chrissy Teigen Cravings for More, 50",
+"If too thick, add water"
+],
+"rating": 2,
+"recipe": [
+"In a large pot, heat the oil over medium heat. Add onion and cook ~8 min until tender. Add garlic and cook 1 additional minute",
+"Add the carrots and celery and cook ~4 min until slightly softened",
+"Add the broth, the three canned ingredients, and spices. Bring to a boil then reduce to a simmer and cook for 20 min until thickened",
+"Add the pasta and cook until tender for another ~10 min",
+"Stir in the Parmesan and season with additional salt and black pepper."
+],
+"source": "",
+"title": "Parmesan Minestrone"
+},
+{
+"group": "soup",
 "id": "recipe-pot_pie_soup",
 "imgPlaceholder": "dist/imgs/placeholder_soup-pot_pie_soup.svg",
 "imgSrc": "dist/imgs/soup-pot_pie_soup.jpeg",
@@ -3902,6 +3981,7 @@ var localDB = {
 "recipe-cake_pops:Cake Pops:1",
 "recipe-chocolate-pb-m&m_balls:Chocolate-Pb-M&M Balls:0",
 "recipe-chocolate_chip_cookies:Chocolate Chip Cookies:1",
+"recipe-chocolate_frosting_recipe:Chocolate Frosting Recipe:3",
 "recipe-chocolatines:Chocolatines:1",
 "recipe-collens_peanut_butter_bars:Collens Peanut Butter Bars:0",
 "recipe-cookie_dough_billionaire_bars:Cookie Dough Billionaire Bars:0",
@@ -3990,6 +4070,7 @@ var localDB = {
 "recipe-chicken_noodle_soup:Chicken Noodle Soup:2",
 "recipe-french_onion_soup:French Onion Soup:3",
 "recipe-johns_chili:Johns Chili:2",
+"recipe-parmesan_minestrone:Parmesan Minestrone:2",
 "recipe-pot_pie_soup:Pot Pie Soup:1",
 "recipe-slow_cooker_chicken_mango_curry:Slow Cooker Chicken Mango Curry:0",
 "recipe-slow_cooker_chicken_tortilla_soup:Slow Cooker Chicken Tortilla Soup:2"
@@ -4051,6 +4132,7 @@ var localDB = {
 "Cake Pops",
 "Chocolate-Pb-M&M Balls",
 "Chocolate Chip Cookies",
+"Chocolate Frosting Recipe",
 "Chocolatines",
 "Collens Peanut Butter Bars",
 "Cookie Dough Billionaire Bars",
@@ -4139,6 +4221,7 @@ var localDB = {
 "Chicken Noodle Soup",
 "French Onion Soup",
 "Johns Chili",
+"Parmesan Minestrone",
 "Pot Pie Soup",
 "Slow Cooker Chicken Mango Curry",
 "Slow Cooker Chicken Tortilla Soup"

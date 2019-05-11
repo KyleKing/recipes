@@ -1,6 +1,5 @@
 {
   "ingredients": [
-    "(TBD) Peanut Butter",
     "1/4 cup packed dark brown sugar",
     "2/3 cup cocoa powder, sifted",
     "1/2 cup granulated sugar",
@@ -8,17 +7,19 @@
     "1 cup whole milk",
     "2 cups heavy cream",
     "1/2 tablespoon pure vanilla extract",
+    "(optional) ~4 small spoonfuls Peanut Butter",
     "Cuisinart ice cream maker"
   ],
   "notes": [
-    "Can also be made without peanut butter",
+    "Originally, microwaved the peanut butter for 10 seconds and added to the chocolate while mixing",
     "From the Cuisinart Ice Cream Manual"
   ],
   "rating": 3,
   "recipe": [
     "In a large bowl, whisk together the dry ingredients. Add the milk and beat until combined.",
-    "Gently mix in the heavy cream and vanilla. Cover and refrigerate for at least 1 hour",
-    "Pour the mixture into the ice cream maker and let spin until thickened (15-20 min). If desired, slowly add the peanut butter 1 spoon full at a time for the last 5 minutes. Freeze in an air tight container"
+    "Gently mix in the heavy cream and vanilla. Cover and refrigerate for at least 1 hour (preferably overnight)",
+    "Pour the mixture into the ice cream maker and let spin until thickened (15-20 min)",
+    "(Haven't tested yet, but probably will work better) Freeze in an air tight container for ~30 min. then mix the peanut butter in with a knife"
   ],
   "source": "https://www.cuisinart.com/share/pdf/manuals/ice-21.pdf"
 }
