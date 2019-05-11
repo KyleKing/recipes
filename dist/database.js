@@ -1055,8 +1055,8 @@ var localDB = {
 {
 "group": "ice_cream",
 "id": "recipe-chocolate_peanut_butter",
-"imgPlaceholder": "",
-"imgSrc": "",
+"imgPlaceholder": "dist/imgs/placeholder_ice_cream-chocolate_peanut_butter.svg",
+"imgSrc": "dist/imgs/ice_cream-chocolate_peanut_butter.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -1671,6 +1671,29 @@ var localDB = {
 ],
 "source": "",
 "title": "Spaghetti Sauce"
+},
+{
+"group": "pizza",
+"id": "recipe-english_muffin",
+"imgPlaceholder": "dist/imgs/placeholder_pizza-english_muffin.svg",
+"imgSrc": "dist/imgs/pizza-english_muffin.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"english muffins",
+"sauce",
+"mozzarella cheese",
+"(optional) spinach, peppers, tomatoes, etc.",
+"(optional) red pepper flakes, basil"
+]
+},
+"notes": [],
+"rating": 2,
+"recipe": [
+"Toast the english muffins. Add sauce, cheese, and any toppings. Broil for 5-10 minutes"
+],
+"source": "",
+"title": "English Muffin"
 },
 {
 "group": "pizza",
@@ -4026,6 +4049,7 @@ var localDB = {
 "recipe-spaghetti_sauce:Spaghetti Sauce:3"
 ],
 "pizza": [
+"recipe-english_muffin:English Muffin:2",
 "recipe-mini_pizza:Mini Pizza:1",
 "recipe-naan_pizza:Naan Pizza:1",
 "recipe-pizza:Pizza:2"
@@ -4177,6 +4201,7 @@ var localDB = {
 "Spaghetti Sauce"
 ],
 "pizza": [
+"English Muffin",
 "Mini Pizza",
 "Naan Pizza",
 "Pizza"
