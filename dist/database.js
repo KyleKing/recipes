@@ -2985,6 +2985,46 @@ var localDB = {
 "title": "Slow Cooker Chicken Tortilla Soup"
 },
 {
+"group": "soup",
+"id": "recipe-spring_chicken_stew",
+"imgPlaceholder": "dist/imgs/placeholder_soup-spring_chicken_stew.svg",
+"imgSrc": "dist/imgs/soup-spring_chicken_stew.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"2-3 leeks",
+"1 tbsp olive oil",
+"2 carrots, thinly sliced",
+"2 tbsp flour",
+"3/4 cup white wine",
+"1/2 cup low-sodium chicken broth",
+"2 tsp dried thyme or 4 whole thyme sprigs",
+"1.5 lb golden potatoes, quartered",
+"1.5 lb boneless skinless chicken thighs",
+"2 cups frozen peas, thawed",
+"salt and pepper",
+"(optional) parsley",
+"instant pot"
+]
+},
+"notes": [
+"For frozen boneless, skinless chicken thighs, put in without thawing. Keep potatoes whole and increase cook time from 10 to 20-25 min",
+"Source: Giant Grocery Catalog",
+"Replace white wine with the same volume of chicken broth and add squeeze of lemon juice instead"
+],
+"rating": 2,
+"recipe": [
+"Trim roots and darkest green from leeks. Thinly slice and submerge in a large bowl of water. Swish and separate rings to release grit. Drain and repeat. Then drain thoroughly",
+"In an Instant Pot, heat the oil on saute. Add leeks and carrots. Cook 5 min until golden, stirring occasionally.",
+"Stir in the flour. Add the white wine, chicken broth, thyme, potatoes, salt, and pepper. Top with chicken.",
+"Seal and set to high pressure. Cook 10 and natural release 10 min (set out frozen peas to defrost)",
+"Stir in peas and let sit 2 min (remove any thyme stems). Season with additional salt and pepper",
+"(optional) garnish with parsley"
+],
+"source": "",
+"title": "Spring Chicken Stew"
+},
+{
 "group": "sushi",
 "id": "recipe-_rice",
 "imgPlaceholder": "dist/imgs/placeholder_sushi-_rice.svg",
@@ -4097,7 +4137,8 @@ var localDB = {
 "recipe-parmesan_minestrone:Parmesan Minestrone:2",
 "recipe-pot_pie_soup:Pot Pie Soup:1",
 "recipe-slow_cooker_chicken_mango_curry:Slow Cooker Chicken Mango Curry:0",
-"recipe-slow_cooker_chicken_tortilla_soup:Slow Cooker Chicken Tortilla Soup:2"
+"recipe-slow_cooker_chicken_tortilla_soup:Slow Cooker Chicken Tortilla Soup:2",
+"recipe-spring_chicken_stew:Spring Chicken Stew:2"
 ],
 "sushi": [
 "recipe-_rice: Rice:1",
@@ -4249,7 +4290,8 @@ var localDB = {
 "Parmesan Minestrone",
 "Pot Pie Soup",
 "Slow Cooker Chicken Mango Curry",
-"Slow Cooker Chicken Tortilla Soup"
+"Slow Cooker Chicken Tortilla Soup",
+"Spring Chicken Stew"
 ],
 "sushi": [
 " Rice",
