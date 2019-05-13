@@ -1790,29 +1790,28 @@ var localDB = {
 {
 "group": "poultry",
 "id": "recipe-baked_chicken_and_potatoes",
-"imgPlaceholder": "",
-"imgSrc": "",
+"imgPlaceholder": "dist/imgs/placeholder_poultry-baked_chicken_and_potatoes.svg",
+"imgSrc": "dist/imgs/poultry-baked_chicken_and_potatoes.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
-"2 tbsp olive oil",
+"~2 tbsp olive oil",
 "8 chicken thighs (bone-in, skin-on)",
-"1 lb baby potatoes cleaned, cut in halves or quarters",
+"1 lb baby potatoes, cleaned and halved",
 "1 red onion, chopped",
-"2 cloves garlic, minced",
+"2 tsp ground black pepper",
 "2 tsp oregano",
 "2 tsp thyme",
 "1/2 tsp paprika",
-"salt",
-"ground black pepper"
+"1/4 tsp garlic powder",
+"1/4 tsp salt"
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 2,
 "recipe": [
 "Preheat the oven to 425F",
-"Oil a roasting pan",
-"Toss all the ingredients in a big bowl then spread out on the pan",
+"Toss the ingredients in a large bowl and spread in the roasting pan",
 "Roast for 45 minutes or until the chicken is completely cooked through"
 ],
 "source": "https://aseasyasapplepie.com/one-pan-baked-chicken-and-potatoes/",
@@ -3881,15 +3880,18 @@ var localDB = {
 "Ingredients"
 ]
 },
-"notes": [],
-"rating": 1,
+"notes": [
+"Typically, cut tomatoes into orange-sized slices",
+"Dressings: light zesty Italian, raspberry vinaigrette, olive oil + lime"
+],
+"rating": 3,
 "recipe": [
-"Strawberry: strawberry, spinach, feta, walnuts/pecans/almonds",
-"Basic Feta: spinach, onion, tomato, feta, watercress",
-"Arugula/Lime: Strawberries, Tomatoes, Onion, Arugula, Lime, Olive Oil, Feta Crumbles (optional: black beans)",
-"Greek: lettuce, peppers, cucumber, onion, feta, cherry tomatoes, chickpeas (opt)",
-"Caesar: lettuce, Parmesan, croutons",
-"Basic: light zesty Italian dressing/raspberry vinaigrette + vegetables (tomato, cucumber, pepper, etc.) + rotisserie chicken"
+"Feta: arugula/spinach, red onion, tomato, cucumber, feta, dressing (olive oil + lime)",
+"Feta+: (above) + strawberries or black beans",
+"Strawb: spinach, strawberry, feta, walnuts/pecans/almonds",
+"Greek: lettuce, cherry tomatoes, peppers, cucumber, onion, feta, (opt: chickpeas)",
+"Caesar: lettuce, Parmesan, chicken, croutons",
+"Rotisserie: lettuce, tomato, cucumber, pepper, etc, rotisserie chicken"
 ],
 "source": "",
 "title": "Salad"
@@ -4095,7 +4097,7 @@ var localDB = {
 "recipe-pizza:Pizza:2"
 ],
 "poultry": [
-"recipe-baked_chicken_and_potatoes:Baked Chicken And Potatoes:1",
+"recipe-baked_chicken_and_potatoes:Baked Chicken And Potatoes:2",
 "recipe-brick_chicken:Brick Chicken:3",
 "recipe-chicken:Chicken:1",
 "recipe-chicken_cacciatore:Chicken Cacciatore:2",
@@ -4172,7 +4174,7 @@ var localDB = {
 "recipe-guacamole:Guacamole:1",
 "recipe-karens_roasted_veggie_bowls:Karens Roasted Veggie Bowls:2",
 "recipe-roasted_vegetables:Roasted Vegetables:2",
-"recipe-salad:Salad:1",
+"recipe-salad:Salad:3",
 "recipe-sweet_potato_gnocchi:Sweet Potato Gnocchi:1",
 "recipe-sweet_potatoes:Sweet Potatoes:1"
 ]

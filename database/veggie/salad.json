@@ -1,14 +1,17 @@
 {
   "ingredients": [],
-  "notes": [],
-  "rating": 1,
+  "notes": [
+  	"Typically, cut tomatoes into orange-sized slices",
+  	"Dressings: light zesty Italian, raspberry vinaigrette, olive oil + lime"
+  ],
+  "rating": 3,
   "recipe": [
-    "Strawberry: strawberry, spinach, feta, walnuts/pecans/almonds",
-    "Basic Feta: spinach, onion, tomato, feta, watercress",
-    "Arugula/Lime: Strawberries, Tomatoes, Onion, Arugula, Lime, Olive Oil, Feta Crumbles (optional: black beans)",
-    "Greek: lettuce, peppers, cucumber, onion, feta, cherry tomatoes, chickpeas (opt)",
-    "Caesar: lettuce, Parmesan, croutons",
-    "Basic: light zesty Italian dressing/raspberry vinaigrette + vegetables (tomato, cucumber, pepper, etc.) + rotisserie chicken"
+    "Feta: arugula/spinach, red onion, tomato, cucumber, feta, dressing (olive oil + lime)",
+    "Feta+: (above) + strawberries or black beans",
+    "Strawb: spinach, strawberry, feta, walnuts/pecans/almonds",
+    "Greek: lettuce, cherry tomatoes, peppers, cucumber, onion, feta, (opt: chickpeas)",
+    "Caesar: lettuce, Parmesan, chicken, croutons",
+    "Rotisserie: lettuce, tomato, cucumber, pepper, etc, rotisserie chicken"
   ],
   "source": ""
 }
