@@ -1807,11 +1807,13 @@ var localDB = {
 "1/4 tsp salt"
 ]
 },
-"notes": [],
-"rating": 2,
+"notes": [
+"Turned out slightly dry. Might need to tweak the recipe or just stick to making chicken and potatoes in the instant pot"
+],
+"rating": 1,
 "recipe": [
 "Preheat the oven to 425F",
-"Toss the ingredients in a large bowl and spread in the roasting pan",
+"Toss the ingredients in a large bowl and spread in a roasting pan",
 "Roast for 45 minutes or until the chicken is completely cooked through"
 ],
 "source": "https://aseasyasapplepie.com/one-pan-baked-chicken-and-potatoes/",
@@ -2343,36 +2345,37 @@ var localDB = {
 {
 "group": "rice",
 "id": "recipe-red_beans_and_rice",
-"imgPlaceholder": "",
-"imgSrc": "",
+"imgPlaceholder": "dist/imgs/placeholder_rice-red_beans_and_rice.svg",
+"imgSrc": "dist/imgs/rice-red_beans_and_rice.jpeg",
 "ingredients": {
 "Base": [
 "Base",
-"rice",
-"2 16-oz. cans red beans",
-"1 lb. andouille sausage",
-"3 celery, chopped",
-"bell pepper",
-"onion",
-"1 tbsp. green onions, sliced"
+"2 cups white rice",
+"2 16-oz. cans red beans, drained and rinsed (*keep 2-3 tbsp liquid)",
+"1 lb. andouille sausage, sliced",
+"1 bell pepper, chopped",
+"1 onion, chopped",
+"(opt) 1 tbsp. green onions, sliced"
 ],
 "Seasonings": [
 "Seasonings",
 "1 tsp garlic powder (or 2 cloves)",
 "2 tsp. cayenne pepper",
-"2 sprigs fresh thyme",
+"1 tsp thyme (or 2 sprigs)",
 "1 tsp. dried oregano",
 "salt & pepper",
 "2 tsp. hot sauce"
 ]
 },
-"notes": [],
+"notes": [
+"Pretty spicy and simple. Otherwise not much of note"
+],
 "rating": 1,
 "recipe": [
-"In a medium pot over medium heat, heat oil. Slice the sausage and cook in the pot until slightly browned.",
-"Add onion, bell pepper, and celery and cook cook until slightly softened for about 4 minutes.",
-"Stir in the the seasonings and beans. Simmer for 10 minutes.",
-"Serve over rice and garnish with green onions."
+"In a medium pot over medium heat, heat oil. Slice the sausage and cook in the pot until slightly browned",
+"Add onion and the pepper. Cook until slightly softened",
+"Stir in the beans, saved bean liquid, and seasonings. Simmer for 10 minutes",
+"Serve over rice and garnish with green onions"
 ],
 "source": "http://www.delish.com/cooking/recipe-ideas/recipes/a54954/easy-red-beans-and-rice-recipe/",
 "title": "Red Beans And Rice"
@@ -3906,29 +3909,34 @@ var localDB = {
 "Gnocchi",
 "1 large sweet potato",
 "1/3 cup whole milk ricotta cheese",
-"3/4 cup flour"
+"3/4 cup flour",
+"1 tsp salt",
+"1/4 tsp black pepper"
 ],
 "sauce": [
 "Sauce",
-"1/3-2/3 stick butter",
-"1/4 cup fresh sage leaves",
-"1/2 finely grated parmesan",
+"2/3 stick butter",
+"1/4 cup fresh sage leaves, chopped",
+"1/2 cup finely grated parmesan",
 "salt and pepper"
 ]
 },
 "notes": [
-"Chrissy Teigen Cravings"
+"Chrissy Teigen Cravings page 176",
+"Try to minimize the amount of flour and knead time to maximize flavor and softness"
 ],
-"rating": 1,
+"rating": 2,
 "recipe": [
-"Pierce sweet potatoes with a fork. (Originally: in a wet paper towel microwave on high for 12-13 minutes) Instead, try using the instant pot for 12 minutes at high pressure and low heat (TBD)",
-"When cool, peel and mash in a medium bowl until smooth. Stir in ricotta and 1 tsp salt. Mix with a fork and scatter in flour until doughy mixture",
+"Scrub the sweet potato, then cook in an Instant Pot on high pressure and low temperature for 15 min. Quick release after at least 5 min",
+"Peel and mash the soft potato in a medium bowl",
+"Mix with the ricotta cheese, 3/4 cup flour, salt and pepper. Gently mix until a dough like texture. If sticking to the sides, add additional flour, 1 tbsp at a time",
 "Bring a gallon of water to boil over high heat",
-"Lightly flour work surface and gently knead the dough 10 times folding 90 degrees each time.",
-"Divide the dough into three equal pieces; gently roll each into a ball then into a log roughly 12 in x 1 in diameter. Cut the log crosswise/diagonally into 12 pieces (36 total)",
+"Lightly flour a large cutting board. Gently knead the dough by flattening with your palms than folding the dough in the perpendicular direction rotating 90 degrees each time",
+"Divide the dough into three equal pieces; gently roll each into a ball then into a log roughly 12 in x 1 in diameter",
+"Cut the logs crosswise/diagonally into 12 pieces (36 total)",
 "Drop the gnocchi into the boiling water and stir for the first minute. Cook until they float to the surface (4-5 min)",
-"In parallel, in a large skillet, melt the butter over medium heat. When the foam subsides add the sage and cook until the sage is crispy and the butter is browned (3 min)",
-"Scoop the gnocchi out with a strainer and add to the skillet. Add the Parmesan and salt and pepper to taste."
+"In parallel, in a large skillet, melt the butter over medium heat. When the foam subsides add the sage. Cook until the sage is crispy and the butter is browned (3 min)",
+"Scoop the gnocchi out with a strainer and add to the skillet. Add the Parmesan and salt and pepper to taste"
 ],
 "source": "",
 "title": "Sweet Potato Gnocchi"
@@ -4097,7 +4105,7 @@ var localDB = {
 "recipe-pizza:Pizza:2"
 ],
 "poultry": [
-"recipe-baked_chicken_and_potatoes:Baked Chicken And Potatoes:2",
+"recipe-baked_chicken_and_potatoes:Baked Chicken And Potatoes:1",
 "recipe-brick_chicken:Brick Chicken:3",
 "recipe-chicken:Chicken:1",
 "recipe-chicken_cacciatore:Chicken Cacciatore:2",
@@ -4175,7 +4183,7 @@ var localDB = {
 "recipe-karens_roasted_veggie_bowls:Karens Roasted Veggie Bowls:2",
 "recipe-roasted_vegetables:Roasted Vegetables:2",
 "recipe-salad:Salad:3",
-"recipe-sweet_potato_gnocchi:Sweet Potato Gnocchi:1",
+"recipe-sweet_potato_gnocchi:Sweet Potato Gnocchi:2",
 "recipe-sweet_potatoes:Sweet Potatoes:1"
 ]
 },
