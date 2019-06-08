@@ -522,7 +522,7 @@ var localDB = {
 "2 cups powdered sugar, sifted",
 "(optional) 1 tsp espresso powder",
 "1 cup heavy cream",
-"1 cup unsalted butter, very soft",
+"2 cups unsalted butter, very soft/at room temp",
 "1/8 tsp salt",
 "2 tsp vanilla extract",
 "(optional) betty crocker double fudge boxed cake mix",
@@ -1000,6 +1000,48 @@ var localDB = {
 "title": "Toasted Marshmallow Brownie Crinkles"
 },
 {
+"group": "desserts",
+"id": "recipe-french_chocolate_tart",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"Crust": [
+"Crust",
+"1.25 cups all-purpose flour",
+"1 tsp sugar",
+"1/2 tsp salt",
+"3/4 stick (6 tablespoons) very cold unsalted butter, cut into bits",
+"1 large egg",
+"1 tsp ice water"
+],
+"Tart": [
+"Tart",
+"1 cup heavy cream",
+"8 oz semi- or bitter-sweet chocolate, very finely chopped",
+"1/2 stick (4 tablespoons) unsalted butter, at room temperature and cut into small pieces",
+"fully baked butter crust, in a tart pan (recipe follows)",
+"lightly sweetened whipped cream",
+"(optional) chocolate shavings, for decoration"
+]
+},
+"notes": [],
+"rating": 2,
+"recipe": [
+"In a food processor, pulse the flour, sugar and salt. Scatter over the bits of butter and pulse until they\u2019re coarsely chopped into the mix",
+"In a small bowl, beat the egg and water together, add the mixture to the machine in three parts and pulse after each one (You want a moist dough that holds together when it\u2019s pinched)",
+"Turn the dough onto a counter, flatten into a disk and place between sheets of parchment or wax paper",
+"Roll out the dough and fit it into a tart pan. Chill (or freeze) the dough for at least 1 hour before baking",
+"Preheat the oven to 400\u00b0. Press a piece of buttered foil on top of the crust and fill with dry rice or beans",
+"Place the pan on a baking sheet lined with parchment paper or a silicone baking mat. Bake for 20 minutes, remove the foil and weights and bake for another 10 minutes, or until golden",
+"Transfer the baking sheet to a rack and let the crust cool to room temperature",
+"In a small saucepan over low heat, cook the cream and chocolate, stirring, until the chocolate melts and the mixture is smooth (~5 min). Keep the heat low\u2014don\u2019t let it bubble!",
+"Turn off the heat and leave the pan on the burner. Slowly add the butter, stirring until the butter melts. When melted, the mixture should be a velvety, slightly shiny ganache. Pour it into the crust",
+"Slide into the fridge and chill until the chocolate is firm (~3 hours). If overnight, cover with plastic wrap"
+],
+"source": "https://www.shortstackeditions.com/blogs/news/recipe-french-chocolate-tart",
+"title": "French Chocolate Tart"
+},
+{
 "group": "drinks",
 "id": "recipe-wine",
 "imgPlaceholder": "dist/imgs/placeholder_drinks-wine.svg",
@@ -1151,6 +1193,36 @@ var localDB = {
 ],
 "source": "https://www.cuisinart.com/share/pdf/manuals/ice-21.pdf",
 "title": "Smores Ice Cream"
+},
+{
+"group": "meals",
+"id": "recipe-burgers",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"meat: ground beef, ground chuck (80/20), or ground beef short ribs",
+"cast iron pan or grill",
+"for the pan, use beef fat or cook bacon first (don't use butter)",
+"kaiser roll / potato roll, plain toasted",
+"lettuce/tomato/ketchup/dill pickles"
+]
+},
+"notes": [
+"Volcano Shape: dimple an outer-circle so that the middle and outer edge are highest (this shape is best to allow the burger to expand while cooking)",
+"Cast Iron Pan: a pan with sides are better than a flat skillet for convective heat",
+"Season with salt right-before cooking to help dry out the burger and form the crust (keeps the juice inside)",
+"Munster cheese (melts like American, but has flavor)"
+],
+"rating": 2,
+"recipe": [
+"See notes section. Brief instructions below",
+"Work the meat into a patty until it sticks to your hand and won't fall off. Work to the diameter of the bun, but to a thickness of your thumb. Form into a volcano shape",
+"Season with salt. Set on pan and cook until browned. Add onion on top and flip. Cook until firm (medium-well). Add a slice of Munster and let partially melt. The cheese will continue to melt when removed"
+],
+"source": "https://www.youtube.com/watch?v=ERUugjLmwuY",
+"title": "Burgers"
 },
 {
 "group": "meals",
@@ -1375,6 +1447,33 @@ var localDB = {
 },
 {
 "group": "pasta",
+"id": "recipe-black_bean_pasta_bowl",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1.25 cups elbow macaroni, uncooked",
+"1 can (15 oz) black beans, drained and rinsed",
+"1 can (10 oz) rotel diced tomatoes & green chilies, undrained",
+"1 can corn",
+"3 tbsp barbecue sauce",
+"1/4 tsp ground cumin",
+"1/2 cup shredded cheddar cheese"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"Cook macaroni",
+"In a large saucepan over medium heat all ingredients (except cheese) until hot",
+"Combine. Sprinkle in cheese"
+],
+"source": "https://www.readyseteat.com/recipes-Black-Bean-Pasta-Bowl-5258",
+"title": "Black Bean Pasta Bowl"
+},
+{
+"group": "pasta",
 "id": "recipe-cherry_tomato_spaghetti",
 "imgPlaceholder": "dist/imgs/placeholder_pasta-cherry_tomato_spaghetti.svg",
 "imgSrc": "dist/imgs/pasta-cherry_tomato_spaghetti.jpeg",
@@ -1486,6 +1585,45 @@ var localDB = {
 ],
 "source": "http://exploitsofamilitarymama.com/2012/08/slutty-orzo/",
 "title": "Orzo And Cheese"
+},
+{
+"group": "pasta",
+"id": "recipe-pasta_e_ceci",
+"imgPlaceholder": "dist/imgs/placeholder_pasta-pasta_e_ceci.svg",
+"imgSrc": "dist/imgs/pasta-pasta_e_ceci.jpeg",
+"ingredients": {
+"Ingredients": [
+"Ingredients",
+"2 tbsp olive oil",
+"2 cloves garlic, peeled and smashed",
+"3 tbsp tomato paste",
+"1 tsp kosher salt",
+"black pepper",
+"1 can (15-ounce) chickpeas, drained and rinsed",
+"1/2 cup uncooked ditalini or annelini pasta (or in a pinch, macaroni)",
+"2 cups boiling water"
+],
+"Toppings": [
+"Toppings",
+"2 to 3 tbsp olive oil (estimate 1 per serving)",
+"1 clove of garlic, peeled and finely chopped",
+"1 tsp minced fresh rosemary",
+"salt and red pepper flakes"
+]
+},
+"notes": [
+"'Pasta and Chickpeas' - apparently big in Rome?",
+"Photo: made with diced tomatoes, but tomato paste is much more flavorful"
+],
+"rating": 2,
+"recipe": [
+"Start boiling the water",
+"In a med-lg pot, heat oil until simmering. Add garlic and cook until fragrant. Stir in tomato pasta, salt, and pepper and cook for another ~30 seconds. Add the chickpeas, pasta, boiling water.",
+"Lower the heat and simmer for 15-20 minutes until most of the liquid is absorbed",
+"For the finishing, in a small pan, heat oil over med-low heat with garlic, rosemary, salt, and red pepper flakes until sizzling. Drizzle!"
+],
+"source": "https://smittenkitchen.com/2017/10/quick-pasta-and-chickpeas-pasta-e-ceci/",
+"title": "Pasta E Ceci"
 },
 {
 "group": "pasta",
@@ -1873,11 +2011,11 @@ var localDB = {
 "notes": [],
 "rating": 1,
 "recipe": [
-"Preheat oven to 350\u2109 (~10 min)",
+"Preheat oven to 400\u2109",
 "Cover chicken in olive oil and choice of seasonings",
 "Place in oven on tin foil covered pan for 15 minutes",
-"Flip and bake for 12 more minutes",
-"Alt: bake at 400\u00b0F and flip around 12 minutes then cook for 8 more minutes"
+"Flip and bake for 10 more minutes",
+"FYI: cook for 12 min/8 min for thinner pieces"
 ],
 "source": "https://www.craftsy.com/blog/2014/04/baked-chicken-breast-recipe/",
 "title": "Chicken"
@@ -2598,6 +2736,27 @@ var localDB = {
 ],
 "source": "",
 "title": "Aunt Laura'S Spicy Chicken Dip"
+},
+{
+"group": "sides",
+"id": "recipe-bacon",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"bacon"
+]
+},
+"notes": [],
+"rating": 2,
+"recipe": [
+"Pre-heat oven to 400\u00b0F",
+"Line a rimmed baking sheet with parchment paper. Bake for 22 min",
+"Alt: cook in a skillet - faster, but leaves a lot of splatter"
+],
+"source": "https://food52.com/blog/23779-how-to-cook-bacon-best-way-make-bacon-in-the-oven-skillet",
+"title": "Bacon"
 },
 {
 "group": "sides",
@@ -3995,6 +4154,7 @@ var localDB = {
 "ingredients.Combine",
 "ingredients.Combine-Cookie Spread",
 "ingredients.Combine-Cookie Topping",
+"ingredients.Crust",
 "ingredients.Curry",
 "ingredients.DIY Garam Masala",
 "ingredients.DRESSING + SALAD",
@@ -4014,6 +4174,7 @@ var localDB = {
 "ingredients.Seasoning Combinations",
 "ingredients.Seasonings",
 "ingredients.Streusel",
+"ingredients.Tart",
 "ingredients.Toppings",
 "ingredients.Tzatziki Sauce",
 "ingredients.With",
@@ -4069,6 +4230,9 @@ var localDB = {
 "recipe-skillet_peanut_butter_chocolate_chip_blondies:Skillet Peanut Butter Chocolate Chip Blondies:1",
 "recipe-toasted_marshmallow_brownie_crinkles:Toasted Marshmallow Brownie Crinkles:1"
 ],
+"desserts": [
+"recipe-french_chocolate_tart:French Chocolate Tart:2"
+],
 "drinks": [
 "recipe-wine:Wine:3"
 ],
@@ -4078,6 +4242,7 @@ var localDB = {
 "recipe-smores_ice_cream:Smores Ice Cream:3"
 ],
 "meals": [
+"recipe-burgers:Burgers:2",
 "recipe-gyros:Gyros:1",
 "recipe-jambon_beurre:Jambon Beurre:1",
 "recipe-nori_vegetable_wraps:Nori Vegetable Wraps:0",
@@ -4088,10 +4253,12 @@ var localDB = {
 ],
 "pasta": [
 "recipe-baked_ziti:Baked Ziti:2",
+"recipe-black_bean_pasta_bowl:Black Bean Pasta Bowl:1",
 "recipe-cherry_tomato_spaghetti:Cherry Tomato Spaghetti:1",
 "recipe-dragon_noodles:Dragon Noodles:1",
 "recipe-mozzarella_pasta:Mozzarella Pasta:1",
 "recipe-orzo_and_cheese:Orzo And Cheese:1",
+"recipe-pasta_e_ceci:Pasta E Ceci:2",
 "recipe-peanut_noodles:Peanut Noodles:1",
 "recipe-sausage_and_mushroom_penne_pasta:Sausage And Mushroom Penne Pasta:2",
 "recipe-sesame_noodles_with_wilted_greens:Sesame Noodles With Wilted Greens:1",
@@ -4136,6 +4303,7 @@ var localDB = {
 ],
 "sides": [
 "recipe-aunt_laura's_spicy_chicken_dip:Aunt Laura'S Spicy Chicken Dip:1",
+"recipe-bacon:Bacon:2",
 "recipe-bruschetta:Bruschetta:1",
 "recipe-pretzels:Pretzels:0"
 ],
@@ -4222,6 +4390,9 @@ var localDB = {
 "Skillet Peanut Butter Chocolate Chip Blondies",
 "Toasted Marshmallow Brownie Crinkles"
 ],
+"desserts": [
+"French Chocolate Tart"
+],
 "drinks": [
 "Wine"
 ],
@@ -4231,6 +4402,7 @@ var localDB = {
 "Smores Ice Cream"
 ],
 "meals": [
+"Burgers",
 "Gyros",
 "Jambon Beurre",
 "Nori Vegetable Wraps",
@@ -4241,10 +4413,12 @@ var localDB = {
 ],
 "pasta": [
 "Baked Ziti",
+"Black Bean Pasta Bowl",
 "Cherry Tomato Spaghetti",
 "Dragon Noodles",
 "Mozzarella Pasta",
 "Orzo And Cheese",
+"Pasta E Ceci",
 "Peanut Noodles",
 "Sausage And Mushroom Penne Pasta",
 "Sesame Noodles With Wilted Greens",
@@ -4289,6 +4463,7 @@ var localDB = {
 ],
 "sides": [
 "Aunt Laura'S Spicy Chicken Dip",
+"Bacon",
 "Bruschetta",
 "Pretzels"
 ],
