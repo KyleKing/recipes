@@ -700,6 +700,48 @@ var localDB = {
 },
 {
 "group": "dessert",
+"id": "recipe-french_chocolate_tart",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"Crust": [
+"Crust",
+"1.25 cups all-purpose flour",
+"1 tsp sugar",
+"1/2 tsp salt",
+"3/4 stick (6 tablespoons) very cold unsalted butter, cut into bits",
+"1 large egg",
+"1 tsp ice water"
+],
+"Tart": [
+"Tart",
+"1 cup heavy cream",
+"8 oz semi- or bitter-sweet chocolate, very finely chopped",
+"1/2 stick (4 tablespoons) unsalted butter, at room temperature and cut into small pieces",
+"fully baked butter crust, in a tart pan (recipe follows)",
+"lightly sweetened whipped cream",
+"(optional) chocolate shavings, for decoration"
+]
+},
+"notes": [],
+"rating": 2,
+"recipe": [
+"In a food processor, pulse the flour, sugar and salt. Scatter over the bits of butter and pulse until they\u2019re coarsely chopped into the mix",
+"In a small bowl, beat the egg and water together, add the mixture to the machine in three parts and pulse after each one (You want a moist dough that holds together when it\u2019s pinched)",
+"Turn the dough onto a counter, flatten into a disk and place between sheets of parchment or wax paper",
+"Roll out the dough and fit it into a tart pan. Chill (or freeze) the dough for at least 1 hour before baking",
+"Preheat the oven to 400\u00b0. Press a piece of buttered foil on top of the crust and fill with dry rice or beans",
+"Place the pan on a baking sheet lined with parchment paper or a silicone baking mat. Bake for 20 minutes, remove the foil and weights and bake for another 10 minutes, or until golden",
+"Transfer the baking sheet to a rack and let the crust cool to room temperature",
+"In a small saucepan over low heat, cook the cream and chocolate, stirring, until the chocolate melts and the mixture is smooth (~5 min). Keep the heat low\u2014don\u2019t let it bubble!",
+"Turn off the heat and leave the pan on the burner. Slowly add the butter, stirring until the butter melts. When melted, the mixture should be a velvety, slightly shiny ganache. Pour it into the crust",
+"Slide into the fridge and chill until the chocolate is firm (~3 hours). If overnight, cover with plastic wrap"
+],
+"source": "https://www.shortstackeditions.com/blogs/news/recipe-french-chocolate-tart",
+"title": "French Chocolate Tart"
+},
+{
+"group": "dessert",
 "id": "recipe-gingerbread_cookies",
 "imgPlaceholder": "dist/imgs/placeholder_dessert-gingerbread_cookies.svg",
 "imgSrc": "dist/imgs/dessert-gingerbread_cookies.jpeg",
@@ -1000,48 +1042,6 @@ var localDB = {
 "title": "Toasted Marshmallow Brownie Crinkles"
 },
 {
-"group": "desserts",
-"id": "recipe-french_chocolate_tart",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"Crust": [
-"Crust",
-"1.25 cups all-purpose flour",
-"1 tsp sugar",
-"1/2 tsp salt",
-"3/4 stick (6 tablespoons) very cold unsalted butter, cut into bits",
-"1 large egg",
-"1 tsp ice water"
-],
-"Tart": [
-"Tart",
-"1 cup heavy cream",
-"8 oz semi- or bitter-sweet chocolate, very finely chopped",
-"1/2 stick (4 tablespoons) unsalted butter, at room temperature and cut into small pieces",
-"fully baked butter crust, in a tart pan (recipe follows)",
-"lightly sweetened whipped cream",
-"(optional) chocolate shavings, for decoration"
-]
-},
-"notes": [],
-"rating": 2,
-"recipe": [
-"In a food processor, pulse the flour, sugar and salt. Scatter over the bits of butter and pulse until they\u2019re coarsely chopped into the mix",
-"In a small bowl, beat the egg and water together, add the mixture to the machine in three parts and pulse after each one (You want a moist dough that holds together when it\u2019s pinched)",
-"Turn the dough onto a counter, flatten into a disk and place between sheets of parchment or wax paper",
-"Roll out the dough and fit it into a tart pan. Chill (or freeze) the dough for at least 1 hour before baking",
-"Preheat the oven to 400\u00b0. Press a piece of buttered foil on top of the crust and fill with dry rice or beans",
-"Place the pan on a baking sheet lined with parchment paper or a silicone baking mat. Bake for 20 minutes, remove the foil and weights and bake for another 10 minutes, or until golden",
-"Transfer the baking sheet to a rack and let the crust cool to room temperature",
-"In a small saucepan over low heat, cook the cream and chocolate, stirring, until the chocolate melts and the mixture is smooth (~5 min). Keep the heat low\u2014don\u2019t let it bubble!",
-"Turn off the heat and leave the pan on the burner. Slowly add the butter, stirring until the butter melts. When melted, the mixture should be a velvety, slightly shiny ganache. Pour it into the crust",
-"Slide into the fridge and chill until the chocolate is firm (~3 hours). If overnight, cover with plastic wrap"
-],
-"source": "https://www.shortstackeditions.com/blogs/news/recipe-french-chocolate-tart",
-"title": "French Chocolate Tart"
-},
-{
 "group": "drinks",
 "id": "recipe-wine",
 "imgPlaceholder": "dist/imgs/placeholder_drinks-wine.svg",
@@ -1096,9 +1096,9 @@ var localDB = {
 },
 {
 "group": "ice_cream",
-"id": "recipe-chocolate_peanut_butter",
-"imgPlaceholder": "dist/imgs/placeholder_ice_cream-chocolate_peanut_butter.svg",
-"imgSrc": "dist/imgs/ice_cream-chocolate_peanut_butter.jpeg",
+"id": "recipe-chocolate_nutella",
+"imgPlaceholder": "dist/imgs/placeholder_ice_cream-chocolate_nutella.svg",
+"imgSrc": "dist/imgs/ice_cream-chocolate_nutella.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -1109,23 +1109,21 @@ var localDB = {
 "1 cup whole milk",
 "2 cups heavy cream",
 "1/2 tablespoon pure vanilla extract",
-"(optional) ~4 small spoonfuls peanut butter",
+"(optional) nutella or peanut butter",
 "cuisinart ice cream maker"
 ]
 },
-"notes": [
-"Originally, microwaved the peanut butter for 10 seconds and added to the chocolate while mixing",
-"From the Cuisinart Ice Cream Manual"
-],
+"notes": [],
 "rating": 3,
 "recipe": [
 "In a large bowl, whisk together the dry ingredients. Add the milk and beat until combined.",
 "Gently mix in the heavy cream and vanilla. Cover and refrigerate for at least 1 hour (preferably overnight)",
 "Pour the mixture into the ice cream maker and let spin until thickened (15-20 min)",
-"(Haven't tested yet, but probably will work better) Freeze in an air tight container for ~30 min. then mix the peanut butter in with a knife"
+"Move to a tupperware container and freeze for 30 min to 1 hour to thicken",
+"With a knife and in small spoon fulls, swirl in the Nutella or Peanut Butter. There should be clear layers or at least chunks"
 ],
 "source": "https://www.cuisinart.com/share/pdf/manuals/ice-21.pdf",
-"title": "Chocolate Peanut Butter"
+"title": "Chocolate Nutella"
 },
 {
 "group": "ice_cream",
@@ -1223,6 +1221,27 @@ var localDB = {
 ],
 "source": "https://www.youtube.com/watch?v=ERUugjLmwuY",
 "title": "Burgers"
+},
+{
+"group": "meals",
+"id": "recipe-grilled_cheese",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"Butter pan and heat until starts to foam, but not brown",
+"Add one slice and cheese",
+"Shake pan back and forth waiting for sizzle",
+"Add top slice, flip, and cook until browned"
+],
+"source": "",
+"title": "Grilled Cheese"
 },
 {
 "group": "meals",
@@ -2060,38 +2079,46 @@ var localDB = {
 {
 "group": "poultry",
 "id": "recipe-chicken_tacos",
-"imgPlaceholder": "",
-"imgSrc": "",
+"imgPlaceholder": "dist/imgs/placeholder_poultry-chicken_tacos.svg",
+"imgSrc": "dist/imgs/poultry-chicken_tacos.jpeg",
 "ingredients": {
-"ingredients": [
-"Ingredients",
-"1.5 pounds chicken breast",
-"1/2 tsp salt",
-"1/4 tsp freshly ground black pepper",
-"2 tbsps extra-virgin olive oil",
-"1/4 cup chopped white onion",
-"1 (14.5 ounce) can diced tomatoes with juices",
-"1/3 cup fresh lime juice",
-"2 garlic cloves, minced",
-"1 tbsp chili powder",
-"2 tsps red wine vinegar",
-"1 tsp ground cumin",
-"1 tsp dried oregano",
-"1/2 tsp sugar",
-"8 to 12 tortilla shells of your choosing (we like 6-inch corn tortillas)"
+"TBD Taco Seasoning": [
+"Tbd Taco Seasoning",
+"tbd tsp salt",
+"tbd tsp freshly ground black pepper",
+"tbd tbsp extra-virgin olive oil",
+"tbd garlic cloves, minced",
+"tbd tbsp chili powder",
+"tbd tsp ground cumin",
+"tbd tsp dried oregano",
+"tbd onion powder"
+],
+"Tacos": [
+"Tacos",
+"instant pot",
+"2-5 chicken breasts",
+"shredded cheese (cheddar, monterrey jack, mix)",
+"tomatoes, chopped",
+"onions, chopped",
+"lettuce, cabbage, or baby spinach, shredded",
+"salsa",
+"hot sauce",
+"sour cream",
+"salsa",
+"avocado/guacamole"
 ]
 },
 "notes": [
-"Note: If you\u2019re using rotisserie chicken or precooked chicken, prepare the taco sauce as directed, then add the shredded cooked chicken and let it simmer for 10 to 15 minutes to really soak in the sauce"
+"Taco Seasoning recipe is TBD, recipe originally inspired by: https://www.giadzy.com/posts/recipes/452042/taco-tuesday-chicken-tacos"
 ],
-"rating": 0,
+"rating": 3,
 "recipe": [
-"Season chicken breasts with the salt and pepper",
-"In a large skillet, heat the olive oil over medium heat. Cook the chicken until golden, about 3 minutes per side. Add the onion and cook, stirring, until slightly translucent, about 2 minutes. Stir in the tomatoes with their juices, lime juice, garlic, chili powder, vinegar, cumin, oregano, and sugar. Reduce the heat and simmer, uncovered, stirring frequently, until the chicken is cooked through, about 15 minutes.",
-"Transfer the chicken to a cutting board. Use two forks to shred the meat, then transfer it back to the skillet. To allow the taco sauce to really seep into the shredded chicken, simmer for 5 to 8 minutes more.",
-"If you\u2019re using soft shells, warm the tortillas, sandwiched between damp paper towels, for about 30 seconds in the microwave. If you\u2019re using hard shells, put them in a 250\u00b0F oven until warm, about 5 minutes"
+"Place 1 cup of water in an instant pot",
+"Add the chicken and coat with taco seasoning (store bought or DIY)",
+"Cook for 20-30 min (depending on size) at low heat and high pressure. Quick release and pull apart with 2 forks",
+"Serve on tacos with above mix-ins, a quesadilla or sandwich"
 ],
-"source": "https://www.giadzy.com/posts/recipes/452042/taco-tuesday-chicken-tacos",
+"source": "",
 "title": "Chicken Tacos"
 },
 {
@@ -2659,30 +2686,38 @@ var localDB = {
 "group": "seafood",
 "id": "recipe-shrimp_scampi",
 "imgPlaceholder": "dist/imgs/placeholder_seafood-shrimp_scampi.svg",
-"imgSrc": "dist/imgs/seafood-shrimp_scampi.jpg",
+"imgSrc": "dist/imgs/seafood-shrimp_scampi.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
-"pasta",
-"cooked shrimp",
-"spinach, peas, or etc.",
-"olive oil",
-"garlic powder",
-"italian seasoning",
-"parsley",
-"parmesan cheese",
-"lemon juice",
-"red pepper flakes (optional)"
+"1/2 box of spaghetti or linguine",
+"3 tbsp butter",
+"4 tbsp extra-virgin olive oil",
+"6 garlic cloves, minced",
+"1/2 cup dry white wine",
+"3/4 tsp kosher salt",
+"1/2 tsp crushed red pepper flakes, or to taste",
+"~2 tsp ground black pepper",
+"1-2 lbs raw (defrosted) shrimp, peeled and deveined (can be shell-on)",
+"1/3 cup chopped parsley",
+"lemon juice, half of a lemon",
+"parmesan cheese"
 ]
 },
 "notes": [
-"You can use imitation crab meat in place of shrimp"
+"*Save some of the starchy pasta water to help thicken up the sauce when combining",
+"Seasonings were slightly increase to taste. Could also be served with bread, but the ratios may need to be adjusted",
+"Btw, Scampi are a small lobster common in the North Atlantic/Mediterranean, but Shrimp is commonly substituted, especially in the US"
 ],
-"rating": 1,
+"rating": 3,
 "recipe": [
-"Make the pasta according to directions. Drain pot then add all ingredients, stir, and heat until warm"
+"Make the pasta according to directions",
+"In a large skillet, melt butter with olive oil. Add garlic and saute until fragrant, about 1 minute",
+"Add wine, salt, red pepper flakes, and plenty of black pepper. Bring to a simmer and let the wine reduce by half, about 2 minutes.",
+"Add shrimp and saute until they just turn pink (2-4 min depending upon their size)",
+"Stir in the parsley and lemon juice and serve over pasta or accompanied by crusty bread."
 ],
-"source": "",
+"source": "https://cooking.nytimes.com/recipes/9101-classic-shrimp-scampi",
 "title": "Shrimp Scampi"
 },
 {
@@ -3056,7 +3091,7 @@ var localDB = {
 "notes": [
 "From Cravings by Chrissy Teigen, page 51-52. Also includes recipe for crackers"
 ],
-"rating": 1,
+"rating": 3,
 "recipe": [
 "In a saucepan, bring the broth and milk to a simmer. Keep at simmer",
 "Prep the carrots and potato",
@@ -4174,6 +4209,8 @@ var localDB = {
 "ingredients.Seasoning Combinations",
 "ingredients.Seasonings",
 "ingredients.Streusel",
+"ingredients.TBD Taco Seasoning",
+"ingredients.Tacos",
 "ingredients.Tart",
 "ingredients.Toppings",
 "ingredients.Tzatziki Sauce",
@@ -4220,6 +4257,7 @@ var localDB = {
 "recipe-collens_peanut_butter_bars:Collens Peanut Butter Bars:0",
 "recipe-cookie_dough_billionaire_bars:Cookie Dough Billionaire Bars:0",
 "recipe-flourless_chocolate_cake:Flourless Chocolate Cake:2",
+"recipe-french_chocolate_tart:French Chocolate Tart:2",
 "recipe-gingerbread_cookies:Gingerbread Cookies:1",
 "recipe-hot_fudge_sauce:Hot Fudge Sauce:3",
 "recipe-molten_chocolate_cake:Molten Chocolate Cake:3",
@@ -4230,19 +4268,17 @@ var localDB = {
 "recipe-skillet_peanut_butter_chocolate_chip_blondies:Skillet Peanut Butter Chocolate Chip Blondies:1",
 "recipe-toasted_marshmallow_brownie_crinkles:Toasted Marshmallow Brownie Crinkles:1"
 ],
-"desserts": [
-"recipe-french_chocolate_tart:French Chocolate Tart:2"
-],
 "drinks": [
 "recipe-wine:Wine:3"
 ],
 "ice_cream": [
-"recipe-chocolate_peanut_butter:Chocolate Peanut Butter:3",
+"recipe-chocolate_nutella:Chocolate Nutella:3",
 "recipe-mint_chocolate_chunk:Mint Chocolate Chunk:2",
 "recipe-smores_ice_cream:Smores Ice Cream:3"
 ],
 "meals": [
 "recipe-burgers:Burgers:2",
+"recipe-grilled_cheese:Grilled Cheese:1",
 "recipe-gyros:Gyros:1",
 "recipe-jambon_beurre:Jambon Beurre:1",
 "recipe-nori_vegetable_wraps:Nori Vegetable Wraps:0",
@@ -4276,7 +4312,7 @@ var localDB = {
 "recipe-brick_chicken:Brick Chicken:3",
 "recipe-chicken:Chicken:1",
 "recipe-chicken_cacciatore:Chicken Cacciatore:2",
-"recipe-chicken_tacos:Chicken Tacos:0",
+"recipe-chicken_tacos:Chicken Tacos:3",
 "recipe-chicken_tikka_masala:Chicken Tikka Masala:2",
 "recipe-enchiladas:Enchiladas:3",
 "recipe-fajitas:Fajitas:1",
@@ -4298,7 +4334,7 @@ var localDB = {
 "recipe-baked-fish:Baked-Fish:1",
 "recipe-crab_cakes:Crab Cakes:2",
 "recipe-shrimp_creole:Shrimp Creole:3",
-"recipe-shrimp_scampi:Shrimp Scampi:1",
+"recipe-shrimp_scampi:Shrimp Scampi:3",
 "recipe-shrimp_tacos:Shrimp Tacos:1"
 ],
 "sides": [
@@ -4313,7 +4349,7 @@ var localDB = {
 "recipe-french_onion_soup:French Onion Soup:3",
 "recipe-johns_chili:Johns Chili:2",
 "recipe-parmesan_minestrone:Parmesan Minestrone:2",
-"recipe-pot_pie_soup:Pot Pie Soup:1",
+"recipe-pot_pie_soup:Pot Pie Soup:3",
 "recipe-slow_cooker_chicken_mango_curry:Slow Cooker Chicken Mango Curry:0",
 "recipe-slow_cooker_chicken_tortilla_soup:Slow Cooker Chicken Tortilla Soup:2",
 "recipe-spring_chicken_stew:Spring Chicken Stew:2"
@@ -4380,6 +4416,7 @@ var localDB = {
 "Collens Peanut Butter Bars",
 "Cookie Dough Billionaire Bars",
 "Flourless Chocolate Cake",
+"French Chocolate Tart",
 "Gingerbread Cookies",
 "Hot Fudge Sauce",
 "Molten Chocolate Cake",
@@ -4390,19 +4427,17 @@ var localDB = {
 "Skillet Peanut Butter Chocolate Chip Blondies",
 "Toasted Marshmallow Brownie Crinkles"
 ],
-"desserts": [
-"French Chocolate Tart"
-],
 "drinks": [
 "Wine"
 ],
 "ice_cream": [
-"Chocolate Peanut Butter",
+"Chocolate Nutella",
 "Mint Chocolate Chunk",
 "Smores Ice Cream"
 ],
 "meals": [
 "Burgers",
+"Grilled Cheese",
 "Gyros",
 "Jambon Beurre",
 "Nori Vegetable Wraps",
