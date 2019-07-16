@@ -616,6 +616,28 @@ var localDB = {
 },
 {
 "group": "dessert",
+"id": "recipe-cookie_bars",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-cookie_bars.svg",
+"imgSrc": "dist/imgs/dessert-cookie_bars.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1 pkg cake mix",
+"2 eggs",
+"5 tbsp melted butter",
+"1 bag chocolate chips"
+]
+},
+"notes": [],
+"rating": 2,
+"recipe": [
+"Mix all together in a 9x13 pan and bake at 350 for 20-25 minutes"
+],
+"source": "",
+"title": "Cookie Bars"
+},
+{
+"group": "dessert",
 "id": "recipe-cookie_dough_billionaire_bars",
 "imgPlaceholder": "",
 "imgSrc": "",
@@ -1195,8 +1217,8 @@ var localDB = {
 {
 "group": "meals",
 "id": "recipe-burgers",
-"imgPlaceholder": "",
-"imgSrc": "",
+"imgPlaceholder": "dist/imgs/placeholder_meals-burgers.svg",
+"imgSrc": "dist/imgs/meals-burgers.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -1305,6 +1327,58 @@ var localDB = {
 ],
 "source": "https://www.youtube.com/watch?v=ge49xawecJk",
 "title": "Jambon Beurre"
+},
+{
+"group": "meals",
+"id": "recipe-lasagna",
+"imgPlaceholder": "dist/imgs/placeholder_meals-lasagna.svg",
+"imgSrc": "dist/imgs/meals-lasagna.jpeg",
+"ingredients": {
+"Garnish": [
+"Garnish",
+"1/4 cup freshly grated parmesan",
+"1/4 cup chopped parsley"
+],
+"Meat/Sauce": [
+"Meat/Sauce",
+"(optional) 1 lb ground beef (and/or spicy sausage)",
+"2 cloves garlic, minced",
+"1 tsp dried oregano",
+"2 tsp basil",
+"kosher salt",
+"freshly ground black pepper",
+"1-2 (32 oz) jars of marinara"
+],
+"Ricotta Cheese Mix": [
+"Ricotta Cheese Mix",
+"16 oz whole milk ricotta",
+"1/4 cup freshly grated parmesan",
+"1/4 cup chopped parsley"
+],
+"Standalone": [
+"Standalone",
+"12 oz lasagna noodles",
+"1.5 lb sliced or shredded mozzarella",
+"(optional) 1-2 cup spinach"
+]
+},
+"notes": [
+"In a dark aluminum pan, i needed to extend the cook time from 15 covered/20 uncovered min to 25/35 min to soften the noodles, which came pre-cooked"
+],
+"rating": 3,
+"recipe": [
+"On med-high heat, cook the meat (ground beef or spinach), breaking into small pieces with a wooden spoon until no longer pink",
+"If the noodles need to be boiled, prep boiling water and cook for only ~2 minutes until very al dente. May need to coat with a small amount of olive oil to prevent sticking",
+"Pre-heat oven to 375",
+"Drain and paper towel off any excess fat. In the same pan, add garlic, spices (oregano, basil, salt, and pepper), and 1 jar of marinara sauce (save the rest)",
+"In a mixing bowl, combine the ricotta, Parmesan, and parsley. Season with salt and pepper",
+"In a large casserole dish, spread thin layers of meat sauce/noodles/ricotta mix/sliced mozzarella. Repeat about 4 times until all of the noodles are used (ricotta should finish on n-1 layers). If needed, add additional marinara sauce",
+"Top last layer of noodles with meat sauce, then Parmesan and mozzarella",
+"Cover with foil and bake for 15 minutes. Increase to 400 and bake uncovered for 20 min - *see notes for aluminum pans",
+"Garnish with parsley and basil"
+],
+"source": "https://www.delish.com/cooking/recipe-ideas/recipes/a51337/classic-lasagna-recipe/",
+"title": "Lasagna"
 },
 {
 "group": "meals",
@@ -1519,6 +1593,31 @@ var localDB = {
 ],
 "source": "https://www.giadzy.com/posts/recipes/436491/cherry-tomato-spaghetti",
 "title": "Cherry Tomato Spaghetti"
+},
+{
+"group": "pasta",
+"id": "recipe-creamy_lemon_pasta",
+"imgPlaceholder": "dist/imgs/placeholder_pasta-creamy_lemon_pasta.svg",
+"imgSrc": "dist/imgs/pasta-creamy_lemon_pasta.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"12 oz wide egg noodles",
+"2 lemons, juice and zest cut into very thin 1 in strips",
+"1 cup heavy cream",
+"salt, to taste",
+"lots of freshly ground black pepper"
+]
+},
+"notes": [],
+"rating": 2,
+"recipe": [
+"Cook pasta according to directions",
+"Just before noodles are done, in a small saucepan combine the lemon zest, cream, salt and pepper. Cook over medium heat for 2 minutes, or until cream comes to a boil",
+"Pour cream mixture over drained noodles and add the lemon juice. Cook over medium heat, stirring, until all the liquid is absorbed (1-2 min). Season with additional pepper"
+],
+"source": "https://cooking.nytimes.com/recipes/8355-creamy-lemon-pasta",
+"title": "Creamy Lemon Pasta"
 },
 {
 "group": "pasta",
@@ -2082,25 +2181,24 @@ var localDB = {
 "imgPlaceholder": "dist/imgs/placeholder_poultry-chicken_tacos.svg",
 "imgSrc": "dist/imgs/poultry-chicken_tacos.jpeg",
 "ingredients": {
-"TBD Taco Seasoning": [
-"Tbd Taco Seasoning",
-"tbd tsp salt",
-"tbd tsp freshly ground black pepper",
-"tbd tbsp extra-virgin olive oil",
-"tbd garlic cloves, minced",
-"tbd tbsp chili powder",
-"tbd tsp ground cumin",
-"tbd tsp dried oregano",
-"tbd onion powder"
+"Taco Seasoning (or use store bought)": [
+"Taco Seasoning (Or Use Store Bought)",
+"1 tsp salt",
+"1 tsp ground cumin",
+"1 tsp chili powder",
+"1 tsp garlic powder",
+"1 15-ounce can fire roasted tomatoes"
 ],
 "Tacos": [
 "Tacos",
 "instant pot",
 "2-5 chicken breasts",
-"shredded cheese (cheddar, monterrey jack, mix)",
+"corn or flour taco-size tortillas",
+"shredded cheese (cheddar, monterrey jack, or mix)",
 "tomatoes, chopped",
 "onions, chopped",
 "lettuce, cabbage, or baby spinach, shredded",
+"cilantro",
 "salsa",
 "hot sauce",
 "sour cream",
@@ -2108,17 +2206,14 @@ var localDB = {
 "avocado/guacamole"
 ]
 },
-"notes": [
-"Taco Seasoning recipe is TBD, recipe originally inspired by: https://www.giadzy.com/posts/recipes/452042/taco-tuesday-chicken-tacos"
-],
+"notes": [],
 "rating": 3,
 "recipe": [
-"Place 1 cup of water in an instant pot",
-"Add the chicken and coat with taco seasoning (store bought or DIY)",
+"Place 1 cup of water in an instant pot. Add the chicken and coat with taco seasoning (store bought or DIY seasoning)",
 "Cook for 20-30 min (depending on size) at low heat and high pressure. Quick release and pull apart with 2 forks",
-"Serve on tacos with above mix-ins, a quesadilla or sandwich"
+"Serve on tacos with above mix-ins, a Quesadillas, or sandwich"
 ],
-"source": "",
+"source": "https://www.lecremedelacrumb.com/instant-pot-shredded-chicken-tacos/",
 "title": "Chicken Tacos"
 },
 {
@@ -2824,6 +2919,58 @@ var localDB = {
 },
 {
 "group": "sides",
+"id": "recipe-favorite_snacks",
+"imgPlaceholder": "dist/imgs/placeholder_sides-favorite_snacks.svg",
+"imgSrc": "dist/imgs/sides-favorite_snacks.jpg",
+"ingredients": {
+"Favorite Snacks": [
+"Favorite Snacks",
+"kettle jalapeno chips"
+],
+"Yogurt's": [
+"Yogurt'S",
+"chobani cherry",
+"chobani raspberry",
+"siggi's raspberry",
+"siggi's vanilla"
+]
+},
+"notes": [
+"Reference notes for Alex's favorite lunch sides"
+],
+"rating": 0,
+"recipe": [],
+"source": "",
+"title": "Favorite Snacks"
+},
+{
+"group": "sides",
+"id": "recipe-ikea_meatball_sauce",
+"imgPlaceholder": "dist/imgs/placeholder_sides-ikea_meatball_sauce.svg",
+"imgSrc": "dist/imgs/sides-ikea_meatball_sauce.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"meatball packet",
+"water",
+"salt",
+"heavy cream"
+]
+},
+"notes": [
+"The small amount of salt and thoroughly mixing before adding cream appear to be very effective",
+"Alt with stock: https://www.food.com/recipe/cream-sauce-for-meatballs-ikea-style-424504"
+],
+"rating": 2,
+"recipe": [
+"See directions on the packet as the instructions may change",
+"Boil water, add powder, and add a small amount of salt. Thoroughly mix on medium heat until few chunks remain. Add the cream and stir. Serve over IKEA meatballs. Makes enough for ~20 meatballs"
+],
+"source": "",
+"title": "Ikea Meatball Sauce"
+},
+{
+"group": "sides",
 "id": "recipe-pretzels",
 "imgPlaceholder": "",
 "imgSrc": "",
@@ -3210,7 +3357,7 @@ var localDB = {
 ],
 "rating": 2,
 "recipe": [
-"Trim roots and darkest green from leeks. Thinly slice and submerge in a large bowl of water. Swish and separate rings to release grit. Drain and repeat. Then drain thoroughly",
+"Trim the bottom roots and tough upper green from leeks. Thinly slice into rounds. Submerge in a bowl of cold water and shake to remove grit. Lift out the sliced leeks by hand and dry in a colander, change the water and re-submerge/shake. Repeat until clean",
 "In an Instant Pot, heat the oil on saute. Add leeks and carrots. Cook 5 min until golden, stirring occasionally.",
 "Stir in the flour. Add the white wine, chicken broth, thyme, potatoes, salt, and pepper. Top with chicken.",
 "Seal and set to high pressure. Cook 10 and natural release 10 min (set out frozen peas to defrost)",
@@ -4197,24 +4344,30 @@ var localDB = {
 "ingredients.FOR THE BENEDICT AND ASSEMBLY",
 "ingredients.FOR THE HOLLANDAISE",
 "ingredients.FOR THE POACHED EGGS",
+"ingredients.Favorite Snacks",
+"ingredients.Garnish",
 "ingredients.Garnish Options",
 "ingredients.Indian Simmer Sauce",
 "ingredients.Ingredients",
 "ingredients.Main",
+"ingredients.Meat/Sauce",
 "ingredients.Optional Garnish",
 "ingredients.Other Ingredients",
 "ingredients.Peanut Noodles",
+"ingredients.Ricotta Cheese Mix",
 "ingredients.Sauce",
 "ingredients.Saute in Olive Oil",
 "ingredients.Seasoning Combinations",
 "ingredients.Seasonings",
+"ingredients.Standalone",
 "ingredients.Streusel",
-"ingredients.TBD Taco Seasoning",
+"ingredients.Taco Seasoning (or use store bought)",
 "ingredients.Tacos",
 "ingredients.Tart",
 "ingredients.Toppings",
 "ingredients.Tzatziki Sauce",
 "ingredients.With",
+"ingredients.Yogurt's",
 "ingredients.combinations",
 "ingredients.dressing",
 "ingredients.dumplings",
@@ -4255,6 +4408,7 @@ var localDB = {
 "recipe-chocolate_frosting_recipe:Chocolate Frosting Recipe:3",
 "recipe-chocolatines:Chocolatines:1",
 "recipe-collens_peanut_butter_bars:Collens Peanut Butter Bars:0",
+"recipe-cookie_bars:Cookie Bars:2",
 "recipe-cookie_dough_billionaire_bars:Cookie Dough Billionaire Bars:0",
 "recipe-flourless_chocolate_cake:Flourless Chocolate Cake:2",
 "recipe-french_chocolate_tart:French Chocolate Tart:2",
@@ -4281,6 +4435,7 @@ var localDB = {
 "recipe-grilled_cheese:Grilled Cheese:1",
 "recipe-gyros:Gyros:1",
 "recipe-jambon_beurre:Jambon Beurre:1",
+"recipe-lasagna:Lasagna:3",
 "recipe-nori_vegetable_wraps:Nori Vegetable Wraps:0",
 "recipe-oven-baked_sausage:Oven-Baked Sausage:2",
 "recipe-quick_skillet_meals:Quick Skillet Meals:2",
@@ -4291,6 +4446,7 @@ var localDB = {
 "recipe-baked_ziti:Baked Ziti:2",
 "recipe-black_bean_pasta_bowl:Black Bean Pasta Bowl:1",
 "recipe-cherry_tomato_spaghetti:Cherry Tomato Spaghetti:1",
+"recipe-creamy_lemon_pasta:Creamy Lemon Pasta:2",
 "recipe-dragon_noodles:Dragon Noodles:1",
 "recipe-mozzarella_pasta:Mozzarella Pasta:1",
 "recipe-orzo_and_cheese:Orzo And Cheese:1",
@@ -4341,6 +4497,8 @@ var localDB = {
 "recipe-aunt_laura's_spicy_chicken_dip:Aunt Laura'S Spicy Chicken Dip:1",
 "recipe-bacon:Bacon:2",
 "recipe-bruschetta:Bruschetta:1",
+"recipe-favorite_snacks:Favorite Snacks:0",
+"recipe-ikea_meatball_sauce:Ikea Meatball Sauce:2",
 "recipe-pretzels:Pretzels:0"
 ],
 "soup": [
@@ -4414,6 +4572,7 @@ var localDB = {
 "Chocolate Frosting Recipe",
 "Chocolatines",
 "Collens Peanut Butter Bars",
+"Cookie Bars",
 "Cookie Dough Billionaire Bars",
 "Flourless Chocolate Cake",
 "French Chocolate Tart",
@@ -4440,6 +4599,7 @@ var localDB = {
 "Grilled Cheese",
 "Gyros",
 "Jambon Beurre",
+"Lasagna",
 "Nori Vegetable Wraps",
 "Oven-Baked Sausage",
 "Quick Skillet Meals",
@@ -4450,6 +4610,7 @@ var localDB = {
 "Baked Ziti",
 "Black Bean Pasta Bowl",
 "Cherry Tomato Spaghetti",
+"Creamy Lemon Pasta",
 "Dragon Noodles",
 "Mozzarella Pasta",
 "Orzo And Cheese",
@@ -4500,6 +4661,8 @@ var localDB = {
 "Aunt Laura'S Spicy Chicken Dip",
 "Bacon",
 "Bruschetta",
+"Favorite Snacks",
+"Ikea Meatball Sauce",
 "Pretzels"
 ],
 "soup": [
