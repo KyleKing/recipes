@@ -475,16 +475,17 @@ var localDB = {
 {
 "group": "dessert",
 "id": "recipe-chocolate_chip_cookies",
-"imgPlaceholder": "dist/imgs/placeholder_dessert-chocolate_chip_cookies.svg",
-"imgSrc": "dist/imgs/dessert-chocolate_chip_cookies.jpeg",
+"imgPlaceholder": "",
+"imgSrc": "",
 "ingredients": {
 "ingredients": [
 "Ingredients",
 "2.25 cups all-purpose flour",
 "1 tsp baking soda",
-"1 cup (2 sticks) butter",
+"1 tsp salt",
+"1 cup (2 sticks) butter, softened",
 "3/4 cup granulated sugar",
-"3/4 cup packed brown sugar",
+"3/4 cup brown sugar, packed",
 "1 tsp vanilla extract",
 "2 large eggs",
 "2 cups (12 oz) chocolate chips",
@@ -492,22 +493,64 @@ var localDB = {
 ]
 },
 "notes": [
-"Source: Recipe from the back of a Nestle Chocolate Chip Bag",
-"The picture is actually from the Joy of Cooking, but the cookies were way too sugary (1:1 flour:sugar)"
+"Also see the Chocolate Chip Oatmeal Cookies",
+"And a PB version: https://www.verybestbaking.com/recipes/144792/peanut-butter-chocolate-chip-cookies/",
+"Or https://www.verybestbaking.com/recipes/30364/chunky-chocolate-chip-peanut-butter-cookies/"
 ],
-"rating": 1,
+"rating": 3,
 "recipe": [
 "Soften butter at room temperature",
 "Preheat oven to 375F",
 "In a small bowl, combine flour, baking soda, and salt",
 "In a large mixing bowl, combine butter, sugars, and vanilla extract until creamy",
-"Add eggs beating well",
-"Beat in flour gradually",
-"Stir in toppings",
-"Place on a light colored ungreased baking sheet. Bake 9-11 minutes until golden brown. Cool on a wire rack"
+"- Add eggs one at a time beating well",
+"- Beat in flour gradually",
+"- Stir in morsels and nuts/flour",
+"Measure out rounded tbsp of dough on a light colored ungreased baking sheet",
+"Bake 9-11 minutes until golden brown. Cool the baking sheet for 2 min on a wire rack, then transfer cookies to a wire rack"
 ],
-"source": "",
+"source": "https://www.verybestbaking.com/recipes/32014/original-nestle-toll-house-milk-chocolate-chip-cookies/",
 "title": "Chocolate Chip Cookies"
+},
+{
+"group": "dessert",
+"id": "recipe-chocolate_chip_oatmeal_cookies",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1.75 cups all-purpose flour",
+"1 tsp baking soda",
+"1/2 tsp salt",
+"1 cup (2 sticks) butter, softened",
+"1/2 cup granulated sugar",
+"1.25 cup brown sugar, packed",
+"2 tsp vanilla extract",
+"2 tbsp milk",
+"2 large eggs",
+"2.5 cup quick or old-fashioned oats",
+"2 cups (12 oz) chocolate chips"
+]
+},
+"notes": [
+"Pan Cookie Variation: Grease 15 x 10-inch jelly-roll pan. Prepare dough as above. Spread into pan. Bake for 20 to 25 minutes or until golden brown. Cool in pan on wire rack. Makes 4 dozen bars."
+],
+"rating": 3,
+"recipe": [
+"Soften butter at room temperature",
+"Preheat oven to 375F",
+"In a small bowl, combine flour, baking soda, and salt",
+"In a large mixing bowl, combine butter and sugars until creamy",
+"- Add vanilla extract and milk",
+"- Add eggs one at a time beating well",
+"- Beat in flour gradually",
+"- Stir in oats and morsels",
+"Measure out rounded tbsp of fough on a light colored ungreased baking sheet",
+"Bake 9-11 minutes until golden brown. Cool on a wire rack"
+],
+"source": "https://www.verybestbaking.com/recipes/30173/choc-oat-chip-cookies/",
+"title": "Chocolate Chip Oatmeal Cookies"
 },
 {
 "group": "dessert",
@@ -983,6 +1026,36 @@ var localDB = {
 ],
 "source": "",
 "title": "Peanut Butter And Cocoa Smothie"
+},
+{
+"group": "dessert",
+"id": "recipe-pineapple_upside_down_cake",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"yellow cake mix",
+"1/2 cup (1 stick) butter",
+"1 cup packed brown sugar",
+"1 (20 oz) can pineapple slices",
+"maraschino cherries",
+"whipped cream"
+]
+},
+"notes": [],
+"rating": 2,
+"recipe": [
+"Preheat oven to 350F. Pour melted butter in 13x9-inch pan and sprinkle with brown sugar",
+"Arrange pineapple slices and cherries on top of brown sugar",
+"Combine the yellow cake mix (eggs, oil, etc.) but replace all or some of the water with Pineapple juice for extra flavor",
+"Beat with an electric mixer at medium speed then pour over pineapple and cherries in pan",
+"Bake 40 minutes or until toothpick inserted in center comes out clean",
+"Cool cake on wire rack for 5 minutes",
+"Run knife around sides of pan to loosen cake. Invert cake onto serving platter. Drizzle any remaining pan juices over cake. Serve warm or cool"
+],
+"source": "https://duncanhines.com/recipe/double-pineapple-upside-down-cake/",
+"title": "Pineapple Upside Down Cake"
 },
 {
 "group": "dessert",
@@ -2084,20 +2157,22 @@ var localDB = {
 "ingredients": [
 "Ingredients",
 "1/3 cup extra-virgin olive oil",
-"3 tbsp fresh rosemary, chopped",
-"2 tbsp fresh sage, finely chopped",
+"3 tbsp fresh rosemary, chopped (or 1 tbsp ground)",
+"2 tbsp fresh sage, finely chopped (or 2 tsp ground)",
 "1.5 tbsp red pepper flakes",
 "4 chicken thighs",
-"salt & pepper",
+"1/2 tsp pepper",
+"1/4 tsp salt",
 "2 lemons, zest",
 "2 lemons, quartered",
-"2 tbsp canola oil (or sunflower oil)",
+"1 tbsp sunflower oil/high-heat oil (if needed)",
 "2 bricks, double wrapped in tin foil",
 "cast iron skillet"
 ]
 },
 "notes": [
-"Chrissy Teigen Cravings, 218"
+"Chrissy Teigen Cravings, 218",
+"Alt, can be baked in a glass pan at 400 for 30-40 min for large pieces"
 ],
 "rating": 3,
 "recipe": [
@@ -2844,8 +2919,8 @@ var localDB = {
 {
 "group": "sides",
 "id": "recipe-aunt_laura's_spicy_chicken_dip",
-"imgPlaceholder": "",
-"imgSrc": "",
+"imgPlaceholder": "dist/imgs/placeholder_sides-aunt_laura's_spicy_chicken_dip.svg",
+"imgSrc": "dist/imgs/sides-aunt_laura's_spicy_chicken_dip.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -4257,7 +4332,7 @@ var localDB = {
 "sauce": [
 "Sauce",
 "2/3 stick butter",
-"1/4 cup fresh sage leaves, chopped",
+"1/4 cup fresh sage leaves, chopped or 2-4 tsp of ground",
 "1/2 cup finely grated parmesan",
 "salt and pepper"
 ]
@@ -4404,7 +4479,8 @@ var localDB = {
 "recipe-blueberry_sour_cream_muffins:Blueberry Sour Cream Muffins:2",
 "recipe-cake_pops:Cake Pops:1",
 "recipe-chocolate-pb-m&m_balls:Chocolate-Pb-M&M Balls:0",
-"recipe-chocolate_chip_cookies:Chocolate Chip Cookies:1",
+"recipe-chocolate_chip_cookies:Chocolate Chip Cookies:3",
+"recipe-chocolate_chip_oatmeal_cookies:Chocolate Chip Oatmeal Cookies:3",
 "recipe-chocolate_frosting_recipe:Chocolate Frosting Recipe:3",
 "recipe-chocolatines:Chocolatines:1",
 "recipe-collens_peanut_butter_bars:Collens Peanut Butter Bars:0",
@@ -4419,6 +4495,7 @@ var localDB = {
 "recipe-oatmeal_raisin_cookies:Oatmeal Raisin Cookies:2",
 "recipe-oreo_truffles:Oreo Truffles:1",
 "recipe-peanut_butter_and_cocoa_smothie:Peanut Butter And Cocoa Smothie:1",
+"recipe-pineapple_upside_down_cake:Pineapple Upside Down Cake:2",
 "recipe-skillet_peanut_butter_chocolate_chip_blondies:Skillet Peanut Butter Chocolate Chip Blondies:1",
 "recipe-toasted_marshmallow_brownie_crinkles:Toasted Marshmallow Brownie Crinkles:1"
 ],
@@ -4569,6 +4646,7 @@ var localDB = {
 "Cake Pops",
 "Chocolate-Pb-M&M Balls",
 "Chocolate Chip Cookies",
+"Chocolate Chip Oatmeal Cookies",
 "Chocolate Frosting Recipe",
 "Chocolatines",
 "Collens Peanut Butter Bars",
@@ -4583,6 +4661,7 @@ var localDB = {
 "Oatmeal Raisin Cookies",
 "Oreo Truffles",
 "Peanut Butter And Cocoa Smothie",
+"Pineapple Upside Down Cake",
 "Skillet Peanut Butter Chocolate Chip Blondies",
 "Toasted Marshmallow Brownie Crinkles"
 ],
