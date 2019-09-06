@@ -321,29 +321,40 @@ var localDB = {
 "ingredients": {
 "ingredients": [
 "Ingredients",
-"1\u20442 cup butter",
-"1 cup sugar",
-"2 eggs, beaten",
-"3 bananas, finely crushed (for serious and extreme moist and delicious, try 4 bananas)",
-"1 1\u20442 cups flour",
+"1/2 cup unsalted butter, room temperature",
+"2/3 cup brown sugar, light or dark, firmly packed",
+"1 tsp vanilla extract",
+"1 tsp ground cinnamon",
+"1/4 tsp ground nutmeg",
 "1 tsp baking soda",
-"1\u20442 tsp salt",
-"1\u20442 tsp vanilla (optional)"
+"1 tsp baking powder",
+"1 tsp salt",
+"1.5 cups mashed ripe bananas (about 3 medium or 2 large bananas)",
+"3 tbsp apricot jam or orange marmalade (optional)",
+"1/4 cup honey",
+"2 large eggs",
+"2.25 cups flour",
+"1/2 cup chopped walnuts (optional)"
 ]
 },
-"notes": [],
-"rating": 2,
-"recipe": [
-"Preheat oven to 350F",
-"Cream together butter and sugar",
-"Add eggs and crushed bananas",
-"Combine well",
-"Sift together flour, soda and salt. Add to creamed mixture. Add vanilla",
-"Mix just until combined. Do not over mix",
-"Pour into greased and floured loaf pan",
-"Bake for 55 minutes"
+"notes": [
+"Reader Tip: For a reduced-sugar version of this bread, cut the brown sugar in half (to 1/3 cup). Still retains moist texture and taste fine \u2014 simply less sweet, more banana-y",
+"Reader Tip: An easy way to mash bananas is to peel, cut into chunks, and place in a zip-top plastic bag, leaving about 1/4\" open at the top of the bag for air to escape. Gently knead/flatten/squash the banana chunks with your fingers"
 ],
-"source": "https://www.geniuskitchen.com/recipe/best-banana-bread-2886",
+"rating": 3,
+"recipe": [
+"Preheat 325F. Lightly grease a 9\"x5\" loaf pan or a 12\"x4\" tea loaf pan",
+"In a large bowl, combine butter, sugar, vanilla, cinnamon, nutmeg, baking soda, baking powder, and salt, beating till smooth",
+"Add the mashed bananas, jam, honey, and eggs. Again, beat until smooth",
+"Add the flour, then the walnuts, stirring just until smooth",
+"Spoon the batter into the prepared loaf pan, smoothing the top. Let it rest at room temperature for 10 minutes",
+"Bake the bread for 45 minutes, then gently lay a piece of aluminum foil across the top, to prevent over-browning",
+"Bake for an additional 25 minutes (20 minutes if you're baking in a tea loaf pan)",
+"Remove the bread from the oven; a long toothpick or cake tester inserted into the center should come out clean, with at most a few wet crumbs clinging to it. The tester shouldn't show any sign of uncooked batter. If it does, bake the bread an additional 5 minutes, or until it tests done",
+"Allow the bread to cool for 10 minutes in the pan",
+"Remove from pan and cool completely on a rack"
+],
+"source": "https://www.kingarthurflour.com/recipes/banana-bread-recipe",
 "title": "Banana Bread"
 },
 {
@@ -1091,7 +1102,7 @@ var localDB = {
 "Mix in the peanut butter and chocolate chips",
 "Spread the batter into the skillet and bake for 40-45 (when the center is soft and gooey, but outside is golden brown)"
 ],
-"source": "",
+"source": "https://www.amazon.com/Cravings-Recipes-All-Food-Want/dp/1101903910",
 "title": "Skillet Peanut Butter Chocolate Chip Blondies"
 },
 {
@@ -1400,6 +1411,37 @@ var localDB = {
 ],
 "source": "https://www.youtube.com/watch?v=ge49xawecJk",
 "title": "Jambon Beurre"
+},
+{
+"group": "meals",
+"id": "recipe-kings_hawaiian_blpts",
+"imgPlaceholder": "dist/imgs/placeholder_meals-kings_hawaiian_blpts.svg",
+"imgSrc": "dist/imgs/meals-kings_hawaiian_blpts.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"2 slices cored fresh pineapples",
+"8 king's hawaiian slider rolls",
+"unsalted butter, softened",
+"mayo",
+"4 lettuce leaves, cut to fit",
+"1 large tomato, cut into 8 slices",
+"8 slices bacon, uncooked",
+"1 sweet onion, thinly sliced into rings"
+]
+},
+"notes": [
+"Chrissy Teigen Cravings, pg. 139"
+],
+"rating": 3,
+"recipe": [
+"Position on a rack 4-6 inches from heating element and preheat broiler",
+"Arrange pineapples on a baking sheet and broil until browned on both sides. Let cool slightly then quarter",
+"Spread the butter on the rolls and arrange on a baking sheet. Broil until golden, 1-2 min",
+"Spread mayo on the rolls, add lettuce, tomato, bacon, onions, and a pineapple wedge"
+],
+"source": "https://www.amazon.com/Cravings-Recipes-All-Food-Want/dp/1101903910",
+"title": "Kings Hawaiian Blpts"
 },
 {
 "group": "meals",
@@ -4524,7 +4566,7 @@ var localDB = {
 "dessert": [
 "recipe-apple_crisp:Apple Crisp:1",
 "recipe-baked_apples:Baked Apples:2",
-"recipe-banana_bread:Banana Bread:2",
+"recipe-banana_bread:Banana Bread:3",
 "recipe-biscotti:Biscotti:3",
 "recipe-blueberry_sour_cream_muffins:Blueberry Sour Cream Muffins:2",
 "recipe-cake_pops:Cake Pops:1",
@@ -4562,6 +4604,7 @@ var localDB = {
 "recipe-grilled_cheese:Grilled Cheese:1",
 "recipe-gyros:Gyros:1",
 "recipe-jambon_beurre:Jambon Beurre:1",
+"recipe-kings_hawaiian_blpts:Kings Hawaiian Blpts:3",
 "recipe-lasagna:Lasagna:3",
 "recipe-nori_vegetable_wraps:Nori Vegetable Wraps:0",
 "recipe-oven-baked_sausage:Oven-Baked Sausage:2",
@@ -4730,6 +4773,7 @@ var localDB = {
 "Grilled Cheese",
 "Gyros",
 "Jambon Beurre",
+"Kings Hawaiian Blpts",
 "Lasagna",
 "Nori Vegetable Wraps",
 "Oven-Baked Sausage",
