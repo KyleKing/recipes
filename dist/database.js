@@ -290,19 +290,19 @@ var localDB = {
 "ingredients": {
 "ingredients": [
 "Ingredients",
-"4 large red baking apples",
-"1/4 cup brown sugar",
-"1 teaspoon cinnamon",
-"1/4 cup chopped pecans (optional)",
-"1/4 cup chopped raisins",
-"1 tbsp butter",
-"3/4 cup boiling water"
+"4 large red baking apples (2 apples)",
+"1/4 cup brown sugar (2 tbsp)",
+"1 tsp cinnamon (1/2 tsp)",
+"1/4 cup chopped pecans, option (2 tbsp)",
+"1/4 cup chopped raisins (2 tbsp)",
+"1/4 tbsp butter per apple",
+"3/4 cup boiling water (3/4 cup)"
 ]
 },
 "notes": [
-"Try to look for Rome Beauty, Golden Delicious, Jonagold, or TBD"
+"Try to look for Rome Beauty, Golden Delicious, or Jonagold"
 ],
-"rating": 0,
+"rating": 2,
 "recipe": [
 "Preheat oven to 375F",
 "Core the apples leaving the bottom 1/2 inch intact",
@@ -475,8 +475,8 @@ var localDB = {
 {
 "group": "dessert",
 "id": "recipe-chocolate_chip_cookies",
-"imgPlaceholder": "",
-"imgSrc": "",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-chocolate_chip_cookies.svg",
+"imgSrc": "dist/imgs/dessert-chocolate_chip_cookies.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -1144,47 +1144,47 @@ var localDB = {
 "ingredients": {
 "1-sparkling wine": [
 "1-Sparkling Wine",
-"--/10 --"
+""
 ],
 "2-light-bodied white": [
 "2-Light-Bodied White",
-"--/10 --"
+""
 ],
 "3-full-bodied white": [
 "3-Full-Bodied White",
-"--/10 --"
+""
 ],
 "4-aromatic-sweet white": [
 "4-Aromatic-Sweet White",
-"--/10 --"
+""
 ],
 "5-rose": [
 "5-Rose",
-"8/10 - barton & guestier cotes de provence 'passport'"
+"barton & guestier cotes de provence 'passport'"
 ],
 "6-light-bodied red": [
 "6-Light-Bodied Red",
-"--/10 --"
+"jose antonio garcia tinto mencia de valtuille 'unculin' 2017  (tinto - spanish red summer wine)"
 ],
 "7-medium-bodied red": [
 "7-Medium-Bodied Red",
-"--/10 --"
+""
 ],
 "8-full-bodied red": [
 "8-Full-Bodied Red",
-"--/10 --"
+""
 ],
 "9-dessert wine": [
 "9-Dessert Wine",
-"--/10 --"
+""
 ]
 },
 "notes": [
-"Just a tracker of wines that we've bought and had an opinion on",
-"The \"(Source)\" link (wine-searcher.com) was used for estimated ratings",
+"Just a tracker of wines we've liked (or ones to avoid!)",
+"The '(Source)' link (wine-searcher.com) was used for estimated ratings",
 "Image Source: https://www.etsy.com/listing/101490371/wine-rack-16-bottle-ladders-set-of-3"
 ],
-"rating": 3,
+"rating": 2,
 "recipe": [],
 "source": "https://www.wine-searcher.com/",
 "title": "Wine"
@@ -1723,6 +1723,37 @@ var localDB = {
 ],
 "source": "http://www.budgetbytes.com/2013/12/curried-chickpeas-spinach/",
 "title": "Dragon Noodles"
+},
+{
+"group": "pasta",
+"id": "recipe-microwave_cacio_e_pepe",
+"imgPlaceholder": "dist/imgs/placeholder_pasta-microwave_cacio_e_pepe.svg",
+"imgSrc": "dist/imgs/pasta-microwave_cacio_e_pepe.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1 cup elbow macaroni",
+"3 cups water",
+"1/2 tsp kosher salt",
+"1/2 cup frozen corn kernels, frozen peas, or fresh peas",
+"2 tbsp butter",
+"1/2 cup grated pecorino romano or parmigiano-reggiano",
+"ground pepper"
+]
+},
+"notes": [
+"Vegetables Unleashed Jose Andreas, pg. 102"
+],
+"rating": 3,
+"recipe": [
+"Combine pasta and water in a microwaveable bowl, add a pinch of salt, and microwave on high for 5 min",
+"Stir in the peas and return for 1 more minute",
+"Working quickly, pour off most of the water until a few tbsp remain",
+"Vigorously stir in butter and cheese",
+"Serve with fresh ground pepper"
+],
+"source": "https://www.amazon.com/Vegetables-Unleashed-Cookbook-Jose-Andres/dp/0062668382/",
+"title": "Microwave Cacio E Pepe"
 },
 {
 "group": "pasta",
@@ -2991,6 +3022,24 @@ var localDB = {
 ],
 "source": "https://www.geniuskitchen.com/recipe/best-ever-bruschetta-443987",
 "title": "Bruschetta"
+},
+{
+"group": "sides",
+"id": "recipe-cheeses",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"Favorite Cheeses": [
+"Favorite Cheeses",
+"manchego - alex's favorite",
+"fontina - tried in sf with colin"
+]
+},
+"notes": [],
+"rating": 3,
+"recipe": [],
+"source": "",
+"title": "Cheeses"
 },
 {
 "group": "sides",
@@ -4301,7 +4350,7 @@ var localDB = {
 },
 "notes": [
 "Typically, cut tomatoes into orange-sized slices",
-"Dressings: light zesty Italian, raspberry vinaigrette, olive oil + lime"
+"Dressings: Ken's Steak House Lite Northern Italian"
 ],
 "rating": 3,
 "recipe": [
@@ -4419,6 +4468,7 @@ var localDB = {
 "ingredients.FOR THE BENEDICT AND ASSEMBLY",
 "ingredients.FOR THE HOLLANDAISE",
 "ingredients.FOR THE POACHED EGGS",
+"ingredients.Favorite Cheeses",
 "ingredients.Favorite Snacks",
 "ingredients.Garnish",
 "ingredients.Garnish Options",
@@ -4473,7 +4523,7 @@ var localDB = {
 ],
 "dessert": [
 "recipe-apple_crisp:Apple Crisp:1",
-"recipe-baked_apples:Baked Apples:0",
+"recipe-baked_apples:Baked Apples:2",
 "recipe-banana_bread:Banana Bread:2",
 "recipe-biscotti:Biscotti:3",
 "recipe-blueberry_sour_cream_muffins:Blueberry Sour Cream Muffins:2",
@@ -4500,7 +4550,7 @@ var localDB = {
 "recipe-toasted_marshmallow_brownie_crinkles:Toasted Marshmallow Brownie Crinkles:1"
 ],
 "drinks": [
-"recipe-wine:Wine:3"
+"recipe-wine:Wine:2"
 ],
 "ice_cream": [
 "recipe-chocolate_nutella:Chocolate Nutella:3",
@@ -4525,6 +4575,7 @@ var localDB = {
 "recipe-cherry_tomato_spaghetti:Cherry Tomato Spaghetti:1",
 "recipe-creamy_lemon_pasta:Creamy Lemon Pasta:2",
 "recipe-dragon_noodles:Dragon Noodles:1",
+"recipe-microwave_cacio_e_pepe:Microwave Cacio E Pepe:3",
 "recipe-mozzarella_pasta:Mozzarella Pasta:1",
 "recipe-orzo_and_cheese:Orzo And Cheese:1",
 "recipe-pasta_e_ceci:Pasta E Ceci:2",
@@ -4574,6 +4625,7 @@ var localDB = {
 "recipe-aunt_laura's_spicy_chicken_dip:Aunt Laura'S Spicy Chicken Dip:1",
 "recipe-bacon:Bacon:2",
 "recipe-bruschetta:Bruschetta:1",
+"recipe-cheeses:Cheeses:3",
 "recipe-favorite_snacks:Favorite Snacks:0",
 "recipe-ikea_meatball_sauce:Ikea Meatball Sauce:2",
 "recipe-pretzels:Pretzels:0"
@@ -4691,6 +4743,7 @@ var localDB = {
 "Cherry Tomato Spaghetti",
 "Creamy Lemon Pasta",
 "Dragon Noodles",
+"Microwave Cacio E Pepe",
 "Mozzarella Pasta",
 "Orzo And Cheese",
 "Pasta E Ceci",
@@ -4740,6 +4793,7 @@ var localDB = {
 "Aunt Laura'S Spicy Chicken Dip",
 "Bacon",
 "Bruschetta",
+"Cheeses",
 "Favorite Snacks",
 "Ikea Meatball Sauce",
 "Pretzels"
