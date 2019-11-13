@@ -85,25 +85,24 @@ var localDB = {
 {
 "group": "breakfast",
 "id": "recipe-hard_boiled_eggs",
-"imgPlaceholder": "dist/imgs/placeholder_breakfast-hard_boiled_eggs.svg",
-"imgSrc": "dist/imgs/breakfast-hard_boiled_eggs.jpeg",
+"imgPlaceholder": "",
+"imgSrc": "",
 "ingredients": {
 "ingredients": [
 "Ingredients",
-"~6 eggs",
-"1 cup water",
-"instant pot"
+"eggs!"
 ]
 },
-"notes": [],
-"rating": 1,
-"recipe": [
-"Insert the steamer rack into the instant pot, add 1 cup of (cold) water, then add the eggs. Make sure the eggs and water do not touch",
-"Close lid and turn the sealing vent to 'sealed.' Use the egg mode (high pressure for 5 minutes)",
-"Place hot eggs into ice water to halt the cooking process. Let sit for ~10-15 minutes",
-"Strike the egg on a cutting board a few times then roll to create tiny cracks all over. The shell should then easily peel off"
+"notes": [
+"Fresher eggs will take slightly longer to peel. The eggs in this recipe should be cooked straight from the refrigerator; reduce cooking times by 1 minute if using room-temperature eggs",
+"Great for salads, with stir fry and rice, ramen (add in last minute of cooking to warm the egg), "
 ],
-"source": "",
+"rating": 2,
+"recipe": [
+"Boil water in a saucepan deep enough for the eggs to sit in one layer",
+"Add eggs, cover, and reduce to a simmer. After 12 minutes, remove and place into room temp water (for variations on time, see source)"
+],
+"source": "https://downshiftology.com/recipes/perfect-soft-boiled-hard-boiled-eggs/",
 "title": "Hard Boiled Eggs"
 },
 {
@@ -1300,6 +1299,47 @@ var localDB = {
 },
 {
 "group": "meals",
+"id": "recipe-broccoli_cheddar_chicken_and_rice_casserole",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1 tbsp extra virgin olive oil",
+"kosher salt and black pepper",
+"1 yellow onion, chopped",
+"3 carrots, chopped",
+"1 lb boneless chicken breasts, cut into cubes",
+"2 tbsp salted butter",
+"1.5 cups basmati or jasmine rice",
+"1/2 cup dry orzo pasta",
+"2 tbsp fresh thyme leaves, plus more for topping",
+"3.5 cups low sodium chicken broth",
+"3 cups broccoli florets (fresh or frozen), roughly chopped",
+"2 bay leaves",
+"1/2 teaspoon garlic powder",
+"1/2 teaspoon cayenne pepper, more or less to taste",
+"1/2 lemon, zest",
+"1/2 cup whole milk",
+"1.5 cups shredded sharp cheddar cheese"
+]
+},
+"notes": [
+"To Make Ahead: Prepare the casserole through step 3. Let cool, then cover and keep in the fridge for up to 2 days. To bake, remove from the fridge and let sit at room temp while the oven preheats. Bake as directed",
+"To Freeze: Prepare the casserole through step 3. Let cool, then cover tightly. Freeze for up to 3 months. Thaw overnight in the fridge or on the counter for 2-3 hours. Bake as directed"
+],
+"rating": 1,
+"recipe": [
+"Preheat the oven to 425 degrees F",
+"Heat the olive oil in a large pot over medium heat. When the oil shimmers, add the onion and carrot and cook until fragrant, about 5 minutes. Stir in the chicken and season with salt and pepper. Cook until the chicken is seared, 2-3 minutes. Add the butter, rice, orzo, and thyme, and cook until golden and toasted, 2-3 minutes. Add the broth and bring to a boil over high heat. Add the broccoli, bay leaves, garlic powder, cayenne, and a large pinch each of salt and pepper. Bring to a boil, cover and reduce heat to low. Cook, covered for 20-25 minutes, until the rice is mostly cooked",
+"Once the rice is cooked, stir in the lemon zest, milk, and 1/2 cup of cheese. If needed, transfer the rice to an oven-safe casserole dish. Scatter the remaining cheese over top the casserole",
+"Transfer to the oven and bake 15-20 minutes, until the cheese is melted and just beginning to brown. Serve warm with additional thyme and fresh basil"
+],
+"source": "https://www.halfbakedharvest.com/broccoli-cheddar-chicken-and-rice-casserole/#bo-recipe",
+"title": "Broccoli Cheddar Chicken And Rice Casserole"
+},
+{
+"group": "meals",
 "id": "recipe-burgers",
 "imgPlaceholder": "dist/imgs/placeholder_meals-burgers.svg",
 "imgSrc": "dist/imgs/meals-burgers.jpeg",
@@ -1539,7 +1579,7 @@ var localDB = {
 "rating": 2,
 "recipe": [
 "Pre-heat oven to 400F",
-"Cover pan with tin foil and bake for 15 minutes, flip, then bake for an additional 5-10 minutes based on sausage size"
+"Cover pan with tin foil and a place a cooling rack on top. Place the sausage on the cooling rack and back for 20-30 min based on size"
 ],
 "source": "https://wearenotfoodies.com/oven-baking-sausage-quick-easy-and-minimal-mess/",
 "title": "Oven-Baked Sausage"
@@ -1604,19 +1644,19 @@ var localDB = {
 "ingredients": {
 "ingredients": [
 "Ingredients",
-"mayonnaise",
-"canned tuna",
-"english muffins",
+"1 tbsp mayonnaise",
+"2 cans of tuna",
+"4-5 english muffins",
+"1 pickle",
 "your choice of cheese slices"
 ]
 },
 "notes": [],
 "rating": 1,
 "recipe": [
-"Preheat oven to Broil (~10 min).",
-"Mix one spoon of mayo with a can of tuna.",
-"Start toasting English Muffins on 3.",
-"On a foil-lined pan, cover the toasted muffins with the tuna, then a slice of cheese. Broil until the cheese has melted."
+"Preheat oven to Broil (~10 min)",
+"Chop pickle and mix ingredients together. Toast English muffins",
+"On a foil-lined pan, cover the muffins with the tuna, then a slice of cheese. Broil until the cheese has melted"
 ],
 "source": "",
 "title": "Tuna Melts"
@@ -1852,6 +1892,28 @@ var localDB = {
 },
 {
 "group": "pasta",
+"id": "recipe-pancetta_crisps",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"pancetta",
+"oven"
+]
+},
+"notes": [
+"Used as a topping in pasta, I think?"
+],
+"rating": 2,
+"recipe": [
+"Bake at 400F for 11 min"
+],
+"source": "",
+"title": "Pancetta Crisps"
+},
+{
+"group": "pasta",
 "id": "recipe-pasta_e_ceci",
 "imgPlaceholder": "dist/imgs/placeholder_pasta-pasta_e_ceci.svg",
 "imgSrc": "dist/imgs/pasta-pasta_e_ceci.jpeg",
@@ -1938,27 +2000,26 @@ var localDB = {
 "ingredients": {
 "ingredients": [
 "Ingredients",
-"3-6 links italian sausage",
-"1 small onion",
+"3-6 links italian sausage, baked and sliced into rounds",
+"1 red onion, diced",
 "8 oz. container of button mushrooms",
 "28 oz. can of crushed tomatoes",
 "3 cloves of garlic (1/2 tsp garlic powder)",
 "1 tsp basil",
 "1 tsp oregano",
-"1/4 cup parmesan",
 "1 lb box of penne (or rigatoni)",
-"parsley, chopped"
+"shredded parmesan, for topping"
 ]
 },
 "notes": [],
-"rating": 2,
+"rating": 3,
 "recipe": [
-"In a large pot without oil, cook the sausages on medium heat until brown on the outside and firm (~10 minutes)",
-"Dice and prep the garlic, onions, and mushrooms. In parallel turn the heat off on the browning sausage to let cool",
-"Using tongs, remove and slice the sausage into rounds. Toss the rounds back in for 4 minutes or until brown",
-"Add the canned tomatoes, basil, oregano, garlic, onions, and mushrooms, then 3.5 cups of water and the box of pasta into the same pot as the sausage",
-"Bring the pot to a rapid boil and once boiling, stir and simmer at 30% heat with a tight fitting lid",
-"Stir the pot every 5 min while simmering. After 15 minutes if too much water is left, remove the lid and let simmer for slightly longer"
+"See the 'Oven Baked Sausage' recipe on this site. When finished, cut into rounds",
+"In parallel, dice and prep the garlic, onions, and mushrooms",
+"Combine half of the diced tomatoes, the sausage, diced items, and the box of penne pasta. Mix in the basil, oregano, and garlic",
+"Add the rest of the diced tomatoes and 2.5-3 cups of water, then bring the pot to a rapid boil",
+"Once boiling, stir and simmer at 30% heat with a tight fitting lid. Make sure the pasta is submerged",
+"Simmer for 10 minutes, stir, then remove the lid and simmer for an additional 5-10 minutes"
 ],
 "source": "http://www.budgetbytes.com/2014/04/one-pot-sausage-mushroom-pasta/",
 "title": "Sausage And Mushroom Penne Pasta"
@@ -2180,10 +2241,11 @@ var localDB = {
 "Put the cold pizza stone in a cold oven then preheat to 425",
 "Stretch out the dough, working initially flat, then pull and spin the dough until at least 12 inches in diameter",
 "Put a thin layer of flour on the pizza peel. Work quickly to prevent the dough from absorbing the flour and sticking. Additionally, regularly shake the peel to make sure the pizza slides around easily",
-"Add a thin layer of sauce (less than you think) then the toppings",
+"Add a thin layer of sauce (less than you think). Hold off on the rest of the toppings for now",
 "With a jittery back and forth motion, slide the pizza onto the stone",
-"Bake for 6-8 minutes",
-"Transfer to an over-sized cutting board to slice",
+"Bake for 6-8 min, then remove from the oven with the pizza peel",
+"Add the cheese and other toppings and return to the pizza stone for another 5-10 min",
+"Finally remove and transfer to an over-sized cutting board to slice",
 "Wash the peel with soap and water. See the Tools/Pizza Stone section for stone care"
 ],
 "source": "https://www.google.com/search?q=how+to+pizza+peel+avoid+sticking&oq=how+to+pizza+peel+avoid+sticking&aqs=chrome..69i57.3880j0j1&sourceid=chrome&ie=UTF-8#kpvalbx=1",
@@ -2308,7 +2370,7 @@ var localDB = {
 "1.5 tbsp italian seasoning",
 "1/2 tsp red pepper flakes",
 "1 bay leaf",
-"great with a baguette, rice, etc."
+"great with egg noodles or a baguette"
 ]
 },
 "notes": [],
@@ -2317,6 +2379,7 @@ var localDB = {
 "Season chicken thighs with salt & pepper. Place olive oil in instant pot and put thighs skin-side down. Use **Saut\u00e9** setting for 4 minutes.",
 "Remove chicken thighs and add bell pepper, onion, and garlic. **Saut\u00e9** setting for 3 minutes.",
 "Add tomatoes and liquid, wine, water (broth), tomato paste, Italian seasoning, red pepper flakes, and bay leaf, combine. Add the chicken back to pot and fully coat in liquid - make sure chicken sits in one layer.",
+"In parallel, boil a pot of water and prepare the egg noodles according to package directions",
 "Seal and select **Meat** to cook for 12 minutes at high pressure, then quick release steam",
 "Remove the lid and choose saute for 10 minutes. This will help reduce the sauce"
 ],
@@ -4556,7 +4619,7 @@ var localDB = {
 "breakfast": [
 "recipe-breakfast_burrito:Breakfast Burrito:1",
 "recipe-eggs_benedict:Eggs Benedict:3",
-"recipe-hard_boiled_eggs:Hard Boiled Eggs:1",
+"recipe-hard_boiled_eggs:Hard Boiled Eggs:2",
 "recipe-lemon_poppy_seed_mini_scones:Lemon Poppy Seed Mini Scones:0",
 "recipe-oatmeal:Oatmeal:1",
 "recipe-omelette:Omelette:1",
@@ -4600,6 +4663,7 @@ var localDB = {
 "recipe-smores_ice_cream:Smores Ice Cream:3"
 ],
 "meals": [
+"recipe-broccoli_cheddar_chicken_and_rice_casserole:Broccoli Cheddar Chicken And Rice Casserole:1",
 "recipe-burgers:Burgers:2",
 "recipe-grilled_cheese:Grilled Cheese:1",
 "recipe-gyros:Gyros:1",
@@ -4621,9 +4685,10 @@ var localDB = {
 "recipe-microwave_cacio_e_pepe:Microwave Cacio E Pepe:3",
 "recipe-mozzarella_pasta:Mozzarella Pasta:1",
 "recipe-orzo_and_cheese:Orzo And Cheese:1",
+"recipe-pancetta_crisps:Pancetta Crisps:2",
 "recipe-pasta_e_ceci:Pasta E Ceci:2",
 "recipe-peanut_noodles:Peanut Noodles:1",
-"recipe-sausage_and_mushroom_penne_pasta:Sausage And Mushroom Penne Pasta:2",
+"recipe-sausage_and_mushroom_penne_pasta:Sausage And Mushroom Penne Pasta:3",
 "recipe-sesame_noodles_with_wilted_greens:Sesame Noodles With Wilted Greens:1",
 "recipe-spaghetti_cacio_e_cepe:Spaghetti Cacio E Cepe:2",
 "recipe-spaghetti_sauce:Spaghetti Sauce:3"
@@ -4769,6 +4834,7 @@ var localDB = {
 "Smores Ice Cream"
 ],
 "meals": [
+"Broccoli Cheddar Chicken And Rice Casserole",
 "Burgers",
 "Grilled Cheese",
 "Gyros",
@@ -4790,6 +4856,7 @@ var localDB = {
 "Microwave Cacio E Pepe",
 "Mozzarella Pasta",
 "Orzo And Cheese",
+"Pancetta Crisps",
 "Pasta E Ceci",
 "Peanut Noodles",
 "Sausage And Mushroom Penne Pasta",
