@@ -1271,6 +1271,38 @@ var localDB = {
 },
 {
 "group": "ice_cream",
+"id": "recipe-chocolate_ice_cream",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"3/4 cup cocoa powder",
+"1/2 cup sugar",
+"1/3 cup packed brown sugar",
+"pinch salt",
+"1 cup whole milk",
+"2 cups heavy cream",
+"1/2 tbsp vanilla extract"
+]
+},
+"notes": [
+"Goes great with crushed up Oreos (crush up and mix in after starting to thicken)",
+"After freezing for 1-2 hours, you can swirl warm peanut butter in with a knife (thin with powdered sugar)"
+],
+"rating": 3,
+"recipe": [
+"In a large bowl, whisk together the dry ingredients. Add the milk and beat until combined.",
+"(Make sure to mix thoroughly before adding the heavy cream)",
+"Gently mix in the heavy cream and vanilla. Cover and refrigerate for at least 1 hour (preferably overnight)",
+"Pour the mixture into the ice cream maker and let spin until thickened (15-20 min)",
+"Move to a tupperware container and freeze overnight"
+],
+"source": "https://www.cuisinart.com/share/pdf/manuals/ice-21.pdf",
+"title": "Chocolate Ice Cream"
+},
+{
+"group": "ice_cream",
 "id": "recipe-chocolate_nutella",
 "imgPlaceholder": "dist/imgs/placeholder_ice_cream-chocolate_nutella.svg",
 "imgSrc": "dist/imgs/ice_cream-chocolate_nutella.jpeg",
@@ -1366,6 +1398,37 @@ var localDB = {
 ],
 "source": "https://www.cuisinart.com/share/pdf/manuals/ice-21.pdf",
 "title": "Smores Ice Cream"
+},
+{
+"group": "ice_cream",
+"id": "recipe-vanilla_ice_cream",
+"imgPlaceholder": "dist/imgs/placeholder_ice_cream-vanilla_ice_cream.svg",
+"imgSrc": "dist/imgs/ice_cream-vanilla_ice_cream.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1 cup whole milk",
+"3/4 cup granulated sugar",
+"pinch salt",
+"2 cups heavy cream",
+"1 tbsp pure vanilla extract",
+"oreos/cookies/graham crackers, etc, crushed"
+]
+},
+"notes": [
+"Note: without Oreos or something else in the mixture, it won't freeze well"
+],
+"rating": 2,
+"recipe": [
+"In a large bowl, whisk together the dry ingredients. Add the milk and beat until combined.",
+"(!Mix really thoroughly before adding the heavy cream!)",
+"Gently mix in the heavy cream and vanilla. Cover and refrigerate for at least 1 hour (preferably overnight)",
+"Pour the mixture into the ice cream maker and let spin until thickened (15-20 min)",
+"^^ Once starting to thicken, mix in the crushed cookies ^^",
+"Move to a tupperware container and freeze overnight"
+],
+"source": "https://www.cuisinart.com/share/pdf/manuals/ice-21.pdf",
+"title": "Vanilla Ice Cream"
 },
 {
 "group": "meals",
@@ -1653,6 +1716,28 @@ var localDB = {
 ],
 "source": "https://wearenotfoodies.com/oven-baking-sausage-quick-easy-and-minimal-mess/",
 "title": "Oven-Baked Sausage"
+},
+{
+"group": "meals",
+"id": "recipe-pancetta_crisps",
+"imgPlaceholder": "dist/imgs/placeholder_meals-pancetta_crisps.svg",
+"imgSrc": "dist/imgs/meals-pancetta_crisps.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"pancetta"
+]
+},
+"notes": [
+"On a baguette, stack spinach/kale, mozzarella, tomato, basil, and the pancetta crisps"
+],
+"rating": 2,
+"recipe": [
+"Bake at 400F for 11 min",
+"Works well in salad, pasta, or on a baguette (see Notes)"
+],
+"source": "",
+"title": "Pancetta Crisps"
 },
 {
 "group": "meals",
@@ -1993,28 +2078,6 @@ var localDB = {
 ],
 "source": "http://exploitsofamilitarymama.com/2012/08/slutty-orzo/",
 "title": "Orzo And Cheese"
-},
-{
-"group": "pasta",
-"id": "recipe-pancetta_crisps",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"pancetta",
-"oven"
-]
-},
-"notes": [
-"Used as a topping in pasta, I think?"
-],
-"rating": 2,
-"recipe": [
-"Bake at 400F for 11 min"
-],
-"source": "",
-"title": "Pancetta Crisps"
 },
 {
 "group": "pasta",
@@ -4767,9 +4830,11 @@ var localDB = {
 "recipe-wine:Wine:2"
 ],
 "ice_cream": [
+"recipe-chocolate_ice_cream:Chocolate Ice Cream:3",
 "recipe-chocolate_nutella:Chocolate Nutella:3",
 "recipe-mint_chocolate_chunk:Mint Chocolate Chunk:2",
-"recipe-smores_ice_cream:Smores Ice Cream:3"
+"recipe-smores_ice_cream:Smores Ice Cream:3",
+"recipe-vanilla_ice_cream:Vanilla Ice Cream:2"
 ],
 "meals": [
 "recipe-broccoli_cheddar_chicken_and_rice_casserole:Broccoli Cheddar Chicken And Rice Casserole:1",
@@ -4781,6 +4846,7 @@ var localDB = {
 "recipe-lasagna:Lasagna:3",
 "recipe-nori_vegetable_wraps:Nori Vegetable Wraps:0",
 "recipe-oven-baked_sausage:Oven-Baked Sausage:2",
+"recipe-pancetta_crisps:Pancetta Crisps:2",
 "recipe-quick_skillet_meals:Quick Skillet Meals:2",
 "recipe-tomato_mozzarella_caprese:Tomato Mozzarella Caprese:1",
 "recipe-tuna_melts:Tuna Melts:1"
@@ -4795,7 +4861,6 @@ var localDB = {
 "recipe-mozzarella_pasta:Mozzarella Pasta:1",
 "recipe-one_pot_creamy_broccoli_pasta:One Pot Creamy Broccoli Pasta:1",
 "recipe-orzo_and_cheese:Orzo And Cheese:1",
-"recipe-pancetta_crisps:Pancetta Crisps:2",
 "recipe-pasta_e_ceci:Pasta E Ceci:2",
 "recipe-peanut_noodles:Peanut Noodles:1",
 "recipe-sausage_and_mushroom_penne_pasta:Sausage And Mushroom Penne Pasta:3",
@@ -4941,9 +5006,11 @@ var localDB = {
 "Wine"
 ],
 "ice_cream": [
+"Chocolate Ice Cream",
 "Chocolate Nutella",
 "Mint Chocolate Chunk",
-"Smores Ice Cream"
+"Smores Ice Cream",
+"Vanilla Ice Cream"
 ],
 "meals": [
 "Broccoli Cheddar Chicken And Rice Casserole",
@@ -4955,6 +5022,7 @@ var localDB = {
 "Lasagna",
 "Nori Vegetable Wraps",
 "Oven-Baked Sausage",
+"Pancetta Crisps",
 "Quick Skillet Meals",
 "Tomato Mozzarella Caprese",
 "Tuna Melts"
@@ -4969,7 +5037,6 @@ var localDB = {
 "Mozzarella Pasta",
 "One Pot Creamy Broccoli Pasta",
 "Orzo And Cheese",
-"Pancetta Crisps",
 "Pasta E Ceci",
 "Peanut Noodles",
 "Sausage And Mushroom Penne Pasta",
