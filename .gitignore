@@ -11,3 +11,4 @@ config.codekit3
 /database/*/*.JPEG
 /database/*/*.png
 /database/*/*.PNG
+/* alias

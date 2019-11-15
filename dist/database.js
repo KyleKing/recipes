@@ -85,8 +85,8 @@ var localDB = {
 {
 "group": "breakfast",
 "id": "recipe-hard_boiled_eggs",
-"imgPlaceholder": "",
-"imgSrc": "",
+"imgPlaceholder": "dist/imgs/placeholder_breakfast-hard_boiled_eggs.svg",
+"imgSrc": "dist/imgs/breakfast-hard_boiled_eggs.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -100,7 +100,7 @@ var localDB = {
 "rating": 2,
 "recipe": [
 "Boil water in a saucepan deep enough for the eggs to sit in one layer",
-"Add eggs, cover, and reduce to a simmer. After 12 minutes, remove and place into room temp water (for variations on time, see source)"
+"Add eggs, cover, and reduce to a simmer. After 12 minutes, remove and place into room temp water (for variations on time, see source - egg shown in photo was put in for 6 min)"
 ],
 "source": "https://downshiftology.com/recipes/perfect-soft-boiled-hard-boiled-eggs/",
 "title": "Hard Boiled Eggs"
@@ -598,6 +598,76 @@ var localDB = {
 ],
 "source": "https://www.kingarthurflour.com/recipes/super-simple-chocolate-frosting-recipe",
 "title": "Chocolate Frosting Recipe"
+},
+{
+"group": "dessert",
+"id": "recipe-chocolate_peanut_butter_bundt_cake",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-chocolate_peanut_butter_bundt_cake.svg",
+"imgSrc": "dist/imgs/dessert-chocolate_peanut_butter_bundt_cake.png",
+"ingredients": {
+"Cake": [
+"Cake",
+"chocolate cake mix",
+"1 oz package chocolate pudding (tbd-see note)",
+"1 cup sour cream",
+"1 cup vegetable oil",
+"4 eggs",
+"1/2 cup warm water",
+"1/2 cup peanut butter chips (optional)"
+],
+"Glaze": [
+"Glaze",
+"see recipe: 'chocolate peanut butter glaze'"
+],
+"Peanut Butter Filling": [
+"Peanut Butter Filling",
+"1 cup creamy peanut butter",
+"1/3 cup powdered sugar",
+"4 tbsp butter melted",
+"1 tsp vanilla extract",
+"1/8 tsp salt"
+]
+},
+"notes": [
+"The pudding adds an odd, gelatinous texture. Probably could exclude it without too much issue"
+],
+"rating": 3,
+"recipe": [
+"Preheat oven to 350",
+"Combine all of the cake ingredients and mix with a mixer until combined. Avoid over mixing",
+"For the filling, in a separate bowl, combine peanut butter, butter, powdered sugar, vanilla and salt. Mix well with mixer",
+"Spray a bundt cake pan with non-stick cooking spray. Spoon half of cake mixture. Then spoon peanut butter filling on top of the cake batter. Top with remaining cake batter",
+"Bake for 50-55 minutes or until toothpick inserted into cake comes out clean",
+"Remove from oven and allow to cool on a wire rack",
+"Once cool, place the wire rack on top of the bundt pan, flip, and allow the cake to release",
+"Spoon or pour glaze over cake and/or top with powdered sugar"
+],
+"source": "https://www.lovefromtheoven.com/chocolate-peanut-butter-bundt-cake/",
+"title": "Chocolate Peanut Butter Bundt Cake"
+},
+{
+"group": "dessert",
+"id": "recipe-chocolate_peanut_butter_glaze",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-chocolate_peanut_butter_glaze.svg",
+"imgSrc": "dist/imgs/dessert-chocolate_peanut_butter_glaze.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"2/3 cup semi-sweet chocolate or peanut butter chips or chopped semi-sweet chocolate",
+"1/3 cup heavy cream",
+"(optional) spoon full of peanut butter"
+]
+},
+"notes": [
+"Slightly modified from the Choc-PB-Bundt cake"
+],
+"rating": 3,
+"recipe": [
+"In a large glass bowl, combine chocolate or peanut butter chips and heavy cream",
+"Microwave for 30 seconds, whisk, microwave for 15 seconds, whisk, and if not yet smooth, microwave for an additional 15 seconds and whisk"
+],
+"source": "https://www.lovefromtheoven.com/chocolate-peanut-butter-bundt-cake/",
+"title": "Chocolate Peanut Butter Glaze"
 },
 {
 "group": "dessert",
@@ -1864,6 +1934,40 @@ var localDB = {
 ],
 "source": "",
 "title": "Mozzarella Pasta"
+},
+{
+"group": "pasta",
+"id": "recipe-one_pot_creamy_broccoli_pasta",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"9 oz. fettuccine or egg noodles",
+"3 cloves garlic, minced",
+"1 tbsp butter",
+"2 tsp olive oil",
+"2 cups seafood stock or water",
+"1.25 cups whole milk",
+"1/2 cup parmesan cheese, grated",
+"1 cup broccoli florets, chopped",
+"salt and pepper",
+"parsley, chopped"
+]
+},
+"notes": [
+"I think I made this recipe with whole milk, but probably could still work with skim"
+],
+"rating": 1,
+"recipe": [
+"Saute garlic in the butter and olive oil over medium heat for a few min",
+"Add the uncooked noodles, stock/water, milk, and broccoli. Bring to a boil and cover",
+"Once boiling, cook for ~3 min, then simmer for 8 min or until most of the liquid has reduced",
+"Toss in cheese and cook for another ~8 min",
+"Season with salt and pepper and garnish with chopped parsley and cheese"
+],
+"source": "https://abeautifulmess.com/2015/04/one-pot-creamy-broccoli-pasta.html",
+"title": "One Pot Creamy Broccoli Pasta"
 },
 {
 "group": "pasta",
@@ -4455,7 +4559,7 @@ var localDB = {
 },
 "notes": [
 "Typically, cut tomatoes into orange-sized slices",
-"Dressings: Ken's Steak House Lite Northern Italian"
+"Dressings: Ken's Steak House LITE Northern Italian or LITE Zesty Italian"
 ],
 "rating": 3,
 "recipe": [
@@ -4561,6 +4665,7 @@ var localDB = {
 "ingredients.Base",
 "ingredients.Blender",
 "ingredients.Brown in Pan",
+"ingredients.Cake",
 "ingredients.Chicken",
 "ingredients.Combine",
 "ingredients.Combine-Cookie Spread",
@@ -4577,12 +4682,14 @@ var localDB = {
 "ingredients.Favorite Snacks",
 "ingredients.Garnish",
 "ingredients.Garnish Options",
+"ingredients.Glaze",
 "ingredients.Indian Simmer Sauce",
 "ingredients.Ingredients",
 "ingredients.Main",
 "ingredients.Meat/Sauce",
 "ingredients.Optional Garnish",
 "ingredients.Other Ingredients",
+"ingredients.Peanut Butter Filling",
 "ingredients.Peanut Noodles",
 "ingredients.Ricotta Cheese Mix",
 "ingredients.Sauce",
@@ -4637,6 +4744,8 @@ var localDB = {
 "recipe-chocolate_chip_cookies:Chocolate Chip Cookies:3",
 "recipe-chocolate_chip_oatmeal_cookies:Chocolate Chip Oatmeal Cookies:3",
 "recipe-chocolate_frosting_recipe:Chocolate Frosting Recipe:3",
+"recipe-chocolate_peanut_butter_bundt_cake:Chocolate Peanut Butter Bundt Cake:3",
+"recipe-chocolate_peanut_butter_glaze:Chocolate Peanut Butter Glaze:3",
 "recipe-chocolatines:Chocolatines:1",
 "recipe-collens_peanut_butter_bars:Collens Peanut Butter Bars:0",
 "recipe-cookie_bars:Cookie Bars:2",
@@ -4684,6 +4793,7 @@ var localDB = {
 "recipe-dragon_noodles:Dragon Noodles:1",
 "recipe-microwave_cacio_e_pepe:Microwave Cacio E Pepe:3",
 "recipe-mozzarella_pasta:Mozzarella Pasta:1",
+"recipe-one_pot_creamy_broccoli_pasta:One Pot Creamy Broccoli Pasta:1",
 "recipe-orzo_and_cheese:Orzo And Cheese:1",
 "recipe-pancetta_crisps:Pancetta Crisps:2",
 "recipe-pasta_e_ceci:Pasta E Ceci:2",
@@ -4808,6 +4918,8 @@ var localDB = {
 "Chocolate Chip Cookies",
 "Chocolate Chip Oatmeal Cookies",
 "Chocolate Frosting Recipe",
+"Chocolate Peanut Butter Bundt Cake",
+"Chocolate Peanut Butter Glaze",
 "Chocolatines",
 "Collens Peanut Butter Bars",
 "Cookie Bars",
@@ -4855,6 +4967,7 @@ var localDB = {
 "Dragon Noodles",
 "Microwave Cacio E Pepe",
 "Mozzarella Pasta",
+"One Pot Creamy Broccoli Pasta",
 "Orzo And Cheese",
 "Pancetta Crisps",
 "Pasta E Ceci",
