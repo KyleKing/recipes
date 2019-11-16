@@ -1086,6 +1086,46 @@ var localDB = {
 },
 {
 "group": "dessert",
+"id": "recipe-peach_blueberry_crisp",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-peach_blueberry_crisp.svg",
+"imgSrc": "dist/imgs/dessert-peach_blueberry_crisp.jpeg",
+"ingredients": {
+"PEACH BLUEBERRY FILLING": [
+"Peach Blueberry Filling",
+"4 cups peaches, peeled and sliced",
+"1 cup blueberries",
+"1 tbsp lemon juice",
+"1/2 tsp pure vanilla extract",
+"3 tbsp cornstarch",
+"2 tsp cinnamon, ground"
+],
+"STREUSEL TOPPING": [
+"Streusel Topping",
+"1/2 cup flour",
+"1/2 cup quick-cooking oats",
+"1/2 cup firmly packed light brown sugar",
+"1 tsp cinnamon, ground",
+"6 tbsp cold butter, cut into chunks"
+]
+},
+"notes": [
+"Search terms: cobbler"
+],
+"rating": 2,
+"recipe": [
+"Preheat oven to 350",
+"For the Peach-Blueberry Filling, toss fruit with lemon juice and vanilla in large bowl",
+"Mix cornstarch and 2 teaspoons cinnamon in small bowl then sprinkle over fruit and toss to coat well",
+"Spoon the fruit into a lightly greased 11\" x 7\" baking dish (or smaller dishes if decreasing cook time)",
+"For the Streusel Topping, mix flour, oats, brown sugar, and 1 tsp cinnamon in medium bowl",
+"Cut in butter with 2 knives until coarse crumbs form. Sprinkle evenly over fruit (in the baking dish)",
+"Bake 40 to 45 minutes or until fruit is tender and topping is golden brown. Serve warm with ice cream or whipped cream!"
+],
+"source": "https://www.mccormick.com/recipes/dessert/peach-blueberry-crisp?amp=1",
+"title": "Peach Blueberry Crisp"
+},
+{
+"group": "dessert",
 "id": "recipe-peanut_butter_and_cocoa_smothie",
 "imgPlaceholder": "dist/imgs/placeholder_dessert-peanut_butter_and_cocoa_smothie.svg",
 "imgSrc": "dist/imgs/dessert-peanut_butter_and_cocoa_smothie.jpg",
@@ -1215,6 +1255,26 @@ var localDB = {
 ],
 "source": "https://www.washingtonpost.com/recipes/toasted-marshmallow-brownie-krinkles/16191/?utm_term=.d8bf01e84ac3",
 "title": "Toasted Marshmallow Brownie Crinkles"
+},
+{
+"group": "drinks",
+"id": "recipe-coffee",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"3x heaping tablespoons (n + 1)",
+"fill to 2 line for water (n)",
+"2 tsp coffee mate",
+"1.5 tsp sugar"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [],
+"source": "",
+"title": "Coffee"
 },
 {
 "group": "drinks",
@@ -1719,9 +1779,9 @@ var localDB = {
 },
 {
 "group": "meals",
-"id": "recipe-pancetta_crisps",
-"imgPlaceholder": "dist/imgs/placeholder_meals-pancetta_crisps.svg",
-"imgSrc": "dist/imgs/meals-pancetta_crisps.jpeg",
+"id": "recipe-pancetta_crisps_on_baguette",
+"imgPlaceholder": "dist/imgs/placeholder_meals-pancetta_crisps_on_baguette.svg",
+"imgSrc": "dist/imgs/meals-pancetta_crisps_on_baguette.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -1737,7 +1797,7 @@ var localDB = {
 "Works well in salad, pasta, or on a baguette (see Notes)"
 ],
 "source": "",
-"title": "Pancetta Crisps"
+"title": "Pancetta Crisps On Baguette"
 },
 {
 "group": "meals",
@@ -2265,7 +2325,7 @@ var localDB = {
 "ingredients": {
 "Brown in Pan": [
 "Brown In Pan",
-"1 lb lean hamburger meat"
+"1 lb lean hamburger meat or ground turkey"
 ],
 "Other Ingredients": [
 "Other Ingredients",
@@ -2452,6 +2512,37 @@ var localDB = {
 },
 {
 "group": "poultry",
+"id": "recipe-breaded_chicken",
+"imgPlaceholder": "dist/imgs/placeholder_poultry-breaded_chicken.svg",
+"imgSrc": "dist/imgs/poultry-breaded_chicken.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"eggs",
+"salt and pepper",
+"bread crumbs",
+"flour"
+]
+},
+"notes": [
+"Kind of waited a few months to write this down... so probably review the source video if making"
+],
+"rating": 2,
+"recipe": [
+"With a fork, beat 2 tbsp water, 2 eggs, 1/4 tsp salt, and 1/4 pepper in a regular bowl",
+"Pull out two plates. on the left, spread a layer of flour and on the right spread a layer of bread crumbs",
+"To the bread crumbs, add 1/4 tsp salt, 1/4 tsp pepper, crush dried oregano (~1 tsp?), and crush dried thyme leaves. Mix",
+"To the flour, add a little salt and pepper. Mix",
+"If chicken breast, cut in half for cutlets (want these to be as flat as possible - cooks quickly)",
+"Heat up some oil on a skillet under medium heat",
+"Working with your left hand coat the chicken in the flour. Dip into egg, letting excess drip off. Then coat with bread crumbs",
+"Place on the hot skillet and cook until golden brown on both side and cooked thoroughly"
+],
+"source": "https://www.youtube.com/watch?v=dYOpvMt5498",
+"title": "Breaded Chicken"
+},
+{
+"group": "poultry",
 "id": "recipe-brick_chicken",
 "imgPlaceholder": "dist/imgs/placeholder_poultry-brick_chicken.svg",
 "imgSrc": "dist/imgs/poultry-brick_chicken.png",
@@ -2596,25 +2687,35 @@ var localDB = {
 },
 {
 "group": "poultry",
-"id": "recipe-chicken_tikka_masala",
-"imgPlaceholder": "dist/imgs/placeholder_poultry-chicken_tikka_masala.svg",
-"imgSrc": "dist/imgs/poultry-chicken_tikka_masala.jpeg",
+"id": "recipe-chicken_thighs",
+"imgPlaceholder": "dist/imgs/placeholder_poultry-chicken_thighs.svg",
+"imgSrc": "dist/imgs/poultry-chicken_thighs.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
-"chicken",
-"trader joe's tikka masala simmer sauce",
-"rice",
-"cilantro"
+"2 pounds chicken thighs (about 3-4 thighs)",
+"1 tsp dried oregano",
+"1 tsp paprika",
+"1 tsp garlic powder",
+"1/2 tsp onion powder",
+"1/2 tsp coarse kosher salt",
+"1/4 tsp black pepper",
+"olive oil"
 ]
 },
-"notes": [],
-"rating": 2,
-"recipe": [
-"Cook the rice. Cube and cook the chicken (on a cast iron skillet) then simmer for 3-5 minutes in the sauce"
+"notes": [
+"To cook frozen chicken thighs, skip the step of browning as you cannot brown frozen meat. Place 1 cup of water, trivet, and the frozen chicken thighs in the Instant Pot. Cook for 15 min at high pressure plus 5 minutes natural pressure release"
 ],
-"source": "",
-"title": "Chicken Tikka Masala"
+"rating": 1,
+"recipe": [
+"In a small bowl, combine the oregano, paprika, garlic powder, onion powder, salt, and pepper. Rub over thighs",
+"With small amount of olive oil, saute thighs in Instant Pot (on Saute setting). Cook 4 minutes per side",
+"Turn off the Instant Pot. Pour in 1 cup of water then use a spatula to scrape off any browned bits on the bottom of the pot",
+"Place the metal trivet in the Instant Pot and put chicken thighs on top. Seal release value and set to Pressure cook for 10 min (8 min if boneless). Allow natural release for 5 min",
+"Vent remaining pressure. Check that chicken reached 165F"
+],
+"source": "https://kristineskitchenblog.com/instant-pot-chicken-thighs/",
+"title": "Chicken Thighs"
 },
 {
 "group": "poultry",
@@ -3347,22 +3448,18 @@ var localDB = {
 "ingredients": {
 "ingredients": [
 "Ingredients",
-"meatball packet",
-"water",
-"salt",
-"heavy cream"
+"ikea meatballs!",
+"ikea meatball sauce packet"
 ]
 },
 "notes": [
-"The small amount of salt and thoroughly mixing before adding cream appear to be very effective",
-"Alt with stock: https://www.food.com/recipe/cream-sauce-for-meatballs-ikea-style-424504"
+"Note: source is for actually making meatballs and not just defrosting IKEA :)"
 ],
 "rating": 2,
 "recipe": [
-"See directions on the packet as the instructions may change",
-"Boil water, add powder, and add a small amount of salt. Thoroughly mix on medium heat until few chunks remain. Add the cream and stir. Serve over IKEA meatballs. Makes enough for ~20 meatballs"
+"Getting the meatball sauce packet is tricky. I found that adding a little bit of salt then thoroughly mixing provides the best change of achieving a smooth consistency"
 ],
-"source": "",
+"source": "https://www.thegratefulgirlcooks.com/moms-swedish-meatballs-rice/",
 "title": "Ikea Meatball Sauce"
 },
 {
@@ -4752,9 +4849,11 @@ var localDB = {
 "ingredients.Meat/Sauce",
 "ingredients.Optional Garnish",
 "ingredients.Other Ingredients",
+"ingredients.PEACH BLUEBERRY FILLING",
 "ingredients.Peanut Butter Filling",
 "ingredients.Peanut Noodles",
 "ingredients.Ricotta Cheese Mix",
+"ingredients.STREUSEL TOPPING",
 "ingredients.Sauce",
 "ingredients.Saute in Olive Oil",
 "ingredients.Seasoning Combinations",
@@ -4821,12 +4920,14 @@ var localDB = {
 "recipe-oatmeal_balls:Oatmeal Balls:1",
 "recipe-oatmeal_raisin_cookies:Oatmeal Raisin Cookies:2",
 "recipe-oreo_truffles:Oreo Truffles:1",
+"recipe-peach_blueberry_crisp:Peach Blueberry Crisp:2",
 "recipe-peanut_butter_and_cocoa_smothie:Peanut Butter And Cocoa Smothie:1",
 "recipe-pineapple_upside_down_cake:Pineapple Upside Down Cake:2",
 "recipe-skillet_peanut_butter_chocolate_chip_blondies:Skillet Peanut Butter Chocolate Chip Blondies:1",
 "recipe-toasted_marshmallow_brownie_crinkles:Toasted Marshmallow Brownie Crinkles:1"
 ],
 "drinks": [
+"recipe-coffee:Coffee:1",
 "recipe-wine:Wine:2"
 ],
 "ice_cream": [
@@ -4846,7 +4947,7 @@ var localDB = {
 "recipe-lasagna:Lasagna:3",
 "recipe-nori_vegetable_wraps:Nori Vegetable Wraps:0",
 "recipe-oven-baked_sausage:Oven-Baked Sausage:2",
-"recipe-pancetta_crisps:Pancetta Crisps:2",
+"recipe-pancetta_crisps_on_baguette:Pancetta Crisps On Baguette:2",
 "recipe-quick_skillet_meals:Quick Skillet Meals:2",
 "recipe-tomato_mozzarella_caprese:Tomato Mozzarella Caprese:1",
 "recipe-tuna_melts:Tuna Melts:1"
@@ -4876,11 +4977,12 @@ var localDB = {
 ],
 "poultry": [
 "recipe-baked_chicken_and_potatoes:Baked Chicken And Potatoes:1",
+"recipe-breaded_chicken:Breaded Chicken:2",
 "recipe-brick_chicken:Brick Chicken:3",
 "recipe-chicken:Chicken:1",
 "recipe-chicken_cacciatore:Chicken Cacciatore:2",
 "recipe-chicken_tacos:Chicken Tacos:3",
-"recipe-chicken_tikka_masala:Chicken Tikka Masala:2",
+"recipe-chicken_thighs:Chicken Thighs:1",
 "recipe-enchiladas:Enchiladas:3",
 "recipe-fajitas:Fajitas:1",
 "recipe-honey_and_soy_glazed_chicken_thighs:Honey And Soy Glazed Chicken Thighs:0",
@@ -4997,12 +5099,14 @@ var localDB = {
 "Oatmeal Balls",
 "Oatmeal Raisin Cookies",
 "Oreo Truffles",
+"Peach Blueberry Crisp",
 "Peanut Butter And Cocoa Smothie",
 "Pineapple Upside Down Cake",
 "Skillet Peanut Butter Chocolate Chip Blondies",
 "Toasted Marshmallow Brownie Crinkles"
 ],
 "drinks": [
+"Coffee",
 "Wine"
 ],
 "ice_cream": [
@@ -5022,7 +5126,7 @@ var localDB = {
 "Lasagna",
 "Nori Vegetable Wraps",
 "Oven-Baked Sausage",
-"Pancetta Crisps",
+"Pancetta Crisps On Baguette",
 "Quick Skillet Meals",
 "Tomato Mozzarella Caprese",
 "Tuna Melts"
@@ -5052,11 +5156,12 @@ var localDB = {
 ],
 "poultry": [
 "Baked Chicken And Potatoes",
+"Breaded Chicken",
 "Brick Chicken",
 "Chicken",
 "Chicken Cacciatore",
 "Chicken Tacos",
-"Chicken Tikka Masala",
+"Chicken Thighs",
 "Enchiladas",
 "Fajitas",
 "Honey And Soy Glazed Chicken Thighs",
