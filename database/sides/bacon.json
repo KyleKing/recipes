@@ -2,12 +2,13 @@
   "ingredients": [
     "BACON"
   ],
-  "notes": [],
+  "notes": [
+    "Picture was following the food 52 article for a pan with parchment paper... Not as described"
+  ],
   "rating": 2,
   "recipe": [
-    "Pre-heat oven to 400°F",
-    "Line a rimmed baking sheet with parchment paper. Bake for 22 min",
-    "Alt: cook in a skillet - faster, but leaves a lot of splatter"
+    "Preheat oven to 375",
+    "Place bacon without overlapping on a wire drying rack over a rimmed baking sheet. Bake for 12 min"
   ],
-  "source": "https://food52.com/blog/23779-how-to-cook-bacon-best-way-make-bacon-in-the-oven-skillet"
+  "source": ""
 }

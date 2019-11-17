@@ -29,6 +29,47 @@ var localDB = {
 "title": "Breakfast Burrito"
 },
 {
+"group": "breakfast",
+"id": "recipe-cheesy_cheeseless_scrambled_eggs_with_burst_cherry_tomatoes",
+"imgPlaceholder": "dist/imgs/placeholder_breakfast-cheesy_cheeseless_scrambled_eggs_with_burst_cherry_tomatoes.svg",
+"imgSrc": "dist/imgs/breakfast-cheesy_cheeseless_scrambled_eggs_with_burst_cherry_tomatoes.jpeg",
+"ingredients": {
+"Eggs": [
+"Eggs",
+"12 eggs",
+"1/2 cup heavy cream",
+"1 tsp salt",
+"1/4 tsp pepper",
+"3 tbsp olive oil",
+"3 tbsp butter"
+],
+"Tomatoes": [
+"Tomatoes",
+"2 tbsp olive oil",
+"3 cups cherry tomatoes (~1 lb)",
+"1/2 tsp salt",
+"1/4 tsp pepper",
+"(opt) 1/4 cup thinly sliced chives",
+"(opt) garlic-roasted bacon"
+]
+},
+"notes": [
+"Chrissy Teigen Cravings, 16",
+"For every 4 eggs, 2.5 tbsp cream, 1 tbsp butter, 1 tbsp olive oil"
+],
+"rating": 3,
+"recipe": [
+"Whisk eggs, heavy cream, salt, and pepper until combined",
+"In large nonstick skillet, heat oil and butter over LOW heat until butter is melted",
+"Start heating a cast iron skillet on medium heat until hot",
+"Add eggs and cook, stirring until a custardly and forming small curds. (12-14 min). Remove from heat",
+"Make the tomatoes in parallel during the last 10 min of the egg cook time. In the hot skillet, add oil, swirl, then add the tomatoes. Sprinkle with salt and pepper. Cook for 5-6 min until tomatoes shrivel",
+"Serve with the optional chives/bacon on top"
+],
+"source": "https://www.amazon.com/Cravings-Recipes-All-Food-Want/dp/1101903910",
+"title": "Cheesy Cheeseless Scrambled Eggs With Burst Cherry Tomatoes"
+},
+{
 "altRatio": "1/2",
 "group": "breakfast",
 "id": "recipe-eggs_benedict",
@@ -2180,6 +2221,39 @@ var localDB = {
 },
 {
 "group": "pasta",
+"id": "recipe-pasta_with_corn_zucchini_and_tomatoes",
+"imgPlaceholder": "dist/imgs/placeholder_pasta-pasta_with_corn_zucchini_and_tomatoes.svg",
+"imgSrc": "dist/imgs/pasta-pasta_with_corn_zucchini_and_tomatoes.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"salt and pepper",
+"3 tbsp extra virgin olive oil",
+"1 cup corn kernels (from 2-3 ears) or 1 can",
+"1 cup diced zucchini or summer squash (from 2 or 3 small vegetables)",
+"1 medium onion or 3-4 shallots, diced",
+"(optional) 1\u20444 tsp minced garlic",
+"1-2 sprigs tarragon",
+"4 plum or 2 large tomatoes, diced",
+"1 pound cut pasta, like penne"
+]
+},
+"notes": [],
+"rating": 3,
+"recipe": [
+"Set a large pot of water to boil. Put 2 tbsp oil in a large skillet over medium-high heat and add corn. Cook, stirring occasionally, until corn begins to brown",
+"Add zucchini and some salt and pepper. Cook, stirring occasionally, until zucchini begins to brown",
+"Add onion or shallots and garlic if you are using it. Cook, stirring occasionally, until onion softens (about 5 min)",
+"Add tarragon and cook for 30 sec, then tomatoes",
+"Cook pasta according to directions with shortest cook time",
+"While pasta cooks continue to cook sauce, reducing heat when tomatoes begin to break down. If sauce dries out (with plum tomatoes, this is likely), add some pasta cooking water, about 1/2 cup at a time",
+"When pasta is done, drain it, toss with sauce and remaining oil or butter, and serve immediately"
+],
+"source": "https://cooking.nytimes.com/recipes/11305-pasta-with-corn-zucchini-and-tomatoes",
+"title": "Pasta With Corn Zucchini And Tomatoes"
+},
+{
+"group": "pasta",
 "id": "recipe-peanut_noodles",
 "imgPlaceholder": "dist/imgs/placeholder_pasta-peanut_noodles.svg",
 "imgSrc": "dist/imgs/pasta-peanut_noodles.jpg",
@@ -2361,6 +2435,42 @@ var localDB = {
 ],
 "source": "",
 "title": "Spaghetti Sauce"
+},
+{
+"group": "pasta",
+"id": "recipe-summer_pasta_with_ricotta_and_zucchini",
+"imgPlaceholder": "dist/imgs/placeholder_pasta-summer_pasta_with_ricotta_and_zucchini.svg",
+"imgSrc": "dist/imgs/pasta-summer_pasta_with_ricotta_and_zucchini.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"extra-virgin olive oil",
+"1 small onion, finely diced",
+"2 lbs zucchini, sliced into 1/4-inch-thick pieces (for larger zucchini, cut in half lengthwise before slicing)",
+"salt and pepper",
+"2 garlic cloves, minced",
+"1 oz basil (about 2 cups loose leaves)",
+"1 lb ziti or other dry pasta",
+"8 oz ricotta",
+"pinch of crushed red pepper",
+"zest of 1 lemon",
+"2 oz grated parmesan, pecorino, or a mixture (about 1 cup), plus more for serving"
+]
+},
+"notes": [],
+"rating": 3,
+"recipe": [
+"Put a pot of water on to boil. In a large skillet over medium-high heat, cook the onions in 3 tbsp olive oil until softened (5-8 min). Reduce heat to keep onions from browning",
+"Add zucchini, season generously with salt and pepper, and continue cooking, stirring occasionally until rather soft (about 10 min). Turn off heat",
+"Meanwhile, use a mortar and pestle to pound garlic, basil and a little salt into a rough paste (or use a mini food processor). Stir in 3 tablespoons olive oil",
+"Boil pasta per package instructions with the minimum cook time for al dente. Drain, reserving 1 cup of pasta-water",
+"In skillet, add pasta to zucchini and turn heat to medium-high",
+"Add 1/2 cup pasta-water, then ricotta, crushed red pepper, and lemon zest, stirring to distribute. Cook for 1 min. Mixture should look creamy. Add a little more pasta water if necessary",
+"Add the basil paste and half the grated cheese. Quickly stir to incorporate",
+"Sprinkle with additional cheese and serve immediately"
+],
+"source": "https://cooking.nytimes.com/recipes/1017463-summer-pasta-with-zucchini-ricotta-and-basil",
+"title": "Summer Pasta With Ricotta And Zucchini"
 },
 {
 "group": "pizza",
@@ -3349,22 +3459,23 @@ var localDB = {
 {
 "group": "sides",
 "id": "recipe-bacon",
-"imgPlaceholder": "",
-"imgSrc": "",
+"imgPlaceholder": "dist/imgs/placeholder_sides-bacon.svg",
+"imgSrc": "dist/imgs/sides-bacon.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
 "bacon"
 ]
 },
-"notes": [],
+"notes": [
+"Picture was following the food 52 article for a pan with parchment paper... Not as described"
+],
 "rating": 2,
 "recipe": [
-"Pre-heat oven to 400\u00b0F",
-"Line a rimmed baking sheet with parchment paper. Bake for 22 min",
-"Alt: cook in a skillet - faster, but leaves a lot of splatter"
+"Preheat oven to 375",
+"Place bacon without overlapping on a wire drying rack over a rimmed baking sheet. Bake for 12 min"
 ],
-"source": "https://food52.com/blog/23779-how-to-cook-bacon-best-way-make-bacon-in-the-oven-skillet",
+"source": "",
 "title": "Bacon"
 },
 {
@@ -4834,6 +4945,7 @@ var localDB = {
 "ingredients.Curry",
 "ingredients.DIY Garam Masala",
 "ingredients.DRESSING + SALAD",
+"ingredients.Eggs",
 "ingredients.FOR SERVING",
 "ingredients.FOR THE BENEDICT AND ASSEMBLY",
 "ingredients.FOR THE HOLLANDAISE",
@@ -4863,6 +4975,7 @@ var localDB = {
 "ingredients.Taco Seasoning (or use store bought)",
 "ingredients.Tacos",
 "ingredients.Tart",
+"ingredients.Tomatoes",
 "ingredients.Toppings",
 "ingredients.Tzatziki Sauce",
 "ingredients.With",
@@ -4887,6 +5000,7 @@ var localDB = {
 "toc": {
 "breakfast": [
 "recipe-breakfast_burrito:Breakfast Burrito:1",
+"recipe-cheesy_cheeseless_scrambled_eggs_with_burst_cherry_tomatoes:Cheesy Cheeseless Scrambled Eggs With Burst Cherry Tomatoes:3",
 "recipe-eggs_benedict:Eggs Benedict:3",
 "recipe-hard_boiled_eggs:Hard Boiled Eggs:2",
 "recipe-lemon_poppy_seed_mini_scones:Lemon Poppy Seed Mini Scones:0",
@@ -4963,11 +5077,13 @@ var localDB = {
 "recipe-one_pot_creamy_broccoli_pasta:One Pot Creamy Broccoli Pasta:1",
 "recipe-orzo_and_cheese:Orzo And Cheese:1",
 "recipe-pasta_e_ceci:Pasta E Ceci:2",
+"recipe-pasta_with_corn_zucchini_and_tomatoes:Pasta With Corn Zucchini And Tomatoes:3",
 "recipe-peanut_noodles:Peanut Noodles:1",
 "recipe-sausage_and_mushroom_penne_pasta:Sausage And Mushroom Penne Pasta:3",
 "recipe-sesame_noodles_with_wilted_greens:Sesame Noodles With Wilted Greens:1",
 "recipe-spaghetti_cacio_e_cepe:Spaghetti Cacio E Cepe:2",
-"recipe-spaghetti_sauce:Spaghetti Sauce:3"
+"recipe-spaghetti_sauce:Spaghetti Sauce:3",
+"recipe-summer_pasta_with_ricotta_and_zucchini:Summer Pasta With Ricotta And Zucchini:3"
 ],
 "pizza": [
 "recipe-english_muffin:English Muffin:2",
@@ -5066,6 +5182,7 @@ var localDB = {
 "tocLookup": {
 "breakfast": [
 "Breakfast Burrito",
+"Cheesy Cheeseless Scrambled Eggs With Burst Cherry Tomatoes",
 "Eggs Benedict",
 "Hard Boiled Eggs",
 "Lemon Poppy Seed Mini Scones",
@@ -5142,11 +5259,13 @@ var localDB = {
 "One Pot Creamy Broccoli Pasta",
 "Orzo And Cheese",
 "Pasta E Ceci",
+"Pasta With Corn Zucchini And Tomatoes",
 "Peanut Noodles",
 "Sausage And Mushroom Penne Pasta",
 "Sesame Noodles With Wilted Greens",
 "Spaghetti Cacio E Cepe",
-"Spaghetti Sauce"
+"Spaghetti Sauce",
+"Summer Pasta With Ricotta And Zucchini"
 ],
 "pizza": [
 "English Muffin",
