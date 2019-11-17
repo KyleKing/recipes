@@ -1,17 +1,15 @@
 {
   "ingredients": [
     "English muffins (or bagels)",
-    "tomato sauce",
     "mozzarella cheese",
-    "spinach",
-    "toppings (Parmesan cheese, pepperoni, red pepper flakes, etc.)"
+    "(optional) spinach, peppers, tomatoes, etc.",
+    "(optional) Parmesan, pepperoni, red pepper flakes, basil, etc."
   ],
   "notes": [],
-  "rating": 1,
+  "rating": 2,
   "recipe": [
-    "Preheat oven to 400℉ and lightly toast the choice of grain",
-    "Place on a tin foil covered pan and cover with chosen ingredients",
-    "Bake for 10 minutes or until the cheese is fully melted"
+    "Preheat oven to 400 (or broil) and lightly toast the muffin or bagel",
+    "Assemble and place on a tin foil covered pan. Bake for 10 minutes or broil for 5-10 until cheese is fully melted"
   ],
   "source": ""
 }

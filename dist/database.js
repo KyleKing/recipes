@@ -1300,8 +1300,8 @@ var localDB = {
 {
 "group": "drinks",
 "id": "recipe-coffee",
-"imgPlaceholder": "",
-"imgSrc": "",
+"imgPlaceholder": "dist/imgs/placeholder_drinks-coffee.svg",
+"imgSrc": "dist/imgs/drinks-coffee.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -2474,29 +2474,6 @@ var localDB = {
 },
 {
 "group": "pizza",
-"id": "recipe-english_muffin",
-"imgPlaceholder": "dist/imgs/placeholder_pizza-english_muffin.svg",
-"imgSrc": "dist/imgs/pizza-english_muffin.jpeg",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"english muffins",
-"sauce",
-"mozzarella cheese",
-"(optional) spinach, peppers, tomatoes, etc.",
-"(optional) red pepper flakes, basil"
-]
-},
-"notes": [],
-"rating": 2,
-"recipe": [
-"Toast the english muffins. Add sauce, cheese, and any toppings. Broil for 5-10 minutes"
-],
-"source": "",
-"title": "English Muffin"
-},
-{
-"group": "pizza",
 "id": "recipe-mini_pizza",
 "imgPlaceholder": "dist/imgs/placeholder_pizza-mini_pizza.svg",
 "imgSrc": "dist/imgs/pizza-mini_pizza.jpg",
@@ -2504,18 +2481,16 @@ var localDB = {
 "ingredients": [
 "Ingredients",
 "english muffins (or bagels)",
-"tomato sauce",
 "mozzarella cheese",
-"spinach",
-"toppings (parmesan cheese, pepperoni, red pepper flakes, etc.)"
+"(optional) spinach, peppers, tomatoes, etc.",
+"(optional) parmesan, pepperoni, red pepper flakes, basil, etc."
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 2,
 "recipe": [
-"Preheat oven to 400\u2109 and lightly toast the choice of grain",
-"Place on a tin foil covered pan and cover with chosen ingredients",
-"Bake for 10 minutes or until the cheese is fully melted"
+"Preheat oven to 400 (or broil) and lightly toast the muffin or bagel",
+"Assemble and place on a tin foil covered pan. Bake for 10 minutes or broil for 5-10 until cheese is fully melted"
 ],
 "source": "",
 "title": "Mini Pizza"
@@ -4348,6 +4323,30 @@ var localDB = {
 "title": "Pizza Stone Care"
 },
 {
+"group": "tools",
+"id": "recipe-porcelain_pot_care",
+"imgPlaceholder": "dist/imgs/placeholder_tools-porcelain_pot_care.svg",
+"imgSrc": "dist/imgs/tools-porcelain_pot_care.png",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"na"
+]
+},
+"notes": [],
+"rating": 0,
+"recipe": [
+">> Things to Know",
+"Porcelain is glass and can be prone to chipping. Oven safe to 500. Can be used to refrigerate",
+">> Cook",
+"Do not use high heat. Stick to medium at most. Do not use metal utensils. Do not heat empty",
+">> Care",
+"Warm soapy water. Can use baking soda for stains/see other notes in image"
+],
+"source": "https://www.youtube.com/watch?v=KLGSLCaksdY",
+"title": "Porcelain Pot Care"
+},
+{
 "group": "veggie",
 "id": "recipe-baked_broccoli",
 "imgPlaceholder": "dist/imgs/placeholder_veggie-baked_broccoli.svg",
@@ -5086,8 +5085,7 @@ var localDB = {
 "recipe-summer_pasta_with_ricotta_and_zucchini:Summer Pasta With Ricotta And Zucchini:3"
 ],
 "pizza": [
-"recipe-english_muffin:English Muffin:2",
-"recipe-mini_pizza:Mini Pizza:1",
+"recipe-mini_pizza:Mini Pizza:2",
 "recipe-naan_pizza:Naan Pizza:1",
 "recipe-pizza:Pizza:2"
 ],
@@ -5158,7 +5156,8 @@ var localDB = {
 "tools": [
 "recipe-cast_iron_care:Cast Iron Care:0",
 "recipe-dishwasher:Dishwasher:0",
-"recipe-pizza_stone_care:Pizza Stone Care:0"
+"recipe-pizza_stone_care:Pizza Stone Care:0",
+"recipe-porcelain_pot_care:Porcelain Pot Care:0"
 ],
 "veggie": [
 "recipe-baked_broccoli:Baked Broccoli:2",
@@ -5268,7 +5267,6 @@ var localDB = {
 "Summer Pasta With Ricotta And Zucchini"
 ],
 "pizza": [
-"English Muffin",
 "Mini Pizza",
 "Naan Pizza",
 "Pizza"
@@ -5340,7 +5338,8 @@ var localDB = {
 "tools": [
 "Cast Iron Care",
 "Dishwasher",
-"Pizza Stone Care"
+"Pizza Stone Care",
+"Porcelain Pot Care"
 ],
 "veggie": [
 "Baked Broccoli",
