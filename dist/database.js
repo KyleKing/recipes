@@ -3241,6 +3241,32 @@ var localDB = {
 "title": "Spicy Cajun Sausage And Rice"
 },
 {
+"group": "sauce",
+"id": "recipe-peanut_sauce",
+"imgPlaceholder": "dist/imgs/placeholder_sauces-peanut_sauce.svg",
+"imgSrc": "dist/imgs/sauces-peanut_sauce.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"2 tbsp peanut butter",
+"1 tbsp water",
+"3/4 tbsp soy sauce",
+"3/4 tbsp lemon",
+"1/4 tsp red pepper flakes",
+"1/2 tbsp maple syrup"
+]
+},
+"notes": [
+"Used this on Thai veggie burgers from Trader Joe's"
+],
+"rating": 2,
+"recipe": [
+"Combine ingredients and mix until smooth. Will separate and needs to be remixed before serving. Store refrigerated"
+],
+"source": "https://minimalistbaker.com/5-ingredient-peanut-sauce/",
+"title": "Peanut Sauce"
+},
+{
 "group": "seafood",
 "id": "recipe-baked-fish",
 "imgPlaceholder": "dist/imgs/placeholder_seafood-baked-fish.svg",
@@ -5113,6 +5139,9 @@ var localDB = {
 "recipe-red_beans_and_rice:Red Beans And Rice:1",
 "recipe-spicy_cajun_sausage_and_rice:Spicy Cajun Sausage And Rice:1"
 ],
+"sauce": [
+"recipe-peanut_sauce:Peanut Sauce:2"
+],
 "seafood": [
 "recipe-baked-fish:Baked-Fish:1",
 "recipe-crab_cakes:Crab Cakes:2",
@@ -5294,6 +5323,9 @@ var localDB = {
 "Quinoa And Stuff",
 "Red Beans And Rice",
 "Spicy Cajun Sausage And Rice"
+],
+"sauce": [
+"Peanut Sauce"
 ],
 "seafood": [
 "Baked-Fish",
