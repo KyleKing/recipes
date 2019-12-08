@@ -1936,7 +1936,7 @@ var localDB = {
 ]
 },
 "notes": [
-"Alex's family recipe"
+"Alex's family recipe. Good for groups"
 ],
 "rating": 2,
 "recipe": [
@@ -2424,7 +2424,7 @@ var localDB = {
 ]
 },
 "notes": [
-"Leftovers freeze well. This makes at least 10 portions at 1x"
+"Leftovers freeze well. This makes at least 10 portions. Good for groups"
 ],
 "rating": 3,
 "recipe": [
@@ -2471,6 +2471,61 @@ var localDB = {
 ],
 "source": "https://cooking.nytimes.com/recipes/1017463-summer-pasta-with-zucchini-ricotta-and-basil",
 "title": "Summer Pasta With Ricotta And Zucchini"
+},
+{
+"group": "pizza",
+"id": "recipe-charred_broccoli_pizza",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"CRUST": [
+"Crust",
+"3 1/3 cups (500 grams) type 00 or all-purpose flour, plus more for the work surface",
+"1 tsp (7 grams) kosher salt",
+"2 tsp (8 grams) instant or active dry yeast",
+"1 1/4 cups plus 3 tbsp (338 grams) warm water",
+"1 tbsp (13 grams) extra-virgin olive oil, plus more as needed",
+"semolina flour or cornmeal, for dusting"
+],
+"SAUCE": [
+"Sauce",
+"1 cup canned crushed fire-roasted tomatoes",
+"1/4 tsp granulated garlic (a.k.a. garlic powder)",
+"1/2 tsp dried oregano",
+"1/4 tsp kosher salt",
+"1 tsp extra-virgin olive oil",
+"pinch crushed red pepper flakes"
+],
+"TOPPING": [
+"Topping",
+"1 tsp extra-virgin olive oil",
+"1 cup broccoli florets",
+"1 tsp fresh lemon juice",
+"1/8 tsp kosher salt, plus more as needed",
+"4 oz fresh mozzarella cheese, thinly sliced",
+"1/2 cup freshly grated parmigiano-reggiano or pecorino romano cheese",
+"1 small shallot, thinly sliced",
+"1 tbsp capers, drained"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"For the crust: Whisk together the flour, salt and yeast in a bowl or the bowl of your stand mixer. Stir to combine. Add the water and oil, stirring until a shaggy dough forms. Turn it out onto a floured surface",
+"Knead the dough by pushing with the base of your palm, then re-forming it into a ball. Continue kneading for 8 minutes until the dough feels pillowy and has a smooth, stretchy exterior. If the dough is very sticky, add a small amount of flour while kneading",
+"Alternatively, attach the dough hook to your stand mixer and start the mixer on medium-low speed, then allow the mixer to knead for 8 minutes",
+"After the kneading is finished, divide the dough into 3 equal pieces. Use floured hands to gently shape each piece into a boule (ball shape) by folding the dough under itself. Set each boule on a floured surface and dab the dough with a bit of oil to keep it moist. Cover all boules with a damp towel and allow them to rise until doubled in size, about 45 minutes to 1 hour",
+"The dough is ready to be used. However for the best flavor, transfer the dough to separate sealed containers, large enough for the dough to double in size again, and store in the refrigerator for 2 to 3 days",
+"If you\u2019re using the dough after refrigerating: The day of serving, remove the dough from the containers, place it on a lightly floured surface covered with a towel and allow it to come to room temperature before stretching, 30 to 45 minutes",
+"To stretch the dough, place it on a lightly floured surface and gently press it into a round, flipping several times and adding a pinch of flour if it is too sticky. Once it is about 8 inches in diameter, pick up the dough and gently drape it over the knuckles on both of your hands. Slowly rotate it around, allowing gravity to stretch it into a round about 11 inches in diameter. Do not overwork or fold the dough. If the dough starts to resist stretching, put it down and allow it to rest for a few minutes, at which point it will stretch more easily",
+"When you're ready to bake your pizza, preheat the oven with a pizza stone in it to 500 degrees, or its highest number setting",
+"For the sauce: This sauce takes just 2 minutes to make. Stir together the tomatoes, garlic powder, dried oregano, salt, oil and crushed red pepper flakes in a medium bowl. The yield is 1 cup; reserve half for another use",
+"For the topping: Heat the oil in a small skillet until it\u2019s shimmering over medium-high heat. Add the broccoli and cook for 1 minute, then add 1/2 cup water and cover. Cook/steam for 3 to 4 minutes, until tender. Drain the water. Stir in the lemon juice and the 1/8 tsp of salt, then remove from the heat",
+"Now, the fun part: Dust your pizza peel with semolina flour or cornmeal. If you don\u2019t have a peel, don\u2019t worry: just use the back of a baking sheet (or a rimless baking sheet) instead. Place your 11-inch round on top of the pizza peel. Use the back of a spoon to spread the 1/2 cup of sauce on the dough, in a thin layer, leaving a 1/2-inch margin at the edge. Top with the mozzarella and the Parm or pecorino cheese, then add the broccoli, shallot and capers. Season with a pinch of salt over the entire pizza",
+"Very gently, use the peel (or baking sheet) to give a firm shake and carefully transfer the assembled pie to the pizza stone in the oven. Bake for 6 to 7 minutes, until the cheese has melted and the crust is lightly browned"
+],
+"source": "https://www.washingtonpost.com/recipes/charred-broccoli-pizza/17015/",
+"title": "Charred Broccoli Pizza"
 },
 {
 "group": "pizza",
@@ -2539,9 +2594,10 @@ var localDB = {
 "marinara sauce",
 "mozzarella cheese",
 "(optional) parmesan cheese, feta",
-"(optional) spinach, peppers, tomatoes, etc.",
+"(optional) spinach, peppers, tomatoes, canned fire-roasted tomatoes, etc.",
 "(optional) chicken, sausage, pepperoni, etc.",
-"(optional) red pepper flakes, basil"
+"(optional) red pepper flakes, basil",
+"either semolina or flour"
 ]
 },
 "notes": [
@@ -2551,16 +2607,17 @@ var localDB = {
 "recipe": [
 "Let the dough rest at room temperature for 20 minutes",
 "Put the cold pizza stone in a cold oven then preheat to 425",
-"Stretch out the dough, working initially flat, then pull and spin the dough until at least 12 inches in diameter",
-"Put a thin layer of flour on the pizza peel. Work quickly to prevent the dough from absorbing the flour and sticking. Additionally, regularly shake the peel to make sure the pizza slides around easily",
+"Place the dough on a lightly floured surface, then gently press it into a circle",
+"Once you have an 8-inch round, pick up the dough and gently drape it over the knuckles on both of your hands. Slowly rotate it, allowing gravity to stretch it into a round about 11 inches in diameter. If the dough starts to resist stretching, put it down and allow it to rest for a few minutes, at which point it should stretch more easily",
+"Put a thin layer of semolina (or flour) on the pizza peel. Quickly add the toppings to prevent the dough from absorbing the flour and sticking. Additionally, regularly shake the peel to make sure the pizza slides around easily",
 "Add a thin layer of sauce (less than you think). Hold off on the rest of the toppings for now",
 "With a jittery back and forth motion, slide the pizza onto the stone",
 "Bake for 6-8 min, then remove from the oven with the pizza peel",
 "Add the cheese and other toppings and return to the pizza stone for another 5-10 min",
-"Finally remove and transfer to an over-sized cutting board to slice",
+"Finally remove and transfer to a large cutting board to slice",
 "Wash the peel with soap and water. See the Tools/Pizza Stone section for stone care"
 ],
-"source": "https://www.google.com/search?q=how+to+pizza+peel+avoid+sticking&oq=how+to+pizza+peel+avoid+sticking&aqs=chrome..69i57.3880j0j1&sourceid=chrome&ie=UTF-8#kpvalbx=1",
+"source": "https://www.washingtonpost.com/graphics/2019/voraciously/how-to-make-pizza/?wpisrc=nl_vplantpowered_w2&wpmm=1",
 "title": "Pizza"
 },
 {
@@ -4570,6 +4627,42 @@ var localDB = {
 },
 {
 "group": "veggie",
+"id": "recipe-chickpea_salad_toasts_with_poached_egg",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"EGGS": [
+"Eggs",
+"1 teaspoon white wine vinegar",
+"4 large eggs"
+],
+"TOASTS": [
+"Toasts",
+"one 15.5-ounce can no-salt-added chickpeas, drained",
+"1 celery rib, finely chopped",
+"2 scallions, trimmed and thinly sliced (white and green parts)",
+"2 tablespoons capers in brine, drained",
+"1 tablespoon mayonnaise",
+"1 teaspoon dijon mustard",
+"2 teaspoons white wine vinegar",
+"1/2 teaspoon spanish smoked paprika (piment\u00f3n), plus more for garnish",
+"1/2 teaspoon kosher salt",
+"4 slices artisan-style bread, toasted"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"1-Chickpea salad: Place the chickpeas in a medium bowl and smash with a potato masher or fork until most of them are broken down. Add the celery, scallions, capers, mayonnaise, Dijon mustard, white wine vinegar, smoked paprika, and salt. Stir gently to incorporate",
+"2-Eggs: Pour at least 2 inches of water into a large skillet. Stir in the white wine vinegar and heat over medium-high heat until the water is at a low simmer, just before bubbles start to rise off the bottom of the pan",
+"Crack one egg into a small bowl and use the bowl to gently slide the egg into the water. Repeat for the remaining eggs. Don\u2019t worry if the egg whites spread out a bit as you add them. Cook without stirring for 4 minutes. Use a slotted spoon to transfer the eggs to a plate and cover loosely to keep warm",
+"3-Serve: spread equal amounts of the chickpea salad on the toasted bread slices, then top with poached eggs. Sprinkle a little smoked paprika on each egg (eat with a knife and fork)"
+],
+"source": "https://www.washingtonpost.com/recipes/chickpea-salad-toasts-poached-egg/17012",
+"title": "Chickpea Salad Toasts With Poached Egg"
+},
+{
+"group": "veggie",
 "id": "recipe-chickpea_salad_wrap",
 "imgPlaceholder": "dist/imgs/placeholder_veggie-chickpea_salad_wrap.svg",
 "imgSrc": "dist/imgs/veggie-chickpea_salad_wrap.jpeg",
@@ -4644,6 +4737,44 @@ var localDB = {
 ],
 "source": "https://minimalistbaker.com/spicy-buffalo-chickpea-wraps/",
 "title": "Chickpea Spicy Buffalo Wrap"
+},
+{
+"group": "veggie",
+"id": "recipe-chili_lime_black_bean_tacos",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"4 scallions, trimmed and thinly sliced crosswise (white and green parts)",
+"2 small red onion, thinly sliced",
+"1/2 cup lime juice (from 2 or 3 limes)",
+"kosher salt",
+"4 tbsp extra-virgin olive oil",
+"two 15.5-ounce can no-salt-added black beans, with the liquid",
+"2 tsp chili powder",
+"2 tsp ground cumin",
+"2 tsp spanish smoked paprika (piment\u00f3n; sweet or hot)",
+"2 tsp dijon mustard",
+"12 6-inch corn tortillas",
+"2 cups chopped romaine lettuce (from 1 heart of romaine)",
+"hot sauce, such as cholula"
+]
+},
+"notes": [
+"Scaled to 4x",
+"Could add pan-fried shrimp",
+"Refrigerate leftover black bean filling and pickled onion for up to 2 days. Reheat black beans on stove top"
+],
+"rating": 1,
+"recipe": [
+"1-Two-onion quick pickle: Combine scallions and half the red onion slices in a medium bowl (see source for optional steps to soak in hot water). Combine lime juice, rinsed red onions and scallions, and pinch of kosher salt in a small jar or liquid measuring cup. Let stand while you make the remainder of the recipe, or for at least 10 minutes",
+"2-Black beans: Heat oil in a large skillet over medium heat. Add the remaining red onion and cook without stirring for about 3 minutes (until lightly browned). Add black beans and liquid, chili powder, cumin, paprika, Dijon mustard, and 1/2 tsp of kosher salt; stir to incorporate. Cook for 5-7 minutes, stirring occasionally, until the liquid reduces to a thick sauce",
+"3-Tortillas: Place tortilla on grate above gas burner. Char on medium heat for a few seconds per side. Alternatively, broil for 1 min on each side",
+"4-Assemble: place some chopped romaine at the center of each tortilla, then add a large spoonful of the black bean mixture. Top with the pickled red onion and hot sauce. Optionally, pour a small splash of the juice from the pickling jar onto each taco"
+],
+"source": "https://www.washingtonpost.com/recipes/chili-lime-black-bean-tacos/17008",
+"title": "Chili Lime Black Bean Tacos"
 },
 {
 "group": "veggie",
@@ -4931,6 +5062,66 @@ var localDB = {
 ],
 "source": "https://amindfullmom.com/instant-pot-baked-sweet-potatoes/",
 "title": "Sweet Potatoes"
+},
+{
+"group": "veggies",
+"id": "recipe-chicken_shawarma",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"todo"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"TODO"
+],
+"source": "https://www.washingtonpost.com/recipes/chicken-shawarma/17227/",
+"title": "Chicken Shawarma"
+},
+{
+"group": "veggies",
+"id": "recipe-ginger_orange_broccoli_and_noodles",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"4 oz dried stir-fry noodles of your choice (we used thick stir-fry rice noodles)",
+"1/4 cup low-sodium soy sauce",
+"1/2 cup fresh orange juice (from 2 large oranges)",
+"2 tbsp cornstarch",
+"1 tsp sriracha",
+"1 tablespoon dark miso",
+"1 tablespoon pure sesame oil (may substitute a neutral oil such as grape seed or canola)",
+"1/2 large sweet onion, thinly sliced",
+"1/2 large red bell pepper, seeded and thinly sliced",
+"1 yellow bell pepper, seeded and thinly sliced",
+"2 large broccoli crowns (1.5 pounds total), cut into bite-size florets",
+"1/2 cup roasted, unsalted whole cashews",
+"2 pinches kosher salt",
+"1/4 cup water",
+"2 cloves garlic, thinly sliced",
+"one-inch piece peeled fresh ginger root, minced or grated (about 1 1/2 tsp)"
+]
+},
+"notes": [
+"Optional: Saute cubed chicken until it\u2019s golden brown, then stir in before serving"
+],
+"rating": 1,
+"recipe": [
+"Cook the noodles as directed on the package, then drain",
+"Meanwhile, whisk together the soy sauce, orange juice, cornstarch, Sriracha, and miso in a medium bowl",
+"Add oil to a large skillet or saute pan over high heat. Add the onion and stir-fry for 2 minutes until starts to brown",
+"Add the red and yellow bell peppers, broccoli, cashews, and salt. Stir-fry for 5 minutes, or until the thickest broccoli stems are tender and the cashews are slightly blackened",
+"Reduce the heat to low. Add the water, stirring until it evaporates. This helps the pan to cool down. Add the garlic and ginger, then stir-fry for 1 minute",
+"Turn off the heat. Add the soy sauce mixture, stirring until it thickens into a beautiful, glossy sauce. Add the drained noodles and stir gently until everything is evenly coated. Serve warm"
+],
+"source": "https://www.washingtonpost.com/recipes/ginger-orange-broccoli-and-noodles/17014/",
+"title": "Ginger Orange Broccoli And Noodles"
 }
 ],
 "searchKeys": [
@@ -4961,6 +5152,7 @@ var localDB = {
 "ingredients.Base",
 "ingredients.Blender",
 "ingredients.Brown in Pan",
+"ingredients.CRUST",
 "ingredients.Cake",
 "ingredients.Chicken",
 "ingredients.Combine",
@@ -4970,6 +5162,7 @@ var localDB = {
 "ingredients.Curry",
 "ingredients.DIY Garam Masala",
 "ingredients.DRESSING + SALAD",
+"ingredients.EGGS",
 "ingredients.Eggs",
 "ingredients.FOR SERVING",
 "ingredients.FOR THE BENEDICT AND ASSEMBLY",
@@ -4990,6 +5183,7 @@ var localDB = {
 "ingredients.Peanut Butter Filling",
 "ingredients.Peanut Noodles",
 "ingredients.Ricotta Cheese Mix",
+"ingredients.SAUCE",
 "ingredients.STREUSEL TOPPING",
 "ingredients.Sauce",
 "ingredients.Saute in Olive Oil",
@@ -4997,6 +5191,8 @@ var localDB = {
 "ingredients.Seasonings",
 "ingredients.Standalone",
 "ingredients.Streusel",
+"ingredients.TOASTS",
+"ingredients.TOPPING",
 "ingredients.Taco Seasoning (or use store bought)",
 "ingredients.Tacos",
 "ingredients.Tart",
@@ -5111,6 +5307,7 @@ var localDB = {
 "recipe-summer_pasta_with_ricotta_and_zucchini:Summer Pasta With Ricotta And Zucchini:3"
 ],
 "pizza": [
+"recipe-charred_broccoli_pizza:Charred Broccoli Pizza:1",
 "recipe-mini_pizza:Mini Pizza:2",
 "recipe-naan_pizza:Naan Pizza:1",
 "recipe-pizza:Pizza:2"
@@ -5195,8 +5392,10 @@ var localDB = {
 "recipe-baked_zucchini:Baked Zucchini:3",
 "recipe-chana_masala:Chana Masala:1",
 "recipe-chickpea_greek_salad_wrap:Chickpea Greek Salad Wrap:2",
+"recipe-chickpea_salad_toasts_with_poached_egg:Chickpea Salad Toasts With Poached Egg:1",
 "recipe-chickpea_salad_wrap:Chickpea Salad Wrap:2",
 "recipe-chickpea_spicy_buffalo_wrap:Chickpea Spicy Buffalo Wrap:0",
+"recipe-chili_lime_black_bean_tacos:Chili Lime Black Bean Tacos:1",
 "recipe-crispy_baked_sweet_potato_fries:Crispy Baked Sweet Potato Fries:1",
 "recipe-curried_chickpeas:Curried Chickpeas:1",
 "recipe-guacamole:Guacamole:1",
@@ -5205,6 +5404,10 @@ var localDB = {
 "recipe-salad:Salad:3",
 "recipe-sweet_potato_gnocchi:Sweet Potato Gnocchi:2",
 "recipe-sweet_potatoes:Sweet Potatoes:1"
+],
+"veggies": [
+"recipe-chicken_shawarma:Chicken Shawarma:1",
+"recipe-ginger_orange_broccoli_and_noodles:Ginger Orange Broccoli And Noodles:1"
 ]
 },
 "tocLookup": {
@@ -5296,6 +5499,7 @@ var localDB = {
 "Summer Pasta With Ricotta And Zucchini"
 ],
 "pizza": [
+"Charred Broccoli Pizza",
 "Mini Pizza",
 "Naan Pizza",
 "Pizza"
@@ -5380,8 +5584,10 @@ var localDB = {
 "Baked Zucchini",
 "Chana Masala",
 "Chickpea Greek Salad Wrap",
+"Chickpea Salad Toasts With Poached Egg",
 "Chickpea Salad Wrap",
 "Chickpea Spicy Buffalo Wrap",
+"Chili Lime Black Bean Tacos",
 "Crispy Baked Sweet Potato Fries",
 "Curried Chickpeas",
 "Guacamole",
@@ -5390,6 +5596,10 @@ var localDB = {
 "Salad",
 "Sweet Potato Gnocchi",
 "Sweet Potatoes"
+],
+"veggies": [
+"Chicken Shawarma",
+"Ginger Orange Broccoli And Noodles"
 ]
 }
 }
