@@ -21,7 +21,7 @@ var localDB = {
 "Alt: Add onion and cheese (pepper jack) when cooking the eggs",
 "Also, add pepper, garlic powder, basil, and/or oregano"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "On medium heat, cook the eggs the eggs and in a second pan, heat the tortillas"
 ],
@@ -197,7 +197,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [],
 "source": "https://www.modernhoney.com/the-oatmeal-love-bar/",
 "title": "Oatmeal"
@@ -216,7 +216,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Beat the eggs together until homogeneous + pinch of salt",
 "Over medium-low heat, melt the butter in a skillet, then pour in the eggs.",
@@ -278,7 +278,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Mix the dry ingredients in a large bowl",
 "In a small bowl, beat the egg whites until stiff peaks forms",
@@ -312,7 +312,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Preheat oven to 350",
 "In a large bowl, combine the flour, oats, brown sugar, and cinnamon, then add butter until crumbly. Press half into a greased 2.5 qt. baking dish or a 9 in. square baking pan. Cover with apples.",
@@ -486,7 +486,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Bake a cake according to the instructions and let cool.",
 "Crumble the cake into a large mixing bowl and combine with the frosting. Roll 1 inch balls onto a parchment-lined baking sheet.",
@@ -728,7 +728,7 @@ var localDB = {
 "notes": [
 "Source: Alex's family recipe"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Preheat the oven to 350 F",
 "Line a large baking sheet with tin foil and apply non-stick spray",
@@ -949,7 +949,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "In a small saucepan, combine brown sugar, molasses and shortening. Place over medium-low heat and stir just until mixture is melted and smooth",
 "Remove from heat and mix in baking soda and 1/4 cup cold water. Set aside and allow to cool to room temperature",
@@ -1050,7 +1050,7 @@ var localDB = {
 "notes": [
 "More tasty no-bake energy bites from tasty.co: https://tasty.co/compilation/no-bake-energy-bites"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Combine all ingredients into one bowl, form into balls, and freeze"
 ],
@@ -1114,7 +1114,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "With a wooden spoon in a large bowl (or food processor), finely crush the Oreos. Reserve 1/4 cup of cookie crumbs.",
 "Mix cream cheese and remaining cookie crumbs until blended. shape into 48 (1-inch) balls and place on parchment paper on a rimmed baking pan. Freeze 10 min.",
@@ -1181,7 +1181,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Blend!"
 ],
@@ -1243,7 +1243,7 @@ var localDB = {
 "Chrissy Teigen Cravings, 243",
 "Sometimes you can find bags of peanut butter and chocolate chips, which gives you 2/3 cup leftover for snacking :)"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Preheat oven to 350 and butter a 10 inch iron skillet",
 "With a wooden spoon, beat together the butter, peanut butter, brown sugar, and granulated sugar until creamy",
@@ -1280,7 +1280,7 @@ var localDB = {
 "notes": [
 "Bottom rack for 6 minutes and top rack for 2 minutes. Use smaller marshmallows"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 ">> Make ahead: prep the dough and refrigerate for 30 minutes - overnight",
 "In a measuring cup, whisk together the eggs and vanilla extract",
@@ -1312,7 +1312,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [],
 "source": "",
 "title": "Coffee"
@@ -1562,7 +1562,7 @@ var localDB = {
 "To Make Ahead: Prepare the casserole through step 3. Let cool, then cover and keep in the fridge for up to 2 days. To bake, remove from the fridge and let sit at room temp while the oven preheats. Bake as directed",
 "To Freeze: Prepare the casserole through step 3. Let cool, then cover tightly. Freeze for up to 3 months. Thaw overnight in the fridge or on the counter for 2-3 hours. Bake as directed"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Preheat the oven to 425 degrees F",
 "Heat the olive oil in a large pot over medium heat. When the oil shimmers, add the onion and carrot and cook until fragrant, about 5 minutes. Stir in the chicken and season with salt and pepper. Cook until the chicken is seared, 2-3 minutes. Add the butter, rice, orzo, and thyme, and cook until golden and toasted, 2-3 minutes. Add the broth and bring to a boil over high heat. Add the broccoli, bay leaves, garlic powder, cayenne, and a large pinch each of salt and pepper. Bring to a boil, cover and reduce heat to low. Cook, covered for 20-25 minutes, until the rice is mostly cooked",
@@ -1613,7 +1613,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Butter pan and heat until starts to foam, but not brown",
 "Add one slice and cheese",
@@ -1654,7 +1654,7 @@ var localDB = {
 "From the Joy of Cooking page 567",
 "Store bought Tzatziki makes this much easier because it's hard to get the right amount of Dill"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Bake the chicken with olive oil, salt, pepper, and garlic",
 "Lay everything out on the Naan and cover in Tzatziki"
@@ -1679,7 +1679,7 @@ var localDB = {
 "notes": [
 "The essential French ham sandwich"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Don't skimp on the butter"
 ],
@@ -1884,7 +1884,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Slice the tomatoes and mozzarella. Drizzle olive oil on top with a small amount of balsamic vinegar",
 "For the bread, add a bowl of ground pepper and olive oil for dipping"
@@ -1908,7 +1908,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Preheat oven to Broil (~10 min)",
 "Chop pickle and mix ingredients together. Toast English muffins",
@@ -1967,7 +1967,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Cook macaroni",
 "In a large saucepan over medium heat all ingredients (except cheese) until hot",
@@ -1996,7 +1996,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Cook pasta according to directions. Save 1 cup of pasta water",
 "In a large skillet, heat the olive oil over medium heat and saute the shallot and garlic for about 2 minutes. Add the tomatoes and salt and reduce the heat to medium low. Simmer the mixture until the tomatoes are slightly popped, 15 to 20 minutes.",
@@ -2051,7 +2051,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "In a pot, start boiling water for the lo mein noodles and when ready cook for 5-7 minutes (per package instructions)",
 "Melt the butter, red pepper flakes, and vegetables in a Wok or large pan on med-high heat. Lower heat to Medium while cooking",
@@ -2112,7 +2112,7 @@ var localDB = {
 "notes": [
 "Note: if the mozzarella is added to hot pasta it will melt and get stringy, so store it separately, which will make reheating the pasta easier"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Boil the pasta following the directions, then for the last two minutes, add the frozen vegetable to the boiling pasta",
 "Drain and return to the pot - immediately mix with pesto and red pepper flakes and wait to slightly cool",
@@ -2144,7 +2144,7 @@ var localDB = {
 "notes": [
 "I think I made this recipe with whole milk, but probably could still work with skim"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Saute garlic in the butter and olive oil over medium heat for a few min",
 "Add the uncooked noodles, stock/water, milk, and broccoli. Bring to a boil and cover",
@@ -2171,7 +2171,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Crisp cubed ham over medium-high heat and in parallel, bring a large pot of water to boil",
 "In the pot, cook the orzo and for the last two minutes, add the frozen broccoli",
@@ -2285,7 +2285,7 @@ var localDB = {
 "notes": [
 "(Original Source: My Coworkers Dani and Michael)"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Mix the sauce until smooth and prep the vegetables separately",
 "Boil the pasta, drain, then immediately toss with vegetables and sauce"
@@ -2346,7 +2346,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Start a large pot of boiling water",
 "Combine soy sauce, sesame oil, cider vinegar, sesame seeds, red pepper flakes, and half of the garlic in a small bowl then set aside",
@@ -2509,7 +2509,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "For the crust: Whisk together the flour, salt and yeast in a bowl or the bowl of your stand mixer. Stir to combine. Add the water and oil, stirring until a shaggy dough forms. Turn it out onto a floured surface",
 "Knead the dough by pushing with the base of your palm, then re-forming it into a ball. Continue kneading for 8 minutes until the dough feels pillowy and has a smooth, stretchy exterior. If the dough is very sticky, add a small amount of flour while kneading",
@@ -2573,7 +2573,7 @@ var localDB = {
 "Add the red pepper flakes to the sauce before baking",
 "Optionally, add olive oil to the naan before the pasta sauce and/or garlic"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Preheat oven to 425 and place a shelf on the top rack. Cover a baking sheet in tin foil",
 "Prep the naan pizza and place in the oven for 12-16 minutes",
@@ -2643,7 +2643,7 @@ var localDB = {
 "notes": [
 "Turned out slightly dry. Might need to tweak the recipe or just stick to making chicken and potatoes in the instant pot"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Preheat the oven to 425F",
 "Toss the ingredients in a large bowl and spread in a roasting pan",
@@ -2737,7 +2737,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Preheat oven to 400\u2109",
 "Cover chicken in olive oil and choice of seasonings",
@@ -2848,7 +2848,7 @@ var localDB = {
 "notes": [
 "To cook frozen chicken thighs, skip the step of browning as you cannot brown frozen meat. Place 1 cup of water, trivet, and the frozen chicken thighs in the Instant Pot. Cook for 15 min at high pressure plus 5 minutes natural pressure release"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "In a small bowl, combine the oregano, paprika, garlic powder, onion powder, salt, and pepper. Rub over thighs",
 "With small amount of olive oil, saute thighs in Instant Pot (on Saute setting). Cook 4 minutes per side",
@@ -2921,7 +2921,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Defrost the chicken and preheat the oven to 400 degrees",
 "Cut the peppers, onions, tomatoes, and chicken into 1/4 inch strips and fill a 9 x 13 inch casserole dish. Add the beans and corn, then cover with the seasonings and olive oil. Mix by hand",
@@ -3104,7 +3104,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Cook chicken and rice, then toss with ingredients"
 ],
@@ -3158,7 +3158,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Rinse the Basmati rice with cold water. Add rice, water, and oil to instant pot. Cook for 8 minutes on high pressure, then allow 5 minutes for natural pressure release",
 "Toss with the green onions and parsely"
@@ -3213,7 +3213,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Prepare Quinoa: Bring 2 cups water and 1 cup quinoa to a boil. Cover with lid and cook for 15 minutes on low. Remove from heat and let sit for 5 minutes",
 "(optionally) saut\u00e9e peppers and onions",
@@ -3251,7 +3251,7 @@ var localDB = {
 "notes": [
 "Pretty spicy and simple. Otherwise not much of note"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "In a medium pot over medium heat, heat oil. Slice the sausage and cook in the pot until slightly browned",
 "Add onion and the pepper. Cook until slightly softened",
@@ -3288,7 +3288,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Cook the rice",
 "Bake the sausage (see directions below. 400F for 15 min, then flip for ~10)",
@@ -3340,7 +3340,7 @@ var localDB = {
 "notes": [
 "For (thin) frozen fillet, bake at 450F for 4 minutes, then flip and bake for 8-12 min. Cover with olive oil, salt, and pepper. Frozen Recipe Source: http://cookthestory.com/how-to-cook-fish-from-frozen/"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Preheat oven to 400F",
 "Cover a baking sheet with tin foil and prep the fish",
@@ -3479,7 +3479,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Whisk together olive oil, honey, lime juice, garlic, salt, and pepper, then pour the marinade over the shrimp and marinate for at least 30 minutes in the fridge",
 "Skewer and grill for 6-8 minutes or cook in a skillet for ~6 minutes",
@@ -3504,7 +3504,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Heat chicken and franks until hot",
 "Stir in cream cheese and ranch",
@@ -3556,7 +3556,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "In a medium mixing bowl, add the tomatoes, garlic, basil, vinegar, olive oil, cheese, salt, and pepper",
 "Mix thoroughly and let sit for at least 15 minutes at room temperature to let the flavors marinate",
@@ -4044,7 +4044,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Rinse the rice in a strainer for ~2 min. Shake dry",
 "In the instant pot, even distribute the rice in the water",
@@ -4068,7 +4068,7 @@ var localDB = {
 "notes": [
 "Link for rolling Uramaki: https://youtu.be/hfNhqawvSr8?t=2m50s"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Lay out a bamboo rolling mat, cutting board, knife, and small bowl of water",
 "Either place a sheet of plastic wrap down or put a bag over the bamboo rolling mat to make it easier to clean",
@@ -4109,7 +4109,7 @@ var localDB = {
 "tobiko is just fish eggs with corn syrup and food coloring",
 "See more detailed guide: https://www.justonecookbook.com/california-roll/"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Cut the Nori sheet in half. Spread rice over the nori and top with sesame seeds, then flip rice side down",
 "Add strips of the Surimi, avocado, cucumber, and choice of fish roe then roll"
@@ -4142,7 +4142,7 @@ var localDB = {
 "notes": [
 "See guide on using raw tuna: "
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Mix the sauce, then add and mix with the canned tuna",
 "Cut the Nori sheet in half. Spread rice over the nori and top with sesame seeds, then flip rice side down",
@@ -4165,7 +4165,7 @@ var localDB = {
 "notes": [
 "Ingredient ideas: http://wildgreensandsardines.com/2015/06/smoked-salmon-onigiri.html"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Spread the rice into a circle, then fill with the selected ingredients",
 "Use plastic wrap to shape the ball into a triangular shape, then add a strip of nori to hold the base"
@@ -4192,7 +4192,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Spread rice over the nori, then with rice-side up, add the fillings. Roll"
 ],
@@ -4242,7 +4242,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Cut the Nori sheet in half. Spread rice over the nori, then flip rice side down",
 "Add the fillings and roll. Drizzle with extra spicy mayo sauce on top"
@@ -4266,7 +4266,7 @@ var localDB = {
 "notes": [
 "Look for smoked salmon with the most visible white fat lines"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Slice salmon into pieces to cover the sushi rice. Will look best with the fat lines running diagonally when wrapped",
 "Using two index fingers and your thumb shape a bite size clump of sushi rice",
@@ -4294,7 +4294,7 @@ var localDB = {
 "notes": [
 "Can mix rice vinegar or lemon juice to help prevent the avocado from browning"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Sliced all ingredients into long strips then roll"
 ],
@@ -4318,7 +4318,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Spread rice over the nori, then with rice-side up, add the fillings. Roll"
 ],
@@ -4472,7 +4472,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Preheat the oven to 450\u2109",
 "Scrub wash and dry the potatoes and poke with a fork to allow steam to escape",
@@ -4500,7 +4500,7 @@ var localDB = {
 "notes": [
 "For smaller potatoes, use 15 minutes"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Scrub the potatoes clean.",
 "Insert the steamer rack into the instant pot, add 1 cup of (cold) water, then add the potatoes. Make sure the potatoes and water do not touch",
@@ -4586,7 +4586,7 @@ var localDB = {
 "Source: The Essential Instant Pot Cookbook page 39",
 "DIY Garam Masala from: https://www.allrecipes.com/recipe/142967/easy-garam-masala/"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Select the Saute setting and cook the onions, garlic, ginger, and salt for ~7 minutes. Add the rest of the spices for another minute",
 "By hand, crush the tomatoes and mix together. Stir in the water. Cook for 15 minutes on high pressure, then quick release",
@@ -4608,7 +4608,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "TODO"
 ],
@@ -4670,7 +4670,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "1-Chickpea salad: Place the chickpeas in a medium bowl and smash with a potato masher or fork until most of them are broken down. Add the celery, scallions, capers, mayonnaise, Dijon mustard, white wine vinegar, smoked paprika, and salt. Stir gently to incorporate",
 "2-Eggs: Pour at least 2 inches of water into a large skillet. Stir in the white wine vinegar and heat over medium-high heat until the water is at a low simmer, just before bubbles start to rise off the bottom of the pan",
@@ -4785,7 +4785,7 @@ var localDB = {
 "Could add pan-fried shrimp",
 "Refrigerate leftover black bean filling and pickled onion for up to 2 days. Reheat black beans on stove top"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "1-Two-onion quick pickle: Combine scallions and half the red onion slices in a medium bowl (see source for optional steps to soak in hot water). Combine lime juice, rinsed red onions and scallions, and pinch of kosher salt in a small jar or liquid measuring cup. Let stand while you make the remainder of the recipe, or for at least 10 minutes",
 "2-Black beans: Heat oil in a large skillet over medium heat. Add the remaining red onion and cook without stirring for about 3 minutes (until lightly browned). Add black beans and liquid, chili powder, cumin, paprika, Dijon mustard, and 1/2 tsp of kosher salt; stir to incorporate. Cook for 5-7 minutes, stirring occasionally, until the liquid reduces to a thick sauce",
@@ -4814,7 +4814,7 @@ var localDB = {
 "notes": [
 "Cook about one sweet potato per person"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Preheat the oven to 425F",
 "Peel the sweet potatoes and cut them into similarly sized fry-shaped pieces",
@@ -4844,7 +4844,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Start cooking the rice then rinse & drain the chickpeas",
 "In a large skillet on medium heat, saut\u00e9 the diced onion for 4 minutes with a small amount of olive oil",
@@ -4888,7 +4888,7 @@ var localDB = {
 "notes": [
 "For extra protein, add a few strips of sliced steak to the burrito filling"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "For the quinoa: Combine the quinoa, salt and water in a small saucepan over medium-high heat. Bring to a boil, then reduce the heat so that the water bubbles gently. Cover and cook for 13 to 15 minutes until all the water is absorbed and the quinoa is fluffy. Turn off the heat and let stand covered for 5 minutes. Uncover and fluff with a fork, then stir in the lime juice",
 "Meanwhile, start the burritos: Heat the oil until shimmering in a large skillet over medium-high heat. Add the red and green bell peppers, scallions and mushrooms. Cook for 3 to 5 minutes, until tender and slightly blackened, stirring occasionally. Add the pinto beans and their liquid, the adobo, cumin, garlic powder and salt. Cook for 2 minutes, stirring occasionally, until the liquid thickens. Taste, and if you\u2019d like a little more heat, add a touch more adobo",
@@ -4927,7 +4927,7 @@ var localDB = {
 "notes": [
 "Optional: Saute cubed chicken until it\u2019s golden brown, then stir in before serving"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Cook the noodles as directed on the package, then drain",
 "Meanwhile, whisk together the soy sauce, orange juice, cornstarch, Sriracha, and miso in a medium bowl",
@@ -4967,7 +4967,7 @@ var localDB = {
 "Note: Thoroughly stir the coconut milk before using to re-incorporate its fat. You\u2019ll use most of the remaining coconut milk from a 15-oz can in the Veggie-Loaded Red Curry",
 "Week 3"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Boil pasta until al dente, according to package instructions, then drain",
 "While the pasta cooks, make the 'cheese' sauce: Whisk together coconut milk, oil, broth, Dijon mustard, nutritional yeast, garlic, onion powder, smoked paprika, and the 1/2 tsp of salt in a medium saucepan",
@@ -4999,7 +4999,7 @@ var localDB = {
 "notes": [
 "See the source for more ideas with chilis, salsa, etc"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Cut the avocados in half, remove the core, then scoop out the flesh with a spoon in one pass. Mash with a fork",
 "Mix with everything else, then cover with plastic wrap to prevent contact with air"
@@ -5132,7 +5132,7 @@ var localDB = {
 "Roast the cauliflower in advance and reheat it in a 400-degree oven until warmed through just before serving. Cook the quinoa in advance and store it refrigerated; bring to room temperature and mix it together with the remaining ingredients just before serving",
 "Want to add extra protein? Carve out a spot (or add side plate) for prosciutto and/or a variety of cheeses"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "There are a few components to prepare for this platter, so we\u2019ll be multitasking! Start with the cauliflower and preheat the oven to 450 degrees. Line a rimmed baking sheet with parchment paper. ",
 "Toss together the cauliflower, oil, thyme, cumin, turmeric, lemon zest and salt in a mixing bowl until evenly coated, then spread in a single layer on the baking sheet. Roast until fork-tender, about 25 minutes. ",
@@ -5258,7 +5258,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Insert the steamer rack into the instant pot, add 1 cup of (cold) water, then add the potatoes. Make sure the potatoes and water do not touch",
 "Close lid and turn the sealing vent to 'sealed.' Then use manual mode with high pressure for 12 minutes. Allow for natural release (~8 minutes)"
@@ -5295,7 +5295,7 @@ var localDB = {
 "**Note: Thoroughly stir the coconut milk before using, to re-incorporate its fat. You\u2019ll also use most of the remaining coconut milk from a 15-oz can in the Green Chile Mac recipe",
 "Week 3"
 ],
-"rating": 1,
+"rating": 0,
 "recipe": [
 "Heat oil until shimmering in a large pot over medium heat. Add the onion, red curry paste, and ginger. Cook for 5 minutes until the onion has softened",
 "Add the red bell pepper, cauliflower, frozen butternut squash, coconut milk, broth, canned tomatoes, and salt. Cook, gently bubbling at the edges, for 13 minutes",
