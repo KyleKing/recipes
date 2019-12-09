@@ -4598,6 +4598,25 @@ var localDB = {
 },
 {
 "group": "veggie",
+"id": "recipe-chicken_shawarma",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"todo"
+]
+},
+"notes": [],
+"rating": 1,
+"recipe": [
+"TODO"
+],
+"source": "https://www.washingtonpost.com/recipes/chicken-shawarma/17227/",
+"title": "Chicken Shawarma"
+},
+{
+"group": "veggie",
 "id": "recipe-chickpea_greek_salad_wrap",
 "imgPlaceholder": "dist/imgs/placeholder_veggie-chickpea_greek_salad_wrap.svg",
 "imgSrc": "dist/imgs/veggie-chickpea_greek_salad_wrap.jpeg",
@@ -4838,6 +4857,130 @@ var localDB = {
 },
 {
 "group": "veggie",
+"id": "recipe-extra_stuffed_veggie_burritos",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"burritos": [
+"Burritos",
+"2 tbsp extra-virgin olive oil",
+"1/2 red bell pepper, seeded and thinly sliced",
+"1/2 green bell pepper, seeded and thinly sliced",
+"2 scallions, trimmed and thinly sliced crosswise",
+"4 oz sliced cremini (baby bella) mushrooms",
+"one 15-oz no-salt-added can pinto beans, including the liquid",
+"1 tbsp adobo from a can of chipotle chiles, or more as needed",
+"1 tbsp ground cumin",
+"1 tsp granulated garlic (a.k.a. garlic powder)",
+"1/2 tsp kosher salt",
+"two 9- or 10-inch flour tortillas",
+"1/4 cup sour cream",
+"1 cup baby spinach or other tender salad greens"
+],
+"quinoa": [
+"Quinoa",
+"1/3 cup dried quinoa, rinsed as needed",
+"1/4 tsp kosher salt",
+"2/3 cup water",
+"1 tbsp fresh lime juice"
+]
+},
+"notes": [
+"For extra protein, add a few strips of sliced steak to the burrito filling"
+],
+"rating": 1,
+"recipe": [
+"For the quinoa: Combine the quinoa, salt and water in a small saucepan over medium-high heat. Bring to a boil, then reduce the heat so that the water bubbles gently. Cover and cook for 13 to 15 minutes until all the water is absorbed and the quinoa is fluffy. Turn off the heat and let stand covered for 5 minutes. Uncover and fluff with a fork, then stir in the lime juice",
+"Meanwhile, start the burritos: Heat the oil until shimmering in a large skillet over medium-high heat. Add the red and green bell peppers, scallions and mushrooms. Cook for 3 to 5 minutes, until tender and slightly blackened, stirring occasionally. Add the pinto beans and their liquid, the adobo, cumin, garlic powder and salt. Cook for 2 minutes, stirring occasionally, until the liquid thickens. Taste, and if you\u2019d like a little more heat, add a touch more adobo",
+"Now that the filling is done, warm the tortillas (don\u2019t skip this step, because you\u2019ll need the tortilla to be pliable enough to roll). Place a tortilla on the grate above a stove-top burner (or in a dry skillet), then cook on medium heat for a few seconds per side, flipping with tongs, until warmed through and pliable. If you are using a gas burner, the tortilla edges will char a bit. Repeat for the second tortilla",
+"Place the tortillas on individual plates. Spread half of the limey quinoa on each one, at the center. Top each with about half of the bean mixture (you may have a little more than you need, depending on the size of your tortillas), and half the sour cream and spinach or other greens. Fold the tortillas in half over the filling, then tuck them around and underneath the filling, forming a tight roll. Fold in each side of the burritos, then roll them up. Cut in half and serve"
+],
+"source": "https://www.washingtonpost.com/recipes/extra-stuffed-veggie-burritos/17037/",
+"title": "Extra Stuffed Veggie Burritos"
+},
+{
+"group": "veggie",
+"id": "recipe-ginger_orange_broccoli_and_noodles",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"4 oz dried stir-fry noodles of your choice (we used thick stir-fry rice noodles)",
+"1/4 cup low-sodium soy sauce",
+"1/2 cup fresh orange juice (from 2 large oranges)",
+"2 tbsp cornstarch",
+"1 tsp sriracha",
+"1 tablespoon dark miso",
+"1 tablespoon pure sesame oil (may substitute a neutral oil such as grape seed or canola)",
+"1/2 large sweet onion, thinly sliced",
+"1/2 large red bell pepper, seeded and thinly sliced",
+"1 yellow bell pepper, seeded and thinly sliced",
+"2 large broccoli crowns (1.5 pounds total), cut into bite-size florets",
+"1/2 cup roasted, unsalted whole cashews",
+"2 pinches kosher salt",
+"1/4 cup water",
+"2 cloves garlic, thinly sliced",
+"one-inch piece peeled fresh ginger root, minced or grated (about 1 1/2 tsp)"
+]
+},
+"notes": [
+"Optional: Saute cubed chicken until it\u2019s golden brown, then stir in before serving"
+],
+"rating": 1,
+"recipe": [
+"Cook the noodles as directed on the package, then drain",
+"Meanwhile, whisk together the soy sauce, orange juice, cornstarch, Sriracha, and miso in a medium bowl",
+"Add oil to a large skillet or saute pan over high heat. Add the onion and stir-fry for 2 minutes until starts to brown",
+"Add the red and yellow bell peppers, broccoli, cashews, and salt. Stir-fry for 5 minutes, or until the thickest broccoli stems are tender and the cashews are slightly blackened",
+"Reduce the heat to low. Add the water, stirring until it evaporates. This helps the pan to cool down. Add the garlic and ginger, then stir-fry for 1 minute",
+"Turn off the heat. Add the soy sauce mixture, stirring until it thickens into a beautiful, glossy sauce. Add the drained noodles and stir gently until everything is evenly coated. Serve warm"
+],
+"source": "https://www.washingtonpost.com/recipes/ginger-orange-broccoli-and-noodles/17014/",
+"title": "Ginger Orange Broccoli And Noodles"
+},
+{
+"group": "veggie",
+"id": "recipe-green_chile_mac",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1/2 tsp kosher salt, plus more as needed",
+"8 oz dried pasta shells (medium-size)",
+"1/4 cup full-fat coconut milk (see note)",
+"1 tbsp extra-virgin olive oil",
+"2/3 cup low-sodium vegetable broth, or more as needed",
+"1\u00bd tsp dijon mustard",
+"2 tbsp nutritional yeast",
+"1 garlic clove, quartered",
+"1/2 tsp onion powder",
+"1/2 tsp spanish smoked paprika (piment\u00f3n), plus more for garnish",
+"6 oz (1\u00bd cups) frozen cubed butternut squash",
+"2 oz (1/3 cup) roasted, salted cashews",
+"one 4-oz can diced mild green chiles, drained",
+"ground cumin, for garnish"
+]
+},
+"notes": [
+"Note: Thoroughly stir the coconut milk before using to re-incorporate its fat. You\u2019ll use most of the remaining coconut milk from a 15-oz can in the Veggie-Loaded Red Curry",
+"Week 3"
+],
+"rating": 1,
+"recipe": [
+"Boil pasta until al dente, according to package instructions, then drain",
+"While the pasta cooks, make the 'cheese' sauce: Whisk together coconut milk, oil, broth, Dijon mustard, nutritional yeast, garlic, onion powder, smoked paprika, and the 1/2 tsp of salt in a medium saucepan",
+"Add the frozen butternut squash and cashews. Cook over medium-low heat, barely bubbling at the edges, for 10 minutes",
+"Transfer the sauce ingredients to a blender, add 3 tbsp of the green chiles and puree to form a smooth, cheesy-looking sauce. (A high-powered blender such as a Vitamix makes quick work of it; if using a standard blender, you may need to add a splash more vegetable broth). Taste, and add more salt as needed",
+"Return the drained pasta to the pot, then stir in the sauce and the remaining green chiles",
+"Serve with a garnish of smoked paprika and cumin"
+],
+"source": "https://www.washingtonpost.com/recipes/green-chile-mac/17021/",
+"title": "Green Chile Mac"
+},
+{
+"group": "veggie",
 "id": "recipe-guacamole",
 "imgPlaceholder": "",
 "imgSrc": "",
@@ -4940,6 +5083,66 @@ var localDB = {
 ],
 "source": "",
 "title": "Karens Roasted Veggie Bowls"
+},
+{
+"group": "veggie",
+"id": "recipe-mediterranean_cauliflower_platter",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"cauliflower": [
+"Cauliflower",
+"1 large head cauliflower (2 pounds), cored and cut into florets",
+"1 tbsp extra-virgin olive oil",
+"1 tsp dried thyme",
+"1/2 tsp ground cumin",
+"1/2 tsp ground turmeric",
+"2 tsp finely grated lemon zest (from 1/2 lemon)",
+"1/2 tsp kosher salt"
+],
+"olives": [
+"Olives",
+"1 1/2 tsp extra-virgin olive oil",
+"1 clove garlic",
+"3/4 cup canned ripe green olives, drained",
+"pinch dried thyme"
+],
+"platter": [
+"Platter",
+"1 cup hummus",
+"1 english (seedless) cucumber, thinly sliced crosswise",
+"handful roasted, salted almonds",
+"two pitas, cut into wedges",
+"sweet paprika (optional)"
+],
+"quinoa": [
+"Quinoa",
+"3/4 cup dried quinoa, rinsed as needed",
+"1/2 tsp kosher salt, or more as needed",
+"1 1/2 cups water",
+"1/2 cup chopped fresh parsley",
+"1/2 cup chopped cherry tomatoes",
+"1/2 medium red bell pepper, seeded and minced (\u00bd cup)",
+"2 tbsp fresh lemon juice (from the lemon you zested above)",
+"1 tbsp extra-virgin olive oil",
+"freshly ground black pepper"
+]
+},
+"notes": [
+"Roast the cauliflower in advance and reheat it in a 400-degree oven until warmed through just before serving. Cook the quinoa in advance and store it refrigerated; bring to room temperature and mix it together with the remaining ingredients just before serving",
+"Want to add extra protein? Carve out a spot (or add side plate) for prosciutto and/or a variety of cheeses"
+],
+"rating": 1,
+"recipe": [
+"There are a few components to prepare for this platter, so we\u2019ll be multitasking! Start with the cauliflower and preheat the oven to 450 degrees. Line a rimmed baking sheet with parchment paper. ",
+"Toss together the cauliflower, oil, thyme, cumin, turmeric, lemon zest and salt in a mixing bowl until evenly coated, then spread in a single layer on the baking sheet. Roast until fork-tender, about 25 minutes. ",
+"While that\u2019s roasting, get that quinoa salad cooking: Combine the quinoa, salt and water in a medium saucepan. Bring it to a boil, then cover and cook, gently bubbling, for 13 to 17 minutes, until the water is absorbed and the quinoa is fluffy. Remove from the heat and let stand, covered, for 5 minutes. (If making ahead, refrigerate until serving.)",
+"If you\u2019re making the quinoa salad right away, here\u2019s a trick for bringing that steaming hot quinoa to room temperature quickly: Spread it in an even layer on a baking sheet for about 3 minutes. Now, transfer the quinoa to a medium bowl and mix it with the parsley, cherry tomatoes, red bell pepper, lemon juice, oil and black pepper. Taste, and add more salt as needed. The salt should perfectly balance the pop of the lemon!",
+"Finally, let\u2019s make those warmed olives. Combine the oil and garlic in a small skillet over medium-low heat. Cook for 1 minute, then add the olives and cook for 5 minutes until warmed through, stirring occasionally. Remove from the heat. Add the thyme, crushing it with your fingers as you sprinkle it over the olives. (You can skip this and go with straight-up olives in a pinch, but it adds great flavor with minimal effort.)",
+"Channel your inner Matisse and arrange the roasted cauliflower, quinoa salad, olives, hummus, cucumber slices, almonds and pita wedges on a platter. Garnish the hummus with paprika, if desired"
+],
+"source": "https://www.washingtonpost.com/recipes/mediterranean-cauliflower-platter/17036/",
+"title": "Mediterranean Cauliflower Platter"
 },
 {
 "group": "veggie",
@@ -5064,64 +5267,43 @@ var localDB = {
 "title": "Sweet Potatoes"
 },
 {
-"group": "veggies",
-"id": "recipe-chicken_shawarma",
+"group": "veggie",
+"id": "recipe-veggie_loaded_red_curry",
 "imgPlaceholder": "",
 "imgSrc": "",
 "ingredients": {
 "ingredients": [
 "Ingredients",
-"todo"
-]
-},
-"notes": [],
-"rating": 1,
-"recipe": [
-"TODO"
-],
-"source": "https://www.washingtonpost.com/recipes/chicken-shawarma/17227/",
-"title": "Chicken Shawarma"
-},
-{
-"group": "veggies",
-"id": "recipe-ginger_orange_broccoli_and_noodles",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"4 oz dried stir-fry noodles of your choice (we used thick stir-fry rice noodles)",
-"1/4 cup low-sodium soy sauce",
-"1/2 cup fresh orange juice (from 2 large oranges)",
-"2 tbsp cornstarch",
-"1 tsp sriracha",
-"1 tablespoon dark miso",
-"1 tablespoon pure sesame oil (may substitute a neutral oil such as grape seed or canola)",
-"1/2 large sweet onion, thinly sliced",
-"1/2 large red bell pepper, seeded and thinly sliced",
-"1 yellow bell pepper, seeded and thinly sliced",
-"2 large broccoli crowns (1.5 pounds total), cut into bite-size florets",
-"1/2 cup roasted, unsalted whole cashews",
-"2 pinches kosher salt",
-"1/4 cup water",
-"2 cloves garlic, thinly sliced",
-"one-inch piece peeled fresh ginger root, minced or grated (about 1 1/2 tsp)"
+"2 tbsp pure sesame oil",
+"1/2 medium sweet onion, thinly sliced",
+"3 tbsp mild red curry paste",
+"1-inch piece peeled fresh ginger root, grated (about 1\u00bd tsp)",
+"1 large red bell pepper, seeded and thinly sliced",
+"1/2 small cauliflower head, cut into florets (2 cups)",
+"8 oz (2 cups) frozen cubed butternut squash",
+"1 cup full-fat coconut milk (see note)",
+"1 cup low-sodium vegetable broth",
+"one 15-oz can crushed tomatoes",
+"1/2 tsp kosher salt, plus more as needed",
+"2 oz baby spinach leaves (2 cups)",
+"(optional) 1 fresno pepper, seeded and thinly sliced",
+"3 cups cooked white or brown long-grain rice",
+"1 lime, cut into wedges, for serving"
 ]
 },
 "notes": [
-"Optional: Saute cubed chicken until it\u2019s golden brown, then stir in before serving"
+"**Note: Thoroughly stir the coconut milk before using, to re-incorporate its fat. You\u2019ll also use most of the remaining coconut milk from a 15-oz can in the Green Chile Mac recipe",
+"Week 3"
 ],
 "rating": 1,
 "recipe": [
-"Cook the noodles as directed on the package, then drain",
-"Meanwhile, whisk together the soy sauce, orange juice, cornstarch, Sriracha, and miso in a medium bowl",
-"Add oil to a large skillet or saute pan over high heat. Add the onion and stir-fry for 2 minutes until starts to brown",
-"Add the red and yellow bell peppers, broccoli, cashews, and salt. Stir-fry for 5 minutes, or until the thickest broccoli stems are tender and the cashews are slightly blackened",
-"Reduce the heat to low. Add the water, stirring until it evaporates. This helps the pan to cool down. Add the garlic and ginger, then stir-fry for 1 minute",
-"Turn off the heat. Add the soy sauce mixture, stirring until it thickens into a beautiful, glossy sauce. Add the drained noodles and stir gently until everything is evenly coated. Serve warm"
+"Heat oil until shimmering in a large pot over medium heat. Add the onion, red curry paste, and ginger. Cook for 5 minutes until the onion has softened",
+"Add the red bell pepper, cauliflower, frozen butternut squash, coconut milk, broth, canned tomatoes, and salt. Cook, gently bubbling at the edges, for 13 minutes",
+"Add the spinach (and if using, Fresno pepper). Cook for 2 minutes. Taste, and add salt, as needed",
+"Serve warm over rice, with a few squeezes of lime"
 ],
-"source": "https://www.washingtonpost.com/recipes/ginger-orange-broccoli-and-noodles/17014/",
-"title": "Ginger Orange Broccoli And Noodles"
+"source": "https://www.washingtonpost.com/recipes/veggie-loaded-red-curry/17022/",
+"title": "Veggie Loaded Red Curry"
 }
 ],
 "searchKeys": [
@@ -5201,6 +5383,8 @@ var localDB = {
 "ingredients.Tzatziki Sauce",
 "ingredients.With",
 "ingredients.Yogurt's",
+"ingredients.burritos",
+"ingredients.cauliflower",
 "ingredients.combinations",
 "ingredients.dressing",
 "ingredients.dumplings",
@@ -5209,7 +5393,10 @@ var localDB = {
 "ingredients.ingredients",
 "ingredients.main",
 "ingredients.muffins",
+"ingredients.olives",
 "ingredients.other",
+"ingredients.platter",
+"ingredients.quinoa",
 "ingredients.sauce",
 "ingredients.seasoning",
 "ingredients.soup",
@@ -5391,6 +5578,7 @@ var localDB = {
 "recipe-baked_potatoes_instant_pot:Baked Potatoes Instant Pot:1",
 "recipe-baked_zucchini:Baked Zucchini:3",
 "recipe-chana_masala:Chana Masala:1",
+"recipe-chicken_shawarma:Chicken Shawarma:1",
 "recipe-chickpea_greek_salad_wrap:Chickpea Greek Salad Wrap:2",
 "recipe-chickpea_salad_toasts_with_poached_egg:Chickpea Salad Toasts With Poached Egg:1",
 "recipe-chickpea_salad_wrap:Chickpea Salad Wrap:2",
@@ -5398,16 +5586,17 @@ var localDB = {
 "recipe-chili_lime_black_bean_tacos:Chili Lime Black Bean Tacos:1",
 "recipe-crispy_baked_sweet_potato_fries:Crispy Baked Sweet Potato Fries:1",
 "recipe-curried_chickpeas:Curried Chickpeas:1",
+"recipe-extra_stuffed_veggie_burritos:Extra Stuffed Veggie Burritos:1",
+"recipe-ginger_orange_broccoli_and_noodles:Ginger Orange Broccoli And Noodles:1",
+"recipe-green_chile_mac:Green Chile Mac:1",
 "recipe-guacamole:Guacamole:1",
 "recipe-karens_roasted_veggie_bowls:Karens Roasted Veggie Bowls:2",
+"recipe-mediterranean_cauliflower_platter:Mediterranean Cauliflower Platter:1",
 "recipe-roasted_vegetables:Roasted Vegetables:2",
 "recipe-salad:Salad:3",
 "recipe-sweet_potato_gnocchi:Sweet Potato Gnocchi:2",
-"recipe-sweet_potatoes:Sweet Potatoes:1"
-],
-"veggies": [
-"recipe-chicken_shawarma:Chicken Shawarma:1",
-"recipe-ginger_orange_broccoli_and_noodles:Ginger Orange Broccoli And Noodles:1"
+"recipe-sweet_potatoes:Sweet Potatoes:1",
+"recipe-veggie_loaded_red_curry:Veggie Loaded Red Curry:1"
 ]
 },
 "tocLookup": {
@@ -5583,6 +5772,7 @@ var localDB = {
 "Baked Potatoes Instant Pot",
 "Baked Zucchini",
 "Chana Masala",
+"Chicken Shawarma",
 "Chickpea Greek Salad Wrap",
 "Chickpea Salad Toasts With Poached Egg",
 "Chickpea Salad Wrap",
@@ -5590,16 +5780,17 @@ var localDB = {
 "Chili Lime Black Bean Tacos",
 "Crispy Baked Sweet Potato Fries",
 "Curried Chickpeas",
+"Extra Stuffed Veggie Burritos",
+"Ginger Orange Broccoli And Noodles",
+"Green Chile Mac",
 "Guacamole",
 "Karens Roasted Veggie Bowls",
+"Mediterranean Cauliflower Platter",
 "Roasted Vegetables",
 "Salad",
 "Sweet Potato Gnocchi",
-"Sweet Potatoes"
-],
-"veggies": [
-"Chicken Shawarma",
-"Ginger Orange Broccoli And Noodles"
+"Sweet Potatoes",
+"Veggie Loaded Red Curry"
 ]
 }
 }
