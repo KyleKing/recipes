@@ -21,7 +21,7 @@ var localDB = {
 "Alt: Add onion and cheese (pepper jack) when cooking the eggs",
 "Also, add pepper, garlic powder, basil, and/or oregano"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "On medium heat, cook the eggs the eggs and in a second pan, heat the tortillas"
 ],
@@ -197,7 +197,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [],
 "source": "https://www.modernhoney.com/the-oatmeal-love-bar/",
 "title": "Oatmeal"
@@ -216,7 +216,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Beat the eggs together until homogeneous + pinch of salt",
 "Over medium-low heat, melt the butter in a skillet, then pour in the eggs.",
@@ -278,7 +278,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Mix the dry ingredients in a large bowl",
 "In a small bowl, beat the egg whites until stiff peaks forms",
@@ -312,7 +312,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Preheat oven to 350",
 "In a large bowl, combine the flour, oats, brown sugar, and cinnamon, then add butter until crumbly. Press half into a greased 2.5 qt. baking dish or a 9 in. square baking pan. Cover with apples.",
@@ -486,7 +486,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Bake a cake according to the instructions and let cool.",
 "Crumble the cake into a large mixing bowl and combine with the frosting. Roll 1 inch balls onto a parchment-lined baking sheet.",
@@ -728,7 +728,7 @@ var localDB = {
 "notes": [
 "Source: Alex's family recipe"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Preheat the oven to 350 F",
 "Line a large baking sheet with tin foil and apply non-stick spray",
@@ -949,7 +949,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "In a small saucepan, combine brown sugar, molasses and shortening. Place over medium-low heat and stir just until mixture is melted and smooth",
 "Remove from heat and mix in baking soda and 1/4 cup cold water. Set aside and allow to cool to room temperature",
@@ -1050,7 +1050,7 @@ var localDB = {
 "notes": [
 "More tasty no-bake energy bites from tasty.co: https://tasty.co/compilation/no-bake-energy-bites"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Combine all ingredients into one bowl, form into balls, and freeze"
 ],
@@ -1114,7 +1114,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "With a wooden spoon in a large bowl (or food processor), finely crush the Oreos. Reserve 1/4 cup of cookie crumbs.",
 "Mix cream cheese and remaining cookie crumbs until blended. shape into 48 (1-inch) balls and place on parchment paper on a rimmed baking pan. Freeze 10 min.",
@@ -1181,7 +1181,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Blend!"
 ],
@@ -1243,7 +1243,7 @@ var localDB = {
 "Chrissy Teigen Cravings, 243",
 "Sometimes you can find bags of peanut butter and chocolate chips, which gives you 2/3 cup leftover for snacking :)"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Preheat oven to 350 and butter a 10 inch iron skillet",
 "With a wooden spoon, beat together the butter, peanut butter, brown sugar, and granulated sugar until creamy",
@@ -1280,7 +1280,7 @@ var localDB = {
 "notes": [
 "Bottom rack for 6 minutes and top rack for 2 minutes. Use smaller marshmallows"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 ">> Make ahead: prep the dough and refrigerate for 30 minutes - overnight",
 "In a measuring cup, whisk together the eggs and vanilla extract",
@@ -1312,7 +1312,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [],
 "source": "",
 "title": "Coffee"
@@ -1613,7 +1613,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Butter pan and heat until starts to foam, but not brown",
 "Add one slice and cheese",
@@ -1654,7 +1654,7 @@ var localDB = {
 "From the Joy of Cooking page 567",
 "Store bought Tzatziki makes this much easier because it's hard to get the right amount of Dill"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Bake the chicken with olive oil, salt, pepper, and garlic",
 "Lay everything out on the Naan and cover in Tzatziki"
@@ -1679,7 +1679,7 @@ var localDB = {
 "notes": [
 "The essential French ham sandwich"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Don't skimp on the butter"
 ],
@@ -1884,7 +1884,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Slice the tomatoes and mozzarella. Drizzle olive oil on top with a small amount of balsamic vinegar",
 "For the bread, add a bowl of ground pepper and olive oil for dipping"
@@ -1908,7 +1908,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Preheat oven to Broil (~10 min)",
 "Chop pickle and mix ingredients together. Toast English muffins",
@@ -1996,7 +1996,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Cook pasta according to directions. Save 1 cup of pasta water",
 "In a large skillet, heat the olive oil over medium heat and saute the shallot and garlic for about 2 minutes. Add the tomatoes and salt and reduce the heat to medium low. Simmer the mixture until the tomatoes are slightly popped, 15 to 20 minutes.",
@@ -2051,7 +2051,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "In a pot, start boiling water for the lo mein noodles and when ready cook for 5-7 minutes (per package instructions)",
 "Melt the butter, red pepper flakes, and vegetables in a Wok or large pan on med-high heat. Lower heat to Medium while cooking",
@@ -2112,7 +2112,7 @@ var localDB = {
 "notes": [
 "Note: if the mozzarella is added to hot pasta it will melt and get stringy, so store it separately, which will make reheating the pasta easier"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Boil the pasta following the directions, then for the last two minutes, add the frozen vegetable to the boiling pasta",
 "Drain and return to the pot - immediately mix with pesto and red pepper flakes and wait to slightly cool",
@@ -2144,7 +2144,7 @@ var localDB = {
 "notes": [
 "I think I made this recipe with whole milk, but probably could still work with skim"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Saute garlic in the butter and olive oil over medium heat for a few min",
 "Add the uncooked noodles, stock/water, milk, and broccoli. Bring to a boil and cover",
@@ -2171,7 +2171,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Crisp cubed ham over medium-high heat and in parallel, bring a large pot of water to boil",
 "In the pot, cook the orzo and for the last two minutes, add the frozen broccoli",
@@ -2182,42 +2182,44 @@ var localDB = {
 },
 {
 "group": "pasta",
-"id": "recipe-pasta_e_ceci",
-"imgPlaceholder": "dist/imgs/placeholder_pasta-pasta_e_ceci.svg",
-"imgSrc": "dist/imgs/pasta-pasta_e_ceci.jpeg",
+"id": "recipe-pasta_and_chickpeas",
+"imgPlaceholder": "dist/imgs/placeholder_pasta-pasta_and_chickpeas.svg",
+"imgSrc": "dist/imgs/pasta-pasta_and_chickpeas.jpeg",
 "ingredients": {
 "Ingredients": [
 "Ingredients",
 "2 tbsp olive oil",
 "2 cloves garlic, peeled and smashed",
-"3 tbsp tomato paste",
+"3 tbsp tomato paste*",
 "1 tsp kosher salt",
 "black pepper",
 "1 can (15-ounce) chickpeas, drained and rinsed",
 "1/2 cup uncooked ditalini or annelini pasta (or in a pinch, macaroni)",
-"2 cups boiling water"
+"2 cups boiling water*"
 ],
 "Toppings": [
 "Toppings",
-"2 to 3 tbsp olive oil (estimate 1 per serving)",
+"2 tbsp olive oil",
 "1 clove of garlic, peeled and finely chopped",
-"1 tsp minced fresh rosemary",
-"salt and red pepper flakes"
+"1/3 tsp rosemary",
+"pinch of salt",
+"1 tsp red pepper flakes"
 ]
 },
 "notes": [
-"'Pasta and Chickpeas' - apparently big in Rome?",
-"Photo: made with diced tomatoes, but tomato paste is much more flavorful"
+"*Replace the 3 tbsp of tomato paste with 9 tbsp of pasta sauce. Reduce the boiling water to 1 cup instead of 2"
 ],
 "rating": 2,
 "recipe": [
+"Prep ingredients",
 "Start boiling the water",
-"In a med-lg pot, heat oil until simmering. Add garlic and cook until fragrant. Stir in tomato pasta, salt, and pepper and cook for another ~30 seconds. Add the chickpeas, pasta, boiling water.",
+"In a med-lg pot, heat oil until simmering. Add garlic and cook until fragrant. Stir in tomato paste or sauce, salt, and pepper. Cook for ~1 minute",
+"Add the chickpeas, pasta, boiling water",
 "Lower the heat and simmer for 15-20 minutes until most of the liquid is absorbed",
 "For the finishing, in a small pan, heat oil over med-low heat with garlic, rosemary, salt, and red pepper flakes until sizzling. Drizzle!"
 ],
 "source": "https://smittenkitchen.com/2017/10/quick-pasta-and-chickpeas-pasta-e-ceci/",
-"title": "Pasta E Ceci"
+"title": "Pasta And Chickpeas"
 },
 {
 "group": "pasta",
@@ -2285,7 +2287,7 @@ var localDB = {
 "notes": [
 "(Original Source: My Coworkers Dani and Michael)"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Mix the sauce until smooth and prep the vegetables separately",
 "Boil the pasta, drain, then immediately toss with vegetables and sauce"
@@ -2346,7 +2348,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Start a large pot of boiling water",
 "Combine soy sauce, sesame oil, cider vinegar, sesame seeds, red pepper flakes, and half of the garlic in a small bowl then set aside",
@@ -2573,7 +2575,7 @@ var localDB = {
 "Add the red pepper flakes to the sauce before baking",
 "Optionally, add olive oil to the naan before the pasta sauce and/or garlic"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Preheat oven to 425 and place a shelf on the top rack. Cover a baking sheet in tin foil",
 "Prep the naan pizza and place in the oven for 12-16 minutes",
@@ -2643,7 +2645,7 @@ var localDB = {
 "notes": [
 "Turned out slightly dry. Might need to tweak the recipe or just stick to making chicken and potatoes in the instant pot"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Preheat the oven to 425F",
 "Toss the ingredients in a large bowl and spread in a roasting pan",
@@ -2737,7 +2739,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Preheat oven to 400\u2109",
 "Cover chicken in olive oil and choice of seasonings",
@@ -2848,7 +2850,7 @@ var localDB = {
 "notes": [
 "To cook frozen chicken thighs, skip the step of browning as you cannot brown frozen meat. Place 1 cup of water, trivet, and the frozen chicken thighs in the Instant Pot. Cook for 15 min at high pressure plus 5 minutes natural pressure release"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "In a small bowl, combine the oregano, paprika, garlic powder, onion powder, salt, and pepper. Rub over thighs",
 "With small amount of olive oil, saute thighs in Instant Pot (on Saute setting). Cook 4 minutes per side",
@@ -2921,7 +2923,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Defrost the chicken and preheat the oven to 400 degrees",
 "Cut the peppers, onions, tomatoes, and chicken into 1/4 inch strips and fill a 9 x 13 inch casserole dish. Add the beans and corn, then cover with the seasonings and olive oil. Mix by hand",
@@ -3158,7 +3160,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Rinse the Basmati rice with cold water. Add rice, water, and oil to instant pot. Cook for 8 minutes on high pressure, then allow 5 minutes for natural pressure release",
 "Toss with the green onions and parsely"
@@ -3213,7 +3215,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Prepare Quinoa: Bring 2 cups water and 1 cup quinoa to a boil. Cover with lid and cook for 15 minutes on low. Remove from heat and let sit for 5 minutes",
 "(optionally) saut\u00e9e peppers and onions",
@@ -3251,7 +3253,7 @@ var localDB = {
 "notes": [
 "Pretty spicy and simple. Otherwise not much of note"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "In a medium pot over medium heat, heat oil. Slice the sausage and cook in the pot until slightly browned",
 "Add onion and the pepper. Cook until slightly softened",
@@ -3288,7 +3290,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Cook the rice",
 "Bake the sausage (see directions below. 400F for 15 min, then flip for ~10)",
@@ -3340,7 +3342,7 @@ var localDB = {
 "notes": [
 "For (thin) frozen fillet, bake at 450F for 4 minutes, then flip and bake for 8-12 min. Cover with olive oil, salt, and pepper. Frozen Recipe Source: http://cookthestory.com/how-to-cook-fish-from-frozen/"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Preheat oven to 400F",
 "Cover a baking sheet with tin foil and prep the fish",
@@ -3504,7 +3506,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Heat chicken and franks until hot",
 "Stir in cream cheese and ranch",
@@ -4044,7 +4046,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Rinse the rice in a strainer for ~2 min. Shake dry",
 "In the instant pot, even distribute the rice in the water",
@@ -4068,7 +4070,7 @@ var localDB = {
 "notes": [
 "Link for rolling Uramaki: https://youtu.be/hfNhqawvSr8?t=2m50s"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Lay out a bamboo rolling mat, cutting board, knife, and small bowl of water",
 "Either place a sheet of plastic wrap down or put a bag over the bamboo rolling mat to make it easier to clean",
@@ -4109,7 +4111,7 @@ var localDB = {
 "tobiko is just fish eggs with corn syrup and food coloring",
 "See more detailed guide: https://www.justonecookbook.com/california-roll/"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Cut the Nori sheet in half. Spread rice over the nori and top with sesame seeds, then flip rice side down",
 "Add strips of the Surimi, avocado, cucumber, and choice of fish roe then roll"
@@ -4142,7 +4144,7 @@ var localDB = {
 "notes": [
 "See guide on using raw tuna: "
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Mix the sauce, then add and mix with the canned tuna",
 "Cut the Nori sheet in half. Spread rice over the nori and top with sesame seeds, then flip rice side down",
@@ -4165,7 +4167,7 @@ var localDB = {
 "notes": [
 "Ingredient ideas: http://wildgreensandsardines.com/2015/06/smoked-salmon-onigiri.html"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Spread the rice into a circle, then fill with the selected ingredients",
 "Use plastic wrap to shape the ball into a triangular shape, then add a strip of nori to hold the base"
@@ -4192,7 +4194,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Spread rice over the nori, then with rice-side up, add the fillings. Roll"
 ],
@@ -4242,7 +4244,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Cut the Nori sheet in half. Spread rice over the nori, then flip rice side down",
 "Add the fillings and roll. Drizzle with extra spicy mayo sauce on top"
@@ -4266,7 +4268,7 @@ var localDB = {
 "notes": [
 "Look for smoked salmon with the most visible white fat lines"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Slice salmon into pieces to cover the sushi rice. Will look best with the fat lines running diagonally when wrapped",
 "Using two index fingers and your thumb shape a bite size clump of sushi rice",
@@ -4294,7 +4296,7 @@ var localDB = {
 "notes": [
 "Can mix rice vinegar or lemon juice to help prevent the avocado from browning"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Sliced all ingredients into long strips then roll"
 ],
@@ -4318,7 +4320,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Spread rice over the nori, then with rice-side up, add the fillings. Roll"
 ],
@@ -4472,7 +4474,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Preheat the oven to 450\u2109",
 "Scrub wash and dry the potatoes and poke with a fork to allow steam to escape",
@@ -4500,7 +4502,7 @@ var localDB = {
 "notes": [
 "For smaller potatoes, use 15 minutes"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Scrub the potatoes clean.",
 "Insert the steamer rack into the instant pot, add 1 cup of (cold) water, then add the potatoes. Make sure the potatoes and water do not touch",
@@ -4586,7 +4588,7 @@ var localDB = {
 "Source: The Essential Instant Pot Cookbook page 39",
 "DIY Garam Masala from: https://www.allrecipes.com/recipe/142967/easy-garam-masala/"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [
 "Select the Saute setting and cook the onions, garlic, ginger, and salt for ~7 minutes. Add the rest of the spices for another minute",
 "By hand, crush the tomatoes and mix together. Stir in the water. Cook for 15 minutes on high pressure, then quick release",
@@ -4844,7 +4846,7 @@ var localDB = {
 ]
 },
 "notes": [],
-"rating": 0,
+"rating": 2,
 "recipe": [
 "Start cooking the rice then rinse & drain the chickpeas",
 "In a large skillet on medium heat, saut\u00e9 the diced onion for 4 minutes with a small amount of olive oil",
@@ -4901,8 +4903,8 @@ var localDB = {
 {
 "group": "veggie",
 "id": "recipe-ginger_orange_broccoli_and_noodles",
-"imgPlaceholder": "",
-"imgSrc": "",
+"imgPlaceholder": "dist/imgs/placeholder_veggie-ginger_orange_broccoli_and_noodles.svg",
+"imgSrc": "dist/imgs/veggie-ginger_orange_broccoli_and_noodles.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -5460,7 +5462,7 @@ var localDB = {
 "recipe-vanilla_ice_cream:Vanilla Ice Cream:2"
 ],
 "meals": [
-"recipe-broccoli_cheddar_chicken_and_rice_casserole:Broccoli Cheddar Chicken And Rice Casserole:1",
+"recipe-broccoli_cheddar_chicken_and_rice_casserole:Broccoli Cheddar Chicken And Rice Casserole:0",
 "recipe-burgers:Burgers:2",
 "recipe-grilled_cheese:Grilled Cheese:1",
 "recipe-gyros:Gyros:1",
@@ -5476,7 +5478,7 @@ var localDB = {
 ],
 "pasta": [
 "recipe-baked_ziti:Baked Ziti:2",
-"recipe-black_bean_pasta_bowl:Black Bean Pasta Bowl:1",
+"recipe-black_bean_pasta_bowl:Black Bean Pasta Bowl:0",
 "recipe-cherry_tomato_spaghetti:Cherry Tomato Spaghetti:1",
 "recipe-creamy_lemon_pasta:Creamy Lemon Pasta:2",
 "recipe-dragon_noodles:Dragon Noodles:1",
@@ -5484,7 +5486,7 @@ var localDB = {
 "recipe-mozzarella_pasta:Mozzarella Pasta:1",
 "recipe-one_pot_creamy_broccoli_pasta:One Pot Creamy Broccoli Pasta:1",
 "recipe-orzo_and_cheese:Orzo And Cheese:1",
-"recipe-pasta_e_ceci:Pasta E Ceci:2",
+"recipe-pasta_and_chickpeas:Pasta And Chickpeas:2",
 "recipe-pasta_with_corn_zucchini_and_tomatoes:Pasta With Corn Zucchini And Tomatoes:3",
 "recipe-peanut_noodles:Peanut Noodles:1",
 "recipe-sausage_and_mushroom_penne_pasta:Sausage And Mushroom Penne Pasta:3",
@@ -5494,7 +5496,7 @@ var localDB = {
 "recipe-summer_pasta_with_ricotta_and_zucchini:Summer Pasta With Ricotta And Zucchini:3"
 ],
 "pizza": [
-"recipe-charred_broccoli_pizza:Charred Broccoli Pizza:1",
+"recipe-charred_broccoli_pizza:Charred Broccoli Pizza:0",
 "recipe-mini_pizza:Mini Pizza:2",
 "recipe-naan_pizza:Naan Pizza:1",
 "recipe-pizza:Pizza:2"
@@ -5513,7 +5515,7 @@ var localDB = {
 "recipe-mediterranean_chicken:Mediterranean Chicken:0",
 "recipe-paremesan_chicken_breasts:Paremesan Chicken Breasts:2",
 "recipe-sesame_chicken_noodles:Sesame Chicken Noodles:0",
-"recipe-sriracha_chicken:Sriracha Chicken:1",
+"recipe-sriracha_chicken:Sriracha Chicken:0",
 "recipe-teryaki_chicken:Teryaki Chicken:2"
 ],
 "rice": [
@@ -5531,12 +5533,12 @@ var localDB = {
 "recipe-crab_cakes:Crab Cakes:2",
 "recipe-shrimp_creole:Shrimp Creole:3",
 "recipe-shrimp_scampi:Shrimp Scampi:3",
-"recipe-shrimp_tacos:Shrimp Tacos:1"
+"recipe-shrimp_tacos:Shrimp Tacos:0"
 ],
 "sides": [
 "recipe-aunt_laura's_spicy_chicken_dip:Aunt Laura'S Spicy Chicken Dip:1",
 "recipe-bacon:Bacon:2",
-"recipe-bruschetta:Bruschetta:1",
+"recipe-bruschetta:Bruschetta:0",
 "recipe-cheeses:Cheeses:3",
 "recipe-favorite_snacks:Favorite Snacks:0",
 "recipe-ikea_meatball_sauce:Ikea Meatball Sauce:2",
@@ -5578,25 +5580,25 @@ var localDB = {
 "recipe-baked_potatoes_instant_pot:Baked Potatoes Instant Pot:1",
 "recipe-baked_zucchini:Baked Zucchini:3",
 "recipe-chana_masala:Chana Masala:1",
-"recipe-chicken_shawarma:Chicken Shawarma:1",
+"recipe-chicken_shawarma:Chicken Shawarma:0",
 "recipe-chickpea_greek_salad_wrap:Chickpea Greek Salad Wrap:2",
-"recipe-chickpea_salad_toasts_with_poached_egg:Chickpea Salad Toasts With Poached Egg:1",
+"recipe-chickpea_salad_toasts_with_poached_egg:Chickpea Salad Toasts With Poached Egg:0",
 "recipe-chickpea_salad_wrap:Chickpea Salad Wrap:2",
 "recipe-chickpea_spicy_buffalo_wrap:Chickpea Spicy Buffalo Wrap:0",
-"recipe-chili_lime_black_bean_tacos:Chili Lime Black Bean Tacos:1",
-"recipe-crispy_baked_sweet_potato_fries:Crispy Baked Sweet Potato Fries:1",
-"recipe-curried_chickpeas:Curried Chickpeas:1",
-"recipe-extra_stuffed_veggie_burritos:Extra Stuffed Veggie Burritos:1",
-"recipe-ginger_orange_broccoli_and_noodles:Ginger Orange Broccoli And Noodles:1",
-"recipe-green_chile_mac:Green Chile Mac:1",
-"recipe-guacamole:Guacamole:1",
+"recipe-chili_lime_black_bean_tacos:Chili Lime Black Bean Tacos:0",
+"recipe-crispy_baked_sweet_potato_fries:Crispy Baked Sweet Potato Fries:0",
+"recipe-curried_chickpeas:Curried Chickpeas:2",
+"recipe-extra_stuffed_veggie_burritos:Extra Stuffed Veggie Burritos:0",
+"recipe-ginger_orange_broccoli_and_noodles:Ginger Orange Broccoli And Noodles:0",
+"recipe-green_chile_mac:Green Chile Mac:0",
+"recipe-guacamole:Guacamole:0",
 "recipe-karens_roasted_veggie_bowls:Karens Roasted Veggie Bowls:2",
-"recipe-mediterranean_cauliflower_platter:Mediterranean Cauliflower Platter:1",
+"recipe-mediterranean_cauliflower_platter:Mediterranean Cauliflower Platter:0",
 "recipe-roasted_vegetables:Roasted Vegetables:2",
 "recipe-salad:Salad:3",
 "recipe-sweet_potato_gnocchi:Sweet Potato Gnocchi:2",
-"recipe-sweet_potatoes:Sweet Potatoes:1",
-"recipe-veggie_loaded_red_curry:Veggie Loaded Red Curry:1"
+"recipe-sweet_potatoes:Sweet Potatoes:0",
+"recipe-veggie_loaded_red_curry:Veggie Loaded Red Curry:0"
 ]
 },
 "tocLookup": {
@@ -5678,7 +5680,7 @@ var localDB = {
 "Mozzarella Pasta",
 "One Pot Creamy Broccoli Pasta",
 "Orzo And Cheese",
-"Pasta E Ceci",
+"Pasta And Chickpeas",
 "Pasta With Corn Zucchini And Tomatoes",
 "Peanut Noodles",
 "Sausage And Mushroom Penne Pasta",
