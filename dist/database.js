@@ -5321,32 +5321,35 @@ var localDB = {
 "ingredients": {
 "ingredients": [
 "Ingredients",
-"2 tbsp pure sesame oil",
 "1/2 medium sweet onion, thinly sliced",
-"3 tbsp mild red curry paste",
-"1-inch piece peeled fresh ginger root, grated (about 1\u00bd tsp)",
 "1 large red bell pepper, seeded and thinly sliced",
 "1/2 small cauliflower head, cut into florets (2 cups)",
+"~2 tbsp pure sesame oil",
+"3 tbsp mild red curry paste",
+"1 tsp ginger (or 1-inch piece peeled fresh ginger root, grated)",
 "8 oz (2 cups) frozen cubed butternut squash (or frozen cubed sweet potatoes)",
 "1 cup full-fat coconut milk (see note)",
 "1 cup low-sodium vegetable broth",
-"one 15-oz can crushed tomatoes",
-"1/2 tsp kosher salt, plus more as needed",
-"2 oz baby spinach leaves (2 cups)",
+"one 15-oz can crushed tomatoes (or tomato sauce or can of diced tomatoes)",
+"1/2 tsp kosher salt",
 "(optional) 1 fresno pepper, seeded and thinly sliced",
+"2 oz baby spinach leaves (2 cups)",
 "3 cups cooked white or brown long-grain rice",
 "1 lime, cut into wedges, for serving"
 ]
 },
 "notes": [
 "**Note: Thoroughly stir the coconut milk before using, to re-incorporate its fat. You\u2019ll also use most of the remaining coconut milk from a 15-oz can in the Green Chile Mac recipe",
+"If adding carrots, add in when cooking the onions and sauce",
 "Week 3"
 ],
 "rating": 3,
 "recipe": [
-"Heat oil until shimmering in a large pot over medium heat. Add the onion, red curry paste, and ginger. Cook for 5 minutes until the onion has softened",
-"Add the red bell pepper, cauliflower, frozen butternut squash (or sweet potatoes), coconut milk, broth, canned tomatoes, and salt. Cook, gently bubbling at the edges, for 13 minutes",
-"Add the spinach (and if using, Fresno pepper). Cook for 2 minutes. Taste, and add salt, as needed",
+"Chop the onion and bell pepper (thin slice) and cauliflower (florets)",
+"Heat oil in a large pot over medium heat. Add the onion, red curry paste, and ginger. Cook for 5 minutes until the onion has softened",
+"Add the red bell pepper, cauliflower, frozen butternut squash (or sweet potatoes), coconut milk, broth, canned tomatoes, and salt",
+"Cook, gently bubbling at the edges, for 13 minutes",
+"Add the spinach (and if using, Fresno pepper). Cook for 2 minutes",
 "Serve warm over rice, with a few squeezes of lime"
 ],
 "source": "https://www.washingtonpost.com/recipes/veggie-loaded-red-curry/17022/",
