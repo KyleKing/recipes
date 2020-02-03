@@ -1562,7 +1562,7 @@ var localDB = {
 "To Make Ahead: Prepare the casserole through step 3. Let cool, then cover and keep in the fridge for up to 2 days. To bake, remove from the fridge and let sit at room temp while the oven preheats. Bake as directed",
 "To Freeze: Prepare the casserole through step 3. Let cool, then cover tightly. Freeze for up to 3 months. Thaw overnight in the fridge or on the counter for 2-3 hours. Bake as directed"
 ],
-"rating": 0,
+"rating": 2,
 "recipe": [
 "Preheat the oven to 425 degrees F",
 "Heat the olive oil in a large pot over medium heat. When the oil shimmers, add the onion and carrot and cook until fragrant, about 5 minutes. Stir in the chicken and season with salt and pepper. Cook until the chicken is seared, 2-3 minutes. Add the butter, rice, orzo, and thyme, and cook until golden and toasted, 2-3 minutes. Add the broth and bring to a boil over high heat. Add the broccoli, bay leaves, garlic powder, cayenne, and a large pinch each of salt and pepper. Bring to a boil, cover and reduce heat to low. Cook, covered for 20-25 minutes, until the rice is mostly cooked",
@@ -2007,6 +2007,39 @@ var localDB = {
 },
 {
 "group": "pasta",
+"id": "recipe-classic_pasta_and_mushrooms",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1/2 teaspoon kosher salt, plus more as needed",
+"1/4 cup extra-virgin olive oil, plus more for drizzling",
+"1 1/2 pounds mixed fresh mushrooms (shiitake, oyster and/or cremini), trimmed and sliced",
+"2 tablespoons unsalted butter",
+"3 cloves garlic, thinly sliced",
+"2 teaspoons chopped fresh rosemary leaves",
+"1/2 teaspoon crushed red pepper flakes",
+"1 cup no-salt-added vegetable broth",
+"12 ounces dried egg pappardelle",
+"1/4 cup chopped fresh flat-leaf parsley",
+"1/2 cup freshly grated parmesan cheese, plus more for serving"
+]
+},
+"notes": [],
+"rating": 0,
+"recipe": [
+"Bring a large pot of salted water to boil.",
+"While the water is heating, in a large skillet over medium-high heat, heat the 1/4 cup of olive oil until shimmering. Add about half the mushrooms and cook, stirring, until they begin to wilt and make space in the pan; then add the remaining mushrooms. Cook, stirring often, until they give up their liquid; then increase the heat to boil the liquid away and caramelize the mushrooms, 8 to 10 minutes.",
+"Reduce the heat to medium, add the butter and let it melt. Stir in the garlic, rosemary, salt and red pepper flakes just until fragrant, 30 seconds. Add the vegetable broth and simmer until reduced by half, about 3 minutes. Reduce the heat to its lowest setting and cover to keep warm.",
+"Meanwhile, add the pappardelle to the boiling water, and cook until al dente, 1 to 2 minutes less than the package directions. When the pasta is ready, use tongs to transfer it to the sauce, reserving the pasta water. Drizzle with olive oil, sprinkle with the parsley and toss to coat, adding a little reserved pasta water if the pan seems dry.",
+"Remove the skillet from the heat, and sprinkle with the grated cheese. Toss and serve hot, passing more grated cheese at the table."
+],
+"source": "https://www.washingtonpost.com/news/voraciously/wp/2020/01/19/no-flash-all-substance-pasta-with-mushrooms-is-a-weeknight-classic/",
+"title": "Classic Pasta And Mushrooms"
+},
+{
+"group": "pasta",
 "id": "recipe-creamy_lemon_pasta",
 "imgPlaceholder": "dist/imgs/placeholder_pasta-creamy_lemon_pasta.svg",
 "imgSrc": "dist/imgs/pasta-creamy_lemon_pasta.jpeg",
@@ -2220,6 +2253,41 @@ var localDB = {
 ],
 "source": "https://smittenkitchen.com/2017/10/quick-pasta-and-chickpeas-pasta-e-ceci/",
 "title": "Pasta And Chickpeas"
+},
+{
+"group": "pasta",
+"id": "recipe-pasta_romesco_with_spinach",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"kosher salt",
+"8 ounces dried fusilli col buco (long spirals; may substitute spaghetti or bucatini; see headnote)",
+"3 tablespoons extra-virgin olive oil, plus more for serving",
+"3 medium cloves garlic, minced",
+"4 ounces (4 packed cups) baby spinach leaves",
+"4 large roasted red peppers from a jar, drained and sliced (2 cups)",
+"2/3 cup roasted unsalted almonds",
+"2 tablespoons tomato paste",
+"1 teaspoon spanish smoked paprika (piment\u00f3n)",
+"freshly ground black pepper",
+"5 large leaves fresh basil, coarsely chopped"
+]
+},
+"notes": [
+"Week 10"
+],
+"rating": 0,
+"recipe": [
+"Bring a pot of generously salted water to a boil over medium-high heat. Add the pasta and cook according to the package instructions, until al dente; drain.",
+"In a large skillet or saute pan over medium heat, heat 1 tablespoon of the oil until shimmering. Stir in the garlic and cook until fragrant, about 30 seconds, then add the spinach and a pinch of kosher salt. Cook, stirring, the spinach until is wilted, about 3 minutes. Turn off the heat.",
+"In a blender, combine the roasted red peppers, almonds, tomato paste, smoked paprika, the remaining 2 tablespoons of oil and 1/4 teaspoon of the salt. Puree to form a smooth, bright orange-red sauce.",
+"Add the drained pasta to the skillet with the spinach, pour in the romesco sauce and toss until well coated. Add the basil. Taste and season with additional salt and the black pepper, if desired.",
+"Divide the pasta among bowls and drizzle with oil. Serve right away."
+],
+"source": "https://www.washingtonpost.com/recipes/pasta-romesco-spinach/17100/?utm_campaign=plant_powered_week_10&utm_medium=Email&utm_source=Newsletter&wpisrc=nl_vplantpowered_w10&wpmm=1",
+"title": "Pasta Romesco With Spinach"
 },
 {
 "group": "pasta",
@@ -3803,30 +3871,44 @@ var localDB = {
 "imgPlaceholder": "dist/imgs/placeholder_soup-johns_chili.svg",
 "imgSrc": "dist/imgs/soup-johns_chili.jpeg",
 "ingredients": {
-"ingredients": [
+"Ingredients": [
 "Ingredients",
 "1 lb ground turkey",
 "1 medium onion, chopped",
 "1 cup mushrooms, chopped",
-"2 tbsp (lawry's) seasoning salt",
+"2 tbsp (lawry's) seasoning salt (see substitute below)",
 "3 tbsp chili powder",
 "1 tsp cayenne pepper",
 "3 cloves garlic, minced",
 "2 cups water",
 "2 (15 oz) cans tomato sauce",
 "2 (15 oz) cans kidney beans",
-"2 tbsp light brown sugar",
-"(optional) 1 can (15 oz) whole tomatoes, crushed",
-"(optional) plain yogurt"
+"2 tbsp light brown sugar"
+],
+"Seasoning Salt Substitute": [
+"Seasoning Salt Substitute",
+"1 tsp garlic powder",
+"1 tsp onion powder",
+"1 tsp paprika",
+"1 tsp ground tumeric",
+"1 tsp salt",
+"1 tsp white sugar"
+],
+"Toppings": [
+"Toppings",
+"(optional) plain yogurt",
+"(optional) shredded cheese",
+"(optional) crushed tortilla chips"
 ]
 },
 "notes": [
 "Chrissy Teigen Cravings, 148",
+"Freezes or can be stored in the fridge. Tastes great when reheated.",
 "Serves 6-8"
 ],
 "rating": 2,
 "recipe": [
-"Heat a large pot over medium heat. Add the ground turkey, onion, mushrooms, seasoning salt, chili powder, and cayenne",
+"Heat a large pot over medium heat. Add the ground turkey, onion, mushrooms, seasoning salt (or substitute), chili powder, and cayenne",
 "Cook for 8 min. Add the garlic and cook for 1 additional min",
 "Add 2 cups water, the tomato sauce, kidney beans, brown sugar, and bring to a boil",
 "Reduce heat to medium-low and simmer for 35-45 min to thicken slightly and flavor-mingle"
@@ -4649,15 +4731,48 @@ var localDB = {
 "imgPlaceholder": "",
 "imgSrc": "",
 "ingredients": {
-"ingredients": [
-"Ingredients",
-"todo"
+"FOR ASSEMBLY": [
+"For Assembly",
+"4 pitas (white or whole-wheat)",
+"fresh cilantro sprigs, for serving",
+"pickled onions (see headnote)",
+"harissa, for serving (optional)",
+"amba, for serving (optional)"
+],
+"FOR THE CABBAGE SALAD": [
+"For The Cabbage Salad",
+"1/3 cup extra-virgin olive oil",
+"1/4 cup apple cider vinegar",
+"1 teaspoon kosher salt, or more as needed",
+"1 teaspoon granulated sugar",
+"1/4 teaspoon freshly ground black pepper, or more as needed",
+"1/2 medium green or red cabbage (1 1/2 pounds), thinly sliced"
+],
+"FOR THE CHICKEN": [
+"For The Chicken",
+"3 tablespoons extra-virgin olive oil",
+"1 1/2 teaspoons ground cumin",
+"1 teaspoon freshly ground black pepper",
+"1 teaspoon ground turmeric",
+"1 teaspoon kosher salt",
+"3/4 teaspoon ground coriander",
+"1/2 teaspoon ground cardamom",
+"1/2 teaspoon sweet paprika",
+"1/2 teaspoon garlic powder",
+"1/4 teaspoon dried oregano",
+"1/4 teaspoon ground cinnamon",
+"1 pinch ground cloves",
+"1 pinch ground ginger",
+"five (4-ounce) skinless, boneless chicken thighs"
 ]
 },
 "notes": [],
 "rating": 0,
 "recipe": [
-"TODO"
+"Marinate the chicken: In a medium bowl, whisk together the olive oil, cumin, pepper, turmeric, salt, coriander, cardamom, paprika, garlic powder, oregano, cinnamon, cloves and ginger. Add the chicken thighs and toss to coat, ensuring the spice rub gets into all the folds and crevices of the thighs. Cover and refrigerate for at least 30 minutes and up to 12 hours.",
+"Make the cabbage salad: While the chicken marinates, in a large bowl, whisk together the olive oil, vinegar, salt, sugar and pepper. Add the cabbage and gently toss to coat. Cover and let sit for at least 30 minutes, or refrigerate for up to 24 hours.",
+"Cook the chicken: Heat a large, heavy skillet or grill pan over medium-high heat until almost smoking. Lightly brush the pan with a whisper of oil to coat. Cook the chicken until golden, with crispy edges, 5 to 6 minutes per side. Transfer to a cutting board, let rest for 1 to 2 minutes, then chop into bite-size pieces.",
+"Toast the pitas lightly and stuff them with the cabbage salad, chicken, cilantro and pickled onions, if using. Serve right away, with harissa and amba, if using, on the side."
 ],
 "source": "https://www.washingtonpost.com/recipes/chicken-shawarma/17227/",
 "title": "Chicken Shawarma"
@@ -4947,6 +5062,61 @@ var localDB = {
 },
 {
 "group": "veggie",
+"id": "recipe-falafel_pitas_with_cilantro_cashew_sauce",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"FOR SERVING": [
+"For Serving",
+"4 pita bread rounds, each cut in half",
+"1/2 english (seedless) cucumber, thinly sliced into rounds",
+"1/2 cup thinly sliced red onion",
+"1 cup (2 ounces) baby spinach",
+"1 cup cherry tomatoes, chopped",
+"mild harissa (store-bought; optional; see note)"
+],
+"FOR THE FALAFEL": [
+"For The Falafel",
+"1 cup (7 ounces) dried chickpeas, soaked (see above)",
+"2 medium cloves garlic",
+"1/4 medium red onion, coarsely chopped (about 1/4 cup)",
+"1/2 small carrot, scrubbed well and coarsely chopped (about 1/4 cup)",
+"1 tbsp coarsely chopped cilantro stems",
+"1/3 cup loosely packed parsley leaves",
+"1 1/2 tsp ground cumin",
+"1 tsp kosher salt",
+"1/4 cup plus 2 tbsps neutral oil or more as needed, for frying"
+],
+"FOR THE SAUCE": [
+"For The Sauce",
+"1 cup (5 ounces) raw, unsalted cashews, soaked (see recipe)",
+"1/2 bunch fresh cilantro leaves (1 cup packed)",
+"1/2 cup water, or more as needed",
+"1/4 cup fresh lemon juice (from 1 large lemon)",
+"1/2 tsp kosher salt, or more as needed",
+"1/8 tsp ground cayenne pepper (optional)"
+]
+},
+"notes": [
+"Week 7"
+],
+"rating": 0,
+"recipe": [
+"To start this recipe, we\u2019ll soak the dried chickpeas and raw cashews separately to get that perfectly fluffy falafel and creamy sauce. Place the chickpeas in a medium container and cover with 4 cups of water. Place the cashews in a small container and cover with 2 cups of water. Cover both and let them sit for 10 to 12 hours.",
+"When the cashew soak is complete, blend that sauce: Drain the nuts and throw them into a blender along with the cilantro, water, lemon juice, salt and cayenne pepper, if using. Whiz it all up until a creamy sauce forms. A high-speed blender is the quickest tool for the job, but a standard blender works, too; it just takes a few minutes longer. You\u2019ll need to eyeball it to get to a creamy consistency; you may need to add an extra tbsp or two of water. Taste, and add another pinch of salt, as needed. Transfer to a container, cover and refrigerate until serving. You should have about 1 1/3 cups.",
+"On to the falafel: Warm the garlic in a medium (dry) skillet over medium heat, flipping it once or twice, until just browned, about 2 minutes total. Transfer to a food processor, along with the red onion, carrot, cilantro stems and parsley. Process until finely chopped, about 10 seconds. Scrape down the sides of the bowl.",
+"Drain the soaked chickpeas and add them to the food processor, along with the cumin and salt. Process for about 20 seconds total, stopping and scraping down the bowl a few times, until a crumbly dough forms.",
+"Take a heaping tbsp of the dough and use your hands to form it into a disk about 2 inches in diameter and just under 1/2-inch thick. Falafel dough is crumbly (not like the consistency of cookie dough), so don\u2019t be alarmed. It takes a little pressing to stay together.",
+"Repeat to make 24 disks, placing them on a baking sheet. Because you will be pan-frying and not deep-frying, the flat disk shape will help the falafel get cooked through.",
+"Heat the oil in the same skillet you used for the garlic, over medium-high heat. Place a crumb from a falafel disk in the oil, and once it starts to sizzle, the oil is ready. Fry about 8 falafel at a time, for 2 to 3 minutes on each side, until they are lightly browned all over. We like using chopsticks to flip them, and we do it carefully to avoid spattering oil. Transfer the cooked falafel to a plate. Add a bit more oil to keep the bottom of the skillet covered for the next batch.",
+"Once the falafel are done, you can eat them immediately, or refrigerate or freeze them.",
+"To serve: Stuff each of the pita halves with 3 falafel, cucumber slices, red onion, spinach and tomatoes. Dollop with enough cilantro-cashew sauce to cover the filling, and some harissa, if using."
+],
+"source": "https://www.washingtonpost.com/recipes/falafel-pitas-cilantro-cashew-sauce/17090/?utm_campaign=plant_powered_week_7&utm_medium=Email&utm_source=Newsletter&wpisrc=nl_vplantpowered_w7&wpmm=1",
+"title": "Falafel Pitas With Cilantro Cashew Sauce"
+},
+{
+"group": "veggie",
 "id": "recipe-ginger_orange_broccoli_and_noodles",
 "imgPlaceholder": "dist/imgs/placeholder_veggie-ginger_orange_broccoli_and_noodles.svg",
 "imgSrc": "dist/imgs/veggie-ginger_orange_broccoli_and_noodles.jpeg",
@@ -5193,6 +5363,52 @@ var localDB = {
 },
 {
 "group": "veggie",
+"id": "recipe-polenta_with_white_beans_and_italian_salsa_verde",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"FOR THE BEANS AND GREENS": [
+"For The Beans And Greens",
+"1 tablespoon extra-virgin olive oil",
+"one 15-ounce can low-sodium white beans, such as cannellini or great northern white beans, drained and rinsed",
+"2 medium cloves garlic, minced",
+"pinch crushed red pepper flakes",
+"1/4 teaspoon kosher salt",
+"freshly ground black pepper",
+"1 cup (2 ounces) baby spinach leaves or other chopped, dark leafy greens"
+],
+"FOR THE POLENTA": [
+"For The Polenta",
+"3 cups low-sodium vegetable broth",
+"3/4 cup medium-grind or stone-ground cornmeal",
+"1/2 teaspoon kosher salt",
+"1 tablespoon unsalted butter",
+"freshly grated parmigiano-reggiano cheese, for garnish"
+],
+"FOR THE SALSA VERDE": [
+"For The Salsa Verde",
+"2 tablespoons minced fresh flat-leaf parsley",
+"1 tablespoon minced fresh oregano (may substitute more parsley here)",
+"1 tablespoon capers in brine, drained",
+"2 tablespoons extra-virgin olive oil",
+"1 tablespoon fresh lemon juice"
+]
+},
+"notes": [
+"Week 7"
+],
+"rating": 0,
+"recipe": [
+"For the creamy polenta: Bring the broth to a boil in a medium saucepan over medium-high heat. Add the cornmeal gradually, whisking constantly, to form a thickened and smooth mixture. Add the salt and reduce the heat to low. Cook over low heat, slowly bubbling, for 20 minutes: The mixture will resemble a thick, yellow paste. Turn off the heat and stir in the butter until it has melted.",
+"Meanwhile, whip up those beans and greens: Heat the oil in a medium skillet over medium heat. Add the beans, garlic, crushed red pepper flakes, salt and a few grinds of black ground pepper. Cook for 5 to 7 minutes, until fragrant and warmed through (enjoy that perfume of wafting garlic). Stir in the spinach or other greens and continue cooking for 1 minute until that has wilted. Remove from the heat.",
+"Finally, make the salsa verde: Stir together the parsley, oregano, capers, oil and lemon juice in a medium bowl.",
+"Spoon the warm polenta into bowls. Top with the beans and greens, salsa verde and grated cheese. Serve warm."
+],
+"source": "https://www.washingtonpost.com/recipes/polenta-white-beans-and-italian-salsa-verde/17091/?utm_campaign=plant_powered_week_7&utm_medium=Email&utm_source=Newsletter&wpisrc=nl_vplantpowered_w7&wpmm=1",
+"title": "Polenta With White Beans And Italian Salsa Verde"
+},
+{
+"group": "veggie",
 "id": "recipe-roasted_vegetables",
 "imgPlaceholder": "dist/imgs/placeholder_veggie-roasted_vegetables.svg",
 "imgSrc": "dist/imgs/veggie-roasted_vegetables.jpg",
@@ -5396,10 +5612,18 @@ var localDB = {
 "ingredients.DRESSING + SALAD",
 "ingredients.EGGS",
 "ingredients.Eggs",
+"ingredients.FOR ASSEMBLY",
 "ingredients.FOR SERVING",
+"ingredients.FOR THE BEANS AND GREENS",
 "ingredients.FOR THE BENEDICT AND ASSEMBLY",
+"ingredients.FOR THE CABBAGE SALAD",
+"ingredients.FOR THE CHICKEN",
+"ingredients.FOR THE FALAFEL",
 "ingredients.FOR THE HOLLANDAISE",
 "ingredients.FOR THE POACHED EGGS",
+"ingredients.FOR THE POLENTA",
+"ingredients.FOR THE SALSA VERDE",
+"ingredients.FOR THE SAUCE",
 "ingredients.Favorite Cheeses",
 "ingredients.Favorite Snacks",
 "ingredients.For the Parm Toasts",
@@ -5422,6 +5646,7 @@ var localDB = {
 "ingredients.Sauce",
 "ingredients.Saute in Olive Oil",
 "ingredients.Seasoning Combinations",
+"ingredients.Seasoning Salt Substitute",
 "ingredients.Seasonings",
 "ingredients.Standalone",
 "ingredients.Streusel",
@@ -5512,7 +5737,7 @@ var localDB = {
 "recipe-vanilla_ice_cream:Vanilla Ice Cream:2"
 ],
 "meals": [
-"recipe-broccoli_cheddar_chicken_and_rice_casserole:Broccoli Cheddar Chicken And Rice Casserole:0",
+"recipe-broccoli_cheddar_chicken_and_rice_casserole:Broccoli Cheddar Chicken And Rice Casserole:2",
 "recipe-burgers:Burgers:2",
 "recipe-grilled_cheese:Grilled Cheese:1",
 "recipe-gyros:Gyros:1",
@@ -5530,6 +5755,7 @@ var localDB = {
 "recipe-baked_ziti:Baked Ziti:2",
 "recipe-black_bean_pasta_bowl:Black Bean Pasta Bowl:0",
 "recipe-cherry_tomato_spaghetti:Cherry Tomato Spaghetti:1",
+"recipe-classic_pasta_and_mushrooms:Classic Pasta And Mushrooms:0",
 "recipe-creamy_lemon_pasta:Creamy Lemon Pasta:2",
 "recipe-dragon_noodles:Dragon Noodles:1",
 "recipe-microwave_cacio_e_pepe:Microwave Cacio E Pepe:3",
@@ -5537,6 +5763,7 @@ var localDB = {
 "recipe-one_pot_creamy_broccoli_pasta:One Pot Creamy Broccoli Pasta:1",
 "recipe-orzo_and_cheese:Orzo And Cheese:1",
 "recipe-pasta_and_chickpeas:Pasta And Chickpeas:2",
+"recipe-pasta_romesco_with_spinach:Pasta Romesco With Spinach:0",
 "recipe-pasta_with_corn_zucchini_and_tomatoes:Pasta With Corn Zucchini And Tomatoes:3",
 "recipe-peanut_noodles:Peanut Noodles:1",
 "recipe-sausage_and_mushroom_penne_pasta:Sausage And Mushroom Penne Pasta:3",
@@ -5640,11 +5867,13 @@ var localDB = {
 "recipe-crispy_baked_sweet_potato_fries:Crispy Baked Sweet Potato Fries:0",
 "recipe-curried_chickpeas:Curried Chickpeas:2",
 "recipe-extra_stuffed_veggie_burritos:Extra Stuffed Veggie Burritos:0",
+"recipe-falafel_pitas_with_cilantro_cashew_sauce:Falafel Pitas With Cilantro Cashew Sauce:0",
 "recipe-ginger_orange_broccoli_and_noodles:Ginger Orange Broccoli And Noodles:0",
 "recipe-green_chile_mac:Green Chile Mac:0",
 "recipe-guacamole:Guacamole:0",
 "recipe-karens_roasted_veggie_bowls:Karens Roasted Veggie Bowls:2",
 "recipe-mediterranean_cauliflower_platter:Mediterranean Cauliflower Platter:0",
+"recipe-polenta_with_white_beans_and_italian_salsa_verde:Polenta With White Beans And Italian Salsa Verde:0",
 "recipe-roasted_vegetables:Roasted Vegetables:2",
 "recipe-salad:Salad:3",
 "recipe-sweet_potato_gnocchi:Sweet Potato Gnocchi:2",
@@ -5725,6 +5954,7 @@ var localDB = {
 "Baked Ziti",
 "Black Bean Pasta Bowl",
 "Cherry Tomato Spaghetti",
+"Classic Pasta And Mushrooms",
 "Creamy Lemon Pasta",
 "Dragon Noodles",
 "Microwave Cacio E Pepe",
@@ -5732,6 +5962,7 @@ var localDB = {
 "One Pot Creamy Broccoli Pasta",
 "Orzo And Cheese",
 "Pasta And Chickpeas",
+"Pasta Romesco With Spinach",
 "Pasta With Corn Zucchini And Tomatoes",
 "Peanut Noodles",
 "Sausage And Mushroom Penne Pasta",
@@ -5835,11 +6066,13 @@ var localDB = {
 "Crispy Baked Sweet Potato Fries",
 "Curried Chickpeas",
 "Extra Stuffed Veggie Burritos",
+"Falafel Pitas With Cilantro Cashew Sauce",
 "Ginger Orange Broccoli And Noodles",
 "Green Chile Mac",
 "Guacamole",
 "Karens Roasted Veggie Bowls",
 "Mediterranean Cauliflower Platter",
+"Polenta With White Beans And Italian Salsa Verde",
 "Roasted Vegetables",
 "Salad",
 "Sweet Potato Gnocchi",
