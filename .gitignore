@@ -3,6 +3,8 @@ dist/database.json
 config.codekit3
 *.log
 *.pyc
+.venv
+.vscode
 
 # Ignore images in source directory
 /database/*/*.jpg
