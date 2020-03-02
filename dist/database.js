@@ -1771,35 +1771,6 @@ var localDB = {
 },
 {
 "group": "meals",
-"id": "recipe-nori_vegetable_wraps",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"ingredients": [
-"Ingredients",
-"hummus",
-"siracha",
-"carrot, peeled with a vegetable peeler",
-"spinach, arugula, and/or baby kale",
-"1/2 avocado",
-"cucumber (optional)",
-"roasted red pepper (optional)",
-"nori, pita, tortilla, or naan"
-]
-},
-"notes": [
-"To make roasted red peppers, hold them over a burner with tongs until charred. Put in a glass bowl with lid to let them steam and to make remove the char easier. Source: https://www.thekitchn.com/how-to-roast-peppers-3-ways-234734",
-"Other vegetables worth trying: red cabbage, radish, asparagus spears, zucchini, or sprouts"
-],
-"rating": 0,
-"recipe": [
-"The original recipe uses nori, but wraps work too. Layer on the hummus, then top with ingredients"
-],
-"source": "http://ahouseinthehills.com/2013/04/25/nori-veggie-wraps-my-everyday-staple/",
-"title": "Nori Vegetable Wraps"
-},
-{
-"group": "meals",
 "id": "recipe-oven-baked_sausage",
 "imgPlaceholder": "",
 "imgSrc": "",
@@ -5531,6 +5502,35 @@ var localDB = {
 },
 {
 "group": "veggie",
+"id": "recipe-vegetable_wraps",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"hummus",
+"siracha",
+"carrot, peeled with a vegetable peeler",
+"spinach, arugula, and/or baby kale",
+"1/2 avocado",
+"cucumber (optional)",
+"roasted red pepper (optional)",
+"nori, pita, tortilla, or naan"
+]
+},
+"notes": [
+"To make roasted red peppers, hold them over a burner with tongs until charred. Put in a glass bowl with lid to let them steam and to make remove the char easier. Source: https://www.thekitchn.com/how-to-roast-peppers-3-ways-234734",
+"Other vegetables worth trying: red cabbage, radish, asparagus spears, zucchini, or sprouts"
+],
+"rating": 0,
+"recipe": [
+"The original recipe uses nori, but wraps work too. Layer on the hummus, then top with ingredients"
+],
+"source": "http://ahouseinthehills.com/2013/04/25/nori-veggie-wraps-my-everyday-staple/",
+"title": "Vegetable Wraps"
+},
+{
+"group": "veggie",
 "id": "recipe-veggie_loaded_red_curry",
 "imgPlaceholder": "dist/imgs/placeholder_veggie-veggie_loaded_red_curry.svg",
 "imgSrc": "dist/imgs/veggie-veggie_loaded_red_curry.jpeg",
@@ -5744,7 +5744,6 @@ var localDB = {
 "recipe-jambon_beurre:Jambon Beurre:1",
 "recipe-kings_hawaiian_blpts:Kings Hawaiian Blpts:3",
 "recipe-lasagna:Lasagna:3",
-"recipe-nori_vegetable_wraps:Nori Vegetable Wraps:0",
 "recipe-oven-baked_sausage:Oven-Baked Sausage:2",
 "recipe-pancetta_crisps_on_baguette:Pancetta Crisps On Baguette:2",
 "recipe-quick_skillet_meals:Quick Skillet Meals:2",
@@ -5878,6 +5877,7 @@ var localDB = {
 "recipe-salad:Salad:3",
 "recipe-sweet_potato_gnocchi:Sweet Potato Gnocchi:2",
 "recipe-sweet_potatoes:Sweet Potatoes:0",
+"recipe-vegetable_wraps:Vegetable Wraps:0",
 "recipe-veggie_loaded_red_curry:Veggie Loaded Red Curry:3"
 ]
 },
@@ -5943,7 +5943,6 @@ var localDB = {
 "Jambon Beurre",
 "Kings Hawaiian Blpts",
 "Lasagna",
-"Nori Vegetable Wraps",
 "Oven-Baked Sausage",
 "Pancetta Crisps On Baguette",
 "Quick Skillet Meals",
@@ -6077,6 +6076,7 @@ var localDB = {
 "Salad",
 "Sweet Potato Gnocchi",
 "Sweet Potatoes",
+"Vegetable Wraps",
 "Veggie Loaded Red Curry"
 ]
 }
