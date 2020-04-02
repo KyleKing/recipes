@@ -1435,6 +1435,26 @@ var localDB = {
 },
 {
 "group": "ice_cream",
+"id": "recipe-frozen_m&m",
+"imgPlaceholder": "dist/imgs/placeholder_ice_cream-frozen_m&m.svg",
+"imgSrc": "dist/imgs/ice_cream-frozen_m&m.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1/4 cup cocoa powder",
+"m&ms/oreos/cookies/graham crackers/etc, crushed"
+]
+},
+"notes": [],
+"rating": 3,
+"recipe": [
+"Follow the vanilla ice cream recipe, just add a small amount of cocoa powder to give a pleasant chocolate flavor"
+],
+"source": "https://www.cuisinart.com/share/pdf/manuals/ice-21.pdf",
+"title": "Frozen M&M"
+},
+{
+"group": "ice_cream",
 "id": "recipe-mint_chocolate_chunk",
 "imgPlaceholder": "dist/imgs/placeholder_ice_cream-mint_chocolate_chunk.svg",
 "imgSrc": "dist/imgs/ice_cream-mint_chocolate_chunk.jpeg",
@@ -1513,7 +1533,7 @@ var localDB = {
 "pinch salt",
 "2 cups heavy cream",
 "1 tbsp pure vanilla extract",
-"oreos/cookies/graham crackers, etc, crushed"
+"m&ms/oreos/cookies/graham crackers/etc, crushed"
 ]
 },
 "notes": [
@@ -5732,6 +5752,7 @@ var localDB = {
 "ice_cream": [
 "recipe-chocolate_ice_cream:Chocolate Ice Cream:3",
 "recipe-chocolate_nutella:Chocolate Nutella:3",
+"recipe-frozen_m&m:Frozen M&M:3",
 "recipe-mint_chocolate_chunk:Mint Chocolate Chunk:2",
 "recipe-smores_ice_cream:Smores Ice Cream:3",
 "recipe-vanilla_ice_cream:Vanilla Ice Cream:2"
@@ -5931,6 +5952,7 @@ var localDB = {
 "ice_cream": [
 "Chocolate Ice Cream",
 "Chocolate Nutella",
+"Frozen M&M",
 "Mint Chocolate Chunk",
 "Smores Ice Cream",
 "Vanilla Ice Cream"
