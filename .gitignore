@@ -7,10 +7,6 @@ config.codekit3
 .vscode
 
 # Ignore images in source directory
-/database/*/*.jpg
-/database/*/*.JPG
-/database/*/*.jpeg
-/database/*/*.JPEG
+/database/*/*.jp*g
 /database/*/*.png
-/database/*/*.PNG
 /* alias

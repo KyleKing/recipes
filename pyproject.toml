@@ -8,8 +8,10 @@ license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.7"
+icecream = "*"
 
 [tool.poetry.dev-dependencies]
+dash_dev = {git = "https://github.com/KyleKing/dash_dev.git"}
 
 [build-system]
 requires = ["poetry>=1.0"]
