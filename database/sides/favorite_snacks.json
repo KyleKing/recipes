@@ -8,12 +8,15 @@
       "Chobani Raspberry",
       "Siggi's Raspberry",
       "Siggi's Vanilla"
+    ],
+    "Seltzer": [
+      "Grapefruit or lemon seltzer. Avoid citrus and orange (and Green tea...)"
     ]
   },
   "notes": [
-    "Reference notes for Alex's favorite lunch sides"
+    "Reference notes for Alex"
   ],
-  "rating": 0,
+  "rating": 1,
   "recipe": [
   ],
   "source": ""

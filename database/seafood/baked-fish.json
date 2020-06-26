@@ -1,10 +1,16 @@
 {
-  "ingredients": [
-    "fish fillet",
-    "salt",
-    "black pepper",
-    "olive oil"
-  ],
+  "ingredients": {
+    "General": [
+      "fish fillet",
+      "salt",
+      "black pepper",
+      "olive oil"
+    ],
+    "Paprika-Salmon": [
+      "butter + salt + pepper",
+      "broil with paprika"
+    ]
+  },
   "notes": [
     "For (thin) frozen fillet, bake at 450F for 4 minutes, then flip and bake for 8-12 min. Cover with olive oil, salt, and pepper. Frozen Recipe Source: http://cookthestory.com/how-to-cook-fish-from-frozen/"
   ],

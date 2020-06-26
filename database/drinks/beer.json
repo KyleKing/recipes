@@ -1,0 +1,21 @@
+{
+  "ingredients": {
+    "Beers": [
+      "Sour Monkey | Victory Brewing Company",
+      "Voodoo Ranger IPA | New Belgium",
+      "Hopslam Ale | Bell's Brewery"
+    ],
+    "Recommend": [
+      "Two Buck Chuck | Trader Joe's",
+      "Mission Street Session Pale Ale | Trader Joe's",
+      "KBC IPA | Trader Joe's"
+    ]
+  },
+  "notes": [
+    "Image Source: https://www.wallpaperflare.com/labeled-glass-bottles-on-shelf-assorted-books-wine-beer-wall-wallpaper-ztssy"
+  ],
+  "rating": 2,
+  "recipe": [
+  ],
+  "source": "https://untappd.com/"
+}
