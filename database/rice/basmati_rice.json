@@ -1,8 +1,7 @@
 {
   "ingredients": [
     "1 cup Basmati rice",
-    "1 cup water",
-    "1/2 tbsp olive oil",
+    "1.25 cup water (or 1 cup water if pre-soaked)",
     "chopped green onions (optional)",
     "parsely (optional)",
     "Instant Pot"
@@ -10,8 +9,9 @@
   "notes": [],
   "rating": 1,
   "recipe": [
-    "Rinse the Basmati rice with cold water. Add rice, water, and oil to instant pot. Cook for 8 minutes on high pressure, then allow 5 minutes for natural pressure release",
-    "Toss with the green onions and parsely"
+    "Rinse the Basmati rice with cold water until clear (If soaking, soak the rice in excess water for 1 hour, then rinse)",
+    "Add rice and water to instant pot. Cook for 4 minutes on high pressure, then allow 5 minutes for natural pressure release",
+    "Fluff the rice with a ladle or fork and let stand for 5 more minutes"
   ],
-  "source": "https://mommyshomecooking.com/instant-pot-fluffy-rice/"
+  "source": "https://pipingpotcurry.com/instant-pot-basmati-rice/"
 }

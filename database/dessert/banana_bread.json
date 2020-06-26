@@ -1,39 +1,38 @@
 {
-  "ingredients": [
-    "1/2 cup unsalted butter, room temperature",
-    "2/3 cup brown sugar, light or dark, firmly packed",
-    "1 tsp vanilla extract",
-    "1 tsp ground cinnamon",
-    "1/4 tsp ground nutmeg",
-    "1 tsp baking soda",
-    "1 tsp baking powder",
-    "1 tsp salt",
-    "1.5 cups mashed ripe bananas (about 3 medium or 2 large bananas)",
-    "3 tbsp apricot jam or orange marmalade (optional)",
-    "1/4 cup honey",
-    "2 large eggs",
-    "2.25 cups Flour",
-    "1/2 cup chocolate chips (TBD on actual measurements)",
-    "1/2 cup chopped walnuts (optional)"
-  ],
+  "ingredients": {
+    "1-Dry": [
+      "1.5 cups Flour",
+      "1.5 tsp baking powder",
+      "1/2 tsp salt"
+    ],
+    "2-Wet": [
+      "2/3 cup sugar",
+      "6 tbsp butter, softened"
+    ],
+    "3-Beat-In": [
+      "1-2 large eggs, beaten",
+      "1-1.25 cups mashed ripe bananas (about 3 medium or 2 large bananas)"
+    ],
+    "4-Fold In": [
+      "1/2 cup chocolate chips",
+      "1/2 cup chopped walnuts (optional)",
+      "1/4 cup finely chopped dried apricots (optional)",
+      "etc (optional)"
+    ]
+  },
   "notes": [
-    "Reader Tip: For a reduced-sugar version of this bread, cut the brown sugar in half (to 1/3 cup). Still retains moist texture and taste fine — simply less sweet, more banana-y",
-    "Reader Tip: An easy way to mash bananas is to peel, cut into chunks, and place in a zip-top plastic bag, leaving about 1/4\" open at the top of the bag for air to escape. Gently knead/flatten/squash the banana chunks with your fingers",
-
-    "WARN: We didn't make this with honey. See Joy of Cooking. Alt? https://tasty.co/recipe/one-bowl-chocolate-chip-banana-bread"
+    "Source Joy of Cooking 75th edition, page 628. Banana Bread Cockaigne",
+    "Note: removed the lemon zest from recipe"
   ],
   "rating": 3,
   "recipe": [
-    "Preheat 325F. Lightly grease a 9\"x5\" loaf pan or a 12\"x4\" tea loaf pan",
-    "In a large bowl, combine butter, sugar, vanilla, cinnamon, nutmeg, baking soda, baking powder, and salt, beating till smooth",
-    "Add the mashed bananas, jam, honey, and eggs. Again, beat until smooth",
-    "Add the flour, then the walnuts, stirring just until smooth",
-    "Spoon the batter into the prepared loaf pan, smoothing the top. Let it rest at room temperature for 10 minutes",
-    "Bake the bread for 45 minutes, then gently lay a piece of aluminum foil across the top, to prevent over-browning",
-    "Bake for an additional 25 minutes (20 minutes if you're baking in a tea loaf pan)",
-    "Remove the bread from the oven; a long toothpick or cake tester inserted into the center should come out clean, with at most a few wet crumbs clinging to it. The tester shouldn't show any sign of uncooked batter. If it does, bake the bread an additional 5 minutes, or until it tests done",
-    "Allow the bread to cool for 10 minutes in the pan",
-    "Remove from pan and cool completely on a rack"
+    "Have all ingredients at room temperature. Preheat the oven to 350. Grease an 8.5 x 4.5 in loaf pan",
+    "Whisk together the dry ingredients",
+    "In a large bowl, beat at medium speed the sugar and butter until creamy",
+    "Beat in the eggs and ripe bananas",
+    "In about 3 parts, add the dry ingredients and beat until smooth",
+    "Fold in optional ingredients (chocolate chips, chopped nuts, etc.)",
+    "Scrape batter into greased pan and bake about 1 hour or until inserted toothpick comes out clean. Cool slightly then unmold. Cool completely before slicing"
   ],
-  "source": "https://www.kingarthurflour.com/recipes/banana-bread-recipe"
+  "source": ""
 }
