@@ -18,7 +18,7 @@ Create interactive website for searching and making lists from user-specified so
 
 1. Create a new `<recipe_title>.json` and matching `<recipe_title>.<img_format>` in the respective database subdirectory (i.e. breakfast/)
     - See `database\__template.json` as an example JSON file
-2. Run `python make.py`, which will:
+2. Run `poetry run python make.py`, which will:
     - Move source images to `dist/imgs/<subdir>-<recipe_title>.<img_format>`
     - Combine JSON documents into single JSON file
         + Add recipe title from filename split on underscore
@@ -30,6 +30,8 @@ Create interactive website for searching and making lists from user-specified so
 
 ## Development - Archive
 
+- Change keyboard shortcut for search
+- Move each section to own page (i.e. sitename.com/desserts) and main page will only be the TOC?
 - Add flex-grid?
     + Wrap TOC
     + Wrap Image, Ingredients, Recipe?

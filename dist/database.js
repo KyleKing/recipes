@@ -205,8 +205,8 @@ var localDB = {
 {
 "group": "breakfast",
 "id": "recipe-omelette",
-"imgPlaceholder": "",
-"imgSrc": "",
+"imgPlaceholder": "dist/imgs/placeholder_breakfast-omelette.svg",
+"imgSrc": "dist/imgs/breakfast-omelette.jpeg",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -357,44 +357,47 @@ var localDB = {
 "group": "dessert",
 "id": "recipe-banana_bread",
 "imgPlaceholder": "dist/imgs/placeholder_dessert-banana_bread.svg",
-"imgSrc": "dist/imgs/dessert-banana_bread.jpg",
+"imgSrc": "dist/imgs/dessert-banana_bread.jpeg",
 "ingredients": {
-"ingredients": [
-"Ingredients",
-"1/2 cup unsalted butter, room temperature",
-"2/3 cup brown sugar, light or dark, firmly packed",
-"1 tsp vanilla extract",
-"1 tsp ground cinnamon",
-"1/4 tsp ground nutmeg",
-"1 tsp baking soda",
-"1 tsp baking powder",
-"1 tsp salt",
-"1.5 cups mashed ripe bananas (about 3 medium or 2 large bananas)",
-"3 tbsp apricot jam or orange marmalade (optional)",
-"1/4 cup honey",
-"2 large eggs",
-"2.25 cups flour",
-"1/2 cup chopped walnuts (optional)"
+"1-Dry": [
+"1-Dry",
+"1.5 cups flour",
+"1.5 tsp baking powder",
+"1/2 tsp salt"
+],
+"2-Wet": [
+"2-Wet",
+"2/3 cup sugar",
+"6 tbsp butter, softened"
+],
+"3-Beat-In": [
+"3-Beat-In",
+"1-2 large eggs, beaten",
+"1-1.25 cups mashed ripe bananas (about 3 medium or 2 large bananas)"
+],
+"4-Fold In": [
+"4-Fold In",
+"1/2 cup chocolate chips",
+"1/2 cup chopped walnuts (optional)",
+"1/4 cup finely chopped dried apricots (optional)",
+"etc (optional)"
 ]
 },
 "notes": [
-"Reader Tip: For a reduced-sugar version of this bread, cut the brown sugar in half (to 1/3 cup). Still retains moist texture and taste fine \u2014 simply less sweet, more banana-y",
-"Reader Tip: An easy way to mash bananas is to peel, cut into chunks, and place in a zip-top plastic bag, leaving about 1/4\" open at the top of the bag for air to escape. Gently knead/flatten/squash the banana chunks with your fingers"
+"Source Joy of Cooking 75th edition, page 628. Banana Bread Cockaigne",
+"Note: removed the lemon zest from recipe"
 ],
 "rating": 3,
 "recipe": [
-"Preheat 325F. Lightly grease a 9\"x5\" loaf pan or a 12\"x4\" tea loaf pan",
-"In a large bowl, combine butter, sugar, vanilla, cinnamon, nutmeg, baking soda, baking powder, and salt, beating till smooth",
-"Add the mashed bananas, jam, honey, and eggs. Again, beat until smooth",
-"Add the flour, then the walnuts, stirring just until smooth",
-"Spoon the batter into the prepared loaf pan, smoothing the top. Let it rest at room temperature for 10 minutes",
-"Bake the bread for 45 minutes, then gently lay a piece of aluminum foil across the top, to prevent over-browning",
-"Bake for an additional 25 minutes (20 minutes if you're baking in a tea loaf pan)",
-"Remove the bread from the oven; a long toothpick or cake tester inserted into the center should come out clean, with at most a few wet crumbs clinging to it. The tester shouldn't show any sign of uncooked batter. If it does, bake the bread an additional 5 minutes, or until it tests done",
-"Allow the bread to cool for 10 minutes in the pan",
-"Remove from pan and cool completely on a rack"
+"Have all ingredients at room temperature. Preheat the oven to 350. Grease an 8.5 x 4.5 in loaf pan",
+"Whisk together the dry ingredients",
+"In a large bowl, beat at medium speed the sugar and butter until creamy",
+"Beat in the eggs and ripe bananas",
+"In about 3 parts, add the dry ingredients and beat until smooth",
+"Fold in optional ingredients (chocolate chips, chopped nuts, etc.)",
+"Scrape batter into greased pan and bake about 1 hour or until inserted toothpick comes out clean. Cool slightly then unmold. Cool completely before slicing"
 ],
-"source": "https://www.kingarthurflour.com/recipes/banana-bread-recipe",
+"source": "",
 "title": "Banana Bread"
 },
 {
@@ -1299,6 +1302,33 @@ var localDB = {
 },
 {
 "group": "drinks",
+"id": "recipe-beer",
+"imgPlaceholder": "dist/imgs/placeholder_drinks-beer.svg",
+"imgSrc": "dist/imgs/drinks-beer.jpg",
+"ingredients": {
+"Beers": [
+"Beers",
+"sour monkey | victory brewing company",
+"voodoo ranger ipa | new belgium",
+"hopslam ale | bell's brewery"
+],
+"Recommend": [
+"Recommend",
+"two buck chuck | trader joe's",
+"mission street session pale ale | trader joe's",
+"kbc ipa | trader joe's"
+]
+},
+"notes": [
+"Image Source: https://www.wallpaperflare.com/labeled-glass-bottles-on-shelf-assorted-books-wine-beer-wall-wallpaper-ztssy"
+],
+"rating": 2,
+"recipe": [],
+"source": "https://untappd.com/",
+"title": "Beer"
+},
+{
+"group": "drinks",
 "id": "recipe-coffee",
 "imgPlaceholder": "dist/imgs/placeholder_drinks-coffee.svg",
 "imgSrc": "dist/imgs/drinks-coffee.jpeg",
@@ -1349,7 +1379,7 @@ var localDB = {
 ],
 "7-medium-bodied red": [
 "7-Medium-Bodied Red",
-""
+"badet clement revelation cabernet-merlot 2017"
 ],
 "8-full-bodied red": [
 "8-Full-Bodied Red",
@@ -1357,7 +1387,14 @@ var localDB = {
 ],
 "9-dessert wine": [
 "9-Dessert Wine",
-""
+"jimmy red roo"
+],
+"Recommended": [
+"Recommended",
+"2017 line 39 cabernet sauvignon | trader joe's",
+"henry hotspur's hard pressed rose cider | trader joe's",
+"villa cerrina montepulciano d'abruzzo 2016 | trader joe's",
+"la paca sonriente garnacha 2016 | trader joe's"
 ]
 },
 "notes": [
@@ -1367,7 +1404,7 @@ var localDB = {
 ],
 "rating": 2,
 "recipe": [],
-"source": "https://www.wine-searcher.com/",
+"source": "https://www.vivino.com",
 "title": "Wine"
 },
 {
@@ -1575,7 +1612,8 @@ var localDB = {
 "1/2 teaspoon cayenne pepper, more or less to taste",
 "1/2 lemon, zest",
 "1/2 cup whole milk",
-"1.5 cups shredded sharp cheddar cheese"
+"1.5 cups shredded sharp cheddar cheese",
+"peas or other frozen vegetables. pretty much anything works"
 ]
 },
 "notes": [
@@ -1584,7 +1622,7 @@ var localDB = {
 ],
 "rating": 2,
 "recipe": [
-"Preheat the oven to 425 degrees F",
+"Preheat the oven to 425",
 "Heat the olive oil in a large pot over medium heat. When the oil shimmers, add the onion and carrot and cook until fragrant, about 5 minutes. Stir in the chicken and season with salt and pepper. Cook until the chicken is seared, 2-3 minutes. Add the butter, rice, orzo, and thyme, and cook until golden and toasted, 2-3 minutes. Add the broth and bring to a boil over high heat. Add the broccoli, bay leaves, garlic powder, cayenne, and a large pinch each of salt and pepper. Bring to a boil, cover and reduce heat to low. Cook, covered for 20-25 minutes, until the rice is mostly cooked",
 "Once the rice is cooked, stir in the lemon zest, milk, and 1/2 cup of cheese. If needed, transfer the rice to an oven-safe casserole dish. Scatter the remaining cheese over top the casserole",
 "Transfer to the oven and bake 15-20 minutes, until the cheese is melted and just beginning to brown. Serve warm with additional thyme and fresh basil"
@@ -2094,24 +2132,25 @@ var localDB = {
 "ingredients": {
 "ingredients": [
 "Ingredients",
-"1 cup elbow macaroni",
-"3 cups water",
-"1/2 tsp kosher salt",
-"1/2 cup frozen corn kernels, frozen peas, or fresh peas",
-"2 tbsp butter",
-"1/2 cup grated pecorino romano or parmigiano-reggiano",
+"2 cup elbow macaroni",
+"6 cups water",
+"1 tsp kosher salt",
+"1 cup frozen corn kernels, frozen peas, or fresh peas",
+"4 tbsp butter",
+"1 cup grated pecorino romano or parmigiano-reggiano",
 "ground pepper"
 ]
 },
 "notes": [
-"Vegetables Unleashed Jose Andreas, pg. 102"
+"Vegetables Unleashed Jose Andreas, pg. 102",
+"Note recipe is doubled. Can also be made by boiling pasta and adding the ingredients after"
 ],
 "rating": 3,
 "recipe": [
 "Combine pasta and water in a microwaveable bowl, add a pinch of salt, and microwave on high for 5 min",
 "Stir in the peas and return for 1 more minute",
 "Working quickly, pour off most of the water until a few tbsp remain",
-"Vigorously stir in butter and cheese",
+"Vigorously stir in butter and cheese. Caution to not stir too much or the cheese can ball up and not be evenly distributed",
 "Serve with fresh ground pepper"
 ],
 "source": "https://www.amazon.com/Vegetables-Unleashed-Cookbook-Jose-Andres/dp/0062668382/",
@@ -2658,7 +2697,7 @@ var localDB = {
 "(optional) spinach, peppers, tomatoes, canned fire-roasted tomatoes, etc.",
 "(optional) chicken, sausage, pepperoni, etc.",
 "(optional) red pepper flakes, basil",
-"either semolina or flour"
+"flour"
 ]
 },
 "notes": [
@@ -2666,12 +2705,13 @@ var localDB = {
 ],
 "rating": 2,
 "recipe": [
-"Let the dough rest at room temperature for 20 minutes",
+"Let the dough rest at room temperature for at least 2-3 hours to come to room temperature. Best if covered in a bowl, but fine to leave in the plastic bag from the grocery",
 "Put the cold pizza stone in a cold oven then preheat to 425",
-"Place the dough on a lightly floured surface, then gently press it into a circle",
+"Place the dough on a lightly floured surface, then gently press to form a larger circle. Avoid pressing on the middle and crust",
 "Once you have an 8-inch round, pick up the dough and gently drape it over the knuckles on both of your hands. Slowly rotate it, allowing gravity to stretch it into a round about 11 inches in diameter. If the dough starts to resist stretching, put it down and allow it to rest for a few minutes, at which point it should stretch more easily",
-"Put a thin layer of semolina (or flour) on the pizza peel. Quickly add the toppings to prevent the dough from absorbing the flour and sticking. Additionally, regularly shake the peel to make sure the pizza slides around easily",
-"Add a thin layer of sauce (less than you think). Hold off on the rest of the toppings for now",
+"Can also be stretch by passing between your hands or by pulling when flat. See link",
+"Put a thin layer of flour on the pizza peel. Quickly add the toppings to prevent the dough from absorbing the flour and sticking. Additionally, regularly shake the peel to make sure the pizza slides around easily",
+"Add a thin layer of sauce (less than you think). Hold off on the rest of the toppings for now (maybe ~3 spoon fulls)",
 "With a jittery back and forth motion, slide the pizza onto the stone",
 "Bake for 6-8 min, then remove from the oven with the pizza peel",
 "Add the cheese and other toppings and return to the pizza stone for another 5-10 min",
@@ -3211,8 +3251,7 @@ var localDB = {
 "ingredients": [
 "Ingredients",
 "1 cup basmati rice",
-"1 cup water",
-"1/2 tbsp olive oil",
+"1.25 cup water (or 1 cup water if pre-soaked)",
 "chopped green onions (optional)",
 "parsely (optional)",
 "instant pot"
@@ -3221,10 +3260,11 @@ var localDB = {
 "notes": [],
 "rating": 1,
 "recipe": [
-"Rinse the Basmati rice with cold water. Add rice, water, and oil to instant pot. Cook for 8 minutes on high pressure, then allow 5 minutes for natural pressure release",
-"Toss with the green onions and parsely"
+"Rinse the Basmati rice with cold water until clear (If soaking, soak the rice in excess water for 1 hour, then rinse)",
+"Add rice and water to instant pot. Cook for 4 minutes on high pressure, then allow 5 minutes for natural pressure release",
+"Fluff the rice with a ladle or fork and let stand for 5 more minutes"
 ],
-"source": "https://mommyshomecooking.com/instant-pot-fluffy-rice/",
+"source": "https://pipingpotcurry.com/instant-pot-basmati-rice/",
 "title": "Basmati Rice"
 },
 {
@@ -3241,7 +3281,8 @@ var localDB = {
 "1/2 bag frozen peas",
 "finely chopped onion, carrots, broccoli",
 "3 eggs",
-"1 tsp soy sauce",
+"1 tbsp soy sauce",
+"1 tbsp sriracha",
 "1 tsp sesame oil",
 "garlic",
 "kosher salt",
@@ -3390,12 +3431,17 @@ var localDB = {
 "imgPlaceholder": "dist/imgs/placeholder_seafood-baked-fish.svg",
 "imgSrc": "dist/imgs/seafood-baked-fish.jpeg",
 "ingredients": {
-"ingredients": [
-"Ingredients",
+"General": [
+"General",
 "fish fillet",
 "salt",
 "black pepper",
 "olive oil"
+],
+"Paprika-Salmon": [
+"Paprika-Salmon",
+"butter + salt + pepper",
+"broil with paprika"
 ]
 },
 "notes": [
@@ -3654,6 +3700,10 @@ var localDB = {
 "Favorite Snacks",
 "kettle jalapeno chips"
 ],
+"Seltzer": [
+"Seltzer",
+"grapefruit or lemon seltzer. avoid citrus and orange (and green tea...)"
+],
 "Yogurt's": [
 "Yogurt'S",
 "chobani cherry",
@@ -3663,9 +3713,9 @@ var localDB = {
 ]
 },
 "notes": [
-"Reference notes for Alex's favorite lunch sides"
+"Reference notes for Alex"
 ],
-"rating": 0,
+"rating": 1,
 "recipe": [],
 "source": "",
 "title": "Favorite Snacks"
@@ -4006,14 +4056,14 @@ var localDB = {
 "2 sticks unsalted butter, cut into chunks",
 "2 tbsp minced garlic (3 cloves)",
 "1 cup flour",
-"4 tsp salt",
+"2 tsp salt",
 "1.5 tsp ground pepper",
 "1 large russet potato, peeled and 1/2 inch cubes",
 "1/2 lb (2 cups) carrots, diced",
 "1 cup frozen peas",
-"1 cup frozen pearl onions",
+"1 cup frozen peas, green beans, or pearl onions",
 "1/4 lb deli ham, sliced",
-"1 lb (3 cups) rotisserie chicken, cubed",
+"1 lb (3 cups) rotisserie chicken, cubed -or- >1 lb boneless, skinless chicken thighs cooked and shredded",
 "1/2 cup heavy cream"
 ]
 },
@@ -4026,7 +4076,7 @@ var localDB = {
 "Prep the carrots and potato",
 "In a large pot, melt the butter at medium-high heat until foamy. Add the garlic, stir for 1 minutes. Add the flour and reduce to medium until foaming again (2-3 min).",
 "Whisk in the milk-broth mixture. Add the salt and pepper. Bring to a boil, then reduce the heat for 5 minutes.",
-"Add the potato, carrots, peas, pearl onions, and ham. Simmer until the potatoes and carrots are tender (~20 minutes).",
+"Add the potato, carrots, peas, pearl onions (or substitute), and ham. Simmer until the potatoes and carrots are tender (~20 minutes).",
 "Stir in the chicken and cream then heat for a final 5 minutes",
 "Serve with a baguette or the crust crackers from the same cookbook recipe"
 ],
@@ -4726,7 +4776,7 @@ var localDB = {
 "For Assembly",
 "4 pitas (white or whole-wheat)",
 "fresh cilantro sprigs, for serving",
-"pickled onions (see headnote)",
+"pickled onions (see notes below)",
 "harissa, for serving (optional)",
 "amba, for serving (optional)"
 ],
@@ -4734,30 +4784,43 @@ var localDB = {
 "For The Cabbage Salad",
 "1/3 cup extra-virgin olive oil",
 "1/4 cup apple cider vinegar",
-"1 teaspoon kosher salt, or more as needed",
-"1 teaspoon granulated sugar",
-"1/4 teaspoon freshly ground black pepper, or more as needed",
+"1 tsp kosher salt, or more as needed",
+"1 tsp granulated sugar",
+"1/4 tsp freshly ground black pepper, or more as needed",
 "1/2 medium green or red cabbage (1 1/2 pounds), thinly sliced"
 ],
 "FOR THE CHICKEN": [
 "For The Chicken",
-"3 tablespoons extra-virgin olive oil",
-"1 1/2 teaspoons ground cumin",
-"1 teaspoon freshly ground black pepper",
-"1 teaspoon ground turmeric",
-"1 teaspoon kosher salt",
-"3/4 teaspoon ground coriander",
-"1/2 teaspoon ground cardamom",
-"1/2 teaspoon sweet paprika",
-"1/2 teaspoon garlic powder",
-"1/4 teaspoon dried oregano",
-"1/4 teaspoon ground cinnamon",
+"3 tbsp extra-virgin olive oil",
+"1 1/2 tsp ground cumin",
+"1 tsp freshly ground black pepper",
+"1 tsp ground turmeric",
+"1 tsp kosher salt",
+"3/4 tsp ground coriander",
+"1/2 tsp ground cardamom",
+"1/2 tsp sweet paprika",
+"1/2 tsp garlic powder",
+"1/4 tsp dried oregano",
+"1/4 tsp ground cinnamon",
 "1 pinch ground cloves",
 "1 pinch ground ginger",
 "five (4-ounce) skinless, boneless chicken thighs"
 ]
 },
-"notes": [],
+"notes": [
+"To make pickled onions, follow the WaPo recipe here, but use apple cider vinegar in place of white: https://www.washingtonpost.com/recipes/quick-pickled-onions/17214/",
+"",
+"Ingredients:",
+"1/2 cup water",
+"1/2 cup distilled white vinegar (how much apple cider vinegar?)",
+"2.5 tsp sugar",
+"1 tsp fine sea salt",
+"1 clove garlic, roughly chopped",
+"1/2 tsp brown mustard seeds",
+"1 medium red onion (about 5 ounces), halved and thinly sliced",
+"",
+"In a 2-cup glass jar with a lid, combine the water, vinegar, sugar and salt and stir until dissolved. Add the garlic and mustard seed, stir, then add the onion. Cover and gently tilt the jar back and forth to evenly distribute the ingredients. Refrigerate for 24 hours before using."
+],
 "rating": 0,
 "recipe": [
 "Marinate the chicken: In a medium bowl, whisk together the olive oil, cumin, pepper, turmeric, salt, coriander, cardamom, paprika, garlic powder, oregano, cinnamon, cloves and ginger. Add the chicken thighs and toss to coat, ensuring the spice rub gets into all the folds and crevices of the thighs. Cover and refrigerate for at least 30 minutes and up to 12 hours.",
@@ -5595,17 +5658,21 @@ var localDB = {
 "searchKeys": [
 "group",
 "ingredients.1 - In a medium bowl, whisk:",
+"ingredients.1-Dry",
 "ingredients.1-Garlic Roasted Broccoli",
 "ingredients.1-sparkling wine",
 "ingredients.1. BROWNIE LAYER",
 "ingredients.2 - In a large bowl, combine:",
 "ingredients.2-Roasted Sriracha & Soy Sauce Chickpeas",
+"ingredients.2-Wet",
 "ingredients.2-light-bodied white",
 "ingredients.2. CARAMEL LAYER",
 "ingredients.3 - (Combine both bowls) then add:",
+"ingredients.3-Beat-In",
 "ingredients.3-Curry Roasted Sweet Potatoes",
 "ingredients.3-full-bodied white",
 "ingredients.3. COOKIE DOUGH LAYER",
+"ingredients.4-Fold In",
 "ingredients.4-Quinoa",
 "ingredients.4-aromatic-sweet white",
 "ingredients.4. CHOCOLATE GLAZE",
@@ -5618,6 +5685,7 @@ var localDB = {
 "ingredients.9-dessert wine",
 "ingredients.BUFFALO CHICKPEAS",
 "ingredients.Base",
+"ingredients.Beers",
 "ingredients.Blender",
 "ingredients.Brown in Pan",
 "ingredients.CRUST",
@@ -5650,6 +5718,7 @@ var localDB = {
 "ingredients.For the Soup",
 "ingredients.Garnish",
 "ingredients.Garnish Options",
+"ingredients.General",
 "ingredients.Glaze",
 "ingredients.Indian Simmer Sauce",
 "ingredients.Ingredients",
@@ -5658,8 +5727,11 @@ var localDB = {
 "ingredients.Optional Garnish",
 "ingredients.Other Ingredients",
 "ingredients.PEACH BLUEBERRY FILLING",
+"ingredients.Paprika-Salmon",
 "ingredients.Peanut Butter Filling",
 "ingredients.Peanut Noodles",
+"ingredients.Recommend",
+"ingredients.Recommended",
 "ingredients.Ricotta Cheese Mix",
 "ingredients.SAUCE",
 "ingredients.STREUSEL TOPPING",
@@ -5668,6 +5740,7 @@ var localDB = {
 "ingredients.Seasoning Combinations",
 "ingredients.Seasoning Salt Substitute",
 "ingredients.Seasonings",
+"ingredients.Seltzer",
 "ingredients.Standalone",
 "ingredients.Streusel",
 "ingredients.TOASTS",
@@ -5746,6 +5819,7 @@ var localDB = {
 "recipe-toasted_marshmallow_brownie_crinkles:Toasted Marshmallow Brownie Crinkles:1"
 ],
 "drinks": [
+"recipe-beer:Beer:2",
 "recipe-coffee:Coffee:1",
 "recipe-wine:Wine:2"
 ],
@@ -5837,7 +5911,7 @@ var localDB = {
 "recipe-bacon:Bacon:2",
 "recipe-bruschetta:Bruschetta:0",
 "recipe-cheeses:Cheeses:3",
-"recipe-favorite_snacks:Favorite Snacks:0",
+"recipe-favorite_snacks:Favorite Snacks:1",
 "recipe-ikea_meatball_sauce:Ikea Meatball Sauce:2",
 "recipe-pretzels:Pretzels:0"
 ],
@@ -5946,6 +6020,7 @@ var localDB = {
 "Toasted Marshmallow Brownie Crinkles"
 ],
 "drinks": [
+"Beer",
 "Coffee",
 "Wine"
 ],
