@@ -46,9 +46,9 @@ nodeInputSearch.addEventListener( 'keyup', ( ) => {
   myLazyLoad.update()
 } )
 
-// Hijack CTRL/Meta + F keyboard shortcut to select search bar
+// Register CTRL + F keyboard shortcut to select search bar
 document.addEventListener( 'keydown', ( event ) => {
-  if ( ( event.metaKey || event.ctrlKey ) && event.code === 'KeyF' ) {
+  if ( event.ctrlKey && event.code === 'KeyF' ) {
     event.preventDefault()
     const input = document.getElementById( 'search-input' )
     input.focus()

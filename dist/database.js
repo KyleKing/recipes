@@ -610,7 +610,7 @@ var localDB = {
 "group": "dessert",
 "id": "recipe-chocolate_frosting_recipe",
 "imgPlaceholder": "dist/imgs/placeholder_dessert-chocolate_frosting_recipe.svg",
-"imgSrc": "dist/imgs/dessert-chocolate_frosting_recipe.jpeg",
+"imgSrc": "dist/imgs/dessert-chocolate_frosting_recipe.png",
 "ingredients": {
 "ingredients": [
 "Ingredients",
@@ -1269,6 +1269,25 @@ var localDB = {
 },
 {
 "group": "dessert",
+"id": "recipe-popcorn",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-popcorn.svg",
+"imgSrc": "dist/imgs/dessert-popcorn.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1/4 cup kernels"
+]
+},
+"notes": [],
+"rating": 2,
+"recipe": [
+"Place in popper and cook for 2:20 in our 900 watt microwave"
+],
+"source": "LINK TO AMAZON!!",
+"title": "Popcorn"
+},
+{
+"group": "dessert",
 "id": "recipe-skillet_peanut_butter_chocolate_chip_blondies",
 "imgPlaceholder": "dist/imgs/placeholder_dessert-skillet_peanut_butter_chocolate_chip_blondies.svg",
 "imgSrc": "dist/imgs/dessert-skillet_peanut_butter_chocolate_chip_blondies.jpeg",
@@ -1914,6 +1933,28 @@ var localDB = {
 ],
 "source": "",
 "title": "Pancetta Crisps On Baguette"
+},
+{
+"group": "meals",
+"id": "recipe-quesadillas",
+"imgPlaceholder": "dist/imgs/placeholder_meals-quesadillas.svg",
+"imgSrc": "dist/imgs/meals-quesadillas.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"tortillas",
+"shredded cheese",
+"beans, diced tomatoes, etc.",
+"hot sauce"
+]
+},
+"notes": [],
+"rating": 2,
+"recipe": [
+"Heat : Pan : Tortilla : Filling : Tortilla"
+],
+"source": "",
+"title": "Quesadillas"
 },
 {
 "group": "meals",
@@ -2933,6 +2974,28 @@ var localDB = {
 ],
 "source": "(Essential Instant Pot:69) https://smile.amazon.com/Essential-Instant-Pot-Cookbook-Foolproof/dp/0399580883/ref=sr_1_1_sspa?ie=UTF8&qid=1516461807&sr=8-1-spons&keywords=essential+instant+pot&psc=1",
 "title": "Chicken Cacciatore"
+},
+{
+"group": "poultry",
+"id": "recipe-chicken_instant_pot",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1.5 cup water",
+"boneless skinless chicken (thighs, breast, etc)",
+"instant pot"
+]
+},
+"notes": [],
+"rating": 0,
+"recipe": [
+"High pressure cook for 8 min",
+"Shred with fork"
+],
+"source": "https://www.thereciperebel.com/instant-pot-chicken-breast/",
+"title": "Chicken Instant Pot"
 },
 {
 "group": "poultry",
@@ -4544,6 +4607,24 @@ var localDB = {
 },
 {
 "group": "tools",
+"id": "recipe-bake_ware",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients"
+]
+},
+"notes": [
+" TODO: make notes on substituting bake ware"
+],
+"rating": 0,
+"recipe": [],
+"source": "",
+"title": "Bake Ware"
+},
+{
+"group": "tools",
 "id": "recipe-cast_iron_care",
 "imgPlaceholder": "dist/imgs/placeholder_tools-cast_iron_care.svg",
 "imgSrc": "dist/imgs/tools-cast_iron_care.jpg",
@@ -5864,6 +5945,7 @@ var localDB = {
 "recipe-peach_blueberry_crisp:Peach Blueberry Crisp:2",
 "recipe-peanut_butter_and_cocoa_smothie:Peanut Butter And Cocoa Smothie:1",
 "recipe-pineapple_upside_down_cake:Pineapple Upside Down Cake:2",
+"recipe-popcorn:Popcorn:2",
 "recipe-skillet_peanut_butter_chocolate_chip_blondies:Skillet Peanut Butter Chocolate Chip Blondies:1",
 "recipe-toasted_marshmallow_brownie_crinkles:Toasted Marshmallow Brownie Crinkles:1"
 ],
@@ -5890,6 +5972,7 @@ var localDB = {
 "recipe-lasagna:Lasagna:3",
 "recipe-oven-baked_sausage:Oven-Baked Sausage:2",
 "recipe-pancetta_crisps_on_baguette:Pancetta Crisps On Baguette:2",
+"recipe-quesadillas:Quesadillas:2",
 "recipe-quick_skillet_meals:Quick Skillet Meals:2",
 "recipe-tomato_mozzarella_caprese:Tomato Mozzarella Caprese:1",
 "recipe-tuna_melts:Tuna Melts:1"
@@ -5927,6 +6010,7 @@ var localDB = {
 "recipe-brick_chicken:Brick Chicken:3",
 "recipe-chicken:Chicken:1",
 "recipe-chicken_cacciatore:Chicken Cacciatore:2",
+"recipe-chicken_instant_pot:Chicken Instant Pot:0",
 "recipe-chicken_tacos:Chicken Tacos:3",
 "recipe-chicken_thighs:Chicken Thighs:1",
 "recipe-enchiladas:Enchiladas:3",
@@ -5990,6 +6074,7 @@ var localDB = {
 "recipe-vegetable_rolls:Vegetable Rolls:1"
 ],
 "tools": [
+"recipe-bake_ware:Bake Ware:0",
 "recipe-cast_iron_care:Cast Iron Care:0",
 "recipe-dishwasher:Dishwasher:0",
 "recipe-pizza_stone_care:Pizza Stone Care:0",
@@ -6066,6 +6151,7 @@ var localDB = {
 "Peach Blueberry Crisp",
 "Peanut Butter And Cocoa Smothie",
 "Pineapple Upside Down Cake",
+"Popcorn",
 "Skillet Peanut Butter Chocolate Chip Blondies",
 "Toasted Marshmallow Brownie Crinkles"
 ],
@@ -6092,6 +6178,7 @@ var localDB = {
 "Lasagna",
 "Oven-Baked Sausage",
 "Pancetta Crisps On Baguette",
+"Quesadillas",
 "Quick Skillet Meals",
 "Tomato Mozzarella Caprese",
 "Tuna Melts"
@@ -6129,6 +6216,7 @@ var localDB = {
 "Brick Chicken",
 "Chicken",
 "Chicken Cacciatore",
+"Chicken Instant Pot",
 "Chicken Tacos",
 "Chicken Thighs",
 "Enchiladas",
@@ -6192,6 +6280,7 @@ var localDB = {
 "Vegetable Rolls"
 ],
 "tools": [
+"Bake Ware",
 "Cast Iron Care",
 "Dishwasher",
 "Pizza Stone Care",
