@@ -261,6 +261,45 @@ var localDB = {
 },
 {
 "group": "breakfast",
+"id": "recipe-shakshuka",
+"imgPlaceholder": "dist/imgs/placeholder_breakfast-shakshuka.svg",
+"imgSrc": "dist/imgs/breakfast-shakshuka.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"3 tbsp extra-virgin olive oil",
+"1 large onion, halved and thinly sliced",
+"1 large red bell pepper, seeded and thinly sliced",
+"3 garlic cloves, thinly sliced",
+"1 tsp ground cumin",
+"1 tsp sweet paprika",
+"1/8 tsp ground cayenne, or to taste",
+"1 (28-oz) can whole plum tomatoes with their juices, coarsely chopped",
+"3/4 tsp kosher salt, plus more as needed",
+"1/4 tsp black pepper, plus more as needed",
+"5 oz feta, crumbled (about 1.25 cups)",
+"6 large eggs",
+"chopped cilantro, for serving",
+"hot sauce, for serving"
+]
+},
+"notes": [],
+"rating": 3,
+"recipe": [
+"Heat oven to 375F",
+"Heat oil in a large skillet over medium-low. Add onion and bell pepper. Cook gently until very soft, about 20 minutes",
+"Add garlic and cook until tender, 1 to 2 minutes; stir in cumin, paprika and cayenne, and cook 1 minute",
+"Pour in tomatoes and season with 3/4 tsp salt and 1/4 tsp pepper; simmer until tomatoes have thickened, about 10 minutes",
+"Taste and add more salt and pepper if needed",
+"Stir in crumbled feta",
+"Gently crack eggs into skillet over tomatoes. Season eggs with salt and pepper",
+"Transfer skillet to oven and bake until eggs are just set, 7 to 10 minutes. Sprinkle with cilantro and serve with hot sauce"
+],
+"source": "https://cooking.nytimes.com/recipes/1014721-shakshuka-with-feta",
+"title": "Shakshuka"
+},
+{
+"group": "breakfast",
 "id": "recipe-waffles",
 "imgPlaceholder": "dist/imgs/placeholder_breakfast-waffles.svg",
 "imgSrc": "dist/imgs/breakfast-waffles.jpg",
@@ -1029,6 +1068,7 @@ var localDB = {
 ]
 },
 "notes": [
+"If using Cocoa powder, for every 1 oz chocolate, use 3 tbsp cocoa powder + 1 tbsp butter",
 "Nano's (Alex's Family) recipe"
 ],
 "rating": 3,
@@ -3604,6 +3644,39 @@ var localDB = {
 },
 {
 "group": "seafood",
+"id": "recipe-oven_baked_fish_with_tomatoes",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1 (15 oz) can fire roasted diced tomatoes",
+"2 cloves garlic, minced",
+"2 tbsp olive oil",
+"1/2 tsp dried oregano",
+"1/4 tsp salt",
+"freshly cracked pepper",
+"1/2 tbsp lemon juice",
+"1 lb. white fish (four 4 oz fillets)",
+"chopped fresh parsley for garnish (optional)"
+]
+},
+"notes": [
+"Becky recommended this recipe and I think this is the right one"
+],
+"rating": 0,
+"recipe": [
+"Preheat the oven to 400F",
+"Drain the excess liquid from the diced tomatoes and combine in a bowl with the garlic, olive oil, oregano, salt, some freshly cracked pepper (about 10 cranks of a pepper mill), and lemon juice",
+"Spread about 1/3 of the tomato mixture in the bottom of a casserole dish big enough to fit all of your fillets without overlapping. Lay the fish fillets over the tomato mixture, then spoon the rest of the tomatoes over top, completely covering the fish",
+"Bake the fish for about 15 minutes, or until the internal temperature reaches 145F and the fish easily flakes",
+"Serve hot, with a sprinkle of chopped fresh parsley on top"
+],
+"source": "https://www.budgetbytes.com/easy-oven-baked-fish-with-tomatoes/",
+"title": "Oven Baked Fish With Tomatoes"
+},
+{
+"group": "seafood",
 "id": "recipe-shrimp_creole",
 "imgPlaceholder": "dist/imgs/placeholder_seafood-shrimp_creole.svg",
 "imgSrc": "dist/imgs/seafood-shrimp_creole.jpeg",
@@ -4616,7 +4689,10 @@ var localDB = {
 ]
 },
 "notes": [
-" TODO: make notes on substituting bake ware"
+" TODO: make notes on substituting bake ware",
+"https://www.tasteofhome.com/article/baking-pan-conversions/",
+"https://www.thekitchn.com/glass-vs-metal-bakeware-is-there-a-difference-food-science-217961",
+"https://www.epicurious.com/expert-advice/how-to-swap-baking-pans-tips-article"
 ],
 "rating": 0,
 "recipe": [],
@@ -5198,49 +5274,6 @@ var localDB = {
 ],
 "source": "http://www.budgetbytes.com/2013/12/curried-chickpeas-spinach/",
 "title": "Curried Chickpeas"
-},
-{
-"group": "veggie",
-"id": "recipe-extra_stuffed_veggie_burritos",
-"imgPlaceholder": "",
-"imgSrc": "",
-"ingredients": {
-"burritos": [
-"Burritos",
-"2 tbsp extra-virgin olive oil",
-"1/2 red bell pepper, seeded and thinly sliced",
-"1/2 green bell pepper, seeded and thinly sliced",
-"2 scallions, trimmed and thinly sliced crosswise",
-"4 oz sliced cremini (baby bella) mushrooms",
-"one 15-oz no-salt-added can pinto beans, including the liquid",
-"1 tbsp adobo from a can of chipotle chiles, or more as needed",
-"1 tbsp ground cumin",
-"1 tsp granulated garlic (a.k.a. garlic powder)",
-"1/2 tsp kosher salt",
-"two 9- or 10-inch flour tortillas",
-"1/4 cup sour cream",
-"1 cup baby spinach or other tender salad greens"
-],
-"quinoa": [
-"Quinoa",
-"1/3 cup dried quinoa, rinsed as needed",
-"1/4 tsp kosher salt",
-"2/3 cup water",
-"1 tbsp fresh lime juice"
-]
-},
-"notes": [
-"For extra protein, add a few strips of sliced steak to the burrito filling"
-],
-"rating": 0,
-"recipe": [
-"For the quinoa: Combine the quinoa, salt and water in a small saucepan over medium-high heat. Bring to a boil, then reduce the heat so that the water bubbles gently. Cover and cook for 13 to 15 minutes until all the water is absorbed and the quinoa is fluffy. Turn off the heat and let stand covered for 5 minutes. Uncover and fluff with a fork, then stir in the lime juice",
-"Meanwhile, start the burritos: Heat the oil until shimmering in a large skillet over medium-high heat. Add the red and green bell peppers, scallions and mushrooms. Cook for 3 to 5 minutes, until tender and slightly blackened, stirring occasionally. Add the pinto beans and their liquid, the adobo, cumin, garlic powder and salt. Cook for 2 minutes, stirring occasionally, until the liquid thickens. Taste, and if you\u2019d like a little more heat, add a touch more adobo",
-"Now that the filling is done, warm the tortillas (don\u2019t skip this step, because you\u2019ll need the tortilla to be pliable enough to roll). Place a tortilla on the grate above a stove-top burner (or in a dry skillet), then cook on medium heat for a few seconds per side, flipping with tongs, until warmed through and pliable. If you are using a gas burner, the tortilla edges will char a bit. Repeat for the second tortilla",
-"Place the tortillas on individual plates. Spread half of the limey quinoa on each one, at the center. Top each with about half of the bean mixture (you may have a little more than you need, depending on the size of your tortillas), and half the sour cream and spinach or other greens. Fold the tortillas in half over the filling, then tuck them around and underneath the filling, forming a tight roll. Fold in each side of the burritos, then roll them up. Cut in half and serve"
-],
-"source": "https://www.washingtonpost.com/recipes/extra-stuffed-veggie-burritos/17037/",
-"title": "Extra Stuffed Veggie Burritos"
 },
 {
 "group": "veggie",
@@ -5882,7 +5915,6 @@ var localDB = {
 "ingredients.Tzatziki Sauce",
 "ingredients.With",
 "ingredients.Yogurt's",
-"ingredients.burritos",
 "ingredients.cauliflower",
 "ingredients.combinations",
 "ingredients.dressing",
@@ -5914,6 +5946,7 @@ var localDB = {
 "recipe-oatmeal:Oatmeal:1",
 "recipe-omelette:Omelette:1",
 "recipe-pancakes_new_york_times:Pancakes New York Times:2",
+"recipe-shakshuka:Shakshuka:3",
 "recipe-waffles:Waffles:1"
 ],
 "dessert": [
@@ -6035,6 +6068,7 @@ var localDB = {
 "seafood": [
 "recipe-baked-fish:Baked-Fish:1",
 "recipe-crab_cakes:Crab Cakes:2",
+"recipe-oven_baked_fish_with_tomatoes:Oven Baked Fish With Tomatoes:0",
 "recipe-shrimp_creole:Shrimp Creole:3",
 "recipe-shrimp_scampi:Shrimp Scampi:3",
 "recipe-shrimp_tacos:Shrimp Tacos:0"
@@ -6094,7 +6128,6 @@ var localDB = {
 "recipe-chili_lime_black_bean_tacos:Chili Lime Black Bean Tacos:0",
 "recipe-crispy_baked_sweet_potato_fries:Crispy Baked Sweet Potato Fries:0",
 "recipe-curried_chickpeas:Curried Chickpeas:2",
-"recipe-extra_stuffed_veggie_burritos:Extra Stuffed Veggie Burritos:0",
 "recipe-falafel_pitas_with_cilantro_cashew_sauce:Falafel Pitas With Cilantro Cashew Sauce:0",
 "recipe-ginger_orange_broccoli_and_noodles:Ginger Orange Broccoli And Noodles:0",
 "recipe-green_chile_mac:Green Chile Mac:0",
@@ -6120,6 +6153,7 @@ var localDB = {
 "Oatmeal",
 "Omelette",
 "Pancakes New York Times",
+"Shakshuka",
 "Waffles"
 ],
 "dessert": [
@@ -6241,6 +6275,7 @@ var localDB = {
 "seafood": [
 "Baked-Fish",
 "Crab Cakes",
+"Oven Baked Fish With Tomatoes",
 "Shrimp Creole",
 "Shrimp Scampi",
 "Shrimp Tacos"
@@ -6300,7 +6335,6 @@ var localDB = {
 "Chili Lime Black Bean Tacos",
 "Crispy Baked Sweet Potato Fries",
 "Curried Chickpeas",
-"Extra Stuffed Veggie Burritos",
 "Falafel Pitas With Cilantro Cashew Sauce",
 "Ginger Orange Broccoli And Noodles",
 "Green Chile Mac",
