@@ -860,6 +860,52 @@ var localDB = {
 },
 {
 "group": "dessert",
+"id": "recipe-easter_coconut_cake",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-easter_coconut_cake.svg",
+"imgSrc": "dist/imgs/dessert-easter_coconut_cake.jpeg",
+"ingredients": {
+"Cake": [
+"Cake",
+"3 large eggs",
+"8 oz sour cream (1 container)",
+"1/3 cup water",
+"8.5-ounce cream of coconut (1 can)",
+"1/2 tsp vanilla extract",
+"18.25 oz white cake mix (1 package)"
+],
+"Coconut-Cream Cheese Frosting": [
+"Coconut-Cream Cheese Frosting",
+"8 oz cream cheese, softened (1 container)",
+"1/2 cup butter, softened",
+"3 tablespoons milk",
+"1 teaspoon vanilla extract",
+"16 oz powdered sugar, sifted (1 package)",
+"7 oz sweetened flaked coconut (1 package)"
+]
+},
+"notes": [
+"Note: If desired, cake can be baked in 1 greased and floured 15- x 10-inch jellyroll pan for 30-32 min or until a wooden pick comes out clean",
+"Frosting Link: https://www.myrecipes.com/recipe/coconut-cream-cheese-frosting-4"
+],
+"rating": 3,
+"recipe": [
+"Step 1",
+"Beat eggs at high speed with an electric mixer 2 min",
+"Add sour cream, 1/3 cup water, and next 2 ingredients, beating well after each addition",
+"Add cake mix, beating at low speed just until blended then beat at high speed 2 min. Pour batter into a greased and floured 13- x 9-inch baking pan",
+"Step 2",
+"Bake at 325F for 40-45 min or until a wooden pick comes out clean. Cool cake in pan on wire rack. Cover pan with plastic wrap, and freeze cake 30 min",
+"Step 3 - Frosting",
+"While cake is in the freezer, make the cream cheese frosting",
+"Beat cream cheese and butter at medium speed with an electric mixer until creamy; add milk and vanilla, beating well",
+"Gradually add sugar, beating until smooth. Stir in coconut",
+"Remove the cake from the freezer, and spread the Coconut-Cream Cheese Frosting on top of chilled cake. Cover and store in refrigerator"
+],
+"source": "https://www.myrecipes.com/recipe/coconut-sheet-cake",
+"title": "Easter Coconut Cake"
+},
+{
+"group": "dessert",
 "id": "recipe-flourless_chocolate_cake",
 "imgPlaceholder": "",
 "imgSrc": "",
@@ -2701,7 +2747,8 @@ var localDB = {
 ]
 },
 "notes": [
-"If using a baking sheet, cook for 22 minutes at 425F"
+"If using a baking sheet, cook for 22 minutes at 425F",
+"See video for how to stretch out the dough: https://www.youtube.com/watch?time_continue=33&v=9f9-xTcKzZo"
 ],
 "rating": 2,
 "recipe": [
@@ -2772,11 +2819,11 @@ var localDB = {
 ],
 "rating": 2,
 "recipe": [
+"If not already in cutlets, cut in half until thin and pound. Put the chicken in a gallon bag and use an empty wine bottle or rolling pin to flatten out the chicken so that it will cook quickly and evenly",
 "With a fork, beat 2 tbsp water, 2 eggs, 1/4 tsp salt, and 1/4 pepper in a regular bowl",
 "Pull out two plates. on the left, spread a layer of flour and on the right spread a layer of bread crumbs",
 "To the bread crumbs, add 1/4 tsp salt, 1/4 tsp pepper, crush dried oregano (~1 tsp?), and crush dried thyme leaves. Mix",
 "To the flour, add a little salt and pepper. Mix",
-"If chicken breast, cut in half for cutlets (want these to be as flat as possible - cooks quickly)",
 "Heat up some oil on a skillet under medium heat",
 "Working with your left hand coat the chicken in the flour. Dip into egg, letting excess drip off. Then coat with bread crumbs",
 "Place on the hot skillet and cook until golden brown on both side and cooked thoroughly"
@@ -3511,13 +3558,12 @@ var localDB = {
 "1/2 tbsp fresh thyme",
 "1/4 bunch parsley, chopped",
 "1 lbs raw shrimp, peeled and deveined",
-"white rice and/or side baguette",
-"pinch of saffron"
+"pinch of saffron and white rice or side baguette"
 ]
 },
 "notes": [
 "Alex's family recipe",
-"This recipe has been cut in half, which serves 3-4 people"
+"This recipe has been cut in half to serve 3-4 people"
 ],
 "rating": 3,
 "recipe": [
@@ -3526,7 +3572,8 @@ var localDB = {
 "Add sauted ingredients, sliced tomatoes, and spices to the pot with tomato sauce from the oven",
 "Bake covered for 30 min; uncover and bake for 30 additional minutes",
 "(*Can stop here to store overnight in the fridge)",
-"Bring to a boil. Add parsley and shrimp then cook for 5 more minutes. Serve over white rice with a pinch of saffron"
+"(Optional) Prep white rice. Add the pinch of saffron before starting the rice cooker and stir. Once done, the rice should be bright yellow",
+"Bring to a boil. Add parsley and shrimp then cook for 5 more minutes. Serve over warm saffron rice or with a baguette"
 ],
 "source": "",
 "title": "Shrimp Creole"
@@ -5691,6 +5738,7 @@ var localDB = {
 "ingredients.CRUST",
 "ingredients.Cake",
 "ingredients.Chicken",
+"ingredients.Coconut-Cream Cheese Frosting",
 "ingredients.Combine",
 "ingredients.Combine-Cookie Spread",
 "ingredients.Combine-Cookie Topping",
@@ -5804,6 +5852,7 @@ var localDB = {
 "recipe-collens_peanut_butter_bars:Collens Peanut Butter Bars:0",
 "recipe-cookie_bars:Cookie Bars:2",
 "recipe-cookie_dough_billionaire_bars:Cookie Dough Billionaire Bars:0",
+"recipe-easter_coconut_cake:Easter Coconut Cake:3",
 "recipe-flourless_chocolate_cake:Flourless Chocolate Cake:2",
 "recipe-french_chocolate_tart:French Chocolate Tart:2",
 "recipe-gingerbread_cookies:Gingerbread Cookies:1",
@@ -6005,6 +6054,7 @@ var localDB = {
 "Collens Peanut Butter Bars",
 "Cookie Bars",
 "Cookie Dough Billionaire Bars",
+"Easter Coconut Cake",
 "Flourless Chocolate Cake",
 "French Chocolate Tart",
 "Gingerbread Cookies",
