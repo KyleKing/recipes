@@ -1,0 +1,26 @@
+## TODO:
+
+- Recipes
+    + Margaritas! (Strawberry?): https://duckduckgo.com/?q=strawberry+margarita+cointreau&t=fpas&ia=recipes
+        - https://www.washingtonpost.com/recipes/strawberry-jalapeno-non-rita-or-margarita/17299/?no_nav=true&p9w22b2p=b2p22p9w00098
+        - https://giadzy.com/recipes/watermelon-strawberry-and-tequila-agua-fresca/
+    + Joy of Cooking - Burritos, Mixed Drinks, etc.
+    + Salads: https://www.thekitchn.com/tips-for-making-restaurant-quality-salad-232510?utm_source=theskimm&utm_medium=social&utm_campaign=swap
+- Split categories into separate pages where initial page has no content
+    + Move each section to own page (i.e. sitename.com/desserts) and main page will only be the TOC?
+- Add flex-grid?
+    + Wrap TOC
+    + Wrap Image, Ingredients, Recipe?
+    + Guide: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
+- Mess with CSS
+    + Try out different font face
+    + Replace Skeleton?
+        * Fix conflict of Skeleton with check boxes
+- Add `make` mode with a single recipe in horizontal orientation
+    + Can rotation of screen be locked with HTML?
+        * https://stackoverflow.com/questions/43634583/prevent-landscape-orientation-mobile-website
+        * https://www.google.com/search?rlz=1CDGOYI_enUS633US633&hl=en-US&ei=Jo1sW464M6Ht5gKBtKmwDA&q=ios+safari+prevent+web+mobile+rotation&oq=ios+safari+prevent+web+mobile+rotation
+    + Track make mode using URL
+    + Keep state of ingredient check in URL
+        * Possibly also cross out steps as completed?
+    + Add 'alt-ratio' toggle to update ingredient amounts

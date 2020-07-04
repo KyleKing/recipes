@@ -684,6 +684,33 @@ var localDB = {
 },
 {
 "group": "dessert",
+"id": "recipe-chocolate_milkshake",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"Blend": [
+"Blend",
+"3/4 cup whole milk",
+"1 tbsp chocolate syrup",
+"4 large scoops chocolate ice cream",
+"1/4 cup peanut butter"
+],
+"Toppings": [
+"Toppings",
+"whipped cream",
+"crushed nuts"
+]
+},
+"notes": [],
+"rating": 0,
+"recipe": [
+"Just blend and top"
+],
+"source": "",
+"title": "Chocolate Milkshake"
+},
+{
+"group": "dessert",
 "id": "recipe-chocolate_peanut_butter_bundt_cake",
 "imgPlaceholder": "dist/imgs/placeholder_dessert-chocolate_peanut_butter_bundt_cake.svg",
 "imgSrc": "dist/imgs/dessert-chocolate_peanut_butter_bundt_cake.png",
@@ -1128,12 +1155,11 @@ var localDB = {
 "ingredients": {
 "ingredients": [
 "Ingredients",
-"1 cup rolled oats",
-"1/2 cup chocolate chips",
-"1/2 cup ground flaxseed meal",
-"1/2 cup peanut butter",
-"1/3 cup maple syrup (or honey)",
-"1 tsp vanilla extract"
+"1 cup rolled oats (quick or old fashioned)",
+"1/2 cup chocolate chips (mini or normal)",
+"1/4 cup peanut butter",
+"1/4 cup maple syrup (or honey)",
+"2 tbsp cocoa powder (optional)"
 ]
 },
 "notes": [
@@ -1143,7 +1169,7 @@ var localDB = {
 "recipe": [
 "Combine all ingredients into one bowl, form into balls, and freeze"
 ],
-"source": "(Source: the back of the Aldi milled flaxseed bag)",
+"source": "https://www.blessthismessplease.com/8-no-bake-oatmeal-energy-balls/",
 "title": "Oatmeal Balls"
 },
 {
@@ -1323,7 +1349,7 @@ var localDB = {
 "recipe": [
 "Place in popper and cook for 2:20 in our 900 watt microwave"
 ],
-"source": "LINK TO AMAZON!!",
+"source": "https://www.amazon.com/Colonel-Popper-Microwave-Collapsible-Dishwasher/dp/B01NBR3DBP",
 "title": "Popcorn"
 },
 {
@@ -1415,7 +1441,8 @@ var localDB = {
 "Beers",
 "sour monkey | victory brewing company",
 "voodoo ranger ipa | new belgium",
-"hopslam ale | bell's brewery"
+"hopslam ale | bell's brewery",
+"alhambra reserva roja (doppelbock beer inspired by traditional bock style beers and red ales) | cervezas alhambra"
 ],
 "Recommend": [
 "Recommend",
@@ -4689,14 +4716,13 @@ var localDB = {
 ]
 },
 "notes": [
-" TODO: make notes on substituting bake ware",
-"https://www.tasteofhome.com/article/baking-pan-conversions/",
-"https://www.thekitchn.com/glass-vs-metal-bakeware-is-there-a-difference-food-science-217961",
-"https://www.epicurious.com/expert-advice/how-to-swap-baking-pans-tips-article"
+"Glass Pan Substitution: lower the oven temperature by 25F and bake up to 10 minutes longer. Do not use for recipes that call for broiling",
+"Cookies: use a metal pan with air separation to preventing browning the cookie bottom",
+"See 'Source' link for pan size substitution"
 ],
 "rating": 0,
 "recipe": [],
-"source": "",
+"source": "https://www.tasteofhome.com/article/baking-pan-conversions/",
 "title": "Bake Ware"
 },
 {
@@ -4802,6 +4828,24 @@ var localDB = {
 ],
 "source": "https://www.youtube.com/watch?v=KLGSLCaksdY",
 "title": "Porcelain Pot Care"
+},
+{
+"group": "tools",
+"id": "recipe-substitutions",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients"
+]
+},
+"notes": [
+"1:1, Canola Oil: Vegetable Oil"
+],
+"rating": 0,
+"recipe": [],
+"source": "",
+"title": "Substitutions"
 },
 {
 "group": "veggie",
@@ -5847,6 +5891,7 @@ var localDB = {
 "ingredients.BUFFALO CHICKPEAS",
 "ingredients.Base",
 "ingredients.Beers",
+"ingredients.Blend",
 "ingredients.Blender",
 "ingredients.Brown in Pan",
 "ingredients.CRUST",
@@ -5960,6 +6005,7 @@ var localDB = {
 "recipe-chocolate_chip_cookies:Chocolate Chip Cookies:3",
 "recipe-chocolate_chip_oatmeal_cookies:Chocolate Chip Oatmeal Cookies:3",
 "recipe-chocolate_frosting_recipe:Chocolate Frosting Recipe:3",
+"recipe-chocolate_milkshake:Chocolate Milkshake:0",
 "recipe-chocolate_peanut_butter_bundt_cake:Chocolate Peanut Butter Bundt Cake:3",
 "recipe-chocolate_peanut_butter_glaze:Chocolate Peanut Butter Glaze:3",
 "recipe-chocolatines:Chocolatines:1",
@@ -6112,7 +6158,8 @@ var localDB = {
 "recipe-cast_iron_care:Cast Iron Care:0",
 "recipe-dishwasher:Dishwasher:0",
 "recipe-pizza_stone_care:Pizza Stone Care:0",
-"recipe-porcelain_pot_care:Porcelain Pot Care:0"
+"recipe-porcelain_pot_care:Porcelain Pot Care:0",
+"recipe-substitutions:Substitutions:0"
 ],
 "veggie": [
 "recipe-baked_broccoli:Baked Broccoli:2",
@@ -6167,6 +6214,7 @@ var localDB = {
 "Chocolate Chip Cookies",
 "Chocolate Chip Oatmeal Cookies",
 "Chocolate Frosting Recipe",
+"Chocolate Milkshake",
 "Chocolate Peanut Butter Bundt Cake",
 "Chocolate Peanut Butter Glaze",
 "Chocolatines",
@@ -6319,7 +6367,8 @@ var localDB = {
 "Cast Iron Care",
 "Dishwasher",
 "Pizza Stone Care",
-"Porcelain Pot Care"
+"Porcelain Pot Care",
+"Substitutions"
 ],
 "veggie": [
 "Baked Broccoli",
