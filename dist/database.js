@@ -1461,6 +1461,40 @@ var localDB = {
 },
 {
 "group": "drinks",
+"id": "recipe-between_the_sheets",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"Classic": [
+"Classic",
+"3/4 oz cognac",
+"3/4 oz rum",
+"3/4 oz cointreau",
+"3/4 oz fresh lemon juice"
+],
+"Ideal": [
+"Ideal",
+"1 oz paul beau vs cognac",
+"1 oz appleton estate reserve blend rum",
+"3/4 oz pierre ferrand dry curacao",
+"3/4 oz fresh lemon juice",
+"1 tsp demerara gum syrup (note: instructions in cocktail codex require an immersion circulator - need to find an alternative or try with cointreau as mentioned in the below note)"
+]
+},
+"notes": [
+"Source: Cocktail Codex - SideCar Variant",
+"Look for balance with a flavorful Rum and weaker Cognac",
+"For the Ideal, if using Cointreau in place of the Pierre Ferrand, may be able to get by without the extra sweetener"
+],
+"rating": 0,
+"recipe": [
+"Shake all ingredients with ice, then strain into a chilled coupe"
+],
+"source": "",
+"title": "Between The Sheets"
+},
+{
+"group": "drinks",
 "id": "recipe-coffee",
 "imgPlaceholder": "dist/imgs/placeholder_drinks-coffee.svg",
 "imgSrc": "dist/imgs/drinks-coffee.jpeg",
@@ -1478,6 +1512,103 @@ var localDB = {
 "recipe": [],
 "source": "",
 "title": "Coffee"
+},
+{
+"group": "drinks",
+"id": "recipe-margarita",
+"imgPlaceholder": "dist/imgs/placeholder_drinks-margarita.svg",
+"imgSrc": "dist/imgs/drinks-margarita.png",
+"ingredients": {
+"Classic": [
+"Classic",
+"lime wedge",
+"kosher salt, for rim",
+"2 oz siembra azul (blanco tequila)",
+"3/4 oz cointreau",
+"3/4 oz fresh lime juice",
+"1/4 oz simple syrup (see recipe in drinks section)"
+],
+"Dry": [
+"Dry",
+"lime wedge",
+"kosher salt, for rim",
+"2 oz siembra azul (blanco tequila)",
+"3/4 oz cointreau",
+"3/4 oz fresh lime juice"
+],
+"Sweet": [
+"Sweet",
+"lime wedge",
+"kosher salt, for rim",
+"2 oz siembra azul (blanco tequila)",
+"3/4 oz cointreau",
+"3/4 oz fresh lime juice",
+"1/2 oz simple syrup (see recipe in drinks section)"
+]
+},
+"notes": [
+"Source: Cocktail Codex - SideCar Variant",
+"Variations just modify the amount of simple syrup added",
+"Used silver patron, but didn't have much flavor"
+],
+"rating": 0,
+"recipe": [
+"Run the lime wedge along the upper 1/2 in of an Old Fashioned glass halfway around the circumference",
+"Roll wet portion in salt and put 1 large ice cube in the glass",
+"Shake the ingredients with ice, then strain into the prepared glass. No garnish"
+],
+"source": "",
+"title": "Margarita"
+},
+{
+"group": "drinks",
+"id": "recipe-simple_syrup",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"125 g white sugar",
+"125 g filtered water"
+]
+},
+"notes": [
+"Source: Cocktail Codex"
+],
+"rating": 0,
+"recipe": [
+"Whisk until dissolved. Transfer to a storage container and refrigerate up to 2 weeks"
+],
+"source": "",
+"title": "Simple Syrup"
+},
+{
+"group": "drinks",
+"id": "recipe-white_lady",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"Classic": [
+"Classic",
+"2 oz plymouth gin",
+"1/4 oz cointreau",
+"3/4 oz fresh lemon juice",
+"1/4 oz simple syrup (see recipe in drinks section)",
+"1 egg white",
+"1 lemon twist, garnish"
+]
+},
+"notes": [
+"Source: Cocktail Codex - SideCar Variant"
+],
+"rating": 0,
+"recipe": [
+"Dry shake all ingredients, then shake again with ice.",
+"Double strain into a chilled coupe",
+"Express the lemon twist over the drink, then set on the edge of the glass"
+],
+"source": "",
+"title": "White Lady"
 },
 {
 "group": "drinks",
@@ -4756,6 +4887,29 @@ var localDB = {
 },
 {
 "group": "tools",
+"id": "recipe-cocktail_shaker",
+"imgPlaceholder": "dist/imgs/placeholder_tools-cocktail_shaker.svg",
+"imgSrc": "dist/imgs/tools-cocktail_shaker.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients"
+]
+},
+"notes": [
+"Add ingredients and ice to the smaller cup",
+"Place the larger cup over top and 'whack' with the heel of your hand",
+"Shake for 30 seconds holding both cups with the small cup pointing back (i.e. not at your guests!)",
+"Tilt the smaller shaker to one side and 'whack' the point where the smaller shaker is tilted away from",
+"Then strain and server",
+"Clean with standard dish soap and hot water"
+],
+"rating": 0,
+"recipe": [],
+"source": "",
+"title": "Cocktail Shaker"
+},
+{
+"group": "tools",
 "id": "recipe-dishwasher",
 "imgPlaceholder": "",
 "imgSrc": "",
@@ -5897,6 +6051,7 @@ var localDB = {
 "ingredients.CRUST",
 "ingredients.Cake",
 "ingredients.Chicken",
+"ingredients.Classic",
 "ingredients.Coconut-Cream Cheese Frosting",
 "ingredients.Combine",
 "ingredients.Combine-Cookie Spread",
@@ -5905,6 +6060,7 @@ var localDB = {
 "ingredients.Curry",
 "ingredients.DIY Garam Masala",
 "ingredients.DRESSING + SALAD",
+"ingredients.Dry",
 "ingredients.EGGS",
 "ingredients.Eggs",
 "ingredients.FOR ASSEMBLY",
@@ -5927,6 +6083,7 @@ var localDB = {
 "ingredients.Garnish Options",
 "ingredients.General",
 "ingredients.Glaze",
+"ingredients.Ideal",
 "ingredients.Indian Simmer Sauce",
 "ingredients.Ingredients",
 "ingredients.Main",
@@ -5950,6 +6107,7 @@ var localDB = {
 "ingredients.Seltzer",
 "ingredients.Standalone",
 "ingredients.Streusel",
+"ingredients.Sweet",
 "ingredients.TOASTS",
 "ingredients.TOPPING",
 "ingredients.Taco Seasoning (or use store bought)",
@@ -6030,7 +6188,11 @@ var localDB = {
 ],
 "drinks": [
 "recipe-beer:Beer:2",
+"recipe-between_the_sheets:Between The Sheets:0",
 "recipe-coffee:Coffee:1",
+"recipe-margarita:Margarita:0",
+"recipe-simple_syrup:Simple Syrup:0",
+"recipe-white_lady:White Lady:0",
 "recipe-wine:Wine:2"
 ],
 "ice_cream": [
@@ -6156,6 +6318,7 @@ var localDB = {
 "tools": [
 "recipe-bake_ware:Bake Ware:0",
 "recipe-cast_iron_care:Cast Iron Care:0",
+"recipe-cocktail_shaker:Cocktail Shaker:0",
 "recipe-dishwasher:Dishwasher:0",
 "recipe-pizza_stone_care:Pizza Stone Care:0",
 "recipe-porcelain_pot_care:Porcelain Pot Care:0",
@@ -6239,7 +6402,11 @@ var localDB = {
 ],
 "drinks": [
 "Beer",
+"Between The Sheets",
 "Coffee",
+"Margarita",
+"Simple Syrup",
+"White Lady",
 "Wine"
 ],
 "ice_cream": [
@@ -6365,6 +6532,7 @@ var localDB = {
 "tools": [
 "Bake Ware",
 "Cast Iron Care",
+"Cocktail Shaker",
 "Dishwasher",
 "Pizza Stone Care",
 "Porcelain Pot Care",
