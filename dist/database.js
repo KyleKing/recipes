@@ -1495,6 +1495,70 @@ var localDB = {
 },
 {
 "group": "drinks",
+"id": "recipe-bourbon_peach_shakes",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"3/4 cup crushed ice, plus ice cubes for serving",
+"3 oz bourbon",
+"1 1/2 cups peach ice cream",
+"8 oz chopped, peeled ripe peaches (from 2 to 3 peaches; see headnote)",
+"4 dashes peach bitters",
+"pinch salt",
+"mint sprigs, for garnish (optional)"
+]
+},
+"notes": [
+"Bourbon and peaches have a natural harmony; when you swirl them up with ice cream, they morph into a perfect treat for a hot summer afternoon",
+"You'll need fragrant, ripe fruit for this recipe \u2014 better to substitute with great nectarines rather than opt for mediocre peaches. We used Breyer\u2019s peach ice cream, but if you can\u2019t find it, you can use a good vanilla ice cream instead and augment the peach flavor by adding a few more ounces of peaches or a splash of peach liqueur such as Mathilde Peche"
+],
+"rating": 0,
+"recipe": [
+"Chill two rocks glasses.",
+"Combine the crushed ice, bourbon, ice cream, fruit, bitters and salt in a blender. Blend on high speed, until smooth and creamy.",
+"Add several ice cubes to each rocks glass, then pour the peach shake over each portion of ice.",
+"Garnish each drink with a sprig of mint, if desired.",
+"NOTE: To peel peaches, score their bottoms with a shallow 'X' and drop into boiling water for a few minutes. Drain; when cool enough to handle, discard the skins, which should slip off easily"
+],
+"source": "https://www.washingtonpost.com/recipes/bourbon-peach-shake/16576/",
+"title": "Bourbon Peach Shakes"
+},
+{
+"group": "drinks",
+"id": "recipe-chilly_chile_paloma",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"2 oz (1/4 cup) fresh ruby red grapefruit juice",
+"1/2 oz fresh lime juice",
+"1 1/2 oz blanco tequila, such as 1800 silver",
+"1/2 oz royal rose three chile simple syrup (see headnote)",
+"pinch kosher salt",
+"1 cup crushed or chipped ice",
+"wedge of lime, for garnish"
+]
+},
+"notes": [
+"This frozen version of the Paloma brings in grapefruit juice instead of the traditional grapefruit soda and substitutes a mild chili-infused simple syrup for agave nectar.",
+"You\u2019ll want to freeze the grapefruit juice cubes the night before: 1 oz of juice fits in a single well of a standard ice cube tray. We found Royal Rose\u2019s Three Chile Simple Syrup in the District, at Ace Beverage and Salt & Sundry in Union Market",
+"Make Ahead: The grapefruit juice needs to be frozen for a few hours or up to a day in advance"
+],
+"rating": 0,
+"recipe": [
+"Pour the juice into at least 2 wells of a standard ice cube tray. Freeze until solid",
+"To make sure the right amount of ice is used, combine the following ingredients in a 2-cup-capacity liquid measuring cup: lime juice, tequila, chile simple syrup, salt, grapefruit ice cubes and enough crushed or chipped ice to total a scant 1 1/2 cups",
+"Transfer to a blender. Puree on the highest speed for 20 seconds, then stop to stir with a cocktail spoon. Blend again to eliminate any remaining chunks of ice",
+"Serve in a chilled rocks or coupe glass, garnished with the lime wedge"
+],
+"source": "https://www.washingtonpost.com/recipes/chilly-chile-paloma/13478/",
+"title": "Chilly Chile Paloma"
+},
+{
+"group": "drinks",
 "id": "recipe-coffee",
 "imgPlaceholder": "dist/imgs/placeholder_drinks-coffee.svg",
 "imgSrc": "dist/imgs/drinks-coffee.jpeg",
@@ -1512,6 +1576,65 @@ var localDB = {
 "recipe": [],
 "source": "",
 "title": "Coffee"
+},
+{
+"group": "drinks",
+"id": "recipe-frogroni",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"3 strawberries",
+"1 cup crushed ice",
+"3/4 oz campari",
+"2 oz gin",
+"3/4 oz sweet vermouth",
+"1/4 cup fresh lemon juice (from 1 or 2 lemons)",
+"1 1/4 oz simple syrup (see note)",
+"twist of orange peel, for garnish"
+]
+},
+"notes": [
+"Bartender Julie Reiner\u2019s summery deep-freeze adjusts the classic Negroni recipe and adds strawberries \u2014 which go beautifully with Campari \u2014 and the brightness of lemon."
+],
+"rating": 0,
+"recipe": [
+"Chill a tall glass",
+"Wash and hull two of the strawberries. Place in a blender, along with the ice, Campari, gin, vermouth, lemon juice and simple syrup; puree until smooth. Pour into the chilled glass; garnish with the remaining strawberry and the twist of orange peel",
+"NOTE: To make simple syrup, combine 1 cup of sugar and 1 cup of water in a small saucepan over medium heat, stirring until the sugar dissolves. Bring to a low boil, then cool. Transfer to a heatproof container. Once it has cooled to room temperature, cover tightly and refrigerate until chilled through; store indefinitely"
+],
+"source": "https://www.washingtonpost.com/recipes/frogroni/15978/",
+"title": "Frogroni"
+},
+{
+"group": "drinks",
+"id": "recipe-frozen_irish_coffee",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1/2 cup vanilla ice cream",
+"2 cups ice cubes",
+"4 oz chilled coffee",
+"2 oz brandy",
+"2 oz coffee liqueur, such as tia maria",
+"1/4 teaspoon coffee grounds, for garnish (optional)"
+]
+},
+"notes": [
+"The classic Irish coffee is pumped up with whiskey and served hot to warm up cold Gaelic afternoons",
+"At the Erin Rose bar in New Orleans\u2019s French Quarter, the drink has been adapted for the climate. While the recipe is a house secret, the bar provided a few pointers \u2014 one of which is that their version is made with brandy instead of Irish whiskey. Make and chill the coffee ahead of time",
+"You\u2019ll need a blender; you may wish to serve the drinks with straws"
+],
+"rating": 0,
+"recipe": [
+"Combine the ice cream, ice cubes, coffee, brandy and coffee liqueur in a blender. Puree on HIGH until the ice is completely broken down and the mixture is the consistency of a milkshake",
+"Divide between two highball glasses, then sprinkle a pinch of coffee grounds, if using, over the top of each. Reserve any leftovers for topping off"
+],
+"source": "https://www.washingtonpost.com/recipes/frozen-irish-coffee/15769/",
+"title": "Frozen Irish Coffee"
 },
 {
 "group": "drinks",
@@ -1562,6 +1685,61 @@ var localDB = {
 },
 {
 "group": "drinks",
+"id": "recipe-pina_colada",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1/2 pineapple, peeled, cored and cut into chunks, plus small slices for garnish",
+"4 ounces white rhum agricole",
+"4 ounces coconut water, such as zico or vita coco (see headnote)",
+"3 to 4 cups ice"
+]
+},
+"notes": [
+"This light, frothy version is an alternative to the heavy, super-sweet variety you find at most bars. To make the pineapple puree, just run fresh pineapple slices through a blender, juicer or food processor",
+"Pina colada means 'strained pineapple,' but this version is 'sin colar' (unstrained), which is easier and helps keep the drink from separating too quickly. Make sure to use coconut water, not coconut milk or cream of coconut mix. White rhum agricole, pure sugar cane rum from Martinique such as Rhum Clement or Neisson, gives the drink a fresher taste"
+],
+"rating": 0,
+"recipe": [
+"Place the pineapple chunks in a blender; puree to yield 12 ounces. (Measure what's needed for this recipe, then freeze any leftover puree for another use.)",
+"Combine the 12 ounces of pineapple puree, white rhum agricole and coconut water in a blender, then add 3 cups of the ice. Blend on high for about 1 minute; add ice as needed",
+"Pour into individual Collins glasses; garnish each portion with a pineapple slice and a straw"
+],
+"source": "https://www.washingtonpost.com/recipes/pina-colada/10696/",
+"title": "Pina Colada"
+},
+{
+"group": "drinks",
+"id": "recipe-pina_con_lima",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"3 to 4 oz fresh pineapple, plus a small slice or wedge for garnish",
+"1 1/2 oz light rum (may substitute a combination of light and gold rums)",
+"3/4 oz cream of coconut",
+"3/4 oz fresh lime juice, plus 1/4 teaspoon finely grated lime zest",
+"1 cup crushed ice"
+]
+},
+"notes": [
+"The classic pina colada recipe results in a frothy, boozy, intensely sweet shake. This variation keeps the drink\u2019s heart of pineapple and coconut but balances the sweetness with fresh lime juice",
+"You\u2019ll need a blender",
+"Where to Buy: Cream of coconut is available at most grocery stores. Look for pineapple with a rich, sweet smell (or, if picking the pre-cut kind, look for fruit that\u2019s intensely yellow)"
+],
+"rating": 0,
+"recipe": [
+"In the following order, combine these ingredients in a blender: the pineapple (to taste), rum, cream of coconut, lime juice and ice. Blend on the highest speed for 30 seconds, then pour into a highball glass",
+"Garnish with the pineapple slice or wedge and a sprinkling of lime zest. Serve right away"
+],
+"source": "https://www.washingtonpost.com/recipes/pina-con-lima/14680/",
+"title": "Pina Con Lima"
+},
+{
+"group": "drinks",
 "id": "recipe-simple_syrup",
 "imgPlaceholder": "",
 "imgSrc": "",
@@ -1581,6 +1759,38 @@ var localDB = {
 ],
 "source": "",
 "title": "Simple Syrup"
+},
+{
+"group": "drinks",
+"id": "recipe-sweet_libertys_pina_colada",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1 1/2 cups crushed ice",
+"1 1/2 oz aged rum (may substitute rum blend of your choice; see headnote)",
+"two 1-inch fresh pineapple chunks",
+"1 1/2 oz pineapple juice",
+"3 oz cream of coconut (see headnote)",
+"5 coffee beans",
+"1 oz pedro ximenez sherry",
+"mint sprig, for garnish (optional)",
+"fresh cherry, for garnish (optional)"
+]
+},
+"notes": [
+"This frozen cocktail contains two delightful surprises: a float of sweet sherry, and coffee beans that go surprisingly well with the classic flavors.",
+"At Sweet Liberty Drinks & Supply Company, a house blend of spiced, coconut and aged rums is used; you can do the same or keep it simple with an aged rum. The bar makes its own coconut cream; Coco Lopez cream of coconut works well here."
+],
+"rating": 0,
+"recipe": [
+"Chill a tall glass",
+"Combine the ice, rum, pineapple chunks and juice, cream of coconut and coffee beans in a blender; puree until smooth",
+"Pour into the chilled glass; pour the sherry on top. Garnish with the mint sprig and/or cherry, if using"
+],
+"source": "https://www.washingtonpost.com/recipes/sweet-libertys-pina-colada/15979/",
+"title": "Sweet Libertys Pina Colada"
 },
 {
 "group": "drinks",
@@ -6189,9 +6399,16 @@ var localDB = {
 "drinks": [
 "recipe-beer:Beer:2",
 "recipe-between_the_sheets:Between The Sheets:0",
+"recipe-bourbon_peach_shakes:Bourbon Peach Shakes:0",
+"recipe-chilly_chile_paloma:Chilly Chile Paloma:0",
 "recipe-coffee:Coffee:1",
+"recipe-frogroni:Frogroni:0",
+"recipe-frozen_irish_coffee:Frozen Irish Coffee:0",
 "recipe-margarita:Margarita:0",
+"recipe-pina_colada:Pina Colada:0",
+"recipe-pina_con_lima:Pina Con Lima:0",
 "recipe-simple_syrup:Simple Syrup:0",
+"recipe-sweet_libertys_pina_colada:Sweet Libertys Pina Colada:0",
 "recipe-white_lady:White Lady:0",
 "recipe-wine:Wine:2"
 ],
@@ -6403,9 +6620,16 @@ var localDB = {
 "drinks": [
 "Beer",
 "Between The Sheets",
+"Bourbon Peach Shakes",
+"Chilly Chile Paloma",
 "Coffee",
+"Frogroni",
+"Frozen Irish Coffee",
 "Margarita",
+"Pina Colada",
+"Pina Con Lima",
 "Simple Syrup",
+"Sweet Libertys Pina Colada",
 "White Lady",
 "Wine"
 ],
