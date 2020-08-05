@@ -972,6 +972,35 @@ var localDB = {
 },
 {
 "group": "dessert",
+"id": "recipe-edible_cookie_dough_ben_&_jerrys",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1 cup flour",
+"8 tbsp unsalted butter (1 stick), room temp",
+"1 cup brown sugar, packed",
+"1 tsp vanilla extract",
+"2 tbsp heavy cream",
+"1/2 tsp kosher salt",
+"1/2 cup chocolate chips"
+]
+},
+"notes": [],
+"rating": 0,
+"recipe": [
+"First, heat treat the flour to ensure it is safe to eat. (Do not skip this step, untreated flour can contain contaminants and is not safe to eat.) Place the flour in a microwave-safe bowl and microwave on high in 30-second intervals, stirring in between. Use an instant-read thermometer to ensure that the flour reaches 165\u00b0F throughout",
+"In a stand mixer or using a hand mixer, beat together the butter and sugar until light and fluffy",
+"Add the vanilla, cream, and salt. Mix to combine. Then add the heat treated flour and mix to incorporate",
+"Fold in the chocolate chips",
+"Serve and enjoy! Store in an airtight container in the refrigerator"
+],
+"source": "https://people.com/food/ben-jerrys-shared-their-edible-cookie-dough-recipe-so-you-can-make-it-at-home/",
+"title": "Edible Cookie Dough Ben & Jerrys"
+},
+{
+"group": "dessert",
 "id": "recipe-flourless_chocolate_cake",
 "imgPlaceholder": "",
 "imgSrc": "",
@@ -1344,13 +1373,40 @@ var localDB = {
 "1/4 cup kernels"
 ]
 },
-"notes": [],
+"notes": [
+"Try mixing with chocolate chips while the popcorn is hot so that the chocolate will melt"
+],
 "rating": 2,
 "recipe": [
 "Place in popper and cook for 2:20 in our 900 watt microwave"
 ],
 "source": "https://www.amazon.com/Colonel-Popper-Microwave-Collapsible-Dishwasher/dp/B01NBR3DBP",
 "title": "Popcorn"
+},
+{
+"group": "dessert",
+"id": "recipe-popcorn_cinnamon_sugar",
+"imgPlaceholder": "dist/imgs/placeholder_dessert-popcorn_cinnamon_sugar.svg",
+"imgSrc": "dist/imgs/dessert-popcorn_cinnamon_sugar.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1/4 cup kernels",
+"~1 tbsp butter",
+"~1 tsp cinnamon",
+"~2 tsp sugar"
+]
+},
+"notes": [
+"Measurements are all estimates"
+],
+"rating": 2,
+"recipe": [
+"Place in popper and cook for 2:20 in our 900 watt microwave",
+"Microwave the butter until softened then mix with the popcorn. Coat with the cinnamon and sugar"
+],
+"source": "",
+"title": "Popcorn Cinnamon Sugar"
 },
 {
 "group": "dessert",
@@ -1591,7 +1647,7 @@ var localDB = {
 "2 oz gin",
 "3/4 oz sweet vermouth",
 "1/4 cup fresh lemon juice (from 1 or 2 lemons)",
-"1 1/4 oz simple syrup (see note)",
+"1.25 oz simple syrup (see note)",
 "twist of orange peel, for garnish"
 ]
 },
@@ -1635,6 +1691,30 @@ var localDB = {
 ],
 "source": "https://www.washingtonpost.com/recipes/frozen-irish-coffee/15769/",
 "title": "Frozen Irish Coffee"
+},
+{
+"group": "drinks",
+"id": "recipe-frozen_strawberry_margarita",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"1 lb fresh strawberries, hulled",
+"1 cup silver tequila",
+"2/3 cup fresh lime juice",
+"1/3 cup agave, honey, or simple sugar",
+"1/4 cup triple sec",
+"5 cups ice"
+]
+},
+"notes": [],
+"rating": 0,
+"recipe": [
+"Blend until smooth - helps if you have a better blender..."
+],
+"source": "https://www.culinaryhill.com/strawberry-margarita-recipe/",
+"title": "Frozen Strawberry Margarita"
 },
 {
 "group": "drinks",
@@ -2986,6 +3066,60 @@ var localDB = {
 "title": "Spaghetti Cacio E Cepe"
 },
 {
+"group": "pasta",
+"id": "recipe-spaghetti_meatballs_teigen",
+"imgPlaceholder": "",
+"imgSrc": "",
+"ingredients": {
+"For the Meatballs": [
+"For The Meatballs",
+"1 cup fresh breadcrumbs (processed from 3-4 slices white bread)",
+"1/4 cup milk",
+"1 pound ground beef",
+"1 pound ground pork",
+"1 cup finely shredded parmigiano reggiano cheese, plus more for garnish",
+"1 tablespoon minced garlic",
+"1.5 teaspoons kosher salt",
+"1/2 teaspoon chili flakes",
+"2 eggs plus 1 egg yolk",
+"1/4 cup fine dry breadcrumbs",
+"1/4 cup olive oil"
+],
+"For the Sauce": [
+"For The Sauce",
+"1 large onion, diced (3 cups)",
+"2 tablespoons minced garlic",
+"1/4 cup tomato paste",
+"5 (14-ounce) or 2 (28-ounce) plus 1 (14-ounce) cans crushed tomatoes",
+"1 tablespoon dried oregano",
+"1 teaspoon chili flakes",
+"1 teaspoon dried thyme",
+"1 teaspoon dried parsley",
+"1 teaspoon dried rosemary",
+"1 tablespoon kosher salt",
+"2 teaspoons sugar",
+"2 teaspoons red wine vinegar",
+"3/4 pound dried spaghetti",
+"finely grated parmesan, for garnish",
+"fresh basil for garnish"
+]
+},
+"notes": [],
+"rating": 0,
+"recipe": [
+"Make the Meatballs:",
+"Combine the breadcrumbs and milk in a large bowl; let the crumbs soak up all the milk. Add the beef and pork to the bowl along with the cheese, garlic, salt, chili flakes, eggs, and egg yolk. Gently mix, being careful not to overwork the meat, then form into about 18 golf ball-sized meatballs. Arrange on a large baking sheet and sprinkle very lightly on both sides with the fine dry breadcrumbs (just a super light dusting). Chill for 1 hour and up to 24 hours (this helps the meatballs keep their shape). ",
+"Heat the oil in a large skillet over medium heat, then add the meatballs (working in batches if you have to) and brown on all sides, 8 minutes total (lower temperature slightly if you need to to avoid any burning). Transfer browned meatballs to a large plate, and carefully drain all but 1/4 cup fat and oil in the skillet. Cover to keep the meatballs warm.",
+"Make the Sauce:",
+"Heat the fat and oil left over from the meatballs over medium heat. Add the onions and cook, stirring, until softened and translucent, 10 minutes. Add the garlic and cook for 1 more minute. Add the tomato paste and cook, stirring, until caramelized and absorbed, 2 minutes. Stir in the crushed tomatoes, oregano, chili flakes, thyme, parsley, rosemary, salt, sugar, and vinegar. Bring to a boil, reduce the heat to low, and simmer until the sauce thickens, 25 to 30 minutes. ",
+"Finish and Serve:",
+"Gently nestle the meatballs in the sauce, return to a simmer and cook until the meatballs are fully cooked through and absorb the sauce, 20-25 minutes. Season with salt and pepper to taste.",
+"While the meatballs are simmering in the sauce, cook the pasta al dente according to package directions. Drain, then add to the pot with the meatballs and sauce, or create individual portions. Garnish with cheese and basil."
+],
+"source": "https://cravingsbychrissyteigen.com/cravings/spaghetti-meatballs/",
+"title": "Spaghetti Meatballs Teigen"
+},
+{
 "altRatio": "1/3",
 "group": "pasta",
 "id": "recipe-spaghetti_sauce",
@@ -4240,6 +4374,32 @@ var localDB = {
 "recipe": [],
 "source": "",
 "title": "Cheeses"
+},
+{
+"group": "sides",
+"id": "recipe-emily_english_roasted_potatoes",
+"imgPlaceholder": "dist/imgs/placeholder_sides-emily_english_roasted_potatoes.svg",
+"imgSrc": "dist/imgs/sides-emily_english_roasted_potatoes.jpeg",
+"ingredients": {
+"ingredients": [
+"Ingredients",
+"kosher salt",
+"3 pounds large yukon gold potatoes, peeled and 1.5 to 2-inch diced",
+"1/2 cup vegetable oil (be sure it\u2019s fresh!)",
+"coarse sea salt or fleur de sel",
+"minced parsley"
+]
+},
+"notes": [],
+"rating": 0,
+"recipe": [
+"Preheat the oven to 425 degrees.",
+"Bring a large pot of water with 2 tablespoons kosher salt to a boil.  Add the potatoes, return to a boil, lower the heat, and simmer for 8 minutes.  Drain the potatoes, place them back in the pot with the lid on, and shake the pot roughly for 5 seconds to rough up the edges.  Carefully transfer the potatoes in one layer to a baking rack set over a sheet pan.  Set aside to dry for at least 15 minutes.  (They can sit at room temperature for several hours or in the fridge for up to 6 hours.)",
+"Pour the oil onto another sheet pan, tilt the pan to distribute the oil, and place the pan in the oven for 5 to 7 minutes, until the oil is smoking hot.  Transfer the potatoes carefully into the oil (I use a large metal spatula) and toss them lightly to coat each potato with the hot oil. Lower the oven temperature to 350 degrees F. Roast for 45 minutes to one hour, turning the potatoes occasionally with tongs, until very browned and crisp on the outside and tender and creamy inside.",
+"Transfer to a serving platter, sprinkle generously with 1\u00bd to 2 teaspoons sea salt and parsley and serve hot."
+],
+"source": "https://barefootcontessa.com/recipes/emilys-english-roasted-potatoes",
+"title": "Emily English Roasted Potatoes"
 },
 {
 "group": "sides",
@@ -6287,7 +6447,9 @@ var localDB = {
 "ingredients.FOR THE SAUCE",
 "ingredients.Favorite Cheeses",
 "ingredients.Favorite Snacks",
+"ingredients.For the Meatballs",
 "ingredients.For the Parm Toasts",
+"ingredients.For the Sauce",
 "ingredients.For the Soup",
 "ingredients.Garnish",
 "ingredients.Garnish Options",
@@ -6381,6 +6543,7 @@ var localDB = {
 "recipe-cookie_bars:Cookie Bars:2",
 "recipe-cookie_dough_billionaire_bars:Cookie Dough Billionaire Bars:0",
 "recipe-easter_coconut_cake:Easter Coconut Cake:3",
+"recipe-edible_cookie_dough_ben_&_jerrys:Edible Cookie Dough Ben & Jerrys:0",
 "recipe-flourless_chocolate_cake:Flourless Chocolate Cake:2",
 "recipe-french_chocolate_tart:French Chocolate Tart:2",
 "recipe-gingerbread_cookies:Gingerbread Cookies:1",
@@ -6393,6 +6556,7 @@ var localDB = {
 "recipe-peanut_butter_and_cocoa_smothie:Peanut Butter And Cocoa Smothie:1",
 "recipe-pineapple_upside_down_cake:Pineapple Upside Down Cake:2",
 "recipe-popcorn:Popcorn:2",
+"recipe-popcorn_cinnamon_sugar:Popcorn Cinnamon Sugar:2",
 "recipe-skillet_peanut_butter_chocolate_chip_blondies:Skillet Peanut Butter Chocolate Chip Blondies:1",
 "recipe-toasted_marshmallow_brownie_crinkles:Toasted Marshmallow Brownie Crinkles:1"
 ],
@@ -6404,6 +6568,7 @@ var localDB = {
 "recipe-coffee:Coffee:1",
 "recipe-frogroni:Frogroni:0",
 "recipe-frozen_irish_coffee:Frozen Irish Coffee:0",
+"recipe-frozen_strawberry_margarita:Frozen Strawberry Margarita:0",
 "recipe-margarita:Margarita:0",
 "recipe-pina_colada:Pina Colada:0",
 "recipe-pina_con_lima:Pina Con Lima:0",
@@ -6453,6 +6618,7 @@ var localDB = {
 "recipe-sausage_and_mushroom_penne_pasta:Sausage And Mushroom Penne Pasta:3",
 "recipe-sesame_noodles_with_wilted_greens:Sesame Noodles With Wilted Greens:1",
 "recipe-spaghetti_cacio_e_cepe:Spaghetti Cacio E Cepe:2",
+"recipe-spaghetti_meatballs_teigen:Spaghetti Meatballs Teigen:0",
 "recipe-spaghetti_sauce:Spaghetti Sauce:3",
 "recipe-summer_pasta_with_ricotta_and_zucchini:Summer Pasta With Ricotta And Zucchini:3"
 ],
@@ -6503,6 +6669,7 @@ var localDB = {
 "recipe-bacon:Bacon:2",
 "recipe-bruschetta:Bruschetta:0",
 "recipe-cheeses:Cheeses:3",
+"recipe-emily_english_roasted_potatoes:Emily English Roasted Potatoes:0",
 "recipe-favorite_snacks:Favorite Snacks:1",
 "recipe-ikea_meatball_sauce:Ikea Meatball Sauce:2",
 "recipe-pretzels:Pretzels:0"
@@ -6602,6 +6769,7 @@ var localDB = {
 "Cookie Bars",
 "Cookie Dough Billionaire Bars",
 "Easter Coconut Cake",
+"Edible Cookie Dough Ben & Jerrys",
 "Flourless Chocolate Cake",
 "French Chocolate Tart",
 "Gingerbread Cookies",
@@ -6614,6 +6782,7 @@ var localDB = {
 "Peanut Butter And Cocoa Smothie",
 "Pineapple Upside Down Cake",
 "Popcorn",
+"Popcorn Cinnamon Sugar",
 "Skillet Peanut Butter Chocolate Chip Blondies",
 "Toasted Marshmallow Brownie Crinkles"
 ],
@@ -6625,6 +6794,7 @@ var localDB = {
 "Coffee",
 "Frogroni",
 "Frozen Irish Coffee",
+"Frozen Strawberry Margarita",
 "Margarita",
 "Pina Colada",
 "Pina Con Lima",
@@ -6674,6 +6844,7 @@ var localDB = {
 "Sausage And Mushroom Penne Pasta",
 "Sesame Noodles With Wilted Greens",
 "Spaghetti Cacio E Cepe",
+"Spaghetti Meatballs Teigen",
 "Spaghetti Sauce",
 "Summer Pasta With Ricotta And Zucchini"
 ],
@@ -6724,6 +6895,7 @@ var localDB = {
 "Bacon",
 "Bruschetta",
 "Cheeses",
+"Emily English Roasted Potatoes",
 "Favorite Snacks",
 "Ikea Meatball Sauce",
 "Pretzels"

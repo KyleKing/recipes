@@ -3,14 +3,14 @@
 import json
 import logging
 import shutil
-import subprocess
+import subprocess  # noqa: S404
 import sys
 from os import path
 from pathlib import Path, PurePath
 
 # Debugging Options
 debug = True
-rmDist = False
+rm_dist = False
 
 lgr_fn = 'recipes.log'
 logger = logging.getLogger(__name__)
@@ -27,7 +27,7 @@ class SiteCompiler:
         """Initialize class and initiate make()."""
         # Dict mapping formatted recipe title to image file either before/after filtering
         self.imgs_raw = {}
-        self.imgs_filt = {}
+        self.imgs_filter = {}
         # List of all recipes
         self.recipes = []
         # Intermediary JSON file with all recipes combined
@@ -38,7 +38,7 @@ class SiteCompiler:
     def make(self):
         """Compile dist resources."""
         # Configure output directory structure
-        self.create_dir(self.DIR_DIST, rm=rmDist)
+        self.create_dir(self.DIR_DIST, rm=rm_dist)
         self.create_dir(self.DIR_DIST_IMGS)
 
         # Copy source images into destination directory
@@ -199,8 +199,8 @@ class SiteCompiler:
         self.toc_lookup[sub_dir].append(recipe['title'])
         # Adds link to minified image
         if recipe_title in self.imgs_raw:
-            self.imgs_filt[recipe_title] = self.imgs_raw[recipe_title]
-            recipe['imgSrc'] = self.imgs_filt[recipe_title]
+            self.imgs_filter[recipe_title] = self.imgs_raw[recipe_title]
+            recipe['imgSrc'] = self.imgs_filter[recipe_title]
             recipe['imgPlaceholder'] = self.format_svg_name(recipe['imgSrc'])
             outPth = Path(recipe['imgPlaceholder'])
             if not outPth.is_file():
@@ -245,7 +245,7 @@ class SiteCompiler:
     def remove_old_files(self):
         """Remove any image files no longer linked to source data."""
         logger.debug('\n# Checking if any files need to be removed')
-        images = [_fn for _fn in self.imgs_filt.values()]
+        images = [_fn for _fn in self.imgs_filter.values()]
         images.extend([self.format_svg_name(_fn) for _fn in images])  # Add SVG filenames
         for img_fn in self.DIR_DIST_IMGS.glob('*'):
             matched = self.get_relative_dir(img_fn) in images
@@ -266,5 +266,5 @@ if __name__ == '__main__':
     ch.setFormatter(logging.Formatter('%(message)s'))
     logger.addHandler(ch)
 
-    logger.debug('Running with options: debug:{} / rmDist:{}'.format(debug, rmDist))
+    logger.debug('Running with options: debug:{} / rm_dist:{}'.format(debug, rm_dist))
     SiteCompiler()
