@@ -1,5 +1,8 @@
 {
   "ingredients": {
+  	"Dessert": [
+  		"Chocolate Butter Cream Frosting (avoid cream cheese frosting)"
+  	],
     "Favorite Snacks": [
       "Kettle Jalapeno Chips"
     ],
@@ -10,11 +13,11 @@
       "Siggi's Vanilla"
     ],
     "Seltzer": [
-      "Grapefruit or lemon seltzer. Avoid citrus and orange (and Green tea...)"
+      "Grapefruit or lemon seltzer (avoid citrus & orange)"
     ]
   },
   "notes": [
-    "Reference notes for Alex"
+    ""
   ],
   "rating": 1,
   "recipe": [

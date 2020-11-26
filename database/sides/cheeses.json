@@ -2,10 +2,13 @@
   "ingredients": {
     "Favorite Cheeses":[
       "Manchego - Alex's favorite",
+      "Toscano Soaked in Syrah - good cheese from from TJ's",
       "Fontina - tried in SF with Colin"
     ]
   },
-  "notes": [],
+  "notes": [
+  	"TODO: better describe and sort cheese types by flavor/texture"
+  ],
   "rating": 3,
   "recipe": [],
   "source": ""
