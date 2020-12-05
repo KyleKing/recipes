@@ -65,22 +65,6 @@ def _format_stars(section: str) -> str:
     ])
 
 
-# FIXME: TEMPORARY, REMOVE!
-def _set_image_md(section: str) -> str:
-    """Format the string section with the specified image name."""  # noqa
-    name_image = [*HACK_PATH_MD.parent.glob(f'{HACK_PATH_MD.stem}.*g')]
-    assert len(name_image) != 0, HACK_PATH_MD
-    name_image = name_image[0]
-
-    return '\n'.join([
-        f'<!-- name_image={name_image.name}; (User can specify image name if multiple exist) -->',
-        '<!-- AUTO-Image -->',
-        f'![{name_image.name}](./{name_image.name})' + '{: .image-recipe loading=lazy }',  # noqa: P103
-        '<!-- /AUTO-Image -->',
-    ])
-
-
-def _image_md(section: str) -> str:
     """Format the string section with the specified image name.
 
     Args:
@@ -100,7 +84,7 @@ def _image_md(section: str) -> str:
 
 
 def _match_todo(section: str) -> str:
-    logger.warning(f'Found TODO {section}')  # noqa: T103
+    logger.warning(f'Found TODO {section}')  # noqa: T101
     return section
 
 
@@ -123,7 +107,6 @@ def _update_md(recipe_md: str) -> str:
     startswith_lookup = {
         '<!-- Do not modify sections with ': _format_header,
         '<!-- rating=': _format_stars,
-        '<!-- AUTO-Image -->': _set_image_md,  # HACK: temporary
         '<!-- name_image=': _image_md,
         '<!-- Do not modify sections with ': _format_header,
         '<!-- TODO': _match_todo,  # noqa: T101
@@ -142,9 +125,7 @@ def _update_md(recipe_md: str) -> str:
 
 def main() -> None:
     """Convert all JSON files to markdown."""
-    global HACK_PATH_MD
     for path_md in DIR_MD.glob('*/*.md'):
-        HACK_PATH_MD = path_md
         logger.info(f'{path_md.parent.name}||{path_md.stem}')
         path_md.write_text(_update_md(path_md.read_text()))
 
