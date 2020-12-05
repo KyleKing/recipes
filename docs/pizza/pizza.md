@@ -7,7 +7,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
 <!-- Image -->
-![naan_pizza.jpg](./naan_pizza.jpg){: .image-recipe loading=lazy }
+![pizza.jpeg](./pizza.jpeg){: .image-recipe loading=lazy }
 <!-- /Image -->
 
 ## Ingredients

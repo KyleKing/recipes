@@ -6,7 +6,6 @@ import sys
 from pathlib import Path
 from typing import Iterable, List, Union
 
-from funcy import lflatten
 from loguru import logger
 
 logger.remove()
@@ -55,8 +54,23 @@ def format_md_task_list(iterator: Union[dict, Iterable]) -> List[str]:
 
 def find_images(path_source: Path, parents: Iterable[Path] = (DIST_IMG, )) -> List[Path]:
     """Find all images related to the recipe."""  # noqa
-    full = lflatten([[*parent.glob(f'*{path_source.stem}*.*g')] for parent in [*parents] + [path_source.parent]])
-    return [path_image for path_image in full if path_image.suffix != '.svg']
+    paths_image = []
+    for parent in [*parents] + [path_source.parent]:
+        pattern = f'{path_source.stem}.*g'
+        paths_image.extend([*parent.glob(f'{path_source.parent.name}-{pattern}')])
+        paths_image.extend([*parent.glob(pattern)])
+    return [path_image for path_image in paths_image if path_image.suffix != '.svg']
+
+
+def unlink_images(path_json: Path, path_md: Path) -> None:
+    """Copy images from first the old output and then from the local directory."""  # noqa
+    for path_image in find_images(path_json):
+        path_image_new = path_md.parent / f'{path_md.stem}{path_image.suffix}'
+        new_is_file = path_image_new.is_file()
+        logger.debug('{action} {path_image} > {path_image_new}', action='Unlinking',
+                     path_image=path_image, path_image_new=path_image_new)
+        if new_is_file:
+            path_image_new.unlink()
 
 
 def copy_images(path_json: Path, path_md: Path) -> None:
@@ -114,6 +128,7 @@ def main() -> None:
 
         path_md = dir_md / sub_dir / f'{path_json.stem}.md'
         (path_md.parent).mkdir(exist_ok=True, parents=True)
+        unlink_images(path_json, path_md)  # HACK: In development, clear old images
         copy_images(path_json, path_md)
         recipe_data = json.loads(path_json.read_text())
         path_md.write_text(md_from_json(path_md, recipe_data))

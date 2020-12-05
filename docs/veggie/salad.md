@@ -5,7 +5,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
 <!-- Image -->
-![chickpea_salad_wrap.jpeg](./chickpea_salad_wrap.jpeg){: .image-recipe loading=lazy }
+![salad.jpeg](./salad.jpeg){: .image-recipe loading=lazy }
 <!-- /Image -->
 
 ## Ingredients
