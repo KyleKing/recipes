@@ -11,17 +11,17 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 ## Ingredients
 
-- [ ] smoked salmon
-- [ ] sushi rice
-- [ ] nori
+* [ ] smoked salmon
+* [ ] sushi rice
+* [ ] nori
 
 ## Recipe
 
-- Slice salmon into pieces to cover the sushi rice. Will look best with the fat lines running diagonally when wrapped
-- Using two index fingers and your thumb shape a bite size clump of sushi rice
-- Optionally add a bit of wasabi underneath the salmon
-- Using your second hand's thumb and index finger, wrap the salmon over the rice
+* Slice salmon into pieces to cover the sushi rice. Will look best with the fat lines running diagonally when wrapped
+* Using two index fingers and your thumb shape a bite size clump of sushi rice
+* Optionally add a bit of wasabi underneath the salmon
+* Using your second hand's thumb and index finger, wrap the salmon over the rice
 
 ## Notes
 
-- Look for smoked salmon with the most visible white fat lines
+* Look for smoked salmon with the most visible white fat lines

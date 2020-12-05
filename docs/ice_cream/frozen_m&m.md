@@ -11,9 +11,9 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-- [ ] 1/4 cup cocoa powder
-- [ ] M&Ms/Oreos/Cookies/Graham Crackers/etc, crushed
+* [ ] 1/4 cup cocoa powder
+* [ ] M&Ms/Oreos/Cookies/Graham Crackers/etc, crushed
 
 ## Recipe
 
-- Follow the vanilla ice cream recipe, just add a small amount of cocoa powder to give a pleasant chocolate flavor
+* Follow the vanilla ice cream recipe, just add a small amount of cocoa powder to give a pleasant chocolate flavor

@@ -15,9 +15,9 @@ Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawes
 
 ## Recipe
 
-- >> Regular Use:
-- Put the cold pizza stone in a cold oven then preheat (if a cold pizza stone goes in a hot oven it may crack)
-- See the general Pizza recipe for a recipe
-- >> Cleaning:
-- Let the pizza stone cool in the oven, then scrub with a little water, and towel dry. Minimize water if possible
-- The pizza stone can be stored in the oven and should always be stored flat
+* >> Regular Use:
+* Put the cold pizza stone in a cold oven then preheat (if a cold pizza stone goes in a hot oven it may crack)
+* See the general Pizza recipe for a recipe
+* >> Cleaning:
+* Let the pizza stone cool in the oven, then scrub with a little water, and towel dry. Minimize water if possible
+* The pizza stone can be stored in the oven and should always be stored flat

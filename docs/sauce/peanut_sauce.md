@@ -11,17 +11,17 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-- [ ] 2 tbsp peanut butter
-- [ ] 1 tbsp water
-- [ ] 3/4 tbsp soy sauce
-- [ ] 3/4 tbsp lemon
-- [ ] 1/4 tsp red pepper flakes
-- [ ] 1/2 tbsp maple syrup
+* [ ] 2 tbsp peanut butter
+* [ ] 1 tbsp water
+* [ ] 3/4 tbsp soy sauce
+* [ ] 3/4 tbsp lemon
+* [ ] 1/4 tsp red pepper flakes
+* [ ] 1/2 tbsp maple syrup
 
 ## Recipe
 
-- Combine ingredients and mix until smooth. Will separate and needs to be remixed before serving. Store refrigerated
+* Combine ingredients and mix until smooth. Will separate and needs to be remixed before serving. Store refrigerated
 
 ## Notes
 
-- Used this on Thai veggie burgers from Trader Joe's
+* Used this on Thai veggie burgers from Trader Joe's

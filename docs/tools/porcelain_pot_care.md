@@ -11,13 +11,13 @@ Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawes
 
 ## Ingredients
 
-- [ ] NA
+* [ ] NA
 
 ## Recipe
 
-- >> Things to Know
-- Porcelain is glass and can be prone to chipping. Oven safe to 500. Can be used to refrigerate
-- >> Cook
-- Do not use high heat. Stick to medium at most. Do not use metal utensils. Do not heat empty
-- >> Care
-- Warm soapy water. Can use baking soda for stains/see other notes in image
+* >> Things to Know
+* Porcelain is glass and can be prone to chipping. Oven safe to 500. Can be used to refrigerate
+* >> Cook
+* Do not use high heat. Stick to medium at most. Do not use metal utensils. Do not heat empty
+* >> Care
+* Warm soapy water. Can use baking soda for stains/see other notes in image

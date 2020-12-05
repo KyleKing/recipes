@@ -3,7 +3,6 @@
 import json
 import shutil
 from collections import defaultdict
-from copy import copy
 from pathlib import Path
 from typing import Iterable, List, Union
 
@@ -26,7 +25,7 @@ def format_source(source: str) -> str:
     return ''
 
 
-def format_md_list(iterator: Union[dict, Iterable], list_prefix: str = '-') -> List[str]:
+def format_md_list(iterator: Union[dict, Iterable], list_prefix: str = '*') -> List[str]:
     """Recursively format a markdown list interpretting a dictionary as a multi-level list."""  # noqa
     out = []
     logger.debug('({type_iter}) iterator={iterator}', iterator=iterator, type_iter=type(iterator))
@@ -34,7 +33,7 @@ def format_md_list(iterator: Union[dict, Iterable], list_prefix: str = '-') -> L
         for key, values in iterator.items():
             logger.debug('{key}: ({type_values}) {values}', key=key, values=values, type_values=type(values))
             out.append(f'{list_prefix} {key}')
-            out.extend(format_md_list(values, '  ' + list_prefix))
+            out.extend(format_md_list(values, '    ' + list_prefix))
     else:
         out.extend([f'{list_prefix} {value}' for value in iterator])
     logger.debug('Created: {out}', out=out)
@@ -44,7 +43,7 @@ def format_md_list(iterator: Union[dict, Iterable], list_prefix: str = '-') -> L
 def format_md_task_list(iterator: Union[dict, Iterable]) -> List[str]:
     """Run format_md_list with the default list prefix set to a check or task list format."""  # noqa
     logger.info('Starting "format_md_task_list": {iterator}', iterator=iterator)
-    return format_md_list(iterator, list_prefix='- [ ]')
+    return format_md_list(iterator, list_prefix='* [ ]')
 
 
 def image_html(path_image: str) -> str:
@@ -104,7 +103,7 @@ if __name__ == '__main__':
                 pprint(recipe_data)  # noqa: T003
                 raise
     logger.info(sub_dir_count)
-    # TODO: 2-Test `mkdocs gh-deploy`
+    # TODO: 2-Test `poetry run mkdocs gh-deploy`
 
 # TODO: Consider making an aggregate page so that the recipes are easier to find
 #   ^ possibly just photos and names for a better TOC

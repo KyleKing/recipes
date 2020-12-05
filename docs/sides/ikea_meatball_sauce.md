@@ -11,13 +11,13 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-- [ ] IKEA Meatballs!
-- [ ] IKEA Meatball Sauce Packet
+* [ ] IKEA Meatballs!
+* [ ] IKEA Meatball Sauce Packet
 
 ## Recipe
 
-- Getting the meatball sauce packet is tricky. I found that adding a little bit of salt then thoroughly mixing provides the best change of achieving a smooth consistency
+* Getting the meatball sauce packet is tricky. I found that adding a little bit of salt then thoroughly mixing provides the best change of achieving a smooth consistency
 
 ## Notes
 
-- Note: source is for actually making meatballs and not just defrosting IKEA :)
+* Note: source is for actually making meatballs and not just defrosting IKEA :)
