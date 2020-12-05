@@ -54,10 +54,17 @@ def _format_stars(section: str, path_md: Path) -> str:
 
     """
     rating = int(_parse_var_comment(section)['rating'])
+    # Increase the rating so that the lowest is not 1
+    bump_rating = 3
+    if rating != 0:
+        stars = ' '.join([_ICON_FA_STAR] * (rating + bump_rating) + [_ICON_FA_STAR_OUT] * (5 - rating))
+    else:
+        stars = '*Not yet rated*'
+    # Combine the output markdown
     return '\n'.join([
         f'<!-- rating={rating}; (User can specify rating on scale of 1-5) -->',
         '<!-- AUTO-UserRating -->',
-        'Personal rating: ' + ' '.join([_ICON_FA_STAR] * rating + [_ICON_FA_STAR_OUT] * (5 - rating)),
+        'Personal rating: ' + stars,
         '<!-- /AUTO-UserRating -->',
     ])
 
