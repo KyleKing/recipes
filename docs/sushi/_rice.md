@@ -1,6 +1,6 @@
 <!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
-#  Rice
+# Rice
 
 > Based on [https://recipes.instantpot.com/recipe/pressure-cooker-sushi-rice/](https://recipes.instantpot.com/recipe/pressure-cooker-sushi-rice/)
 
@@ -9,7 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=_rice.jpeg; (User can specify image name if multiple exist) -->
+<!-- name_image=_rice.jpg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![_rice.jpeg](./_rice.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

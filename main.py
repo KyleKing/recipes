@@ -130,5 +130,14 @@ def main() -> None:
         path_md.write_text(_update_md(path_md.read_text()))
 
 
+# Temporary function to identify duplicates images which may need to be edited
+def find_image_duplicates():  # noqa
+    for path_md in DIR_MD.glob('*/*.md'):
+        paths_image = [*path_md.parent.glob(f'{path_md.stem}.*g')]
+        if len(paths_image) > 1:
+            logger.info(path_md)
+
+
 if __name__ == '__main__':
-    main()
+    find_image_duplicates()
+    # main()
