@@ -38,10 +38,10 @@ DOIT_CONFIG = {
     'action_string_formatting': 'old',  # Required for keyword-based tasks
     'default_tasks': [
         'main',
-        # 'coverage',
-        # # 'open_test_docs',
+        'coverage',
+        # 'open_test_docs',
         'set_lint_config',
-        # 'create_tag_file',  # FIXME: this should ignore 'NO_TAG_SUM' and gitignore (i.e. /site/*)
+        # > 'create_tag_file',  # PLANNED: https://github.com/KyleKing/dash_dev/issues/24
         'auto_format',
         'lint_pre_commit',
         'deploy',
