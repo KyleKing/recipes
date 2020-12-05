@@ -39,16 +39,13 @@ DOIT_CONFIG = {
     'action_string_formatting': 'old',  # Required for keyword-based tasks
     'default_tasks': [
         'main',
-        # 'export_req', 'update_cl',
         # 'coverage',
         # # 'open_test_docs',
         'set_lint_config',
-        'create_tag_file',
-        # 'auto_format', # FIXME: this should ignore 'NO_TAG_SUM' and gitignore (i.e. /site/*)
-        # 'document',
-        # # 'open_docs',
-        # 'lint_pre_commit',
-        # 'type_checking',
+        'create_tag_file',  # FIXME: this should ignore 'NO_TAG_SUM' and gitignore (i.e. /site/*)
+        'auto_format',
+        'lint_pre_commit',
+        'deploy',
     ],
 }
 """DoIt Configuration Settings. Run with `poetry run doit`."""

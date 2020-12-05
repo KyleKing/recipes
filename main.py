@@ -135,7 +135,7 @@ def _update_md(recipe_md: str, path_md: Path) -> str:
 def main() -> None:
     """Convert all JSON files to markdown."""
     for path_md in DIR_MD.glob('*/*.md'):
-        logger.info(f'{path_md.parent.name}||{path_md.stem}')
+        logger.info('> {path_md}', path_md=path_md)
         path_md.write_text(_update_md(path_md.read_text(), path_md))
 
 
