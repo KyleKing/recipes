@@ -167,8 +167,8 @@ coverage.json
 # Static Type Checkers
 .pytype/*
 
-# Ignore doc outputs
-docs/*
+# # Ignore doc outputs
+# docs/*
 
 # Ignore DOIT cache files
 **/.doit.*
