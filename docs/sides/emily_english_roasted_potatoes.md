@@ -27,4 +27,4 @@ Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawes
 
 ## Notes
 
-* Status: WIP
+* TODO: Need to revisit

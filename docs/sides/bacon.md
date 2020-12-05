@@ -14,7 +14,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Recipe
 
-* Status: WIP
+* TODO: Need to revisit
 * Preheat oven to 375
 * Place bacon without overlapping on a wire drying rack over a rimmed baking sheet. Bake for 12-20 min
 

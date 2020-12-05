@@ -103,7 +103,7 @@ def md_from_json(path_md: Path, recipe: dict) -> str:
     return '\n\n'.join(sections) + '\n'
 
 
-if __name__ == '__main__':
+def main() -> None:
     """Convert all JSON files to markdown."""
     dir_json = CWD / 'database'
     dir_md = CWD / 'docs'
@@ -111,17 +111,16 @@ if __name__ == '__main__':
     for path_json in dir_json.glob('*/*.json'):
         sub_dir = path_json.parent.name
         logger.info(f'{sub_dir}||{path_json.stem}')
+
+        path_md = dir_md / sub_dir / f'{path_json.stem}.md'
+        (path_md.parent).mkdir(exist_ok=True, parents=True)
+        copy_images(path_json, path_md)
         recipe_data = json.loads(path_json.read_text())
-        try:
-            path_md = dir_md / sub_dir / f'{path_json.stem}.md'
-            (path_md.parent).mkdir(exist_ok=True, parents=True)
-            copy_images(path_json, path_md)
-            path_md.write_text(md_from_json(path_md, recipe_data))
-        except Exception as err:
-            from pprint import pprint
-            pprint(recipe_data)  # noqa: T003
-            logger.exception(f'For {path_json}, {err}')
-            raise
+        path_md.write_text(md_from_json(path_md, recipe_data))
+
+
+if __name__ == '__main__':
+    main()
 
 # TODO: Consider making an aggregate page so that the recipes are easier to find
 #   ^ possibly just photos and names for a better TOC

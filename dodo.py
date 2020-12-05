@@ -19,11 +19,12 @@ poetry run doit
 """
 
 from pathlib import Path
-from doit.tools import LongRunning
+
 from dash_dev import LOGGER_CONFIG
 from dash_dev.doit_helpers.base import debug_task
 from dash_dev.doit_helpers.doit_globals import DIG, DoItTask
 from dash_dev.registered_tasks import *  # noqa: F401,F403,H303 skipcq: PYL-W0614 (Run 'doit list' to see tasks)
+from doit.tools import LongRunning
 from loguru import logger
 
 logger.configure(**LOGGER_CONFIG)
@@ -41,7 +42,7 @@ DOIT_CONFIG = {
         # # 'open_test_docs',
         'set_lint_config',
         'create_tag_file',
-        'auto_format',
+        # 'auto_format', # FIXME: this should ignore 'NO_TAG_SUM' and gitignore (i.e. /site/*)
         # 'document',
         # # 'open_docs',
         # 'lint_pre_commit',

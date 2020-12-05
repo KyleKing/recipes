@@ -28,6 +28,6 @@ Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawes
 
 ## Notes
 
-* Status: WIP
+* TODO: Need to revisit
 * This frozen cocktail contains two delightful surprises: a float of sweet sherry, and coffee beans that go surprisingly well with the classic flavors.
 * At Sweet Liberty Drinks & Supply Company, a house blend of spiced, coconut and aged rums is used; you can do the same or keep it simple with an aged rum. The bar makes its own coconut cream; Coco Lopez cream of coconut works well here.

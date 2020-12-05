@@ -27,5 +27,5 @@ Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawes
 
 ## Notes
 
-* Status: WIP
+* TODO: Need to revisit
 * Bartender Julie Reiner’s summery deep-freeze adjusts the classic Negroni recipe and adds strawberries — which go beautifully with Campari — and the brightness of lemon.

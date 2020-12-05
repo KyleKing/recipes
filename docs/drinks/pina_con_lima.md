@@ -23,7 +23,7 @@ Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawes
 
 ## Notes
 
-* Status: WIP
+* TODO: Need to revisit
 * The classic pina colada recipe results in a frothy, boozy, intensely sweet shake. This variation keeps the drink’s heart of pineapple and coconut but balances the sweetness with fresh lime juice
 * You’ll need a blender
 * Where to Buy: Cream of coconut is available at most grocery stores. Look for pineapple with a rich, sweet smell (or, if picking the pre-cut kind, look for fruit that’s intensely yellow)

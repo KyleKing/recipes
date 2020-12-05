@@ -24,8 +24,6 @@ mkdocs = "*"
 mkdocs-git-revision-date-plugin = "*"
 mkdocs-material = "*"
 
-[tool.poetry.dev-dependencies]
-
 [tool.poetry.dev-dependencies.dash_dev]
 git = "https://github.com/KyleKing/dash_dev.git"
 branch = "main"
