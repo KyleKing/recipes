@@ -42,4 +42,4 @@ extra:
   manifest: manifest.webmanifest
 
 extra_css:
-  - stylesheets/extra.css
+  - _stylesheets/extra.css
