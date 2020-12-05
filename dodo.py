@@ -18,6 +18,7 @@ poetry run doit
 
 """
 
+import webbrowser
 from pathlib import Path
 
 from dash_dev import LOGGER_CONFIG
@@ -60,6 +61,19 @@ def task_migrate() -> DoItTask:
 
     """
     return debug_task([LongRunning('poetry run python mkdocs_migrate.py')])
+
+
+def task_serve() -> DoItTask:
+    """Serve the recipe site with `--dirtyreload` and open in a web browser.
+
+    Returns:
+        DoItTask: DoIt task
+
+    """
+    return debug_task([
+        (webbrowser.open, ('http://localhost:8000', )),
+        LongRunning('poetry run mkdocs serve --dirtyreload'),
+    ])
 
 
 def task_deploy() -> DoItTask:
