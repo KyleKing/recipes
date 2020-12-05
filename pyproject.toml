@@ -10,6 +10,19 @@ authors = [ "Kyle King <https://github.com/KyleKing>",]
 repository = "https://github.com/kyleking/recipes"
 license = "MIT"
 
+[tool.isort]
+balanced_wrapping = true
+default_section = "THIRDPARTY"
+force_grid_wrap = 0
+length_sort = false
+line_length = 120
+
 [tool.poetry.dependencies]
-python = "^3.7"
-icecream = "*"
+python = "^3.8,<3.9"
+
+[tool.poetry.dev-dependencies]
+mkdocs = "*"
+
+[tool.poetry.dev-dependencies.dash_dev]
+git = "https://github.com/KyleKing/dash_dev.git"
+branch = "main"
