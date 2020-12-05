@@ -37,6 +37,9 @@ https://www.washingtonpost.com/recipes/spicy-watermelon-margarita/17522/
         * Possibly also cross out steps as completed?
     + Add 'alt-ratio' toggle to update ingredient amounts
 
+- Sandwiches: Balsamic, Tomato, Mozz, Basil
+- Laughing Cow Cheese Wedges - Swiss
+
 ------------------------------------------------------------------------------------------------------------------------
 
 (Write on sticky note) rice cooker - 2 cups rice:3 cups water (1:1.5)
