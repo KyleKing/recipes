@@ -19,10 +19,11 @@ line_length = 120
 
 [tool.poetry.dependencies]
 python = "^3.8,<3.9"
-funcy = "*"
 mkdocs = "*"
 mkdocs-git-revision-date-plugin = "*"
 mkdocs-material = "*"
+optimize-images = "*"
+pillow = "*"
 
 [tool.poetry.dev-dependencies.dash_dev]
 git = "https://github.com/KyleKing/dash_dev.git"

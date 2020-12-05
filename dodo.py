@@ -25,7 +25,7 @@ from dash_dev.doit_helpers.doit_globals import DIG
 from dash_dev.registered_tasks import *  # noqa: F401,F403,H303 skipcq: PYL-W0614 (Run 'doit list' to see tasks)
 from loguru import logger
 
-from recipes.tasks import task_deploy, task_main, task_serve  # noqa: F401I
+from recipes.tasks import task_compress, task_deploy, task_main, task_serve  # noqa: F401I
 
 logger.configure(**LOGGER_CONFIG)
 logger.info('Starting DoIt tasks in dodo.py')
