@@ -7,7 +7,7 @@
 Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
 <!-- Start:Image (WIP: Placeholder) -->
-![recipe-breakfast_burrito](/dist/imgs/breakfast-breakfast_burrito.jpeg){: .image-recipe loading=lazy }<!-- End:Image (WIP: Placeholder) -->
+![recipe-breakfast_burrito](/imgs/breakfast-breakfast_burrito.jpeg){: .image-recipe loading=lazy }<!-- End:Image (WIP: Placeholder) -->
 
 ## Ingredients
 
