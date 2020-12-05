@@ -140,10 +140,10 @@ dmypy.json
 *.lnk
 *.log
 *.pdf
-*.png
-*.jp*g
+# *.png
+# *.jp*g
 *.spe
-*.svg
+# *.svg
 *.xl*
 ~*.*
 ~$*
@@ -194,7 +194,6 @@ coverage.json
 # Package-Specific
 
 # Ignore intermediary files
-dist/database.json
 config.codekit3
 *.log
 *.pyc

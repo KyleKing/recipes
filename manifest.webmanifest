@@ -1,6 +1,6 @@
 {
     "icons": [{
-        "src": "dist/icons/app-icon@180x180.png",
+        "src": "_icons/app-icon@180x180.png",
         "sizes": "180x180",
         "type": "image/png"
     }],
