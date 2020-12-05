@@ -12,9 +12,24 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Ingredients
 
 - [ ] Standalone
+  - [ ] 12 oz lasagna noodles
+  - [ ] 1.5 lb sliced or shredded mozzarella
+  - [ ] (optional) 1-2 cup spinach
 - [ ] Meat/Sauce
+  - [ ] (optional) 1 lb ground beef (and/or spicy sausage)
+  - [ ] 2 cloves garlic, minced
+  - [ ] 1 tsp dried oregano
+  - [ ] 2 tsp basil
+  - [ ] Kosher salt
+  - [ ] Freshly ground black pepper
+  - [ ] 1-2 (32 oz) jars of marinara
 - [ ] Ricotta Cheese Mix
+  - [ ] 16 oz whole milk ricotta
+  - [ ] 1/4 cup freshly grated Parmesan
+  - [ ] 1/4 cup chopped parsley
 - [ ] Garnish
+  - [ ] 1/4 cup freshly grated Parmesan
+  - [ ] 1/4 cup chopped parsley
 
 ## Recipe
 

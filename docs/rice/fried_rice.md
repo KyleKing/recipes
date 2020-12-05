@@ -10,6 +10,19 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Ingredients
 
 - [ ] Combine
+  - [ ] 2 cups day-old rice
+  - [ ] 1 chicken breast chopped (or shrimp, etc)
+  - [ ] 1-2 bag(s) frozen oriental vegetables
+  - [ ] 1/2 bag frozen peas
+  - [ ] finely chopped onion, carrots, broccoli
+  - [ ] 3 eggs
+  - [ ] 1 tbsp soy sauce
+  - [ ] 1 tbsp Sriracha
+  - [ ] 1 tsp sesame oil
+  - [ ] garlic
+  - [ ] kosher salt
+  - [ ] optional: 4 green onions, chopped
+  - [ ] optional: bean sprouts
 
 ## Recipe
 

@@ -12,8 +12,28 @@ Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawes
 ## Ingredients
 
 - [ ] CRUST
+  - [ ] 3 1/3 cups (500 grams) type 00 or all-purpose flour, plus more for the work surface
+  - [ ] 1 tsp (7 grams) kosher salt
+  - [ ] 2 tsp (8 grams) instant or active dry yeast
+  - [ ] 1 1/4 cups plus 3 tbsp (338 grams) warm water
+  - [ ] 1 tbsp (13 grams) extra-virgin olive oil, plus more as needed
+  - [ ] Semolina flour or cornmeal, for dusting
 - [ ] SAUCE
+  - [ ] 1 cup canned crushed fire-roasted tomatoes
+  - [ ] 1/4 tsp granulated garlic (a.k.a. garlic powder)
+  - [ ] 1/2 tsp dried oregano
+  - [ ] 1/4 tsp kosher salt
+  - [ ] 1 tsp extra-virgin olive oil
+  - [ ] Pinch crushed red pepper flakes
 - [ ] TOPPING
+  - [ ] 1 tsp extra-virgin olive oil
+  - [ ] 1 cup broccoli florets
+  - [ ] 1 tsp fresh lemon juice
+  - [ ] 1/8 tsp kosher salt, plus more as needed
+  - [ ] 4 oz fresh mozzarella cheese, thinly sliced
+  - [ ] 1/2 cup freshly grated Parmigiano-Reggiano or pecorino Romano cheese
+  - [ ] 1 small shallot, thinly sliced
+  - [ ] 1 tbsp capers, drained
 
 ## Recipe
 

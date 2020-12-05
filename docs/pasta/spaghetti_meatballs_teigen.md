@@ -12,7 +12,33 @@ Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawes
 ## Ingredients
 
 - [ ] For the Meatballs
+  - [ ] 1 cup fresh breadcrumbs (processed from 3-4 slices white bread)
+  - [ ] 1/4 cup milk
+  - [ ] 1 lb ground beef
+  - [ ] 1 lb ground pork
+  - [ ] 1 cup finely shredded Parmigiano Reggiano cheese, plus more for garnish
+  - [ ] 1 tbsp minced garlic
+  - [ ] 1.5 tsp kosher salt
+  - [ ] 1/2 tsp chili flakes
+  - [ ] 2 eggs plus 1 egg yolk
+  - [ ] 1/4 cup fine dry breadcrumbs
+  - [ ] 1/4 cup olive oil
 - [ ] For the Sauce
+  - [ ] 1 large onion, diced (3 cups)
+  - [ ] 2 tbsp minced garlic
+  - [ ] 1/4 cup tomato paste
+  - [ ] 1 (28-oz) plus 1 (14-oz) cans crushed tomatoes
+  - [ ] 1 (28-oz) can tomato sauce
+  - [ ] 1 tbsp dried oregano
+  - [ ] 1 tsp chili flakes
+  - [ ] 1 tsp dried thyme
+  - [ ] 1 tsp dried parsley
+  - [ ] 1 tsp dried rosemary
+  - [ ] 1 tbsp kosher salt
+  - [ ] 2 tsp sugar
+  - [ ] 3/4 lb dried spaghetti
+  - [ ] Finely grated Parmesan, for garnish
+  - [ ] Fresh basil for garnish
 
 ## Recipe
 

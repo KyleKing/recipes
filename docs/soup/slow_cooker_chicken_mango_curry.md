@@ -12,8 +12,24 @@ Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawes
 ## Ingredients
 
 - [ ] Blender
+  - [ ] 2 cups frozen mango chunks
+  - [ ] 1 small onion, quartered
+  - [ ] 4 cloves garlic 
+  - [ ] 2 tbsp brown sugar
+  - [ ] 1 tsp rice vinegar
+  - [ ] 1 tsp freshly grated ginger
+  - [ ] 1 tsp red pepper flakes
+  - [ ] 3 tbsp yellow curry paste
+  - [ ] 1/2 cup chicken broth
 - [ ] Curry
+  - [ ] 1 can coconut milk
+  - [ ] 1.5 lbs chicken breast, cubed
+  - [ ] 1 red onion, sliced
+  - [ ] 1/2 cup roasted cashews
 - [ ] Optional Garnish
+  - [ ] cilantro
+  - [ ] red chili
+  - [ ] lime wedge
 
 ## Recipe
 

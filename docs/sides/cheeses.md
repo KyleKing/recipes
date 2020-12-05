@@ -10,10 +10,13 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Ingredients
 
 - [ ] Favorite Cheeses
+  - [ ] Manchego - Alex's favorite
+  - [ ] Toscano Soaked in Syrah - good cheese from from TJ's
+  - [ ] Fontina - tried in SF with Colin
 
 ## Recipe
 
-- 
+
 
 ## Notes
 

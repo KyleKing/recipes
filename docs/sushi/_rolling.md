@@ -11,7 +11,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 ## Ingredients
 
-- [ ] 
+
 
 ## Recipe
 

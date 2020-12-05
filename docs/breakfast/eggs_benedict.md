@@ -12,8 +12,25 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Ingredients
 
 - [ ] FOR THE BENEDICT AND ASSEMBLY
+  - [ ] 4 english muffins, split
+  - [ ] 8 slices Canadian bacon or thick-cut ham
+  - [ ] 2 tbsp unsalted butter
+  - [ ] 1/4 cup chopped chives
+  - [ ] 2 tbsp parsley
+  - [ ] flaky sea salt
+  - [ ] pepper
 - [ ] FOR THE HOLLANDAISE
+  - [ ] 1/2 cup (1 stick) unsalted butter
+  - [ ] 3 large egg yolks
+  - [ ] 2 tsp fresh lemon juice (1/4 lemon)
+  - [ ] 1/4 teaspoon cayenne or hot paprika
+  - [ ] salt, kosher
+  - [ ] pepper
 - [ ] FOR THE POACHED EGGS
+  - [ ] 1 tbsp white distilled vinegar
+  - [ ] salt, kosher
+  - [ ] 8 large eggs
+  - [ ] egg poaching cups, metal or silicone
 
 ## Recipe
 

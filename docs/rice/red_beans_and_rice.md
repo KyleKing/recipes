@@ -12,7 +12,19 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 ## Ingredients
 
 - [ ] Base
+  - [ ] 2 cups white rice
+  - [ ] 2 16-oz. cans red beans, drained and rinsed (*keep 2-3 tbsp liquid)
+  - [ ] 1 lb. andouille sausage, sliced
+  - [ ] 1 bell pepper, chopped
+  - [ ] 1 onion, chopped
+  - [ ] (opt) 1 tbsp. green onions, sliced
 - [ ] Seasonings
+  - [ ] 1 tsp garlic powder (or 2 cloves)
+  - [ ] 2 tsp. cayenne pepper
+  - [ ] 1 tsp thyme (or 2 sprigs)
+  - [ ] 1 tsp. dried oregano
+  - [ ] salt & pepper
+  - [ ] 2 tsp. hot sauce
 
 ## Recipe
 

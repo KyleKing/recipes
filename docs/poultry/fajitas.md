@@ -12,8 +12,24 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 ## Ingredients
 
 - [ ] Main
+  - [ ] 3 peppers
+  - [ ] 3 tomatoes
+  - [ ] 1 lg. onion
+  - [ ] 1 can corn
+  - [ ] 1 can black beans
+  - [ ] 1 lb. chicken (~two breasts)
 - [ ] Seasonings
+  - [ ] 1 tbsp chili powder
+  - [ ] 2 tbsp vegetable oil
+  - [ ] 1/4 tsp garlic powder
+  - [ ] 1/2 tbsp corn starch
 - [ ] With
+  - [ ] 10 6-inch tortillas
+  - [ ] 2 cups of rice
+  - [ ] 1/3 bag of spinach
+  - [ ] 1/2 jar of salsa
+  - [ ] 1 fresh lime
+  - [ ] cilantro
 
 ## Recipe
 

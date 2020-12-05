@@ -11,11 +11,11 @@ Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawes
 
 ## Ingredients
 
-- [ ] 
+
 
 ## Recipe
 
-- 
+
 
 ## Notes
 
