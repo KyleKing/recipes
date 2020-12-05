@@ -19,9 +19,10 @@ poetry run doit
 """
 
 from pathlib import Path
-
+from doit.tools import LongRunning
 from dash_dev import LOGGER_CONFIG
-from dash_dev.doit_helpers.doit_globals import DIG
+from dash_dev.doit_helpers.base import debug_task
+from dash_dev.doit_helpers.doit_globals import DIG, DoItTask
 from dash_dev.registered_tasks import *  # noqa: F401,F403,H303 skipcq: PYL-W0614 (Run 'doit list' to see tasks)
 from loguru import logger
 
@@ -39,12 +40,32 @@ DOIT_CONFIG = {
         # 'coverage',
         # # 'open_test_docs',
         'set_lint_config',
-        # 'create_tag_file',
-        # 'auto_format',
+        'create_tag_file',
+        'auto_format',
         # 'document',
         # # 'open_docs',
         # 'lint_pre_commit',
-        # # 'type_checking',
+        # 'type_checking',
     ],
 }
 """DoIt Configuration Settings. Run with `poetry run doit`."""
+
+
+def task_migrate() -> DoItTask:
+    """Migrate JSON files to Markdown.
+
+    Returns:
+        DoItTask: DoIt task
+
+    """
+    return debug_task([LongRunning('poetry run python mkdocs_migrate.py')])
+
+
+def task_deploy() -> DoItTask:
+    """Deploy to Github `gh-pages` branch.
+
+    Returns:
+        DoItTask: DoIt task
+
+    """
+    return debug_task([LongRunning('poetry run mkdocs gh-deploy')])

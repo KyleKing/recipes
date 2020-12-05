@@ -1,0 +1,25 @@
+<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+
+# Shrimp Nigiri
+
+> Based on [http://www.foodrepublic.com/recipes/how-to-cook-shrimp-for-nigiri-sushi/](http://www.foodrepublic.com/recipes/how-to-cook-shrimp-for-nigiri-sushi/)
+
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+
+<!-- Image -->
+![shrimp_nigiri.jpeg](./shrimp_nigiri.jpeg){: .image-recipe loading=lazy }
+<!-- /Image -->
+
+## Ingredients
+
+* [ ] Shrimp
+* [ ] Skewer
+
+## Recipe
+
+* Skewer the shrimp between the belly and shell to keep them straight
+* Boil for 2-3 minutes until pink
+* Cool in a bowl of ice water
+* Peel off the legs, then the shell leaving the tail
+* Cut from the head to the tail only down to the intestine. Remove with the tip of the knife without piercing
+* Flatten out the shrimp and trim the tail

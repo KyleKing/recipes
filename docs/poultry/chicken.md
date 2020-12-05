@@ -7,7 +7,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
 <!-- Image -->
-![chicken.jpg](./chicken.jpg){: .image-recipe loading=lazy }
+![chicken_tacos.jpeg](./chicken_tacos.jpeg){: .image-recipe loading=lazy }
 <!-- /Image -->
 
 ## Ingredients

@@ -2,12 +2,15 @@
 
 import json
 import shutil
-from collections import defaultdict
+import sys
 from pathlib import Path
 from typing import Iterable, List, Union
 
 from funcy import lflatten
 from loguru import logger
+
+logger.remove()
+logger.add(sys.stdout, level='INFO')
 
 CWD = Path(__file__).resolve().parent
 DIST_IMG = CWD / 'dist/imgs'
@@ -105,25 +108,20 @@ if __name__ == '__main__':
     dir_json = CWD / 'database'
     dir_md = CWD / 'docs'
 
-    sub_dir_count = defaultdict(lambda: 0)
     for path_json in dir_json.glob('*/*.json'):
         sub_dir = path_json.parent.name
-        sub_dir_count[sub_dir] += 1
         logger.info(f'{sub_dir}||{path_json.stem}')
         recipe_data = json.loads(path_json.read_text())
-        if sub_dir_count[sub_dir] < 5:
-            try:
-                path_md = dir_md / sub_dir / f'{path_json.stem}.md'
-                (path_md.parent).mkdir(exist_ok=True, parents=True)
-                copy_images(path_json, path_md)
-                path_md.write_text(md_from_json(path_md, recipe_data))
-            except Exception as err:
-                from pprint import pprint
-                pprint(recipe_data)  # noqa: T003
-                logger.exception(f'For {path_json}, {err}')
-                raise
-
-    logger.info(sub_dir_count)
+        try:
+            path_md = dir_md / sub_dir / f'{path_json.stem}.md'
+            (path_md.parent).mkdir(exist_ok=True, parents=True)
+            copy_images(path_json, path_md)
+            path_md.write_text(md_from_json(path_md, recipe_data))
+        except Exception as err:
+            from pprint import pprint
+            pprint(recipe_data)  # noqa: T003
+            logger.exception(f'For {path_json}, {err}')
+            raise
 
 # TODO: Consider making an aggregate page so that the recipes are easier to find
 #   ^ possibly just photos and names for a better TOC

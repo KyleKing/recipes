@@ -5,7 +5,7 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry]
 name = "recipes"
 version = "0.0.1"
-description = "Recipes Website"
+description = "Recipe Website"
 authors = [ "Kyle King <https://github.com/KyleKing>",]
 repository = "https://github.com/kyleking/recipes"
 license = "MIT"

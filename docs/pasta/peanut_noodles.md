@@ -1,0 +1,38 @@
+<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+
+# Peanut Noodles
+
+Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+
+<!-- Image -->
+![peanut_noodles.jpg](./peanut_noodles.jpg){: .image-recipe loading=lazy }
+<!-- /Image -->
+
+## Ingredients
+
+* [ ] Garnish Options
+    * [ ] Sesame seeds (or Peanuts)
+    * [ ] Green onions, sliced
+    * [ ] Cilantro
+    * [ ] shrimp, *marinated in lime, salt, and garlic powder then sautéed*
+* [ ] Peanut Noodles
+    * [ ] linguine, egg noodles, or rice
+    * [ ] chopped baby carrots
+    * [ ] chopped shallots (a.k.a. white base of green onion)
+    * [ ] *other vegetables: peppers, broccoli, zucchini, snow peas*
+* [ ] Sauce
+    * [ ] 6 tbsp pb
+    * [ ] 1.5 tbsp hot chili oil
+    * [ ] 2 tbsp sesame oil
+    * [ ] 7 tbsp soy sauce
+    * [ ] 2 tsp cider vinegar (or white wine/rice vinegar)
+    * [ ] 1 inch fresh ginger (or 1.5 tsp cinnamon, nutmeg, or sugar)
+
+## Recipe
+
+* Mix the sauce until smooth and prep the vegetables separately
+* Boil the pasta, drain, then immediately toss with vegetables and sauce
+
+## Notes
+
+* (Original Source: My Coworkers Dani and Michael)
