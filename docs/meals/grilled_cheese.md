@@ -1,3 +1,5 @@
+<!-- Needs Manual Review -->
+
 <!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Grilled Cheese

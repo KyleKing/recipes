@@ -132,7 +132,7 @@ def _update_md(recipe_md: str, path_md: Path) -> str:
                 break
         else:
             sections.append(section)
-    return '\n\n'.join(sections)
+    return '\n\n'.join(['<!-- Needs Manual Review -->'] + sections)
 
 
 def run() -> None:
