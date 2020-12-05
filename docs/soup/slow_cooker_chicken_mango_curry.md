@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Slow Cooker Chicken Mango Curry
 
@@ -16,7 +16,7 @@ Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawes
 * [ ] Blender
     * [ ] 2 cups frozen mango chunks
     * [ ] 1 small onion, quartered
-    * [ ] 4 cloves garlic 
+    * [ ] 4 cloves garlic
     * [ ] 2 tbsp brown sugar
     * [ ] 1 tsp rice vinegar
     * [ ] 1 tsp freshly grated ginger

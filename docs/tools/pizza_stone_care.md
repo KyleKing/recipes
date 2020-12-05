@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Pizza Stone Care
 
@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=pizza_stone_care.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![pizza_stone_care.jpeg](./pizza_stone_care.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

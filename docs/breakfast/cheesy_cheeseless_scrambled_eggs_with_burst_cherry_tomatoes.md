@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Cheesy Cheeseless Scrambled Eggs With Burst Cherry Tomatoes
 
@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=cheesy_cheeseless_scrambled_eggs_with_burst_cherry_tomatoes.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![cheesy_cheeseless_scrambled_eggs_with_burst_cherry_tomatoes.jpeg](./cheesy_cheeseless_scrambled_eggs_with_burst_cherry_tomatoes.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

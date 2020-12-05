@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Baked Potatoes Instant Pot
 
@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=baked_potatoes_instant_pot.png; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![baked_potatoes_instant_pot.png](./baked_potatoes_instant_pot.png){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

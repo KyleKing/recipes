@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Brick Chicken
 
@@ -7,6 +7,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=brick_chicken.png; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![brick_chicken.png](./brick_chicken.png){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

@@ -38,6 +38,7 @@ DIG.set_paths(source_path=Path(__file__).resolve().parent)
 DOIT_CONFIG = {
     'action_string_formatting': 'old',  # Required for keyword-based tasks
     'default_tasks': [
+        'main',
         # 'export_req', 'update_cl',
         # 'coverage',
         # # 'open_test_docs',
@@ -53,14 +54,14 @@ DOIT_CONFIG = {
 """DoIt Configuration Settings. Run with `poetry run doit`."""
 
 
-def task_migrate() -> DoItTask:
-    """Migrate JSON files to Markdown.
+def task_main() -> DoItTask:
+    """Format markdown files.
 
     Returns:
         DoItTask: DoIt task
 
     """
-    return debug_task([LongRunning('poetry run python mkdocs_migrate.py')])
+    return debug_task([LongRunning('poetry run python main.py')])
 
 
 def task_serve() -> DoItTask:

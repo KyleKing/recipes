@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Chocolate Peanut Butter Bundt Cake
 
@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=chocolate_peanut_butter_bundt_cake.png; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![chocolate_peanut_butter_bundt_cake.png](./chocolate_peanut_butter_bundt_cake.png){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

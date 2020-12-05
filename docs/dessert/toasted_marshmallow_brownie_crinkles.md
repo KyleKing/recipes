@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Toasted Marshmallow Brownie Crinkles
 
@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=toasted_marshmallow_brownie_crinkles.jpg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![toasted_marshmallow_brownie_crinkles.jpg](./toasted_marshmallow_brownie_crinkles.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Breakfast Burrito
 
@@ -7,6 +7,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=breakfast_burrito.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![breakfast_burrito.jpeg](./breakfast_burrito.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Apple Crisp
 
@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=apple_crisp.png; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![apple_crisp.png](./apple_crisp.png){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

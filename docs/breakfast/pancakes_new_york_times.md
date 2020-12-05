@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Pancakes New York Times
 
@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=pancakes_new_york_times.jpg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![pancakes_new_york_times.jpg](./pancakes_new_york_times.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

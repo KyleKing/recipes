@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Coffee
 
@@ -7,6 +7,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=coffee.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![coffee.jpeg](./coffee.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->
@@ -19,5 +20,3 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 * [ ] 1.5 tsp sugar
 
 ## Recipe
-
-

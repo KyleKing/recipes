@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Blueberry Sour Cream Muffins
 
@@ -31,7 +31,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * >> Streusel
 * In a medium bowl, combine the brown sugar, flour, butter, and cinnamon. Rub with your fingers to form coarse crumbs then refrigerate until ready to use
 * >> Muffins
-* Cream butter and sugar until fluffy. Add eggs, one at a time and beat well. Sift dry ingredients together and add alternately with milk. Stir in blueberries. 
+* Cream butter and sugar until fluffy. Add eggs, one at a time and beat well. Sift dry ingredients together and add alternately with milk. Stir in blueberries.
 * Pour into greased muffin cups and sprinkle with the streusel topping
 * Bake at 375F for thirty minutes
 

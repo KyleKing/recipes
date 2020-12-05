@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Green Chile Mac
 
@@ -15,7 +15,7 @@ Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawes
 
 * [ ] 1/2 tsp kosher salt, plus more as needed
 * [ ] 8 oz dried pasta shells (medium-size)
-* [ ] 1/4 cup full-fat coconut milk (see Note) 
+* [ ] 1/4 cup full-fat coconut milk (see Note)
 * [ ] 1 tbsp extra-virgin olive oil
 * [ ] 2/3 cup low-sodium vegetable broth, or more as needed
 * [ ] 1½ tsp Dijon mustard

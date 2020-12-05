@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Chocolate Frosting Recipe
 
@@ -9,8 +9,9 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=chocolate_frosting_recipe.png; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
-![chocolate_frosting_recipe.jpeg](./chocolate_frosting_recipe.jpeg){: .image-recipe loading=lazy }
+![chocolate_frosting_recipe.png](./chocolate_frosting_recipe.png){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->
 
 ## Ingredients

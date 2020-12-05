@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Pasta With Corn Zucchini And Tomatoes
 
@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=pasta_with_corn_zucchini_and_tomatoes.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![pasta_with_corn_zucchini_and_tomatoes.jpeg](./pasta_with_corn_zucchini_and_tomatoes.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

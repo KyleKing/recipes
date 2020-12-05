@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Tomato Mozzarella Caprese
 
@@ -7,6 +7,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=tomato_mozzarella_caprese.jpg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![tomato_mozzarella_caprese.jpg](./tomato_mozzarella_caprese.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

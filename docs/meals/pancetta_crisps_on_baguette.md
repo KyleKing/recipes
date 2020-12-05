@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Pancetta Crisps On Baguette
 
@@ -7,6 +7,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=pancetta_crisps_on_baguette.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![pancetta_crisps_on_baguette.jpeg](./pancetta_crisps_on_baguette.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

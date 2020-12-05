@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Kale Sausage White Bean Soup With Parm Toasts
 
@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=kale_sausage_white_bean_soup_with_parm_toasts.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![kale_sausage_white_bean_soup_with_parm_toasts.jpeg](./kale_sausage_white_bean_soup_with_parm_toasts.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->
@@ -41,7 +42,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * Dump the beans into a bowl and mash them partially with a potato masher so some are whole and some are mashed (this will help thicken the soup)
 * Heat 1 tbsp of the oil in a large (at least 5-quart) pot over medium heat. Add the sausage and cook, stirring, until browned and no longer pink, 5 to 6 minutes. Add the onions and cook, stirring, until lightly golden, 9 to 10 minutes
 * Add the garlic and chili flakes and cook, stirring, 1 more minute. Add the flour and cook, stirring, until it is absorbed into the mixture, 1 to 2 minutes
-* Add the beans, chicken broth, salt, and pepper. Bring to a boil, then add the kale to the soup in batches so it wilts into the liquid. Reduce the heat to low and simmer, stirring occasionally, until the soup thickens, 15 to 20 minutes. Season with more salt and chili flakes to taste. 
+* Add the beans, chicken broth, salt, and pepper. Bring to a boil, then add the kale to the soup in batches so it wilts into the liquid. Reduce the heat to low and simmer, stirring occasionally, until the soup thickens, 15 to 20 minutes. Season with more salt and chili flakes to taste.
 * - Make the Parm Toasts:
 * While the soup is cooking, arrange the baguette slices on a rimmed baking sheet, brush with olive oil, season lightly with salt and pepper, then sprinkle the cheese evenly over the bread. Bake until the cheese is golden and melted and the bread is toasted, 9 to 10 minutes
 * Ladle the soup into bowls, garnish with parsley, and serve with the Parm toasts

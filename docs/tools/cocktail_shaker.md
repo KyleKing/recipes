@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Cocktail Shaker
 
@@ -7,6 +7,7 @@
 Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=cocktail_shaker.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![cocktail_shaker.jpeg](./cocktail_shaker.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

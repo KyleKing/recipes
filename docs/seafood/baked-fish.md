@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Baked-Fish
 
@@ -7,8 +7,9 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=baked-fish.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
-![baked-fish.jpg](./baked-fish.jpg){: .image-recipe loading=lazy }
+![baked-fish.jpeg](./baked-fish.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->
 
 ## Ingredients

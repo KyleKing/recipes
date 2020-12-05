@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Cherry Tomato Spaghetti
 
@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=cherry_tomato_spaghetti.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![cherry_tomato_spaghetti.jpeg](./cherry_tomato_spaghetti.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

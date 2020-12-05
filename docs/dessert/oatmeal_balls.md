@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Oatmeal Balls
 
@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=oatmeal_balls.jpg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![oatmeal_balls.jpg](./oatmeal_balls.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

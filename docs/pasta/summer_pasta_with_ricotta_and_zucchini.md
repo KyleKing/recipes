@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Summer Pasta With Ricotta And Zucchini
 
@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=summer_pasta_with_ricotta_and_zucchini.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![summer_pasta_with_ricotta_and_zucchini.jpeg](./summer_pasta_with_ricotta_and_zucchini.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->
