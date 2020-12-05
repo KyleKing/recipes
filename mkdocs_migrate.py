@@ -6,14 +6,18 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Iterable, List, Union
 
+from funcy import lflatten
 from loguru import logger
+
+CWD = Path(__file__).resolve().parent
+DIST_IMG = CWD / 'dist/imgs'
 
 ICON_FA_STAR = ':fontawesome-solid-star:'
 ICON_FA_STAR_OUT = ':fontawesome-regular-star:'
 ICON_M_STAR = ':material-star:'
 ICON_M_STAR_OUT = ':material-star-outline:'
-ICON_O_STAR = ':octicons-star-fill-24:{: .yellow }'
-ICON_O_STAR_OUT = ':octicons-star-24:{: .yellow }'
+ICON_O_STAR = ':octicons-star-fill-24:{: .yellow }'  # noqa: P103
+ICON_O_STAR_OUT = ':octicons-star-24:{: .yellow }'  # noqa: P103
 
 
 def format_source(source: str) -> str:
@@ -42,25 +46,42 @@ def format_md_list(iterator: Union[dict, Iterable], list_prefix: str = '*') -> L
 
 def format_md_task_list(iterator: Union[dict, Iterable]) -> List[str]:
     """Run format_md_list with the default list prefix set to a check or task list format."""  # noqa
-    logger.info('Starting "format_md_task_list": {iterator}', iterator=iterator)
+    logger.debug('Starting "format_md_task_list": {iterator}', iterator=iterator)
     return format_md_list(iterator, list_prefix='* [ ]')
 
 
-def image_html(path_image: str) -> str:
+def find_images(path_source: Path, parents: Iterable[Path] = (DIST_IMG, )) -> List[Path]:
+    """Find all images related to the recipe."""  # noqa
+    full = lflatten([[*parent.glob(f'*{path_source.stem}*.*g')] for parent in [*parents] + [path_source.parent]])
+    return [path_image for path_image in full if path_image.suffix != '.svg']
+
+
+def copy_images(path_json: Path, path_md: Path) -> None:
+    """Copy images from first the old output and then from the local directory."""  # noqa
+    for path_image in find_images(path_json):
+        path_image_new = path_md.parent / f'{path_md.stem}{path_image.suffix}'
+        new_is_file = path_image_new.is_file()
+        logger.debug('{action} {path_image} > {path_image_new}', action='Skipping' if new_is_file else 'Copying',
+                     path_image=path_image, path_image_new=path_image_new)
+        if not new_is_file:
+            shutil.copy2(path_image, path_image_new)
+
+
+def image_md(path_image: Path) -> str:
     """Format the image link as markdown."""  # noqa
     return '\n'.join([
-        '<!-- Start:Image (WIP: Placeholder) -->',
-        '![loading...recipe-breakfast_burrito](/imgs/breakfast-breakfast_burrito.jpeg){: .image-recipe loading=lazy }'
-        '<!-- End:Image (WIP: Placeholder) -->',
+        '<!-- Image -->',
+        f'![{path_image.name}](./{path_image.name})' + '{: .image-recipe loading=lazy }',  # noqa: P103
+        '<!-- /Image -->',
     ])
 
 
-def md_from_json(filename: str, recipe: dict) -> str:
+def md_from_json(path_md: Path, recipe: dict) -> str:
     """Convert the JSON files to a markdown string for MKDocs."""  # noqa
-    title = filename.replace('_', ' ').title()
+    title = path_md.stem.replace('_', ' ').title()
     stars = ' '.join([ICON_FA_STAR] * recipe['rating'] + [ICON_FA_STAR_OUT] * (5 - recipe['rating']))
-    image = image_html('TBD')  # HACK: need to locate the image file, which will be copied for migration
-    # ^ also ensure that all images in database/ are copied too
+    paths_image = find_images(path_md, parents=[])
+    image = image_md(paths_image[0]) if paths_image else f'<!-- TODO: Capture image for {title} -->'  # noqa: T101
     sections = [
         '<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->',
         f'# {title}' + format_source(recipe['source']),
@@ -81,7 +102,6 @@ def md_from_json(filename: str, recipe: dict) -> str:
 
 if __name__ == '__main__':
     """Convert all JSON files to markdown."""
-    CWD = Path(__file__).resolve().parent
     dir_json = CWD / 'database'
     dir_md = CWD / 'docs'
 
@@ -95,15 +115,15 @@ if __name__ == '__main__':
             try:
                 path_md = dir_md / sub_dir / f'{path_json.stem}.md'
                 (path_md.parent).mkdir(exist_ok=True, parents=True)
-                # TODO: 1-Copy and link the image
-
-                path_md.write_text(md_from_json(path_json.stem, recipe_data))
-            except Exception:
+                copy_images(path_json, path_md)
+                path_md.write_text(md_from_json(path_md, recipe_data))
+            except Exception as err:
                 from pprint import pprint
                 pprint(recipe_data)  # noqa: T003
+                logger.exception(f'For {path_json}, {err}')
                 raise
+
     logger.info(sub_dir_count)
-    # TODO: 2-Test `poetry run mkdocs gh-deploy`
 
 # TODO: Consider making an aggregate page so that the recipes are easier to find
 #   ^ possibly just photos and names for a better TOC

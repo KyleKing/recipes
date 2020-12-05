@@ -4,8 +4,9 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
-<!-- Start:Image (WIP: Placeholder) -->
-![loading...recipe-breakfast_burrito](/imgs/breakfast-breakfast_burrito.jpeg){: .image-recipe loading=lazy }<!-- End:Image (WIP: Placeholder) -->
+<!-- Image -->
+![aunt_laura's_spicy_chicken_dip.jpeg](./aunt_laura's_spicy_chicken_dip.jpeg){: .image-recipe loading=lazy }
+<!-- /Image -->
 
 ## Ingredients
 

@@ -6,8 +6,9 @@
 
 Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
-<!-- Start:Image (WIP: Placeholder) -->
-![loading...recipe-breakfast_burrito](/imgs/breakfast-breakfast_burrito.jpeg){: .image-recipe loading=lazy }<!-- End:Image (WIP: Placeholder) -->
+<!-- Image -->
+![emily_english_roasted_potatoes.jpeg](./emily_english_roasted_potatoes.jpeg){: .image-recipe loading=lazy }
+<!-- /Image -->
 
 ## Ingredients
 
