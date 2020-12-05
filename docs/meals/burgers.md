@@ -4,11 +4,14 @@
 
 > Based on [https://www.youtube.com/watch?v=ERUugjLmwuY](https://www.youtube.com/watch?v=ERUugjLmwuY)
 
+<!-- rating=2; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
-<!-- Image -->
+<!-- AUTO-Image -->
 ![burgers.jpeg](./burgers.jpeg){: .image-recipe loading=lazy }
-<!-- /Image -->
+<!-- /AUTO-Image -->
 
 ## Ingredients
 

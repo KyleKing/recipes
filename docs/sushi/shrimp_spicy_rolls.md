@@ -4,11 +4,14 @@
 
 > Based on [http://fromgatetoplate.com/2014/04/14/spicy-shrimp-sushi-rolls/](http://fromgatetoplate.com/2014/04/14/spicy-shrimp-sushi-rolls/)
 
+<!-- rating=1; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
-<!-- Image -->
+<!-- AUTO-Image -->
 ![shrimp_spicy_rolls.jpeg](./shrimp_spicy_rolls.jpeg){: .image-recipe loading=lazy }
-<!-- /Image -->
+<!-- /AUTO-Image -->
 
 ## Ingredients
 

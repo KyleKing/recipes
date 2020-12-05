@@ -4,11 +4,14 @@
 
 > Based on [https://www.brewinghappiness.com/5-minute-chickpea-salad-wraps/](https://www.brewinghappiness.com/5-minute-chickpea-salad-wraps/)
 
+<!-- rating=2; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
-<!-- Image -->
+<!-- AUTO-Image -->
 ![chickpea_salad_wrap.jpeg](./chickpea_salad_wrap.jpeg){: .image-recipe loading=lazy }
-<!-- /Image -->
+<!-- /AUTO-Image -->
 
 ## Ingredients
 

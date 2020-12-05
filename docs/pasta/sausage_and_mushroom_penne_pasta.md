@@ -4,11 +4,14 @@
 
 > Based on [http://www.budgetbytes.com/2014/04/one-pot-sausage-mushroom-pasta/](http://www.budgetbytes.com/2014/04/one-pot-sausage-mushroom-pasta/)
 
+<!-- rating=3; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
-<!-- Image -->
+<!-- AUTO-Image -->
 ![sausage_and_mushroom_penne_pasta.jpg](./sausage_and_mushroom_penne_pasta.jpg){: .image-recipe loading=lazy }
-<!-- /Image -->
+<!-- /AUTO-Image -->
 
 ## Ingredients
 

@@ -4,11 +4,14 @@
 
 > Based on [https://smile.amazon.com/dp/B01MR8VVAZ/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1](https://smile.amazon.com/dp/B01MR8VVAZ/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)
 
+<!-- rating=3; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
-<!-- Image -->
+<!-- AUTO-Image -->
 ![french_onion_soup.jpeg](./french_onion_soup.jpeg){: .image-recipe loading=lazy }
-<!-- /Image -->
+<!-- /AUTO-Image -->
 
 ## Ingredients
 

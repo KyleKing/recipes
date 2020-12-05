@@ -4,11 +4,14 @@
 
 > Based on [https://makemysushi.com/Recipes/canned-spicy-tuna-sushi-roll-twist](https://makemysushi.com/Recipes/canned-spicy-tuna-sushi-roll-twist)
 
+<!-- rating=1; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
-<!-- Image -->
+<!-- AUTO-Image -->
 ![canned_spicy_tuna_roll.jpg](./canned_spicy_tuna_roll.jpg){: .image-recipe loading=lazy }
-<!-- /Image -->
+<!-- /AUTO-Image -->
 
 ## Ingredients
 

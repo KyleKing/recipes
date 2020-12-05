@@ -4,7 +4,10 @@
 
 > Based on [https://cookieandkate.com/2010/baked-sweet-potato-fries/](https://cookieandkate.com/2010/baked-sweet-potato-fries/)
 
+<!-- rating=0; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
 <!-- TODO: Capture image for Crispy Baked Sweet Potato Fries -->
 

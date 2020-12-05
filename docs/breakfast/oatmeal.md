@@ -4,11 +4,14 @@
 
 > Based on [https://www.modernhoney.com/the-oatmeal-love-bar/](https://www.modernhoney.com/the-oatmeal-love-bar/)
 
+<!-- rating=1; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
-<!-- Image -->
+<!-- AUTO-Image -->
 ![oatmeal.jpeg](./oatmeal.jpeg){: .image-recipe loading=lazy }
-<!-- /Image -->
+<!-- /AUTO-Image -->
 
 ## Ingredients
 

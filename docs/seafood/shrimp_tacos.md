@@ -4,7 +4,10 @@
 
 > Based on [http://www.yummly.co/recipe/Honey-Lime-Shrimp-Tacos-1576139](http://www.yummly.co/recipe/Honey-Lime-Shrimp-Tacos-1576139)
 
+<!-- rating=0; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
 <!-- TODO: Capture image for Shrimp Tacos -->
 

@@ -4,11 +4,14 @@
 
 > Based on [https://www.amazon.com/Cravings-Recipes-All-Food-Want/dp/1101903910](https://www.amazon.com/Cravings-Recipes-All-Food-Want/dp/1101903910)
 
+<!-- rating=3; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
-<!-- Image -->
+<!-- AUTO-Image -->
 ![cheesy_cheeseless_scrambled_eggs_with_burst_cherry_tomatoes.jpeg](./cheesy_cheeseless_scrambled_eggs_with_burst_cherry_tomatoes.jpeg){: .image-recipe loading=lazy }
-<!-- /Image -->
+<!-- /AUTO-Image -->
 
 ## Ingredients
 

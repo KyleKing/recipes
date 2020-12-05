@@ -4,7 +4,10 @@
 
 > Based on [https://tasty.co/recipe/no-bake-chocolate-peanut-butter-m-m-balls](https://tasty.co/recipe/no-bake-chocolate-peanut-butter-m-m-balls)
 
+<!-- rating=0; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
 <!-- TODO: Capture image for Chocolate-Pb-M&M Balls -->
 

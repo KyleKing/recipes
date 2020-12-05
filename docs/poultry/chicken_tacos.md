@@ -4,11 +4,14 @@
 
 > Based on [https://www.lecremedelacrumb.com/instant-pot-shredded-chicken-tacos/](https://www.lecremedelacrumb.com/instant-pot-shredded-chicken-tacos/)
 
+<!-- rating=3; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
-<!-- Image -->
+<!-- AUTO-Image -->
 ![chicken_tacos.jpeg](./chicken_tacos.jpeg){: .image-recipe loading=lazy }
-<!-- /Image -->
+<!-- /AUTO-Image -->
 
 ## Ingredients
 

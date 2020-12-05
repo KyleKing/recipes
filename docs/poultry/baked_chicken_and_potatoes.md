@@ -4,11 +4,14 @@
 
 > Based on [https://aseasyasapplepie.com/one-pan-baked-chicken-and-potatoes/](https://aseasyasapplepie.com/one-pan-baked-chicken-and-potatoes/)
 
+<!-- rating=2; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
-<!-- Image -->
+<!-- AUTO-Image -->
 ![baked_chicken_and_potatoes.jpeg](./baked_chicken_and_potatoes.jpeg){: .image-recipe loading=lazy }
-<!-- /Image -->
+<!-- /AUTO-Image -->
 
 ## Ingredients
 

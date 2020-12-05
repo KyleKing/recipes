@@ -4,11 +4,14 @@
 
 > Based on [https://cooking.nytimes.com/recipes/1015813-gingerbread-cookies](https://cooking.nytimes.com/recipes/1015813-gingerbread-cookies)
 
+<!-- rating=1; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
-<!-- Image -->
+<!-- AUTO-Image -->
 ![gingerbread_cookies.jpeg](./gingerbread_cookies.jpeg){: .image-recipe loading=lazy }
-<!-- /Image -->
+<!-- /AUTO-Image -->
 
 ## Ingredients
 

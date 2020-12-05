@@ -31,6 +31,16 @@ def format_source(source: str) -> str:
     return ''
 
 
+def format_stars(rating: int) -> str:
+    """Format the star rating as markdown."""  # noqa
+    return '\n'.join([
+        f'<!-- rating={rating}; (User can specify rating on scale of 1-5) -->',
+        '<!-- AUTO-UserRating -->',
+        'Personal rating: ' + ' '.join([ICON_FA_STAR] * rating + [ICON_FA_STAR_OUT] * (5 - rating)),
+        '<!-- /AUTO-UserRating -->',
+    ])
+
+
 def format_md_list(iterator: Union[dict, Iterable], list_prefix: str = '*') -> List[str]:
     """Recursively format a markdown list interpretting a dictionary as a multi-level list."""  # noqa
     out = []
@@ -87,22 +97,21 @@ def copy_images(path_json: Path, path_md: Path) -> None:
 def image_md(path_image: Path) -> str:
     """Format the image link as markdown."""  # noqa
     return '\n'.join([
-        '<!-- Image -->',
+        '<!-- AUTO-Image -->',
         f'![{path_image.name}](./{path_image.name})' + '{: .image-recipe loading=lazy }',  # noqa: P103
-        '<!-- /Image -->',
+        '<!-- /AUTO-Image -->',
     ])
 
 
 def md_from_json(path_md: Path, recipe: dict) -> str:
     """Convert the JSON files to a markdown string for MKDocs."""  # noqa
     title = path_md.stem.replace('_', ' ').title()
-    stars = ' '.join([ICON_FA_STAR] * recipe['rating'] + [ICON_FA_STAR_OUT] * (5 - recipe['rating']))
     paths_image = find_images(path_md, parents=[])
     image = image_md(paths_image[0]) if paths_image else f'<!-- TODO: Capture image for {title} -->'  # noqa: T101
     sections = [
         '<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->',
         f'# {title}' + format_source(recipe['source']),
-        'Personal rating: ' + stars,
+        format_stars(recipe['rating']),
         image,
         '## Ingredients',
         '\n'.join(format_md_task_list(recipe['ingredients'])),
@@ -136,6 +145,3 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
-
-# TODO: Consider making an aggregate page so that the recipes are easier to find
-#   ^ possibly just photos and names for a better TOC

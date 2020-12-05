@@ -4,11 +4,14 @@
 
 > Based on [http://www.delish.com/cooking/recipe-ideas/recipes/a54954/easy-red-beans-and-rice-recipe/](http://www.delish.com/cooking/recipe-ideas/recipes/a54954/easy-red-beans-and-rice-recipe/)
 
+<!-- rating=1; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
-<!-- Image -->
+<!-- AUTO-Image -->
 ![red_beans_and_rice.jpeg](./red_beans_and_rice.jpeg){: .image-recipe loading=lazy }
-<!-- /Image -->
+<!-- /AUTO-Image -->
 
 ## Ingredients
 

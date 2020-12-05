@@ -4,11 +4,14 @@
 
 > Based on [https://recipes.instantpot.com/recipe/pressure-cooker-sushi-rice/](https://recipes.instantpot.com/recipe/pressure-cooker-sushi-rice/)
 
+<!-- rating=1; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
-<!-- Image -->
+<!-- AUTO-Image -->
 ![_rice.jpeg](./_rice.jpeg){: .image-recipe loading=lazy }
-<!-- /Image -->
+<!-- /AUTO-Image -->
 
 ## Ingredients
 

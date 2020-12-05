@@ -4,7 +4,10 @@
 
 > Based on [https://cooking.nytimes.com/recipes/1019804-honey-and-soy-glazed-chicken-thighs?action=click&module=Global%20Search%20Recipe%20Card&pgType=search&rank=1](https://cooking.nytimes.com/recipes/1019804-honey-and-soy-glazed-chicken-thighs?action=click&module=Global%20Search%20Recipe%20Card&pgType=search&rank=1)
 
+<!-- rating=0; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
 <!-- TODO: Capture image for Honey And Soy Glazed Chicken Thighs -->
 

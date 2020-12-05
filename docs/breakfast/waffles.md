@@ -4,11 +4,14 @@
 
 > Based on [http://www.geniuskitchen.com/recipe/the-best-belgian-waffles-63071](http://www.geniuskitchen.com/recipe/the-best-belgian-waffles-63071)
 
+<!-- rating=1; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
-<!-- Image -->
+<!-- AUTO-Image -->
 ![waffles.jpg](./waffles.jpg){: .image-recipe loading=lazy }
-<!-- /Image -->
+<!-- /AUTO-Image -->
 
 ## Ingredients
 

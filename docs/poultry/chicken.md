@@ -4,11 +4,14 @@
 
 > Based on [https://www.craftsy.com/blog/2014/04/baked-chicken-breast-recipe/](https://www.craftsy.com/blog/2014/04/baked-chicken-breast-recipe/)
 
+<!-- rating=1; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
-<!-- Image -->
+<!-- AUTO-Image -->
 ![chicken.jpg](./chicken.jpg){: .image-recipe loading=lazy }
-<!-- /Image -->
+<!-- /AUTO-Image -->
 
 ## Ingredients
 

@@ -4,11 +4,14 @@
 
 > Based on [https://www.washingtonpost.com/recipes/veggie-loaded-red-curry/17022/](https://www.washingtonpost.com/recipes/veggie-loaded-red-curry/17022/)
 
+<!-- rating=3; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
-<!-- Image -->
+<!-- AUTO-Image -->
 ![veggie_loaded_red_curry.jpeg](./veggie_loaded_red_curry.jpeg){: .image-recipe loading=lazy }
-<!-- /Image -->
+<!-- /AUTO-Image -->
 
 ## Ingredients
 

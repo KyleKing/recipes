@@ -4,11 +4,14 @@
 
 > Based on [https://amindfullmom.com/instant-pot-baked-potatoes/](https://amindfullmom.com/instant-pot-baked-potatoes/)
 
+<!-- rating=1; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
-<!-- Image -->
+<!-- AUTO-Image -->
 ![baked_potatoes_instant_pot.png](./baked_potatoes_instant_pot.png){: .image-recipe loading=lazy }
-<!-- /Image -->
+<!-- /AUTO-Image -->
 
 ## Ingredients
 

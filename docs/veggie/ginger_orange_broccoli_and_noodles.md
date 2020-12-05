@@ -4,11 +4,14 @@
 
 > Based on [https://www.washingtonpost.com/recipes/ginger-orange-broccoli-and-noodles/17014/](https://www.washingtonpost.com/recipes/ginger-orange-broccoli-and-noodles/17014/)
 
+<!-- rating=0; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
-<!-- Image -->
+<!-- AUTO-Image -->
 ![ginger_orange_broccoli_and_noodles.jpeg](./ginger_orange_broccoli_and_noodles.jpeg){: .image-recipe loading=lazy }
-<!-- /Image -->
+<!-- /AUTO-Image -->
 
 ## Ingredients
 

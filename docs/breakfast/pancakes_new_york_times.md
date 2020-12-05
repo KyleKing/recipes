@@ -4,11 +4,14 @@
 
 > Based on [https://cooking.nytimes.com/recipes/1893-everyday-pancakes](https://cooking.nytimes.com/recipes/1893-everyday-pancakes)
 
+<!-- rating=2; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
-<!-- Image -->
+<!-- AUTO-Image -->
 ![pancakes_new_york_times.jpg](./pancakes_new_york_times.jpg){: .image-recipe loading=lazy }
-<!-- /Image -->
+<!-- /AUTO-Image -->
 
 ## Ingredients
 

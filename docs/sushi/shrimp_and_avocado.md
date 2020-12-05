@@ -4,7 +4,10 @@
 
 > Based on [https://www.geniuskitchen.com/recipe/avocado-and-shrimp-sushi-331300](https://www.geniuskitchen.com/recipe/avocado-and-shrimp-sushi-331300)
 
+<!-- rating=1; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
 <!-- TODO: Capture image for Shrimp And Avocado -->
 

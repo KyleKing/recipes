@@ -4,7 +4,10 @@
 
 > Based on [https://makemysushi.com/Recipes/make-smoked-salmon-nigiri](https://makemysushi.com/Recipes/make-smoked-salmon-nigiri)
 
+<!-- rating=1; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
 <!-- TODO: Capture image for Smoked Salmon Nigiri -->
 

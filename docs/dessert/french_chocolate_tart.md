@@ -4,7 +4,10 @@
 
 > Based on [https://www.shortstackeditions.com/blogs/news/recipe-french-chocolate-tart](https://www.shortstackeditions.com/blogs/news/recipe-french-chocolate-tart)
 
+<!-- rating=2; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
 <!-- TODO: Capture image for French Chocolate Tart -->
 

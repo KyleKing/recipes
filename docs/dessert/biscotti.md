@@ -4,11 +4,14 @@
 
 > Based on [https://www.kingarthurflour.com/recipes/vanilla-biscotti-recipe](https://www.kingarthurflour.com/recipes/vanilla-biscotti-recipe)
 
+<!-- rating=3; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
-<!-- Image -->
+<!-- AUTO-Image -->
 ![biscotti.jpg](./biscotti.jpg){: .image-recipe loading=lazy }
-<!-- /Image -->
+<!-- /AUTO-Image -->
 
 ## Ingredients
 

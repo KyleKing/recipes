@@ -4,11 +4,14 @@
 
 > Based on [https://www.allrecipes.com/recipe/149221/cajun-spice-mix/](https://www.allrecipes.com/recipe/149221/cajun-spice-mix/)
 
+<!-- rating=1; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
-<!-- Image -->
+<!-- AUTO-Image -->
 ![spicy_cajun_sausage_and_rice.jpeg](./spicy_cajun_sausage_and_rice.jpeg){: .image-recipe loading=lazy }
-<!-- /Image -->
+<!-- /AUTO-Image -->
 
 ## Ingredients
 

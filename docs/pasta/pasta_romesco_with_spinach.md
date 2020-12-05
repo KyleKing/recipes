@@ -4,7 +4,10 @@
 
 > Based on [https://www.washingtonpost.com/recipes/pasta-romesco-spinach/17100/?utm_campaign=plant_powered_week_10&utm_medium=Email&utm_source=Newsletter&wpisrc=nl_vplantpowered_w10&wpmm=1](https://www.washingtonpost.com/recipes/pasta-romesco-spinach/17100/?utm_campaign=plant_powered_week_10&utm_medium=Email&utm_source=Newsletter&wpisrc=nl_vplantpowered_w10&wpmm=1)
 
+<!-- rating=0; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
 <!-- TODO: Capture image for Pasta Romesco With Spinach -->
 

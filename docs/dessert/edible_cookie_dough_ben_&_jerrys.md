@@ -4,7 +4,10 @@
 
 > Based on [https://people.com/food/ben-jerrys-shared-their-edible-cookie-dough-recipe-so-you-can-make-it-at-home/](https://people.com/food/ben-jerrys-shared-their-edible-cookie-dough-recipe-so-you-can-make-it-at-home/)
 
+<!-- rating=0; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
 Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
 
 <!-- TODO: Capture image for Edible Cookie Dough Ben & Jerrys -->
 
