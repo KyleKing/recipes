@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Wine
 
@@ -16,13 +16,13 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Ingredients
 
 * [ ] 1-sparkling wine
-    * [ ] 
+    * [ ]
 * [ ] 2-light-bodied white
-    * [ ] 
+    * [ ]
 * [ ] 3-full-bodied white
-    * [ ] 
+    * [ ]
 * [ ] 4-aromatic-sweet white
-    * [ ] 
+    * [ ]
 * [ ] 5-rose
     * [ ] Barton & Guestier Cotes de Provence 'Passport'
 * [ ] 6-light-bodied red
@@ -30,7 +30,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * [ ] 7-medium-bodied red
     * [ ] Badet Clement Revelation Cabernet-Merlot 2017
 * [ ] 8-full-bodied red
-    * [ ] 
+    * [ ]
 * [ ] 9-dessert wine
     * [ ] Jimmy Red Roo
 * [ ] Recommended

@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Peach Blueberry Crisp
 
@@ -16,7 +16,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Ingredients
 
 * [ ] PEACH BLUEBERRY FILLING
-    * [ ] 4 cups peaches, peeled and sliced 
+    * [ ] 4 cups peaches, peeled and sliced
     * [ ] 1 cup blueberries
     * [ ] 1 tbsp lemon juice
     * [ ] 1/2 tsp Pure Vanilla Extract

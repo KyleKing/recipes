@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Hard Boiled Eggs
 
@@ -25,4 +25,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Notes
 
 * Fresher eggs will take slightly longer to peel. The eggs in this recipe should be cooked straight from the refrigerator; reduce cooking times by 1 minute if using room-temperature eggs
-* Great for salads, with stir fry and rice, ramen (add in last minute of cooking to warm the egg), 
+* Great for salads, with stir fry and rice, ramen (add in last minute of cooking to warm the egg),

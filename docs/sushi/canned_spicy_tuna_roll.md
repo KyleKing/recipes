@@ -1,4 +1,4 @@
-<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Canned Spicy Tuna Roll
 
@@ -37,4 +37,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 ## Notes
 
-* See guide on using raw tuna: 
+* See guide on using raw tuna:

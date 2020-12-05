@@ -109,7 +109,7 @@ def md_from_json(path_md: Path, recipe: dict) -> str:
     paths_image = find_images(path_md, parents=[])
     image = image_md(paths_image[0]) if paths_image else f'<!-- TODO: Capture image for {title} -->'  # noqa: T101
     sections = [
-        '<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->',
+        '<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->',
         f'# {title}' + format_source(recipe['source']),
         format_stars(recipe['rating']),
         image,
@@ -144,4 +144,6 @@ def main() -> None:
 
 
 if __name__ == '__main__':
+    raise NotImplementedError('JSON files have already been migrated')
+
     main()
