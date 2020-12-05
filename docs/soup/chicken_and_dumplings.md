@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=chicken_and_dumplings.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![chicken_and_dumplings.jpeg](./chicken_and_dumplings.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

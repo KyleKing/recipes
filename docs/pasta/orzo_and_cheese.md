@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=orzo_and_cheese.jpg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![orzo_and_cheese.jpg](./orzo_and_cheese.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

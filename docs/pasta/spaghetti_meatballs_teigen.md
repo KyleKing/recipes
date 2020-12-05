@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=spaghetti_meatballs_teigen.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![spaghetti_meatballs_teigen.jpeg](./spaghetti_meatballs_teigen.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

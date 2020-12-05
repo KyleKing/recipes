@@ -7,6 +7,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=cake_pops.jpg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![cake_pops.jpg](./cake_pops.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

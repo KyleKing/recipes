@@ -7,6 +7,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=mini_pizza.jpg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![mini_pizza.jpg](./mini_pizza.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

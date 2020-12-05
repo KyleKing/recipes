@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=mint_chocolate_chunk.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![mint_chocolate_chunk.jpeg](./mint_chocolate_chunk.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=emily_english_roasted_potatoes.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![emily_english_roasted_potatoes.jpeg](./emily_english_roasted_potatoes.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

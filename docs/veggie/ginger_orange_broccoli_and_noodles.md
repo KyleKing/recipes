@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=ginger_orange_broccoli_and_noodles.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![ginger_orange_broccoli_and_noodles.jpeg](./ginger_orange_broccoli_and_noodles.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

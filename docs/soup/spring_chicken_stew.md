@@ -7,6 +7,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=spring_chicken_stew.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![spring_chicken_stew.jpeg](./spring_chicken_stew.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

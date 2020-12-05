@@ -7,6 +7,7 @@
 Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=margarita.png; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![margarita.png](./margarita.png){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=baked_potatoes.jpg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![baked_potatoes.jpg](./baked_potatoes.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

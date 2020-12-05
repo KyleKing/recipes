@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=chana_masala.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![chana_masala.jpeg](./chana_masala.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

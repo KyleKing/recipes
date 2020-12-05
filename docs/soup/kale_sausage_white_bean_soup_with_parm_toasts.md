@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=kale_sausage_white_bean_soup_with_parm_toasts.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![kale_sausage_white_bean_soup_with_parm_toasts.jpeg](./kale_sausage_white_bean_soup_with_parm_toasts.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

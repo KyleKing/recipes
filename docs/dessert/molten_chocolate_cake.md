@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=molten_chocolate_cake.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![molten_chocolate_cake.jpeg](./molten_chocolate_cake.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

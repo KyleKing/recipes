@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=chocolate_peanut_butter_glaze.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![chocolate_peanut_butter_glaze.jpeg](./chocolate_peanut_butter_glaze.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

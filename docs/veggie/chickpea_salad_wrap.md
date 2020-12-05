@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=chickpea_salad_wrap.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![chickpea_salad_wrap.jpeg](./chickpea_salad_wrap.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

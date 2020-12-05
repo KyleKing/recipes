@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=porcelain_pot_care.png; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![porcelain_pot_care.png](./porcelain_pot_care.png){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

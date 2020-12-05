@@ -7,6 +7,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=slow_cooker_chicken_tortilla_soup.jpg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![slow_cooker_chicken_tortilla_soup.jpg](./slow_cooker_chicken_tortilla_soup.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

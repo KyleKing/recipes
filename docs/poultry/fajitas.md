@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=fajitas.jpg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![fajitas.jpg](./fajitas.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

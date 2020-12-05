@@ -7,6 +7,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=gyros.jpg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![gyros.jpg](./gyros.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

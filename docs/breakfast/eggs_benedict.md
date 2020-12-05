@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=eggs_benedict.jpg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![eggs_benedict.jpg](./eggs_benedict.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

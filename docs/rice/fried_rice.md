@@ -7,6 +7,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=fried_rice.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![fried_rice.jpeg](./fried_rice.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

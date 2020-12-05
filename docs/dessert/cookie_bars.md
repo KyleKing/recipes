@@ -7,6 +7,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=cookie_bars.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![cookie_bars.jpeg](./cookie_bars.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

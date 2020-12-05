@@ -9,6 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
+<!-- name_image=spicy_cajun_sausage_and_rice.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
 ![spicy_cajun_sausage_and_rice.jpeg](./spicy_cajun_sausage_and_rice.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->
