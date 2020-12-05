@@ -11,9 +11,9 @@
 Personal rating: *Not yet rated*
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=porcelain_pot_care.png; (User can specify image name if multiple exist) -->
+<!-- name_image=porcelain_pot_care.jpg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
-![porcelain_pot_care.png](./porcelain_pot_care.png){: .image-recipe loading=lazy }
+![porcelain_pot_care.jpg](./porcelain_pot_care.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->
 
 ## Ingredients

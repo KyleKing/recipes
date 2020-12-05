@@ -5,6 +5,8 @@ import webbrowser
 from dash_dev.doit_helpers.base import debug_task
 from dash_dev.doit_helpers.doit_globals import DoItTask
 from doit.tools import LongRunning
+from loguru import logger
+from PIL import Image
 
 from .formatter import DIR_MD
 
@@ -42,6 +44,14 @@ def task_deploy() -> DoItTask:
     return debug_task([LongRunning('poetry run mkdocs gh-deploy')])
 
 
+def _convert_png_to_jpg() -> None:
+    """Convert any remaining PNG files to jpg."""
+    for path_png in DIR_MD.glob('*/*.png'):
+        logger.warning(f'COnvert to jpg and deleting original for: {path_png}')
+        Image.open(path_png).save(path_png.parent / f'{path_png.stem}.jpg')
+        path_png.unlink()
+
+
 def task_compress() -> DoItTask:
     """Compress images.
 
@@ -50,7 +60,6 @@ def task_compress() -> DoItTask:
 
     """
     return debug_task([
-        LongRunning(f'poetry run optimize-images {DIR_MD}/ -mh 700 -mh 900'),
-        # TODO: --convert-all
-        # TODO: progressive JPEG?
+        LongRunning(f'poetry run optimize-images {DIR_MD}/ -mh 700 -mh 900 --convert-all --force-delete'),
+        (_convert_png_to_jpg, ),
     ])

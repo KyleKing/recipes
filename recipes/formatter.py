@@ -8,6 +8,9 @@ from loguru import logger
 CWD = Path(__file__).resolve().parents[1]
 DIR_MD = CWD / 'docs'
 
+# =====================================================================================
+# Utilities for updating Markdown
+
 _ICON_FA_STAR = ':fontawesome-solid-star:'
 _ICON_FA_STAR_OUT = ':fontawesome-regular-star:'
 _ICON_M_STAR = ':material-star:'
@@ -69,7 +72,7 @@ def _format_stars(section: str, path_md: Path) -> str:
     ])
 
 
-def _image_md(section: str, path_md: Path) -> str:
+def _format_image_md(section: str, path_md: Path) -> str:
     """Format the string section with the specified image name.
 
     Args:
@@ -93,7 +96,7 @@ def _image_md(section: str, path_md: Path) -> str:
     ])
 
 
-def _match_todo(section: str, _path_md: Path) -> str:
+def _check_todo(section: str, _path_md: Path) -> str:
     """Pass-through to identify sections that contain a task."""  # noqa:
     logger.warning(f'Found TODO {section}')  # noqa: T101
     return section
@@ -119,9 +122,9 @@ def _update_md(recipe_md: str, path_md: Path) -> str:
     startswith_lookup = {
         '<!-- Do not modify sections with ': _format_header,
         '<!-- rating=': _format_stars,
-        '<!-- name_image=': _image_md,
+        '<!-- name_image=': _format_image_md,
         '<!-- Do not modify sections with ': _format_header,
-        '<!-- TODO': _match_todo,  # noqa: T101
+        '<!-- TODO': _check_todo,  # noqa: T101
         '<!-- ': _check_unknown,
     }
     sections = []
@@ -132,11 +135,16 @@ def _update_md(recipe_md: str, path_md: Path) -> str:
                 break
         else:
             sections.append(section)
-    return '\n\n'.join(['<!-- Needs Manual Review -->'] + sections)
+    return '\n\n'.join(sections)
 
 
-def run() -> None:
-    """Convert all JSON files to markdown."""
+def _write_auto_gen() -> None:
+    """Update auto-generated markdown contents."""
     for path_md in DIR_MD.glob('*/*.md'):
         logger.info('> {path_md}', path_md=path_md)
         path_md.write_text(_update_md(path_md.read_text(), path_md))
+
+
+def run() -> None:
+    """Format the markdown files."""
+    _write_auto_gen()

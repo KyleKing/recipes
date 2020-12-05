@@ -11,9 +11,9 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=chocolate_peanut_butter_bundt_cake.png; (User can specify image name if multiple exist) -->
+<!-- name_image=chocolate_peanut_butter_bundt_cake.jpg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
-![chocolate_peanut_butter_bundt_cake.png](./chocolate_peanut_butter_bundt_cake.png){: .image-recipe loading=lazy }
+![chocolate_peanut_butter_bundt_cake.jpg](./chocolate_peanut_butter_bundt_cake.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->
 
 ## Ingredients
