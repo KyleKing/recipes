@@ -1,6 +1,8 @@
 """Convert JSON files to markdown for mkdocs."""
 
 import json
+import shutil
+from collections import defaultdict
 from pathlib import Path
 from pprint import pprint
 
@@ -22,7 +24,7 @@ def image_html(path_image: str) -> str:
 
     return '\n'.join([
         '<!-- Start:Image (WIP: Placeholder) -->',
-        '![recipe-breakfast_burrito](/dist/imgs/breakfast-breakfast_burrito.jpeg){: .image-recipe loading=lazy }'
+        '![loading...recipe-breakfast_burrito](/imgs/breakfast-breakfast_burrito.jpeg){: .image-recipe loading=lazy }'
         '<!-- End:Image (WIP: Placeholder) -->',
     ])
 
@@ -57,20 +59,22 @@ if __name__ == '__main__':
     dir_json = CWD / 'database'
     dir_md = CWD / 'docs'
 
+    sub_dir_count = defaultdict(lambda: 0)
     for path_json in dir_json.glob('*/*.json'):
         sub_dir = path_json.parent.name
-        logger.info(f'{sub_dir}||{path_json.stem}')
-        recipe_data = json.loads(path_json.read_text())
-        pprint(recipe_data)
+        sub_dir_count[sub_dir] += 1
+        if sub_dir_count[sub_dir] < 5:
+            logger.info(f'{sub_dir}||{path_json.stem}')
+            recipe_data = json.loads(path_json.read_text())
+            pprint(recipe_data)
 
-        path_md = dir_md / sub_dir / f'{path_json.stem}.md'
-        (path_md.parent).mkdir(exist_ok=True, parents=True)
-        # TODO: 1-Copy and link the image
+            path_md = dir_md / sub_dir / f'{path_json.stem}.md'
+            (path_md.parent).mkdir(exist_ok=True, parents=True)
+            # TODO: 1-Copy and link the image
 
-        path_md.write_text(md_from_json(path_json.stem, recipe_data))
+            path_md.write_text(md_from_json(path_json.stem, recipe_data))
 
-        break
-
+    logger.info(sub_dir_count)
     # TODO: 2-Test `mkdocs gh-deploy`
 
 # TODO: Consider making an aggregate page so that the recipes are easier to find

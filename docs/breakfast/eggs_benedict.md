@@ -1,0 +1,34 @@
+<!-- Do not modify. Auto-generated with mkdocs_migrate.py -->
+
+# Eggs Benedict
+
+> Based on [https://cooking.nytimes.com/recipes/1018626-eggs-benedict](https://cooking.nytimes.com/recipes/1018626-eggs-benedict)
+
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
+
+<!-- Start:Image (WIP: Placeholder) -->
+![loading...recipe-breakfast_burrito](/imgs/breakfast-breakfast_burrito.jpeg){: .image-recipe loading=lazy }<!-- End:Image (WIP: Placeholder) -->
+
+## Ingredients
+
+- [ ] FOR THE BENEDICT AND ASSEMBLY
+- [ ] FOR THE HOLLANDAISE
+- [ ] FOR THE POACHED EGGS
+
+## Recipe
+
+- Melt butter, pour in glass juicer, prep lemon and cayenne in cup then check blender speed. Let cool slightly if using a plastic blender
+- Cut up fruit for side dish and prep table
+- Make the hollandaise:
+- > Melt butter in a small pot over medium heat until it’s foamy but not yet beginning to brown, 3 to 4 minutes
+- > Place egg yolks and 2-3 tsp water in a blender. Start blending and very slowly add the hot, melted butter until incorporated then add the lemon juice, cayenne, salt, and pepper
+- > Transfer the hollandaise to a small bowl, and place plastic wrap directly on the surface so it doesn’t form a skin. Set aside at room temperature.
+- In parallel
+- > Cook Canadian bacon or ham (or bacon) in a medium skillet over medium–high heat until golden brown and just crisp at the edges, about 6 minutes.
+- > Poach the eggs: Fill a lidded pan with water up to the edge of the egg poaching cups and begin heating. Once boiling, poach the eggs for ~6 minutes or until slightly firm, but still runny. Will need to do two batches of four.
+- > Throughly toast the English muffins until crisp and golden brown--they will need to be sturdy
+- Assemble the Benedict: Butter the eight halves of English muffin on a plate and butter them generously. Top each with a slice of selected meat, poached egg, then spoon hollandaise sauce. Sprinkle with chives, parsley, flaky sea salt, and black pepper.
+
+## Notes
+
+- The tricky part of this recipe is to get everything hot and served at the same time.
