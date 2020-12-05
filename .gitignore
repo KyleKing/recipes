@@ -193,14 +193,8 @@ coverage.json
 # ===============================================================================
 # Package-Specific
 
-# Ignore intermediary files
-config.codekit3
-*.log
-*.pyc
-.venv
-.vscode
+# Ignore Files Created by Dash_Dev
+/docs-dash_dev/*
 
-# Ignore images in source directory
-/database/*/*.jp*g
-/database/*/*.png
+# Other
 /* alias

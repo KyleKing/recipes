@@ -31,7 +31,8 @@ logger.configure(**LOGGER_CONFIG)
 logger.info('Starting DoIt tasks in dodo.py')
 
 # Configure Dash paths
-DIG.set_paths(source_path=Path(__file__).resolve().parent)
+CWD = Path(__file__).resolve().parent
+DIG.set_paths(source_path=CWD, doc_dir=CWD / 'docs-dash_dev')
 
 # Create list of all tasks run with `poetry run doit`. Comment on/off as needed
 DOIT_CONFIG = {
