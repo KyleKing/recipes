@@ -11,7 +11,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 <!-- name_image=_rice.jpg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
-![_rice.jpeg](./_rice.jpeg){: .image-recipe loading=lazy }
+![_rice.jpg](./_rice.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->
 
 ## Ingredients

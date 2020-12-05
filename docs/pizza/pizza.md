@@ -11,7 +11,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- name_image=pizza.jpg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
-![pizza.jpeg](./pizza.jpeg){: .image-recipe loading=lazy }
+![pizza.jpg](./pizza.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->
 
 ## Ingredients

@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 <!-- name_image=baked-fish.jpeg; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
-![baked-fish.jpg](./baked-fish.jpg){: .image-recipe loading=lazy }
+![baked-fish.jpeg](./baked-fish.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->
 
 ## Ingredients

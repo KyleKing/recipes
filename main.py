@@ -41,16 +41,17 @@ def _parse_var_comment(section: str) -> str:
     return {match['key']: match['value']}
 
 
-def _format_header(_section: str) -> str:
+def _format_header(_section: str, path_md: Path) -> str:
     """Format the section header."""  # noqa: DAR101,DAR201
     return '<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->'
 
 
-def _format_stars(section: str) -> str:
+def _format_stars(section: str, path_md: Path) -> str:
     """Format the star rating as markdown.
 
     Args:
         section: string section of a markdown recipe
+        path_md: Path to the markdown file
 
     Returns:
         str: updated recipe string markdown
@@ -65,16 +66,22 @@ def _format_stars(section: str) -> str:
     ])
 
 
+def _image_md(section: str, path_md: Path) -> str:
     """Format the string section with the specified image name.
 
     Args:
         section: string section of a markdown recipe
+        path_md: Path to the markdown file
 
     Returns:
         str: updated recipe string markdown
 
     """
     name_image = _parse_var_comment(section)['name_image']
+    path_image = path_md.parent / name_image
+    if not path_image.is_file():
+        raise FileNotFoundError(f'Could not locate {path_image} from {path_md}')
+
     return '\n'.join([
         f'<!-- name_image={name_image}; (User can specify image name if multiple exist) -->',
         '<!-- AUTO-Image -->',
@@ -83,22 +90,24 @@ def _format_stars(section: str) -> str:
     ])
 
 
-def _match_todo(section: str) -> str:
+def _match_todo(section: str, _path_md: Path) -> str:
+    """Pass-through to identify sections that contain a task."""  # noqa:
     logger.warning(f'Found TODO {section}')  # noqa: T101
     return section
 
 
-def _check_unknown(section: str) -> str:  # noqa
+def _check_unknown(section: str, _path_md: Path) -> str:  # noqa
     """Pass-through to catch sections not parsed by the function logic."""  # noqa:
     logger.error('Could not parse: {section}', section=section)
     return section
 
 
-def _update_md(recipe_md: str) -> str:
+def _update_md(recipe_md: str, path_md: Path) -> str:
     """Parse the markdown recipe and replace auto-formatted sections.
 
     Args:
         recipe_md: string markdown recipe
+        path_md: Path to the markdown file
 
     Returns:
         str: updated recipe string markdown
@@ -116,7 +125,7 @@ def _update_md(recipe_md: str) -> str:
     for section in recipe_md.split('\n\n'):
         for startswith, action in startswith_lookup.items():
             if section.strip().startswith(startswith):
-                sections.append(action(section))
+                sections.append(action(section, path_md))
                 break
         else:
             sections.append(section)
@@ -127,17 +136,8 @@ def main() -> None:
     """Convert all JSON files to markdown."""
     for path_md in DIR_MD.glob('*/*.md'):
         logger.info(f'{path_md.parent.name}||{path_md.stem}')
-        path_md.write_text(_update_md(path_md.read_text()))
-
-
-# Temporary function to identify duplicates images which may need to be edited
-def find_image_duplicates():  # noqa
-    for path_md in DIR_MD.glob('*/*.md'):
-        paths_image = [*path_md.parent.glob(f'{path_md.stem}.*g')]
-        if len(paths_image) > 1:
-            logger.info(path_md)
+        path_md.write_text(_update_md(path_md.read_text(), path_md))
 
 
 if __name__ == '__main__':
-    find_image_duplicates()
-    # main()
+    main()

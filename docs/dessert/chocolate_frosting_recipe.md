@@ -11,7 +11,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- name_image=chocolate_frosting_recipe.png; (User can specify image name if multiple exist) -->
 <!-- AUTO-Image -->
-![chocolate_frosting_recipe.jpeg](./chocolate_frosting_recipe.jpeg){: .image-recipe loading=lazy }
+![chocolate_frosting_recipe.png](./chocolate_frosting_recipe.png){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->
 
 ## Ingredients
