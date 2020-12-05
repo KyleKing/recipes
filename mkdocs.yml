@@ -1,0 +1,45 @@
+site_name: Recipes
+site_author: Kyle King
+site_description: Kyle's Recipes
+repo_name: KyleKing/recipes
+repo_url: https://github.com/KyleKing/recipes
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: white
+      accent: green
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - toc.autohide
+
+plugins:
+  - search
+  - git-revision-date
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - toc:
+      permalink: ⚓︎
+      toc_depth: 3
+
+extra:
+  manifest: manifest.webmanifest
+
+extra_css:
+  - stylesheets/extra.css
