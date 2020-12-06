@@ -218,8 +218,8 @@ def _format_toc(toc_data: Dict[str, str]) -> str:
         str: single TOC item
 
     """
-    # FIXME: the link doesn't work... (_TOC/<link> instead of ./<link>)
-    return (f"| [{_format_titlecase(toc_data['name_md'])}]({toc_data['name_md']})"
+    # Note: the relative link needs to be ../ to work. Will otherwise try to go to './__TOC/<link>'
+    return (f"| [{_format_titlecase(toc_data['name_md'])}](../{toc_data['name_md']})"
             f" | ({_format_stars(int(toc_data['rating']))})"
             f" | {_format_image_md(toc_data['name_image'], attrs='.image-toc')}"
             ' |')
