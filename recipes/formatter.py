@@ -218,9 +218,11 @@ def _format_toc(toc_data: Dict[str, str]) -> str:
         str: single TOC item
 
     """
-    return (f"[{_format_titlecase(toc_data['name_md'])}](./{toc_data['name_md']})"
-            f" ({_format_stars(int(toc_data['rating']))})"
-            f"\n{_format_image_md(toc_data['name_image'], attrs='align=right .image-toc')}")
+    # FIXME: the link doesn't work... (_TOC/<link> instead of ./<link>)
+    return (f"| [{_format_titlecase(toc_data['name_md'])}]({toc_data['name_md']})"
+            f" | ({_format_stars(int(toc_data['rating']))})"
+            f" | {_format_image_md(toc_data['name_image'], attrs='.image-toc')}"
+            ' |')
 
 
 def _create_toc_entry(path_md: Path) -> str:
@@ -251,13 +253,14 @@ def _create_toc_entry(path_md: Path) -> str:
 def _write_toc() -> None:
     """Write the table of contents for each section."""
     for dir_sub in DIR_MD.glob('*'):
-        sections_toc = [f'# {_format_titlecase(dir_sub.name)} Table of Contents']
+        toc_table = '| Link | Rating | Image |\n| -- | -- | -- |'
         paths_md = [*dir_sub.glob('*.md')]
         for path_md in _exclude_toc(paths_md):
-            sections_toc.append(_create_toc_entry(path_md))
+            toc_table += '\n' + _create_toc_entry(path_md)
 
         if paths_md:
-            (dir_sub / '__TOC.md').write_text('\n\n'.join(sections_toc))
+            toc_text = f'# Table of Contents ({_format_titlecase(dir_sub.name)})\n\n{toc_table}'
+            (dir_sub / '__TOC.md').write_text(toc_text)
 
 
 # =====================================================================================

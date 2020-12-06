@@ -1,3 +1,4 @@
+# FIXME: edit link foes to master instead of the main branch
 site_name: Recipes
 site_author: Kyle King
 site_description: Kyle's Recipes
@@ -43,3 +44,7 @@ extra:
 
 extra_css:
   - _stylesheets/extra.css
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - _javascript/tables.js

@@ -1,31 +1,14 @@
-# Soup Table of Contents
+# Table of Contents (Soup)
 
-[Spring Chicken Stew](./spring_chicken_stew) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-![spring_chicken_stew.jpeg](./spring_chicken_stew.jpeg){: align=right .image-toc loading=lazy }
-
-[Chicken Noodle Soup](./chicken_noodle_soup) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-<!-- TODO: Capture image -->
-
-[Chicken And Dumplings](./chicken_and_dumplings) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-![chicken_and_dumplings.jpeg](./chicken_and_dumplings.jpeg){: align=right .image-toc loading=lazy }
-
-[Pot Pie Soup](./pot_pie_soup) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-![pot_pie_soup.jpeg](./pot_pie_soup.jpeg){: align=right .image-toc loading=lazy }
-
-[Parmesan Minestrone](./parmesan_minestrone) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-![parmesan_minestrone.jpeg](./parmesan_minestrone.jpeg){: align=right .image-toc loading=lazy }
-
-[Johns Chili](./johns_chili) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-![johns_chili.jpeg](./johns_chili.jpeg){: align=right .image-toc loading=lazy }
-
-[Slow Cooker Chicken Mango Curry](./slow_cooker_chicken_mango_curry) (*Not yet rated*)
-<!-- TODO: Capture image -->
-
-[French Onion Soup](./french_onion_soup) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-![french_onion_soup.jpeg](./french_onion_soup.jpeg){: align=right .image-toc loading=lazy }
-
-[Kale Sausage White Bean Soup With Parm Toasts](./kale_sausage_white_bean_soup_with_parm_toasts) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-![kale_sausage_white_bean_soup_with_parm_toasts.jpeg](./kale_sausage_white_bean_soup_with_parm_toasts.jpeg){: align=right .image-toc loading=lazy }
-
-[Slow Cooker Chicken Tortilla Soup](./slow_cooker_chicken_tortilla_soup) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-![slow_cooker_chicken_tortilla_soup.jpg](./slow_cooker_chicken_tortilla_soup.jpg){: align=right .image-toc loading=lazy }
+| Link | Rating | Image |
+| -- | -- | -- |
+| [Spring Chicken Stew](spring_chicken_stew) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![spring_chicken_stew.jpeg](./spring_chicken_stew.jpeg){: .image-toc loading=lazy } |
+| [Chicken Noodle Soup](chicken_noodle_soup) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:) | <!-- TODO: Capture image --> |
+| [Chicken And Dumplings](chicken_and_dumplings) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![chicken_and_dumplings.jpeg](./chicken_and_dumplings.jpeg){: .image-toc loading=lazy } |
+| [Pot Pie Soup](pot_pie_soup) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![pot_pie_soup.jpeg](./pot_pie_soup.jpeg){: .image-toc loading=lazy } |
+| [Parmesan Minestrone](parmesan_minestrone) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![parmesan_minestrone.jpeg](./parmesan_minestrone.jpeg){: .image-toc loading=lazy } |
+| [Johns Chili](johns_chili) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![johns_chili.jpeg](./johns_chili.jpeg){: .image-toc loading=lazy } |
+| [Slow Cooker Chicken Mango Curry](slow_cooker_chicken_mango_curry) | (*Not yet rated*) | <!-- TODO: Capture image --> |
+| [French Onion Soup](french_onion_soup) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![french_onion_soup.jpeg](./french_onion_soup.jpeg){: .image-toc loading=lazy } |
+| [Kale Sausage White Bean Soup With Parm Toasts](kale_sausage_white_bean_soup_with_parm_toasts) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![kale_sausage_white_bean_soup_with_parm_toasts.jpeg](./kale_sausage_white_bean_soup_with_parm_toasts.jpeg){: .image-toc loading=lazy } |
+| [Slow Cooker Chicken Tortilla Soup](slow_cooker_chicken_tortilla_soup) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![slow_cooker_chicken_tortilla_soup.jpg](./slow_cooker_chicken_tortilla_soup.jpg){: .image-toc loading=lazy } |
