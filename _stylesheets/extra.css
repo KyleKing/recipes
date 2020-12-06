@@ -2,6 +2,10 @@
     max-height: 400px;
 }
 
+.image-toc {
+    max-height: 150px;
+}
+
 .yellow {
     color: #f1d063;
 }
