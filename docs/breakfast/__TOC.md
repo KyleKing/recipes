@@ -2,13 +2,13 @@
 
 | Link | Rating | Image |
 | -- | -- | -- |
-| [Oatmeal](../oatmeal) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![oatmeal.jpeg](./oatmeal.jpeg){: .image-toc loading=lazy } |
-| [Cheesy Cheeseless Scrambled Eggs With Burst Cherry Tomatoes](../cheesy_cheeseless_scrambled_eggs_with_burst_cherry_tomatoes) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![cheesy_cheeseless_scrambled_eggs_with_burst_cherry_tomatoes.jpeg](./cheesy_cheeseless_scrambled_eggs_with_burst_cherry_tomatoes.jpeg){: .image-toc loading=lazy } |
-| [Hard Boiled Eggs](../hard_boiled_eggs) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![hard_boiled_eggs.jpeg](./hard_boiled_eggs.jpeg){: .image-toc loading=lazy } |
-| [Pancakes New York Times](../pancakes_new_york_times) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![pancakes_new_york_times.jpg](./pancakes_new_york_times.jpg){: .image-toc loading=lazy } |
-| [Eggs Benedict](../eggs_benedict) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![eggs_benedict.jpg](./eggs_benedict.jpg){: .image-toc loading=lazy } |
-| [Shakshuka](../shakshuka) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![shakshuka.jpeg](./shakshuka.jpeg){: .image-toc loading=lazy } |
-| [Lemon Poppy Seed Mini Scones](../lemon_poppy_seed_mini_scones) | (*Not yet rated*) | <!-- TODO: Capture image --> |
-| [Omelette](../omelette) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![omelette.jpeg](./omelette.jpeg){: .image-toc loading=lazy } |
-| [Breakfast Burrito](../breakfast_burrito) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![breakfast_burrito.jpeg](./breakfast_burrito.jpeg){: .image-toc loading=lazy } |
-| [Waffles](../waffles) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![waffles.jpg](./waffles.jpg){: .image-toc loading=lazy } |
+| [Oatmeal](../oatmeal) | 4 | ![oatmeal.jpeg](./oatmeal.jpeg){: .image-toc loading=lazy } |
+| [Cheesy Cheeseless Scrambled Eggs With Burst Cherry Tomatoes](../cheesy_cheeseless_scrambled_eggs_with_burst_cherry_tomatoes) | 6 | ![cheesy_cheeseless_scrambled_eggs_with_burst_cherry_tomatoes.jpeg](./cheesy_cheeseless_scrambled_eggs_with_burst_cherry_tomatoes.jpeg){: .image-toc loading=lazy } |
+| [Hard Boiled Eggs](../hard_boiled_eggs) | 5 | ![hard_boiled_eggs.jpeg](./hard_boiled_eggs.jpeg){: .image-toc loading=lazy } |
+| [Pancakes New York Times](../pancakes_new_york_times) | 5 | ![pancakes_new_york_times.jpg](./pancakes_new_york_times.jpg){: .image-toc loading=lazy } |
+| [Eggs Benedict](../eggs_benedict) | 6 | ![eggs_benedict.jpg](./eggs_benedict.jpg){: .image-toc loading=lazy } |
+| [Shakshuka](../shakshuka) | 6 | ![shakshuka.jpeg](./shakshuka.jpeg){: .image-toc loading=lazy } |
+| [Lemon Poppy Seed Mini Scones](../lemon_poppy_seed_mini_scones) | 3 | <!-- TODO: Capture image --> |
+| [Omelette](../omelette) | 4 | ![omelette.jpeg](./omelette.jpeg){: .image-toc loading=lazy } |
+| [Breakfast Burrito](../breakfast_burrito) | 4 | ![breakfast_burrito.jpeg](./breakfast_burrito.jpeg){: .image-toc loading=lazy } |
+| [Waffles](../waffles) | 4 | ![waffles.jpg](./waffles.jpg){: .image-toc loading=lazy } |

@@ -12,6 +12,9 @@ from loguru import logger
 CWD = Path(__file__).resolve().parents[1]
 DIR_MD = CWD / 'docs'
 
+BUMP_RATING = 3
+"""Integer to increase the rating so that the lowest is not 1."""
+
 
 def _format_titlecase(raw_title: str) -> str:
     """Format string in titlecase replacing underscores with spaces.
@@ -42,8 +45,7 @@ def _format_stars(rating: int) -> str:
 
     """
     if rating != 0:
-        bump_rating = 3  # Increase the rating so that the lowest is not 1
-        return ' '.join([_ICON_FA_STAR] * (rating + bump_rating) + [_ICON_FA_STAR_OUT] * (5 - rating))
+        return ' '.join([_ICON_FA_STAR] * (rating + BUMP_RATING) + [_ICON_FA_STAR_OUT] * (5 - rating))
     return '*Not yet rated*'
 
 
@@ -218,9 +220,11 @@ def _format_toc(toc_data: Dict[str, str]) -> str:
         str: single TOC item
 
     """
+    link = f"[{_format_titlecase(toc_data['name_md'])}](../{toc_data['name_md']})"
+    rating = int(toc_data['rating'])
     # Note: the relative link needs to be ../ to work. Will otherwise try to go to './__TOC/<link>'
-    return (f"| [{_format_titlecase(toc_data['name_md'])}](../{toc_data['name_md']})"
-            f" | ({_format_stars(int(toc_data['rating']))})"
+    return (f'| {link}'
+            f' | {rating + BUMP_RATING}'
             f" | {_format_image_md(toc_data['name_image'], attrs='.image-toc')}"
             ' |')
 

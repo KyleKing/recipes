@@ -2,20 +2,20 @@
 
 | Link | Rating | Image |
 | -- | -- | -- |
-| [Teryaki Chicken](../teryaki_chicken) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![teryaki_chicken.jpeg](./teryaki_chicken.jpeg){: .image-toc loading=lazy } |
-| [Paremesan Chicken Breasts](../paremesan_chicken_breasts) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![paremesan_chicken_breasts.jpeg](./paremesan_chicken_breasts.jpeg){: .image-toc loading=lazy } |
-| [Brick Chicken](../brick_chicken) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![brick_chicken.jpg](./brick_chicken.jpg){: .image-toc loading=lazy } |
-| [Honey And Soy Glazed Chicken Thighs](../honey_and_soy_glazed_chicken_thighs) | (*Not yet rated*) | <!-- TODO: Capture image --> |
-| [Chicken](../chicken) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![chicken.jpg](./chicken.jpg){: .image-toc loading=lazy } |
-| [Mediterranean Chicken](../mediterranean_chicken) | (*Not yet rated*) | <!-- TODO: Capture image --> |
-| [Baked Chicken And Potatoes](../baked_chicken_and_potatoes) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![baked_chicken_and_potatoes.jpeg](./baked_chicken_and_potatoes.jpeg){: .image-toc loading=lazy } |
-| [Chicken Shawarma](../chicken_shawarma) | (*Not yet rated*) | <!-- TODO: Capture image --> |
-| [Breaded Chicken](../breaded_chicken) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![breaded_chicken.jpeg](./breaded_chicken.jpeg){: .image-toc loading=lazy } |
-| [Fajitas](../fajitas) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![fajitas.jpg](./fajitas.jpg){: .image-toc loading=lazy } |
-| [Chicken Tacos](../chicken_tacos) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![chicken_tacos.jpeg](./chicken_tacos.jpeg){: .image-toc loading=lazy } |
-| [Sesame Chicken Noodles](../sesame_chicken_noodles) | (*Not yet rated*) | <!-- TODO: Capture image --> |
-| [Chicken Thighs](../chicken_thighs) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![chicken_thighs.jpeg](./chicken_thighs.jpeg){: .image-toc loading=lazy } |
-| [Chicken Cacciatore](../chicken_cacciatore) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![chicken_cacciatore.jpg](./chicken_cacciatore.jpg){: .image-toc loading=lazy } |
-| [Enchiladas](../enchiladas) | (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:) | ![enchiladas.jpg](./enchiladas.jpg){: .image-toc loading=lazy } |
-| [Chicken Instant Pot](../chicken_instant_pot) | (*Not yet rated*) | <!-- TODO: Capture image --> |
-| [Sriracha Chicken](../sriracha_chicken) | (*Not yet rated*) | <!-- TODO: Capture image --> |
+| [Teryaki Chicken](../teryaki_chicken) | 5 | ![teryaki_chicken.jpeg](./teryaki_chicken.jpeg){: .image-toc loading=lazy } |
+| [Paremesan Chicken Breasts](../paremesan_chicken_breasts) | 5 | ![paremesan_chicken_breasts.jpeg](./paremesan_chicken_breasts.jpeg){: .image-toc loading=lazy } |
+| [Brick Chicken](../brick_chicken) | 6 | ![brick_chicken.jpg](./brick_chicken.jpg){: .image-toc loading=lazy } |
+| [Honey And Soy Glazed Chicken Thighs](../honey_and_soy_glazed_chicken_thighs) | 3 | <!-- TODO: Capture image --> |
+| [Chicken](../chicken) | 4 | ![chicken.jpg](./chicken.jpg){: .image-toc loading=lazy } |
+| [Mediterranean Chicken](../mediterranean_chicken) | 3 | <!-- TODO: Capture image --> |
+| [Baked Chicken And Potatoes](../baked_chicken_and_potatoes) | 5 | ![baked_chicken_and_potatoes.jpeg](./baked_chicken_and_potatoes.jpeg){: .image-toc loading=lazy } |
+| [Chicken Shawarma](../chicken_shawarma) | 3 | <!-- TODO: Capture image --> |
+| [Breaded Chicken](../breaded_chicken) | 5 | ![breaded_chicken.jpeg](./breaded_chicken.jpeg){: .image-toc loading=lazy } |
+| [Fajitas](../fajitas) | 4 | ![fajitas.jpg](./fajitas.jpg){: .image-toc loading=lazy } |
+| [Chicken Tacos](../chicken_tacos) | 6 | ![chicken_tacos.jpeg](./chicken_tacos.jpeg){: .image-toc loading=lazy } |
+| [Sesame Chicken Noodles](../sesame_chicken_noodles) | 3 | <!-- TODO: Capture image --> |
+| [Chicken Thighs](../chicken_thighs) | 4 | ![chicken_thighs.jpeg](./chicken_thighs.jpeg){: .image-toc loading=lazy } |
+| [Chicken Cacciatore](../chicken_cacciatore) | 5 | ![chicken_cacciatore.jpg](./chicken_cacciatore.jpg){: .image-toc loading=lazy } |
+| [Enchiladas](../enchiladas) | 6 | ![enchiladas.jpg](./enchiladas.jpg){: .image-toc loading=lazy } |
+| [Chicken Instant Pot](../chicken_instant_pot) | 3 | <!-- TODO: Capture image --> |
+| [Sriracha Chicken](../sriracha_chicken) | 3 | <!-- TODO: Capture image --> |
