@@ -47,18 +47,19 @@ def _format_stars(rating: int) -> str:
     return '*Not yet rated*'
 
 
-def _format_image_md(name_image: Optional[str]) -> str:
+def _format_image_md(name_image: Optional[str], attrs: str) -> str:
     """Format the image as markdown.
 
     Args:
         name_image: string image name or None
+        attrs: string space-separated attributes to add
 
     Returns:
         str: formatted image markdown string
 
     """
     if name_image and name_image.lower() != 'none':
-        return f'![{name_image}](./{name_image})' + '{: .image-recipe loading=lazy }'  # noqa: P103
+        return f'![{name_image}](./{name_image}){{: {attrs} loading=lazy }}'
     logger.debug(f'WARN: No image specified: `{name_image}`')
     return '<!-- TODO: Capture image -->'  # noqa: T101
 
@@ -151,7 +152,7 @@ def _format_image_section(section: str, path_md: Path) -> str:
     return '\n'.join([
         f'<!-- name_image={name_image}; (User can specify image name) -->',
         '<!-- AUTO-Image -->',
-        _format_image_md(name_image),
+        _format_image_md(name_image, attrs='.image-recipe'),
         '<!-- /AUTO-Image -->',
     ])
 
@@ -217,8 +218,9 @@ def _format_toc(toc_data: Dict[str, str]) -> str:
         str: single TOC item
 
     """
-    return (f"- {toc_data['title']} ({_format_stars(int(toc_data['rating']))})"
-            f"\n\n    {_format_image_md(toc_data['name_image'])}")
+    return (f"[{_format_titlecase(toc_data['name_md'])}](./{toc_data['name_md']})"
+            f" ({_format_stars(int(toc_data['rating']))})"
+            f"\n{_format_image_md(toc_data['name_image'], attrs='align=right .image-toc')}")
 
 
 def _create_toc_entry(path_md: Path) -> str:
@@ -235,7 +237,7 @@ def _create_toc_entry(path_md: Path) -> str:
         '<!-- rating=',
         '<!-- name_image=',
     ]
-    toc_data = {'title': _format_titlecase(path_md.stem), 'name_image': None}
+    toc_data = {'name_md': path_md.stem, 'name_image': None}
     for section in path_md.read_text().split('\n\n'):
         for startswith in startswith_items:
             if section.strip().startswith(startswith):

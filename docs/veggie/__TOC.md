@@ -1,101 +1,76 @@
 # Veggie Table of Contents
 
-- Chana Masala (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Chana Masala](./chana_masala) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![chana_masala.jpeg](./chana_masala.jpeg){: align=right .image-toc loading=lazy }
 
-    ![chana_masala.jpeg](./chana_masala.jpeg){: .image-recipe loading=lazy }
+[Roasted Vegetables](./roasted_vegetables) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![roasted_vegetables.jpg](./roasted_vegetables.jpg){: align=right .image-toc loading=lazy }
 
-- Roasted Vegetables (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Baked Potatoes Instant Pot](./baked_potatoes_instant_pot) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![baked_potatoes_instant_pot.jpg](./baked_potatoes_instant_pot.jpg){: align=right .image-toc loading=lazy }
 
-    ![roasted_vegetables.jpg](./roasted_vegetables.jpg){: .image-recipe loading=lazy }
+[Mediterranean Cauliflower Platter](./mediterranean_cauliflower_platter) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-- Baked Potatoes Instant Pot (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Chickpea Greek Salad Wrap](./chickpea_greek_salad_wrap) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![chickpea_greek_salad_wrap.jpeg](./chickpea_greek_salad_wrap.jpeg){: align=right .image-toc loading=lazy }
 
-    ![baked_potatoes_instant_pot.jpg](./baked_potatoes_instant_pot.jpg){: .image-recipe loading=lazy }
+[Chili Lime Black Bean Tacos](./chili_lime_black_bean_tacos) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-- Mediterranean Cauliflower Platter (*Not yet rated*)
+[Baked Zucchini](./baked_zucchini) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![baked_zucchini.jpeg](./baked_zucchini.jpeg){: align=right .image-toc loading=lazy }
 
-    <!-- TODO: Capture image -->
+[Guacamole](./guacamole) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-- Chickpea Greek Salad Wrap (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Vegetable Wraps](./vegetable_wraps) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-    ![chickpea_greek_salad_wrap.jpeg](./chickpea_greek_salad_wrap.jpeg){: .image-recipe loading=lazy }
+[Chickpea Spicy Buffalo Wrap](./chickpea_spicy_buffalo_wrap) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-- Chili Lime Black Bean Tacos (*Not yet rated*)
+[Baked Broccoli](./baked_broccoli) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![baked_broccoli.jpg](./baked_broccoli.jpg){: align=right .image-toc loading=lazy }
 
-    <!-- TODO: Capture image -->
+[Crispy Baked Sweet Potato Fries](./crispy_baked_sweet_potato_fries) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-- Baked Zucchini (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Green Chile Mac](./green_chile_mac) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-    ![baked_zucchini.jpeg](./baked_zucchini.jpeg){: .image-recipe loading=lazy }
+[Chickpea Salad Toasts With Poached Egg](./chickpea_salad_toasts_with_poached_egg) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-- Guacamole (*Not yet rated*)
+[Polenta With White Beans And Italian Salsa Verde](./polenta_with_white_beans_and_italian_salsa_verde) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-    <!-- TODO: Capture image -->
+[Falafel Pitas With Cilantro Cashew Sauce](./falafel_pitas_with_cilantro_cashew_sauce) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-- Vegetable Wraps (*Not yet rated*)
+[Karens Roasted Veggie Bowls](./karens_roasted_veggie_bowls) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+<!-- TODO: Capture image -->
 
-    <!-- TODO: Capture image -->
+[Sweet Potato Gnocchi](./sweet_potato_gnocchi) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![sweet_potato_gnocchi.jpeg](./sweet_potato_gnocchi.jpeg){: align=right .image-toc loading=lazy }
 
-- Chickpea Spicy Buffalo Wrap (*Not yet rated*)
+[Veggie Loaded Red Curry](./veggie_loaded_red_curry) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![veggie_loaded_red_curry.jpeg](./veggie_loaded_red_curry.jpeg){: align=right .image-toc loading=lazy }
 
-    <!-- TODO: Capture image -->
+[Chickpea Salad Wrap](./chickpea_salad_wrap) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![chickpea_salad_wrap.jpeg](./chickpea_salad_wrap.jpeg){: align=right .image-toc loading=lazy }
 
-- Baked Broccoli (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Salad](./salad) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![salad.jpg](./salad.jpg){: align=right .image-toc loading=lazy }
 
-    ![baked_broccoli.jpg](./baked_broccoli.jpg){: .image-recipe loading=lazy }
+[Sweet Potatoes](./sweet_potatoes) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-- Crispy Baked Sweet Potato Fries (*Not yet rated*)
+[Ginger Orange Broccoli And Noodles](./ginger_orange_broccoli_and_noodles) (*Not yet rated*)
+![ginger_orange_broccoli_and_noodles.jpeg](./ginger_orange_broccoli_and_noodles.jpeg){: align=right .image-toc loading=lazy }
 
-    <!-- TODO: Capture image -->
+[Curried Chickpeas](./curried_chickpeas) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![curried_chickpeas.jpg](./curried_chickpeas.jpg){: align=right .image-toc loading=lazy }
 
-- Green Chile Mac (*Not yet rated*)
-
-    <!-- TODO: Capture image -->
-
-- Chickpea Salad Toasts With Poached Egg (*Not yet rated*)
-
-    <!-- TODO: Capture image -->
-
-- Polenta With White Beans And Italian Salsa Verde (*Not yet rated*)
-
-    <!-- TODO: Capture image -->
-
-- Falafel Pitas With Cilantro Cashew Sauce (*Not yet rated*)
-
-    <!-- TODO: Capture image -->
-
-- Karens Roasted Veggie Bowls (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    <!-- TODO: Capture image -->
-
-- Sweet Potato Gnocchi (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![sweet_potato_gnocchi.jpeg](./sweet_potato_gnocchi.jpeg){: .image-recipe loading=lazy }
-
-- Veggie Loaded Red Curry (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![veggie_loaded_red_curry.jpeg](./veggie_loaded_red_curry.jpeg){: .image-recipe loading=lazy }
-
-- Chickpea Salad Wrap (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![chickpea_salad_wrap.jpeg](./chickpea_salad_wrap.jpeg){: .image-recipe loading=lazy }
-
-- Salad (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![salad.jpg](./salad.jpg){: .image-recipe loading=lazy }
-
-- Sweet Potatoes (*Not yet rated*)
-
-    <!-- TODO: Capture image -->
-
-- Ginger Orange Broccoli And Noodles (*Not yet rated*)
-
-    ![ginger_orange_broccoli_and_noodles.jpeg](./ginger_orange_broccoli_and_noodles.jpeg){: .image-recipe loading=lazy }
-
-- Curried Chickpeas (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![curried_chickpeas.jpg](./curried_chickpeas.jpg){: .image-recipe loading=lazy }
-
-- Baked Potatoes (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![baked_potatoes.jpg](./baked_potatoes.jpg){: .image-recipe loading=lazy }
+[Baked Potatoes](./baked_potatoes) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![baked_potatoes.jpg](./baked_potatoes.jpg){: align=right .image-toc loading=lazy }

@@ -1,69 +1,52 @@
 # Poultry Table of Contents
 
-- Teryaki Chicken (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Teryaki Chicken](./teryaki_chicken) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![teryaki_chicken.jpeg](./teryaki_chicken.jpeg){: align=right .image-toc loading=lazy }
 
-    ![teryaki_chicken.jpeg](./teryaki_chicken.jpeg){: .image-recipe loading=lazy }
+[Paremesan Chicken Breasts](./paremesan_chicken_breasts) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![paremesan_chicken_breasts.jpeg](./paremesan_chicken_breasts.jpeg){: align=right .image-toc loading=lazy }
 
-- Paremesan Chicken Breasts (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Brick Chicken](./brick_chicken) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![brick_chicken.jpg](./brick_chicken.jpg){: align=right .image-toc loading=lazy }
 
-    ![paremesan_chicken_breasts.jpeg](./paremesan_chicken_breasts.jpeg){: .image-recipe loading=lazy }
+[Honey And Soy Glazed Chicken Thighs](./honey_and_soy_glazed_chicken_thighs) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-- Brick Chicken (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Chicken](./chicken) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![chicken.jpg](./chicken.jpg){: align=right .image-toc loading=lazy }
 
-    ![brick_chicken.jpg](./brick_chicken.jpg){: .image-recipe loading=lazy }
+[Mediterranean Chicken](./mediterranean_chicken) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-- Honey And Soy Glazed Chicken Thighs (*Not yet rated*)
+[Baked Chicken And Potatoes](./baked_chicken_and_potatoes) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![baked_chicken_and_potatoes.jpeg](./baked_chicken_and_potatoes.jpeg){: align=right .image-toc loading=lazy }
 
-    <!-- TODO: Capture image -->
+[Chicken Shawarma](./chicken_shawarma) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-- Chicken (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Breaded Chicken](./breaded_chicken) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![breaded_chicken.jpeg](./breaded_chicken.jpeg){: align=right .image-toc loading=lazy }
 
-    ![chicken.jpg](./chicken.jpg){: .image-recipe loading=lazy }
+[Fajitas](./fajitas) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![fajitas.jpg](./fajitas.jpg){: align=right .image-toc loading=lazy }
 
-- Mediterranean Chicken (*Not yet rated*)
+[Chicken Tacos](./chicken_tacos) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![chicken_tacos.jpeg](./chicken_tacos.jpeg){: align=right .image-toc loading=lazy }
 
-    <!-- TODO: Capture image -->
+[Sesame Chicken Noodles](./sesame_chicken_noodles) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-- Baked Chicken And Potatoes (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Chicken Thighs](./chicken_thighs) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![chicken_thighs.jpeg](./chicken_thighs.jpeg){: align=right .image-toc loading=lazy }
 
-    ![baked_chicken_and_potatoes.jpeg](./baked_chicken_and_potatoes.jpeg){: .image-recipe loading=lazy }
+[Chicken Cacciatore](./chicken_cacciatore) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![chicken_cacciatore.jpg](./chicken_cacciatore.jpg){: align=right .image-toc loading=lazy }
 
-- Chicken Shawarma (*Not yet rated*)
+[Enchiladas](./enchiladas) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![enchiladas.jpg](./enchiladas.jpg){: align=right .image-toc loading=lazy }
 
-    <!-- TODO: Capture image -->
+[Chicken Instant Pot](./chicken_instant_pot) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-- Breaded Chicken (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![breaded_chicken.jpeg](./breaded_chicken.jpeg){: .image-recipe loading=lazy }
-
-- Fajitas (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![fajitas.jpg](./fajitas.jpg){: .image-recipe loading=lazy }
-
-- Chicken Tacos (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![chicken_tacos.jpeg](./chicken_tacos.jpeg){: .image-recipe loading=lazy }
-
-- Sesame Chicken Noodles (*Not yet rated*)
-
-    <!-- TODO: Capture image -->
-
-- Chicken Thighs (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![chicken_thighs.jpeg](./chicken_thighs.jpeg){: .image-recipe loading=lazy }
-
-- Chicken Cacciatore (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![chicken_cacciatore.jpg](./chicken_cacciatore.jpg){: .image-recipe loading=lazy }
-
-- Enchiladas (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![enchiladas.jpg](./enchiladas.jpg){: .image-recipe loading=lazy }
-
-- Chicken Instant Pot (*Not yet rated*)
-
-    <!-- TODO: Capture image -->
-
-- Sriracha Chicken (*Not yet rated*)
-
-    <!-- TODO: Capture image -->
+[Sriracha Chicken](./sriracha_chicken) (*Not yet rated*)
+<!-- TODO: Capture image -->

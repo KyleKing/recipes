@@ -1,61 +1,46 @@
 # Drinks Table of Contents
 
-- Frozen Strawberry Margarita (*Not yet rated*)
+[Frozen Strawberry Margarita](./frozen_strawberry_margarita) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-    <!-- TODO: Capture image -->
+[Margarita](./margarita) (*Not yet rated*)
+![margarita.jpg](./margarita.jpg){: align=right .image-toc loading=lazy }
 
-- Margarita (*Not yet rated*)
+[Bourbon Peach Shakes](./bourbon_peach_shakes) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-    ![margarita.jpg](./margarita.jpg){: .image-recipe loading=lazy }
+[Sweet Libertys Pina Colada](./sweet_libertys_pina_colada) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-- Bourbon Peach Shakes (*Not yet rated*)
+[Pina Colada](./pina_colada) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-    <!-- TODO: Capture image -->
+[Pina Con Lima](./pina_con_lima) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-- Sweet Libertys Pina Colada (*Not yet rated*)
+[Coffee](./coffee) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![coffee.jpeg](./coffee.jpeg){: align=right .image-toc loading=lazy }
 
-    <!-- TODO: Capture image -->
+[White Lady](./white_lady) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-- Pina Colada (*Not yet rated*)
+[Frozen Irish Coffee](./frozen_irish_coffee) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-    <!-- TODO: Capture image -->
+[Between The Sheets](./between_the_sheets) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-- Pina Con Lima (*Not yet rated*)
+[Simple Syrup](./simple_syrup) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-    <!-- TODO: Capture image -->
+[Beer](./beer) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![beer.jpg](./beer.jpg){: align=right .image-toc loading=lazy }
 
-- Coffee (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Chilly Chile Paloma](./chilly_chile_paloma) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-    ![coffee.jpeg](./coffee.jpeg){: .image-recipe loading=lazy }
+[Frogroni](./frogroni) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-- White Lady (*Not yet rated*)
-
-    <!-- TODO: Capture image -->
-
-- Frozen Irish Coffee (*Not yet rated*)
-
-    <!-- TODO: Capture image -->
-
-- Between The Sheets (*Not yet rated*)
-
-    <!-- TODO: Capture image -->
-
-- Simple Syrup (*Not yet rated*)
-
-    <!-- TODO: Capture image -->
-
-- Beer (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![beer.jpg](./beer.jpg){: .image-recipe loading=lazy }
-
-- Chilly Chile Paloma (*Not yet rated*)
-
-    <!-- TODO: Capture image -->
-
-- Frogroni (*Not yet rated*)
-
-    <!-- TODO: Capture image -->
-
-- Wine (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![wine.jpg](./wine.jpg){: .image-recipe loading=lazy }
+[Wine](./wine) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![wine.jpg](./wine.jpg){: align=right .image-toc loading=lazy }

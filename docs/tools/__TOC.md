@@ -1,29 +1,22 @@
 # Tools Table of Contents
 
-- Porcelain Pot Care (*Not yet rated*)
+[Porcelain Pot Care](./porcelain_pot_care) (*Not yet rated*)
+![porcelain_pot_care.jpg](./porcelain_pot_care.jpg){: align=right .image-toc loading=lazy }
 
-    ![porcelain_pot_care.jpg](./porcelain_pot_care.jpg){: .image-recipe loading=lazy }
+[Pizza Stone Care](./pizza_stone_care) (*Not yet rated*)
+![pizza_stone_care.jpeg](./pizza_stone_care.jpeg){: align=right .image-toc loading=lazy }
 
-- Pizza Stone Care (*Not yet rated*)
+[Cast Iron Care](./cast_iron_care) (*Not yet rated*)
+![cast_iron_care.jpg](./cast_iron_care.jpg){: align=right .image-toc loading=lazy }
 
-    ![pizza_stone_care.jpeg](./pizza_stone_care.jpeg){: .image-recipe loading=lazy }
+[Bake Ware](./bake_ware) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-- Cast Iron Care (*Not yet rated*)
+[Cocktail Shaker](./cocktail_shaker) (*Not yet rated*)
+![cocktail_shaker.jpeg](./cocktail_shaker.jpeg){: align=right .image-toc loading=lazy }
 
-    ![cast_iron_care.jpg](./cast_iron_care.jpg){: .image-recipe loading=lazy }
+[Dishwasher](./dishwasher) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-- Bake Ware (*Not yet rated*)
-
-    <!-- TODO: Capture image -->
-
-- Cocktail Shaker (*Not yet rated*)
-
-    ![cocktail_shaker.jpeg](./cocktail_shaker.jpeg){: .image-recipe loading=lazy }
-
-- Dishwasher (*Not yet rated*)
-
-    <!-- TODO: Capture image -->
-
-- Substitutions (*Not yet rated*)
-
-    <!-- TODO: Capture image -->
+[Substitutions](./substitutions) (*Not yet rated*)
+<!-- TODO: Capture image -->

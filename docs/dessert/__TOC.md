@@ -1,137 +1,103 @@
 # Dessert Table of Contents
 
-- Chocolate Chip Cookies (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Chocolate Chip Cookies](./chocolate_chip_cookies) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![chocolate_chip_cookies.jpeg](./chocolate_chip_cookies.jpeg){: align=right .image-toc loading=lazy }
 
-    ![chocolate_chip_cookies.jpeg](./chocolate_chip_cookies.jpeg){: .image-recipe loading=lazy }
+[Pineapple Upside Down Cake](./pineapple_upside_down_cake) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+<!-- TODO: Capture image -->
 
-- Pineapple Upside Down Cake (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Chocolate Peanut Butter Bundt Cake](./chocolate_peanut_butter_bundt_cake) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![chocolate_peanut_butter_bundt_cake.jpg](./chocolate_peanut_butter_bundt_cake.jpg){: align=right .image-toc loading=lazy }
 
-    <!-- TODO: Capture image -->
+[Chocolate Chip Oatmeal Cookies](./chocolate_chip_oatmeal_cookies) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+<!-- TODO: Capture image -->
 
-- Chocolate Peanut Butter Bundt Cake (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Peach Blueberry Crisp](./peach_blueberry_crisp) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![peach_blueberry_crisp.jpeg](./peach_blueberry_crisp.jpeg){: align=right .image-toc loading=lazy }
 
-    ![chocolate_peanut_butter_bundt_cake.jpg](./chocolate_peanut_butter_bundt_cake.jpg){: .image-recipe loading=lazy }
+[Chocolate Peanut Butter Glaze](./chocolate_peanut_butter_glaze) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![chocolate_peanut_butter_glaze.jpeg](./chocolate_peanut_butter_glaze.jpeg){: align=right .image-toc loading=lazy }
 
-- Chocolate Chip Oatmeal Cookies (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Peanut Butter And Cocoa Smothie](./peanut_butter_and_cocoa_smothie) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![peanut_butter_and_cocoa_smothie.jpg](./peanut_butter_and_cocoa_smothie.jpg){: align=right .image-toc loading=lazy }
 
-    <!-- TODO: Capture image -->
+[Easter Coconut Cake](./easter_coconut_cake) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![easter_coconut_cake.jpeg](./easter_coconut_cake.jpeg){: align=right .image-toc loading=lazy }
 
-- Peach Blueberry Crisp (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Toasted Marshmallow Brownie Crinkles](./toasted_marshmallow_brownie_crinkles) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![toasted_marshmallow_brownie_crinkles.jpg](./toasted_marshmallow_brownie_crinkles.jpg){: align=right .image-toc loading=lazy }
 
-    ![peach_blueberry_crisp.jpeg](./peach_blueberry_crisp.jpeg){: .image-recipe loading=lazy }
+[Skillet Peanut Butter Chocolate Chip Blondies](./skillet_peanut_butter_chocolate_chip_blondies) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![skillet_peanut_butter_chocolate_chip_blondies.jpeg](./skillet_peanut_butter_chocolate_chip_blondies.jpeg){: align=right .image-toc loading=lazy }
 
-- Chocolate Peanut Butter Glaze (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Edible Cookie Dough Ben & Jerrys](./edible_cookie_dough_ben_&_jerrys) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-    ![chocolate_peanut_butter_glaze.jpeg](./chocolate_peanut_butter_glaze.jpeg){: .image-recipe loading=lazy }
+[Cookie Bars](./cookie_bars) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![cookie_bars.jpeg](./cookie_bars.jpeg){: align=right .image-toc loading=lazy }
 
-- Peanut Butter And Cocoa Smothie (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Collens Peanut Butter Bars](./collens_peanut_butter_bars) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-    ![peanut_butter_and_cocoa_smothie.jpg](./peanut_butter_and_cocoa_smothie.jpg){: .image-recipe loading=lazy }
+[Banana Bread](./banana_bread) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![banana_bread.jpeg](./banana_bread.jpeg){: align=right .image-toc loading=lazy }
 
-- Easter Coconut Cake (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Popcorn Cinnamon Sugar](./popcorn_cinnamon_sugar) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![popcorn_cinnamon_sugar.jpeg](./popcorn_cinnamon_sugar.jpeg){: align=right .image-toc loading=lazy }
 
-    ![easter_coconut_cake.jpeg](./easter_coconut_cake.jpeg){: .image-recipe loading=lazy }
+[Chocolatines](./chocolatines) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![chocolatines.jpeg](./chocolatines.jpeg){: align=right .image-toc loading=lazy }
 
-- Toasted Marshmallow Brownie Crinkles (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Chocolate-Pb-M&M Balls](./chocolate-pb-m&m_balls) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-    ![toasted_marshmallow_brownie_crinkles.jpg](./toasted_marshmallow_brownie_crinkles.jpg){: .image-recipe loading=lazy }
+[Cookie Dough Billionaire Bars](./cookie_dough_billionaire_bars) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-- Skillet Peanut Butter Chocolate Chip Blondies (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Chocolate Frosting Recipe](./chocolate_frosting_recipe) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![chocolate_frosting_recipe.jpg](./chocolate_frosting_recipe.jpg){: align=right .image-toc loading=lazy }
 
-    ![skillet_peanut_butter_chocolate_chip_blondies.jpeg](./skillet_peanut_butter_chocolate_chip_blondies.jpeg){: .image-recipe loading=lazy }
+[Oatmeal Balls](./oatmeal_balls) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![oatmeal_balls.jpg](./oatmeal_balls.jpg){: align=right .image-toc loading=lazy }
 
-- Edible Cookie Dough Ben & Jerrys (*Not yet rated*)
+[Gingerbread Cookies](./gingerbread_cookies) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![gingerbread_cookies.jpeg](./gingerbread_cookies.jpeg){: align=right .image-toc loading=lazy }
 
-    <!-- TODO: Capture image -->
+[Popcorn](./popcorn) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![popcorn.jpeg](./popcorn.jpeg){: align=right .image-toc loading=lazy }
 
-- Cookie Bars (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Oreo Truffles](./oreo_truffles) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![oreo_truffles.jpg](./oreo_truffles.jpg){: align=right .image-toc loading=lazy }
 
-    ![cookie_bars.jpeg](./cookie_bars.jpeg){: .image-recipe loading=lazy }
+[Apple Crisp](./apple_crisp) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![apple_crisp.jpg](./apple_crisp.jpg){: align=right .image-toc loading=lazy }
 
-- Collens Peanut Butter Bars (*Not yet rated*)
+[Hot Fudge Sauce](./hot_fudge_sauce) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![hot_fudge_sauce.jpeg](./hot_fudge_sauce.jpeg){: align=right .image-toc loading=lazy }
 
-    <!-- TODO: Capture image -->
+[Blueberry Sour Cream Muffins](./blueberry_sour_cream_muffins) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+<!-- TODO: Capture image -->
 
-- Banana Bread (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Molten Chocolate Cake](./molten_chocolate_cake) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![molten_chocolate_cake.jpeg](./molten_chocolate_cake.jpeg){: align=right .image-toc loading=lazy }
 
-    ![banana_bread.jpeg](./banana_bread.jpeg){: .image-recipe loading=lazy }
+[Chocolate Milkshake](./chocolate_milkshake) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-- Popcorn Cinnamon Sugar (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Cake Pops](./cake_pops) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![cake_pops.jpg](./cake_pops.jpg){: align=right .image-toc loading=lazy }
 
-    ![popcorn_cinnamon_sugar.jpeg](./popcorn_cinnamon_sugar.jpeg){: .image-recipe loading=lazy }
+[Biscotti](./biscotti) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![biscotti.jpg](./biscotti.jpg){: align=right .image-toc loading=lazy }
 
-- Chocolatines (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Oatmeal Raisin Cookies](./oatmeal_raisin_cookies) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![oatmeal_raisin_cookies.jpg](./oatmeal_raisin_cookies.jpg){: align=right .image-toc loading=lazy }
 
-    ![chocolatines.jpeg](./chocolatines.jpeg){: .image-recipe loading=lazy }
+[Flourless Chocolate Cake](./flourless_chocolate_cake) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+<!-- TODO: Capture image -->
 
-- Chocolate-Pb-M&M Balls (*Not yet rated*)
+[Baked Apples](./baked_apples) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+<!-- TODO: Capture image -->
 
-    <!-- TODO: Capture image -->
-
-- Cookie Dough Billionaire Bars (*Not yet rated*)
-
-    <!-- TODO: Capture image -->
-
-- Chocolate Frosting Recipe (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![chocolate_frosting_recipe.jpg](./chocolate_frosting_recipe.jpg){: .image-recipe loading=lazy }
-
-- Oatmeal Balls (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![oatmeal_balls.jpg](./oatmeal_balls.jpg){: .image-recipe loading=lazy }
-
-- Gingerbread Cookies (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![gingerbread_cookies.jpeg](./gingerbread_cookies.jpeg){: .image-recipe loading=lazy }
-
-- Popcorn (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![popcorn.jpeg](./popcorn.jpeg){: .image-recipe loading=lazy }
-
-- Oreo Truffles (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![oreo_truffles.jpg](./oreo_truffles.jpg){: .image-recipe loading=lazy }
-
-- Apple Crisp (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![apple_crisp.jpg](./apple_crisp.jpg){: .image-recipe loading=lazy }
-
-- Hot Fudge Sauce (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![hot_fudge_sauce.jpeg](./hot_fudge_sauce.jpeg){: .image-recipe loading=lazy }
-
-- Blueberry Sour Cream Muffins (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    <!-- TODO: Capture image -->
-
-- Molten Chocolate Cake (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![molten_chocolate_cake.jpeg](./molten_chocolate_cake.jpeg){: .image-recipe loading=lazy }
-
-- Chocolate Milkshake (*Not yet rated*)
-
-    <!-- TODO: Capture image -->
-
-- Cake Pops (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![cake_pops.jpg](./cake_pops.jpg){: .image-recipe loading=lazy }
-
-- Biscotti (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![biscotti.jpg](./biscotti.jpg){: .image-recipe loading=lazy }
-
-- Oatmeal Raisin Cookies (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![oatmeal_raisin_cookies.jpg](./oatmeal_raisin_cookies.jpg){: .image-recipe loading=lazy }
-
-- Flourless Chocolate Cake (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    <!-- TODO: Capture image -->
-
-- Baked Apples (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    <!-- TODO: Capture image -->
-
-- French Chocolate Tart (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    <!-- TODO: Capture image -->
+[French Chocolate Tart](./french_chocolate_tart) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+<!-- TODO: Capture image -->

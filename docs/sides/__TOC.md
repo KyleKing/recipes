@@ -1,33 +1,25 @@
 # Sides Table of Contents
 
-- Bacon (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Bacon](./bacon) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![bacon.jpeg](./bacon.jpeg){: align=right .image-toc loading=lazy }
 
-    ![bacon.jpeg](./bacon.jpeg){: .image-recipe loading=lazy }
+[Emily English Roasted Potatoes](./emily_english_roasted_potatoes) (*Not yet rated*)
+![emily_english_roasted_potatoes.jpeg](./emily_english_roasted_potatoes.jpeg){: align=right .image-toc loading=lazy }
 
-- Emily English Roasted Potatoes (*Not yet rated*)
+[Cheeses](./cheeses) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+<!-- TODO: Capture image -->
 
-    ![emily_english_roasted_potatoes.jpeg](./emily_english_roasted_potatoes.jpeg){: .image-recipe loading=lazy }
+[Bruschetta](./bruschetta) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-- Cheeses (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+[Aunt Laura'S Spicy Chicken Dip](./aunt_laura's_spicy_chicken_dip) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![aunt_laura's_spicy_chicken_dip.jpeg](./aunt_laura's_spicy_chicken_dip.jpeg){: align=right .image-toc loading=lazy }
 
-    <!-- TODO: Capture image -->
+[Favorite Snacks](./favorite_snacks) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![favorite_snacks.jpg](./favorite_snacks.jpg){: align=right .image-toc loading=lazy }
 
-- Bruschetta (*Not yet rated*)
+[Pretzels](./pretzels) (*Not yet rated*)
+<!-- TODO: Capture image -->
 
-    <!-- TODO: Capture image -->
-
-- Aunt Laura'S Spicy Chicken Dip (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![aunt_laura's_spicy_chicken_dip.jpeg](./aunt_laura's_spicy_chicken_dip.jpeg){: .image-recipe loading=lazy }
-
-- Favorite Snacks (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![favorite_snacks.jpg](./favorite_snacks.jpg){: .image-recipe loading=lazy }
-
-- Pretzels (*Not yet rated*)
-
-    <!-- TODO: Capture image -->
-
-- Ikea Meatball Sauce (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
-
-    ![ikea_meatball_sauce.jpeg](./ikea_meatball_sauce.jpeg){: .image-recipe loading=lazy }
+[Ikea Meatball Sauce](./ikea_meatball_sauce) (:fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:)
+![ikea_meatball_sauce.jpeg](./ikea_meatball_sauce.jpeg){: align=right .image-toc loading=lazy }
