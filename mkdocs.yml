@@ -1,9 +1,9 @@
-# FIXME: edit link foes to master instead of the main branch
 site_name: Recipes
-site_author: Kyle King
-site_description: Kyle's Recipes
+site_author: Kyle King and Alexandra Gabitzer
+site_description: Kyle and Alex's Personal Recipes
 repo_name: KyleKing/recipes
 repo_url: https://github.com/KyleKing/recipes
+edit_uri: edit/main/docs/
 
 theme:
   name: material
