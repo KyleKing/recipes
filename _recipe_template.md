@@ -8,7 +8,7 @@
 <!-- AUTO-UserRating -->
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=IMAGE_FILENAME; (User can specify image name if multiple exist) -->
+<!-- name_image=IMAGE_FILENAME; (User can specify image name) -->
 <!-- AUTO-Image -->
 <!-- /AUTO-Image -->
 

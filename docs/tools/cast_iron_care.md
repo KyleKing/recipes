@@ -11,7 +11,7 @@
 Personal rating: *Not yet rated*
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=cast_iron_care.jpg; (User can specify image name if multiple exist) -->
+<!-- name_image=cast_iron_care.jpg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![cast_iron_care.jpg](./cast_iron_care.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

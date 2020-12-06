@@ -11,7 +11,10 @@
 Personal rating: *Not yet rated*
 <!-- /AUTO-UserRating -->
 
-<!-- TODO: Capture image for Classic Pasta And Mushrooms -->
+<!-- name_image=None; (User can specify image name) -->
+<!-- AUTO-Image -->
+<!-- TODO: Capture image -->
+<!-- /AUTO-Image -->
 
 ## Ingredients
 

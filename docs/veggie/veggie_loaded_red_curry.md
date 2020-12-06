@@ -11,7 +11,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=veggie_loaded_red_curry.jpeg; (User can specify image name if multiple exist) -->
+<!-- name_image=veggie_loaded_red_curry.jpeg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![veggie_loaded_red_curry.jpeg](./veggie_loaded_red_curry.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

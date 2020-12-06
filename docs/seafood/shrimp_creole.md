@@ -9,7 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=shrimp_creole.jpeg; (User can specify image name if multiple exist) -->
+<!-- name_image=shrimp_creole.jpeg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![shrimp_creole.jpeg](./shrimp_creole.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

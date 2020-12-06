@@ -11,7 +11,7 @@
 Personal rating: *Not yet rated*
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=porcelain_pot_care.jpg; (User can specify image name if multiple exist) -->
+<!-- name_image=porcelain_pot_care.jpg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![porcelain_pot_care.jpg](./porcelain_pot_care.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

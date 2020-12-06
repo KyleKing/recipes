@@ -9,7 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=tomato_mozzarella_caprese.jpg; (User can specify image name if multiple exist) -->
+<!-- name_image=tomato_mozzarella_caprese.jpg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![tomato_mozzarella_caprese.jpg](./tomato_mozzarella_caprese.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

@@ -11,7 +11,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=oreo_truffles.jpg; (User can specify image name if multiple exist) -->
+<!-- name_image=oreo_truffles.jpg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![oreo_truffles.jpg](./oreo_truffles.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

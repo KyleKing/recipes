@@ -11,7 +11,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=chocolate_peanut_butter_bundt_cake.jpg; (User can specify image name if multiple exist) -->
+<!-- name_image=chocolate_peanut_butter_bundt_cake.jpg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![chocolate_peanut_butter_bundt_cake.jpg](./chocolate_peanut_butter_bundt_cake.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

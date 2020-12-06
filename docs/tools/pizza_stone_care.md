@@ -11,7 +11,7 @@
 Personal rating: *Not yet rated*
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=pizza_stone_care.jpeg; (User can specify image name if multiple exist) -->
+<!-- name_image=pizza_stone_care.jpeg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![pizza_stone_care.jpeg](./pizza_stone_care.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

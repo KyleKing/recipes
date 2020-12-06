@@ -9,7 +9,7 @@
 Personal rating: *Not yet rated*
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=margarita.jpg; (User can specify image name if multiple exist) -->
+<!-- name_image=margarita.jpg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![margarita.jpg](./margarita.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

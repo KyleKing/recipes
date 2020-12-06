@@ -11,7 +11,10 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- TODO: Capture image for Baked Apples -->
+<!-- name_image=None; (User can specify image name) -->
+<!-- AUTO-Image -->
+<!-- TODO: Capture image -->
+<!-- /AUTO-Image -->
 
 ## Ingredients
 

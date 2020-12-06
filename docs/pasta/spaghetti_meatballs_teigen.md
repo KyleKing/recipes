@@ -11,7 +11,7 @@
 Personal rating: *Not yet rated*
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=spaghetti_meatballs_teigen.jpeg; (User can specify image name if multiple exist) -->
+<!-- name_image=spaghetti_meatballs_teigen.jpeg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![spaghetti_meatballs_teigen.jpeg](./spaghetti_meatballs_teigen.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

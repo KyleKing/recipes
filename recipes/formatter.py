@@ -2,12 +2,66 @@
 
 import re
 from pathlib import Path
-from typing import Dict, Optional
+from typing import Dict, List, Optional
 
 from loguru import logger
 
+# =====================================================================================
+# Shared Functionality
+
 CWD = Path(__file__).resolve().parents[1]
 DIR_MD = CWD / 'docs'
+
+
+def _format_titlecase(raw_title: str) -> str:
+    """Format string in titlecase replacing underscores with spaces.
+
+    Args:
+        raw_title: original string title. Typically the filename stem
+
+    Returns:
+        str: formatted string
+
+    """
+    return raw_title.replace('_', ' ').strip().title()
+
+
+def _exclude_toc(paths_md: List[Path]) -> List[Path]:
+    """Exclude any TOC files from the list of markdown paths."""  # noqa: DAR101,DAR201
+    return [_p for _p in paths_md if '_toc' not in _p.stem.lower()]
+
+
+def _format_stars(rating: int) -> str:
+    """Format the star icons.
+
+    Args:
+        rating: integer user rating
+
+    Returns:
+        str: formatted string icons
+
+    """
+    if rating != 0:
+        bump_rating = 3  # Increase the rating so that the lowest is not 1
+        return ' '.join([_ICON_FA_STAR] * (rating + bump_rating) + [_ICON_FA_STAR_OUT] * (5 - rating))
+    return '*Not yet rated*'
+
+
+def _format_image_md(name_image: Optional[str]) -> str:
+    """Format the image as markdown.
+
+    Args:
+        name_image: string image name or None
+
+    Returns:
+        str: formatted image markdown string
+
+    """
+    if name_image and name_image.lower() != 'none':
+        return f'![{name_image}](./{name_image})' + '{: .image-recipe loading=lazy }'  # noqa: P103
+    logger.debug(f'WARN: No image specified: `{name_image}`')
+    return '<!-- TODO: Capture image -->'  # noqa: T101
+
 
 # =====================================================================================
 # Utilities for updating Markdown
@@ -54,22 +108,6 @@ def _format_header(_section: str, path_md: Path) -> str:
     return '<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->'
 
 
-def _format_stars(rating: int) -> str:
-    """Format the star icons.
-
-    Args:
-        rating: integer user rating
-
-    Returns:
-        str: formatted string icons
-
-    """
-    if rating != 0:
-        bump_rating = 3  # Increase the rating so that the lowest is not 1
-        return ' '.join([_ICON_FA_STAR] * (rating + bump_rating) + [_ICON_FA_STAR_OUT] * (5 - rating))
-    return '*Not yet rated*'
-
-
 def _format_star_section(section: str, path_md: Path) -> str:
     """Format the star rating as markdown.
 
@@ -89,21 +127,6 @@ def _format_star_section(section: str, path_md: Path) -> str:
         'Personal rating: ' + stars,
         '<!-- /AUTO-UserRating -->',
     ])
-
-
-def _format_image_md(name_image: Optional[str]) -> str:
-    """Format the image as markdown.
-
-    Args:
-        name_image: string image name or None
-
-    Returns:
-        str: formatted image markdown string
-
-    """
-    if name_image and name_image.lower() != 'none':
-        return f'![{name_image}](./{name_image})' + '{: .image-recipe loading=lazy }'  # noqa: P103
-    return '<!-- TODO: Capture image -->'
 
 
 def _format_image_section(section: str, path_md: Path) -> str:
@@ -126,7 +149,7 @@ def _format_image_section(section: str, path_md: Path) -> str:
         raise FileNotFoundError(f'Could not locate {path_image} from {path_md}')
 
     return '\n'.join([
-        f'<!-- name_image={name_image}; (User can specify image name if multiple exist) -->',
+        f'<!-- name_image={name_image}; (User can specify image name) -->',
         '<!-- AUTO-Image -->',
         _format_image_md(name_image),
         '<!-- /AUTO-Image -->',
@@ -175,25 +198,13 @@ def _update_md(path_md: Path) -> str:
 
 def _write_auto_gen() -> None:
     """Update auto-generated markdown contents."""
-    for path_md in DIR_MD.glob('*/*.md'):
+    for path_md in _exclude_toc([*DIR_MD.glob('*/*.md')]):
         logger.info('> {path_md}', path_md=path_md)
         path_md.write_text(_update_md(path_md))
 
 
 # =====================================================================================
 # Utilities for TOC
-
-def _format_titlecase(raw_title: str) -> str:
-    """Format string in titlecase replacing underscores with spaces.
-
-    Args:
-        raw_title: original string title. Typically the filename stem
-
-    Returns:
-        str: formatted string
-
-    """
-    return raw_title.replace('_', ' ').strip().title()
 
 
 def _format_toc(toc_data: Dict[str, str]) -> str:
@@ -228,10 +239,10 @@ def _create_toc_entry(path_md: Path) -> str:
     for section in path_md.read_text().split('\n\n'):
         for startswith in startswith_items:
             if section.strip().startswith(startswith):
-                logger.info('Matched `{startswith}` against: {section}', startswith=startswith, section=section)
+                logger.debug('Matched `{startswith}` against: {section}', startswith=startswith, section=section)
                 toc_data = {**toc_data, **_parse_var_comment(section)}
                 break
-    logger.info('{toc_data}', toc_data=toc_data, path_md=path_md)
+    logger.debug('{toc_data}', toc_data=toc_data, path_md=path_md)
     return _format_toc(toc_data)
 
 
@@ -240,11 +251,14 @@ def _write_toc() -> None:
     for dir_sub in DIR_MD.glob('*'):
         sections_toc = [f'# {_format_titlecase(dir_sub.name)} Table of Contents']
         paths_md = [*dir_sub.glob('*.md')]
-        for path_md in [_p for _p in paths_md if 'toc' not in _p.stem.lower()]:
+        for path_md in _exclude_toc(paths_md):
             sections_toc.append(_create_toc_entry(path_md))
 
         if paths_md:
             (dir_sub / '__TOC.md').write_text('\n\n'.join(sections_toc))
+
+
+# =====================================================================================
 
 
 def run() -> None:

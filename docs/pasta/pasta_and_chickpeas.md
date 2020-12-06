@@ -11,7 +11,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=pasta_and_chickpeas.jpeg; (User can specify image name if multiple exist) -->
+<!-- name_image=pasta_and_chickpeas.jpeg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![pasta_and_chickpeas.jpeg](./pasta_and_chickpeas.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

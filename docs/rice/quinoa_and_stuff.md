@@ -9,7 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=quinoa_and_stuff.jpg; (User can specify image name if multiple exist) -->
+<!-- name_image=quinoa_and_stuff.jpg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![quinoa_and_stuff.jpg](./quinoa_and_stuff.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

@@ -11,7 +11,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=toasted_marshmallow_brownie_crinkles.jpg; (User can specify image name if multiple exist) -->
+<!-- name_image=toasted_marshmallow_brownie_crinkles.jpg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![toasted_marshmallow_brownie_crinkles.jpg](./toasted_marshmallow_brownie_crinkles.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

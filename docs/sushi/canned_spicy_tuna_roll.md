@@ -11,7 +11,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=canned_spicy_tuna_roll.jpg; (User can specify image name if multiple exist) -->
+<!-- name_image=canned_spicy_tuna_roll.jpg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![canned_spicy_tuna_roll.jpg](./canned_spicy_tuna_roll.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

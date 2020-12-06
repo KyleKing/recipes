@@ -11,7 +11,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=johns_chili.jpeg; (User can specify image name if multiple exist) -->
+<!-- name_image=johns_chili.jpeg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![johns_chili.jpeg](./johns_chili.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

@@ -9,7 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=aunt_laura's_spicy_chicken_dip.jpeg; (User can specify image name if multiple exist) -->
+<!-- name_image=aunt_laura's_spicy_chicken_dip.jpeg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![aunt_laura's_spicy_chicken_dip.jpeg](./aunt_laura's_spicy_chicken_dip.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

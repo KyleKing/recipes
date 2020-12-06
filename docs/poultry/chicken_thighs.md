@@ -11,7 +11,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=chicken_thighs.jpeg; (User can specify image name if multiple exist) -->
+<!-- name_image=chicken_thighs.jpeg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![chicken_thighs.jpeg](./chicken_thighs.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

@@ -11,7 +11,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=kings_hawaiian_blpts.jpeg; (User can specify image name if multiple exist) -->
+<!-- name_image=kings_hawaiian_blpts.jpeg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![kings_hawaiian_blpts.jpeg](./kings_hawaiian_blpts.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

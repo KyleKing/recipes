@@ -9,7 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=mozzarella_pasta.jpg; (User can specify image name if multiple exist) -->
+<!-- name_image=mozzarella_pasta.jpg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![mozzarella_pasta.jpg](./mozzarella_pasta.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

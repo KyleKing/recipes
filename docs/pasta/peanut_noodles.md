@@ -9,7 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=peanut_noodles.jpg; (User can specify image name if multiple exist) -->
+<!-- name_image=peanut_noodles.jpg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![peanut_noodles.jpg](./peanut_noodles.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

@@ -11,7 +11,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=gingerbread_cookies.jpeg; (User can specify image name if multiple exist) -->
+<!-- name_image=gingerbread_cookies.jpeg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![gingerbread_cookies.jpeg](./gingerbread_cookies.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

@@ -9,7 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=onigiri.jpg; (User can specify image name if multiple exist) -->
+<!-- name_image=onigiri.jpg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![onigiri.jpg](./onigiri.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

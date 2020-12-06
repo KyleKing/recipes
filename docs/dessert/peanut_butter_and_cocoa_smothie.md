@@ -9,7 +9,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=peanut_butter_and_cocoa_smothie.jpg; (User can specify image name if multiple exist) -->
+<!-- name_image=peanut_butter_and_cocoa_smothie.jpg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![peanut_butter_and_cocoa_smothie.jpg](./peanut_butter_and_cocoa_smothie.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

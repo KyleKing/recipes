@@ -11,7 +11,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=dragon_noodles.jpg; (User can specify image name if multiple exist) -->
+<!-- name_image=dragon_noodles.jpg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![dragon_noodles.jpg](./dragon_noodles.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

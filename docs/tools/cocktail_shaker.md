@@ -9,7 +9,7 @@
 Personal rating: *Not yet rated*
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=cocktail_shaker.jpeg; (User can specify image name if multiple exist) -->
+<!-- name_image=cocktail_shaker.jpeg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![cocktail_shaker.jpeg](./cocktail_shaker.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

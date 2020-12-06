@@ -11,7 +11,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=baked_potatoes_instant_pot.jpg; (User can specify image name if multiple exist) -->
+<!-- name_image=baked_potatoes_instant_pot.jpg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![baked_potatoes_instant_pot.jpg](./baked_potatoes_instant_pot.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

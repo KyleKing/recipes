@@ -11,7 +11,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=breaded_chicken.jpeg; (User can specify image name if multiple exist) -->
+<!-- name_image=breaded_chicken.jpeg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![breaded_chicken.jpeg](./breaded_chicken.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

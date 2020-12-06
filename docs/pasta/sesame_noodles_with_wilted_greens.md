@@ -11,7 +11,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=sesame_noodles_with_wilted_greens.jpg; (User can specify image name if multiple exist) -->
+<!-- name_image=sesame_noodles_with_wilted_greens.jpg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![sesame_noodles_with_wilted_greens.jpg](./sesame_noodles_with_wilted_greens.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

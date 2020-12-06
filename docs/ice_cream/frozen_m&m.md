@@ -11,7 +11,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=frozen_m&m.jpeg; (User can specify image name if multiple exist) -->
+<!-- name_image=frozen_m&m.jpeg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![frozen_m&m.jpeg](./frozen_m&m.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->

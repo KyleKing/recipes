@@ -11,7 +11,7 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=jambon_beurre.jpg; (User can specify image name if multiple exist) -->
+<!-- name_image=jambon_beurre.jpg; (User can specify image name) -->
 <!-- AUTO-Image -->
 ![jambon_beurre.jpg](./jambon_beurre.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->
