@@ -2,6 +2,7 @@
 
 import re
 from pathlib import Path
+from typing import Dict, Optional
 
 from loguru import logger
 
@@ -35,9 +36,17 @@ def _parse_var_comment(section: str) -> str:
     Returns:
         str: updated recipe string markdown
 
+    Raises:
+        AttributeError: if problem with parsing of the regular expression
+
     """
-    match = _RE_VAR_COMMENT.match(section).groupdict()
-    return {match['key']: match['value']}
+    try:
+        match = _RE_VAR_COMMENT.match(section.strip()).groupdict()
+        return {match['key']: match['value']}
+    except AttributeError:
+        logger.exception('Error parsing `{section}` with `{_RE_VAR_COMMENT}`', section=section,
+                         _RE_VAR_COMMENT=_RE_VAR_COMMENT)
+        raise
 
 
 def _format_header(_section: str, path_md: Path) -> str:
@@ -45,7 +54,23 @@ def _format_header(_section: str, path_md: Path) -> str:
     return '<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->'
 
 
-def _format_stars(section: str, path_md: Path) -> str:
+def _format_stars(rating: int) -> str:
+    """Format the star icons.
+
+    Args:
+        rating: integer user rating
+
+    Returns:
+        str: formatted string icons
+
+    """
+    if rating != 0:
+        bump_rating = 3  # Increase the rating so that the lowest is not 1
+        return ' '.join([_ICON_FA_STAR] * (rating + bump_rating) + [_ICON_FA_STAR_OUT] * (5 - rating))
+    return '*Not yet rated*'
+
+
+def _format_star_section(section: str, path_md: Path) -> str:
     """Format the star rating as markdown.
 
     Args:
@@ -57,13 +82,7 @@ def _format_stars(section: str, path_md: Path) -> str:
 
     """
     rating = int(_parse_var_comment(section)['rating'])
-    # Increase the rating so that the lowest is not 1
-    bump_rating = 3
-    if rating != 0:
-        stars = ' '.join([_ICON_FA_STAR] * (rating + bump_rating) + [_ICON_FA_STAR_OUT] * (5 - rating))
-    else:
-        stars = '*Not yet rated*'
-    # Combine the output markdown
+    stars = _format_stars(rating)
     return '\n'.join([
         f'<!-- rating={rating}; (User can specify rating on scale of 1-5) -->',
         '<!-- AUTO-UserRating -->',
@@ -72,7 +91,22 @@ def _format_stars(section: str, path_md: Path) -> str:
     ])
 
 
-def _format_image_md(section: str, path_md: Path) -> str:
+def _format_image_md(name_image: Optional[str]) -> str:
+    """Format the image as markdown.
+
+    Args:
+        name_image: string image name or None
+
+    Returns:
+        str: formatted image markdown string
+
+    """
+    if name_image and name_image.lower() != 'none':
+        return f'![{name_image}](./{name_image})' + '{: .image-recipe loading=lazy }'  # noqa: P103
+    return '<!-- TODO: Capture image -->'
+
+
+def _format_image_section(section: str, path_md: Path) -> str:
     """Format the string section with the specified image name.
 
     Args:
@@ -82,16 +116,19 @@ def _format_image_md(section: str, path_md: Path) -> str:
     Returns:
         str: updated recipe string markdown
 
+    Raises:
+        FileNotFoundError: if the image file could not be located
+
     """
     name_image = _parse_var_comment(section)['name_image']
     path_image = path_md.parent / name_image
-    if not path_image.is_file():
+    if name_image.lower() != 'none' and not path_image.is_file():
         raise FileNotFoundError(f'Could not locate {path_image} from {path_md}')
 
     return '\n'.join([
         f'<!-- name_image={name_image}; (User can specify image name if multiple exist) -->',
         '<!-- AUTO-Image -->',
-        f'![{name_image}](./{name_image})' + '{: .image-recipe loading=lazy }',  # noqa: P103
+        _format_image_md(name_image),
         '<!-- /AUTO-Image -->',
     ])
 
@@ -108,28 +145,26 @@ def _check_unknown(section: str, _path_md: Path) -> str:  # noqa
     return section
 
 
-def _update_md(recipe_md: str, path_md: Path) -> str:
+def _update_md(path_md: Path) -> str:
     """Parse the markdown recipe and replace auto-formatted sections.
 
     Args:
-        recipe_md: string markdown recipe
         path_md: Path to the markdown file
 
     Returns:
         str: updated recipe string markdown
 
     """
-    startswith_lookup = {
+    startswith_action_lookup = {
         '<!-- Do not modify sections with ': _format_header,
-        '<!-- rating=': _format_stars,
-        '<!-- name_image=': _format_image_md,
-        '<!-- Do not modify sections with ': _format_header,
+        '<!-- rating=': _format_star_section,
+        '<!-- name_image=': _format_image_section,
         '<!-- TODO': _check_todo,  # noqa: T101
         '<!-- ': _check_unknown,
     }
     sections = []
-    for section in recipe_md.split('\n\n'):
-        for startswith, action in startswith_lookup.items():
+    for section in path_md.read_text().split('\n\n'):
+        for startswith, action in startswith_action_lookup.items():
             if section.strip().startswith(startswith):
                 sections.append(action(section, path_md))
                 break
@@ -142,9 +177,77 @@ def _write_auto_gen() -> None:
     """Update auto-generated markdown contents."""
     for path_md in DIR_MD.glob('*/*.md'):
         logger.info('> {path_md}', path_md=path_md)
-        path_md.write_text(_update_md(path_md.read_text(), path_md))
+        path_md.write_text(_update_md(path_md))
+
+
+# =====================================================================================
+# Utilities for TOC
+
+def _format_titlecase(raw_title: str) -> str:
+    """Format string in titlecase replacing underscores with spaces.
+
+    Args:
+        raw_title: original string title. Typically the filename stem
+
+    Returns:
+        str: formatted string
+
+    """
+    return raw_title.replace('_', ' ').strip().title()
+
+
+def _format_toc(toc_data: Dict[str, str]) -> str:
+    """Format a single list item for the TOC from parsed data.
+
+    Args:
+        toc_data: dictionary of key and data parsed from source file
+
+    Returns:
+        str: single TOC item
+
+    """
+    return (f"- {toc_data['title']} ({_format_stars(int(toc_data['rating']))})"
+            f"\n\n    {_format_image_md(toc_data['name_image'])}")
+
+
+def _create_toc_entry(path_md: Path) -> str:
+    """Parse the section and return a single list item for the TOC.
+
+    Args:
+        path_md: Path to the markdown file
+
+    Returns:
+        str: single TOC item
+
+    """
+    startswith_items = [
+        '<!-- rating=',
+        '<!-- name_image=',
+    ]
+    toc_data = {'title': _format_titlecase(path_md.stem), 'name_image': None}
+    for section in path_md.read_text().split('\n\n'):
+        for startswith in startswith_items:
+            if section.strip().startswith(startswith):
+                logger.info('Matched `{startswith}` against: {section}', startswith=startswith, section=section)
+                toc_data = {**toc_data, **_parse_var_comment(section)}
+                break
+    logger.info('{toc_data}', toc_data=toc_data, path_md=path_md)
+    return _format_toc(toc_data)
+
+
+def _write_toc() -> None:
+    """Write the table of contents for each section."""
+    for dir_sub in DIR_MD.glob('*'):
+        sections_toc = [f'# {_format_titlecase(dir_sub.name)} Table of Contents']
+        paths_md = [*dir_sub.glob('*.md')]
+        for path_md in [_p for _p in paths_md if 'toc' not in _p.stem.lower()]:
+            sections_toc.append(_create_toc_entry(path_md))
+
+        if paths_md:
+            (dir_sub / '__TOC.md').write_text('\n\n'.join(sections_toc))
 
 
 def run() -> None:
     """Format the markdown files."""
     _write_auto_gen()
+    _write_toc()
