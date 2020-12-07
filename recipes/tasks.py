@@ -52,6 +52,7 @@ def _convert_png_to_jpg() -> None:
         path_png.unlink()
 
 
+# TODO: Add keyword argument for path to a single image to reduce impact on git
 def task_compress() -> DoItTask:
     """Compress images.
 
