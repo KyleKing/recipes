@@ -1,7 +1,26 @@
 {
+    "short_name": "recipes",
+    "name": "Recipe Website",
+    "description": "Personal recipe website",
     "icons": [{
+        "src": "_icons/app-icon@228x228.png",
+        "sizes": "228x228",
+        "type": "image/png"
+    }, {
+        "src": "_icons/app-icon@196x196.png",
+        "sizes": "196x196",
+        "type": "image/png"
+    }, {
         "src": "_icons/app-icon@180x180.png",
         "sizes": "180x180",
+        "type": "image/png"
+    }, {
+        "src": "_icons/app-icon@128x128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+    }, {
+        "src": "_icons/app-icon@76x76.png",
+        "sizes": "76x76",
         "type": "image/png"
     }],
     "start_url": "/"
