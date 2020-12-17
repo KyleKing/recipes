@@ -17,7 +17,7 @@
 | [Collens Peanut Butter Bars](../collens_peanut_butter_bars) | 3 | <!-- TODO: Capture image --> |
 | [Banana Bread](../banana_bread) | 6 | ![banana_bread.jpeg](./banana_bread.jpeg){: .image-toc loading=lazy } |
 | [Popcorn Cinnamon Sugar](../popcorn_cinnamon_sugar) | 5 | ![popcorn_cinnamon_sugar.jpeg](./popcorn_cinnamon_sugar.jpeg){: .image-toc loading=lazy } |
-| [Chocolatines](../chocolatines) | 4 | ![chocolatines.jpeg](./chocolatines.jpeg){: .image-toc loading=lazy } |
+| [Chocolatines](../chocolatines) | 8 | ![chocolatines.jpeg](./chocolatines.jpeg){: .image-toc loading=lazy } |
 | [Chocolate-Pb-M&M Balls](../chocolate-pb-m&m_balls) | 3 | <!-- TODO: Capture image --> |
 | [Cookie Dough Billionaire Bars](../cookie_dough_billionaire_bars) | 3 | <!-- TODO: Capture image --> |
 | [Chocolate Frosting Recipe](../chocolate_frosting_recipe) | 6 | ![chocolate_frosting_recipe.jpg](./chocolate_frosting_recipe.jpg){: .image-toc loading=lazy } |

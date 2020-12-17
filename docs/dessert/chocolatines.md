@@ -1,12 +1,12 @@
-<!-- Needs Manual Review -->
-
 <!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Chocolatines
 
-<!-- rating=1; (User can specify rating on scale of 1-5) -->
+> Source: Alex's family recipe
+
+<!-- rating=5; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
-Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 <!-- /AUTO-UserRating -->
 
 <!-- name_image=chocolatines.jpeg; (User can specify image name) -->
@@ -24,7 +24,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Recipe
 
-* Preheat the oven to 350 F
+* Preheat the oven to 350F
 * Line a large baking sheet with tin foil and apply non-stick spray
 * Spread out saltines in a single layer
 * In a large pot, melt the butter then mix with the brown sugar and bring to a boil. Once at a boil, simmer on low heat for 4 minutes without stirring
@@ -33,6 +33,5 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * Add any additional toppings, then freeze for at least 1 hour
 * Break into bite size chunks! Can be stored in the fridge or on the counter
 
-## Notes
-
-* Source: Alex's family recipe
+!!! Warning
+    Choose a backing sheet that will fit in your freezer
