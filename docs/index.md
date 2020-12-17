@@ -1,3 +1,3 @@
 # Welcome
 
-This is my personal recipe site to aggregate recipes we have found online and adapted
+This is my personal recipe site to aggregate recipes Kyle and Alexandra have found online and adapted
