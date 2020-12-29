@@ -1,4 +1,4 @@
-"""DoIt Script.
+"""doit Script.
 
 ```sh
 # Ensure that packages are installed
@@ -20,21 +20,26 @@ poetry run doit
 
 from pathlib import Path
 
-from dash_dev import LOGGER_CONFIG
-from dash_dev.doit_helpers.doit_globals import DIG
-from dash_dev.registered_tasks import *  # noqa: F401,F403,H303 skipcq: PYL-W0614 (Run 'doit list' to see tasks)
+from calcipy.doit_tasks import *  # noqa: F401,F403,H303 (Run 'doit list' to see tasks). skipcq: PYL-W0614
+from calcipy.doit_tasks import DOIT_CONFIG_RECOMMENDED
+from calcipy.doit_tasks.doit_globals import DIG
+from calcipy.log_helpers import build_logger_config
 from loguru import logger
 
 from recipes import __pkg_name__
 from recipes.tasks import task_compress, task_deploy, task_main, task_serve  # noqa: F401I
 
 logger.enable(__pkg_name__)
-logger.configure(**LOGGER_CONFIG)
-logger.info('Starting DoIt tasks in dodo.py')
+path_parent = Path(__file__).resolve().parent
+log_config = build_logger_config(path_parent, production=False)
+logger.configure(**log_config)
+logger.info(
+    'Started logging to {path_parent}/.logs with {log_config}', path_parent=path_parent,
+    log_config=log_config,
+)
 
 # Configure Dash paths
-CWD = Path(__file__).resolve().parent
-DIG.set_paths(source_path=CWD, doc_dir=CWD / 'docs-dash_dev')
+DIG.set_paths(path_project=path_parent)
 
 # Create list of all tasks run with `poetry run doit`. Comment on/off as needed
 DOIT_CONFIG = {
@@ -43,11 +48,9 @@ DOIT_CONFIG = {
         'main',
         'coverage',
         # 'open_test_docs',
-        'set_lint_config',
-        # > 'create_tag_file',  # PLANNED: https://github.com/KyleKing/dash_dev/issues/24
+        'create_tag_file',
         'auto_format',
-        'lint_pre_commit',
-        'deploy',
+        # 'deploy',
     ],
 }
 """DoIt Configuration Settings. Run with `poetry run doit`."""

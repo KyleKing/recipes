@@ -193,8 +193,5 @@ coverage.json
 # ===============================================================================
 # Package-Specific
 
-# Ignore Files Created by Dash_Dev
-/docs-dash_dev/*
-
 # Other
 /* alias

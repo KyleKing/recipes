@@ -2,8 +2,8 @@
 
 import webbrowser
 
-from dash_dev.doit_helpers.base import debug_task
-from dash_dev.doit_helpers.doit_globals import DoItTask
+from calcipy.doit_tasks.base import debug_task
+from calcipy.doit_tasks.doit_globals import DoItTask
 from doit.tools import LongRunning
 from loguru import logger
 from PIL import Image
