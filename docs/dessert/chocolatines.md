@@ -20,7 +20,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * [ ] 2 sticks butter
 * [ ] 1 cup brown sugar, packed
 * [ ] at least 2 cups of chocolate chips (any type)
-* [ ] Optional toppings: nuts, candy canes, chocolate chips, pretzels, etc.
+* [ ] Optional toppings: chopped peanuts, candy canes, chocolate chips, pretzels, etc.
 
 ## Recipe
 
@@ -34,4 +34,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * Break into bite size chunks! Can be stored in the fridge or on the counter
 
 !!! Warning
-    Choose a backing sheet that will fit in your freezer
+    FYI, choose a backing sheet that will fit in your freezer

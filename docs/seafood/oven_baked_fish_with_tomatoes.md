@@ -4,7 +4,7 @@
 
 # Oven Baked Fish With Tomatoes
 
-> Based on [https://www.budgetbytes.com/easy-oven-baked-fish-with-tomatoes/](https://www.budgetbytes.com/easy-oven-baked-fish-with-tomatoes/)
+> Based on [https://www.budgetbytes.com/easy-oven-baked-fish-with-tomatoes/](https://www.budgetbytes.com/easy-oven-baked-fish-with-tomatoes/). Recommended by Becky and Will
 
 <!-- rating=0; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
@@ -36,6 +36,3 @@ Personal rating: *Not yet rated*
 * Bake the fish for about 15 minutes, or until the internal temperature reaches 145F and the fish easily flakes
 * Serve hot, with a sprinkle of chopped fresh parsley on top
 
-## Notes
-
-* Becky recommended this recipe and I think this is the right one
