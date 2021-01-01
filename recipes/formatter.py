@@ -101,8 +101,10 @@ def _parse_var_comment(section: str) -> str:
         match = _RE_VAR_COMMENT.match(section.strip()).groupdict()
         return {match['key']: match['value']}
     except AttributeError:
-        logger.exception('Error parsing `{section}` with `{_RE_VAR_COMMENT}`', section=section,
-                         _RE_VAR_COMMENT=_RE_VAR_COMMENT)
+        logger.exception(
+            'Error parsing `{section}` with `{_RE_VAR_COMMENT}`', section=section,
+            _RE_VAR_COMMENT=_RE_VAR_COMMENT,
+        )
         raise
 
 
@@ -223,10 +225,12 @@ def _format_toc(toc_data: Dict[str, str]) -> str:
     link = f"[{_format_titlecase(toc_data['name_md'])}](../{toc_data['name_md']})"
     rating = int(toc_data['rating'])
     # Note: the relative link needs to be ../ to work. Will otherwise try to go to './__TOC/<link>'
-    return (f'| {link}'
-            f' | {rating + BUMP_RATING}'
-            f" | {_format_image_md(toc_data['name_image'], attrs='.image-toc')}"
-            ' |')
+    return (
+        f'| {link}'
+        f' | {rating + BUMP_RATING}'
+        f" | {_format_image_md(toc_data['name_image'], attrs='.image-toc')}"
+        ' |'
+    )
 
 
 def _create_toc_entry(path_md: Path) -> str:

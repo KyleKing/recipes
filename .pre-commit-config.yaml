@@ -10,11 +10,30 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.4.0
     hooks:
+      # - id: check-docstring-first > Doesn't handle global variable docstrings
+      - id: check-executables-have-shebangs
+      - id: pretty-format-json
+      - id: check-toml
+      - id: check-xml
+      - id: destroyed-symlinks
+      - id: double-quote-string-fixer
+      - id: file-contents-sorter
+      - id: fix-byte-order-marker
+      # - id: name-tests-test  > End with _test.py?
+      - id: no-commit-to-branch
+      - id: requirements-txt-fixer
+      - id: sort-simple-yaml
+
+      - id: check-byte-order-marker  # Forbid UTF-8 byte-order markers
       - id: check-added-large-files
       - id: check-case-conflict
+      - id: check-ast
+      - id: check-builtin-literals
+      - id: detect-private-key
       - id: check-merge-conflict
       - id: check-symlinks
       - id: check-vcs-permalinks
+      - id: check-json
       # - id: check-yaml  # The mkdocs YAML file isn't valid...
       - id: debug-statements
       - id: end-of-file-fixer
@@ -35,6 +54,7 @@ repos:
     rev: v2.7.4
     hooks:
       - id: pyupgrade
+        args: [--py38-plus]
         stages: [push]
   - repo: https://github.com/asottile/add-trailing-comma
     rev: v2.0.1
@@ -51,12 +71,14 @@ repos:
       - id: lock_deps
         name: lock_dependencies
         entry: poetry lock
+        pass_filenames: false
         language: system
-        files: "pyproject.toml"
+        files: ^(pyproject.toml|poetry.lock)$
         stages: [push]
       - id: doit
         name: doit
         entry: poetry run doit run test
+        pass_filenames: false
         language: system
-        files: \.py
+        types: [python]
         stages: [push]

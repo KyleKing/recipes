@@ -29,7 +29,7 @@ def task_serve() -> DoItTask:
 
     """
     return debug_task([
-        (webbrowser.open, ('http://localhost:8000', )),
+        (webbrowser.open, ('http://localhost:8000',)),
         LongRunning('poetry run mkdocs serve --dirtyreload'),
     ])
 
@@ -62,5 +62,5 @@ def task_compress() -> DoItTask:
     """
     return debug_task([
         LongRunning(f'poetry run optimize-images {DIR_MD}/ -mh 700 -mh 900 --convert-all --force-delete'),
-        (_convert_png_to_jpg, ),
+        (_convert_png_to_jpg,),
     ])
