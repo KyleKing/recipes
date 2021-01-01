@@ -19,6 +19,13 @@ Chg = "Change (old)"
 Fix = "Fix (old)"
 New = "New (old)"
 
+[tool.isort]
+balanced_wrapping = true
+default_section = "THIRDPARTY"
+force_grid_wrap = 0
+length_sort = false
+line_length = 120
+
 [tool.poetry]
 name = "recipes"
 version = "0.0.1"
@@ -26,13 +33,6 @@ description = "Recipe Website"
 authors = [ "Kyle King <https://github.com/KyleKing>",]
 repository = "https://github.com/kyleking/recipes"
 license = "MIT"
-
-[tool.isort]
-balanced_wrapping = true
-default_section = "THIRDPARTY"
-force_grid_wrap = 0
-length_sort = false
-line_length = 120
 
 [tool.poetry.dependencies]
 python = "^3.8,<3.9"

@@ -263,7 +263,7 @@ def _write_toc() -> None:
             toc_table += '\n' + _create_toc_entry(path_md)
 
         if paths_md:
-            toc_text = f'# Table of Contents ({_format_titlecase(dir_sub.name)})\n\n{toc_table}'
+            toc_text = f'# Table of Contents ({_format_titlecase(dir_sub.name)})\n\n{toc_table}\n'
             (dir_sub / '__TOC.md').write_text(toc_text)
 
 

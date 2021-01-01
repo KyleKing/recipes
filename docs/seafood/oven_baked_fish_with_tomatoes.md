@@ -35,4 +35,3 @@ Personal rating: *Not yet rated*
 * Spread about 1/3 of the tomato mixture in the bottom of a casserole dish big enough to fit all of your fillets without overlapping. Lay the fish fillets over the tomato mixture, then spoon the rest of the tomatoes over top, completely covering the fish
 * Bake the fish for about 15 minutes, or until the internal temperature reaches 145F and the fish easily flakes
 * Serve hot, with a sprinkle of chopped fresh parsley on top
-
