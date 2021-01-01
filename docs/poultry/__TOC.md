@@ -17,5 +17,6 @@
 | [Chicken Thighs](../chicken_thighs) | 4 | ![chicken_thighs.jpeg](./chicken_thighs.jpeg){: .image-toc loading=lazy } |
 | [Chicken Cacciatore](../chicken_cacciatore) | 5 | ![chicken_cacciatore.jpg](./chicken_cacciatore.jpg){: .image-toc loading=lazy } |
 | [Enchiladas](../enchiladas) | 6 | ![enchiladas.jpg](./enchiladas.jpg){: .image-toc loading=lazy } |
+| [Proscuitto Wrapped Stuffed Chicken](../proscuitto_wrapped_stuffed_chicken) | 8 | ![proscuitto_wrapped_stuffed_chicken.jpeg](./proscuitto_wrapped_stuffed_chicken.jpeg){: .image-toc loading=lazy } |
 | [Chicken Instant Pot](../chicken_instant_pot) | 3 | <!-- TODO: Capture image --> |
 | [Sriracha Chicken](../sriracha_chicken) | 3 | <!-- TODO: Capture image --> |
