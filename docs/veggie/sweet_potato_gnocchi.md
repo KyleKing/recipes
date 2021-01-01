@@ -4,6 +4,10 @@
 
 # Sweet Potato Gnocchi
 
+> Based on [Chrissy Teigen Cravings], pg. 176
+
+  [Chrissy Teigen Cravings]: https://www.penguinrandomhouse.com/books/252973/cravings-by-chrissy-teigen-with-adeena-sussman/
+
 <!-- rating=2; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
@@ -43,5 +47,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Notes
 
-* Chrissy Teigen Cravings page 176
 * Try to minimize the amount of flour and knead time to maximize flavor and softness

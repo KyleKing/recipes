@@ -4,6 +4,10 @@
 
 # Brick Chicken
 
+> Based on [Chrissy Teigen Cravings], pg. 218
+
+  [Chrissy Teigen Cravings]: https://www.penguinrandomhouse.com/books/252973/cravings-by-chrissy-teigen-with-adeena-sussman/
+
 <!-- rating=3; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
@@ -38,5 +42,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Notes
 
-* Chrissy Teigen Cravings, 218
 * Alt, can be baked in a glass pan at 400 for 30-40 min for large pieces

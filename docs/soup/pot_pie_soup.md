@@ -4,6 +4,10 @@
 
 # Pot Pie Soup
 
+> Based on [Chrissy Teigen Cravings], pg. 51-52 (and recipe for crackers)
+
+  [Chrissy Teigen Cravings]: https://www.penguinrandomhouse.com/books/252973/cravings-by-chrissy-teigen-with-adeena-sussman/
+
 <!-- rating=3; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
@@ -40,7 +44,3 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * Add the potato, carrots, peas, pearl onions (or substitute), and ham. Simmer until the potatoes and carrots are tender (~20 minutes).
 * Stir in the chicken and cream then heat for a final 5 minutes
 * Serve with a baguette or the crust crackers from the same cookbook recipe
-
-## Notes
-
-* From Cravings by Chrissy Teigen, page 51-52. Also includes recipe for crackers

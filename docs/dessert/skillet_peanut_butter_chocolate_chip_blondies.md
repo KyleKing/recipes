@@ -4,7 +4,9 @@
 
 # Skillet Peanut Butter Chocolate Chip Blondies
 
-> Based on [https://www.amazon.com/Cravings-Recipes-All-Food-Want/dp/1101903910](https://www.amazon.com/Cravings-Recipes-All-Food-Want/dp/1101903910)
+> Based on [Chrissy Teigen Cravings], pg. 243
+
+  [Chrissy Teigen Cravings]: https://www.penguinrandomhouse.com/books/252973/cravings-by-chrissy-teigen-with-adeena-sussman/
 
 <!-- rating=1; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
@@ -41,5 +43,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Notes
 
-* Chrissy Teigen Cravings, 243
-* Sometimes you can find bags of peanut butter and chocolate chips, which gives you 2/3 cup leftover for snacking :)
+* Sometimes you can find bags of peanut butter and chocolate chips, which gives you 2/3 cup leftover for snacking

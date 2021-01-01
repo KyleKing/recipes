@@ -4,6 +4,10 @@
 
 # Spaghetti Cacio E Cepe
 
+> Based on [Chrissy Teigen Cravings], pg. 78
+
+  [Chrissy Teigen Cravings]: https://www.penguinrandomhouse.com/books/252973/cravings-by-chrissy-teigen-with-adeena-sussman/
+
 <!-- rating=2; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
@@ -33,7 +37,3 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * Add the Olive Oil, red pepper flakes, black pepper, and garlic to the skillet and cook for 1 min. Set aside a small cup of pasta water.
 * Combine the lemon juice, spaghetti, and Parmesan cheese. Add a small amount of pasta water as needed to help melt the cheese.
 * Add the baby arugula and allow to wilt for 2 minutes.
-
-## Notes
-
-* Chrissy Teigen Cravings, 78

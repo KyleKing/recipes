@@ -2,9 +2,11 @@
 
 <!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
-# Kings Hawaiian Blpts
+# King's Hawaiian Blpts
 
-> Based on [https://www.amazon.com/Cravings-Recipes-All-Food-Want/dp/1101903910](https://www.amazon.com/Cravings-Recipes-All-Food-Want/dp/1101903910)
+> Based on [Chrissy Teigen Cravings], pg. 139
+
+  [Chrissy Teigen Cravings]: https://www.penguinrandomhouse.com/books/252973/cravings-by-chrissy-teigen-with-adeena-sussman/
 
 <!-- rating=3; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
@@ -33,7 +35,3 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * Arrange pineapples on a baking sheet and broil until browned on both sides. Let cool slightly then quarter
 * Spread the butter on the rolls and arrange on a baking sheet. Broil until golden, 1-2 min
 * Spread mayo on the rolls, add lettuce, tomato, bacon, onions, and a pineapple wedge
-
-## Notes
-
-* Chrissy Teigen Cravings, pg. 139

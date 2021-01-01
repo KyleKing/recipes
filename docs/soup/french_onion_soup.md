@@ -4,7 +4,9 @@
 
 # French Onion Soup
 
-> Based on [https://smile.amazon.com/dp/B01MR8VVAZ/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1](https://smile.amazon.com/dp/B01MR8VVAZ/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)
+> Based on [Chrissy Teigen Cravings Hungry for More], pg. 48
+
+  [Chrissy Teigen Cravings Hungry for More]: https://www.penguinrandomhouse.com/books/553580/cravings-hungry-for-more-by-chrissy-teigen-with-adeena-sussman/
 
 <!-- rating=3; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
@@ -44,5 +46,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Notes
 
-* Chrissy Teigen Cravings Hungry for More, 48
 * Originally recipe serves four, but this recipe is modified to serve two

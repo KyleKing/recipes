@@ -4,6 +4,10 @@
 
 # Parmesan Minestrone
 
+> Based on [Chrissy Teigen Cravings Hungry for More], pg. 50
+
+  [Chrissy Teigen Cravings Hungry for More]: https://www.penguinrandomhouse.com/books/553580/cravings-hungry-for-more-by-chrissy-teigen-with-adeena-sussman/
+
 <!-- rating=2; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
@@ -43,5 +47,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Notes
 
-* Chrissy Teigen Cravings for More, 50
 * If too thick, add water

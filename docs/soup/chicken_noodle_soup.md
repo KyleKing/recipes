@@ -4,6 +4,10 @@
 
 # Chicken Noodle Soup
 
+> Based on [Chrissy Teigen Cravings], pg. 44
+
+  [Chrissy Teigen Cravings]: https://www.penguinrandomhouse.com/books/252973/cravings-by-chrissy-teigen-with-adeena-sussman/
+
 <!-- rating=2; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
@@ -36,7 +40,3 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * Add the bay leaf and chicken broth. Boil and reduce heat to simmer for 45 minutes
 * Shred the chicken and cook the noodles
 * At 45 minutes, stir in the chicken and cooked noodles. Heat for 5-10 min then toss the bay leaf and serve
-
-## Notes
-
-* Chrissy Teigen Cravings

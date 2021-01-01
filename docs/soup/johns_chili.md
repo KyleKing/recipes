@@ -4,7 +4,9 @@
 
 # Johns Chili
 
-> Based on [https://smile.amazon.com/Cravings-Recipes-All-Food-Want/dp/1101903910](https://smile.amazon.com/Cravings-Recipes-All-Food-Want/dp/1101903910)
+> Based on [Chrissy Teigen Cravings], pg. 148
+
+  [Chrissy Teigen Cravings]: https://www.penguinrandomhouse.com/books/252973/cravings-by-chrissy-teigen-with-adeena-sussman/
 
 <!-- rating=2; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
@@ -51,6 +53,5 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Notes
 
-* Chrissy Teigen Cravings, 148
 * Freezes or can be stored in the fridge. Tastes great when reheated.
 * Serves 6-8

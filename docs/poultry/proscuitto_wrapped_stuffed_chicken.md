@@ -4,7 +4,7 @@
 
 > Based on [Chrissy Teigen Cravings], pg. 232
 
-  [Chrissy Teigen Cravings]: https://www.amazon.com/Cravings-Recipes-All-Food-Want/dp/1101903910
+  [Chrissy Teigen Cravings]: https://www.penguinrandomhouse.com/books/252973/cravings-by-chrissy-teigen-with-adeena-sussman/
 
 <!-- rating=5; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
