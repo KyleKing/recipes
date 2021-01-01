@@ -21,7 +21,6 @@ poetry run doit
 from pathlib import Path
 
 from calcipy.doit_tasks import *  # noqa: F401,F403,H303 (Run 'doit list' to see tasks). skipcq: PYL-W0614
-from calcipy.doit_tasks import DOIT_CONFIG_RECOMMENDED
 from calcipy.doit_tasks.doit_globals import DIG
 from calcipy.log_helpers import build_logger_config
 from loguru import logger
@@ -42,14 +41,20 @@ logger.info(
 DIG.set_paths(path_project=path_parent)
 
 # Create list of all tasks run with `poetry run doit`. Comment on/off as needed
+# from calcipy.doit_tasks import DOIT_CONFIG_RECOMMENDED
 DOIT_CONFIG = {
     'action_string_formatting': 'old',  # Required for keyword-based tasks
     'default_tasks': [
-        'main',
+        'cl_write',
+        'create_tag_file',
         'coverage',
         # 'open_test_docs',
-        'create_tag_file',
         'auto_format',
+        # > 'document',
+        'pre_commit_hooks',
+        'lint_critical_only',
+
+        'main',
         # 'deploy',
     ],
 }

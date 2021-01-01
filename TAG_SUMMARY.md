@@ -65,8 +65,9 @@ docs/drinks/__TOC.md
     line  15    TODO: Capture image --> |
     line  16    TODO: Capture image --> |
     line  17    TODO: Capture image --> |
-    line  19    TODO: Capture image --> |
+    line  18    TODO: Capture image --> |
     line  20    TODO: Capture image --> |
+    line  21    TODO: Capture image --> |
 
 docs/drinks/between_the_sheets.md
     line  14    TODO: Capture image -->
@@ -102,6 +103,9 @@ docs/drinks/pina_con_lima.md
 
 docs/drinks/simple_syrup.md
     line  14    TODO: Capture image -->
+
+docs/drinks/spiked_milkshake.md
+    line  12    TODO: Capture image -->
 
 docs/drinks/sweet_libertys_pina_colada.md
     line  16    TODO: Capture image -->
@@ -158,8 +162,8 @@ docs/poultry/__TOC.md
     line  10    TODO: Capture image --> |
     line  12    TODO: Capture image --> |
     line  16    TODO: Capture image --> |
-    line  20    TODO: Capture image --> |
     line  21    TODO: Capture image --> |
+    line  22    TODO: Capture image --> |
 
 docs/poultry/chicken.md
     line  36     FYI: cook for 12 min/8 min for thinner pieces
@@ -177,7 +181,7 @@ docs/poultry/mediterranean_chicken.md
     line  14    TODO: Capture image -->
 
 docs/poultry/sesame_chicken_noodles.md
-    line  14    TODO: Capture image -->
+    line  18    TODO: Capture image -->
 
 docs/poultry/sriracha_chicken.md
     line  14    TODO: Capture image -->
@@ -218,7 +222,7 @@ docs/soup/__TOC.md
     line  11    TODO: Capture image --> |
 
 docs/soup/chicken_noodle_soup.md
-    line  14    TODO: Capture image -->
+    line  18    TODO: Capture image -->
 
 docs/soup/slow_cooker_chicken_mango_curry.md
     line  16    TODO: Capture image -->
@@ -307,5 +311,5 @@ recipes/formatter.py
 recipes/tasks.py
     line  55    TODO: Add keyword argument for path to a single image to reduce impact on git
 
-Found tagged comments for TODO (137),  NOTE (2),  FYI (1)
+Found tagged comments for TODO (139),  NOTE (2),  FYI (1)
 ```
