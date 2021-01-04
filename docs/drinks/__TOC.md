@@ -20,4 +20,4 @@
 | [Chilly Chile Paloma](../chilly_chile_paloma) | 3 | <!-- TODO: Capture image --> |
 | [Frogroni](../frogroni) | 3 | <!-- TODO: Capture image --> |
 | [Spicy Margarita](../spicy_margarita) | 6 | ![spicy_margarita.jpg](./spicy_margarita.jpg){: .image-toc loading=lazy } |
-| [Wine](../wine) | 5 | ![wine.jpg](./wine.jpg){: .image-toc loading=lazy } |
+| [Wine](../wine) | 6 | ![wine.jpg](./wine.jpg){: .image-toc loading=lazy } |
