@@ -20,7 +20,7 @@ repos:
         pass_filenames: false
         language: system
         files: ^(pyproject.toml|poetry.lock)$
-        stages: [push]
+        stages: [commit]
       - id: doit
         name: doit
         entry: poetry run doit run test
@@ -84,4 +84,4 @@ repos:
     rev: v2.0.2
     hooks:
       - id: add-trailing-comma
-        stages: [push]
+        stages: [commit]

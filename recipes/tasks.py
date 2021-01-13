@@ -97,6 +97,6 @@ def task_compress() -> DoItTask:
         for pos_arg in pos:
             subprocess.run(shlex.split(f'{_OPTIMIZE_CMD} {pos_arg}'), check=True)  # noqa S603
 
-    task = debug_task([(_run_params, )])  # _OPTIMIZE_CMD + ' %(pos)s'])
+    task = debug_task([(_run_params,)])  # _OPTIMIZE_CMD + ' %(pos)s'])
     task['pos_arg'] = 'pos'
     return task
