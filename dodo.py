@@ -18,6 +18,7 @@ poetry run doit
 
 """
 
+import sys
 from pathlib import Path
 
 from calcipy.doit_tasks import *  # noqa: F401,F403,H303 (Run 'doit list' to see tasks). skipcq: PYL-W0614
@@ -26,7 +27,9 @@ from calcipy.log_helpers import build_logger_config
 from loguru import logger
 
 from recipes import __pkg_name__
-from recipes.tasks import task_compress, task_deploy, task_main, task_serve  # noqa: F401I
+from recipes.tasks import task_compress, task_convert_png_to_jpg, task_deploy, task_main, task_serve  # noqa: F401I
+
+logger.debug('sys.argv={sys_argv}', sys_argv=sys.argv)
 
 logger.enable(__pkg_name__)
 path_parent = Path(__file__).resolve().parent
@@ -41,7 +44,7 @@ logger.info(
 DIG.set_paths(path_project=path_parent)
 
 # Create list of all tasks run with `poetry run doit`. Comment on/off as needed
-# from calcipy.doit_tasks import DOIT_CONFIG_RECOMMENDED
+# > from calcipy.doit_tasks import DOIT_CONFIG_RECOMMENDED
 DOIT_CONFIG = {
     'action_string_formatting': 'old',  # Required for keyword-based tasks
     'default_tasks': [
@@ -51,6 +54,7 @@ DOIT_CONFIG = {
         # 'open_test_docs',
         'auto_format',
         # > 'document',
+        'convert_png_to_jpg',
         'pre_commit_hooks',
         'lint_critical_only',
 

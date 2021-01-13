@@ -7,6 +7,33 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
+  - repo: local
+    hooks:
+      - id: copier-forbidden-files
+        name: copier_forbidden_files
+        entry: found copier update rejection files; review them and remove them (https://copier.readthedocs.io/en/stable/updating/)
+        language: fail
+        files: "\\.rej$"
+      - id: lock_deps
+        name: lock_dependencies
+        entry: poetry lock
+        pass_filenames: false
+        language: system
+        files: ^(pyproject.toml|poetry.lock)$
+        stages: [push]
+      - id: doit
+        name: doit
+        entry: poetry run doit run test
+        pass_filenames: false
+        language: system
+        types: [python]
+        stages: [push]
+      - id: compress
+        name: compress
+        entry: poetry run doit run compress
+        language: system
+        files: "\\.(jpg|jpeg)$"
+        stages: [commit]
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.4.0
     hooks:
@@ -57,25 +84,4 @@ repos:
     rev: v2.0.2
     hooks:
       - id: add-trailing-comma
-        stages: [push]
-  - repo: local
-    hooks:
-      - id: copier-forbidden-files
-        name: copier_forbidden_files
-        entry: found copier update rejection files; review them and remove them (https://copier.readthedocs.io/en/stable/updating/)
-        language: fail
-        files: "\\.rej$"
-      - id: lock_deps
-        name: lock_dependencies
-        entry: poetry lock
-        pass_filenames: false
-        language: system
-        files: ^(pyproject.toml|poetry.lock)$
-        stages: [push]
-      - id: doit
-        name: doit
-        entry: poetry run doit run test
-        pass_filenames: false
-        language: system
-        types: [python]
         stages: [push]

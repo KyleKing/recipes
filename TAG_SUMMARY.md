@@ -219,7 +219,7 @@ docs/sides/pretzels.md
 
 docs/soup/__TOC.md
     line   6    TODO: Capture image --> |
-    line  11    TODO: Capture image --> |
+    line  12    TODO: Capture image --> |
 
 docs/soup/chicken_noodle_soup.md
     line  18    TODO: Capture image -->
@@ -308,8 +308,5 @@ docs/veggie/vegetable_wraps.md
 recipes/formatter.py
     line  66    TODO: Capture image -->'  # noqa: T101
 
-recipes/tasks.py
-    line  55    TODO: Add keyword argument for path to a single image to reduce impact on git
-
-Found tagged comments for TODO (139),  NOTE (2),  FYI (1)
+Found tagged comments for TODO (138),  NOTE (2),  FYI (1)
 ```

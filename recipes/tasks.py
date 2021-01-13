@@ -1,6 +1,9 @@
 """Doit Tasks for the MKDocs project."""
 
+import shlex
+import subprocess  # noqa S404
 import webbrowser
+from typing import List
 
 from calcipy.doit_tasks.base import debug_task
 from calcipy.doit_tasks.doit_globals import DoItTask
@@ -52,10 +55,11 @@ def _convert_png_to_jpg() -> None:
         path_png.unlink()
 
 
-# TODO: Add keyword argument for path to a single image to reduce impact on git
-#   ^ TODO: Add as a pre-commit hook for all changed image files!
-#   ^ TODO: Add an argument with the file path of the changed image file
-def task_compress() -> DoItTask:
+_OPTIMIZE_CMD = 'poetry run optimize-images -mh 700 -mh 900 --convert-all --force-delete'
+"""Command for optimize-images run from poetry. Requires the path to the folder or image."""
+
+
+def task_compress_all() -> DoItTask:
     """Compress images.
 
     Returns:
@@ -63,6 +67,36 @@ def task_compress() -> DoItTask:
 
     """
     return debug_task([
-        LongRunning(f'poetry run optimize-images {DIR_MD}/ -mh 700 -mh 900 --convert-all --force-delete'),
+        (_convert_png_to_jpg,),
+        LongRunning(f'{_OPTIMIZE_CMD} {DIR_MD}/'),
+    ])
+
+
+def task_convert_png_to_jpg() -> DoItTask:
+    """Convert PNG images to JPG.
+
+    Returns:
+        DoItTask: DoIt task
+
+    """
+    return debug_task([
         (_convert_png_to_jpg,),
     ])
+
+
+def task_compress() -> DoItTask:
+    """Compress one or more specific images.
+
+    Example: `doit run compress -f ./docs/dessert/biscotti.jpg`
+
+    Returns:
+        DoItTask: DoIt task
+
+    """
+    def _run_params(pos: List[str]) -> None:
+        for pos_arg in pos:
+            subprocess.run(shlex.split(f'{_OPTIMIZE_CMD} {pos_arg}'), check=True)  # noqa S603
+
+    task = debug_task([(_run_params, )])  # _OPTIMIZE_CMD + ' %(pos)s'])
+    task['pos_arg'] = 'pos'
+    return task
