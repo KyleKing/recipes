@@ -2,7 +2,7 @@
 
 | Link | Rating | Image |
 | -- | -- | -- |
-| [Frozen Strawberry Margarita](../frozen_strawberry_margarita) | 3 | <!-- TODO: Capture image --> |
+| [Frozen Strawberry Margarita](../frozen_strawberry_margarita) | 4 | <!-- TODO: Capture image --> |
 | [Margarita](../margarita) | 3 | ![margarita.jpg](./margarita.jpg){: .image-toc loading=lazy } |
 | [Bourbon Peach Shakes](../bourbon_peach_shakes) | 3 | <!-- TODO: Capture image --> |
 | [Sweet Libertys Pina Colada](../sweet_libertys_pina_colada) | 3 | <!-- TODO: Capture image --> |
@@ -12,6 +12,7 @@
 | [Coffee](../coffee) | 4 | ![coffee.jpeg](./coffee.jpeg){: .image-toc loading=lazy } |
 | [Spiked Cider](../spiked_cider) | 6 | ![spiked_cider.jpeg](./spiked_cider.jpeg){: .image-toc loading=lazy } |
 | [White Lady](../white_lady) | 3 | <!-- TODO: Capture image --> |
+| [Spicy Watermelon Margarita](../spicy_watermelon_margarita) | 3 | <!-- TODO: Capture image --> |
 | [Frozen Irish Coffee](../frozen_irish_coffee) | 3 | <!-- TODO: Capture image --> |
 | [Between The Sheets](../between_the_sheets) | 3 | <!-- TODO: Capture image --> |
 | [Spiked Milkshake](../spiked_milkshake) | 3 | <!-- TODO: Capture image --> |

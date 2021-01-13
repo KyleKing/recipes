@@ -6,9 +6,9 @@
 
 > Based on [https://www.culinaryhill.com/strawberry-margarita-recipe/](https://www.culinaryhill.com/strawberry-margarita-recipe/)
 
-<!-- rating=0; (User can specify rating on scale of 1-5) -->
+<!-- rating=1; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
-Personal rating: *Not yet rated*
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
 <!-- name_image=None; (User can specify image name) -->
@@ -27,4 +27,7 @@ Personal rating: *Not yet rated*
 
 ## Recipe
 
-* Blend until smooth - helps if you have a better blender...
+* Blend until smooth
+
+!!! note
+    Don't make in a subpar blender or if so, strain out the chunks
