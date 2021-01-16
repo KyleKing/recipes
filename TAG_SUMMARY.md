@@ -223,7 +223,7 @@ docs/sides/pretzels.md
 
 docs/soup/__TOC.md
     line   6    TODO: Capture image --> |
-    line  12    TODO: Capture image --> |
+    line  13    TODO: Capture image --> |
 
 docs/soup/chicken_noodle_soup.md
     line  18    TODO: Capture image -->

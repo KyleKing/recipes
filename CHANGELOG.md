@@ -2,6 +2,7 @@
 
 ### Fix
 
+- skip icons from png to jpg conversion
 - remove duplicate images
 
 ### Refactor

@@ -1,43 +1,46 @@
-<!-- Needs Manual Review -->
-
 <!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
-# Chicken And Dumplings
+# Chicken And Dumplings (Instant Pot)
 
-> Based on [https://smile.amazon.com/Essential-Instant-Pot-Cookbook-Foolproof/dp/0399580883](https://smile.amazon.com/Essential-Instant-Pot-Cookbook-Foolproof/dp/0399580883)
+> Based on [The Essential Instant Pot Cookbook] page 55
+
+  [The Essential Instant Pot Cookbook]: https://smile.amazon.com/Essential-Instant-Pot-Cookbook-Foolproof/dp/0399580883
 
 <!-- rating=2; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=chicken_and_dumplings.jpeg; (User can specify image name) -->
+<!-- name_image=chicken_and_dumplings_instant_pot.jpeg; (User can specify image name) -->
 <!-- AUTO-Image -->
-![chicken_and_dumplings.jpeg](./chicken_and_dumplings.jpeg){: .image-recipe loading=lazy }
+![chicken_and_dumplings_instant_pot.jpeg](./chicken_and_dumplings_instant_pot.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->
 
 ## Ingredients
 
-* [ ] soup
-    * [ ] 2 cups broth, split
-    * [ ] 2 lbs skinless chicken breasts
-    * [ ] 1.5 cups frozen peas
-    * [ ] 2 tbsp unsalted butter
-    * [ ] 3 large carrots, coined
-    * [ ] 2 celery stalks, coined
-    * [ ] 1 yellow onion, diced
-    * [ ] 1 tsp kosher salt
-* [ ] dumplings
-    * [ ] 1 cup all-purpose flour
-    * [ ] 1/2 cup bread crumbs
-    * [ ] 2 tsp baking powder
-    * [ ] 3/4 tsp kosher salt
-    * [ ] 1/2 tsp pepper
-    * [ ] 1 small shallot, minced
-    * [ ] 1.5 tbsp parsley, finely chopped
-    * [ ] 1/3 cup whole milk
-    * [ ] 1 large egg
-    * [ ] 2 tbsp unsalted butter, melted (~20s in microwave)
+### Soup
+
+* [ ] 2 cups broth, split
+* [ ] 2 lbs skinless chicken breasts
+* [ ] 1.5 cups frozen peas
+* [ ] 2 tbsp unsalted butter
+* [ ] 3 large carrots, coined
+* [ ] 2 celery stalks, coined
+* [ ] 1 yellow onion, diced
+* [ ] 1 tsp kosher salt
+
+### Dumplings
+
+* [ ] 1 cup all-purpose flour
+* [ ] 1/2 cup bread crumbs
+* [ ] 2 tsp baking powder
+* [ ] 3/4 tsp kosher salt
+* [ ] 1/2 tsp pepper
+* [ ] 1 small shallot, minced
+* [ ] 1.5 tbsp parsley, finely chopped
+* [ ] 1/3 cup whole milk
+* [ ] 1 large egg
+* [ ] 2 tbsp unsalted butter, melted (~20s in microwave)
 
 ## Recipe
 
@@ -52,7 +55,5 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * Add large tablespoons of the dumpling dough, spacing evenly
 * Cover the pot with a glass lid and cook for 15 minutes
 
-## Notes
-
-* Source: The Essential Instant Pot Cookbook page 55
-* TO make breadcrumbs, leave bread out uncovered to dry, then freeze. When you need it, just microwave it for 20 seconds and toss in a food processor (definitely don't use a grater...)
+!!! tip
+    To make breadcrumbs, leave bread out uncovered to dry, then freeze. When you need it, microwave for 20 seconds and toss in a food processor (definitely don't use a grater...)
