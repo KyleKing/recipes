@@ -1,5 +1,5 @@
 [build-system]
-requires = [ "poetry-core>=1.0",]
+requires = [ "poetry-core>=1.0.0",]
 build-backend = "poetry.core.masonry.api"
 
 [tool.commitizen]
@@ -41,6 +41,10 @@ mkdocs-git-revision-date-plugin = "*"
 mkdocs-material = "*"
 optimize-images = "*"
 pillow = "*"
+
+[tool.poetry.dev-dependencies]
+# FIXME: Pending resolution of https://github.com/best-doctor/mr_proper/issues/13
+flake8-functions = "<0.0.5"
 
 [tool.poetry.dependencies.calcipy]
 git = "https://github.com/KyleKing/calcipy.git"
