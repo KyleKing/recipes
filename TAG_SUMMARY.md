@@ -17,10 +17,10 @@ docs/dessert/__TOC.md
     line  21    TODO: Capture image --> |
     line  22    TODO: Capture image --> |
     line  30    TODO: Capture image --> |
-    line  32    TODO: Capture image --> |
-    line  36    TODO: Capture image --> |
+    line  33    TODO: Capture image --> |
     line  37    TODO: Capture image --> |
     line  38    TODO: Capture image --> |
+    line  39    TODO: Capture image --> |
 
 docs/dessert/baked_apples.md
     line  16    TODO: Capture image -->
@@ -66,8 +66,9 @@ docs/drinks/__TOC.md
     line  16    TODO: Capture image --> |
     line  17    TODO: Capture image --> |
     line  18    TODO: Capture image --> |
-    line  20    TODO: Capture image --> |
+    line  19    TODO: Capture image --> |
     line  21    TODO: Capture image --> |
+    line  22    TODO: Capture image --> |
 
 docs/drinks/between_the_sheets.md
     line  14    TODO: Capture image -->
@@ -103,6 +104,9 @@ docs/drinks/pina_con_lima.md
 
 docs/drinks/simple_syrup.md
     line  14    TODO: Capture image -->
+
+docs/drinks/spicy_watermelon_margarita.md
+    line  12    TODO: Capture image -->
 
 docs/drinks/spiked_milkshake.md
     line  12    TODO: Capture image -->
@@ -161,9 +165,9 @@ docs/poultry/__TOC.md
     line   8    TODO: Capture image --> |
     line  10    TODO: Capture image --> |
     line  12    TODO: Capture image --> |
-    line  16    TODO: Capture image --> |
-    line  21    TODO: Capture image --> |
+    line  17    TODO: Capture image --> |
     line  22    TODO: Capture image --> |
+    line  23    TODO: Capture image --> |
 
 docs/poultry/chicken.md
     line  36     FYI: cook for 12 min/8 min for thinner pieces
@@ -308,5 +312,5 @@ docs/veggie/vegetable_wraps.md
 recipes/formatter.py
     line  66    TODO: Capture image -->'  # noqa: T101
 
-Found tagged comments for TODO (138),  NOTE (2),  FYI (1)
+Found tagged comments for TODO (140),  NOTE (2),  FYI (1)
 ```

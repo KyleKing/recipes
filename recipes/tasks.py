@@ -50,9 +50,10 @@ def task_deploy() -> DoItTask:
 def _convert_png_to_jpg() -> None:
     """Convert any remaining PNG files to jpg."""
     for path_png in DIR_MD.glob('*/*.png'):
-        logger.warning(f'Convert to jpg and deleting original for: {path_png}')
-        Image.open(path_png).save(path_png.parent / f'{path_png.stem}.jpg')
-        path_png.unlink()
+        if path_png.parent.name != '_icons':
+            logger.warning(f'Convert to jpg and deleting original for: {path_png}')
+            Image.open(path_png).save(path_png.parent / f'{path_png.stem}.jpg')
+            path_png.unlink()
 
 
 _OPTIMIZE_CMD = 'poetry run optimize-images -mh 900 --convert-all --force-delete'

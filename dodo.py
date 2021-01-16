@@ -48,18 +48,16 @@ DIG.set_paths(path_project=path_parent)
 DOIT_CONFIG = {
     'action_string_formatting': 'old',  # Required for keyword-based tasks
     'default_tasks': [
+        'main',
+
         'cl_write',
         'create_tag_file',
         'coverage',
         # 'open_test_docs',
         'auto_format',
         # > 'document',
-        'convert_png_to_jpg',
         'pre_commit_hooks',
         'lint_critical_only',
-
-        'main',
-        # 'deploy',
     ],
 }
 """DoIt Configuration Settings. Run with `poetry run doit`."""

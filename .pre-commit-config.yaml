@@ -21,8 +21,8 @@ repos:
         language: system
         files: ^(pyproject.toml|poetry.lock)$
         stages: [commit]
-      - id: doit
-        name: doit
+      - id: doit_test
+        name: doit_test
         entry: poetry run doit run test
         pass_filenames: false
         language: system
