@@ -1,0 +1,35 @@
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
+
+# Double Layer Pumpkin Pie
+
+> Based on a Keebler Recipe
+
+<!-- rating=3; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
+<!-- /AUTO-UserRating -->
+
+<!-- name_image=double_layer_pumpkin_pie.jpeg; (User can specify image name) -->
+<!-- AUTO-Image -->
+![double_layer_pumpkin_pie.jpeg](./double_layer_pumpkin_pie.jpeg){: .image-recipe loading=lazy }
+<!-- /AUTO-Image -->
+
+## Ingredients
+
+* [ ] Graham Cracker Pie Crust
+* [ ] 4 oz cream cheese, softened (microwave on high for 15-20 seconds)
+* [ ] 1 tbsp milk
+* [ ] 1 tbsp sugar
+* [ ] 1 tub whipped topping (thawed if frozen)
+* [ ] 1 cup milk, cold
+* [ ] 2 packages vanilla flavor instance pudding (2x 4-serving size)
+* [ ] 1 can (16 oz) pumpkin
+* [ ] 1 tsp ground cinnamon
+* [ ] 1/2 tsp ground ginger
+* [ ] 1/4 tsp ground cloves
+
+## Recipe
+
+* In a large bowl, mix cream cheese, 1 tbsp milk, and sugar. Gently stir in **half** of the whipped topping. Spread on bottom of crust
+* Pour 1 cup of milk into the bowl, add pugging, and beat for 1 min. Stir in pumpkin and spices until mixed. Spread over cream cheese layer
+* Refrigerate 4 hours or until set. Garnish with remaining whipped topping

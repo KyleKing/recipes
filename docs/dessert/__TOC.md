@@ -28,6 +28,7 @@
 | [Apple Crisp](../apple_crisp) | 4 | ![apple_crisp.jpg](./apple_crisp.jpg){: .image-toc loading=lazy } |
 | [Hot Fudge Sauce](../hot_fudge_sauce) | 6 | ![hot_fudge_sauce.jpeg](./hot_fudge_sauce.jpeg){: .image-toc loading=lazy } |
 | [Blueberry Sour Cream Muffins](../blueberry_sour_cream_muffins) | 5 | <!-- TODO: Capture image --> |
+| [Double Layer Pumpkin Pie](../double_layer_pumpkin_pie) | 7 | ![double_layer_pumpkin_pie.jpeg](./double_layer_pumpkin_pie.jpeg){: .image-toc loading=lazy } |
 | [Molten Chocolate Cake](../molten_chocolate_cake) | 6 | ![molten_chocolate_cake.jpeg](./molten_chocolate_cake.jpeg){: .image-toc loading=lazy } |
 | [Chocolate Milkshake](../chocolate_milkshake) | 3 | <!-- TODO: Capture image --> |
 | [Cake Pops](../cake_pops) | 4 | ![cake_pops.jpg](./cake_pops.jpg){: .image-toc loading=lazy } |
