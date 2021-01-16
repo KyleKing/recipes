@@ -55,7 +55,7 @@ def _convert_png_to_jpg() -> None:
         path_png.unlink()
 
 
-_OPTIMIZE_CMD = 'poetry run optimize-images -mh 700 -mh 900 --convert-all --force-delete'
+_OPTIMIZE_CMD = 'poetry run optimize-images -mh 900 --convert-all --force-delete'
 """Command for optimize-images run from poetry. Requires the path to the folder or image."""
 
 
@@ -95,7 +95,9 @@ def task_compress() -> DoItTask:
     """
     def _run_params(pos: List[str]) -> None:
         for pos_arg in pos:
-            subprocess.run(shlex.split(f'{_OPTIMIZE_CMD} {pos_arg}'), check=True)  # noqa S603
+            cmds = shlex.split(f'{_OPTIMIZE_CMD} {pos_arg}')
+            logger.info('Running: {cmds}', cmds=cmds)
+            subprocess.run(cmds, check=True)  # noqa S603
 
     task = debug_task([(_run_params,)])  # _OPTIMIZE_CMD + ' %(pos)s'])
     task['pos_arg'] = 'pos'

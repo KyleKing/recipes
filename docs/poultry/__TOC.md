@@ -12,6 +12,7 @@
 | [Chicken Shawarma](../chicken_shawarma) | 3 | <!-- TODO: Capture image --> |
 | [Breaded Chicken](../breaded_chicken) | 5 | ![breaded_chicken.jpeg](./breaded_chicken.jpeg){: .image-toc loading=lazy } |
 | [Fajitas](../fajitas) | 4 | ![fajitas.jpg](./fajitas.jpg){: .image-toc loading=lazy } |
+| [Goat Cheese Chicken Tenders](../goat_cheese_chicken_tenders) | 4 | ![goat_cheese_chicken_tenders.jpeg](./goat_cheese_chicken_tenders.jpeg){: .image-toc loading=lazy } |
 | [Chicken Tacos](../chicken_tacos) | 6 | ![chicken_tacos.jpeg](./chicken_tacos.jpeg){: .image-toc loading=lazy } |
 | [Sesame Chicken Noodles](../sesame_chicken_noodles) | 3 | <!-- TODO: Capture image --> |
 | [Chicken Thighs](../chicken_thighs) | 4 | ![chicken_thighs.jpeg](./chicken_thighs.jpeg){: .image-toc loading=lazy } |
