@@ -1,8 +1,6 @@
-<!-- Needs Manual Review -->
-
 <!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
-# Smores Ice Cream
+# S'Mores Ice Cream
 
 > Based on [https://www.cuisinart.com/share/pdf/manuals/ice-21.pdf](https://www.cuisinart.com/share/pdf/manuals/ice-21.pdf)
 
@@ -26,7 +24,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * [ ] 1.5 cups heavy cream
 * [ ] 3/4 teaspoon pure vanilla extract
 * [ ] 2 cup marshmallow cream (e.g. Fluff®)
-* [ ] 2 full graham cracker sheets, crushed
+* [ ] 2 full Graham Crackers, crushed
 * [ ] 2 ounces milk chocolate (1∕3 cup chips), melted and reserved at room temperature
 * [ ] Cuisinart ice cream maker
 
@@ -39,4 +37,5 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Notes
 
-* Tip: If marshmallow cream is too stiff, warm slightly in microwave before adding to freezer bowl.
+* Tip: If marshmallow cream is too stiff, warm slightly in microwave before adding to freezer bowl
+* When next making, check out [this Washington Post variant](https://www.washingtonpost.com/recipes/smores-ice-cream/17060/)

@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 <!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Mint Chocolate Chunk
@@ -38,4 +36,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Notes
 
-* Probably better with real mint. The extract just ends up with a fake mint flavor. See Cuisinart recipe for how to prep with fresh mint leaves
+* Probably better with real mint. The extract is a strong pseudo-mint flavor. See Cuisinart recipe for how to prep with fresh mint leaves

@@ -23,4 +23,5 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Recipe
 
-* Follow the vanilla ice cream recipe, just add a small amount of cocoa powder to give a pleasant chocolate flavor
+* Follow the vanilla ice cream recipe and add the cocoa powder before refrigerating
+* In the cuisinart, wait a few minutes for the ice cream to slightly thicken before adding the mix-ins

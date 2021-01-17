@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 <!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Chocolate Ice Cream
@@ -36,5 +34,5 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Notes
 
-* Goes great with crushed up Oreos (crush up and mix in after starting to thicken)
-* After freezing for 1-2 hours, you can swirl warm peanut butter in with a knife (thin with powdered sugar)
+* Goes great with crushed-up Oreos! See other mix-ins ideas in the [Frozen M&M Recipe](/ice_cream/frozen_m&m/)
+* Alternatively, after freezing for 1-2 hours, you can swirl warmed or thinned (with powdered sugar) peanut butter in with a knife
