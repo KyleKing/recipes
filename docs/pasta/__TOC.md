@@ -19,6 +19,6 @@
 | [Sausage And Mushroom Penne Pasta](../sausage_and_mushroom_penne_pasta) | 6 | ![sausage_and_mushroom_penne_pasta.jpg](./sausage_and_mushroom_penne_pasta.jpg){: .image-toc loading=lazy } |
 | [Summer Pasta With Ricotta And Zucchini](../summer_pasta_with_ricotta_and_zucchini) | 6 | ![summer_pasta_with_ricotta_and_zucchini.jpeg](./summer_pasta_with_ricotta_and_zucchini.jpeg){: .image-toc loading=lazy } |
 | [Creamy Lemon Pasta](../creamy_lemon_pasta) | 5 | ![creamy_lemon_pasta.jpeg](./creamy_lemon_pasta.jpeg){: .image-toc loading=lazy } |
-| [Spaghetti Meatballs Teigen](../spaghetti_meatballs_teigen) | 3 | ![spaghetti_meatballs_teigen.jpeg](./spaghetti_meatballs_teigen.jpeg){: .image-toc loading=lazy } |
+| [Spaghetti Meatballs Teigen](../spaghetti_meatballs_teigen) | 7 | ![spaghetti_meatballs_teigen.jpeg](./spaghetti_meatballs_teigen.jpeg){: .image-toc loading=lazy } |
 | [Orzo And Cheese](../orzo_and_cheese) | 4 | ![orzo_and_cheese.jpg](./orzo_and_cheese.jpg){: .image-toc loading=lazy } |
 | [Classic Pasta And Mushrooms](../classic_pasta_and_mushrooms) | 3 | <!-- TODO: Capture image --> |
