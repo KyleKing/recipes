@@ -36,13 +36,13 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * Preheat oven to 375F
 * In a small bowl, combine flour, baking soda, and salt
 * In a large mixing bowl, combine butter and sugars until creamy
-* - Add vanilla extract and milk
-* - Add eggs one at a time beating well
-* - Beat in flour gradually
-* - Stir in oats and morsels
-* Measure out rounded tbsp of fough on a light colored ungreased baking sheet
+    * Add vanilla extract and milk
+    * Add eggs one at a time beating well
+    * Beat in flour gradually
+    * Stir in oats and morsels
+* Measure out rounded tbsp of dough on a light colored ungreased baking sheet
 * Bake 9-11 minutes until golden brown. Cool on a wire rack
 
 ## Notes
 
-* Pan Cookie Variation: Grease 15 x 10-inch jelly-roll pan. Prepare dough as above. Spread into pan. Bake for 20 to 25 minutes or until golden brown. Cool in pan on wire rack. Makes 4 dozen bars.
+* Pan Cookie Variation: Grease 15 x 10-inch jelly-roll pan. Prepare dough as above. Spread into pan. Bake for 20 to 25 minutes or until golden brown. Cool in pan on wire rack. Makes 4 dozen bars
