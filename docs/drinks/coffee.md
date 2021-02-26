@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 <!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Coffee
@@ -16,9 +14,11 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] 3x heaping tablespoons (n + 1)
-* [ ] fill to 2 line for water (n)
+* [ ] 3x heaping tablespoons (*n + 1*)
+* [ ] fill to 2 line for water (*n*)
 * [ ] 2 tsp coffee mate
 * [ ] 1.5 tsp sugar
 
 ## Recipe
+
+* Use the formula to make *n* cups of coffee

@@ -2,10 +2,10 @@
 
 | Link | Rating | Image |
 | -- | -- | -- |
-| [Chocolate Chip Cookies](../chocolate_chip_cookies) | 6 | ![chocolate_chip_cookies.jpeg](./chocolate_chip_cookies.jpeg){: .image-toc loading=lazy } |
+| [Chocolate Chip Cookies](../chocolate_chip_cookies) | 7 | ![chocolate_chip_cookies.jpeg](./chocolate_chip_cookies.jpeg){: .image-toc loading=lazy } |
 | [Pineapple Upside Down Cake](../pineapple_upside_down_cake) | 5 | <!-- TODO: Capture image --> |
 | [Chocolate Peanut Butter Bundt Cake](../chocolate_peanut_butter_bundt_cake) | 6 | ![chocolate_peanut_butter_bundt_cake.jpg](./chocolate_peanut_butter_bundt_cake.jpg){: .image-toc loading=lazy } |
-| [Chocolate Chip Oatmeal Cookies](../chocolate_chip_oatmeal_cookies) | 6 | <!-- TODO: Capture image --> |
+| [Chocolate Chip Oatmeal Cookies](../chocolate_chip_oatmeal_cookies) | 7 | ![chocolate_chip_oatmeal_cookies.jpeg](./chocolate_chip_oatmeal_cookies.jpeg){: .image-toc loading=lazy } |
 | [Peach Blueberry Crisp](../peach_blueberry_crisp) | 5 | ![peach_blueberry_crisp.jpeg](./peach_blueberry_crisp.jpeg){: .image-toc loading=lazy } |
 | [Chocolate Peanut Butter Glaze](../chocolate_peanut_butter_glaze) | 6 | ![chocolate_peanut_butter_glaze.jpeg](./chocolate_peanut_butter_glaze.jpeg){: .image-toc loading=lazy } |
 | [Peanut Butter And Cocoa Smothie](../peanut_butter_and_cocoa_smothie) | 4 | ![peanut_butter_and_cocoa_smothie.jpg](./peanut_butter_and_cocoa_smothie.jpg){: .image-toc loading=lazy } |
@@ -15,7 +15,7 @@
 | [Edible Cookie Dough Ben & Jerrys](../edible_cookie_dough_ben_&_jerrys) | 3 | <!-- TODO: Capture image --> |
 | [Cookie Bars](../cookie_bars) | 5 | ![cookie_bars.jpeg](./cookie_bars.jpeg){: .image-toc loading=lazy } |
 | [Collens Peanut Butter Bars](../collens_peanut_butter_bars) | 3 | <!-- TODO: Capture image --> |
-| [Banana Bread](../banana_bread) | 6 | ![banana_bread.jpeg](./banana_bread.jpeg){: .image-toc loading=lazy } |
+| [Banana Bread](../banana_bread) | 7 | ![banana_bread.jpeg](./banana_bread.jpeg){: .image-toc loading=lazy } |
 | [Popcorn Cinnamon Sugar](../popcorn_cinnamon_sugar) | 5 | ![popcorn_cinnamon_sugar.jpeg](./popcorn_cinnamon_sugar.jpeg){: .image-toc loading=lazy } |
 | [Chocolatines](../chocolatines) | 8 | ![chocolatines.jpeg](./chocolatines.jpeg){: .image-toc loading=lazy } |
 | [Chocolate-Pb-M&M Balls](../chocolate-pb-m&m_balls) | 3 | <!-- TODO: Capture image --> |

@@ -16,7 +16,9 @@
 | [Frozen Irish Coffee](../frozen_irish_coffee) | 3 | <!-- TODO: Capture image --> |
 | [Eggnog](../eggnog) | 3 | <!-- TODO: Capture image --> |
 | [Between The Sheets](../between_the_sheets) | 3 | <!-- TODO: Capture image --> |
+| [Sidecar](../sidecar) | 3 | <!-- TODO: Capture image --> |
 | [Coquito](../coquito) | 3 | <!-- TODO: Capture image --> |
+| [Grasshopper](../grasshopper) | 3 | <!-- TODO: Capture image --> |
 | [Spiked Milkshake](../spiked_milkshake) | 3 | <!-- TODO: Capture image --> |
 | [Simple Syrup](../simple_syrup) | 3 | <!-- TODO: Capture image --> |
 | [Beer](../beer) | 5 | ![beer.jpg](./beer.jpg){: .image-toc loading=lazy } |

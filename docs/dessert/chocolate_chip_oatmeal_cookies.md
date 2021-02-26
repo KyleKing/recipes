@@ -1,19 +1,17 @@
-<!-- Needs Manual Review -->
-
 <!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Chocolate Chip Oatmeal Cookies
 
 > Based on [https://www.verybestbaking.com/recipes/30173/choc-oat-chip-cookies/](https://www.verybestbaking.com/recipes/30173/choc-oat-chip-cookies/)
 
-<!-- rating=3; (User can specify rating on scale of 1-5) -->
+<!-- rating=4; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
-Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=None; (User can specify image name) -->
+<!-- name_image=chocolate_chip_oatmeal_cookies.jpeg; (User can specify image name) -->
 <!-- AUTO-Image -->
-<!-- TODO: Capture image -->
+![chocolate_chip_oatmeal_cookies.jpeg](./chocolate_chip_oatmeal_cookies.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->
 
 ## Ingredients
@@ -29,6 +27,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * [ ] 2 large eggs
 * [ ] 2.5 cup quick or old-fashioned oats
 * [ ] 2 cups (12 oz) chocolate chips
+* [ ] 1 cup coarsely chopped peanuts, optional
 
 ## Recipe
 
