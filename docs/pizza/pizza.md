@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 <!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Pizza
@@ -29,6 +27,8 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Recipe
 
+> The pizza has never turned out quite as tasty as it could be. Not sure what changes are needed. Probably haven't done enough to stretch out the dough
+
 * Let the dough rest at room temperature for at least 2-3 hours to come to room temperature. Best if covered in a bowl, but fine to leave in the plastic bag from the grocery
 * Put the cold pizza stone in a cold oven then preheat to 425
 * Place the dough on a lightly floured surface, then gently press to form a larger circle. Avoid pressing on the middle and crust
@@ -45,4 +45,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Notes
 
 * If using a baking sheet, cook for 22 minutes at 425F
-* See video for how to stretch out the dough: https://www.youtube.com/watch?time_continue=33&v=9f9-xTcKzZo
+* [See video for how to stretch out the dough](https://www.youtube.com/watch?time_continue=33&v=9f9-xTcKzZo)

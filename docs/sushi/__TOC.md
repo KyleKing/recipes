@@ -10,6 +10,6 @@
 | [Canned Spicy Tuna Roll](../canned_spicy_tuna_roll) | 4 | ![canned_spicy_tuna_roll.jpg](./canned_spicy_tuna_roll.jpg){: .image-toc loading=lazy } |
 | [Rice](../_rice) | 4 | ![_rice.jpg](./_rice.jpg){: .image-toc loading=lazy } |
 | [Onigiri](../onigiri) | 4 | ![onigiri.jpg](./onigiri.jpg){: .image-toc loading=lazy } |
-| [Rolling](../_rolling) | 4 | ![_rolling.jpg](./_rolling.jpg){: .image-toc loading=lazy } |
+| [Rolling](../_rolling) | 7 | ![_rolling.jpg](./_rolling.jpg){: .image-toc loading=lazy } |
 | [Shrimp Spicy Rolls](../shrimp_spicy_rolls) | 4 | ![shrimp_spicy_rolls.jpeg](./shrimp_spicy_rolls.jpeg){: .image-toc loading=lazy } |
 | [Smoked Salmon Nigiri](../smoked_salmon_nigiri) | 4 | <!-- TODO: Capture image --> |

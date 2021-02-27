@@ -12,5 +12,6 @@
 | [Shakshuka](../shakshuka) | 6 | ![shakshuka.jpeg](./shakshuka.jpeg){: .image-toc loading=lazy } |
 | [Lemon Poppy Seed Mini Scones](../lemon_poppy_seed_mini_scones) | 3 | <!-- TODO: Capture image --> |
 | [Omelette](../omelette) | 4 | ![omelette.jpeg](./omelette.jpeg){: .image-toc loading=lazy } |
+| [Oatmeal Carrot Cake](../oatmeal_carrot_cake) | 3 | <!-- TODO: Capture image --> |
 | [Breakfast Burrito](../breakfast_burrito) | 4 | ![breakfast_burrito.jpeg](./breakfast_burrito.jpeg){: .image-toc loading=lazy } |
 | [Waffles](../waffles) | 4 | ![waffles.jpg](./waffles.jpg){: .image-toc loading=lazy } |
