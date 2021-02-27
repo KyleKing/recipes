@@ -1,10 +1,10 @@
-<!-- Needs Manual Review -->
-
 <!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Cheesy Cheeseless Scrambled Eggs With Burst Cherry Tomatoes
 
-> Based on [Chrissy Teigen Cravings](https://www.penguinrandomhouse.com/books/252973/cravings-by-chrissy-teigen-with-adeena-sussman/), pg. 16
+> Based on [Chrissy Teigen Cravings], pg. 16
+
+  [Chrissy Teigen Cravings]: https://www.penguinrandomhouse.com/books/252973/cravings-by-chrissy-teigen-with-adeena-sussman/
 
 <!-- rating=3; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
@@ -18,20 +18,23 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] Eggs
-    * [ ] 12 eggs
-    * [ ] 1/2 cup heavy cream
-    * [ ] 1 tsp salt
-    * [ ] 1/4 tsp pepper
-    * [ ] 3 tbsp olive oil
-    * [ ] 3 tbsp butter
-* [ ] Tomatoes
-    * [ ] 2 tbsp olive oil
-    * [ ] 3 cups cherry tomatoes (~1 lb)
-    * [ ] 1/2 tsp salt
-    * [ ] 1/4 tsp pepper
-    * [ ] (opt) 1/4 cup thinly sliced chives
-    * [ ] (opt) garlic-roasted bacon
+### Eggs
+
+* [ ] 12 eggs
+* [ ] 1/2 cup heavy cream
+* [ ] 1 tsp salt
+* [ ] 1/4 tsp pepper
+* [ ] 3 tbsp olive oil
+* [ ] 3 tbsp butter
+
+### Tomatoes
+
+* [ ] 2 tbsp olive oil
+* [ ] 3 cups cherry tomatoes (~1 lb)
+* [ ] 1/2 tsp salt
+* [ ] 1/4 tsp pepper
+* [ ] (opt) 1/4 cup thinly sliced chives
+* [ ] (opt) garlic-roasted bacon
 
 ## Recipe
 

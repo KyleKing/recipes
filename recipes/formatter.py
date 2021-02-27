@@ -169,7 +169,7 @@ def _check_todo(section: str, _path_md: Path) -> str:
 
 def _check_unknown(section: str, _path_md: Path) -> str:  # noqa
     """Pass-through to catch sections not parsed by the function logic."""  # noqa:
-    logger.error('Could not parse: {section}', section=section)
+    logger.error('Could not parse: {section} from: {path_md}', section=section, path_md=_path_md)
     return section
 
 

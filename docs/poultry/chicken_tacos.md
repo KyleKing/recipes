@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 <!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Chicken Tacos
@@ -18,26 +16,31 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] Taco Seasoning (or use store bought)
-    * [ ] 1 tsp salt
-    * [ ] 1 tsp ground cumin
-    * [ ] 1 tsp chili powder
-    * [ ] 1 tsp garlic powder
-    * [ ] 1 15-ounce can fire roasted tomatoes
-* [ ] Tacos
-    * [ ] Instant Pot
-    * [ ] 2-5 chicken breasts
-    * [ ] Corn or flour taco-size tortillas
-    * [ ] Shredded cheese (Cheddar, Monterrey Jack, or Mix)
-    * [ ] Tomatoes, chopped
-    * [ ] Onions, chopped
-    * [ ] Lettuce, cabbage, or baby spinach, shredded
-    * [ ] Cilantro
-    * [ ] Salsa
-    * [ ] Hot Sauce
-    * [ ] Sour cream
-    * [ ] Salsa
-    * [ ] Avocado/Guacamole
+### Taco Seasoning
+
+> or use store bought seasoning
+
+* [ ] 1 tsp salt
+* [ ] 1 tsp ground cumin
+* [ ] 1 tsp chili powder
+* [ ] 1 tsp garlic powder
+* [ ] 1 15-ounce can fire roasted tomatoes
+
+### Tacos
+
+* [ ] Instant Pot
+* [ ] 2-5 chicken breasts
+* [ ] Corn or flour taco-size tortillas
+* [ ] Shredded cheese (Cheddar, Monterrey Jack, or Mix)
+* [ ] Tomatoes, chopped
+* [ ] Onions, chopped
+* [ ] Lettuce, cabbage, or baby spinach, shredded
+* [ ] Cilantro
+* [ ] Salsa
+* [ ] Hot Sauce
+* [ ] Sour cream
+* [ ] Salsa
+* [ ] Avocado/Guacamole
 
 ## Recipe
 

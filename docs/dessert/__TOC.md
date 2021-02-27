@@ -5,7 +5,7 @@
 | [Chocolate Chip Cookies](../chocolate_chip_cookies) | 7 | ![chocolate_chip_cookies.jpeg](./chocolate_chip_cookies.jpeg){: .image-toc loading=lazy } |
 | [Pineapple Upside Down Cake](../pineapple_upside_down_cake) | 5 | <!-- TODO: Capture image --> |
 | [Chocolate Peanut Butter Bundt Cake](../chocolate_peanut_butter_bundt_cake) | 6 | ![chocolate_peanut_butter_bundt_cake.jpg](./chocolate_peanut_butter_bundt_cake.jpg){: .image-toc loading=lazy } |
-| [Chocolate Chip Oatmeal Cookies](../chocolate_chip_oatmeal_cookies) | 7 | ![chocolate_chip_oatmeal_cookies.jpeg](./chocolate_chip_oatmeal_cookies.jpeg){: .image-toc loading=lazy } |
+| [Chocolate Chip Oatmeal Cookies](../chocolate_chip_oatmeal_cookies) | 7 | ![chocolate_chip_oatmeal_cookies.jpg](./chocolate_chip_oatmeal_cookies.jpg){: .image-toc loading=lazy } |
 | [Peach Blueberry Crisp](../peach_blueberry_crisp) | 5 | ![peach_blueberry_crisp.jpeg](./peach_blueberry_crisp.jpeg){: .image-toc loading=lazy } |
 | [Chocolate Peanut Butter Glaze](../chocolate_peanut_butter_glaze) | 6 | ![chocolate_peanut_butter_glaze.jpeg](./chocolate_peanut_butter_glaze.jpeg){: .image-toc loading=lazy } |
 | [Peanut Butter And Cocoa Smothie](../peanut_butter_and_cocoa_smothie) | 4 | ![peanut_butter_and_cocoa_smothie.jpg](./peanut_butter_and_cocoa_smothie.jpg){: .image-toc loading=lazy } |

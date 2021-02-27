@@ -14,10 +14,10 @@
 | [Fajitas](../fajitas) | 4 | ![fajitas.jpg](./fajitas.jpg){: .image-toc loading=lazy } |
 | [Goat Cheese Chicken Tenders](../goat_cheese_chicken_tenders) | 4 | ![goat_cheese_chicken_tenders.jpeg](./goat_cheese_chicken_tenders.jpeg){: .image-toc loading=lazy } |
 | [Chicken Tacos](../chicken_tacos) | 6 | ![chicken_tacos.jpeg](./chicken_tacos.jpeg){: .image-toc loading=lazy } |
-| [Sesame Chicken Noodles](../sesame_chicken_noodles) | 3 | <!-- TODO: Capture image --> |
+| [Sesame Chicken Noodles](../sesame_chicken_noodles) | 4 | <!-- TODO: Capture image --> |
 | [Chicken Thighs](../chicken_thighs) | 4 | ![chicken_thighs.jpeg](./chicken_thighs.jpeg){: .image-toc loading=lazy } |
 | [Chicken Cacciatore](../chicken_cacciatore) | 5 | ![chicken_cacciatore.jpg](./chicken_cacciatore.jpg){: .image-toc loading=lazy } |
-| [Enchiladas](../enchiladas) | 6 | ![enchiladas.jpg](./enchiladas.jpg){: .image-toc loading=lazy } |
+| [Enchiladas](../enchiladas) | 8 | ![enchiladas.jpg](./enchiladas.jpg){: .image-toc loading=lazy } |
 | [Proscuitto Wrapped Stuffed Chicken](../proscuitto_wrapped_stuffed_chicken) | 8 | ![proscuitto_wrapped_stuffed_chicken.jpeg](./proscuitto_wrapped_stuffed_chicken.jpeg){: .image-toc loading=lazy } |
 | [Chicken Instant Pot](../chicken_instant_pot) | 3 | <!-- TODO: Capture image --> |
 | [Sriracha Chicken](../sriracha_chicken) | 3 | <!-- TODO: Capture image --> |

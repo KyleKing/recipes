@@ -1,12 +1,10 @@
-<!-- Needs Manual Review -->
-
 <!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Enchiladas
 
-<!-- rating=3; (User can specify rating on scale of 1-5) -->
+<!-- rating=5; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
-Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 <!-- /AUTO-UserRating -->
 
 <!-- name_image=enchiladas.jpg; (User can specify image name) -->
@@ -21,7 +19,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * [ ] 2-3 chicken breast or rotisserie chicken
 * [ ] shredded cheese
 * [ ] 1 can black beans, strained
-* [ ] other vegetables
+* [ ] other vegetables (onion, cilantro, diced tomato, and/or diced green chilies)
 
 ## Recipe
 
@@ -29,7 +27,3 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * Preheat the oven to 375F
 * Roll the cooked chicken, cheese, beans, and other vegetables with the flap side down, then pour enchilada sauce over top
 * Bake for 25 minutes
-
-## Notes
-
-* Other recommended vegetables include: onion, cilantro, diced tomato, and/or diced green chilies

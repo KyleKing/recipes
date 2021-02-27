@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 <!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Sesame Chicken Noodles
@@ -8,9 +6,9 @@
 
   [Chrissy Teigen Cravings]: https://www.penguinrandomhouse.com/books/252973/cravings-by-chrissy-teigen-with-adeena-sussman/
 
-<!-- rating=0; (User can specify rating on scale of 1-5) -->
+<!-- rating=1; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
-Personal rating: *Not yet rated*
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
 <!-- name_image=None; (User can specify image name) -->
@@ -20,21 +18,24 @@ Personal rating: *Not yet rated*
 
 ## Ingredients
 
-* [ ] dressing
-    * [ ] 1 tsp sesame oil
-    * [ ] 1/4 cup peanut oil or sunflower oil?
-    * [ ] 1/4 cup tahini
-    * [ ] 3 tbsp soy sauce
-    * [ ] 2 tbsp red wine vinegar
-    * [ ] 2 tsp chili oil
-    * [ ] 1 tsp honey
-    * [ ] 1/2 tsp cayenne pepper or red pepper flakes
-    * [ ] 1 garlic clove, minced
-* [ ] else
-    * [ ] 1 chicken breast
-    * [ ] 8 ounces fettuccine (1/2 container)
-    * [ ] 1 tsp sesame oil
-    * [ ] 2 scallions, thinly sliced
+### Dressing
+
+* [ ] 1 tsp sesame oil
+* [ ] 1/4 cup peanut oil or sunflower oil?
+* [ ] 1/4 cup tahini
+* [ ] 3 tbsp soy sauce
+* [ ] 2 tbsp red wine vinegar
+* [ ] 2 tsp chili oil
+* [ ] 1 tsp honey
+* [ ] 1/2 tsp cayenne pepper or red pepper flakes
+* [ ] 1 garlic clove, minced
+
+### Chicken Noodles
+
+* [ ] 1 chicken breast
+* [ ] 8 ounces fettuccine (1/2 container)
+* [ ] 1 tsp sesame oil
+* [ ] 2 scallions, thinly sliced
 
 ## Recipe
 
@@ -45,4 +46,4 @@ Personal rating: *Not yet rated*
 
 ## Notes
 
-* The chili oil and the vinegar came through too strong, so I just ditched the dressing and went with pesto. Not sure what changes I would make
+* WARN: The chili oil and the vinegar were way too strong, so I ditched the dressing and went with pesto. Not sure what changes I would make

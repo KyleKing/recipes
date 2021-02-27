@@ -6,7 +6,7 @@
 | [Chicken Noodle Soup](../chicken_noodle_soup) | 5 | <!-- TODO: Capture image --> |
 | [Pot Pie Soup](../pot_pie_soup) | 6 | ![pot_pie_soup.jpeg](./pot_pie_soup.jpeg){: .image-toc loading=lazy } |
 | [Chili Con Carne](../chili_con_carne) | 7 | ![chili_con_carne.jpeg](./chili_con_carne.jpeg){: .image-toc loading=lazy } |
-| [Vegetable Tortilla Stew](../vegetable_tortilla_stew) | 3 | ![vegetable_tortilla_stew.jpeg](./vegetable_tortilla_stew.jpeg){: .image-toc loading=lazy } |
+| [Vegetable Tortilla Stew](../vegetable_tortilla_stew) | 3 | ![vegetable_tortilla_stew.jpg](./vegetable_tortilla_stew.jpg){: .image-toc loading=lazy } |
 | [Parmesan Minestrone](../parmesan_minestrone) | 5 | ![parmesan_minestrone.jpeg](./parmesan_minestrone.jpeg){: .image-toc loading=lazy } |
 | [Johns Chili](../johns_chili) | 5 | ![johns_chili.jpeg](./johns_chili.jpeg){: .image-toc loading=lazy } |
 | [Chicken And Dumplings Instant Pot](../chicken_and_dumplings_instant_pot) | 5 | ![chicken_and_dumplings_instant_pot.jpeg](./chicken_and_dumplings_instant_pot.jpeg){: .image-toc loading=lazy } |

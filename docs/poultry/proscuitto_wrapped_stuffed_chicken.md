@@ -50,14 +50,14 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * In a cast iron skillet, cook the bacon over medium heat until crisp (~8 min)
 * Cool the bacon on a paper towel. Remove excess fat from the skillet
 * Pound chicken and season with salt and pepper
-  * Spread each piece with the herb cheese
-  * Crumble bacon over the cheese and roll, starting on the short side
-  * Wrap each with 3 slices of proscuitto. Make sure to entire enclose
-  * Brush with olive oil and season lightly with pepper
+    * Spread each piece with the herb cheese
+    * Crumble bacon over the cheese and roll, starting on the short side
+    * Wrap each with 3 slices of proscuitto. Make sure to entire enclose
+    * Brush with olive oil and season lightly with pepper
 * Place seam side down in the skillet
 * Scatter tomatoes around the chicken then bake until the chicken is cooked (~30 min)
 
 ## Notes
 
-!!! Tip
+!!! tip
     Try to get two equally sized chicken breasts. Flatten by pounding with a rolling pin until ~1/2 in thickness. Can wrap in plastic wrap if needed

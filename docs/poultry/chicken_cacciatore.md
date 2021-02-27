@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 <!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Chicken Cacciatore
@@ -36,9 +34,9 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Recipe
 
-* Season chicken thighs with salt & pepper. Place olive oil in instant pot and put thighs skin-side down. Use **Sauté** setting for 4 minutes.
-* Remove chicken thighs and add bell pepper, onion, and garlic. **Sauté** setting for 3 minutes.
+* Season chicken thighs with salt & pepper. Place olive oil in instant pot and put thighs skin-side down. Use *Sauté* setting for 4 minutes.
+* Remove chicken thighs and add bell pepper, onion, and garlic. *Sauté* setting for 3 minutes.
 * Add tomatoes and liquid, wine, water (broth), tomato paste, Italian seasoning, red pepper flakes, and bay leaf, combine. Add the chicken back to pot and fully coat in liquid - make sure chicken sits in one layer.
 * In parallel, boil a pot of water and prepare the egg noodles according to package directions
-* Seal and select **Meat** to cook for 12 minutes at high pressure, then quick release steam
+* Seal and select *Meat* to cook for 12 minutes at high pressure, then quick release steam
 * Remove the lid and choose saute for 10 minutes. This will help reduce the sauce

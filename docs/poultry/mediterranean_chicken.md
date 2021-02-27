@@ -1,8 +1,8 @@
-<!-- Needs Manual Review -->
-
 <!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Mediterranean Chicken
+
+> Based on a recipe from a La Madeleine email
 
 <!-- rating=0; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
@@ -41,7 +41,3 @@ Personal rating: *Not yet rated*
 * After 30 minutes, add tomatoes and olives
 * Roast an additional 10-15 minutes until potatoes are fork-tender and chicken is thoroughly cooked
 * Remove from oven and place in a serving bowl. Drizzle any pan juices over the chicken, then sprinkle with parsley, lemon juice, and lemon zest
-
-## Notes
-
-* Source: La Madeleine email

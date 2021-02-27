@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 <!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Baked Chicken And Potatoes
@@ -23,7 +21,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * [ ] ~5 carrots, chopped
 * [ ] 6-8 chicken thighs (bone-in, skin-on)
 * [ ] ~2 tbsp olive oil
-* [ ] 2 tsp ground black pepper
+* [ ] 2 tsp ground pepper
 * [ ] 2 tsp oregano
 * [ ] 2 tsp thyme
 * [ ] 1/2 tsp paprika
@@ -39,7 +37,3 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * Pull out the chicken and toss with spices (add more if needed)
 * Place the chicken into the roasting pan and make sure everything is in one layer
 * Roast for 40 minutes or until the chicken is completely cooked through
-
-## Notes
-
-*

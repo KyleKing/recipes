@@ -9,9 +9,9 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
-<!-- name_image=chocolate_chip_oatmeal_cookies.jpeg; (User can specify image name) -->
+<!-- name_image=chocolate_chip_oatmeal_cookies.jpg; (User can specify image name) -->
 <!-- AUTO-Image -->
-![chocolate_chip_oatmeal_cookies.jpeg](./chocolate_chip_oatmeal_cookies.jpeg){: .image-recipe loading=lazy }
+![chocolate_chip_oatmeal_cookies.jpg](./chocolate_chip_oatmeal_cookies.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->
 
 ## Ingredients

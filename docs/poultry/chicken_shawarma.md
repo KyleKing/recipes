@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 <!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
 
 # Chicken Shawarma
@@ -18,34 +16,39 @@ Personal rating: *Not yet rated*
 
 ## Ingredients
 
-* [ ] FOR THE CHICKEN
-    * [ ] 3 tbsp extra-virgin olive oil
-    * [ ] 1 1/2 tsp ground cumin
-    * [ ] 1 tsp freshly ground black pepper
-    * [ ] 1 tsp ground turmeric
-    * [ ] 1 tsp kosher salt
-    * [ ] 3/4 tsp ground coriander
-    * [ ] 1/2 tsp ground cardamom
-    * [ ] 1/2 tsp sweet paprika
-    * [ ] 1/2 tsp garlic powder
-    * [ ] 1/4 tsp dried oregano
-    * [ ] 1/4 tsp ground cinnamon
-    * [ ] 1 pinch ground cloves
-    * [ ] 1 pinch ground ginger
-    * [ ] Five (4-ounce) skinless, boneless chicken thighs
-* [ ] FOR THE CABBAGE SALAD
-    * [ ] 1/3 cup extra-virgin olive oil
-    * [ ] 1/4 cup apple cider vinegar
-    * [ ] 1 tsp kosher salt, or more as needed
-    * [ ] 1 tsp granulated sugar
-    * [ ] 1/4 tsp freshly ground black pepper, or more as needed
-    * [ ] 1/2 medium green or red cabbage (1 1/2 pounds), thinly sliced
-* [ ] FOR ASSEMBLY
-    * [ ] 4 pitas (white or whole-wheat)
-    * [ ] Fresh cilantro sprigs, for serving
-    * [ ] Pickled onions (see Notes below)
-    * [ ] Harissa, for serving (optional)
-    * [ ] Amba, for serving (optional)
+### Chicken
+
+* [ ] 3 tbsp extra-virgin olive oil
+* [ ] 1 1/2 tsp ground cumin
+* [ ] 1 tsp freshly ground black pepper
+* [ ] 1 tsp ground turmeric
+* [ ] 1 tsp kosher salt
+* [ ] 3/4 tsp ground coriander
+* [ ] 1/2 tsp ground cardamom
+* [ ] 1/2 tsp sweet paprika
+* [ ] 1/2 tsp garlic powder
+* [ ] 1/4 tsp dried oregano
+* [ ] 1/4 tsp ground cinnamon
+* [ ] 1 pinch ground cloves
+* [ ] 1 pinch ground ginger
+* [ ] Five (4-ounce) skinless, boneless chicken thighs
+
+### Cabbage Salad
+
+* [ ] 1/3 cup extra-virgin olive oil
+* [ ] 1/4 cup apple cider vinegar
+* [ ] 1 tsp kosher salt, or more as needed
+* [ ] 1 tsp granulated sugar
+* [ ] 1/4 tsp freshly ground black pepper, or more as needed
+* [ ] 1/2 medium green or red cabbage (1 1/2 pounds), thinly sliced
+
+### Assembly
+
+* [ ] 4 pitas (white or whole-wheat)
+* [ ] Fresh cilantro sprigs, for serving
+* [ ] Pickled onions (see Notes below)
+* [ ] Harissa, for serving (optional)
+* [ ] Amba, for serving (optional)
 
 ## Recipe
 
@@ -56,7 +59,7 @@ Personal rating: *Not yet rated*
 
 ## Notes
 
-* To make pickled onions, follow the WaPo recipe here, but use apple cider vinegar in place of white: https://www.washingtonpost.com/recipes/quick-pickled-onions/17214/
+* To make pickled onions, follow the [WaPo recipe here](https://www.washingtonpost.com/recipes/quick-pickled-onions/17214/), but use apple cider vinegar in place of white
 * Ingredients:
 * 1/2 cup water
 * 1/2 cup distilled white vinegar (how much apple cider vinegar?)
