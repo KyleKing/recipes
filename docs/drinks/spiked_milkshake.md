@@ -2,6 +2,8 @@
 
 # Spiked Milkshake
 
+> From multiple sources. Like this one that looks like a [good Bailey's recipe](https://www.sheknows.com/food-and-recipes/articles/980181/two-baileys-cocktails-for-valentines-day/)
+
 <!-- rating=0; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
 Personal rating: *Not yet rated*

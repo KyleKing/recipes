@@ -12,6 +12,7 @@
 | [Coffee](../coffee) | 4 | ![coffee.jpeg](./coffee.jpeg){: .image-toc loading=lazy } |
 | [Spiked Cider](../spiked_cider) | 6 | ![spiked_cider.jpeg](./spiked_cider.jpeg){: .image-toc loading=lazy } |
 | [White Lady](../white_lady) | 3 | <!-- TODO: Capture image --> |
+| [Baileys Raspberry Cocktail](../baileys_raspberry_cocktail) | 6 | ![baileys_raspberry_cocktail.jpg](./baileys_raspberry_cocktail.jpg){: .image-toc loading=lazy } |
 | [Spicy Watermelon Margarita](../spicy_watermelon_margarita) | 3 | <!-- TODO: Capture image --> |
 | [Frozen Irish Coffee](../frozen_irish_coffee) | 3 | <!-- TODO: Capture image --> |
 | [Eggnog](../eggnog) | 3 | <!-- TODO: Capture image --> |
@@ -23,6 +24,7 @@
 | [Simple Syrup](../simple_syrup) | 3 | <!-- TODO: Capture image --> |
 | [Beer](../beer) | 5 | ![beer.jpg](./beer.jpg){: .image-toc loading=lazy } |
 | [Chilly Chile Paloma](../chilly_chile_paloma) | 3 | <!-- TODO: Capture image --> |
+| [Baileys Hot Chocolate](../baileys_hot_chocolate) | 3 | <!-- TODO: Capture image --> |
 | [Frogroni](../frogroni) | 3 | <!-- TODO: Capture image --> |
 | [Spicy Margarita](../spicy_margarita) | 6 | ![spicy_margarita.jpg](./spicy_margarita.jpg){: .image-toc loading=lazy } |
 | [Wine](../wine) | 6 | ![wine.jpg](./wine.jpg){: .image-toc loading=lazy } |

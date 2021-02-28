@@ -15,6 +15,7 @@
 | [Edible Cookie Dough Ben & Jerrys](../edible_cookie_dough_ben_&_jerrys) | 3 | <!-- TODO: Capture image --> |
 | [Cookie Bars](../cookie_bars) | 5 | ![cookie_bars.jpeg](./cookie_bars.jpeg){: .image-toc loading=lazy } |
 | [Collens Peanut Butter Bars](../collens_peanut_butter_bars) | 3 | <!-- TODO: Capture image --> |
+| [Baileys Chocolate Truffles](../baileys_chocolate_truffles) | 3 | <!-- TODO: Capture image --> |
 | [Banana Bread](../banana_bread) | 7 | ![banana_bread.jpeg](./banana_bread.jpeg){: .image-toc loading=lazy } |
 | [Popcorn Cinnamon Sugar](../popcorn_cinnamon_sugar) | 5 | ![popcorn_cinnamon_sugar.jpeg](./popcorn_cinnamon_sugar.jpeg){: .image-toc loading=lazy } |
 | [Chocolatines](../chocolatines) | 8 | ![chocolatines.jpeg](./chocolatines.jpeg){: .image-toc loading=lazy } |
