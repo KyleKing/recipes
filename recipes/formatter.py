@@ -2,7 +2,7 @@
 
 import re
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Callable, Dict, List, Optional
 
 from loguru import logger
 
@@ -183,7 +183,7 @@ def _update_md(path_md: Path) -> str:
         str: updated recipe string markdown
 
     """
-    startswith_action_lookup = {
+    startswith_action_lookup: Dict[str, Callable[[str, Path], str]] = {
         '<!-- Do not modify sections with ': _format_header,
         '<!-- rating=': _format_star_section,
         '<!-- name_image=': _format_image_section,
