@@ -26,7 +26,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * [ ] (optional) 1⁄4 tsp minced garlic
 * [ ] 1-2 sprigs tarragon
 * [ ] 4 plum or 2 large tomatoes, diced
-* [ ] 1 pound cut pasta, like penne
+* [ ] 1 pound cut pasta, like Farfalle or penne
 
 ## Recipe
 

@@ -70,19 +70,19 @@ repos:
       - id: sort-simple-yaml
       - id: trailing-whitespace
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v2.13.0
+    rev: v2.16.0
     hooks:
       - id: commitizen
         additional_dependencies: ["cz_legacy"]
         stages: [commit-msg]
   - repo: https://github.com/asottile/pyupgrade
-    rev: v2.7.4
+    rev: v2.10.0
     hooks:
       - id: pyupgrade
         args: [--py38-plus]
         stages: [push]
   - repo: https://github.com/asottile/add-trailing-comma
-    rev: v2.0.2
+    rev: v2.1.0
     hooks:
       - id: add-trailing-comma
         stages: [commit]

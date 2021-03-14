@@ -53,7 +53,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * In parallel
     * Cook Canadian bacon or ham (or bacon) in a medium skillet over medium–high heat until golden brown and just crisp at the edges, about 6 minutes.
     * Poach the eggs: Fill a lidded pan with water up to the edge of the egg poaching cups and begin heating. Once boiling, poach the eggs for ~6 minutes or until slightly firm, but still runny. Will need to do two batches of four.
-    * Throughly toast the English muffins until crisp and golden brown--they will need to be sturdy
+    * Thoroughly toast the English muffins until crisp and golden brown--they will need to be sturdy
 * Assemble the Benedict: Butter the eight halves of English muffin on a plate and butter them generously. Top each with a slice of selected meat, poached egg, then spoon hollandaise sauce. Sprinkle with chives, parsley, flaky sea salt, and black pepper.
 
 ## Notes
