@@ -28,13 +28,6 @@ repos:
         language: system
         types: [python]
         stages: [push]
-      # > Needs to be done manually. Can make 0.1 kb changes to infinity...
-      # - id: compress
-      #   name: compress
-      #   entry: poetry run doit run compress
-      #   language: system
-      #   files: "\\.(jpg|jpeg)$"
-      #   stages: [commit]
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.4.0
     hooks:
@@ -51,7 +44,6 @@ repos:
       - id: check-toml
       - id: check-vcs-permalinks
       - id: check-xml
-      # - id: check-yaml  # The mkdocs YAML file isn't valid...
       - id: debug-statements
       - id: destroyed-symlinks
       - id: detect-private-key

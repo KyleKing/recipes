@@ -41,5 +41,6 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Notes
 
-* Also see the [Chocolate Chip Oatmeal Cookies](chocolate_chip_oatmeal_cookies.jpeg)
-* And [a Peanut Butter version](https://www.verybestbaking.com/recipes/144792/peanut-butter-chocolate-chip-cookies/) or [chunky chocolate chip peanut butter cookies](https://www.verybestbaking.com/recipes/30364/chunky-chocolate-chip-peanut-butter-cookies/)
+* Also see the alternative [Chocolate Chip Oatmeal Cookies](./chocolate_chip_oatmeal_cookies.md)
+    * And [a Peanut Butter version](https://www.verybestbaking.com/recipes/144792/peanut-butter-chocolate-chip-cookies/)
+    * Or [chunky chocolate chip peanut butter cookies](https://www.verybestbaking.com/recipes/30364/chunky-chocolate-chip-peanut-butter-cookies/)
