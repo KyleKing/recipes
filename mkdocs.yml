@@ -47,5 +47,6 @@ extra_css:
   - _stylesheets/extra.css
 
 extra_javascript:
+  - _javascript/hider.js
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
   - _javascript/tables.js
