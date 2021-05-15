@@ -2,7 +2,6 @@
 
 import shlex
 import subprocess  # noqa S404
-import webbrowser
 from typing import List
 
 from calcipy.doit_tasks.base import debug_task
@@ -23,18 +22,19 @@ def task_main() -> DoItTask:
     """
     return debug_task([LongRunning('poetry run python main.py')])
 
-
-def task_serve() -> DoItTask:
-    """Serve the recipe site with `--dirtyreload` and open in a web browser.
-
-    Returns:
-        DoItTask: DoIt task
-
-    """
-    return debug_task([
-        (webbrowser.open, ('http://localhost:8000',)),
-        LongRunning('poetry run mkdocs serve --dirtyreload'),
-    ])
+# > Duplicate of serve_fast?
+# import webbrowser
+# def task_serve() -> DoItTask:
+#     """Serve the recipe site with `--dirtyreload` and open in a web browser.
+#
+#     Returns:
+#         DoItTask: DoIt task
+#
+#     """
+#     return debug_task([
+#         (webbrowser.open, ('http://localhost:8000',)),
+#         LongRunning('poetry run mkdocs serve --dirtyreload'),
+#     ])
 
 
 def task_deploy() -> DoItTask:

@@ -27,7 +27,7 @@ from calcipy.log_helpers import build_logger_config
 from loguru import logger
 
 from recipes import __pkg_name__
-from recipes.tasks import task_compress, task_convert_png_to_jpg, task_deploy, task_main, task_serve  # noqa: F401I
+from recipes.tasks import task_compress, task_convert_png_to_jpg, task_deploy, task_main  # noqa: F401I
 
 logger.debug('sys.argv={sys_argv}', sys_argv=sys.argv)
 
