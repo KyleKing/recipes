@@ -1,3 +1,5 @@
+const KEY = 'alohomora-2';
+
 // Add HTML and CSS for the modal and login form
 function conceal() {
     document.body.innerHTML += `
@@ -29,13 +31,27 @@ function conceal() {
         #concealer-modal {
             display: block;
             background-color: white;
-            left: 35%;
             margin: 15% auto;
-            width: 30%;
             padding: 20px;
             position: absolute;
             top: 0;
             z-index: 9999;
+        }
+    `);
+    style.sheet.insertRule(`
+        @media (min-width : 900px) {
+            #concealer-modal {
+                left: 35%;
+                width: 30%;
+            }
+        }
+    `);
+    style.sheet.insertRule(`
+        @media (max-width : 900px) {
+            #concealer-modal {
+                left: 10%;
+                width: 80%;
+            }
         }
     `);
     style.sheet.insertRule(`
@@ -49,10 +65,10 @@ function conceal() {
         // event.preventDefault();
         const pass = document.getElementById("concealer-password").value;
         if (pass[0] == "i" && pass.length >= 12) {
-            createCookie("concealer-cookie", "alohomora", 365 * 10); // Valid 10 years
+            createCookie("concealer-cookie", KEY, 365 * 10); // Valid 10 years
         }
         console.log("Password inspired by: https://www.tor.com/2021/04/28/the-angel-of-khan-el-khalili-p-djeli-clark/");
-        console.log("...or you can cheat: https://github.com/KyleKing/recipes/blob/main/docs/_javascript/hider.js")
+        console.log("...or you can cheat: https://github.com/KyleKing/recipes/blob/0829df7def3f49b04c6f6e9915aecd59979a2f12/docs/_javascript/hider.js#L51")
     }
     var form = document.getElementById('concealer-form');
     form.addEventListener('submit', logSubmit);
@@ -77,6 +93,6 @@ function accessCookie(cookieName) {
 }
 
 // Trigger modal only if the local cookies says so
-if (accessCookie("concealer-cookie") != "alohomora") {
+if (accessCookie("concealer-cookie") != KEY) {
     conceal();
 }
