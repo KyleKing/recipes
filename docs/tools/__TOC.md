@@ -9,4 +9,5 @@
 | [Bake Ware](../bake_ware) | 3 | <!-- TODO: Capture image --> |
 | [Cocktail Shaker](../cocktail_shaker) | 3 | ![cocktail_shaker.jpeg](./cocktail_shaker.jpeg){: .image-toc loading=lazy } |
 | [Dishwasher](../dishwasher) | 3 | <!-- TODO: Capture image --> |
+| [Oven Clean](../oven_clean) | 3 | <!-- TODO: Capture image --> |
 | [Substitutions](../substitutions) | 3 | <!-- TODO: Capture image --> |

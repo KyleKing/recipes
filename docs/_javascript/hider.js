@@ -1,4 +1,4 @@
-const KEY = 'alohomora-2';
+const KEY = 'alohomora';
 
 // Add HTML and CSS for the modal and login form
 function conceal() {

@@ -5,6 +5,7 @@
 | [Sesame Noodles With Wilted Greens](../sesame_noodles_with_wilted_greens) | 4 | ![sesame_noodles_with_wilted_greens.jpg](./sesame_noodles_with_wilted_greens.jpg){: .image-toc loading=lazy } |
 | [Black Bean Pasta Bowl](../black_bean_pasta_bowl) | 3 | <!-- TODO: Capture image --> |
 | [One Pot Creamy Broccoli Pasta](../one_pot_creamy_broccoli_pasta) | 4 | <!-- TODO: Capture image --> |
+| [Baked Feta Pasta](../baked_feta_pasta) | 3 | <!-- TODO: Capture image --> |
 | [Pasta Romesco With Spinach](../pasta_romesco_with_spinach) | 3 | <!-- TODO: Capture image --> |
 | [Pasta With Corn Zucchini And Tomatoes](../pasta_with_corn_zucchini_and_tomatoes) | 6 | ![pasta_with_corn_zucchini_and_tomatoes.jpeg](./pasta_with_corn_zucchini_and_tomatoes.jpeg){: .image-toc loading=lazy } |
 | [Mozzarella Pasta](../mozzarella_pasta) | 4 | ![mozzarella_pasta.jpg](./mozzarella_pasta.jpg){: .image-toc loading=lazy } |
