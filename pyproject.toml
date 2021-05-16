@@ -15,9 +15,9 @@ version_files = [ "pyproject.toml", "recipes/__init__.py",]
 # schema_pattern = "(recipe|build|ci|docs|feat|fix|perf|refactor|style|test|chore|revert|bump)!?(\\(\\S+\\))?:(\\s.*)"
 
 [tool.commitizen.cz_legacy_map]
-Chg = "Change (old)"
-Fix = "Fix (old)"
-New = "New (old)"
+Chg = "Change (Old)"
+Fix = "Fix (Old)"
+New = "New (Old)"
 
 [tool.isort]
 balanced_wrapping = true

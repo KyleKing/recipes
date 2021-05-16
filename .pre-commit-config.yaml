@@ -16,14 +16,14 @@ repos:
         files: "\\.rej$"
       - id: lock_deps
         name: lock_dependencies
-        entry: poetry lock
+        entry: echo $PATH; poetry lock
         pass_filenames: false
         language: system
         files: ^(pyproject.toml|poetry.lock)$
         stages: [commit]
       - id: doit_test
         name: doit_test
-        entry: poetry run doit run test
+        entry: echo $PATH; poetry run doit run test
         pass_filenames: false
         language: system
         types: [python]

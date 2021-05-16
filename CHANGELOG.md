@@ -16,7 +16,41 @@
 - update Cravings book links
 - update to calcipy from dash_dev
 
-### Change (old)
+### New (Old)
+
+- use sortable literal table for TOC (#9)
+- initialize TOC page
+- initialize tests
+- intialize python package
+- check that the image file exists and update
+- add recipe template
+- implement script to update generated sections
+- initialize script to update markdown sections
+- delete JSON files (fixes #7)
+- doit serve task
+- migrate photos for each recipe
+- add git-revision-date
+- migrated up to 5 recipes form each section
+- start mkdocs migration from JSON
+- add dash_dev and lint config
+- add WaPo summer cocktail recipes
+- shakshuka & oven_baked_fish_with_tomatoes
+- popcorn, chicken, and bake ware notes @WIP
+- coconut cake and minor updates
+- build!
+- beer and updated wine, etc.
+- init poetry project
+- initialize five new recieps
+- recipes photos and kale soup
+- peanut sauce!
+- add two NYT pasta recipes and eggs
+- Crisp, Breaded Chicken, and Chicken Thighs
+- chocolate/vanilla ice cream and solved the p-crisp mystery
+- add bundt cake and glaze
+- H-BPLTs and fixed Banana Bread
+- Microwaveable Cacio Pepe and more
+
+### Change (Old)
 
 - update chocolatines
 - move robotos to template
@@ -66,7 +100,7 @@
 - added choc-oat-cookies and pineapple cake
 - fix tacos/scampi/Choc-Nuttella
 
-### Fix (old)
+### Fix (Old)
 
 - make rating sortable (#9)
 - edit URI
@@ -91,37 +125,3 @@
 - error when highlighting text
 - scroll to link & Refac: eslint
 - missing ‘end’ statements on lists
-
-### New (old)
-
-- use sortable literal table for TOC (#9)
-- initialize TOC page
-- initialize tests
-- intialize python package
-- check that the image file exists and update
-- add recipe template
-- implement script to update generated sections
-- initialize script to update markdown sections
-- delete JSON files (fixes #7)
-- doit serve task
-- migrate photos for each recipe
-- add git-revision-date
-- migrated up to 5 recipes form each section
-- start mkdocs migration from JSON
-- add dash_dev and lint config
-- add WaPo summer cocktail recipes
-- shakshuka & oven_baked_fish_with_tomatoes
-- popcorn, chicken, and bake ware notes @WIP
-- coconut cake and minor updates
-- build!
-- beer and updated wine, etc.
-- init poetry project
-- initialize five new recieps
-- recipes photos and kale soup
-- peanut sauce!
-- add two NYT pasta recipes and eggs
-- Crisp, Breaded Chicken, and Chicken Thighs
-- chocolate/vanilla ice cream and solved the p-crisp mystery
-- add bundt cake and glaze
-- H-BPLTs and fixed Banana Bread
-- Microwaveable Cacio Pepe and more
