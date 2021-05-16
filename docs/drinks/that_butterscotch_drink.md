@@ -1,0 +1,18 @@
+<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
+
+# Slippery Nipple
+
+> Based on [https://en.wikipedia.org/wiki/Slippery_nipple](https://en.wikipedia.org/wiki/Slippery_nipple)
+
+<!-- rating=4; (User can specify rating on scale of 1-5) -->
+<!-- AUTO-UserRating -->
+<!-- /AUTO-UserRating -->
+
+<!-- name_image=that_butterscotch_drink.jpeg; (User can specify image name) -->
+<!-- AUTO-Image -->
+<!-- /AUTO-Image -->
+
+## Recipe
+
+* 1:1 *Baileys Irish Cream* and *Butterscotch Schnapps* (or Sambuca)
+* Can be served as a cocktail or a layered shooter (if using Sambuca)

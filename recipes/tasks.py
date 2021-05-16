@@ -88,7 +88,7 @@ def task_convert_png_to_jpg() -> DoItTask:
 def task_compress() -> DoItTask:
     """Compress one or more specific images.
 
-    Example: `doit run compress -f ./docs/dessert/biscotti.jpg`
+    Example: `doit run compress ./docs/dessert/biscotti.jpg`
 
     Returns:
         DoItTask: DoIt task
