@@ -6,6 +6,7 @@
 | [Paremesan Chicken Breasts](../paremesan_chicken_breasts) | 5 | ![paremesan_chicken_breasts.jpeg](./paremesan_chicken_breasts.jpeg){: .image-toc loading=lazy } |
 | [Brick Chicken](../brick_chicken) | 6 | ![brick_chicken.jpg](./brick_chicken.jpg){: .image-toc loading=lazy } |
 | [Honey And Soy Glazed Chicken Thighs](../honey_and_soy_glazed_chicken_thighs) | 3 | <!-- TODO: Capture image --> |
+| [Roasted Chicken Thighs With Cauliflower And Herby Yogurt](../roasted_chicken_thighs_with_cauliflower_and_herby_yogurt) | 6 | ![roasted_chicken_thighs_with_cauliflower_and_herby_yogurt.jpg](./roasted_chicken_thighs_with_cauliflower_and_herby_yogurt.jpg){: .image-toc loading=lazy } |
 | [Chicken](../chicken) | 4 | ![chicken.jpg](./chicken.jpg){: .image-toc loading=lazy } |
 | [Mediterranean Chicken](../mediterranean_chicken) | 3 | <!-- TODO: Capture image --> |
 | [Baked Chicken And Potatoes](../baked_chicken_and_potatoes) | 5 | ![baked_chicken_and_potatoes.jpeg](./baked_chicken_and_potatoes.jpeg){: .image-toc loading=lazy } |
