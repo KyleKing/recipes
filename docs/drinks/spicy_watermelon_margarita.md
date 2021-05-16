@@ -14,14 +14,14 @@ Personal rating: *Not yet rated*
 
 ## Ingredients
 
-* [ ] Salt or Tajín (optional), for rimming the glass
-* [ ] 1 wedge lime (optional), for rimming the glass
-* [ ] 1 to 2 thin slices jalapeño or serrano pepper
-* [ ] 1 to 2 teaspoons granulated sugar
+* [ ] Salt or Tajín (optional), for rim
+* [ ] 1 wedge lime (optional), for rim
+* [ ] 1-2 thin slices jalapeño or serrano pepper
+* [ ] 1-2 tsp granulated sugar
 * [ ] Ice
-* [ ] 2 ounces fresh watermelon juice
-* [ ] 1 1/2 ounces blanco tequila
-* [ ] 1 ounce fresh lime juice
+* [ ] 2 oz fresh watermelon juice
+* [ ] 1.5 oz blanco tequila
+* [ ] 1 oz fresh lime juice
 
 ## Recipe
 

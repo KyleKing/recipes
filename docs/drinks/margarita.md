@@ -4,9 +4,9 @@
 
 > Cocktail Codex - SideCar Variant
 
-<!-- rating=0; (User can specify rating on scale of 1-5) -->
+<!-- rating=3; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
-Personal rating: *Not yet rated*
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
 <!-- name_image=margarita.jpg; (User can specify image name) -->
@@ -27,6 +27,7 @@ Personal rating: *Not yet rated*
     * [ ] Dry: *none*
     * [ ] Classic: *1/4 oz*
     * [ ] Sweet: *1/2 oz*
+
 ## Recipe
 
 * Run the lime wedge along the upper 1/2 in of an Old Fashioned glass halfway around the circumference
@@ -37,4 +38,5 @@ Personal rating: *Not yet rated*
 
 * [Spicy Margarita](./spicy_margarita.md)
 * [Spicy Watermelon Margarita](./spicy_watermelon_margarita.md)
+* [Watermelon Margarita](./watermelon_margarita.md)
 * [Frozen Strawberry Margarita](./frozen_strawberry_margarita.md)
