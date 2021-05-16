@@ -22,7 +22,7 @@ import sys
 from pathlib import Path
 
 from calcipy.doit_tasks import *  # noqa: F401,F403,H303 (Run 'doit list' to see tasks). skipcq: PYL-W0614
-from calcipy.doit_tasks.doit_globals import DIG
+from calcipy.doit_tasks.doit_globals import DIG  # DEF_PATH_CODE_TAG_SUMMARY
 from calcipy.log_helpers import build_logger_config
 from loguru import logger
 
@@ -42,6 +42,10 @@ logger.info(
 
 # Configure Dash paths
 DIG.set_paths(path_project=path_parent)
+
+# TODO: Needs to be fixed in calcipy
+# PATH_CODE_TAG_SUMMARY = Path('docs/z_dev') / 'CODE_TAG_SUMMARY.md'  # DEF_PATH_CODE_TAG_SUMMARY.name
+# DIG.ct.path_code_tag_summary = PATH_CODE_TAG_SUMMARY
 
 # Create list of all tasks run with `poetry run doit`. Comment on/off as needed
 # > from calcipy.doit_tasks import DOIT_CONFIG_RECOMMENDED
