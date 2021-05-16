@@ -6,10 +6,12 @@
 
 <!-- rating=4; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
 <!-- name_image=that_butterscotch_drink.jpeg; (User can specify image name) -->
 <!-- AUTO-Image -->
+![that_butterscotch_drink.jpeg](./that_butterscotch_drink.jpeg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->
 
 ## Recipe

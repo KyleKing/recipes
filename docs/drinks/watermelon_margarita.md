@@ -6,10 +6,12 @@
 
 <!-- rating=3; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
 <!-- name_image=watermelon_margarita.jpg; (User can specify image name) -->
 <!-- AUTO-Image -->
+![watermelon_margarita.jpg](./watermelon_margarita.jpg){: .image-recipe loading=lazy }
 <!-- /AUTO-Image -->
 
 ## Ingredients

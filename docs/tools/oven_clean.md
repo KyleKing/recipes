@@ -6,7 +6,7 @@
 
 <!-- rating=1; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
-Personal rating: *Not yet rated*
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- /AUTO-UserRating -->
 
 <!-- name_image=None; (User can specify image name) -->

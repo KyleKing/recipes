@@ -22,4 +22,5 @@
 | [Creamy Lemon Pasta](../creamy_lemon_pasta) | 5 | ![creamy_lemon_pasta.jpeg](./creamy_lemon_pasta.jpeg){: .image-toc loading=lazy } |
 | [Spaghetti Meatballs Teigen](../spaghetti_meatballs_teigen) | 7 | ![spaghetti_meatballs_teigen.jpeg](./spaghetti_meatballs_teigen.jpeg){: .image-toc loading=lazy } |
 | [Orzo And Cheese](../orzo_and_cheese) | 4 | ![orzo_and_cheese.jpg](./orzo_and_cheese.jpg){: .image-toc loading=lazy } |
+| [Spaghetti With Cilantro Sauce](../spaghetti_with_cilantro_sauce) | 3 | ![spaghetti_with_cilantro_sauce.jpg](./spaghetti_with_cilantro_sauce.jpg){: .image-toc loading=lazy } |
 | [Classic Pasta And Mushrooms](../classic_pasta_and_mushrooms) | 3 | <!-- TODO: Capture image --> |
