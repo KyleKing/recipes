@@ -35,22 +35,16 @@ repository = "https://github.com/kyleking/recipes"
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.8,<3.9"
-mkdocs = "*"
+python = "^3.8"
 mkdocs-git-revision-date-plugin = "*"
-mkdocs-material = "*"
 optimize-images = "*"
 pillow = "*"
 
-[tool.poetry.dev-dependencies]
-# FIXME: Pending resolution of https://github.com/best-doctor/mr_proper/issues/13
-flake8-functions = "<0.0.5"
-
 [tool.poetry.dependencies.calcipy]
-git = "https://github.com/KyleKing/calcipy.git"
+git = "https://github.com/kyleking/calcipy.git"
 branch = "dev/development"
 
 [tool.poetry.dev-dependencies.calcipy]
-git = "https://github.com/KyleKing/calcipy.git"
+git = "https://github.com/kyleking/calcipy.git"
 branch = "dev/development"
-extras = [ "development", "commitizen_legacy"]
+extras = [ "dev", "lint", "test", "commitizen_legacy"]

@@ -51,13 +51,15 @@ DOIT_CONFIG = {
         'main',
 
         'cl_write',
-        'create_tag_file',
+        'collect_code_tags',
         'coverage',
         # 'open_test_docs',
         'auto_format',
         # > 'document',
+        # > 'open_docs',
         'pre_commit_hooks',
         'lint_critical_only',
+        'check_types',
     ],
 }
 """DoIt Configuration Settings. Run with `poetry run doit`."""

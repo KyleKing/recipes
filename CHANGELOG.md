@@ -1,12 +1,18 @@
 ## Unreleased
 
+### Feat
+
+- show password modal
+
 ### Fix
 
+- password prompt on mobile
 - skip icons from png to jpg conversion
 - remove duplicate images
 
 ### Refactor
 
+- comment-out duplicate task
 - update Cravings book links
 - update to calcipy from dash_dev
 

@@ -29,7 +29,7 @@ repos:
         types: [python]
         stages: [push]
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.4.0
+    rev: v4.0.0
     hooks:
       # - id: name-tests-test  > End with _test.py?
       - id: check-added-large-files
@@ -56,19 +56,19 @@ repos:
       - id: forbid-new-submodules
       - id: mixed-line-ending
         args: ["--fix=lf"]
-      - id: no-commit-to-branch
+      # - id: no-commit-to-branch
       - id: pretty-format-json
       - id: requirements-txt-fixer
       - id: sort-simple-yaml
       - id: trailing-whitespace
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v2.16.0
+    rev: v2.17.6
     hooks:
       - id: commitizen
         additional_dependencies: ["cz_legacy"]
         stages: [commit-msg]
   - repo: https://github.com/asottile/pyupgrade
-    rev: v2.10.0
+    rev: v2.16.0
     hooks:
       - id: pyupgrade
         args: [--py38-plus]
