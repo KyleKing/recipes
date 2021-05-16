@@ -16,7 +16,7 @@ repos:
         files: "\\.rej$"
       - id: lock_deps
         name: lock_dependencies
-        # FIXME: Can't find poetry executable unless with "echo $PATH"? Tried zsh -c ".."
+        # FYI: Won't work in Tower. Submitted Support request #90767
         entry: poetry lock
         pass_filenames: false
         language: system
