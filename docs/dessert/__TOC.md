@@ -32,6 +32,7 @@
 | [Double Layer Pumpkin Pie](../double_layer_pumpkin_pie) | 6 | ![double_layer_pumpkin_pie.jpeg](./double_layer_pumpkin_pie.jpeg){: .image-toc loading=lazy } |
 | [Molten Chocolate Cake](../molten_chocolate_cake) | 6 | ![molten_chocolate_cake.jpeg](./molten_chocolate_cake.jpeg){: .image-toc loading=lazy } |
 | [Chocolate Milkshake](../chocolate_milkshake) | 3 | <!-- TODO: Capture image --> |
+| [Baltimore Berger Cookies](../baltimore_berger_cookies) | 3 | <!-- TODO: Capture image --> |
 | [Cake Pops](../cake_pops) | 4 | ![cake_pops.jpg](./cake_pops.jpg){: .image-toc loading=lazy } |
 | [Biscotti](../biscotti) | 6 | ![biscotti.jpg](./biscotti.jpg){: .image-toc loading=lazy } |
 | [Oatmeal Raisin Cookies](../oatmeal_raisin_cookies) | 5 | ![oatmeal_raisin_cookies.jpg](./oatmeal_raisin_cookies.jpg){: .image-toc loading=lazy } |

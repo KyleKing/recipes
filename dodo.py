@@ -53,7 +53,7 @@ DOIT_CONFIG = {
         'cl_write',
         'collect_code_tags',
         'coverage',
-        # 'open_test_docs',
+        # > 'open_test_docs',
         'auto_format',
         # > 'document',
         # > 'open_docs',

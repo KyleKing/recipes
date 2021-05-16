@@ -36,6 +36,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Other Types of Margaritas
 
+* [Mock-a-Rita](./mock-a-rita.md)
 * [Spicy Margarita](./spicy_margarita.md)
 * [Spicy Watermelon Margarita](./spicy_watermelon_margarita.md)
 * [Watermelon Margarita](./watermelon_margarita.md)

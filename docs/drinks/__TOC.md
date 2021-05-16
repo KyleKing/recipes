@@ -14,6 +14,7 @@
 | [Spiked Cider](../spiked_cider) | 6 | ![spiked_cider.jpeg](./spiked_cider.jpeg){: .image-toc loading=lazy } |
 | [White Lady](../white_lady) | 3 | <!-- TODO: Capture image --> |
 | [Baileys Raspberry Cocktail](../baileys_raspberry_cocktail) | 6 | ![baileys_raspberry_cocktail.jpg](./baileys_raspberry_cocktail.jpg){: .image-toc loading=lazy } |
+| [Mock-A-Rita](../mock-a-rita) | 3 | <!-- TODO: Capture image --> |
 | [Spicy Watermelon Margarita](../spicy_watermelon_margarita) | 3 | <!-- TODO: Capture image --> |
 | [Frozen Irish Coffee](../frozen_irish_coffee) | 3 | <!-- TODO: Capture image --> |
 | [Eggnog](../eggnog) | 3 | <!-- TODO: Capture image --> |
