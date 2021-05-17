@@ -261,6 +261,9 @@ def _create_toc_entry(path_md: Path) -> str:
 def _write_toc() -> None:
     """Write the table of contents for each section."""
     for dir_sub in DIR_MD.glob('*'):
+        if dir_sub.parent.name != 'zdev':  # FYI: Make this configurable
+            continue
+
         toc_table = '| Link | Rating | Image |\n| -- | -- | -- |'
         paths_md = [*dir_sub.glob('*.md')]
         for path_md in _exclude_toc(paths_md):

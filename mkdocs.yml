@@ -1,9 +1,10 @@
 site_name: Recipes
 site_author: Kyle King and Alexandra Gabitzer
 site_description: Kyle and Alex's Personal Recipes
-repo_name: KyleKing/recipes
-repo_url: https://github.com/KyleKing/recipes
-edit_uri: edit/main/docs/
+repo_name: kyleking/recipes
+repo_url: https://github.com/kyleking/recipes
+edit_uri: edit/main/docs
+docs_dir: docs
 
 theme:
   name: material
@@ -24,18 +25,27 @@ plugins:
   - git-revision-date
 
 markdown_extensions:
+  - abbr
   - admonition
   - attr_list
+  - codehilite
   - def_list
+  - extra
+  - fenced_code
+  - footnotes
+  - markdown_include.include
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.details
+  - pymdownx.highlight
   - pymdownx.superfences
   - pymdownx.tabbed
   - pymdownx.tasklist:
       custom_checkbox: true
       clickable_checkbox: true
+  - smarty
+  - tables
   - toc:
       permalink: ⚓︎
       toc_depth: 3

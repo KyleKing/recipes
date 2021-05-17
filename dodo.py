@@ -29,19 +29,24 @@ from loguru import logger
 from recipes import __pkg_name__
 from recipes.tasks import task_compress, task_convert_png_to_jpg, task_deploy, task_main  # noqa: F401I
 
-logger.debug('sys.argv={sys_argv}', sys_argv=sys.argv)
+# PLANNED: Move all of this into a function! (and/or task?)
 
-logger.enable(__pkg_name__)
-path_parent = Path(__file__).resolve().parent
-log_config = build_logger_config(path_parent, production=False)
+logger.enable(__pkg_name__)  # This will enable output from calcipy, which is off by default
+# See an example of toggling loguru at: https://github.com/KyleKing/calcipy/tree/examples/loguru-toggle
+
+path_project = Path(__file__).resolve().parent
+log_config = build_logger_config(path_project, production=False)
 logger.configure(**log_config)
 logger.info(
-    'Started logging to {path_parent}/.logs with {log_config}', path_parent=path_parent,
+    'Started logging to {path_project}/.logs with {log_config}', path_project=path_project,
     log_config=log_config,
 )
 
+# FYI: Log the positional arguments
+logger.debug('sys.argv={sys_argv}', sys_argv=sys.argv)
+
 # Configure Dash paths
-DIG.set_paths(path_project=path_parent)
+DIG.set_paths(path_project=path_project)
 
 # TODO: Needs to be fixed in calcipy
 # PATH_CODE_TAG_SUMMARY = Path('docs/z_dev') / 'CODE_TAG_SUMMARY.md'  # DEF_PATH_CODE_TAG_SUMMARY.name
@@ -49,6 +54,7 @@ DIG.set_paths(path_project=path_parent)
 
 # Create list of all tasks run with `poetry run doit`. Comment on/off as needed
 # > from calcipy.doit_tasks import DOIT_CONFIG_RECOMMENDED
+# > DOIT_CONFIG = DOIT_CONFIG_RECOMMENDED
 DOIT_CONFIG = {
     'action_string_formatting': 'old',  # Required for keyword-based tasks
     'default_tasks': [

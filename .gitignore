@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------------------------------------------------------------
-# General Python Ignore Patterns from Github
+# General Python Ignore Patterns from Github and https://www.gitignore.io/api/python
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -120,6 +120,11 @@ venv.bak/
 # Rope project settings
 .ropeproject
 
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
 # mkdocs documentation
 /site
 
@@ -132,7 +137,7 @@ dmypy.json
 .pyre/
 
 # ----------------------------------------------------------------------------------------------------------------------
-# Common_Package Rules
+# Common Rules
 .vscode/*
 *.csv
 *.doc*
@@ -147,8 +152,6 @@ dmypy.json
 *.xl*
 ~*.*
 ~$*
-
-.watchcode.yaml
 
 # SQLite DB files (Note: use *.dvc to check these into git)
 *.db
@@ -167,31 +170,13 @@ coverage.json
 # Static Type Checkers
 .pytype/*
 
-# # Ignore doc outputs
-# docs/*
-
 # Ignore DOIT cache files
 **/.doit.*
 
 # Ignore testmon cache files
 **/.testmondata
 
-# Temporary folders created for documentation
-*/0*
-
-# Other common ignore rules
-**/secret.json
-**/*.html
-
-# Ignore temporary files
-/tmp.txt
-
-# Track hosted documentation (update for package name)
-!docs/*/**/*.html
-!index.html
-
-# ===============================================================================
-# Package-Specific
-
-# Other
-/* alias
+# Built Outputs
+/releases/
+# ----------------------------------------------------------------------------------------------------------------------
+# Custom Rules
