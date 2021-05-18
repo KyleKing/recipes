@@ -28,5 +28,5 @@
 | [Ginger Orange Broccoli And Noodles](../ginger_orange_broccoli_and_noodles) | 3 | ![ginger_orange_broccoli_and_noodles.jpeg](./ginger_orange_broccoli_and_noodles.jpeg){: .image-toc loading=lazy } |
 | [Curried Chickpeas](../curried_chickpeas) | 5 | ![curried_chickpeas.jpg](./curried_chickpeas.jpg){: .image-toc loading=lazy } |
 | [Veggie Couscous With Spicy Pine Nuts](../veggie_couscous_with_spicy_pine_nuts) | 7 | ![veggie_couscous_with_spicy_pine_nuts.jpeg](./veggie_couscous_with_spicy_pine_nuts.jpeg){: .image-toc loading=lazy } |
-| [Oven Roasted Asparagus](../oven_roasted_asparagus) | 3 | ![oven_roasted_asparagus.jpeg](./oven_roasted_asparagus.jpeg){: .image-toc loading=lazy } |
+| [Oven Roasted Asparagus](../oven_roasted_asparagus) | 8 | ![oven_roasted_asparagus.jpeg](./oven_roasted_asparagus.jpeg){: .image-toc loading=lazy } |
 | [Baked Potatoes](../baked_potatoes) | 4 | ![baked_potatoes.jpg](./baked_potatoes.jpg){: .image-toc loading=lazy } |

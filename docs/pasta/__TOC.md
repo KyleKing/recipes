@@ -8,6 +8,7 @@
 | [Baked Feta Pasta](../baked_feta_pasta) | 3 | <!-- TODO: Capture image --> |
 | [Pasta Romesco With Spinach](../pasta_romesco_with_spinach) | 3 | <!-- TODO: Capture image --> |
 | [Pasta With Corn Zucchini And Tomatoes](../pasta_with_corn_zucchini_and_tomatoes) | 6 | ![pasta_with_corn_zucchini_and_tomatoes.jpeg](./pasta_with_corn_zucchini_and_tomatoes.jpeg){: .image-toc loading=lazy } |
+| [Gnocchi Skillet With Chicken Sausage And Tomatoes](../gnocchi_skillet_with_chicken_sausage_and_tomatoes) | 3 | <!-- TODO: Capture image --> |
 | [Mozzarella Pasta](../mozzarella_pasta) | 4 | ![mozzarella_pasta.jpg](./mozzarella_pasta.jpg){: .image-toc loading=lazy } |
 | [Peanut Noodles](../peanut_noodles) | 4 | ![peanut_noodles.jpg](./peanut_noodles.jpg){: .image-toc loading=lazy } |
 | [Spaghetti Cacio E Cepe](../spaghetti_cacio_e_cepe) | 5 | ![spaghetti_cacio_e_cepe.jpg](./spaghetti_cacio_e_cepe.jpg){: .image-toc loading=lazy } |

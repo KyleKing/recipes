@@ -4,9 +4,9 @@
 
 > Based on [https://www.allrecipes.com/recipe/214931/oven-roasted-asparagus/](https://www.allrecipes.com/recipe/214931/oven-roasted-asparagus/)
 
-<!-- rating=0; (User can specify rating on scale of 1-5) -->
+<!-- rating=5; (User can specify rating on scale of 1-5) -->
 <!-- AUTO-UserRating -->
-Personal rating: *Not yet rated*
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 <!-- /AUTO-UserRating -->
 
 <!-- name_image=oven_roasted_asparagus.jpeg; (User can specify image name) -->
