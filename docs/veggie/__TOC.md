@@ -18,6 +18,7 @@
 | [Chickpea Salad Toasts With Poached Egg](../chickpea_salad_toasts_with_poached_egg) | 3 | <!-- TODO: Capture image --> |
 | [Polenta With White Beans And Italian Salsa Verde](../polenta_with_white_beans_and_italian_salsa_verde) | 3 | <!-- TODO: Capture image --> |
 | [Falafel Pitas With Cilantro Cashew Sauce](../falafel_pitas_with_cilantro_cashew_sauce) | 3 | <!-- TODO: Capture image --> |
+| [Black Bean Burger](../black_bean_burger) | 8 | ![black_bean_burger.jpeg](./black_bean_burger.jpeg){: .image-toc loading=lazy } |
 | [Karens Roasted Veggie Bowls](../karens_roasted_veggie_bowls) | 5 | <!-- TODO: Capture image --> |
 | [Sweet Potato Gnocchi](../sweet_potato_gnocchi) | 5 | ![sweet_potato_gnocchi.jpeg](./sweet_potato_gnocchi.jpeg){: .image-toc loading=lazy } |
 | [Veggie Loaded Red Curry](../veggie_loaded_red_curry) | 6 | ![veggie_loaded_red_curry.jpeg](./veggie_loaded_red_curry.jpeg){: .image-toc loading=lazy } |
