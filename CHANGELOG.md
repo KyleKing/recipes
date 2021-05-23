@@ -2,6 +2,7 @@
 
 ### Feat
 
+- add recipes using-up leftovers
 - show password modal
 
 ### Fix
