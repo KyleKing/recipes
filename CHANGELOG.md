@@ -6,6 +6,7 @@
 
 ### Fix
 
+- formatter logic
 - password prompt on mobile
 - skip icons from png to jpg conversion
 - remove duplicate images
