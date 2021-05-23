@@ -22,12 +22,13 @@ import sys
 from pathlib import Path
 
 from calcipy.doit_tasks import *  # noqa: F401,F403,H303 (Run 'doit list' to see tasks). skipcq: PYL-W0614
+from calcipy.doit_tasks import DOIT_CONFIG_RECOMMENDED
 from calcipy.doit_tasks.doit_globals import DIG  # DEF_PATH_CODE_TAG_SUMMARY
 from calcipy.log_helpers import build_logger_config
 from loguru import logger
 
 from recipes import __pkg_name__
-from recipes.tasks import task_compress, task_convert_png_to_jpg, task_deploy, task_main  # noqa: F401I
+from recipes.tasks import task_compress, task_convert_png_to_jpg, task_main  # noqa: F401I
 
 # PLANNED: Move all of this into a function! (and/or task?)
 
@@ -48,28 +49,9 @@ logger.debug('sys.argv={sys_argv}', sys_argv=sys.argv)
 # Configure Dash paths
 DIG.set_paths(path_project=path_project)
 
-# TODO: Needs to be fixed in calcipy
+# FIXME: Needs to be fixed in calcipy
 # PATH_CODE_TAG_SUMMARY = Path('docs/z_dev') / 'CODE_TAG_SUMMARY.md'  # DEF_PATH_CODE_TAG_SUMMARY.name
 # DIG.ct.path_code_tag_summary = PATH_CODE_TAG_SUMMARY
 
-# Create list of all tasks run with `poetry run doit`. Comment on/off as needed
-# > from calcipy.doit_tasks import DOIT_CONFIG_RECOMMENDED
-# > DOIT_CONFIG = DOIT_CONFIG_RECOMMENDED
-DOIT_CONFIG = {
-    'action_string_formatting': 'old',  # Required for keyword-based tasks
-    'default_tasks': [
-        'main',
-
-        'cl_write',
-        'collect_code_tags',
-        'coverage',
-        # > 'open_test_docs',
-        'auto_format',
-        # > 'document',
-        # > 'open_docs',
-        'pre_commit_hooks',
-        'lint_critical_only',
-        'check_types',
-    ],
-}
-"""DoIt Configuration Settings. Run with `poetry run doit`."""
+DOIT_CONFIG = DOIT_CONFIG_RECOMMENDED
+DOIT_CONFIG['default_tasks'].insert(0, 'main')  # Add the project-specific main task first
