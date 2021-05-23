@@ -16,7 +16,7 @@ BUMP_RATING = 3
 """Integer to increase the rating so that the lowest is not 1."""
 
 
-def _format_titlecase(raw_title: str) -> str:
+def _format_titlecase(raw_title: Optional[str]) -> str:
     """Format string in titlecase replacing underscores with spaces.
 
     Args:
@@ -26,7 +26,7 @@ def _format_titlecase(raw_title: str) -> str:
         str: formatted string
 
     """
-    return raw_title.replace('_', ' ').strip().title()
+    return raw_title.replace('_', ' ').strip().title() if raw_title else ''
 
 
 def _exclude_toc(paths_md: List[Path]) -> List[Path]:
@@ -79,7 +79,7 @@ _ICON_O_STAR_OUT = ':octicons-star-24:{: .yellow }'  # noqa: P103
 _RE_VAR_COMMENT = re.compile(r'<!-- (?P<key>[^=]+)=(?P<value>[^;]+);')
 
 
-def _parse_var_comment(section: str) -> str:
+def _parse_var_comment(section: str) -> Dict[str, str]:
     """Parse the HTML variable from an HTML or Markdown comment.
 
     Examples:
@@ -91,15 +91,18 @@ def _parse_var_comment(section: str) -> str:
         section: string section of a markdown recipe
 
     Returns:
-        str: updated recipe string markdown
+        Dict[str, str]: single key and value pair based on the parsed comment
 
     Raises:
         AttributeError: if problem with parsing of the regular expression
 
     """
     try:
-        match = _RE_VAR_COMMENT.match(section.strip()).groupdict()
-        return {match['key']: match['value']}
+        match = _RE_VAR_COMMENT.match(section.strip())
+        if match:
+            matches = match.groupdict()
+            return {matches['key']: matches['value']}
+        return {}
     except AttributeError:
         logger.exception(
             'Error parsing `{section}` with `{_RE_VAR_COMMENT}`', section=section,
@@ -212,7 +215,7 @@ def _write_auto_gen() -> None:
 # Utilities for TOC
 
 
-def _format_toc(toc_data: Dict[str, str]) -> str:
+def _format_toc(toc_data: Dict[str, Optional[str]]) -> str:
     """Format a single list item for the TOC from parsed data.
 
     Args:
@@ -223,7 +226,7 @@ def _format_toc(toc_data: Dict[str, str]) -> str:
 
     """
     link = f"[{_format_titlecase(toc_data['name_md'])}](../{toc_data['name_md']})"
-    rating = int(toc_data['rating'])
+    rating = int(str(toc_data['rating']))
     # Note: the relative link needs to be ../ to work. Will otherwise try to go to './__TOC/<link>'
     return (
         f'| {link}'

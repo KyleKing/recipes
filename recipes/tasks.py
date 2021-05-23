@@ -22,30 +22,6 @@ def task_main() -> DoItTask:
     """
     return debug_task([LongRunning('poetry run python main.py')])
 
-# > Duplicate of serve_fast?
-# import webbrowser
-# def task_serve() -> DoItTask:
-#     """Serve the recipe site with `--dirtyreload` and open in a web browser.
-#
-#     Returns:
-#         DoItTask: DoIt task
-#
-#     """
-#     return debug_task([
-#         (webbrowser.open, ('http://localhost:8000',)),
-#         LongRunning('poetry run mkdocs serve --dirtyreload'),
-#     ])
-
-
-def task_deploy() -> DoItTask:
-    """Deploy to Github `gh-pages` branch.
-
-    Returns:
-        DoItTask: DoIt task
-
-    """
-    return debug_task([LongRunning('poetry run mkdocs gh-deploy')])
-
 
 def _convert_png_to_jpg() -> None:
     """Convert any remaining PNG files to jpg."""
@@ -88,7 +64,7 @@ def task_convert_png_to_jpg() -> DoItTask:
 def task_compress() -> DoItTask:
     """Compress one or more specific images.
 
-    Example: `doit run compress ./docs/dessert/biscotti.jpg`
+    Example: `poetry run doit run compress ./docs/dessert/biscotti.jpg`
 
     Returns:
         DoItTask: DoIt task
