@@ -14,6 +14,7 @@
 | [Spaghetti Cacio E Cepe](../spaghetti_cacio_e_cepe) | 5 | ![spaghetti_cacio_e_cepe.jpg](./spaghetti_cacio_e_cepe.jpg){: .image-toc loading=lazy } |
 | [Pasta And Chickpeas](../pasta_and_chickpeas) | 5 | ![pasta_and_chickpeas.jpeg](./pasta_and_chickpeas.jpeg){: .image-toc loading=lazy } |
 | [Spaghetti Sauce](../spaghetti_sauce) | 6 | ![spaghetti_sauce.jpg](./spaghetti_sauce.jpg){: .image-toc loading=lazy } |
+| [Leftover-Ricotta-Pasta](../leftover-ricotta-pasta) | 6 | ![leftover-ricotta-pasta.jpg](./leftover-ricotta-pasta.jpg){: .image-toc loading=lazy } |
 | [Baked Ziti](../baked_ziti) | 5 | ![baked_ziti.jpeg](./baked_ziti.jpeg){: .image-toc loading=lazy } |
 | [Cherry Tomato Spaghetti](../cherry_tomato_spaghetti) | 4 | ![cherry_tomato_spaghetti.jpeg](./cherry_tomato_spaghetti.jpeg){: .image-toc loading=lazy } |
 | [Dragon Noodles](../dragon_noodles) | 4 | ![dragon_noodles.jpg](./dragon_noodles.jpg){: .image-toc loading=lazy } |
