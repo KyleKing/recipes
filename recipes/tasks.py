@@ -2,6 +2,7 @@
 
 import shlex
 import subprocess  # noqa S404
+import sys
 from typing import List
 
 from calcipy.doit_tasks.base import debug_task
@@ -11,6 +12,10 @@ from loguru import logger
 from PIL import Image
 
 from .formatter import DIR_MD
+
+# Log the positional arguments to help with debugging tasks if needed
+logger.debug('sys.argv={sys_argv}', sys_argv=sys.argv)
+
 
 
 def task_main() -> DoItTask:
