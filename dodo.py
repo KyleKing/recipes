@@ -10,8 +10,8 @@ poetry run doit list
 # > doit list
 
 # Run tasks individually (examples below)
+poetry run doit run ptw_ff
 poetry doit run coverage open_test_docs
-poetry doit run set_lint_config create_tag_file document
 # Or all of the tasks in DOIT_CONFIG
 poetry run doit
 ```
@@ -25,7 +25,7 @@ from calcipy.log_helpers import activate_debug_logging
 from recipes import __pkg_name__
 from recipes.tasks import task_compress, task_convert_png_to_jpg, task_main  # noqa: F401I
 
-path_project = activate_debug_logging(pkg_names=[__pkg_name__])
+activate_debug_logging(pkg_names=[__pkg_name__])
 
 # Create list of all tasks run with `poetry run doit`
 DOIT_CONFIG = DOIT_CONFIG_RECOMMENDED
