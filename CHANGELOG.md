@@ -1,12 +1,14 @@
-## Unreleased
+## 0.1.0 (2021-05-24)
 
 ### Feat
 
+- update calcipy for better dodo
 - add recipes using-up leftovers
 - show password modal
 
 ### Fix
 
+- apply type fixes from mypy
 - formatter logic
 - password prompt on mobile
 - skip icons from png to jpg conversion
@@ -14,6 +16,8 @@
 
 ### Refactor
 
+- move docs to z_dev
+- fix and improve dodo
 - comment-out duplicate task
 - update Cravings book links
 - update to calcipy from dash_dev
