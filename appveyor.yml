@@ -1,8 +1,8 @@
-version: 0.0.{build}
+version: 0.0.1.{build}
 
 image:
+  # Recipes isn't a package. Only need to run on Ubuntu for CD
   - Ubuntu
-  - Visual Studio 2019
 
 environment:
   # Windows Python versions: https://www.appveyor.com/docs/windows-images-software/#python
@@ -43,13 +43,14 @@ install:
 - poetry config --list
 - poetry config virtualenvs.in-project true
 # Install project-specific dependencies and extras
-- poetry install None
+- poetry install
 
 test_script:
-- poetry run doit run coverage
+- poetry run doit run main coverage
 
 deploy_script:
 - echo "Deploying..."
+- sh: poetry run doit run deploy
 
 on_success:
 - echo "On Success..."

@@ -9,7 +9,7 @@ change_type_order = [
     "New (Old)", "Change (Old)", "Fix (Old)",
 ]
 version = "0.0.1"
-version_files = [ "pyproject.toml", "recipes/__init__.py",]
+version_files = [ "appveyor.yml", "pyproject.toml", "recipes/__init__.py",]
 # # Based on the conventional commit pattern from: commitizen/cz/conventional_commits/conventional_commits.py#L179
 # #   With the addition of the new 'recipe' change type (could be docs?)
 # schema_pattern = "(recipe|build|ci|docs|feat|fix|perf|refactor|style|test|chore|revert|bump)!?(\\(\\S+\\))?:(\\s.*)"
