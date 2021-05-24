@@ -8,7 +8,7 @@ change_type_order = [
     "BREAKING CHANGE", "Feat", "Fix", "Refactor", "Perf",
     "New (Old)", "Change (Old)", "Fix (Old)",
 ]
-version = "0.1.0"
+version = "0.2.0"
 version_files = [ "appveyor.yml", "pyproject.toml", "recipes/__init__.py",]
 # # Based on the conventional commit pattern from: commitizen/cz/conventional_commits/conventional_commits.py#L179
 # #   With the addition of the new 'recipe' change type (could be docs?)
@@ -21,7 +21,7 @@ New = "New (Old)"
 
 [tool.poetry]
 name = "recipes"
-version = "0.1.0"
+version = "0.2.0"
 description = "Recipe Website"
 license = "MIT"
 authors = [ "Kyle King <dev.act.kyle@gmail.com>",]
