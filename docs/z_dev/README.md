@@ -1,4 +1,4 @@
-# recipes (recipes)
+# recipes
 
 [mkdocs-material](https://squidfunk.github.io/mkdocs-material/)-based recipe website ([https://recipes.kyleking.me](https://recipes.kyleking.me))
 
@@ -11,7 +11,7 @@
 
 Locally, these are typical tasks for editing, previewing, and publishing the recipes
 
-1. Create or edit markdown files in [./docs/\*/\*.md](./docs/). For new recipes, use the [./_recipe_template.md](./_recipe_template.md)
+1. Create or edit markdown files in [./docs/\*/\*.md](https://github.com/KyleKing/recipes/tree/main/docs). For new recipes, use the [./_recipe_template.md]([./_recipe_template.md](https://github.com/KyleKing/recipes/blob/main/_recipe_template.md))
 2. Run `poetry run doit` to run all local tasks
 3. Run `poetry run doit run main` to update auto-formatted sections
 4. Run `poetry run doit run compress ./docs/path/` to reduce image file sizes. Can either be a directory or an individual file
