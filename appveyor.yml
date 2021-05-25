@@ -16,6 +16,8 @@ environment:
   CODECOV_TOKEN: d414dacb-5b8d-4c0b-94e1-42fe8393187d
 
   # To encrypt passwords, in the AppVeyor Account, go to "Settings" -> "Encrypt YAML"
+  GH_ACCESS_TOKEN:
+    secure: dw5Lg976wGTiU48NTSPb+fG4nUm287ACpZu6egFc92J5KUAcEYweUzL9vUgHEdE6
 
 # See: https://help.appveyor.com/discussions/questions/32001-ubuntu-python-3-as-default
 stack: python %PYTHON_STACK%
@@ -50,6 +52,11 @@ test_script:
 
 deploy_script:
 - echo "Deploying..."
+# See: https://www.appveyor.com/docs/how-to/git-push/
+- sh: git config --global user.name "Kyle King"
+- sh: git config --global user.email "dev.act.kyle@gmail.com"
+- sh: git config --global credential.helper store
+- sh: echo -e "https://$GH_ACCESS_TOKEN:x-oauth-basic@github.com\n" >> ~/.git-credentials
 - sh: poetry run doit run deploy
 
 on_success:
