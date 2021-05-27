@@ -46,6 +46,9 @@ install:
 - poetry config virtualenvs.in-project true
 # Install project-specific dependencies and extras
 - poetry install
+# PLANNED: Figure out why the .venv isn't being cached
+- sh: poetry config --list
+- sh: ls -a
 
 test_script:
 - poetry run doit run main coverage
