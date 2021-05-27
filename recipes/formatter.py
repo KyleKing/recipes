@@ -4,6 +4,7 @@ import re
 from pathlib import Path
 from typing import Callable, Dict, List, Optional
 
+from beartype import beartype
 from loguru import logger
 
 # =====================================================================================
@@ -16,6 +17,7 @@ BUMP_RATING = 3
 """Integer to increase the rating so that the lowest is not 1."""
 
 
+@beartype
 def _format_titlecase(raw_title: Optional[str]) -> str:
     """Format string in titlecase replacing underscores with spaces.
 
@@ -29,11 +31,13 @@ def _format_titlecase(raw_title: Optional[str]) -> str:
     return raw_title.replace('_', ' ').strip().title() if raw_title else ''
 
 
+@beartype
 def _exclude_toc(paths_md: List[Path]) -> List[Path]:
     """Exclude any TOC files from the list of markdown paths."""  # noqa: DAR101,DAR201
     return [_p for _p in paths_md if '_toc' not in _p.stem.lower()]
 
 
+@beartype
 def _format_stars(rating: int) -> str:
     """Format the star icons.
 
@@ -49,6 +53,7 @@ def _format_stars(rating: int) -> str:
     return '*Not yet rated*'
 
 
+@beartype
 def _format_image_md(name_image: Optional[str], attrs: str) -> str:
     """Format the image as markdown.
 
@@ -79,6 +84,7 @@ _ICON_O_STAR_OUT = ':octicons-star-24:{: .yellow }'  # noqa: P103
 _RE_VAR_COMMENT = re.compile(r'<!-- (?P<key>[^=]+)=(?P<value>[^;]+);')
 
 
+@beartype
 def _parse_var_comment(section: str) -> Dict[str, str]:
     """Parse the HTML variable from an HTML or Markdown comment.
 
@@ -111,11 +117,13 @@ def _parse_var_comment(section: str) -> Dict[str, str]:
         raise
 
 
+@beartype
 def _format_header(_section: str, path_md: Path) -> str:
     """Format the section header."""  # noqa: DAR101,DAR201
     return '<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->'
 
 
+@beartype
 def _format_star_section(section: str, path_md: Path) -> str:
     """Format the star rating as markdown.
 
@@ -137,6 +145,7 @@ def _format_star_section(section: str, path_md: Path) -> str:
     ])
 
 
+@beartype
 def _format_image_section(section: str, path_md: Path) -> str:
     """Format the string section with the specified image name.
 
@@ -164,18 +173,21 @@ def _format_image_section(section: str, path_md: Path) -> str:
     ])
 
 
+@beartype
 def _check_todo(section: str, _path_md: Path) -> str:
     """Pass-through to identify sections that contain a task."""  # noqa:
     logger.warning(f'Found TODO {section}')  # noqa: T101
     return section
 
 
+@beartype
 def _check_unknown(section: str, _path_md: Path) -> str:  # noqa
     """Pass-through to catch sections not parsed by the function logic."""  # noqa:
     logger.error('Could not parse: {section} from: {path_md}', section=section, path_md=_path_md)
     return section
 
 
+@beartype
 def _update_md(path_md: Path) -> str:
     """Parse the markdown recipe and replace auto-formatted sections.
 
@@ -204,6 +216,7 @@ def _update_md(path_md: Path) -> str:
     return '\n\n'.join(sections)
 
 
+@beartype
 def _write_auto_gen() -> None:
     """Update auto-generated markdown contents."""
     for path_md in _exclude_toc([*DIR_MD.glob('*/*.md')]):
@@ -215,6 +228,7 @@ def _write_auto_gen() -> None:
 # Utilities for TOC
 
 
+@beartype
 def _format_toc(toc_data: Dict[str, Optional[str]]) -> str:
     """Format a single list item for the TOC from parsed data.
 
@@ -228,14 +242,11 @@ def _format_toc(toc_data: Dict[str, Optional[str]]) -> str:
     link = f"[{_format_titlecase(toc_data['name_md'])}](../{toc_data['name_md']})"
     rating = int(str(toc_data['rating']))
     # Note: the relative link needs to be ../ to work. Will otherwise try to go to './__TOC/<link>'
-    return (
-        f'| {link}'
-        f' | {rating + BUMP_RATING}'
-        f" | {_format_image_md(toc_data['name_image'], attrs='.image-toc')}"
-        ' |'
-    )
+    img_md = _format_image_md(toc_data['name_image'], attrs='.image-toc')
+    return f'| {link} | {rating + BUMP_RATING} | {img_md} |'
 
 
+@beartype
 def _create_toc_entry(path_md: Path) -> str:
     """Parse the section and return a single list item for the TOC.
 
@@ -261,10 +272,11 @@ def _create_toc_entry(path_md: Path) -> str:
     return _format_toc(toc_data)
 
 
+@beartype
 def _write_toc() -> None:
     """Write the table of contents for each section."""
     for dir_sub in DIR_MD.glob('*'):
-        if dir_sub.name == 'docs/z_dev':  # FYI: Read from copier template
+        if dir_sub.name == 'z_dev':  # FIXME: Read from copier template
             continue
 
         toc_table = '| Link | Rating | Image |\n| -- | -- | -- |'
@@ -280,6 +292,7 @@ def _write_toc() -> None:
 # =====================================================================================
 
 
+@beartype
 def run() -> None:
     """Format the markdown files."""
     _write_auto_gen()

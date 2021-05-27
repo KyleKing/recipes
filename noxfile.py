@@ -3,11 +3,10 @@
 import shlex
 
 import nox
+from calcipy.doit_tasks.doit_globals import DG
 from loguru import logger
 from nox_poetry import session
 from nox_poetry.sessions import Session
-
-from calcipy.doit_tasks.doit_globals import DG
 
 
 def configure_nox() -> None:

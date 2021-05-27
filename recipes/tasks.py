@@ -1,13 +1,14 @@
 """Doit Tasks for the MKDocs project."""
 
 import shlex
-import subprocess  # noqa S404
+import subprocess  # nosec # noqa S404
 import sys
 from typing import List
 
+from beartype import beartype
 from calcipy.doit_tasks.base import debug_task
-from calcipy.doit_tasks.doit_globals import DoItTask
-from doit.tools import LongRunning
+from calcipy.doit_tasks.doit_globals import DoitTask
+from doit.tools import Interactive
 from loguru import logger
 from PIL import Image
 
@@ -17,17 +18,18 @@ from .formatter import DIR_MD
 logger.debug('sys.argv={sys_argv}', sys_argv=sys.argv)
 
 
-
-def task_main() -> DoItTask:
+@beartype
+def task_main() -> DoitTask:
     """Format markdown files.
 
     Returns:
-        DoItTask: DoIt task
+        DoitTask: DoIt task
 
     """
-    return debug_task([LongRunning('poetry run python main.py')])
+    return debug_task([Interactive('poetry run python main.py')])
 
 
+@beartype
 def _convert_png_to_jpg() -> None:
     """Convert any remaining PNG files to jpg."""
     for path_png in DIR_MD.glob('*/*.png'):
@@ -41,24 +43,26 @@ _OPTIMIZE_CMD = 'poetry run optimize-images -mh 900 --convert-all --force-delete
 """Command for optimize-images run from poetry. Requires the path to the folder or image."""
 
 
-def task_compress_all() -> DoItTask:
+@beartype
+def task_compress_all() -> DoitTask:
     """Compress images.
 
     Returns:
-        DoItTask: DoIt task
+        DoitTask: DoIt task
 
     """
     return debug_task([
         (_convert_png_to_jpg,),
-        LongRunning(f'{_OPTIMIZE_CMD} {DIR_MD}/'),
+        Interactive(f'{_OPTIMIZE_CMD} {DIR_MD}/'),
     ])
 
 
-def task_convert_png_to_jpg() -> DoItTask:
+@beartype
+def task_convert_png_to_jpg() -> DoitTask:
     """Convert PNG images to JPG.
 
     Returns:
-        DoItTask: DoIt task
+        DoitTask: DoIt task
 
     """
     return debug_task([
@@ -66,20 +70,21 @@ def task_convert_png_to_jpg() -> DoItTask:
     ])
 
 
-def task_compress() -> DoItTask:
+@beartype
+def task_compress() -> DoitTask:
     """Compress one or more specific images.
 
     Example: `poetry run doit run compress ./docs/dessert/biscotti.jpg`
 
     Returns:
-        DoItTask: DoIt task
+        DoitTask: DoIt task
 
     """
     def _run_params(pos: List[str]) -> None:
         for pos_arg in pos:
             cmds = shlex.split(f'{_OPTIMIZE_CMD} {pos_arg}')
             logger.info('Running: {cmds}', cmds=cmds)
-            subprocess.run(cmds, check=True)  # noqa S603
+            subprocess.run(cmds, check=True)  # nosec # noqa S603
 
     task = debug_task([(_run_params,)])  # _OPTIMIZE_CMD + ' %(pos)s'])
     task['pos_arg'] = 'pos'

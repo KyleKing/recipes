@@ -1,7 +1,8 @@
-## 0.1.0 (2021-05-24)
+## Unreleased
 
 ### Feat
 
+- setup CD on AppVeyor
 - update calcipy for better dodo
 - add recipes using-up leftovers
 - show password modal
