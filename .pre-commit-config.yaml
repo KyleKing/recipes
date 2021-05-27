@@ -7,28 +7,6 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
-  - repo: local
-    hooks:
-      - id: copier-forbidden-files
-        name: copier_forbidden_files
-        entry: found copier update rejection files; review them and remove them (https://copier.readthedocs.io/en/stable/updating/)
-        language: fail
-        files: "\\.rej$"
-      - id: lock_deps
-        name: lock_dependencies
-        # FYI: Won't work in Tower. Submitted Support request #90767
-        entry: poetry lock
-        language: system
-        files: ^(pyproject.toml|poetry.lock)$
-        stages: [commit]
-        pass_filenames: false
-      - id: doit_test
-        name: doit_test
-        entry: poetry run doit run test
-        language: system
-        types: [python]
-        stages: [push]
-        pass_filenames: false
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.0.1
     hooks:
@@ -40,7 +18,7 @@ repos:
       - id: check-toml
       - id: check-vcs-permalinks
       - id: check-yaml
-        args: ['--unsafe']
+        args: ["--unsafe"]
       - id: debug-statements
       - id: destroyed-symlinks
       - id: detect-private-key
@@ -48,27 +26,57 @@ repos:
       - id: end-of-file-fixer
       - id: fix-byte-order-marker
       - id: fix-encoding-pragma
-        args: ['--remove']
+        args: ["--remove"]
       - id: forbid-new-submodules
       - id: mixed-line-ending
-        args: ['--fix=lf']
+        args: ["--fix=lf"]
       - id: pretty-format-json
-        args: ['--autofix']
+        args: ["--autofix"]
       - id: requirements-txt-fixer
       - id: trailing-whitespace
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v2.17.6
+    rev: v2.17.7
     hooks:
       - id: commitizen
-        additional_dependencies: ['cz_legacy']
+        additional_dependencies:
+          [
+            "git+https://github.com/KyleKing/cz_legacy.git@bfff2ab4134c26a31f1e7f9c3a8d4bedba824b08",
+          ]
         stages: [commit-msg]
   - repo: https://github.com/asottile/pyupgrade
-    rev: v2.18.1
+    rev: v2.18.3
     hooks:
       - id: pyupgrade
         stages: [push]
+        args: ["--keep-runtime-typing"]
   - repo: https://github.com/asottile/add-trailing-comma
     rev: v2.1.0
     hooks:
       - id: add-trailing-comma
         stages: [push]
+  # - repo: https://github.com/sondrelg/pep585-upgrade
+  #   rev: "bcc3d077ee46c94bc1dac5f5274e2fb43de570e9"
+  #   hooks:
+  #     # FYI: Re-run when dropping Python 3.8
+  #     - id: upgrade-type-hints
+  - repo: local
+    hooks:
+      - id: copier-forbidden-files
+        name: copier_forbidden_files
+        entry: found copier update rejection files; review them and remove them (https://copier.readthedocs.io/en/stable/updating/)
+        language: fail
+        files: "\\.rej$"
+      - id: lock_deps
+        name: lock_dependencies
+        entry: poetry lock
+        language: system
+        files: pyproject.toml
+        stages: [push]
+        pass_filenames: false
+      - id: doit
+        name: doit
+        entry: poetry run doit run test
+        language: system
+        files: "\\.py"
+        stages: [push]
+        pass_filenames: false
