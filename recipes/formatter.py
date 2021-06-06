@@ -1,8 +1,9 @@
 """Format Markdown Files for MKDocs."""
 
 import re
+from collections.abc import Callable
 from pathlib import Path
-from typing import Callable, Dict, List, Optional
+from typing import Optional
 
 from beartype import beartype
 from loguru import logger
@@ -32,7 +33,7 @@ def _format_titlecase(raw_title: Optional[str]) -> str:
 
 
 @beartype
-def _exclude_toc(paths_md: List[Path]) -> List[Path]:
+def _exclude_toc(paths_md: list[Path]) -> list[Path]:
     """Exclude any TOC files from the list of markdown paths."""  # noqa: DAR101,DAR201
     return [_p for _p in paths_md if '_toc' not in _p.stem.lower()]
 
@@ -87,7 +88,7 @@ _RE_VAR_COMMENT = re.compile(r'<!-- (?P<key>[^=]+)=(?P<value>[^;]+);')
 
 # MOVED TO CALCIPY
 @beartype
-def _parse_var_comment(section: str) -> Dict[str, str]:
+def _parse_var_comment(section: str) -> dict[str, str]:
     """Parse the HTML variable from an HTML or Markdown comment.
 
     Examples:
@@ -200,7 +201,7 @@ def _update_md(path_md: Path) -> str:
         str: updated recipe string markdown
 
     """
-    startswith_action_lookup: Dict[str, Callable[[str, Path], str]] = {
+    startswith_action_lookup: dict[str, Callable[[str, Path], str]] = {
         '<!-- Do not modify sections with ': _format_header,
         '<!-- rating=': _format_star_section,
         '<!-- name_image=': _format_image_section,
@@ -231,7 +232,7 @@ def _write_auto_gen() -> None:
 
 
 @beartype
-def _format_toc(toc_data: Dict[str, Optional[str]]) -> str:
+def _format_toc(toc_data: dict[str, Optional[str]]) -> str:
     """Format a single list item for the TOC from parsed data.
 
     Args:
