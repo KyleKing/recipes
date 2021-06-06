@@ -183,8 +183,8 @@ coverage.json
 /tests/_tmp_cache
 
 # Ignore auto-created files by documentation tasks
-/docs/z_dev/docs/modules/*.md
-/docs/z_dev/docs/modules/**/*.md
+/docs/z_dev/modules/*.md
+/docs/z_dev/modules/**/*.md
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Custom Rules

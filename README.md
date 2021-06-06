@@ -2,4 +2,4 @@
 
 Recipe Website
 
-Full documentation, here: [./docs/zdev/](./docs/zdev/)
+Full documentation, here: [./docs/z_dev](./docs/z_dev)

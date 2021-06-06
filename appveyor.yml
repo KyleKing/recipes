@@ -20,7 +20,8 @@ environment:
 
   # To encrypt passwords, go to Account -> "Settings" -> "Encrypt YAML"
   GH_ACCESS_TOKEN:
-    secure: dw5Lg976wGTiU48NTSPb+fG4nUm287ACpZu6egFc92J5KUAcEYweUzL9vUgHEdE6
+    # yamllint disable-line rule:line-length
+    secure: dw5Lg976wGTiU48NTSPb+fG4nUm287ACpZu6egFc92J5KUAcEYweUzL9vUgHEdE6 # pragma: allowlist secret
 
 # Python is now managed with pyenv instead of stack so that a ".venv" is created
 # > Must be after the declaration of "PYTHON_STACK" variable
