@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Baguette Pesto-Chicken Pizza
 
 > Based on [https://www.thekitchn.com/recipe-french-bread-pesto-chicken-pizza-241416](https://www.thekitchn.com/recipe-french-bread-pesto-chicken-pizza-241416)

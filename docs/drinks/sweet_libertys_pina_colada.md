@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Sweet Libertys Pina Colada
 
 > Based on [https://www.washingtonpost.com/recipes/sweet-libertys-pina-colada/15979/](https://www.washingtonpost.com/recipes/sweet-libertys-pina-colada/15979/)

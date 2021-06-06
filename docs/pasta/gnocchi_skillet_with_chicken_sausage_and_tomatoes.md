@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Gnocchi Skillet with Chicken Sausage and Tomatoes
 
 > Based on [https://www.thekitchn.com/recipe-gnocchi-skillet-with-chicken-sausage-amp-tomatoes-206429](https://www.thekitchn.com/recipe-gnocchi-skillet-with-chicken-sausage-amp-tomatoes-206429)

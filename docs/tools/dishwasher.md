@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Dishwasher
 
 > Based on [https://www.cnet.com/how-to/how-to-clean-your-dishwasher-like-a-boss/](https://www.cnet.com/how-to/how-to-clean-your-dishwasher-like-a-boss/)

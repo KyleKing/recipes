@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Chicken Cacciatore
 
 > Based on (Essential Instant Pot:69) https://smile.amazon.com/Essential-Instant-Pot-Cookbook-Foolproof/dp/0399580883/ref=sr_1_1_sspa?ie=UTF8&qid=1516461807&sr=8-1-spons&keywords=essential+instant+pot&psc=1

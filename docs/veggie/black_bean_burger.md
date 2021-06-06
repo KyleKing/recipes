@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Black Bean Burger
 
 > Based on [https://www.washingtonpost.com/recipes/black-bean-burgers/15322/](https://www.washingtonpost.com/recipes/black-bean-burgers/15322/)

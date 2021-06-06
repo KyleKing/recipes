@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Chocolate Frosting Recipe
 
 > Based on [https://www.kingarthurflour.com/recipes/super-simple-chocolate-frosting-recipe](https://www.kingarthurflour.com/recipes/super-simple-chocolate-frosting-recipe)

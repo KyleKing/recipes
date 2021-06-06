@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Baked Potatoes Instant Pot
 
 > Based on [https://amindfullmom.com/instant-pot-baked-potatoes/](https://amindfullmom.com/instant-pot-baked-potatoes/)

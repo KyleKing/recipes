@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Chicken Shawarma
 
 > Based on [https://www.washingtonpost.com/recipes/chicken-shawarma/17227/](https://www.washingtonpost.com/recipes/chicken-shawarma/17227/)

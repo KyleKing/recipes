@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Gingerbread Cookies
 
 > Based on [https://cooking.nytimes.com/recipes/1015813-gingerbread-cookies](https://cooking.nytimes.com/recipes/1015813-gingerbread-cookies)

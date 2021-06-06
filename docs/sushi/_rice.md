@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Rice
 
 > Based on [https://recipes.instantpot.com/recipe/pressure-cooker-sushi-rice/](https://recipes.instantpot.com/recipe/pressure-cooker-sushi-rice/)

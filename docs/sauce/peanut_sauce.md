@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Peanut Sauce
 
 > Based on [https://minimalistbaker.com/5-ingredient-peanut-sauce/](https://minimalistbaker.com/5-ingredient-peanut-sauce/)

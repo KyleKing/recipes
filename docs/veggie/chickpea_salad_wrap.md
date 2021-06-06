@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Chickpea Salad Wrap
 
 > Based on [https://www.brewinghappiness.com/5-minute-chickpea-salad-wraps/](https://www.brewinghappiness.com/5-minute-chickpea-salad-wraps/)

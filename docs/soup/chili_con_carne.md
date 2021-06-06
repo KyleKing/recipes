@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Chili Con Carne
 
 > Based on Alex's Aunt's recipe

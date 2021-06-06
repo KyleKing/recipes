@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # French Chocolate Tart
 
 > Based on [https://www.shortstackeditions.com/blogs/news/recipe-french-chocolate-tart](https://www.shortstackeditions.com/blogs/news/recipe-french-chocolate-tart)

@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Mediterranean Cauliflower Platter
 
 > Based on [https://www.washingtonpost.com/recipes/mediterranean-cauliflower-platter/17036/](https://www.washingtonpost.com/recipes/mediterranean-cauliflower-platter/17036/)

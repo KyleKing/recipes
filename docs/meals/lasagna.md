@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Lasagna
 
 > Based on [https://www.delish.com/cooking/recipe-ideas/recipes/a51337/classic-lasagna-recipe/](https://www.delish.com/cooking/recipe-ideas/recipes/a51337/classic-lasagna-recipe/)

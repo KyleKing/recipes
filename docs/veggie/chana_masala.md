@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Chana Masala
 
 > Based on [https://smile.amazon.com/Essential-Instant-Pot-Cookbook-Foolproof/dp/0399580883](https://smile.amazon.com/Essential-Instant-Pot-Cookbook-Foolproof/dp/0399580883), page 39

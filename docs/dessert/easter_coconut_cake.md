@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Easter Coconut Cake
 
 > Based on [https://www.myrecipes.com/recipe/coconut-sheet-cake](https://www.myrecipes.com/recipe/coconut-sheet-cake)

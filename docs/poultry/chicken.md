@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Chicken
 
 > Based on [https://www.craftsy.com/blog/2014/04/baked-chicken-breast-recipe/](https://www.craftsy.com/blog/2014/04/baked-chicken-breast-recipe/)

@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Pasta With Corn Zucchini And Tomatoes
 
 > Based on [https://cooking.nytimes.com/recipes/11305-pasta-with-corn-zucchini-and-tomatoes](https://cooking.nytimes.com/recipes/11305-pasta-with-corn-zucchini-and-tomatoes)

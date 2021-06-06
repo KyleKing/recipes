@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Shrimp Scampi
 
 > Based on [https://cooking.nytimes.com/recipes/9101-classic-shrimp-scampi](https://cooking.nytimes.com/recipes/9101-classic-shrimp-scampi)

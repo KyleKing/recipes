@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Popcorn
 
 > Based on [https://www.amazon.com/Colonel-Popper-Microwave-Collapsible-Dishwasher/dp/B01NBR3DBP](https://www.amazon.com/Colonel-Popper-Microwave-Collapsible-Dishwasher/dp/B01NBR3DBP)

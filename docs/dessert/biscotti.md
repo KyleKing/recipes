@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Biscotti
 
 > Based on [https://www.kingarthurflour.com/recipes/vanilla-biscotti-recipe](https://www.kingarthurflour.com/recipes/vanilla-biscotti-recipe)

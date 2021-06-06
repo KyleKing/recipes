@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # No Knead Bread Recipe
 
 The recipe includes a series of steps shared with other recipes, such as Focaccia

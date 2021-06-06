@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Broccoli Cheddar Chicken And Rice Casserole
 
 > Based on [https://www.halfbakedharvest.com/broccoli-cheddar-chicken-and-rice-casserole/#bo-recipe](https://www.halfbakedharvest.com/broccoli-cheddar-chicken-and-rice-casserole/#bo-recipe)

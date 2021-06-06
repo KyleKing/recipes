@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Chocolate-Pb-M&M Balls
 
 > Based on [https://tasty.co/recipe/no-bake-chocolate-peanut-butter-m-m-balls](https://tasty.co/recipe/no-bake-chocolate-peanut-butter-m-m-balls)

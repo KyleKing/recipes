@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Shrimp Tacos
 
 > Based on [http://www.yummly.co/recipe/Honey-Lime-Shrimp-Tacos-1576139](http://www.yummly.co/recipe/Honey-Lime-Shrimp-Tacos-1576139)

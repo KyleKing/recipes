@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Brick Chicken
 
 > Based on [Chrissy Teigen Cravings], pg. 218

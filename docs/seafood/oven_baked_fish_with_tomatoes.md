@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Oven Baked Fish With Tomatoes
 
 > Based on [https://www.budgetbytes.com/easy-oven-baked-fish-with-tomatoes/](https://www.budgetbytes.com/easy-oven-baked-fish-with-tomatoes/). Recommended by Becky and Will

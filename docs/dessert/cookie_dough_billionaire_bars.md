@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Cookie Dough Billionaire Bars
 
 > Based on [https://www.thatskinnychickcanbake.com/cookie-dough-billionaire-bars/](https://www.thatskinnychickcanbake.com/cookie-dough-billionaire-bars/)

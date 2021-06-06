@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Microwave Cacio E Pepe
 
 > Based on [https://www.amazon.com/Vegetables-Unleashed-Cookbook-Jose-Andres/dp/0062668382/](https://www.amazon.com/Vegetables-Unleashed-Cookbook-Jose-Andres/dp/0062668382/)

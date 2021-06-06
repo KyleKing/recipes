@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Cherry Tomato Spaghetti
 
 > Based on [https://www.giadzy.com/posts/recipes/436491/cherry-tomato-spaghetti](https://www.giadzy.com/posts/recipes/436491/cherry-tomato-spaghetti)

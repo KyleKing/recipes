@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Shrimp And Avocado
 
 > Based on [https://www.geniuskitchen.com/recipe/avocado-and-shrimp-sushi-331300](https://www.geniuskitchen.com/recipe/avocado-and-shrimp-sushi-331300)

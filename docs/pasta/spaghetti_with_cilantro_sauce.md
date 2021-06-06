@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Spaghetti with Cilantro Sauce
 
 > Based on [https://www.foodnetwork.com/recipes/spaghetti-with-cilantro-sauce-recipe-2121155](https://www.foodnetwork.com/recipes/spaghetti-with-cilantro-sauce-recipe-2121155)

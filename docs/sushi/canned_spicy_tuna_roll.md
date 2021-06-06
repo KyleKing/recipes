@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Canned Spicy Tuna Roll
 
 > Based on [https://makemysushi.com/Recipes/canned-spicy-tuna-sushi-roll-twist](https://makemysushi.com/Recipes/canned-spicy-tuna-sushi-roll-twist)

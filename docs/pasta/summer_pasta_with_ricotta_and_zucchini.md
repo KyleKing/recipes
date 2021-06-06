@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Summer Pasta With Ricotta And Zucchini
 
 > Based on [https://cooking.nytimes.com/recipes/1017463-summer-pasta-with-zucchini-ricotta-and-basil](https://cooking.nytimes.com/recipes/1017463-summer-pasta-with-zucchini-ricotta-and-basil)

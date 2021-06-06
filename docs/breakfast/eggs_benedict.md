@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Eggs Benedict
 
 > Based on [https://cooking.nytimes.com/recipes/1018626-eggs-benedict](https://cooking.nytimes.com/recipes/1018626-eggs-benedict)

@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # One Pot Creamy Broccoli Pasta
 
 > Based on [https://abeautifulmess.com/2015/04/one-pot-creamy-broccoli-pasta.html](https://abeautifulmess.com/2015/04/one-pot-creamy-broccoli-pasta.html)

@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Slow Cooker Chicken Mango Curry
 
 > Based on [http://www.oliviascuisine.com/slow-cooker-chicken-mango-curry/](http://www.oliviascuisine.com/slow-cooker-chicken-mango-curry/)

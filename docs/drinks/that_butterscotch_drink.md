@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Slippery Nipple
 
 > Based on [https://en.wikipedia.org/wiki/Slippery_nipple](https://en.wikipedia.org/wiki/Slippery_nipple)

@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Lemon Poppy Seed Mini Scones
 
 > Based on [https://www.budgetbytes.com/2017/03/lemon-poppy-seed-two-bite-scones/](https://www.budgetbytes.com/2017/03/lemon-poppy-seed-two-bite-scones/)

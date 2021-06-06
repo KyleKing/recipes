@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Sausage And Mushroom Penne Pasta
 
 > Based on [http://www.budgetbytes.com/2014/04/one-pot-sausage-mushroom-pasta/](http://www.budgetbytes.com/2014/04/one-pot-sausage-mushroom-pasta/)

@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Pretzels
 
 > Based on [http://www.geniuskitchen.com/recipe/real-homemade-soft-pretzels-130301](http://www.geniuskitchen.com/recipe/real-homemade-soft-pretzels-130301)

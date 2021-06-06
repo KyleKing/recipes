@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Karens Roasted Veggie Bowls
 
 <!-- rating=2; (User can specify rating on scale of 1-5) -->

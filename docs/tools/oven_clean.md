@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # How to Clean and Oven
 
 > Based on [https://www.thekitchn.com/how-to-clean-an-oven-cleaning-lessons-from-the-kitchn-201191](https://www.thekitchn.com/how-to-clean-an-oven-cleaning-lessons-from-the-kitchn-201191)

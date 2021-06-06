@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Burgers
 
 > Based on [https://www.youtube.com/watch?v=ERUugjLmwuY](https://www.youtube.com/watch?v=ERUugjLmwuY)

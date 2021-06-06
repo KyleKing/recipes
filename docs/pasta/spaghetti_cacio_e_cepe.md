@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Spaghetti Cacio E Cepe
 
 > Based on [Chrissy Teigen Cravings], pg. 78

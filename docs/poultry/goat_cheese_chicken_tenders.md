@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Goat Cheese Chicken Tenders
 
 > Based on [Kate's Goat Cheese Chicken Tenders](https://kitchenwithkate.blogspot.com/2011/10/goat-cheese-chicken-tenders.html)

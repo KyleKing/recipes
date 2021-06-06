@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Guacamole
 
 > Based on [https://www.simplyrecipes.com/recipes/perfect_guacamole/](https://www.simplyrecipes.com/recipes/perfect_guacamole/)

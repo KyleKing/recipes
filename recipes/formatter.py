@@ -121,12 +121,6 @@ def _parse_var_comment(section: str) -> dict[str, str]:
 
 
 @beartype
-def _format_header(_section: str, path_md: Path) -> str:
-    """Format the section header."""  # noqa: DAR101,DAR201
-    return '<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->'
-
-
-@beartype
 def _format_star_section(section: str, path_md: Path) -> str:
     """Format the star rating as markdown.
 

@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Chocolate Chip Cookies
 
 > Based on [https://www.verybestbaking.com/recipes/32014/original-nestle-toll-house-milk-chocolate-chip-cookies/](https://www.verybestbaking.com/recipes/32014/original-nestle-toll-house-milk-chocolate-chip-cookies/)

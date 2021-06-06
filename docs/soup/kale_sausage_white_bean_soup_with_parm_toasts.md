@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Kale Sausage White Bean Soup With Parm Toasts
 
 > Based on [https://cravingsbychrissyteigen.com/cravings/kale-sausage-white-bean-soup-with-parm-toasts/](https://cravingsbychrissyteigen.com/cravings/kale-sausage-white-bean-soup-with-parm-toasts/)

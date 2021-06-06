@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Oreo Truffles
 
 > Based on [http://www.kraftrecipes.com/recipes/easy-oreo-truffles-95085.aspx](http://www.kraftrecipes.com/recipes/easy-oreo-truffles-95085.aspx)

@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Baileys Chocolate Truffles
 
 > Based on [https://www.onceuponachef.com/recipes/baileys-chocolate-truffles.html](https://www.onceuponachef.com/recipes/baileys-chocolate-truffles.html)

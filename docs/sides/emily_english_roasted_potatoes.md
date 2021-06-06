@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Emily English Roasted Potatoes
 
 > Based on [https://barefootcontessa.com/recipes/emilys-english-roasted-potatoes](https://barefootcontessa.com/recipes/emilys-english-roasted-potatoes)

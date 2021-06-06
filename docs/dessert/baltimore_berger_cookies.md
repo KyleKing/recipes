@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Baltimore Berger Cookies
 
 > Based on [https://www.kingarthurbaking.com/recipes/baltimore-berger-cookies-recipe](https://www.kingarthurbaking.com/recipes/baltimore-berger-cookies-recipe)

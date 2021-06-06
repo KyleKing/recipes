@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Oven Roasted Asparagus
 
 > Based on [https://www.allrecipes.com/recipe/214931/oven-roasted-asparagus/](https://www.allrecipes.com/recipe/214931/oven-roasted-asparagus/)

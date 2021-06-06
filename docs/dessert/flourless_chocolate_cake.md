@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Flourless Chocolate Cake
 
 > Based on [https://theviewfromgreatisland.com/belgian-chocolate-cake-gluten-free/](https://theviewfromgreatisland.com/belgian-chocolate-cake-gluten-free/)

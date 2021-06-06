@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Basmati Rice
 
 > Based on [https://pipingpotcurry.com/instant-pot-basmati-rice/](https://pipingpotcurry.com/instant-pot-basmati-rice/)

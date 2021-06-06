@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Edible Cookie Dough Ben & Jerrys
 
 > Based on [https://people.com/food/ben-jerrys-shared-their-edible-cookie-dough-recipe-so-you-can-make-it-at-home/](https://people.com/food/ben-jerrys-shared-their-edible-cookie-dough-recipe-so-you-can-make-it-at-home/)

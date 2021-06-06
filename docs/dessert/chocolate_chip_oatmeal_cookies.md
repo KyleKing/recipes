@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Chocolate Chip Oatmeal Cookies
 
 > Based on [https://www.verybestbaking.com/recipes/30173/choc-oat-chip-cookies/](https://www.verybestbaking.com/recipes/30173/choc-oat-chip-cookies/)

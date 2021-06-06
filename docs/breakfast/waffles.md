@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Waffles
 
 > Based on [http://www.geniuskitchen.com/recipe/the-best-belgian-waffles-63071](http://www.geniuskitchen.com/recipe/the-best-belgian-waffles-63071)

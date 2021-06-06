@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Porcelain Pot Care
 
 > Based on [https://www.youtube.com/watch?v=KLGSLCaksdY](https://www.youtube.com/watch?v=KLGSLCaksdY)

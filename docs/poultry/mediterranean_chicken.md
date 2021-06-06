@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Mediterranean Chicken
 
 > Based on a recipe from a La Madeleine email

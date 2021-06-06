@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Creamy Lemon Pasta
 
 > Based on [https://cooking.nytimes.com/recipes/8355-creamy-lemon-pasta](https://cooking.nytimes.com/recipes/8355-creamy-lemon-pasta)

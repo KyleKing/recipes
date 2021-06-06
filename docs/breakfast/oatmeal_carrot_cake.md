@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Make-Ahead Carrot Cake Oatmeal
 
 > Based on [https://www.washingtonpost.com/lifestyle/food/a-make-ahead-baked-oatmeal-that-tastes-like-carrot-cake/2015/12/30/f3a80dba-a9bf-11e5-bff5-905b92f5f94b_story.html?itid=lk_inline_manual_8](https://www.washingtonpost.com/lifestyle/food/a-make-ahead-baked-oatmeal-that-tastes-like-carrot-cake/2015/12/30/f3a80dba-a9bf-11e5-bff5-905b92f5f94b_story.html?itid=lk_inline_manual_8)

@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Omelette
 
 > Based on [https://tasty.co/recipe/french-omelette](https://tasty.co/recipe/french-omelette)

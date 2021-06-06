@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Red Beans And Rice
 
 > Based on [http://www.delish.com/cooking/recipe-ideas/recipes/a54954/easy-red-beans-and-rice-recipe/](http://www.delish.com/cooking/recipe-ideas/recipes/a54954/easy-red-beans-and-rice-recipe/)

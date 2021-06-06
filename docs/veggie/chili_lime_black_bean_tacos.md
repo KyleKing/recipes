@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Chili Lime Black Bean Tacos
 
 > Based on [https://www.washingtonpost.com/recipes/chili-lime-black-bean-tacos/17008](https://www.washingtonpost.com/recipes/chili-lime-black-bean-tacos/17008)

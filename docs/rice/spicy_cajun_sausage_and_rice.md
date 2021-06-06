@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Spicy Cajun Sausage And Rice
 
 > Based on [https://www.allrecipes.com/recipe/149221/cajun-spice-mix/](https://www.allrecipes.com/recipe/149221/cajun-spice-mix/)

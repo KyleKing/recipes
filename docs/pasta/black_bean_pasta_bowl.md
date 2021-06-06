@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Black Bean Pasta Bowl
 
 > Based on [https://www.readyseteat.com/recipes-Black-Bean-Pasta-Bowl-5258](https://www.readyseteat.com/recipes-Black-Bean-Pasta-Bowl-5258)

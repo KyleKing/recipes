@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Bruschetta
 
 > Based on [https://www.geniuskitchen.com/recipe/best-ever-bruschetta-443987](https://www.geniuskitchen.com/recipe/best-ever-bruschetta-443987)

@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Bake Ware
 
 > Based on [https://www.tasteofhome.com/article/baking-pan-conversions/](https://www.tasteofhome.com/article/baking-pan-conversions/)

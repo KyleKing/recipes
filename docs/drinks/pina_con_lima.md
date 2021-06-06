@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Pina Con Lima
 
 > Based on [https://www.washingtonpost.com/recipes/pina-con-lima/14680/](https://www.washingtonpost.com/recipes/pina-con-lima/14680/)

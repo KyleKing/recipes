@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Chickpea Spicy Buffalo Wrap
 
 > Based on [https://minimalistbaker.com/spicy-buffalo-chickpea-wraps/](https://minimalistbaker.com/spicy-buffalo-chickpea-wraps/)

@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Spicy Margarita
 
 > Based on a post by [Chrissy Teigen on Instagram](https://www.instagram.com/p/CEmz6BOHzRM)

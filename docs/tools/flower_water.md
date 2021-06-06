@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Flower Water
 
 > Based on [https://food52.com/blog/22901-easy-diy-flowers-food-to-make-fresh-cut-bouquets-last-longer](https://food52.com/blog/22901-easy-diy-flowers-food-to-make-fresh-cut-bouquets-last-longer)

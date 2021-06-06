@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Eggnog
 
 > Based on [A Luxurious and Strong Eggnog Recipe] in the Washington Post

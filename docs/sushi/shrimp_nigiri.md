@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Shrimp Nigiri
 
 > Based on [http://www.foodrepublic.com/recipes/how-to-cook-shrimp-for-nigiri-sushi/](http://www.foodrepublic.com/recipes/how-to-cook-shrimp-for-nigiri-sushi/)

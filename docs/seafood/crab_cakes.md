@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Crab Cakes
 
 > Based on [https://www.epicurious.com/recipes/food/views/baltimore-crab-cakes-366711](https://www.epicurious.com/recipes/food/views/baltimore-crab-cakes-366711)

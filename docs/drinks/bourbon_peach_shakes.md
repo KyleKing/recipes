@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Bourbon Peach Shakes
 
 > Based on [https://www.washingtonpost.com/recipes/bourbon-peach-shake/16576/](https://www.washingtonpost.com/recipes/bourbon-peach-shake/16576/)

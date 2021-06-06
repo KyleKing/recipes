@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Frozen Irish Coffee
 
 > Based on [https://www.washingtonpost.com/recipes/frozen-irish-coffee/15769/](https://www.washingtonpost.com/recipes/frozen-irish-coffee/15769/)

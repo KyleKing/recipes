@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Chicken Thighs
 
 > Based on [https://kristineskitchenblog.com/instant-pot-chicken-thighs/](https://kristineskitchenblog.com/instant-pot-chicken-thighs/)

@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Orzo And Cheese
 
 > Based on [http://exploitsofamilitarymama.com/2012/08/slutty-orzo/](http://exploitsofamilitarymama.com/2012/08/slutty-orzo/)

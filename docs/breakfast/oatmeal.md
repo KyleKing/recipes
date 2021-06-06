@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Oatmeal
 
 > Based on [https://www.modernhoney.com/the-oatmeal-love-bar/](https://www.modernhoney.com/the-oatmeal-love-bar/) and [https://www.washingtonpost.com/news/voraciously/wp/2018/04/02/make-your-mornings-easier-with-a-five-minute-mess-free-bowl-of-fresh-oatmeal/](https://www.washingtonpost.com/news/voraciously/wp/2018/04/02/make-your-mornings-easier-with-a-five-minute-mess-free-bowl-of-fresh-oatmeal/)

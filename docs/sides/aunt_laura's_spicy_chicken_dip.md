@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Aunt Laura'S Spicy Chicken Dip
 
 <!-- rating=1; (User can specify rating on scale of 1-5) -->

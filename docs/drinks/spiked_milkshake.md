@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Spiked Milkshake
 
 > From multiple sources. Like this one that looks like a [good Bailey's recipe](https://www.sheknows.com/food-and-recipes/articles/980181/two-baileys-cocktails-for-valentines-day/)

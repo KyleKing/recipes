@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Vegetable Wraps
 
 > Based on [http://ahouseinthehills.com/2013/04/25/nori-veggie-wraps-my-everyday-staple/](http://ahouseinthehills.com/2013/04/25/nori-veggie-wraps-my-everyday-staple/)

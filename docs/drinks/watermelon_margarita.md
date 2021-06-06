@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Watermelon Margarita
 
 > Based on a [Watermelon Mock-a-rita posted by jesskeys_](https://www.instagram.com/jesskeys_)

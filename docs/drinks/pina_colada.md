@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Pina Colada
 
 > Based on [https://www.washingtonpost.com/recipes/pina-colada/10696/](https://www.washingtonpost.com/recipes/pina-colada/10696/)

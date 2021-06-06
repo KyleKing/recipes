@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Leftover Ricotta Pasta
 
 > Primarily based on [https://www.today.com/recipes/one-pot-pasta-spinach-ricotta-recipe-t163679](https://www.today.com/recipes/one-pot-pasta-spinach-ricotta-recipe-t163679) and recommended mixins from [https://www.thespruceeats.com/spinach-and-ricotta-pasta-2246391](https://www.thespruceeats.com/spinach-and-ricotta-pasta-2246391)

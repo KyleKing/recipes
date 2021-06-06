@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Spaghetti Meatballs Teigen
 
 > Based on [https://cravingsbychrissyteigen.com/cravings/spaghetti-meatballs/](https://cravingsbychrissyteigen.com/cravings/spaghetti-meatballs/)

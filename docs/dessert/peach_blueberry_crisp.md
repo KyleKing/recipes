@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Peach Blueberry Crisp
 
 > Based on [https://www.mccormick.com/recipes/dessert/peach-blueberry-crisp?amp=1](https://www.mccormick.com/recipes/dessert/peach-blueberry-crisp?amp=1)

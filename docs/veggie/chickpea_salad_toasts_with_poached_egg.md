@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Chickpea Salad Toasts With Poached Egg
 
 > Based on [https://www.washingtonpost.com/recipes/chickpea-salad-toasts-poached-egg/17012](https://www.washingtonpost.com/recipes/chickpea-salad-toasts-poached-egg/17012)

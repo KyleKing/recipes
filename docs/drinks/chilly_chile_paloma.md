@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Chilly Chile Paloma
 
 > Based on [https://www.washingtonpost.com/recipes/chilly-chile-paloma/13478/](https://www.washingtonpost.com/recipes/chilly-chile-paloma/13478/)

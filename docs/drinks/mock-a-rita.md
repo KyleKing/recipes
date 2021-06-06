@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Mock-a-Rita
 
 > Based on [a post by jesskeys_](https://www.instagram.com/jesskeys_/)

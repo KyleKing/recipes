@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Baked Apples
 
 > Based on [https://www.simplyrecipes.com/recipes/baked_apples/](https://www.simplyrecipes.com/recipes/baked_apples/)

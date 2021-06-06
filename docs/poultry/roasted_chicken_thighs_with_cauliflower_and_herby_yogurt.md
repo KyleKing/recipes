@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Roasted Chicken Thighs With Cauliflower and Herby Yogurt
 
 > Based on [https://cooking.nytimes.com/recipes/1021945-roasted-chicken-thighs-with-cauliflower-and-herby-yogurt](https://cooking.nytimes.com/recipes/1021945-roasted-chicken-thighs-with-cauliflower-and-herby-yogurt)

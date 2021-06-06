@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Banana Bread
 
 > Source: Joy of Cooking 75th edition, page 628. Banana Bread Cockaigne (Note: removed the lemon zest from the recipe)

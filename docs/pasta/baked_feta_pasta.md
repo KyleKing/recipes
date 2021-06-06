@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Baked Feta Pasta
 
 > Based on [https://www.washingtonpost.com/food/2021/02/11/baked-feta-pasta-recipe-tiktok/](https://www.washingtonpost.com/food/2021/02/11/baked-feta-pasta-recipe-tiktok/)

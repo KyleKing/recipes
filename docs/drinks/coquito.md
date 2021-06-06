@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Coquito
 
 > Based on [https://www.washingtonpost.com/news/voraciously/wp/2018/12/21/this-festive-puerto-rican-holiday-drink-is-creamy-and-tropical-and-it-packs-a-punch/](https://www.washingtonpost.com/news/voraciously/wp/2018/12/21/this-festive-puerto-rican-holiday-drink-is-creamy-and-tropical-and-it-packs-a-punch/)

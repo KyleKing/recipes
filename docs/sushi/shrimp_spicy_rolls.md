@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Shrimp Spicy Rolls
 
 > Based on [http://fromgatetoplate.com/2014/04/14/spicy-shrimp-sushi-rolls/](http://fromgatetoplate.com/2014/04/14/spicy-shrimp-sushi-rolls/)

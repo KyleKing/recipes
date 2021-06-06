@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Baked Chicken And Potatoes
 
 > Based on [https://aseasyasapplepie.com/one-pan-baked-chicken-and-potatoes/](https://aseasyasapplepie.com/one-pan-baked-chicken-and-potatoes/)

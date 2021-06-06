@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Shakshuka
 
 > Based on [https://cooking.nytimes.com/recipes/1014721-shakshuka-with-feta](https://cooking.nytimes.com/recipes/1014721-shakshuka-with-feta)

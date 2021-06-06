@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Pasta And Chickpeas
 
 > Based on [https://smittenkitchen.com/2017/10/quick-pasta-and-chickpeas-pasta-e-ceci/](https://smittenkitchen.com/2017/10/quick-pasta-and-chickpeas-pasta-e-ceci/)

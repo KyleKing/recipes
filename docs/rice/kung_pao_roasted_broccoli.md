@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Kung Pao Roasted Broccoli
 
 > Based on [Chrissy Teigen Cravings Hungry for More], pg. 141

@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Hash Recipes and Tips
 
 > Based on [https://www.washingtonpost.com/food/2021/01/25/hash-recipes-and-tips/](https://www.washingtonpost.com/food/2021/01/25/hash-recipes-and-tips/)

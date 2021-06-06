@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Pancakes New York Times
 
 > Based on [https://cooking.nytimes.com/recipes/1893-everyday-pancakes](https://cooking.nytimes.com/recipes/1893-everyday-pancakes)

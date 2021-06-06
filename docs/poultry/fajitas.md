@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Fajitas
 
 > Based on [http://www.budgetbytes.com/2013/02/oven-fajitas/](http://www.budgetbytes.com/2013/02/oven-fajitas/)

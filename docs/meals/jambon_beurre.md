@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Jambon Beurre
 
 > Based on [https://www.youtube.com/watch?v=ge49xawecJk](https://www.youtube.com/watch?v=ge49xawecJk)

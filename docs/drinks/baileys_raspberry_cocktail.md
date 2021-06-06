@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Bailey's Raspberry Cocktail
 
 > Based on the second recipe on [https://www.sheknows.com/food-and-recipes/articles/980181/two-baileys-cocktails-for-valentines-day/](https://www.sheknows.com/food-and-recipes/articles/980181/two-baileys-cocktails-for-valentines-day/)

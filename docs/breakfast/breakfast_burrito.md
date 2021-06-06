@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Breakfast Burrito
 
 <!-- rating=1; (User can specify rating on scale of 1-5) -->

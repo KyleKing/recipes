@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Chicken Tacos
 
 > Based on [https://www.lecremedelacrumb.com/instant-pot-shredded-chicken-tacos/](https://www.lecremedelacrumb.com/instant-pot-shredded-chicken-tacos/)

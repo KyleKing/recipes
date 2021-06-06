@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Apple Crisp
 
 > Based on [https://www.tasteofhome.com/recipes/winning-apple-crisp/](https://www.tasteofhome.com/recipes/winning-apple-crisp/)

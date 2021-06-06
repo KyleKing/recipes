@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Molten Chocolate Cake
 
 > Based on [http://spoonuniversity.com/recipe/valentines-chocolate-cake](http://spoonuniversity.com/recipe/valentines-chocolate-cake)

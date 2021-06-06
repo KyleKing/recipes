@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Veggie Loaded Red Curry
 
 > Based on [https://www.washingtonpost.com/recipes/veggie-loaded-red-curry/17022/](https://www.washingtonpost.com/recipes/veggie-loaded-red-curry/17022/)

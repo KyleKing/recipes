@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Chicken Instant Pot
 
 > Based on [https://www.thereciperebel.com/instant-pot-chicken-breast/](https://www.thereciperebel.com/instant-pot-chicken-breast/)

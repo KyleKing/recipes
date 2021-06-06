@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Classic Pasta And Mushrooms
 
 > Based on [https://www.washingtonpost.com/news/voraciously/wp/2020/01/19/no-flash-all-substance-pasta-with-mushrooms-is-a-weeknight-classic/](https://www.washingtonpost.com/news/voraciously/wp/2020/01/19/no-flash-all-substance-pasta-with-mushrooms-is-a-weeknight-classic/)

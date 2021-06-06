@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Creamy Tomato Soup
 
 > Based on [Chrissy Teigen Cravings], pg. 45

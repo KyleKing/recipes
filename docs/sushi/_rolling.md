@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Rolling Sushi
 
 > Based on [https://www.chowhound.com/recipes/salmon-avocado-maki-31555](https://www.chowhound.com/recipes/salmon-avocado-maki-31555)

@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Baked Zucchini
 
 > Based on [http://damndelicious.net/2014/06/21/baked-parmesan-zucchini/](http://damndelicious.net/2014/06/21/baked-parmesan-zucchini/)

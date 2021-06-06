@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Pizza Stone Care
 
 > Based on [https://www.napoleongrills.com/blog/articles/id/4329/how-to-use-and-clean-a-pizza-stone](https://www.napoleongrills.com/blog/articles/id/4329/how-to-use-and-clean-a-pizza-stone)

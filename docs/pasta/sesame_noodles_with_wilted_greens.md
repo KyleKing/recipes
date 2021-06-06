@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Sesame Noodles With Wilted Greens
 
 > Based on [https://www.budgetbytes.com/2016/05/sesame-noodles-wilted-greens/](https://www.budgetbytes.com/2016/05/sesame-noodles-wilted-greens/)

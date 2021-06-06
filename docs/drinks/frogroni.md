@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Frogroni
 
 > Based on [https://www.washingtonpost.com/recipes/frogroni/15978/](https://www.washingtonpost.com/recipes/frogroni/15978/)

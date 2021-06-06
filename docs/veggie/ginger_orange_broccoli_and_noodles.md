@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Ginger Orange Broccoli And Noodles
 
 > Based on [https://www.washingtonpost.com/recipes/ginger-orange-broccoli-and-noodles/17014/](https://www.washingtonpost.com/recipes/ginger-orange-broccoli-and-noodles/17014/)

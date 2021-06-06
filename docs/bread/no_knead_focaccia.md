@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # No Knead Focaccia
 
 > Based on [Bread Baking for Beginners](https://www.alchemybread.com/book) page 40

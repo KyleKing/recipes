@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Chocolate Peanut Butter Bundt Cake
 
 > Based on [https://www.lovefromtheoven.com/chocolate-peanut-butter-bundt-cake/](https://www.lovefromtheoven.com/chocolate-peanut-butter-bundt-cake/)

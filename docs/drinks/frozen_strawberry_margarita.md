@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Frozen Strawberry Margarita
 
 > Based on [https://www.culinaryhill.com/strawberry-margarita-recipe/](https://www.culinaryhill.com/strawberry-margarita-recipe/)

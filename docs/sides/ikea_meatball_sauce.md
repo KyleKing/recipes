@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Ikea Meatball Sauce
 
 > Based on [https://www.thegratefulgirlcooks.com/moms-swedish-meatballs-rice/](https://www.thegratefulgirlcooks.com/moms-swedish-meatballs-rice/)

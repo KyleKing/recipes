@@ -1,7 +1,5 @@
 <!-- Needs Manual Review -->
 
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Crispy Baked Sweet Potato Fries
 
 > Based on [https://cookieandkate.com/2010/baked-sweet-potato-fries/](https://cookieandkate.com/2010/baked-sweet-potato-fries/)

@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Pizza
 
 > Based on [https://www.washingtonpost.com/graphics/2019/voraciously/how-to-make-pizza/?wpisrc=nl_vplantpowered_w2&wpmm=1](https://www.washingtonpost.com/graphics/2019/voraciously/how-to-make-pizza/?wpisrc=nl_vplantpowered_w2&wpmm=1)

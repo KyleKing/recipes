@@ -1,5 +1,3 @@
-<!-- Do not modify sections with "AUTO-*". They are updated by make.py -->
-
 # Breaded Chicken
 
 > Based on [https://www.youtube.com/watch?v=dYOpvMt5498](https://www.youtube.com/watch?v=dYOpvMt5498)
