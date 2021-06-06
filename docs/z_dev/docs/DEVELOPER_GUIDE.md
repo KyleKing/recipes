@@ -47,9 +47,9 @@ poetry run doit run cl_bump document deploy_docs publish
 | File                   |   Statements |   Missing |   Excluded | Coverage   |
 |:-----------------------|-------------:|----------:|-----------:|:-----------|
 | `recipes/__init__.py`  |            4 |         0 |          0 | 100.0%     |
-| `recipes/formatter.py` |           81 |        81 |          0 | 0.0%       |
+| `recipes/formatter.py` |           99 |        99 |          0 | 0.0%       |
 | `recipes/tasks.py`     |           38 |        38 |          0 | 0.0%       |
-| **Totals**             |          123 |       119 |          0 | 3.3%       |
+| **Totals**             |          141 |       137 |          0 | 2.8%       |
 
-Generated on: 2021-06-06T14:21:24.812037
+Generated on: 2021-06-06T18:29:51.311805
 <!-- {cte} -->

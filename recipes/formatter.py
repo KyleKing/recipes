@@ -160,9 +160,6 @@ def _handle_image_section(line: str, path_md: Path) -> list[str]:
     Returns:
         list[str]: updated recipe string markdown
 
-    Raises:
-        FileNotFoundError: if the image file could not be located
-
     """
     path_image = _parse_rel_file(line, path_md, 'name_image')
     name_image = path_image.name
