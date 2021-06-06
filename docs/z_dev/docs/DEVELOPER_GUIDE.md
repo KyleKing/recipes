@@ -44,4 +44,11 @@ poetry run doit run cl_bump document deploy_docs publish
 ## Current Status
 
 <!-- {cts} COVERAGE -->
+| File | Statements | Missing | Excluded | Coverage |
+| --: | --: | --: | --: | --: |
+| `recipes/__init__.py` | 4 | 0 | 0 | 100.0% |
+| `recipes/formatter.py` | 98 | 98 | 0 | 0.0% |
+| `recipes/tasks.py` | 31 | 31 | 0 | 0.0% |
+
+Generated on: 2021-05-22T21:28:13.673450
 <!-- {cte} -->

@@ -2,6 +2,7 @@
 
 ### Feat
 
+- add falafel recipe
 - setup CD on AppVeyor
 - update calcipy for better dodo
 - add recipes using-up leftovers
@@ -9,6 +10,7 @@
 
 ### Fix
 
+- rename isort
 - correct for changes in calcipy  ad148bc
 - apply type fixes from mypy
 - formatter logic

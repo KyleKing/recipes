@@ -27,7 +27,6 @@ from recipes.tasks import task_compress, task_convert_png_to_jpg, task_main  # n
 
 activate_debug_logging(pkg_names=[__pkg_name__])
 
-# TODO: Replace with manually-specified list because this is so different from a standard package
 # Create list of all tasks run with `poetry run doit`
 DOIT_CONFIG = DOIT_CONFIG_RECOMMENDED
 DOIT_CONFIG['default_tasks'].insert(0, 'main')  # Add the project-specific main task first
