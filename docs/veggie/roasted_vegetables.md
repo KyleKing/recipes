@@ -16,24 +16,36 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
+### Seasonings
+
 * [ ] Thyme
 * [ ] Rosemary
 * [ ] Salt and pepper
 * [ ] Garlic powder
 * [ ] Onion powder
+* [ ] Red Pepper Flakes
 * [ ] Olive Oil
+
+### First Half
+
 * [ ] Potatoes
 * [ ] Sweet potatoes
+
+### Second Half
+
 * [ ] Carrots
 * [ ] Broccoli
 * [ ] Mushrooms
+* [ ] Butternut or yellow squash
+* [ ] Zucchini
+* [ ] Red bell pepper
+* [ ] Red onion
 
 ## Recipe
 
-* Cut the vegetables to roughly the same size, then toss with plenty of olive oil and spices
-* Bake at 425 for 1 hour (**For the last 30 minutes, add the broccoli, carrots, and/or mushrooms)
-
-## Notes
-
-* Try also cremini mushrooms, butternut squash, yellow squash, zucchini, red bell pepper, and red onion
-* AKA 'Baked Vegetables'
+* Cut all vegetables into roughly the same size
+    * Start with the (regular and sweet) potatoes
+    * Chunk then mix in a bowl with seasonings
+    * Set the oven to 425 (no need to wait for pre-heat) and bake for ~45 minutes
+* Cut up the rest of the vegetables (broccoli, carrots, and/or mushrooms) and mix with seasonings in the same bowl. Set aside
+* After the initial roast is done, add the next set of vegetables and bake for 30-40 minutes
