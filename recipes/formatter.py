@@ -208,8 +208,7 @@ def _create_toc_record(
         dict[str, str]: single records
 
     """
-    # Note: the relative link needs to be ../ to work. Will otherwise try to go to './__TOC/<link>'
-    link = f'[{_format_titlecase(path_recipe.name)}](../{path_recipe.name})'
+    link = f'[{_format_titlecase(path_recipe.name)}](./{path_recipe.name})'
     img_md = _format_image_md(path_img.name, attrs='.image-toc')
     return {
         'Link': link,
