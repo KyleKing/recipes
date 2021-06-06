@@ -1,21 +1,37 @@
 """Format Markdown Files for MKDocs."""
 
-import re
 from collections.abc import Callable
+from copy import deepcopy
 from pathlib import Path
 from typing import Optional
 
 from beartype import beartype
+from calcipy.doit_tasks.doc import _parse_var_comment, write_autoformatted_md_sections
+from calcipy.doit_tasks.doit_globals import DG
+from calcipy.file_helpers import get_doc_dir
+from decorator import contextmanager
 from loguru import logger
 
 # =====================================================================================
 # Shared Functionality
 
-CWD = Path(__file__).resolve().parents[1]
-DIR_MD = CWD / 'docs'
+DIR_MD = DG.meta.path_project / 'docs'
+"""Markdown directory (~2-levels up of `DG.doc.doc_sub_dir`)."""
 
 BUMP_RATING = 3
 """Integer to increase the rating so that the lowest is not 1."""
+
+_ICON_FA_STAR = ':fontawesome-solid-star:'
+"""Font Awesome Star Icon."""
+
+_ICON_FA_STAR_OUT = ':fontawesome-regular-star:'
+"""Font Awesome *Outlined* Star Icon."""
+
+# Alternatives to the Font-Awesome star icons
+# > _ICON_M_STAR = ':material-star:'
+# > _ICON_M_STAR_OUT = ':material-star-outline:'
+# > _ICON_O_STAR = ':octicons-star-fill-24:{: .yellow }'  # noqa: P103
+# > _ICON_O_STAR_OUT = ':octicons-star-24:{: .yellow }'  # noqa: P103
 
 
 @beartype
@@ -30,12 +46,6 @@ def _format_titlecase(raw_title: Optional[str]) -> str:
 
     """
     return raw_title.replace('_', ' ').strip().title() if raw_title else ''
-
-
-@beartype
-def _exclude_toc(paths_md: list[Path]) -> list[Path]:
-    """Exclude any TOC files from the list of markdown paths."""  # noqa: DAR101,DAR201
-    return [_p for _p in paths_md if '_toc' not in _p.stem.lower()]
 
 
 @beartype
@@ -72,56 +82,29 @@ def _format_image_md(name_image: Optional[str], attrs: str) -> str:
     return '<!-- TODO: Capture image -->'  # noqa: T101
 
 
+@contextmanager
+def _configure_recipe_lookup(new_lookup: dict[str, Callable[[str, Path], str]]) -> None:
+    """Configure the handler lookup for recipe tasks.
+
+    Args:
+        new_lookup: new handler_lookup to use temporarily
+
+    Yields:
+        None
+
+    """
+    original_lookup = deepcopy(DG.doc.handler_lookup)
+    DG.doc.handler_lookup = new_lookup
+    yield
+    DG.doc.handler_lookup = original_lookup
+
+
 # =====================================================================================
 # Utilities for updating Markdown
 
-_ICON_FA_STAR = ':fontawesome-solid-star:'
-_ICON_FA_STAR_OUT = ':fontawesome-regular-star:'
-_ICON_M_STAR = ':material-star:'
-_ICON_M_STAR_OUT = ':material-star-outline:'
-_ICON_O_STAR = ':octicons-star-fill-24:{: .yellow }'  # noqa: P103
-_ICON_O_STAR_OUT = ':octicons-star-24:{: .yellow }'  # noqa: P103
-
-# MOVED TO CALCIPY
-_RE_VAR_COMMENT = re.compile(r'<!-- (?P<key>[^=]+)=(?P<value>[^;]+);')
-
-
-# MOVED TO CALCIPY
-@beartype
-def _parse_var_comment(section: str) -> dict[str, str]:
-    """Parse the HTML variable from an HTML or Markdown comment.
-
-    Examples:
-    - `<!-- rating=1; (User can specify rating on scale of 1-5) -->`
-    - `<!-- path_image=./docs/imgs/image_filename.png; -->`
-    - `<!-- tricky_var_3=-11e-21; -->`
-
-    Args:
-        section: string section of a markdown recipe
-
-    Returns:
-        Dict[str, str]: single key and value pair based on the parsed comment
-
-    Raises:
-        AttributeError: if problem with parsing of the regular expression
-
-    """
-    try:
-        match = _RE_VAR_COMMENT.match(section.strip())
-        if match:
-            matches = match.groupdict()
-            return {matches['key']: matches['value']}
-        return {}
-    except AttributeError:
-        logger.exception(
-            'Error parsing `{section}` with `{_RE_VAR_COMMENT}`', section=section,
-            _RE_VAR_COMMENT=_RE_VAR_COMMENT,
-        )
-        raise
-
 
 @beartype
-def _format_star_section(section: str, path_md: Path) -> str:
+def _format_star_section(section: str, path_md: Path) -> list[str]:
     """Format the star rating as markdown.
 
     Args:
@@ -129,21 +112,20 @@ def _format_star_section(section: str, path_md: Path) -> str:
         path_md: Path to the markdown file
 
     Returns:
-        str: updated recipe string markdown
+        list[str]: updated recipe string markdown
 
     """
     rating = int(_parse_var_comment(section)['rating'])
     stars = _format_stars(rating)
-    return '\n'.join([
-        f'<!-- rating={rating}; (User can specify rating on scale of 1-5) -->',
-        '<!-- AUTO-UserRating -->',
+    return [
+        f'<!-- {{cts}} rating={rating}; (User can specify rating on scale of 1-5) -->',
         'Personal rating: ' + stars,
-        '<!-- /AUTO-UserRating -->',
-    ])
+        '<!-- {cte} -->',
+    ]
 
 
 @beartype
-def _format_image_section(section: str, path_md: Path) -> str:
+def _format_image_section(section: str, path_md: Path) -> list[str]:
     """Format the string section with the specified image name.
 
     Args:
@@ -151,7 +133,7 @@ def _format_image_section(section: str, path_md: Path) -> str:
         path_md: Path to the markdown file
 
     Returns:
-        str: updated recipe string markdown
+        list[str]: updated recipe string markdown
 
     Raises:
         FileNotFoundError: if the image file could not be located
@@ -162,63 +144,11 @@ def _format_image_section(section: str, path_md: Path) -> str:
     if name_image.lower() != 'none' and not path_image.is_file():
         raise FileNotFoundError(f'Could not locate {path_image} from {path_md}')
 
-    return '\n'.join([
-        f'<!-- name_image={name_image}; (User can specify image name) -->',
-        '<!-- AUTO-Image -->',
+    return [
+        f'<!-- {{cts}} name_image={name_image}; (User can specify image name) -->',
         _format_image_md(name_image, attrs='.image-recipe'),
-        '<!-- /AUTO-Image -->',
-    ])
-
-
-@beartype
-def _check_todo(section: str, _path_md: Path) -> str:
-    """Pass-through to identify sections that contain a task."""  # noqa:
-    logger.warning(f'Found TODO {section}')  # noqa: T101
-    return section
-
-
-@beartype
-def _check_unknown(section: str, _path_md: Path) -> str:  # noqa
-    """Pass-through to catch sections not parsed by the function logic."""  # noqa:
-    logger.error('Could not parse: {section} from: {path_md}', section=section, path_md=_path_md)
-    return section
-
-
-@beartype
-def _update_md(path_md: Path) -> str:
-    """Parse the markdown recipe and replace auto-formatted sections.
-
-    Args:
-        path_md: Path to the markdown file
-
-    Returns:
-        str: updated recipe string markdown
-
-    """
-    startswith_action_lookup: dict[str, Callable[[str, Path], str]] = {
-        '<!-- Do not modify sections with ': _format_header,
-        '<!-- rating=': _format_star_section,
-        '<!-- name_image=': _format_image_section,
-        '<!-- TODO': _check_todo,  # noqa: T101
-        '<!-- ': _check_unknown,
-    }
-    sections = []
-    for section in path_md.read_text().split('\n\n'):
-        for startswith, action in startswith_action_lookup.items():
-            if section.strip().startswith(startswith):
-                sections.append(action(section, path_md))
-                break
-        else:
-            sections.append(section)
-    return '\n\n'.join(sections)
-
-
-@beartype
-def _write_auto_gen() -> None:
-    """Update auto-generated markdown contents."""
-    for path_md in _exclude_toc([*DIR_MD.glob('*/*.md')]):
-        logger.info('> {path_md}', path_md=path_md)
-        path_md.write_text(_update_md(path_md))
+        '<!-- {cte} -->',
+    ]
 
 
 # =====================================================================================
@@ -255,8 +185,8 @@ def _create_toc_entry(path_md: Path) -> str:
 
     """
     startswith_items = [
-        '<!-- rating=',
-        '<!-- name_image=',
+        '<!-- {cts} rating=',
+        '<!-- {cts} name_image=',
     ]
     toc_data = {'name_md': path_md.stem, 'name_image': None}
     for section in path_md.read_text().split('\n\n'):
@@ -272,13 +202,20 @@ def _create_toc_entry(path_md: Path) -> str:
 @beartype
 def _write_toc() -> None:
     """Write the table of contents for each section."""
+    # FIXME: Use _ReplacementMachine instead of _create_toc_entry
+    # logger.info('> {paths_md}', paths_md=DG.doc.paths_md)
+    # for path_md in DG.doc.paths_md:
+    #     TODO: Use class for DG.doc.handler_lookup to capture metadata of interest
+    #     _ReplacementMachine().parse(read_lines(path_md), DG.doc.handler_lookup, path_md)
+
+    doc_dir = get_doc_dir(DG.meta.path_project)
     for dir_sub in DIR_MD.glob('*'):
-        if dir_sub.name == 'z_dev':  # FIXME: Read from copier template
-            continue
+        if dir_sub.name == doc_dir.name:
+            continue  # Don't write a Table of Contents for developer documentation
 
         toc_table = '| Link | Rating | Image |\n| -- | -- | -- |'
         paths_md = [*dir_sub.glob('*.md')]
-        for path_md in _exclude_toc(paths_md):
+        for path_md in DG.doc.path_md:
             toc_table += '\n' + _create_toc_entry(path_md)
 
         if paths_md:
@@ -287,10 +224,18 @@ def _write_toc() -> None:
 
 
 # =====================================================================================
+# Main Task
 
 
 @beartype
-def run() -> None:
+def format_recipes() -> None:
     """Format the markdown files."""
-    _write_auto_gen()
-    _write_toc()
+    recipe_lookup = {
+        'rating=': _format_star_section,
+        'name_image=': _format_image_section,
+    }
+    with _configure_recipe_lookup(recipe_lookup):
+        write_autoformatted_md_sections()
+
+    # FIXME: Implement
+    # _write_toc()

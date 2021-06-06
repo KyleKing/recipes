@@ -23,10 +23,10 @@ from calcipy.doit_tasks import DOIT_CONFIG_RECOMMENDED
 from calcipy.log_helpers import activate_debug_logging
 
 from recipes import __pkg_name__
-from recipes.tasks import task_compress, task_convert_png_to_jpg, task_main  # noqa: F401I
+from recipes.tasks import task_compress, task_convert_png_to_jpg, task_format_recipes  # noqa: F401I
 
 activate_debug_logging(pkg_names=[__pkg_name__])
 
 # Create list of all tasks run with `poetry run doit`
 DOIT_CONFIG = DOIT_CONFIG_RECOMMENDED
-DOIT_CONFIG['default_tasks'].insert(0, 'main')  # Add the project-specific main task first
+DOIT_CONFIG['default_tasks'].insert(0, 'format_recipes')  # Insert the project-specific task first

@@ -11,21 +11,21 @@ from doit.tools import Interactive
 from loguru import logger
 from PIL import Image
 
-from .formatter import DIR_MD
+from .formatter import DIR_MD, format_recipes
 
 # Log the positional arguments to help with debugging tasks if needed
 logger.debug('sys.argv={sys_argv}', sys_argv=sys.argv)
 
 
 @beartype
-def task_main() -> DoitTask:
-    """Format markdown files.
+def task_format_recipes() -> DoitTask:
+    """Format recipes.
 
     Returns:
         DoitTask: DoIt task
 
     """
-    return debug_task([Interactive('poetry run python main.py')])
+    return debug_task([(format_recipes, ())])
 
 
 @beartype

@@ -44,11 +44,12 @@ poetry run doit run cl_bump document deploy_docs publish
 ## Current Status
 
 <!-- {cts} COVERAGE -->
-| File | Statements | Missing | Excluded | Coverage |
-| --: | --: | --: | --: | --: |
-| `recipes/__init__.py` | 4 | 0 | 0 | 100.0% |
-| `recipes/formatter.py` | 98 | 98 | 0 | 0.0% |
-| `recipes/tasks.py` | 31 | 31 | 0 | 0.0% |
+| File                   |   Statements |   Missing |   Excluded | Coverage   |
+|:-----------------------|-------------:|----------:|-----------:|:-----------|
+| `recipes/__init__.py`  |            4 |         0 |          0 | 100.0%     |
+| `recipes/formatter.py` |           81 |        81 |          0 | 0.0%       |
+| `recipes/tasks.py`     |           38 |        38 |          0 | 0.0%       |
+| **Totals**             |          123 |       119 |          0 | 3.3%       |
 
-Generated on: 2021-05-22T21:28:13.673450
+Generated on: 2021-06-06T14:21:24.812037
 <!-- {cte} -->
