@@ -9,6 +9,7 @@
 
 ### Fix
 
+- correct for changes in calcipy  ad148bc
 - apply type fixes from mypy
 - formatter logic
 - password prompt on mobile

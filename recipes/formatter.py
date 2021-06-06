@@ -81,9 +81,11 @@ _ICON_M_STAR_OUT = ':material-star-outline:'
 _ICON_O_STAR = ':octicons-star-fill-24:{: .yellow }'  # noqa: P103
 _ICON_O_STAR_OUT = ':octicons-star-24:{: .yellow }'  # noqa: P103
 
+# MOVED TO CALCIPY
 _RE_VAR_COMMENT = re.compile(r'<!-- (?P<key>[^=]+)=(?P<value>[^;]+);')
 
 
+# MOVED TO CALCIPY
 @beartype
 def _parse_var_comment(section: str) -> Dict[str, str]:
     """Parse the HTML variable from an HTML or Markdown comment.
