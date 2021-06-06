@@ -4,15 +4,13 @@
 
 > Based on [https://www.budgetbytes.com/2016/05/sesame-noodles-wilted-greens/](https://www.budgetbytes.com/2016/05/sesame-noodles-wilted-greens/)
 
-<!-- rating=1; (User can specify rating on scale of 1-5) -->
-<!-- AUTO-UserRating -->
+<!-- {cts} rating=1; (User can specify rating on scale of 1-5) -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
-<!-- /AUTO-UserRating -->
+<!-- {cte} -->
 
-<!-- name_image=sesame_noodles_with_wilted_greens.jpg; (User can specify image name) -->
-<!-- AUTO-Image -->
+<!-- {cts} name_image=sesame_noodles_with_wilted_greens.jpg; (User can specify image name) -->
 ![sesame_noodles_with_wilted_greens.jpg](./sesame_noodles_with_wilted_greens.jpg){: .image-recipe loading=lazy }
-<!-- /AUTO-Image -->
+<!-- {cte} -->
 
 ## Ingredients
 

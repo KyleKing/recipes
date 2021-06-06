@@ -4,15 +4,13 @@
 
   [Chrissy Teigen Cravings Hungry for More]: https://www.penguinrandomhouse.com/books/553580/cravings-hungry-for-more-by-chrissy-teigen-with-adeena-sussman/
 
-<!-- rating=5; (User can specify rating on scale of 1-5) -->
-<!-- AUTO-UserRating -->
+<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
-<!-- /AUTO-UserRating -->
+<!-- {cte} -->
 
-<!-- name_image=kung_pao_roasted_broccoli.jpeg; (User can specify image name) -->
-<!-- AUTO-Image -->
+<!-- {cts} name_image=kung_pao_roasted_broccoli.jpeg; (User can specify image name) -->
 ![kung_pao_roasted_broccoli.jpeg](./kung_pao_roasted_broccoli.jpeg){: .image-recipe loading=lazy }
-<!-- /AUTO-Image -->
+<!-- {cte} -->
 
 ## Ingredients
 

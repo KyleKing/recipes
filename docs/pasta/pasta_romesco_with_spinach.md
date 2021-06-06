@@ -4,15 +4,13 @@
 
 > Based on [https://www.washingtonpost.com/recipes/pasta-romesco-spinach/17100/?utm_campaign=plant_powered_week_10&utm_medium=Email&utm_source=Newsletter&wpisrc=nl_vplantpowered_w10&wpmm=1](https://www.washingtonpost.com/recipes/pasta-romesco-spinach/17100/?utm_campaign=plant_powered_week_10&utm_medium=Email&utm_source=Newsletter&wpisrc=nl_vplantpowered_w10&wpmm=1)
 
-<!-- rating=0; (User can specify rating on scale of 1-5) -->
-<!-- AUTO-UserRating -->
+<!-- {cts} rating=0; (User can specify rating on scale of 1-5) -->
 Personal rating: *Not yet rated*
-<!-- /AUTO-UserRating -->
+<!-- {cte} -->
 
-<!-- name_image=None; (User can specify image name) -->
-<!-- AUTO-Image -->
+<!-- {cts} name_image=None; (User can specify image name) -->
 <!-- TODO: Capture image -->
-<!-- /AUTO-Image -->
+<!-- {cte} -->
 
 ## Ingredients
 

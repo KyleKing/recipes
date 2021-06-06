@@ -4,15 +4,13 @@
 
 > Based on [https://www.napoleongrills.com/blog/articles/id/4329/how-to-use-and-clean-a-pizza-stone](https://www.napoleongrills.com/blog/articles/id/4329/how-to-use-and-clean-a-pizza-stone)
 
-<!-- rating=0; (User can specify rating on scale of 1-5) -->
-<!-- AUTO-UserRating -->
+<!-- {cts} rating=0; (User can specify rating on scale of 1-5) -->
 Personal rating: *Not yet rated*
-<!-- /AUTO-UserRating -->
+<!-- {cte} -->
 
-<!-- name_image=pizza_stone_care.jpeg; (User can specify image name) -->
-<!-- AUTO-Image -->
+<!-- {cts} name_image=pizza_stone_care.jpeg; (User can specify image name) -->
 ![pizza_stone_care.jpeg](./pizza_stone_care.jpeg){: .image-recipe loading=lazy }
-<!-- /AUTO-Image -->
+<!-- {cte} -->
 
 ## Ingredients
 

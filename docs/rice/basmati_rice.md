@@ -4,15 +4,13 @@
 
 > Based on [https://pipingpotcurry.com/instant-pot-basmati-rice/](https://pipingpotcurry.com/instant-pot-basmati-rice/)
 
-<!-- rating=1; (User can specify rating on scale of 1-5) -->
-<!-- AUTO-UserRating -->
+<!-- {cts} rating=1; (User can specify rating on scale of 1-5) -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
-<!-- /AUTO-UserRating -->
+<!-- {cte} -->
 
-<!-- name_image=basmati_rice.jpg; (User can specify image name) -->
-<!-- AUTO-Image -->
+<!-- {cts} name_image=basmati_rice.jpg; (User can specify image name) -->
 ![basmati_rice.jpg](./basmati_rice.jpg){: .image-recipe loading=lazy }
-<!-- /AUTO-Image -->
+<!-- {cte} -->
 
 ## Ingredients
 

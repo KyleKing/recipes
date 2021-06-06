@@ -2,15 +2,13 @@
 
 > Based on [https://www.washingtonpost.com/graphics/2019/voraciously/how-to-make-pizza/?wpisrc=nl_vplantpowered_w2&wpmm=1](https://www.washingtonpost.com/graphics/2019/voraciously/how-to-make-pizza/?wpisrc=nl_vplantpowered_w2&wpmm=1)
 
-<!-- rating=2; (User can specify rating on scale of 1-5) -->
-<!-- AUTO-UserRating -->
+<!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
-<!-- /AUTO-UserRating -->
+<!-- {cte} -->
 
-<!-- name_image=pizza.jpg; (User can specify image name) -->
-<!-- AUTO-Image -->
+<!-- {cts} name_image=pizza.jpg; (User can specify image name) -->
 ![pizza.jpg](./pizza.jpg){: .image-recipe loading=lazy }
-<!-- /AUTO-Image -->
+<!-- {cte} -->
 
 ## Ingredients
 

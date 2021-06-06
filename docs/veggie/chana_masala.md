@@ -2,15 +2,13 @@
 
 > Based on [https://smile.amazon.com/Essential-Instant-Pot-Cookbook-Foolproof/dp/0399580883](https://smile.amazon.com/Essential-Instant-Pot-Cookbook-Foolproof/dp/0399580883), page 39
 
-<!-- rating=1; (User can specify rating on scale of 1-5) -->
-<!-- AUTO-UserRating -->
+<!-- {cts} rating=1; (User can specify rating on scale of 1-5) -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
-<!-- /AUTO-UserRating -->
+<!-- {cte} -->
 
-<!-- name_image=chana_masala.jpeg; (User can specify image name) -->
-<!-- AUTO-Image -->
+<!-- {cts} name_image=chana_masala.jpeg; (User can specify image name) -->
 ![chana_masala.jpeg](./chana_masala.jpeg){: .image-recipe loading=lazy }
-<!-- /AUTO-Image -->
+<!-- {cte} -->
 
 ## Ingredients
 

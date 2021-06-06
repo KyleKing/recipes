@@ -2,15 +2,13 @@
 
 > Based on [https://downshiftology.com/recipes/perfect-soft-boiled-hard-boiled-eggs/](https://downshiftology.com/recipes/perfect-soft-boiled-hard-boiled-eggs/)
 
-<!-- rating=2; (User can specify rating on scale of 1-5) -->
-<!-- AUTO-UserRating -->
+<!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
-<!-- /AUTO-UserRating -->
+<!-- {cte} -->
 
-<!-- name_image=hard_boiled_eggs.jpeg; (User can specify image name) -->
-<!-- AUTO-Image -->
+<!-- {cts} name_image=hard_boiled_eggs.jpeg; (User can specify image name) -->
 ![hard_boiled_eggs.jpeg](./hard_boiled_eggs.jpeg){: .image-recipe loading=lazy }
-<!-- /AUTO-Image -->
+<!-- {cte} -->
 
 ## Ingredients
 

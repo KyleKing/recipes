@@ -4,15 +4,13 @@
 
 > Based on [https://cooking.nytimes.com/recipes/1017463-summer-pasta-with-zucchini-ricotta-and-basil](https://cooking.nytimes.com/recipes/1017463-summer-pasta-with-zucchini-ricotta-and-basil)
 
-<!-- rating=3; (User can specify rating on scale of 1-5) -->
-<!-- AUTO-UserRating -->
+<!-- {cts} rating=3; (User can specify rating on scale of 1-5) -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
-<!-- /AUTO-UserRating -->
+<!-- {cte} -->
 
-<!-- name_image=summer_pasta_with_ricotta_and_zucchini.jpeg; (User can specify image name) -->
-<!-- AUTO-Image -->
+<!-- {cts} name_image=summer_pasta_with_ricotta_and_zucchini.jpeg; (User can specify image name) -->
 ![summer_pasta_with_ricotta_and_zucchini.jpeg](./summer_pasta_with_ricotta_and_zucchini.jpeg){: .image-recipe loading=lazy }
-<!-- /AUTO-Image -->
+<!-- {cte} -->
 
 ## Ingredients
 

@@ -4,15 +4,13 @@
 
 > Based on [https://barefootcontessa.com/recipes/emilys-english-roasted-potatoes](https://barefootcontessa.com/recipes/emilys-english-roasted-potatoes)
 
-<!-- rating=0; (User can specify rating on scale of 1-5) -->
-<!-- AUTO-UserRating -->
+<!-- {cts} rating=0; (User can specify rating on scale of 1-5) -->
 Personal rating: *Not yet rated*
-<!-- /AUTO-UserRating -->
+<!-- {cte} -->
 
-<!-- name_image=emily_english_roasted_potatoes.jpeg; (User can specify image name) -->
-<!-- AUTO-Image -->
+<!-- {cts} name_image=emily_english_roasted_potatoes.jpeg; (User can specify image name) -->
 ![emily_english_roasted_potatoes.jpeg](./emily_english_roasted_potatoes.jpeg){: .image-recipe loading=lazy }
-<!-- /AUTO-Image -->
+<!-- {cte} -->
 
 ## Ingredients
 

@@ -2,15 +2,13 @@
 
 # Quick Skillet Meals
 
-<!-- rating=2; (User can specify rating on scale of 1-5) -->
-<!-- AUTO-UserRating -->
+<!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
-<!-- /AUTO-UserRating -->
+<!-- {cte} -->
 
-<!-- name_image=quick_skillet_meals.jpg; (User can specify image name) -->
-<!-- AUTO-Image -->
+<!-- {cts} name_image=quick_skillet_meals.jpg; (User can specify image name) -->
 ![quick_skillet_meals.jpg](./quick_skillet_meals.jpg){: .image-recipe loading=lazy }
-<!-- /AUTO-Image -->
+<!-- {cte} -->
 
 ## Ingredients
 

@@ -4,15 +4,13 @@
 
 > Based on [https://www.mccormick.com/recipes/dessert/peach-blueberry-crisp?amp=1](https://www.mccormick.com/recipes/dessert/peach-blueberry-crisp?amp=1)
 
-<!-- rating=2; (User can specify rating on scale of 1-5) -->
-<!-- AUTO-UserRating -->
+<!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
-<!-- /AUTO-UserRating -->
+<!-- {cte} -->
 
-<!-- name_image=peach_blueberry_crisp.jpeg; (User can specify image name) -->
-<!-- AUTO-Image -->
+<!-- {cts} name_image=peach_blueberry_crisp.jpeg; (User can specify image name) -->
 ![peach_blueberry_crisp.jpeg](./peach_blueberry_crisp.jpeg){: .image-recipe loading=lazy }
-<!-- /AUTO-Image -->
+<!-- {cte} -->
 
 ## Ingredients
 

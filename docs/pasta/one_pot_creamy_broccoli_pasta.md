@@ -4,15 +4,13 @@
 
 > Based on [https://abeautifulmess.com/2015/04/one-pot-creamy-broccoli-pasta.html](https://abeautifulmess.com/2015/04/one-pot-creamy-broccoli-pasta.html)
 
-<!-- rating=1; (User can specify rating on scale of 1-5) -->
-<!-- AUTO-UserRating -->
+<!-- {cts} rating=1; (User can specify rating on scale of 1-5) -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
-<!-- /AUTO-UserRating -->
+<!-- {cte} -->
 
-<!-- name_image=None; (User can specify image name) -->
-<!-- AUTO-Image -->
+<!-- {cts} name_image=None; (User can specify image name) -->
 <!-- TODO: Capture image -->
-<!-- /AUTO-Image -->
+<!-- {cte} -->
 
 ## Ingredients
 

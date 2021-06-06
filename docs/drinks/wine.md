@@ -2,15 +2,13 @@
 
 # Wine
 
-<!-- rating=3; (User can specify rating on scale of 1-5) -->
-<!-- AUTO-UserRating -->
+<!-- {cts} rating=3; (User can specify rating on scale of 1-5) -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
-<!-- /AUTO-UserRating -->
+<!-- {cte} -->
 
-<!-- name_image=wine.jpg; (User can specify image name) -->
-<!-- AUTO-Image -->
+<!-- {cts} name_image=wine.jpg; (User can specify image name) -->
 ![wine.jpg](./wine.jpg){: .image-recipe loading=lazy }
-<!-- /AUTO-Image -->
+<!-- {cte} -->
 
 > [Image Source](https://www.etsy.com/listing/101490371/wine-rack-16-bottle-ladders-set-of-3)
 

@@ -2,15 +2,13 @@
 
 # Cocktail Shaker
 
-<!-- rating=0; (User can specify rating on scale of 1-5) -->
-<!-- AUTO-UserRating -->
+<!-- {cts} rating=0; (User can specify rating on scale of 1-5) -->
 Personal rating: *Not yet rated*
-<!-- /AUTO-UserRating -->
+<!-- {cte} -->
 
-<!-- name_image=cocktail_shaker.jpeg; (User can specify image name) -->
-<!-- AUTO-Image -->
+<!-- {cts} name_image=cocktail_shaker.jpeg; (User can specify image name) -->
 ![cocktail_shaker.jpeg](./cocktail_shaker.jpeg){: .image-recipe loading=lazy }
-<!-- /AUTO-Image -->
+<!-- {cte} -->
 
 ## Ingredients
 

@@ -4,15 +4,13 @@ The recipe includes a series of steps shared with other recipes, such as Focacci
 
 > Based on [Bread Baking for Beginners](https://www.alchemybread.com/book) page 28-33
 
-<!-- rating=5; (User can specify rating on scale of 1-5) -->
-<!-- AUTO-UserRating -->
+<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
-<!-- /AUTO-UserRating -->
+<!-- {cte} -->
 
-<!-- name_image=None; (User can specify image name) -->
-<!-- AUTO-Image -->
+<!-- {cts} name_image=None; (User can specify image name) -->
 <!-- TODO: Capture image -->
-<!-- /AUTO-Image -->
+<!-- {cte} -->
 
 ## Ingredients
 

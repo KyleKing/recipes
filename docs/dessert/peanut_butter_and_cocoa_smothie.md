@@ -2,15 +2,13 @@
 
 # Peanut Butter And Cocoa Smothie
 
-<!-- rating=1; (User can specify rating on scale of 1-5) -->
-<!-- AUTO-UserRating -->
+<!-- {cts} rating=1; (User can specify rating on scale of 1-5) -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
-<!-- /AUTO-UserRating -->
+<!-- {cte} -->
 
-<!-- name_image=peanut_butter_and_cocoa_smothie.jpg; (User can specify image name) -->
-<!-- AUTO-Image -->
+<!-- {cts} name_image=peanut_butter_and_cocoa_smothie.jpg; (User can specify image name) -->
 ![peanut_butter_and_cocoa_smothie.jpg](./peanut_butter_and_cocoa_smothie.jpg){: .image-recipe loading=lazy }
-<!-- /AUTO-Image -->
+<!-- {cte} -->
 
 ## Ingredients
 

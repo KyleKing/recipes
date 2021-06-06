@@ -4,15 +4,13 @@
 
 > Based on [https://cooking.nytimes.com/recipes/9101-classic-shrimp-scampi](https://cooking.nytimes.com/recipes/9101-classic-shrimp-scampi)
 
-<!-- rating=3; (User can specify rating on scale of 1-5) -->
-<!-- AUTO-UserRating -->
+<!-- {cts} rating=3; (User can specify rating on scale of 1-5) -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
-<!-- /AUTO-UserRating -->
+<!-- {cte} -->
 
-<!-- name_image=shrimp_scampi.jpeg; (User can specify image name) -->
-<!-- AUTO-Image -->
+<!-- {cts} name_image=shrimp_scampi.jpeg; (User can specify image name) -->
 ![shrimp_scampi.jpeg](./shrimp_scampi.jpeg){: .image-recipe loading=lazy }
-<!-- /AUTO-Image -->
+<!-- {cte} -->
 
 ## Ingredients
 

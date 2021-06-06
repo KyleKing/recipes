@@ -4,15 +4,13 @@
 
   [The Essential Instant Pot Cookbook]: https://smile.amazon.com/Essential-Instant-Pot-Cookbook-Foolproof/dp/0399580883
 
-<!-- rating=2; (User can specify rating on scale of 1-5) -->
-<!-- AUTO-UserRating -->
+<!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
-<!-- /AUTO-UserRating -->
+<!-- {cte} -->
 
-<!-- name_image=chicken_and_dumplings_instant_pot.jpeg; (User can specify image name) -->
-<!-- AUTO-Image -->
+<!-- {cts} name_image=chicken_and_dumplings_instant_pot.jpeg; (User can specify image name) -->
 ![chicken_and_dumplings_instant_pot.jpeg](./chicken_and_dumplings_instant_pot.jpeg){: .image-recipe loading=lazy }
-<!-- /AUTO-Image -->
+<!-- {cte} -->
 
 ## Ingredients
 

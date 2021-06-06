@@ -2,15 +2,13 @@
 
 > Based on [https://www.modernhoney.com/the-oatmeal-love-bar/](https://www.modernhoney.com/the-oatmeal-love-bar/) and [https://www.washingtonpost.com/news/voraciously/wp/2018/04/02/make-your-mornings-easier-with-a-five-minute-mess-free-bowl-of-fresh-oatmeal/](https://www.washingtonpost.com/news/voraciously/wp/2018/04/02/make-your-mornings-easier-with-a-five-minute-mess-free-bowl-of-fresh-oatmeal/)
 
-<!-- rating=1; (User can specify rating on scale of 1-5) -->
-<!-- AUTO-UserRating -->
+<!-- {cts} rating=1; (User can specify rating on scale of 1-5) -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
-<!-- /AUTO-UserRating -->
+<!-- {cte} -->
 
-<!-- name_image=oatmeal.jpeg; (User can specify image name) -->
-<!-- AUTO-Image -->
+<!-- {cts} name_image=oatmeal.jpeg; (User can specify image name) -->
 ![oatmeal.jpeg](./oatmeal.jpeg){: .image-recipe loading=lazy }
-<!-- /AUTO-Image -->
+<!-- {cte} -->
 
 ## Ingredients
 
