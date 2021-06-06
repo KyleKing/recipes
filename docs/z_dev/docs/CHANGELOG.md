@@ -20,6 +20,7 @@
 
 ### Refactor
 
+- upgrade type annotations for 3.9
 - move docs to z_dev
 - fix and improve dodo
 - comment-out duplicate task

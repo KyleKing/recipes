@@ -129,7 +129,7 @@ colorama = {version = "*", markers = "sys_platform == \"win32\""}
 
 [[package]]
 name = "calcipy"
-version = "0.2.0"
+version = "2021.0.3.1"
 description = "Python package to simplify development. Includes functionality for task running, testing, linting, documenting, and more"
 category = "main"
 optional = false
@@ -142,7 +142,7 @@ autopep8 = {version = "*", optional = true, markers = "extra == \"lint\""}
 beartype = "*"
 better-exceptions = {version = "*", optional = true, markers = "extra == \"dev\""}
 cohesion = {version = "*", optional = true, markers = "extra == \"lint\""}
-commitizen = {version = "*", optional = true, markers = "extra == \"dev\""}
+commitizen = {version = ">=2,<3", optional = true, markers = "extra == \"dev\""}
 cz_legacy = {version = "*", optional = true, markers = "extra == \"commitizen_legacy\""}
 darglint = {version = "*", optional = true, markers = "extra == \"lint\""}
 decorator = "*"
@@ -191,9 +191,11 @@ licensecheck = {version = "*", optional = true, markers = "extra == \"lint\""}
 loguru = "*"
 lxml = {version = "*", optional = true, markers = "extra == \"test\""}
 markdown-include = {version = "*", optional = true, markers = "extra == \"dev\""}
+mkdocs-git-revision-date-plugin = {version = "*", optional = true, markers = "extra == \"dev\""}
 mkdocs-material = {version = "*", optional = true, markers = "extra == \"dev\""}
 mypy = {version = "*", optional = true, markers = "extra == \"test\""}
 nox-poetry = {version = "*", optional = true, markers = "extra == \"test\""}
+pandas = "*"
 pandas-vet = {version = "*", optional = true, markers = "extra == \"lint\""}
 pdocs = {version = "*", optional = true, markers = "extra == \"dev\""}
 pendulum = "*"
@@ -213,13 +215,14 @@ pyyaml = "*"
 radon = {version = "*", optional = true, markers = "extra == \"lint\""}
 requests = "*"
 sty = ">=1.0.0rc1,<2.0.0"
+tabulate = "*"
 toml = "*"
 transitions = "*"
 vulture = {version = "*", optional = true, markers = "extra == \"lint\""}
 yamllint = {version = "*", optional = true, markers = "extra == \"lint\""}
 
 [package.extras]
-dev = ["better-exceptions", "commitizen", "markdown-include", "mkdocs-material", "pdbpp", "pdocs", "pyupgrade"]
+dev = ["better-exceptions", "commitizen (>=2,<3)", "markdown-include", "mkdocs-git-revision-date-plugin", "mkdocs-material", "pdbpp", "pdocs", "pyupgrade"]
 lint = ["add-trailing-comma", "autopep8", "cohesion", "darglint", "demjson", "dlint", "flake8", "flake8-2020", "flake8-aaa", "flake8-annotations", "flake8-assertive", "flake8-bandit", "flake8-blind-except", "flake8-breakpoint", "flake8-broken-line", "flake8-bugbear", "flake8-builtins", "flake8-cognitive-complexity", "flake8-commas", "flake8-comprehensions", "flake8-debugger", "flake8-docstrings", "flake8-eradicate", "flake8-expression-complexity", "flake8-fixme", "flake8-functions (<0.0.4)", "flake8-isort", "flake8-logging-format", "flake8-markdown", "flake8-mock", "flake8-pep3101", "flake8-plone-hasattr", "flake8-print", "flake8-printf-formatting", "flake8-pytest-style", "flake8-quotes", "flake8-return", "flake8-sql", "flake8-string-format", "flake8-tuple", "flake8-variables-names", "hacking (>=4,<5)", "isort (>=5,<6)", "licensecheck", "pandas-vet", "pep8-naming", "proselint", "radon", "vulture", "yamllint"]
 test = ["diff-cover", "lxml", "mypy", "nox-poetry", "pytest", "pytest-cov", "pytest-html", "pytest-randomly", "pytest-recording", "pytest-watch"]
 commitizen_legacy = ["cz-legacy"]
@@ -253,7 +256,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 name = "click"
 version = "8.0.1"
 description = "Composable command line interface toolkit"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 
@@ -886,7 +889,7 @@ python-versions = "*"
 name = "future"
 version = "0.18.2"
 description = "Clean single-source support for Python 3 and 2"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
@@ -894,7 +897,7 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 name = "gitdb"
 version = "4.0.7"
 description = "Git Object Database"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.4"
 
@@ -905,7 +908,7 @@ smmap = ">=3.0.1,<5"
 name = "gitpython"
 version = "3.1.17"
 description = "Python Git Library"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.5"
 
@@ -1010,7 +1013,7 @@ colors = ["colorama (>=0.4.3,<0.5.0)"]
 name = "jinja2"
 version = "2.11.3"
 description = "A very fast and expressive template engine."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
@@ -1036,7 +1039,7 @@ jinja2 = ">=2.4"
 name = "joblib"
 version = "1.0.1"
 description = "Lightweight pipelining with Python functions"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 
@@ -1060,7 +1063,7 @@ full = ["metprint (>=2020.7,<2022)"]
 name = "livereload"
 version = "2.6.3"
 description = "Python LiveReload is an awesome tool for web developers"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -1087,7 +1090,7 @@ dev = ["codecov (>=2.0.15)", "colorama (>=0.3.4)", "flake8 (>=3.7.7)", "tox (>=3
 name = "lunr"
 version = "0.5.8"
 description = "A Python implementation of Lunr.js"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -1154,7 +1157,7 @@ restructuredText = ["rst2ansi"]
 name = "markdown"
 version = "3.3.4"
 description = "Python implementation of Markdown."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 
@@ -1176,7 +1179,7 @@ markdown = "*"
 name = "markupsafe"
 version = "2.0.1"
 description = "Safely add untrusted strings to HTML/XML markup."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.6"
 
@@ -1192,7 +1195,7 @@ python-versions = "*"
 name = "mkdocs"
 version = "1.1.2"
 description = "Project documentation with Markdown."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.5"
 
@@ -1209,7 +1212,7 @@ tornado = ">=5.0"
 name = "mkdocs-git-revision-date-plugin"
 version = "0.3.1"
 description = "MkDocs plugin for setting revision date from git per markdown file."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.4"
 
@@ -1280,7 +1283,7 @@ python-versions = "*"
 name = "nltk"
 version = "3.6.2"
 description = "Natural Language Toolkit"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.5.*"
 
@@ -1338,6 +1341,14 @@ packaging = ">=20.9"
 tomlkit = ">=0.7.0,<0.8.0"
 
 [[package]]
+name = "numpy"
+version = "1.20.3"
+description = "NumPy is the fundamental package for array computing with Python."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
 name = "optimize-images"
 version = "1.5.0"
 description = "A command-line interface (CLI) utility written in pure Python to help you reduce the file size of images."
@@ -1360,6 +1371,22 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [package.dependencies]
 pyparsing = ">=2.0.2"
+
+[[package]]
+name = "pandas"
+version = "1.2.4"
+description = "Powerful data structures for data analysis, time series, and statistics"
+category = "main"
+optional = false
+python-versions = ">=3.7.1"
+
+[package.dependencies]
+numpy = ">=1.16.5"
+python-dateutil = ">=2.7.3"
+pytz = ">=2017.3"
+
+[package.extras]
+test = ["pytest (>=5.0.1)", "pytest-xdist", "hypothesis (>=3.58)"]
 
 [[package]]
 name = "pandas-vet"
@@ -1700,6 +1727,14 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
 six = ">=1.5"
 
 [[package]]
+name = "pytz"
+version = "2021.1"
+description = "World timezone definitions, modern and historical"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "pytzdata"
 version = "2020.1"
 description = "The Olson timezone database for Python."
@@ -1758,7 +1793,7 @@ mando = ">=0.6,<0.7"
 name = "regex"
 version = "2021.4.4"
 description = "Alternative regular expression module, to replace re."
-category = "main"
+category = "dev"
 optional = false
 python-versions = "*"
 
@@ -1800,7 +1835,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
 name = "smmap"
 version = "4.0.0"
 description = "A pure Python implementation of a sliding window memory map manager"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.5"
 
@@ -1838,6 +1873,17 @@ description = "String styling for your terminal"
 category = "main"
 optional = false
 python-versions = "*"
+
+[[package]]
+name = "tabulate"
+version = "0.8.9"
+description = "Pretty-print tabular data"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.extras]
+widechars = ["wcwidth"]
 
 [[package]]
 name = "termcolor"
@@ -1888,7 +1934,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 name = "tornado"
 version = "6.1"
 description = "Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">= 3.5"
 
@@ -1896,7 +1942,7 @@ python-versions = ">= 3.5"
 name = "tqdm"
 version = "4.61.0"
 description = "Fast, Extensible Progress Meter"
-category = "main"
+category = "dev"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7"
 
@@ -2069,7 +2115,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "1b8940ebd79bca66f38537fc7ca23b0ef727e003aac4dcb61efb8bcc1fd68a6f"
+content-hash = "b9c13da2b68b9dc1346204243600ead567be5d90a8fff2e448d65c8945e8bc4f"
 
 [metadata.files]
 add-trailing-comma = [
@@ -2118,8 +2164,8 @@ better-exceptions = [
     {file = "better_exceptions-0.3.3.tar.gz", hash = "sha256:e4e6bc18444d5f04e6e894b10381e5e921d3d544240418162c7db57e9eb3453b"},
 ]
 calcipy = [
-    {file = "calcipy-0.2.0-py3-none-any.whl", hash = "sha256:17ab45839ea8942faf3bff4438cc978f213217a5ade7b57b9a82af3fc39f0f33"},
-    {file = "calcipy-0.2.0.tar.gz", hash = "sha256:e62d62404d286c71cdc4027f9b7eae98c629a1c281b7ae74edd93482b9c39df5"},
+    {file = "calcipy-2021.0.3.1-py3-none-any.whl", hash = "sha256:7bdabf9147c09a7eb8627848d84478dc6f3d7fb34e4ff994df92960e386f81d0"},
+    {file = "calcipy-2021.0.3.1.tar.gz", hash = "sha256:48530add98ec7b0a60acf63e66dcb5a4ce690820383f503a8a41747ee24abb79"},
 ]
 certifi = [
     {file = "certifi-2021.5.30-py2.py3-none-any.whl", hash = "sha256:50b1e4f8446b06f41be7dd6338db18e0990601dce795c2b1686458aa7e8fa7d8"},
@@ -2680,6 +2726,32 @@ nox-poetry = [
     {file = "nox-poetry-0.8.5.tar.gz", hash = "sha256:943853dfd835de6fba1d89efdc97d901c655d7c264794f48d9d607e608e59a95"},
     {file = "nox_poetry-0.8.5-py3-none-any.whl", hash = "sha256:53609f2b5bedbaa56ff2c16f4364012faa92f6af2cdb9ae1ad6b94470f03877f"},
 ]
+numpy = [
+    {file = "numpy-1.20.3-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:70eb5808127284c4e5c9e836208e09d685a7978b6a216db85960b1a112eeace8"},
+    {file = "numpy-1.20.3-cp37-cp37m-manylinux_2_12_i686.manylinux2010_i686.whl", hash = "sha256:6ca2b85a5997dabc38301a22ee43c82adcb53ff660b89ee88dded6b33687e1d8"},
+    {file = "numpy-1.20.3-cp37-cp37m-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:c5bf0e132acf7557fc9bb8ded8b53bbbbea8892f3c9a1738205878ca9434206a"},
+    {file = "numpy-1.20.3-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:db250fd3e90117e0312b611574cd1b3f78bec046783195075cbd7ba9c3d73f16"},
+    {file = "numpy-1.20.3-cp37-cp37m-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:637d827248f447e63585ca3f4a7d2dfaa882e094df6cfa177cc9cf9cd6cdf6d2"},
+    {file = "numpy-1.20.3-cp37-cp37m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:8b7bb4b9280da3b2856cb1fc425932f46fba609819ee1c62256f61799e6a51d2"},
+    {file = "numpy-1.20.3-cp37-cp37m-win32.whl", hash = "sha256:67d44acb72c31a97a3d5d33d103ab06d8ac20770e1c5ad81bdb3f0c086a56cf6"},
+    {file = "numpy-1.20.3-cp37-cp37m-win_amd64.whl", hash = "sha256:43909c8bb289c382170e0282158a38cf306a8ad2ff6dfadc447e90f9961bef43"},
+    {file = "numpy-1.20.3-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:f1452578d0516283c87608a5a5548b0cdde15b99650efdfd85182102ef7a7c17"},
+    {file = "numpy-1.20.3-cp38-cp38-manylinux_2_12_i686.manylinux2010_i686.whl", hash = "sha256:6e51534e78d14b4a009a062641f465cfaba4fdcb046c3ac0b1f61dd97c861b1b"},
+    {file = "numpy-1.20.3-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:e515c9a93aebe27166ec9593411c58494fa98e5fcc219e47260d9ab8a1cc7f9f"},
+    {file = "numpy-1.20.3-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:c1c09247ccea742525bdb5f4b5ceeacb34f95731647fe55774aa36557dbb5fa4"},
+    {file = "numpy-1.20.3-cp38-cp38-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:66fbc6fed94a13b9801fb70b96ff30605ab0a123e775a5e7a26938b717c5d71a"},
+    {file = "numpy-1.20.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:ea9cff01e75a956dbee133fa8e5b68f2f92175233de2f88de3a682dd94deda65"},
+    {file = "numpy-1.20.3-cp38-cp38-win32.whl", hash = "sha256:f39a995e47cb8649673cfa0579fbdd1cdd33ea497d1728a6cb194d6252268e48"},
+    {file = "numpy-1.20.3-cp38-cp38-win_amd64.whl", hash = "sha256:1676b0a292dd3c99e49305a16d7a9f42a4ab60ec522eac0d3dd20cdf362ac010"},
+    {file = "numpy-1.20.3-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:830b044f4e64a76ba71448fce6e604c0fc47a0e54d8f6467be23749ac2cbd2fb"},
+    {file = "numpy-1.20.3-cp39-cp39-manylinux_2_12_i686.manylinux2010_i686.whl", hash = "sha256:55b745fca0a5ab738647d0e4db099bd0a23279c32b31a783ad2ccea729e632df"},
+    {file = "numpy-1.20.3-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:5d050e1e4bc9ddb8656d7b4f414557720ddcca23a5b88dd7cff65e847864c400"},
+    {file = "numpy-1.20.3-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:a9c65473ebc342715cb2d7926ff1e202c26376c0dcaaee85a1fd4b8d8c1d3b2f"},
+    {file = "numpy-1.20.3-cp39-cp39-win32.whl", hash = "sha256:16f221035e8bd19b9dc9a57159e38d2dd060b48e93e1d843c49cb370b0f415fd"},
+    {file = "numpy-1.20.3-cp39-cp39-win_amd64.whl", hash = "sha256:6690080810f77485667bfbff4f69d717c3be25e5b11bb2073e76bb3f578d99b4"},
+    {file = "numpy-1.20.3-pp37-pypy37_pp73-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:4e465afc3b96dbc80cf4a5273e5e2b1e3451286361b4af70ce1adb2984d392f9"},
+    {file = "numpy-1.20.3.zip", hash = "sha256:e55185e51b18d788e49fe8305fd73ef4470596b33fc2c1ceb304566b99c71a69"},
+]
 optimize-images = [
     {file = "optimize-images-1.5.0.tar.gz", hash = "sha256:0740f6c8edd44735020399a35a7c559f3e4a63cfeec7a36b2060e6c349ff410d"},
     {file = "optimize_images-1.5.0-py3-none-any.whl", hash = "sha256:0071170810eb3905e3c269f6e21eaa711d2113f9233a487a733375a2c66bb876"},
@@ -2687,6 +2759,24 @@ optimize-images = [
 packaging = [
     {file = "packaging-20.9-py2.py3-none-any.whl", hash = "sha256:67714da7f7bc052e064859c05c595155bd1ee9f69f76557e21f051443c20947a"},
     {file = "packaging-20.9.tar.gz", hash = "sha256:5b327ac1320dc863dca72f4514ecc086f31186744b84a230374cc1fd776feae5"},
+]
+pandas = [
+    {file = "pandas-1.2.4-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:c601c6fdebc729df4438ec1f62275d6136a0dd14d332fc0e8ce3f7d2aadb4dd6"},
+    {file = "pandas-1.2.4-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:8d4c74177c26aadcfb4fd1de6c1c43c2bf822b3e0fc7a9b409eeaf84b3e92aaa"},
+    {file = "pandas-1.2.4-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:b730add5267f873b3383c18cac4df2527ac4f0f0eed1c6cf37fcb437e25cf558"},
+    {file = "pandas-1.2.4-cp37-cp37m-win32.whl", hash = "sha256:2cb7e8f4f152f27dc93f30b5c7a98f6c748601ea65da359af734dd0cf3fa733f"},
+    {file = "pandas-1.2.4-cp37-cp37m-win_amd64.whl", hash = "sha256:2111c25e69fa9365ba80bbf4f959400054b2771ac5d041ed19415a8b488dc70a"},
+    {file = "pandas-1.2.4-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:167693a80abc8eb28051fbd184c1b7afd13ce2c727a5af47b048f1ea3afefff4"},
+    {file = "pandas-1.2.4-cp38-cp38-manylinux1_i686.whl", hash = "sha256:612add929bf3ba9d27b436cc8853f5acc337242d6b584203f207e364bb46cb12"},
+    {file = "pandas-1.2.4-cp38-cp38-manylinux1_x86_64.whl", hash = "sha256:971e2a414fce20cc5331fe791153513d076814d30a60cd7348466943e6e909e4"},
+    {file = "pandas-1.2.4-cp38-cp38-win32.whl", hash = "sha256:68d7baa80c74aaacbed597265ca2308f017859123231542ff8a5266d489e1858"},
+    {file = "pandas-1.2.4-cp38-cp38-win_amd64.whl", hash = "sha256:bd659c11a4578af740782288cac141a322057a2e36920016e0fc7b25c5a4b686"},
+    {file = "pandas-1.2.4-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:9db70ffa8b280bb4de83f9739d514cd0735825e79eef3a61d312420b9f16b758"},
+    {file = "pandas-1.2.4-cp39-cp39-manylinux1_i686.whl", hash = "sha256:298f0553fd3ba8e002c4070a723a59cdb28eda579f3e243bc2ee397773f5398b"},
+    {file = "pandas-1.2.4-cp39-cp39-manylinux1_x86_64.whl", hash = "sha256:52d2472acbb8a56819a87aafdb8b5b6d2b3386e15c95bde56b281882529a7ded"},
+    {file = "pandas-1.2.4-cp39-cp39-win32.whl", hash = "sha256:d0877407359811f7b853b548a614aacd7dea83b0c0c84620a9a643f180060950"},
+    {file = "pandas-1.2.4-cp39-cp39-win_amd64.whl", hash = "sha256:2b063d41803b6a19703b845609c0b700913593de067b552a8b24dd8eeb8c9895"},
+    {file = "pandas-1.2.4.tar.gz", hash = "sha256:649ecab692fade3cbfcf967ff936496b0cfba0af00a55dfaacd82bdda5cb2279"},
 ]
 pandas-vet = [
     {file = "pandas-vet-0.2.2.tar.gz", hash = "sha256:0a316c3edaaa1bcd772bfaea0e8d2b2aa409b740198746a2b60f2007b313f42e"},
@@ -2855,6 +2945,10 @@ python-dateutil = [
     {file = "python-dateutil-2.8.1.tar.gz", hash = "sha256:73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c"},
     {file = "python_dateutil-2.8.1-py2.py3-none-any.whl", hash = "sha256:75bb3f31ea686f1197762692a9ee6a7550b59fc6ca3a1f4b5d7e32fb98e2da2a"},
 ]
+pytz = [
+    {file = "pytz-2021.1-py2.py3-none-any.whl", hash = "sha256:eb10ce3e7736052ed3623d49975ce333bcd712c7bb19a58b9e2089d4057d0798"},
+    {file = "pytz-2021.1.tar.gz", hash = "sha256:83a4a90894bf38e243cf052c8b58f381bfe9a7a483f6a9cab140bc7f702ac4da"},
+]
 pytzdata = [
     {file = "pytzdata-2020.1-py2.py3-none-any.whl", hash = "sha256:e1e14750bcf95016381e4d472bad004eef710f2d6417240904070b3d6654485f"},
     {file = "pytzdata-2020.1.tar.gz", hash = "sha256:3efa13b335a00a8de1d345ae41ec78dd11c9f8807f522d39850f2dd828681540"},
@@ -2975,6 +3069,10 @@ stevedore = [
 ]
 sty = [
     {file = "sty-1.0.0rc1-py3-none-any.whl", hash = "sha256:52bc299ba08a7e2683ed4500a13222d62811ad616e621c9d3e3da2d8175ae46c"},
+]
+tabulate = [
+    {file = "tabulate-0.8.9-py3-none-any.whl", hash = "sha256:d7c013fe7abbc5e491394e10fa845f8f32fe54f8dc60c6622c6cf482d25d47e4"},
+    {file = "tabulate-0.8.9.tar.gz", hash = "sha256:eb1d13f25760052e8931f2ef80aaf6045a6cceb47514db8beab24cded16f13a7"},
 ]
 termcolor = [
     {file = "termcolor-1.1.0.tar.gz", hash = "sha256:1d6d69ce66211143803fbc56652b41d73b4a400a2891d7bf7a1cdf4c02de613b"},

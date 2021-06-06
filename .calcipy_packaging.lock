@@ -88,12 +88,12 @@
         "version": "0.3.3"
     },
     "calcipy": {
-        "datetime": "2021-06-05T22:43:11.613818Z",
+        "datetime": "2021-06-06T17:28:01.794707Z",
         "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-06-05T22:43:11.613818Z",
-        "latest_version": "0.2.0",
+        "latest_datetime": "2021-06-06T17:28:01.794707Z",
+        "latest_version": "2021.0.3.1",
         "name": "calcipy",
-        "version": "0.2.0"
+        "version": "2021.0.3.1"
     },
     "certifi": {
         "datetime": "2021-05-30T16:20:18.994102Z",
@@ -887,6 +887,14 @@
         "name": "nox-poetry",
         "version": "0.8.5"
     },
+    "numpy": {
+        "datetime": "2021-05-10T15:17:40.190393Z",
+        "domain": "https://pypi.org/pypi/{name}/{version}/json",
+        "latest_datetime": "2021-05-24T15:55:21.895929Z",
+        "latest_version": "1.21.0rc1",
+        "name": "numpy",
+        "version": "1.20.3"
+    },
     "optimize-images": {
         "datetime": "2021-05-29T16:56:51.490979Z",
         "domain": "https://pypi.org/pypi/{name}/{version}/json",
@@ -902,6 +910,14 @@
         "latest_version": "20.9",
         "name": "packaging",
         "version": "20.9"
+    },
+    "pandas": {
+        "datetime": "2021-04-12T18:43:31.918766Z",
+        "domain": "https://pypi.org/pypi/{name}/{version}/json",
+        "latest_datetime": "2021-04-12T18:43:31.918766Z",
+        "latest_version": "1.2.4",
+        "name": "pandas",
+        "version": "1.2.4"
     },
     "pandas-vet": {
         "datetime": "2020-02-01T05:12:09.374968Z",
@@ -1143,6 +1159,14 @@
         "name": "python-dateutil",
         "version": "2.8.1"
     },
+    "pytz": {
+        "datetime": "2021-02-01T08:07:15.659674Z",
+        "domain": "https://pypi.org/pypi/{name}/{version}/json",
+        "latest_datetime": "2021-02-01T08:07:15.659674Z",
+        "latest_version": "2021.1",
+        "name": "pytz",
+        "version": "2021.1"
+    },
     "pytzdata": {
         "datetime": "2020-07-13T10:42:10.122147Z",
         "domain": "https://pypi.org/pypi/{name}/{version}/json",
@@ -1254,6 +1278,14 @@
         "latest_version": "1.0.0rc1",
         "name": "sty",
         "version": "1.0.0rc1"
+    },
+    "tabulate": {
+        "datetime": "2021-02-22T07:34:12.229281Z",
+        "domain": "https://pypi.org/pypi/{name}/{version}/json",
+        "latest_datetime": "2021-02-22T07:34:12.229281Z",
+        "latest_version": "0.8.9",
+        "name": "tabulate",
+        "version": "0.8.9"
     },
     "termcolor": {
         "datetime": "2011-01-13T18:45:33.979856Z",
