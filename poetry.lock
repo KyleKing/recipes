@@ -129,7 +129,7 @@ colorama = {version = "*", markers = "sys_platform == \"win32\""}
 
 [[package]]
 name = "calcipy"
-version = "2021.0.3.1"
+version = "2021.0.3.2"
 description = "Python package to simplify development. Includes functionality for task running, testing, linting, documenting, and more"
 category = "main"
 optional = false
@@ -2164,8 +2164,8 @@ better-exceptions = [
     {file = "better_exceptions-0.3.3.tar.gz", hash = "sha256:e4e6bc18444d5f04e6e894b10381e5e921d3d544240418162c7db57e9eb3453b"},
 ]
 calcipy = [
-    {file = "calcipy-2021.0.3.1-py3-none-any.whl", hash = "sha256:7bdabf9147c09a7eb8627848d84478dc6f3d7fb34e4ff994df92960e386f81d0"},
-    {file = "calcipy-2021.0.3.1.tar.gz", hash = "sha256:48530add98ec7b0a60acf63e66dcb5a4ce690820383f503a8a41747ee24abb79"},
+    {file = "calcipy-2021.0.3.2-py3-none-any.whl", hash = "sha256:b3e35291abc65eacba10459e832aaca985d7c345f5eca5e9d859eca56a7bc16c"},
+    {file = "calcipy-2021.0.3.2.tar.gz", hash = "sha256:c9ee401ac8b9e8bf31be0c1d24bb9d6f4dc61dacef4ddac6c3cd00e853a29332"},
 ]
 certifi = [
     {file = "certifi-2021.5.30-py2.py3-none-any.whl", hash = "sha256:50b1e4f8446b06f41be7dd6338db18e0990601dce795c2b1686458aa7e8fa7d8"},

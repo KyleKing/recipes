@@ -1,14 +1,16 @@
 """Format Markdown Files for MKDocs."""
 
+from collections import defaultdict
 from collections.abc import Callable
 from copy import deepcopy
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Union
 
+import pandas as pd
 from beartype import beartype
-from calcipy.doit_tasks.doc import _parse_var_comment, write_autoformatted_md_sections
+from calcipy.doit_tasks.doc import _parse_var_comment, _ReplacementMachine, write_autoformatted_md_sections
 from calcipy.doit_tasks.doit_globals import DG
-from calcipy.file_helpers import get_doc_dir
+from calcipy.file_helpers import get_doc_dir, read_lines
 from decorator import contextmanager
 from loguru import logger
 
@@ -104,18 +106,18 @@ def _configure_recipe_lookup(new_lookup: dict[str, Callable[[str, Path], str]]) 
 
 
 @beartype
-def _format_star_section(section: str, path_md: Path) -> list[str]:
+def _handle_star_section(line: str, path_md: Path) -> list[str]:
     """Format the star rating as markdown.
 
     Args:
-        section: string section of a markdown recipe
+        line: first line of the section
         path_md: Path to the markdown file
 
     Returns:
         list[str]: updated recipe string markdown
 
     """
-    rating = int(_parse_var_comment(section)['rating'])
+    rating = int(_parse_var_comment(line)['rating'])
     stars = _format_stars(rating)
     return [
         f'<!-- {{cts}} rating={rating}; (User can specify rating on scale of 1-5) -->',
@@ -125,11 +127,34 @@ def _format_star_section(section: str, path_md: Path) -> list[str]:
 
 
 @beartype
-def _format_image_section(section: str, path_md: Path) -> list[str]:
+def _parse_rel_file(line: str, path_md: Path, key: str) -> Path:
+    """Parse the filename from the file.
+
+    Args:
+        line: first line of the section
+        path_md: Path to the markdown file
+        key: string key to use in `_parse_var_comment`
+
+    Returns:
+        Path: absolute path
+
+    Raises:
+        FileNotFoundError: if the file at the specified path does not exist
+
+    """
+    filename = _parse_var_comment(line)[key]
+    path_file = path_md.parent / filename
+    if filename.lower() != 'none' and not path_file.is_file():
+        raise FileNotFoundError(f'Could not locate {path_file} from {path_md}')
+    return path_file
+
+
+@beartype
+def _handle_image_section(line: str, path_md: Path) -> list[str]:
     """Format the string section with the specified image name.
 
     Args:
-        section: string section of a markdown recipe
+        line: first line of the section
         path_md: Path to the markdown file
 
     Returns:
@@ -139,11 +164,8 @@ def _format_image_section(section: str, path_md: Path) -> list[str]:
         FileNotFoundError: if the image file could not be located
 
     """
-    name_image = _parse_var_comment(section)['name_image']
-    path_image = path_md.parent / name_image
-    if name_image.lower() != 'none' and not path_image.is_file():
-        raise FileNotFoundError(f'Could not locate {path_image} from {path_md}')
-
+    path_image = _parse_rel_file(line, path_md, 'name_image')
+    name_image = path_image.name
     return [
         f'<!-- {{cts}} name_image={name_image}; (User can specify image name) -->',
         _format_image_md(name_image, attrs='.image-recipe'),
@@ -156,71 +178,119 @@ def _format_image_section(section: str, path_md: Path) -> list[str]:
 
 
 @beartype
-def _format_toc(toc_data: dict[str, Optional[str]]) -> str:
-    """Format a single list item for the TOC from parsed data.
+def _format_toc_table(toc_records: list[dict[str, Union[str, int]]]) -> list[str]:
+    """Format TOC data as a markdown table.
 
     Args:
-        toc_data: dictionary of key and data parsed from source file
+        toc_records: list of records
 
     Returns:
-        str: single TOC item
+        list[str]: the datatable as a list of lines
 
     """
-    link = f"[{_format_titlecase(toc_data['name_md'])}](../{toc_data['name_md']})"
-    rating = int(str(toc_data['rating']))
-    # Note: the relative link needs to be ../ to work. Will otherwise try to go to './__TOC/<link>'
-    img_md = _format_image_md(toc_data['name_image'], attrs='.image-toc')
-    return f'| {link} | {rating + BUMP_RATING} | {img_md} |'
+    # Format table for Github Markdown
+    df_toc = pd.DataFrame(toc_records)
+    return df_toc.to_markdown(index=False).split('\n')
 
 
 @beartype
-def _create_toc_entry(path_md: Path) -> str:
-    """Parse the section and return a single list item for the TOC.
+def _create_toc_record(
+    path_recipe: Path, path_img: Path, rating: Union[str, int],
+) -> dict[str, Union[str, int]]:
+    """Create the dictionary summarizing data for the table of contents.
 
     Args:
-        path_md: Path to the markdown file
+        path_recipe: Path to the recipe
+        path_img: Path to the recipe image
+        rating: recipe user-rating
 
     Returns:
-        str: single TOC item
+        dict[str, str]: single records
 
     """
-    startswith_items = [
-        '<!-- {cts} rating=',
-        '<!-- {cts} name_image=',
-    ]
-    toc_data = {'name_md': path_md.stem, 'name_image': None}
-    for section in path_md.read_text().split('\n\n'):
-        for startswith in startswith_items:
-            if section.strip().startswith(startswith):
-                logger.debug('Matched `{startswith}` against: {section}', startswith=startswith, section=section)
-                toc_data = {**toc_data, **_parse_var_comment(section)}
-                break
-    logger.debug('{toc_data}', toc_data=toc_data, path_md=path_md)
-    return _format_toc(toc_data)
+    # Note: the relative link needs to be ../ to work. Will otherwise try to go to './__TOC/<link>'
+    link = f'[{_format_titlecase(path_recipe.name)}](../{path_recipe.name})'
+    img_md = _format_image_md(path_img.name, attrs='.image-toc')
+    return {
+        'Link': link,
+        'Rating': int(rating) + BUMP_RATING,
+        'Image': img_md,
+    }
+
+
+class _TOCRecipes:  # noqa: H601
+    """Store recipe metadata for TOC."""
+
+    def __init__(self, sub_dir: Path) -> None:
+
+        self.sub_dir = sub_dir
+        self.recipes = defaultdict(dict)
+
+    def store_star(self, line: str, path_md: Path) -> list[str]:
+        """Store the star rating.
+
+        Args:
+            line: first line of the section
+            path_md: Path to the markdown file
+
+        Returns:
+            list[str]: empty list
+
+        """
+        self.recipes[path_md.as_posix()]['rating'] = _parse_var_comment(line)['rating']
+        return []
+
+    def store_image(self, line: str, path_md: Path) -> list[str]:
+        """Store image name.
+
+        Args:
+            line: first line of the section
+            path_md: Path to the markdown file
+
+        Returns:
+            list[str]: empty list
+
+        """
+        path_image = _parse_rel_file(line, path_md, 'name_image')
+        self.recipes[path_md.as_posix()]['path_image'] = path_image
+
+        return []
+
+    def write_toc(self) -> None:
+        """Write the table of contents."""
+        if self.recipes:
+            records = [
+                _create_toc_record(Path(path_md), info['path_image'], info['rating'])
+                for path_md, info in self.recipes.items()
+            ]
+            toc_table = _format_toc_table(records)
+            header = [f'# Table of Contents ({_format_titlecase(self.sub_dir.name)})']
+            (self.sub_dir / '__TOC.md').write_text('\n'.join(header + [''] + toc_table + ['']))
 
 
 @beartype
 def _write_toc() -> None:
     """Write the table of contents for each section."""
-    # FIXME: Use _ReplacementMachine instead of _create_toc_entry
-    # logger.info('> {paths_md}', paths_md=DG.doc.paths_md)
-    # for path_md in DG.doc.paths_md:
-    #     TODO: Use class for DG.doc.handler_lookup to capture metadata of interest
-    #     _ReplacementMachine().parse(read_lines(path_md), DG.doc.handler_lookup, path_md)
+    # Get all subdirectories
+    md_dirs = {path_md.parent for path_md in DG.doc.paths_md}
 
+    # Filter out any directories for calcipy that are not recipes
     doc_dir = get_doc_dir(DG.meta.path_project)
-    for dir_sub in DIR_MD.glob('*'):
-        if dir_sub.name == doc_dir.name:
-            continue  # Don't write a Table of Contents for developer documentation
+    filtered_dir = [pth for pth in md_dirs if pth.parent == DIR_MD and pth.name not in [doc_dir.name]]
 
-        toc_table = '| Link | Rating | Image |\n| -- | -- | -- |'
-        paths_md = [*dir_sub.glob('*.md')]
-        for path_md in DG.doc.path_md:
-            toc_table += '\n' + _create_toc_entry(path_md)
-
-        if paths_md:
-            toc_text = f'# Table of Contents ({_format_titlecase(dir_sub.name)})\n\n{toc_table}\n'
-            (dir_sub / '__TOC.md').write_text(toc_text)
+    # Create a TOC for each directory
+    for sub_dir in filtered_dir:
+        logger.info(f'Creating TOC for: {sub_dir}')
+        toc_recipes = _TOCRecipes(sub_dir)
+        recipe_lookup = {
+            'rating=': toc_recipes.store_star,
+            'name_image=': toc_recipes.store_image,
+        }
+        sub_dir_paths = [pth for pth in DG.doc.paths_md if pth.is_relative_to(sub_dir)]
+        with _configure_recipe_lookup(recipe_lookup):
+            for path_md in sub_dir_paths:
+                _ReplacementMachine().parse(read_lines(path_md), DG.doc.handler_lookup, path_md)
+        toc_recipes.write_toc()
 
 
 # =====================================================================================
@@ -231,11 +301,10 @@ def _write_toc() -> None:
 def format_recipes() -> None:
     """Format the markdown files."""
     recipe_lookup = {
-        'rating=': _format_star_section,
-        'name_image=': _format_image_section,
+        'rating=': _handle_star_section,
+        'name_image=': _handle_image_section,
     }
     with _configure_recipe_lookup(recipe_lookup):
         write_autoformatted_md_sections()
 
-    # FIXME: Implement
-    # _write_toc()
+    _write_toc()

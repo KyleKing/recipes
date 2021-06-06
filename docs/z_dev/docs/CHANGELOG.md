@@ -2,6 +2,7 @@
 
 ### Feat
 
+- replace recipe-formatting with calcipy
 - add falafel recipe
 - setup CD on AppVeyor
 - update calcipy for better dodo
