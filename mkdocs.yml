@@ -3,8 +3,9 @@ site_author: Kyle King and Alexandra Gabitzer
 site_description: Kyle and Alex's Personal Recipes
 repo_name: kyleking/recipes
 repo_url: https://github.com/kyleking/recipes
-edit_uri: edit/main/docs
-docs_dir: docs
+edit_uri: edit/main/docs/z_dev
+docs_dir: docs/z_dev
+site_dir: releases/site
 
 theme:
   name: material

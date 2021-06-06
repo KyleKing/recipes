@@ -1,47 +1,70 @@
 [build-system]
-requires = [ "poetry-core>=1.0.0",]
+requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.calcipy]
-ignore_patterns = [ "__TOC.md",]
+ignore_patterns = ["__TOC.md"]
 
 [tool.commitizen]
 name = "cz_legacy"
-change_type_order = [
-    "BREAKING CHANGE", "Feat", "Fix", "Refactor", "Perf",
-    "New (Old)", "Change (Old)", "Fix (Old)",
-]
 version = "0.2.0"
-version_files = [ "appveyor.yml", "pyproject.toml", "recipes/__init__.py",]
-# # Based on the conventional commit pattern from: commitizen/cz/conventional_commits/conventional_commits.py#L179
-# #   With the addition of the new 'recipe' change type (could be docs?)
-# schema_pattern = "(recipe|build|ci|docs|feat|fix|perf|refactor|style|test|chore|revert|bump)!?(\\(\\S+\\))?:(\\s.*)"
+tag_format = "2021.$version"
+version_files = ["pyproject.toml", "recipes/__init__.py", "appveyor.yml"]
+change_type_order = [
+    "BREAKING CHANGE",
+    "Feat",
+    "Fix",
+    "Refactor",
+    "Perf",
+    "New (Old)",
+    "Change (Old)",
+    "Fix (Old)",
+]
 
 [tool.commitizen.cz_legacy_map]
 Chg = "Change (Old)"
 Fix = "Fix (Old)"
 New = "New (Old)"
 
+[tool.isort]
+balanced_wrapping = true
+default_section = "THIRDPARTY"
+force_grid_wrap = 0
+include_trailing_comma = true
+known_first_party = "recipes"
+length_sort = false
+line_length = 120
+multi_line_output = 5
+
 [tool.poetry]
 name = "recipes"
-version = "0.2.0"
+version = "2021.0.2.0"
 description = "Recipe Website"
 license = "MIT"
-authors = [ "Kyle King <dev.act.kyle@gmail.com>",]
+authors = ["Kyle King <dev.act.kyle@gmail.com>"]
+maintainers = []
+repository = "https://github.com/kyleking/recipes"
+documentation = "https://github.com/kyleking/recipes/docs"
+readme = "docs/z_dev/README.md"
+include = ["LICENSE.md"]
+keywords = []
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.9",
+] # https://pypi.org/classifiers/
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/kyleking/recipes/issues"
 
 [tool.poetry.dependencies]
-python = ">=3.8,<3.10"
+python = "^3.9"
+calcipy = "^0.2"
+# TODO: will be in calcipy 0.2.1
 mkdocs-git-revision-date-plugin = "*"
 optimize-images = "*"
 pillow = "*"
 
-[tool.poetry.dependencies.calcipy]
-git = "https://github.com/kyleking/calcipy.git"
-branch = "dev/development"
-rev = "ad148bc"  # Always pin to a commit
-develop = true  # Optional: will reinstall each time
-
-[tool.poetry.dev-dependencies.calcipy]
-git = "https://github.com/kyleking/calcipy.git"
-branch = "dev/development"
-extras = [ "dev", "lint", "test", "commitizen_legacy"]
+[tool.poetry.dev-dependencies]
+calcipy = { version = "*", extras = ["dev", "lint", "test", "cz_legacy"] }
