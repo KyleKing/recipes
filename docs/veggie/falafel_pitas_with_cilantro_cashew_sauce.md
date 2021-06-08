@@ -70,5 +70,5 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Notes
 
 * I really messed up this recipe the first time we made it. I mashed the cashews and chickpeas, so the falafel didn't stay together and we didn't have the cashew sauce :D
-    * The whole meal tasted good thanks to Alex's quick thinking of whipping together a yogurt sauce with plain yogurt, finely chopped cilantro, lemon juice, salt, and harissa
+    * The meal was saved thanks to Alex's quick thinking of whipping together a yogurt sauce with plain yogurt, finely chopped cilantro, lemon juice, salt, and harissa
     * This sauce could probably be improved, but was a nice way to serve the falafel if one doesn't have cashews
