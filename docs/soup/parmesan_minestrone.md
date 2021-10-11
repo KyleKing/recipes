@@ -1,12 +1,10 @@
-<!-- Needs Manual Review -->
-
 # Parmesan Minestrone
 
 > Based on [Chrissy Teigen Cravings Hungry for More], pg. 50
 
   [Chrissy Teigen Cravings Hungry for More]: https://www.penguinrandomhouse.com/books/553580/cravings-hungry-for-more-by-chrissy-teigen-with-adeena-sussman/
 
-<!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
+<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- {cte} -->
 
@@ -29,7 +27,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * [ ] 2.5 tsp salt
 * [ ] 1/2 tsp black pepper
 * [ ] 1/4 tsp red pepper flakes
-* [ ] 2/3 cup pasta wheels (~1/2 cup elbow)
+* [ ] 2/3 cup pasta wheels (~1/2 cup elbow/macaroni)
 * [ ] 1 cup Parmigiano-Reggiano cheese, plus more for garnish
 * [ ] Serve with baguette or toast
 
@@ -40,7 +38,3 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * Add the broth, the three canned ingredients, and spices. Bring to a boil then reduce to a simmer and cook for 20 min until thickened
 * Add the pasta and cook until tender for another ~10 min
 * Stir in the Parmesan and season with additional salt and black pepper.
-
-## Notes
-
-* If too thick, add water

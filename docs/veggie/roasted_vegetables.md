@@ -19,7 +19,6 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * [ ] Salt and pepper
 * [ ] Garlic powder
 * [ ] Onion powder
-* [ ] Red Pepper Flakes
 * [ ] Olive Oil
 
 ### First Half
@@ -42,6 +41,6 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * Cut all vegetables into roughly the same size
     * Start with the (regular and sweet) potatoes
     * Chunk then mix in a bowl with seasonings
-    * Set the oven to 425 (no need to wait for pre-heat) and bake for ~45 minutes
+    * Set the oven to 425 (no need to wait for pre-heat) and bake for ~50 minutes
 * Cut up the rest of the vegetables (broccoli, carrots, and/or mushrooms) and mix with seasonings in the same bowl. Set aside
-* After the initial roast is done, add the next set of vegetables and bake for 30-40 minutes
+* After the initial roast is done, add the next set of vegetables and bake for ~40 minutes

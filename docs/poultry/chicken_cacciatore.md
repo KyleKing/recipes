@@ -1,8 +1,8 @@
 # Chicken Cacciatore
 
-> Based on (Essential Instant Pot:69) https://smile.amazon.com/Essential-Instant-Pot-Cookbook-Foolproof/dp/0399580883/ref=sr_1_1_sspa?ie=UTF8&qid=1516461807&sr=8-1-spons&keywords=essential+instant+pot&psc=1
+> Based on [Essential Instant Pot:69](https://smile.amazon.com/Essential-Instant-Pot-Cookbook-Foolproof/dp/0399580883/ref=sr_1_1_sspa?ie=UTF8&qid=1516461807&sr=8-1-spons&keywords=essential+instant+pot&psc=1)
 
-<!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
+<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- {cte} -->
 

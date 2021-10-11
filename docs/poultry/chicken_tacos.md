@@ -1,8 +1,8 @@
 # Chicken Tacos
 
-> Based on [https://www.lecremedelacrumb.com/instant-pot-shredded-chicken-tacos/](https://www.lecremedelacrumb.com/instant-pot-shredded-chicken-tacos/)
+> Based on [https://www.lecremedelacrumb.com/instant-pot-shredded-chicken-tacos/](https://www.lecremedelacrumb.com/instant-pot-shredded-chicken-tacos/) and [https://www.thekitchn.com/instant-pot-chicken-tacos-recipe-23153067](https://www.thekitchn.com/instant-pot-chicken-tacos-recipe-23153067)
 
-<!-- {cts} rating=3; (User can specify rating on scale of 1-5) -->
+<!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- {cte} -->
 
@@ -20,7 +20,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * [ ] 1 tsp ground cumin
 * [ ] 1 tsp chili powder
 * [ ] 1 tsp garlic powder
-* [ ] 1 15-ounce can fire roasted tomatoes
+* [ ] 15-ounce can fire roasted tomatoes
 
 ### Tacos
 
