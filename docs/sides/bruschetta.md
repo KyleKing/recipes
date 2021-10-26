@@ -1,31 +1,27 @@
-<!-- Needs Manual Review -->
-
 # Bruschetta
 
-> Based on [https://www.geniuskitchen.com/recipe/best-ever-bruschetta-443987](https://www.geniuskitchen.com/recipe/best-ever-bruschetta-443987)
+> Loosely based on [https://www.geniuskitchen.com/recipe/best-ever-bruschetta-443987](https://www.geniuskitchen.com/recipe/best-ever-bruschetta-443987)
 
-<!-- {cts} rating=0; (User can specify rating on scale of 1-5) -->
-Personal rating: *Not yet rated*
+<!-- {cts} rating=3; (User can specify rating on scale of 1-5) -->
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- {cte} -->
 
-<!-- {cts} name_image=None; (User can specify image name) -->
-<!-- TODO: Capture image -->
+<!-- {cts} name_image=bruschetta_toast.jpg; (User can specify image name) -->
+![bruschetta_toast.jpg](./bruschetta_toast.jpg){: .image-recipe loading=lazy }
 <!-- {cte} -->
 
 ## Ingredients
 
-* [ ] 1 baguette, cut in half length-wise and toasted
-* [ ] 2 tsps minced garlic or ~1/4 tsp garlic powder
-* [ ] 3 tbsp extra-virgin olive oil
-* [ ] 1⁄4 cup grated parmesan cheese
-* [ ] 2.5 cups minced roma tomatoes (cut so fine its almost a paste)
-* [ ] 1⁄3 cup thinly sliced fresh basil leaf
-* [ ] 2 tbsp balsamic vinegar
-* [ ] 1⁄2 tsp salt
-* [ ] 1 tsp fresh ground pepper
+* [ ] 2 Roma Tomatoes
+* [ ] 1/2 tsp Black Pepper
+* [ ] 1/2 tsp Basil
+* [ ] 1/2 tsp Garlic Powder
+* [ ] 1/2 tsp Oregano
+* [ ] 1 tsp olive oil
 
 ## Recipe
 
-* In a medium mixing bowl, add the tomatoes, garlic, basil, vinegar, olive oil, cheese, salt, and pepper
-* Mix thoroughly and let sit for at least 15 minutes at room temperature to let the flavors marinate
-* Slice the bread into individual pieces and spoon the mixture on top
+* Blend in mini food processor or mince and combine
+* **Variations**
+    * For a meal, serve on toast with poached egg. Top with oregano
+    * Serve on sliced baguette crisps. Add parmesan cheese

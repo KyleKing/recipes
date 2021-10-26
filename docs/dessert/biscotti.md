@@ -5,7 +5,7 @@
 > Based on [https://www.kingarthurflour.com/recipes/vanilla-biscotti-recipe](https://www.kingarthurflour.com/recipes/vanilla-biscotti-recipe)
 
 <!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
-Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 <!-- {cte} -->
 
 <!-- {cts} name_image=biscotti.jpg; (User can specify image name) -->

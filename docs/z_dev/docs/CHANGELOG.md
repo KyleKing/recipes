@@ -2,6 +2,7 @@
 
 ### Feat
 
+- implement formatter for TOC based on calcipy
 - replace recipe-formatting with calcipy
 - add falafel recipe
 - setup CD on AppVeyor
@@ -11,6 +12,7 @@
 
 ### Fix
 
+- ../ url from TOC is no longer necessary
 - rename isort
 - correct for changes in calcipy  ad148bc
 - apply type fixes from mypy

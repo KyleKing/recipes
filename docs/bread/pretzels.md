@@ -3,7 +3,7 @@
 > Based on [http://www.geniuskitchen.com/recipe/real-homemade-soft-pretzels-130301](http://www.geniuskitchen.com/recipe/real-homemade-soft-pretzels-130301) and Andrew P's comments from a 2017 comment
 
 <!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
-Personal rating: *Not yet rated*
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 <!-- {cte} -->
 
 <!-- {cts} name_image=None; (User can specify image name) -->
