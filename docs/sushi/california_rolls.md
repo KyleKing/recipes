@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # California Rolls
 
 > Based on [https://makemysushi.com/Recipes/how-to-make-california-sushi-rolls](https://makemysushi.com/Recipes/how-to-make-california-sushi-rolls)
@@ -19,15 +17,15 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * [ ] cucumber
 * [ ] sesame seeds
 * [ ] sushi rice
-* [ ] nori
-* [ ] masago (flying fish roe) or tobikko
+* [ ] Nori
+* [ ] Masago (flying fish roe) or Tobiko
 
 ## Recipe
 
-* Cut the Nori sheet in half. Spread rice over the nori and top with sesame seeds, then flip rice side down
+* Cut the Nori sheet in half. Spread rice over the Nori and top with sesame seeds, then flip rice side down
 * Add strips of the Surimi, avocado, cucumber, and choice of fish roe then roll
 
 ## Notes
 
-* tobiko is just fish eggs with corn syrup and food coloring
-* See more detailed guide: https://www.justonecookbook.com/california-roll/
+* Tobiko is fish eggs with corn syrup and food coloring
+* See more [detailed guide here](https://www.justonecookbook.com/california-roll/)

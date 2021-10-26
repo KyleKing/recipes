@@ -29,4 +29,4 @@ Personal rating: *Not yet rated*
 ## Notes
 
 * Fun fact, dishwasher's need cleaning too
-* Also see Consumer Reports https://www.consumerreports.org/dishwashers/how-to-clean-a-dishwasher/
+* Also see [Consumer Reports](https://www.consumerreports.org/dishwashers/how-to-clean-a-dishwasher/)

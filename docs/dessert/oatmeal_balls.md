@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Oatmeal Balls
 
 > Based on [https://www.blessthismessplease.com/8-no-bake-oatmeal-energy-balls/](https://www.blessthismessplease.com/8-no-bake-oatmeal-energy-balls/)
@@ -26,4 +24,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Notes
 
-* More tasty no-bake energy bites from tasty.co: https://tasty.co/compilation/no-bake-energy-bites
+* More tasty [no-bake energy bites from tasty.co](https://tasty.co/compilation/no-bake-energy-bites)

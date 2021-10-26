@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Vegetable Wraps
 
 > Based on [http://ahouseinthehills.com/2013/04/25/nori-veggie-wraps-my-everyday-staple/](http://ahouseinthehills.com/2013/04/25/nori-veggie-wraps-my-everyday-staple/)
@@ -29,5 +27,5 @@ Personal rating: *Not yet rated*
 
 ## Notes
 
-* To make roasted red peppers, hold them over a burner with tongs until charred. Put in a glass bowl with lid to let them steam and to make remove the char easier. Source: https://www.thekitchn.com/how-to-roast-peppers-3-ways-234734
+* To make roasted red peppers, hold them over a burner with tongs until charred. Put in a glass bowl with lid to let them steam and to make remove the char easier ([Source](https://www.thekitchn.com/how-to-roast-peppers-3-ways-234734)).
 * Other vegetables worth trying: red cabbage, radish, asparagus spears, zucchini, or sprouts

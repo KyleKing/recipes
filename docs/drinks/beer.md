@@ -1,8 +1,6 @@
-<!-- Needs Manual Review -->
-
 # Beer
 
-> Based on [https://untappd.com/](https://untappd.com/)
+> Based on [https://untappd.com/](https://untappd.com/). [Image Source](https://www.wallpaperflare.com/labeled-glass-bottles-on-shelf-assorted-books-wine-beer-wall-wallpaper-ztssy)
 
 <!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
@@ -12,23 +10,18 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ![beer.jpg](./beer.jpg){: .image-recipe loading=lazy }
 <!-- {cte} -->
 
-## Ingredients
+## List
 
-* [ ] Beers
-    * [ ] Sour Monkey | Victory Brewing Company
-    * [ ] Voodoo Ranger IPA | New Belgium
-    * [ ] Hopslam Ale | Bell's Brewery
-    * [ ] Alhambra Reserva Roja (Doppelbock beer inspired by traditional Bock style beers and red ales) | Cervezas Alhambra
-    * [ ] Soaring Dragon Imperial IPA (w/ White Tea) | Stone Brewing
-* [ ] Recommend
-    * [ ] Two Buck Chuck | Trader Joe's
-    * [ ] Mission Street Session Pale Ale | Trader Joe's
-    * [ ] KBC IPA | Trader Joe's
+### General
 
-## Recipe
+* [ ] Sour Monkey | Victory Brewing Company
+* [ ] Voodoo Ranger IPA | New Belgium
+* [ ] Hopslam Ale | Bell's Brewery
+* [ ] Alhambra Reserva Roja (Doppelbock beer inspired by traditional Bock style beers and red ales) | Cervezas Alhambra
+* [ ] Soaring Dragon Imperial IPA (w/ White Tea) | Stone Brewing
 
+### Recommend
 
-
-## Notes
-
-* Image Source: https://www.wallpaperflare.com/labeled-glass-bottles-on-shelf-assorted-books-wine-beer-wall-wallpaper-ztssy
+* [ ] Two Buck Chuck | Trader Joe's
+* [ ] Mission Street Session Pale Ale | Trader Joe's
+* [ ] KBC IPA | Trader Joe's
