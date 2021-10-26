@@ -205,7 +205,7 @@ def _create_toc_record(
         dict[str, str]: single records
 
     """
-    link = f'[{_format_titlecase(path_recipe.name)}](./{path_recipe.name})'
+    link = f'[{_format_titlecase(path_recipe.stem)}](./{path_recipe.name})'
     img_md = _format_image_md(path_img.name, attrs='.image-toc')
     return {
         'Link': link,
