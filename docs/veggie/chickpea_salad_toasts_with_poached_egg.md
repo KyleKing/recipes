@@ -6,8 +6,8 @@
 Personal rating: *Not yet rated*
 <!-- {cte} -->
 
-<!-- {cts} name_image=None; (User can specify image name) -->
-<!-- TODO: Capture image -->
+<!-- {cts} name_image=chickpea_salad_toasts_with_poached_egg.jpeg; (User can specify image name) -->
+![chickpea_salad_toasts_with_poached_egg.jpeg](./chickpea_salad_toasts_with_poached_egg.jpeg){: .image-recipe loading=lazy }
 <!-- {cte} -->
 
 ## Ingredients

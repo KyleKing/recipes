@@ -6,8 +6,8 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- {cte} -->
 
-<!-- {cts} name_image=bruschetta_toast.jpg; (User can specify image name) -->
-![bruschetta_toast.jpg](./bruschetta_toast.jpg){: .image-recipe loading=lazy }
+<!-- {cts} name_image=bruschetta_toast.jpeg; (User can specify image name) -->
+![bruschetta_toast.jpeg](./bruschetta_toast.jpeg){: .image-recipe loading=lazy }
 <!-- {cte} -->
 
 ## Ingredients
