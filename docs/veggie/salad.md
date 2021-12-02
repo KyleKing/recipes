@@ -10,12 +10,28 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Recipes
 
+## Salad Ideas
+
 * Feta: arugula/spinach, red onion, tomato, cucumber, feta, dressing (olive oil + lime)
 * Feta+: (above) + strawberries or black beans
 * Strawb: spinach, strawberry, feta, walnuts/pecans/almonds
 * Greek: lettuce, cherry tomatoes, peppers, cucumber, onion, feta, (opt: chickpeas)
 * Caesar: lettuce, Parmesan, chicken, croutons
 * Rotisserie: lettuce, tomato, cucumber, pepper, etc, rotisserie chicken
+
+### General Toppings
+
+* Sliced almonds
+* Flavored Pecan Crumbles
+* Cherry Tomatoes
+* Sliced Celery
+* Green Olives Stuffed with Garlic
+* Canned Chicken
+* Croutons
+* Baby Carrots
+* Cucumber
+* Radishes
+* Sliced Pickled Beets
 
 ## Notes
 

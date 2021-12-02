@@ -2,6 +2,7 @@
 
 ### Feat
 
+- add Garlic Bread
 - implement formatter for TOC based on calcipy
 - replace recipe-formatting with calcipy
 - add falafel recipe
@@ -12,6 +13,7 @@
 
 ### Fix
 
+- drop suffix from TOC table
 - ../ url from TOC is no longer necessary
 - rename isort
 - correct for changes in calcipy  ad148bc
@@ -23,6 +25,7 @@
 
 ### Refactor
 
+- update pizza
 - upgrade type annotations for 3.9
 - move docs to z_dev
 - fix and improve dodo
