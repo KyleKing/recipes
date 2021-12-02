@@ -3,7 +3,7 @@
 > Based on [URL](URL) -- TODO: This was from a cookbook. Page 195?
 
 <!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
-Personal rating: *Not yet rated*
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 <!-- {cte} -->
 
 <!-- {cts} name_image=None; (User can specify image name) -->

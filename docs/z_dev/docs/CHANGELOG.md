@@ -2,6 +2,7 @@
 
 ### Feat
 
+- add beach rice and doit updates
 - add Garlic Bread
 - implement formatter for TOC based on calcipy
 - replace recipe-formatting with calcipy
