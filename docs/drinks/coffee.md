@@ -10,10 +10,18 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
+### Make Coffee
+
 * [ ] 3x heaping tablespoons (*n + 1*)
 * [ ] fill to 2 line for water (*n*)
 * [ ] 2 tsp coffee mate
 * [ ] 1.5 tsp sugar
+
+### Resources
+
+* [ ] Starbucks Dark Roast Unsweetened Iced Coffee
+* [ ] Original Nestle Coffee Mate
+* [ ] Caramel Macchiato International Delight Coffee Creamer
 
 ## Recipe
 
