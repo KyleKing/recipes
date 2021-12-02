@@ -23,3 +23,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * Preheat the oven to 375F
 * Roll the cooked chicken, cheese, beans, and other vegetables with the flap side down, then pour enchilada sauce over top
 * Bake for 25 minutes
+
+## Notes
+
+* See Enchilada recipe variation with sour cream

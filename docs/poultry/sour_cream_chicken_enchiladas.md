@@ -37,3 +37,8 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
     * Remove from the oven and sprinkle with the mozzarella that was set aside
     * Return to the oven and bake until the cheese is melted (~15 min)
 * Serve with the chopped tomatoes, cilantro, and lime wedges with a side of Mexican Rice and warmed charro or other beands
+
+
+## Notes
+
+* See Enchilada recipe variation without sour cream
