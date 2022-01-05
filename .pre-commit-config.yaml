@@ -12,7 +12,7 @@ repos:
     rev: v4.1.0
     hooks:
       - id: check-added-large-files
-      # - id: check-case-conflict
+      # - id: check-case-conflict  # Too Slow...
       - id: check-json
       - id: check-merge-conflict
       - id: check-symlinks
@@ -30,7 +30,7 @@ repos:
         args: ["--remove"]
       - id: forbid-new-submodules
       - id: mixed-line-ending
-        args: ["--fix=lf"]
+        args: ["--fix=auto"]
       - id: pretty-format-json
         args: ["--autofix"]
       # Conflicts with ordering by poetry
@@ -46,17 +46,24 @@ repos:
             "git+https://github.com/KyleKing/cz_legacy.git@bfff2ab4134c26a31f1e7f9c3a8d4bedba824b08",
           ]
         stages: [commit-msg]
+  - repo: https://github.com/MarcoGorelli/absolufy-imports
+    rev: v0.3.0
+    hooks:
+      - id: absolufy-imports
+        args: ["--never"]
   - repo: https://github.com/asottile/pyupgrade
     rev: v2.31.0
     hooks:
       - id: pyupgrade
-        stages: [push]
-        args: ["--keep-runtime-typing"]
+        args: ["--py38-plus", "--keep-runtime-typing"]
   - repo: https://github.com/asottile/add-trailing-comma
     rev: v2.2.1
     hooks:
       - id: add-trailing-comma
-        stages: [push]
+  - repo: https://github.com/hadialqattan/pycln
+    rev: v1.1.0
+    hooks:
+      - id: pycln
   - repo: https://github.com/Yelp/detect-secrets
     rev: v1.1.0
     hooks:
@@ -66,10 +73,11 @@ repos:
         # args: ["--baseline", ".secrets.baseline"]
         exclude: "poetry.lock|cassettes/.*\\.yaml"
         stages: [push]
-  - repo: https://github.com/sondrelg/pep585-upgrade
-    rev: "v1"  # pragma: allowlist secret
-    hooks:
-      - id: upgrade-type-hints
+  # - repo: https://github.com/sondrelg/pep585-upgrade
+  #   rev: "bcc3d077ee46c94bc1dac5f5274e2fb43de570e9"
+  #   hooks:
+  #     # PLANNED: Run when dropping Python 3.8 (& remove BeartypeDecorHint...)
+  #     - id: upgrade-type-hints
   - repo: local
     hooks:
       - id: copier-forbidden-files

@@ -1,10 +1,9 @@
 """Doit Tasks for the MKDocs project."""
 
-from __future__ import annotations
-
 import shlex
 import subprocess  # nosec # noqa S404
 import sys
+from typing import List
 
 from beartype import beartype
 from calcipy.doit_tasks.base import debug_task
@@ -81,7 +80,7 @@ def task_compress() -> DoitTask:
         DoitTask: DoIt task
 
     """
-    def _run_params(pos: list[str]) -> None:
+    def _run_params(pos: List[str]) -> None:
         for pos_arg in pos:
             cmds = shlex.split(f'{_OPTIMIZE_CMD} {pos_arg}')
             logger.info('Running: {cmds}', cmds=cmds)
