@@ -51,5 +51,5 @@ poetry run doit run cl_bump document deploy_docs publish
 | `recipes/tasks.py`     |           39 |        39 |          0 | 0.0%       |
 | **Totals**             |          149 |       142 |          0 | 4.7%       |
 
-Generated on: 2022-01-04T20:40:33.962189
+Generated on: 2022-01-04T21:10:57.746950
 <!-- {cte} -->

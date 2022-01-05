@@ -2,6 +2,7 @@
 
 ### Feat
 
+- new fish and carbonara recipes!
 - minor cleanup and new photos
 - beach enchiladas
 - add beach rice and doit updates

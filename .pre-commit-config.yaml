@@ -55,7 +55,7 @@ repos:
     rev: v2.31.0
     hooks:
       - id: pyupgrade
-        args: ["--py38-plus", "--keep-runtime-typing"]
+        args: ["--py39-plus", "--keep-runtime-typing"]
   - repo: https://github.com/asottile/add-trailing-comma
     rev: v2.2.1
     hooks:
@@ -73,11 +73,10 @@ repos:
         # args: ["--baseline", ".secrets.baseline"]
         exclude: "poetry.lock|cassettes/.*\\.yaml"
         stages: [push]
-  # - repo: https://github.com/sondrelg/pep585-upgrade
-  #   rev: "bcc3d077ee46c94bc1dac5f5274e2fb43de570e9"
-  #   hooks:
-  #     # PLANNED: Run when dropping Python 3.8 (& remove BeartypeDecorHint...)
-  #     - id: upgrade-type-hints
+  - repo: https://github.com/sondrelg/pep585-upgrade
+    rev: "v1"
+    hooks:
+      - id: upgrade-type-hints
   - repo: local
     hooks:
       - id: copier-forbidden-files

@@ -1,9 +1,10 @@
 """Format Markdown Files for MKDocs."""
+from collections.abc import Callable
 
 from collections import defaultdict
 from copy import deepcopy
 from pathlib import Path
-from typing import Callable, Dict, List, Optional, Union
+from typing import Optional, Union
 
 import pandas as pd
 from beartype import beartype
@@ -85,7 +86,7 @@ def _format_image_md(name_image: Optional[str], attrs: str) -> str:
 
 @beartype
 @contextmanager
-def _configure_recipe_lookup(new_lookup: Dict[str, Callable[[str, Path], str]]):
+def _configure_recipe_lookup(new_lookup: dict[str, Callable[[str, Path], str]]):
     """Configure the handler lookup for recipe tasks.
 
     Args:
@@ -106,7 +107,7 @@ def _configure_recipe_lookup(new_lookup: Dict[str, Callable[[str, Path], str]]):
 
 
 @beartype
-def _handle_star_section(line: str, path_md: Path) -> List[str]:
+def _handle_star_section(line: str, path_md: Path) -> list[str]:
     """Format the star rating as markdown.
 
     Args:
@@ -150,7 +151,7 @@ def _parse_rel_file(line: str, path_md: Path, key: str) -> Path:
 
 
 @beartype
-def _handle_image_section(line: str, path_md: Path) -> List[str]:
+def _handle_image_section(line: str, path_md: Path) -> list[str]:
     """Format the string section with the specified image name.
 
     Args:
@@ -175,7 +176,7 @@ def _handle_image_section(line: str, path_md: Path) -> List[str]:
 
 
 @beartype
-def _format_toc_table(toc_records: List[Dict[str, Union[str, int]]]) -> List[str]:
+def _format_toc_table(toc_records: list[dict[str, Union[str, int]]]) -> list[str]:
     """Format TOC data as a markdown table.
 
     Args:
@@ -193,7 +194,7 @@ def _format_toc_table(toc_records: List[Dict[str, Union[str, int]]]) -> List[str
 @beartype
 def _create_toc_record(
     path_recipe: Path, path_img: Path, rating: Union[str, int],
-) -> Dict[str, Union[str, int]]:
+) -> dict[str, Union[str, int]]:
     """Create the dictionary summarizing data for the table of contents.
 
     Args:
@@ -224,7 +225,7 @@ class _TOCRecipes:  # noqa: H601
         self.recipes = defaultdict(dict)
 
     @beartype
-    def store_star(self, line: str, path_md: Path) -> List[str]:
+    def store_star(self, line: str, path_md: Path) -> list[str]:
         """Store the star rating.
 
         Args:
@@ -239,7 +240,7 @@ class _TOCRecipes:  # noqa: H601
         return []
 
     @beartype
-    def store_image(self, line: str, path_md: Path) -> List[str]:
+    def store_image(self, line: str, path_md: Path) -> list[str]:
         """Store image name.
 
         Args:
