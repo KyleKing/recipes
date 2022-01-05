@@ -6,8 +6,8 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- {cte} -->
 
-<!-- {cts} name_image=leftover-ricotta-pasta.jpg; (User can specify image name) -->
-![leftover-ricotta-pasta.jpg](./leftover-ricotta-pasta.jpg){: .image-recipe loading=lazy }
+<!-- {cts} name_image=leftover_ricotta_pasta.jpg; (User can specify image name) -->
+![leftover_ricotta_pasta.jpg](./leftover_ricotta_pasta.jpg){: .image-recipe loading=lazy }
 <!-- {cte} -->
 
 ## Ingredients

@@ -2,6 +2,8 @@
 
 ### Feat
 
+- minor cleanup and new photos
+- beach enchiladas
 - add beach rice and doit updates
 - add Garlic Bread
 - implement formatter for TOC based on calcipy
@@ -14,6 +16,8 @@
 
 ### Fix
 
+- sync pre-commit and delay PEP585
+- restore Python 3.9-safe type annotations
 - drop suffix from TOC table
 - ../ url from TOC is no longer necessary
 - rename isort
@@ -26,6 +30,7 @@
 
 ### Refactor
 
+- minor update
 - update pizza
 - upgrade type annotations for 3.9
 - move docs to z_dev

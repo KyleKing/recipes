@@ -3,7 +3,7 @@
 from collections import defaultdict
 from copy import deepcopy
 from pathlib import Path
-from typing import Optional, Union, Dict, List, Callable
+from typing import Callable, Dict, List, Optional, Union
 
 import pandas as pd
 from beartype import beartype

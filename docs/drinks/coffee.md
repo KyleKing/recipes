@@ -10,19 +10,16 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-### Make Coffee
-
-* [ ] 3x heaping tablespoons (*n + 1*)
-* [ ] fill to 2 line for water (*n*)
-* [ ] 2 tsp coffee mate
-* [ ] 1.5 tsp sugar
-
-### Resources
-
-* [ ] Starbucks Dark Roast Unsweetened Iced Coffee
+* [ ] Starbucks Dark Roast Unsweetened Iced Coffee (Purple Band, Green Lid)
+* [ ] Stok Unsweetened Extra Bold Cold Brew (Vertical Purple Strip)
 * [ ] Original Nestle Coffee Mate
 * [ ] Caramel Macchiato International Delight Coffee Creamer
 
 ## Recipe
 
 * Use the formula to make *n* cups of coffee
+	* 3x heaping tablespoons (*n + 1*)
+	* fill to 2 line for water (*n*)
+	* 2 tsp coffee mate
+	* 1.5 tsp sugar
+* TODO: To make ice coffee...
