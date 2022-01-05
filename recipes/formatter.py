@@ -1,7 +1,10 @@
 """Format Markdown Files for MKDocs."""
 
-from collections import defaultdict
+from __future__ import annotations
+
 from collections.abc import Callable
+
+from collections import defaultdict
 from copy import deepcopy
 from pathlib import Path
 from typing import Optional, Union
@@ -84,8 +87,9 @@ def _format_image_md(name_image: Optional[str], attrs: str) -> str:
     return '<!-- TODO: Capture image -->'  # noqa: T101
 
 
+@beartype
 @contextmanager
-def _configure_recipe_lookup(new_lookup: dict[str, Callable[[str, Path], str]]) -> None:
+def _configure_recipe_lookup(new_lookup: dict[str, Callable[[str, Path], str]]):
     """Configure the handler lookup for recipe tasks.
 
     Args:
@@ -114,7 +118,7 @@ def _handle_star_section(line: str, path_md: Path) -> list[str]:
         path_md: Path to the markdown file
 
     Returns:
-        list[str]: updated recipe string markdown
+        List[str]: updated recipe string markdown
 
     """
     rating = int(_parse_var_comment(line)['rating'])
@@ -158,7 +162,7 @@ def _handle_image_section(line: str, path_md: Path) -> list[str]:
         path_md: Path to the markdown file
 
     Returns:
-        list[str]: updated recipe string markdown
+        List[str]: updated recipe string markdown
 
     """
     path_image = _parse_rel_file(line, path_md, 'name_image')
@@ -182,7 +186,7 @@ def _format_toc_table(toc_records: list[dict[str, Union[str, int]]]) -> list[str
         toc_records: list of records
 
     Returns:
-        list[str]: the datatable as a list of lines
+        List[str]: the datatable as a list of lines
 
     """
     # Format table for Github Markdown
@@ -202,7 +206,7 @@ def _create_toc_record(
         rating: recipe user-rating
 
     Returns:
-        dict[str, str]: single records
+        Dict[str, str]: single records
 
     """
     link = f'[{_format_titlecase(path_recipe.stem)}](./{path_recipe.name})'
@@ -214,14 +218,16 @@ def _create_toc_record(
     }
 
 
+# TODO: Convert to attributes class
 class _TOCRecipes:  # noqa: H601
     """Store recipe metadata for TOC."""
 
+    @beartype
     def __init__(self, sub_dir: Path) -> None:
-
         self.sub_dir = sub_dir
         self.recipes = defaultdict(dict)
 
+    @beartype
     def store_star(self, line: str, path_md: Path) -> list[str]:
         """Store the star rating.
 
@@ -230,12 +236,13 @@ class _TOCRecipes:  # noqa: H601
             path_md: Path to the markdown file
 
         Returns:
-            list[str]: empty list
+            List[str]: empty list
 
         """
         self.recipes[path_md.as_posix()]['rating'] = _parse_var_comment(line)['rating']
         return []
 
+    @beartype
     def store_image(self, line: str, path_md: Path) -> list[str]:
         """Store image name.
 
@@ -244,7 +251,7 @@ class _TOCRecipes:  # noqa: H601
             path_md: Path to the markdown file
 
         Returns:
-            list[str]: empty list
+            List[str]: empty list
 
         """
         path_image = _parse_rel_file(line, path_md, 'name_image')
@@ -252,6 +259,7 @@ class _TOCRecipes:  # noqa: H601
 
         return []
 
+    @beartype
     def write_toc(self) -> None:
         """Write the table of contents."""
         if self.recipes:

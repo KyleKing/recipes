@@ -1,5 +1,7 @@
 """Doit Tasks for the MKDocs project."""
 
+from __future__ import annotations
+
 import shlex
 import subprocess  # nosec # noqa S404
 import sys
