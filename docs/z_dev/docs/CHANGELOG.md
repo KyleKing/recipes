@@ -17,6 +17,7 @@
 
 ### Fix
 
+- the earlier PEP585 issues were an error with poetry using 3.8 and not 3.9
 - sync pre-commit and delay PEP585
 - restore Python 3.9-safe type annotations
 - drop suffix from TOC table

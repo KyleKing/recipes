@@ -2,7 +2,7 @@
 
 from loguru import logger
 
-__version__ = '2021.0.2.0'
+__version__ = '2021.0.3.0'
 __pkg_name__ = 'recipes'
 
 logger.disable(__pkg_name__)
