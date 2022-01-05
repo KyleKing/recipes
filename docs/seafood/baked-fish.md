@@ -10,13 +10,8 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-- [ ] __Basic__
-    - [ ] salt and pepper
-    - [ ] olive oil
-- [ ] __Paprika__
-    - [ ] salt and pepper
-    - [ ] butter
-    - [ ] paprika
+- [ ] __Olive Oil and Lemon__: [this is so good that it gets it own page](./baked-fish-and-asparagus) (Can be made with asparagus and tomato)
+- [ ] __Chef's John's Salmon__ [is also has a separate page ](./chef-johns-salmon)
 - [ ] __Lime-Baked__ (Based on [this](https://juliasalbum.com/easy-baked-salmon-garlic-lime-butter-sauce/) and [this](https://www.cookingclassy.com/baked-salmon-brown-sugar-lime/))
     - [ ] 1 lb fillet
     - [ ] In a bowl, mix:
@@ -40,7 +35,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * Cover a baking sheet with tin foil and prep the fish
     * For the _Lime-Baked_ variant, mix all of the spices in a small bowl and brush onto the fish. Then place the butter slices on top of the fish
     * For the _Tomato Basil_ variant, drizzle the olive oil, sprinkle the basil and pepper, add the tomatoes, then sprinkle with the Parmesan cheese
-* Bake 25-30 minutes for large fillets (>1 inch tall) and 15-20 for thin ones
+* Bake for 15-25 min depending on thickness with most being around 20 min
 
 !!! note
     For *thin* frozen fillet, bake at 450F for 4 minutes, then flip and bake for 8-12 min ([frozen recipe source](http://cookthestory.com/how-to-cook-fish-from-frozen/))
