@@ -74,7 +74,7 @@ repos:
         exclude: "poetry.lock|cassettes/.*\\.yaml"
         stages: [push]
   - repo: https://github.com/sondrelg/pep585-upgrade
-    rev: "v1"
+    rev: v1
     hooks:
       - id: upgrade-type-hints
   - repo: local
