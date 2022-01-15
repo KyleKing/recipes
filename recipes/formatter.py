@@ -1,7 +1,6 @@
 """Format Markdown Files for MKDocs."""
-from collections.abc import Callable
-
 from collections import defaultdict
+from collections.abc import Callable
 from copy import deepcopy
 from pathlib import Path
 from typing import Optional, Union

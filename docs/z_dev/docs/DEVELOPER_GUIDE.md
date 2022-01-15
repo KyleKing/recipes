@@ -46,10 +46,10 @@ poetry run doit run cl_bump document deploy_docs publish
 <!-- {cts} COVERAGE -->
 | File                   |   Statements |   Missing |   Excluded | Coverage   |
 |:-----------------------|-------------:|----------:|-----------:|:-----------|
-| `recipes/__init__.py`  |            7 |         0 |          0 | 100.0%     |
-| `recipes/formatter.py` |          103 |       103 |          0 | 0.0%       |
-| `recipes/tasks.py`     |           39 |        39 |          0 | 0.0%       |
-| **Totals**             |          149 |       142 |          0 | 4.7%       |
+| `recipes/__init__.py`  |            4 |         0 |          0 | 100.0%     |
+| `recipes/formatter.py` |          104 |       104 |          0 | 0.0%       |
+| `recipes/tasks.py`     |           38 |        38 |          0 | 0.0%       |
+| **Totals**             |          146 |       142 |          0 | 2.7%       |
 
-Generated on: 2022-01-04T21:10:57.746950
+Generated on: 2022-01-15T11:15:11.574820
 <!-- {cte} -->
