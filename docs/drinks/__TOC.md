@@ -31,3 +31,4 @@
 | [Watermelon Margarita](./watermelon_margarita.md)               |        6 | ![watermelon_margarita.jpg](./watermelon_margarita.jpg){: .image-toc loading=lazy }             |
 | [White Lady](./white_lady.md)                                   |        3 | <!-- TODO: Capture image -->                                                                    |
 | [Wine](./wine.md)                                               |        6 | ![wine.jpg](./wine.jpg){: .image-toc loading=lazy }                                             |
+| [Winter Whiskey Sour](./winter_whiskey_sour.md)                 |        8 | <!-- TODO: Capture image -->                                                                    |
