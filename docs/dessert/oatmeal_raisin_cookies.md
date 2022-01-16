@@ -31,7 +31,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Recipe
 
-* Preheat oven to 350'F
+* Preheat oven to 350F
 * Whisk part 1. With a wooden spoon combine part 2. Then in the large bowl, combine 1 and 2 then 3
 * Bake for 12 minutes (or 14 from frozen) on a light colored cooking sheet. When done, let sit for a few minutes then place on a cooling rack
 
@@ -39,4 +39,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 * Source: page 767-768 of the Joy of Cooking
 * I typically bake half (1 cookie sheet of 16-24 cookies) then freeze the rest of the dough to make at a later date
-* For oatmeal chocolate chip cookies, ignore the nutmeg and cinnamon and use 1 cup chocolate chips instead of raisins
+* Also see the main cookie recipe: [Chocolate Chip Cookies](./chocolate_chip_cookies.md)
