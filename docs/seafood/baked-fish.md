@@ -10,8 +10,8 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-- [ ] __Olive Oil and Lemon__: [this is so good that it gets it own page](../baked-fish-and-asparagus) (Can be made with asparagus and tomato)
-- [ ] __Chef's John's Salmon__ [is also has a separate page ](../chef-johns-salmon)
+- [ ] __Olive Oil and Lemon__: [this is so good that it gets it own page](./baked-fish-and-asparagus.md) (Can be made with asparagus and tomato)
+- [ ] __Chef's John's Salmon__ [is also has a separate page ](./chef-johns-salmon.md)
 - [ ] __Lime-Baked__ (Based on [this](https://juliasalbum.com/easy-baked-salmon-garlic-lime-butter-sauce/) and [this](https://www.cookingclassy.com/baked-salmon-brown-sugar-lime/))
     - [ ] 1 lb fillet
     - [ ] In a bowl, mix:

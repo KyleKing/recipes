@@ -28,7 +28,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Recipe
 
 * Create the Dough
-    * Follow the [Base Recipe for No-Knead Bread](../base_recipe_for_no_knead_bread) through step 8
+    * Follow the [Base Recipe for No-Knead Bread](./base_recipe_for_no_knead_bread.md) through step 8
 * Shape
     * Oil a 16x24 in rimmed baking sheet
     * Pull the dough out of the bowl and drop directly on the sheet
