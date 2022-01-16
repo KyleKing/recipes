@@ -1,5 +1,11 @@
 ## Unreleased
 
+### Feat
+
+- initial hummus recipe
+- standardize cookie recipes
+- new Whiskey Sour recipe
+
 ## 2021.0.3.0 (2022-01-04)
 
 ### Feat
