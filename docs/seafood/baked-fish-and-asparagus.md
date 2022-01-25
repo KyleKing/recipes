@@ -12,8 +12,10 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 - In a small bowl, whisk together
     - [ ] Olive Oil (~1/4 cup)
-    - [ ] 1 tbsp Lemon Juice
-    - [ ] 1/4 tsp red pepper flakes (go light!)
+    - [ ] 1/8 tsp of paprika
+    - [ ] 1/8 tsp cayenne pepper
+    - [ ] 2/3 tbsp lemon juice
+    - [ ] pinch of salt
 - [ ] Salmon filet
 - [ ] Tomato, thinly sliced
 - [ ] (Optional) Asparagus
@@ -24,12 +26,11 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] Salt and Pepper
 - [ ] Could also add Parsely and/or Basil
 
-
 ## Recipe
 
-* Preheat oven to 400F
-* Whisk together the olive oil and lemon juice
-* Cover a baking sheet with tin foil and lay out the fish, asparagus, tomatoes, and/or any other baked items
-* Spread out the oil with a spoon and roll to coat. *
-* Sprinkle on the additional herbs and cheese
-* Bake for 15-25 min depending on thickness with most being around 20 min
+- Preheat oven to 400F
+- Whisk together the olive oil and lemon juice
+- Cover a baking sheet with tin foil and lay out the fish, asparagus, tomatoes, and/or any other baked items
+- Spread out the oil with a spoon and roll to coat. *
+- Sprinkle on the additional herbs and cheese
+- Bake for 15-25 min depending on thickness with most being around 20 min

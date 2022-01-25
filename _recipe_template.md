@@ -12,12 +12,12 @@ Personal rating: *Not yet rated*
 
 ## Ingredients
 
-* [ ] Ingredients
+- [ ] Ingredients
 
 ## Recipe
 
-* Recipe_Steps
+- Recipe_Steps
 
 ## Notes
 
-* Optional_Notes
+- Optional_Notes

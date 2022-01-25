@@ -14,32 +14,35 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] 4 oz dried stir-fry noodles (we used thick stir-fry rice noodles)
-* [ ] 1/4 cup low-sodium soy sauce
-* [ ] 1/2 cup fresh orange juice (from 2 large oranges)
-* [ ] 1 tbsp cornstarch
-* [ ] 1 tsp Sriracha
-* [ ] 1 tbsp dark miso
-* [ ] 1 tbsp pure sesame oil (may substitute a neutral oil such as grape seed or canola)
-* [ ] 1/2 large sweet onion, thinly sliced
-* [ ] 1/2 large red bell pepper, seeded and thinly sliced
-* [ ] 1 yellow bell pepper, seeded and thinly sliced
-* [ ] 2 large broccoli crowns (1.5 pounds total), cut into bite-size florets
-* [ ] 1/2 cup roasted, unsalted whole cashews
-* [ ] 2 pinches kosher salt
-* [ ] 1/4 cup water
-* [ ] 2 cloves garlic, thinly sliced
-* [ ] One-inch piece peeled fresh ginger root, minced or grated (about 1.5 tsp)
+* Noodles
+    * [ ] 8 oz dried stir-fry noodles (about 1/2 bag) such as thick stir-fry rice noodles, dragon noodles, etc.
+* Stir Fry
+    * [ ] 1 tbsp refined sesame oil, grape, or canola
+    * [ ] 1/2 large sweet onion, thinly sliced
+    * [ ] 2 large broccoli crowns (1.5 pounds total), cut into bite-size florets
+    * [ ] 1/2 large red bell pepper, seeded and thinly sliced
+    * [ ] 1 yellow bell pepper, seeded and thinly sliced
+    * [ ] 1/2 cup roasted, unsalted whole cashews
+* Sauce
+    * [ ] 5 tbsp low-sodium soy sauce
+    * [ ] 1/2 cup fresh orange juice (from 2 large oranges)
+    * [ ] 1 tbsp cornstarch
+    * [ ] 1 tsp Sriracha
+* Finishing
+    * [ ] 1/4 cup water
+    * [ ] 2 cloves garlic, thinly sliced
+    * [ ] 1.5 tsp ground ginger
 
 ## Recipe
 
-* Whisk together the soy sauce, orange juice, cornstarch, Sriracha, and miso in a medium bowl
-* Start a pot for the noodles, and cook in parallel following the package directions (drain when done)
+* Chop the vegetables
+* Start a pot for the noodles and cook in parallel following the package directions (drain when done)
 * Add oil to a large skillet or saute pan over high heat. Add the onion and stir-fry for 2 minutes until starts to brown
-    - Add the red and yellow bell peppers, broccoli, cashews, and salt. Stir-fry for 5 minutes, or until the thickest broccoli stems are tender and the cashews are slightly blackened
-    - Reduce the heat to low. Add the water, stirring until it evaporates. This helps the pan to cool down. Add the garlic and ginger, then stir-fry for 1 minute
-* Turn off the heat. Add the soy sauce mixture, stirring until it thickens into a glossy sauce
-* Add the drained noodles and stir gently until everything is evenly coated
+    * Add the red and yellow bell peppers, broccoli, cashews, and salt. Stir-fry for 5 minutes, or until the thickest broccoli stems are tender and the cashews are slightly blackened
+    * Reduce the heat to low. Add the water, stirring until it evaporates. This helps the pan to cool down. Add the garlic and ginger, then stir-fry for 1 last minute
+* Whisk together the soy sauce, orange juice, cornstarch, and Sriracha in a medium bowl
+    * Turn off the heat. Add the soy sauce mixture, stirring until it thickens into a glossy sauce
+    * Add the drained noodles and stir gently until everything is evenly coated
 
 ## Notes
 

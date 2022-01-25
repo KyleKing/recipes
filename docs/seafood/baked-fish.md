@@ -31,11 +31,11 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Recipe
 
-* Preheat oven to 400F
-* Cover a baking sheet with tin foil and prep the fish
-    * For the _Lime-Baked_ variant, mix all of the spices in a small bowl and brush onto the fish. Then place the butter slices on top of the fish
-    * For the _Tomato Basil_ variant, drizzle the olive oil, sprinkle the basil and pepper, add the tomatoes, then sprinkle with the Parmesan cheese
-* Bake for 15-25 min depending on thickness with most being around 20 min
+- Preheat oven to 400F
+- Cover a baking sheet with tin foil and prep the fish
+    - For the _Lime-Baked_ variant, mix all of the spices in a small bowl and brush onto the fish. Then place the butter slices on top of the fish
+    - For the _Tomato Basil_ variant, drizzle the olive oil, sprinkle the basil and pepper, add the tomatoes, then sprinkle with the Parmesan cheese
+- Bake for 15-25 min depending on thickness with most being around 20 min
 
 !!! note
     For *thin* frozen fillet, bake at 450F for 4 minutes, then flip and bake for 8-12 min ([frozen recipe source](http://cookthestory.com/how-to-cook-fish-from-frozen/))
