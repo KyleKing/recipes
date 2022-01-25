@@ -37,7 +37,7 @@ repos:
       # - id: requirements-txt-fixer
       - id: trailing-whitespace
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v2.20.3
+    rev: v2.20.4
     hooks:
       - id: commitizen
         # yamllint disable-line rule:line-length
@@ -47,7 +47,7 @@ repos:
           ]
         stages: [commit-msg]
   - repo: https://github.com/MarcoGorelli/absolufy-imports
-    rev: v0.3.0
+    rev: v0.3.1
     hooks:
       - id: absolufy-imports
         args: ["--never"]

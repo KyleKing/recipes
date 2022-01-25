@@ -8,7 +8,6 @@ ignore_patterns = ["__TOC.md"]
 [tool.commitizen]
 name = "cz_legacy"
 version = "0.3.0"
-tag_format = "2021.$version"
 version_files = ["pyproject.toml", "recipes/__init__.py", "appveyor.yml"]
 change_type_order = [
     "BREAKING CHANGE",
@@ -38,7 +37,7 @@ multi_line_output = 5
 
 [tool.poetry]
 name = "recipes"
-version = "2021.0.3.0"
+version = "0.3.0"
 description = "Recipe Website"
 license = "MIT"
 authors = ["Kyle King <dev.act.kyle@gmail.com>"]
@@ -60,7 +59,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.9"
-calcipy = "^2021.0.7.0"
+calcipy = "^0.10.0"
 optimize-images = ">=1.4.0"
 pillow = ">=8.4.0"
 
