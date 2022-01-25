@@ -3,7 +3,7 @@
 > Based on [https://www.washingtonpost.com/recipes/chickpea-salad-toasts-poached-egg/17012](https://www.washingtonpost.com/recipes/chickpea-salad-toasts-poached-egg/17012)
 
 <!-- {cts} rating=3; (User can specify rating on scale of 1-5) -->
-Personal rating: *Not yet rated*
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 <!-- {cte} -->
 
 <!-- {cts} name_image=chickpea_salad_toasts_with_poached_egg.jpeg; (User can specify image name) -->

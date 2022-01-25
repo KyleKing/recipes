@@ -6,8 +6,8 @@
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 <!-- {cte} -->
 
-<!-- {cts} name_image=None; (User can specify image name) -->
-<!-- TODO: Capture image -->
+<!-- {cts} name_image=hummus.jpeg; (User can specify image name) -->
+![hummus.jpeg](./hummus.jpeg){: .image-recipe loading=lazy }
 <!-- {cte} -->
 
 ## Ingredients
@@ -37,4 +37,3 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 * In a food process, combine the first set of ingredients until combined, then add the chickpeas and process until smooth
 * Serve at room temperature. Can serve in a shallow dish and make a small well for the optional toppings
-
