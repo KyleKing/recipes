@@ -1,6 +1,6 @@
 # Hummus
 
-> Loosely based on [this generic recipe](https://www.unicornsinthekitchen.com/homemade-harissa-hummus/)
+> Based on this [recipe from the Washington Post](https://www.washingtonpost.com/recipes/speedy-homemade-hummus/16549/). Another alternative is this [recipe from the NYT](https://cooking.nytimes.com/recipes/12703-hummus)
 
 <!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
@@ -12,31 +12,29 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] Process
-    * [ ] 1 can chickpea
-    * [ ] 1/3 cup tahini
-    * [ ] 2 garlic cloves
-    * [ ] 1 tbsp olive oil
+* [ ] Process (1 Minute)
+    * [ ] 3/4 cup tahini (shake to mix)
+    * [ ] 1/2 cup water
+    * [ ] 3 tbsp lemon juice
+    * [ ] 1/2 tsp cumin
     * [ ] 1/2 tsp salt
-    * [ ] 1.5 tbsp lemon juice
-    * [ ] (Recommended) 2-3 tbsp Harissa, additional for topping
-* [ ] Optional Additional Seasonings
-    * [ ] Cumin, Coriander, Caraway, Cayenne Pepper
-    * [ ] Smoked Paprika
-    * [ ] Chopped Mint
+    * [ ] 2 garlic cloves
+    * [ ] 1 tbsp extra virgin olive oil
+    * [ ] (Optional) 2-3 tbsp Harissa, additional for topping
+    * [ ] Optional Additional Seasonings
+        * Cumin, Coriander, Caraway, Cayenne Pepper, Smoked Paprika, Chopped Mint
+* [ ] Process (3 Minutes)
+    * [ ] 2 can chickpea, rinsed and drained
+    * [ ] (Optional) up to 1/4 cup of water if too thick
 * [ ] Optional Toppings
-    * [ ] Harissa
-    * [ ] Roasted Red Peppers
-    * [ ] Parsley
+    * Extra Virgin Olive Oil
+    * Harissa
+    * Parsley
+    * Za'atar
+    * Roasted Red Peppers
 
 ## Recipe
 
-* Place chickpeas, tahini, and garlic in a food processor. Blend until they start incorporating
-    * Optionally mix in 2-3 tbsp Harissa
-* Add in lemon juice, salt, and olive oil. Blend until fully combined and smooth
-* Top with Harissa
+* In a food process, combine the first set of ingredients until combined, then add the chickpeas and process until smooth
+* Serve at room temperature. Can serve in a shallow dish and make a small well for the optional toppings
 
-## Notes
-
-* If too thick, add water one tbsp at a time and process until appropriate
-* Make sure to shake the tahini
