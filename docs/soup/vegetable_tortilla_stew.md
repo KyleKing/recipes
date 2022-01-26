@@ -1,11 +1,11 @@
-# vegetable_tortilla_stew
+# Vegetable Tortilla Stew
 
 > Based on [Chrissy Teigen Cravings], pg. ???
 
   [Chrissy Teigen Cravings]: https://www.penguinrandomhouse.com/books/252973/cravings-by-chrissy-teigen-with-adeena-sussman/
 
-<!-- {cts} rating=0; (User can specify rating on scale of 1-5) -->
-Personal rating: *Not yet rated*
+<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 <!-- {cte} -->
 
 <!-- {cts} name_image=vegetable_tortilla_stew.jpg; (User can specify image name) -->
@@ -21,7 +21,7 @@ Personal rating: *Not yet rated*
 * [ ] 1 green bell pepper, diced
 * [ ] 1 jalapeño pepper, finely diced (include seeds)
 * [ ] 4 cloves garlic, minced
-* [ ] 2 tbsp chili powder
+* [ ] 2 tsp chili powder
 * [ ] 1 tbsp ground cumin
 * [ ] 1/2 tsp cayenne pepper
 * [ ] 2 tsp salt

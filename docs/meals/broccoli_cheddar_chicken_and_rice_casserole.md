@@ -24,14 +24,13 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 * [ ] 1/2 cup dry orzo pasta
 * [ ] 2 tbsp fresh thyme leaves, plus more for topping
 * [ ] 3.5 cups low sodium chicken broth
-* [ ] 3 cups broccoli florets (fresh or frozen), roughly chopped
+* [ ] 3 cups broccoli florets (fresh or frozen), roughly chopped (or other substitute frozen vegetable)
 * [ ] 2 bay leaves
 * [ ] 1/2 teaspoon garlic powder
 * [ ] 1/2 teaspoon cayenne pepper, more or less to taste
 * [ ] 1/2 lemon, zest
 * [ ] 1/2 cup whole milk
 * [ ] 1.5 cups shredded sharp cheddar cheese
-* [ ] peas or other frozen vegetables. Pretty much anything works
 
 ## Recipe
 
