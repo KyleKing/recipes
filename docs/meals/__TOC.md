@@ -2,7 +2,7 @@
 
 | Link                                                                                            |   Rating | Image                                                                                                                               |
 |:------------------------------------------------------------------------------------------------|---------:|:------------------------------------------------------------------------------------------------------------------------------------|
-| [Broccoli Cheddar Chicken And Rice Casserole](./broccoli_cheddar_chicken_and_rice_casserole.md) |        5 | ![broccoli_cheddar_chicken_and_rice_casserole.jpeg](./broccoli_cheddar_chicken_and_rice_casserole.jpeg){: .image-toc loading=lazy } |
+| [Broccoli Cheddar Chicken And Rice Casserole](./broccoli_cheddar_chicken_and_rice_casserole.md) |        6 | ![broccoli_cheddar_chicken_and_rice_casserole.jpeg](./broccoli_cheddar_chicken_and_rice_casserole.jpeg){: .image-toc loading=lazy } |
 | [Burgers](./burgers.md)                                                                         |        5 | ![burgers.jpeg](./burgers.jpeg){: .image-toc loading=lazy }                                                                         |
 | [Grilled Cheese](./grilled_cheese.md)                                                           |        6 | ![grilled_cheese.jpeg](./grilled_cheese.jpeg){: .image-toc loading=lazy }                                                           |
 | [Gyros](./gyros.md)                                                                             |        4 | ![gyros.jpg](./gyros.jpg){: .image-toc loading=lazy }                                                                               |
