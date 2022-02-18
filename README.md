@@ -2,4 +2,4 @@
 
 Recipe Website
 
-Full documentation, here: [./docs/z_dev](./docs/z_dev)
+Documentation can be found on [Github (./docs)](./docs), [PyPi](https://pypi.org/project/recipes/), or [Hosted](https://recipes.kyleking.me/)!

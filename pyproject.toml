@@ -64,4 +64,9 @@ optimize-images = ">=1.4.0"
 pillow = ">=8.4.0"
 
 [tool.poetry.dev-dependencies]
-calcipy = { version = "*", extras = ["dev", "lint", "test", "commitizen_legacy"] }
+calcipy = { version = "*", extras = [
+    "dev",
+    "lint",
+    "test",
+    "commitizen_legacy",
+] }

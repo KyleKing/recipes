@@ -139,8 +139,9 @@ dmypy.json
 # ----------------------------------------------------------------------------------------------------------------------
 # Common Rules
 
+# General
+.r*
 .vscode/*
-.DS_Store
 *.csv
 *.doc*
 *.jsonl
@@ -158,6 +159,7 @@ dmypy.json
 # SQLite DB files (Note: use *.dvc to check these into git)
 *.db
 *.sqlite
+*.sqlite-journal
 
 # Other Python
 *.whl
@@ -168,6 +170,9 @@ setup.py
 **/coverage*
 **/cov_html/
 coverage.json
+
+# Other Custom Pytest
+/tests/_tmp_cache/**
 
 # Static Type Checkers
 .pytype/*
@@ -181,12 +186,17 @@ coverage.json
 # Built Outputs
 /releases/
 
-# Other Calcipy Ignores
-/tests/_tmp_cache
-
 # Ignore auto-created files by documentation tasks
 /docs/z_dev/modules/*.md
 /docs/z_dev/modules/**/*.md
+
+# Allow List
+!/docs/z_dev/*.*
+!supporting/**
+!tests/data/**
+
+# Ensure *.pyc files are still ignored even if in tests/data directory
+*.pyc
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Custom Rules
