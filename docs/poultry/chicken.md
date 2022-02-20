@@ -34,4 +34,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - Flip and bake for 10 more minutes
 
 !!! tip
-Cook for 12 min/8 min for thinner pieces
+  Cook for 12 min/8 min for thinner pieces

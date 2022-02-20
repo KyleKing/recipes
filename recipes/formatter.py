@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pandas as pd
 from beartype import beartype
-from beartype.typing import Optional, Union, List
+from beartype.typing import List, Optional, Union
 from calcipy.doit_tasks.doc import _parse_var_comment, _ReplacementMachine, write_autoformatted_md_sections
 from calcipy.doit_tasks.doit_globals import DG
 from calcipy.file_helpers import get_doc_dir, read_lines

@@ -34,4 +34,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - Break into bite size chunks! Can be stored in the fridge or on the counter
 
 !!! warning
-FYI, choose a backing sheet that will fit in your freezer
+  FYI, choose a baking sheet that will fit in your freezer

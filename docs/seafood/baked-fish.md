@@ -42,4 +42,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - Bake for 15-25 min depending on thickness with most being around 20 min
 
 !!! note
-For *thin* frozen fillet, bake at 450F for 4 minutes, then flip and bake for 8-12 min ([frozen recipe source](http://cookthestory.com/how-to-cook-fish-from-frozen/))
+  For *thin* frozen fillet, bake at 450F for 4 minutes, then flip and bake for 8-12 min ([frozen recipe source](http://cookthestory.com/how-to-cook-fish-from-frozen/))
