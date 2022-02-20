@@ -2,7 +2,7 @@
 
 # Pina Colada
 
-> Based on [https://www.washingtonpost.com/recipes/pina-colada/10696/](https://www.washingtonpost.com/recipes/pina-colada/10696/)
+> Based on [https://www.washingtonpost.com/recipes/pina-colada/10696/](https://www.washingtonpost.com/recipes/pina-colada/10696/) and [https://www.thecocktaildb.com/drink.php?c=17207](https://www.thecocktaildb.com/drink.php?c=17207)
 
 <!-- {cts} rating=0; (User can specify rating on scale of 1-5) -->
 Personal rating: *Not yet rated*
