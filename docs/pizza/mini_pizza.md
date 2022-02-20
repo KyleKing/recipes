@@ -1,11 +1,15 @@
 # Mini Pizza
 
 <!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=mini_pizza.jpg; (User can specify image name) -->
+
 ![mini_pizza.jpg](./mini_pizza.jpg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

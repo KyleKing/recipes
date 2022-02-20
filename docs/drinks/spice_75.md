@@ -3,11 +3,15 @@
 > Based on [https://www.thecocktaildb.com/drink/178322-Spice-75](https://www.thecocktaildb.com/drink/178322-Spice-75)
 
 <!-- {cts} rating=0; (User can specify rating on scale of 1-5) -->
+
 Personal rating: *Not yet rated*
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=None; (User can specify image name) -->
+
 <!-- TODO: Capture image -->
+
 <!-- {cte} -->
 
 ## Ingredients

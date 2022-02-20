@@ -3,11 +3,15 @@
 > Based on [https://www.washingtonpost.com/lifestyle/food/a-make-ahead-baked-oatmeal-that-tastes-like-carrot-cake/2015/12/30/f3a80dba-a9bf-11e5-bff5-905b92f5f94b_story.html?itid=lk_inline_manual_8](https://www.washingtonpost.com/lifestyle/food/a-make-ahead-baked-oatmeal-that-tastes-like-carrot-cake/2015/12/30/f3a80dba-a9bf-11e5-bff5-905b92f5f94b_story.html?itid=lk_inline_manual_8)
 
 <!-- {cts} rating=0; (User can specify rating on scale of 1-5) -->
+
 Personal rating: *Not yet rated*
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=None; (User can specify image name) -->
+
 <!-- TODO: Capture image -->
+
 <!-- {cte} -->
 
 ## Ingredients

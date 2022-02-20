@@ -1,11 +1,15 @@
 # Spiked Apple Cider
 
 <!-- {cts} rating=3; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=spiked_cider.jpeg; (User can specify image name) -->
+
 ![spiked_cider.jpeg](./spiked_cider.jpeg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

@@ -5,11 +5,15 @@
 > Based on [https://www.washingtonpost.com/recipes/chilly-chile-paloma/13478/](https://www.washingtonpost.com/recipes/chilly-chile-paloma/13478/)
 
 <!-- {cts} rating=0; (User can specify rating on scale of 1-5) -->
+
 Personal rating: *Not yet rated*
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=None; (User can specify image name) -->
+
 <!-- TODO: Capture image -->
+
 <!-- {cte} -->
 
 ## Ingredients

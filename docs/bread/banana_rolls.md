@@ -3,11 +3,15 @@
 > Based on [https://www.youtube.com/watch?v=c5db7MWYFro](https://www.youtube.com/watch?v=c5db7MWYFro)
 
 <!-- {cts} rating=3; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=banana_rolls.jpeg; (User can specify image name) -->
+
 ![banana_rolls.jpeg](./banana_rolls.jpeg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

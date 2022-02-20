@@ -5,11 +5,15 @@
 > Based on [http://www.foodrepublic.com/recipes/how-to-cook-shrimp-for-nigiri-sushi/](http://www.foodrepublic.com/recipes/how-to-cook-shrimp-for-nigiri-sushi/)
 
 <!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=shrimp_nigiri.jpeg; (User can specify image name) -->
+
 ![shrimp_nigiri.jpeg](./shrimp_nigiri.jpeg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

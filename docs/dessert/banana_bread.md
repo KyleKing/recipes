@@ -3,11 +3,15 @@
 > Source: Joy of Cooking 75th edition, page 628. Banana Bread Cockaigne (Note: removed the lemon zest from the recipe)
 
 <!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=banana_bread.jpeg; (User can specify image name) -->
+
 ![banana_bread.jpeg](./banana_bread.jpeg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

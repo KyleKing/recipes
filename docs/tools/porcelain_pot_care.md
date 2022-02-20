@@ -5,11 +5,15 @@
 > Based on [https://www.youtube.com/watch?v=KLGSLCaksdY](https://www.youtube.com/watch?v=KLGSLCaksdY)
 
 <!-- {cts} rating=0; (User can specify rating on scale of 1-5) -->
+
 Personal rating: *Not yet rated*
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=porcelain_pot_care.jpg; (User can specify image name) -->
+
 ![porcelain_pot_care.jpg](./porcelain_pot_care.jpg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

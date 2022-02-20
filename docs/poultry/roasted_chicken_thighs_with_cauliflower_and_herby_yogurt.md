@@ -3,11 +3,15 @@
 > Based on [https://cooking.nytimes.com/recipes/1021945-roasted-chicken-thighs-with-cauliflower-and-herby-yogurt](https://cooking.nytimes.com/recipes/1021945-roasted-chicken-thighs-with-cauliflower-and-herby-yogurt)
 
 <!-- {cts} rating=3; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=roasted_chicken_thighs_with_cauliflower_and_herby_yogurt.jpg; (User can specify image name) -->
+
 ![roasted_chicken_thighs_with_cauliflower_and_herby_yogurt.jpg](./roasted_chicken_thighs_with_cauliflower_and_herby_yogurt.jpg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

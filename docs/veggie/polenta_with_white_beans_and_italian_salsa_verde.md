@@ -5,11 +5,15 @@
 > Based on [https://www.washingtonpost.com/recipes/polenta-white-beans-and-italian-salsa-verde/17091/?utm_campaign=plant_powered_week_7&utm_medium=Email&utm_source=Newsletter&wpisrc=nl_vplantpowered_w7&wpmm=1](https://www.washingtonpost.com/recipes/polenta-white-beans-and-italian-salsa-verde/17091/?utm_campaign=plant_powered_week_7&utm_medium=Email&utm_source=Newsletter&wpisrc=nl_vplantpowered_w7&wpmm=1)
 
 <!-- {cts} rating=0; (User can specify rating on scale of 1-5) -->
+
 Personal rating: *Not yet rated*
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=None; (User can specify image name) -->
+
 <!-- TODO: Capture image -->
+
 <!-- {cte} -->
 
 ## Ingredients

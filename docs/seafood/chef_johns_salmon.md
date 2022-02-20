@@ -3,11 +3,15 @@
 > Based on [https://www.allrecipes.com/recipe/219911/chef-johns-salmon/](https://www.allrecipes.com/recipe/219911/chef-johns-salmon/)
 
 <!-- {cts} rating=0; (User can specify rating on scale of 1-5) -->
+
 Personal rating: *Not yet rated*
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=chef_johns_salmon.jpeg; (User can specify image name) -->
+
 ![chef_johns_salmon.jpeg](./chef_johns_salmon.jpeg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

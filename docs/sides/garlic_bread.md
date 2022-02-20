@@ -3,11 +3,15 @@
 > Based on [https://www.simplyrecipes.com/recipes/garlic_bread/](https://www.simplyrecipes.com/recipes/garlic_bread/) and [https://www.washingtonpost.com/recipes/triple-garlic-bread/17638](https://www.washingtonpost.com/recipes/triple-garlic-bread/17638)
 
 <!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=garlic_bread.jpeg; (User can specify image name) -->
+
 ![garlic_bread.jpeg](./garlic_bread.jpeg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

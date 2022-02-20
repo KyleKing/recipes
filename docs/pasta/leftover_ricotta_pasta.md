@@ -3,11 +3,15 @@
 > Primarily based on [https://www.today.com/recipes/one-pot-pasta-spinach-ricotta-recipe-t163679](https://www.today.com/recipes/one-pot-pasta-spinach-ricotta-recipe-t163679) and recommended mixins from [https://www.thespruceeats.com/spinach-and-ricotta-pasta-2246391](https://www.thespruceeats.com/spinach-and-ricotta-pasta-2246391)
 
 <!-- {cts} rating=3; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=leftover_ricotta_pasta.jpg; (User can specify image name) -->
+
 ![leftover_ricotta_pasta.jpg](./leftover_ricotta_pasta.jpg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

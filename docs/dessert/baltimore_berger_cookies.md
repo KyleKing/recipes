@@ -3,11 +3,15 @@
 > Based on [https://www.kingarthurbaking.com/recipes/baltimore-berger-cookies-recipe](https://www.kingarthurbaking.com/recipes/baltimore-berger-cookies-recipe)
 
 <!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=baltimore_berger_cookies.jpeg; (User can specify image name) -->
+
 ![baltimore_berger_cookies.jpeg](./baltimore_berger_cookies.jpeg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

@@ -3,11 +3,15 @@
 > Based on [A Nestle Recipe](https://www.nestleprofessional.us/recipe/choc-oat-chip-cookies)
 
 <!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=chocolate_chip_oatmeal_cookies.jpg; (User can specify image name) -->
+
 ![chocolate_chip_oatmeal_cookies.jpg](./chocolate_chip_oatmeal_cookies.jpg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

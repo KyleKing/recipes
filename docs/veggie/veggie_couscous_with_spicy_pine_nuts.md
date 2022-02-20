@@ -5,11 +5,15 @@
   [Chrissy Teigen Cravings]: https://www.penguinrandomhouse.com/books/252973/cravings-by-chrissy-teigen-with-adeena-sussman/
 
 <!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=veggie_couscous_with_spicy_pine_nuts.jpeg; (User can specify image name) -->
+
 ![veggie_couscous_with_spicy_pine_nuts.jpeg](./veggie_couscous_with_spicy_pine_nuts.jpeg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

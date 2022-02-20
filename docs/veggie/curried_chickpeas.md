@@ -5,11 +5,15 @@
 > Based on [http://www.budgetbytes.com/2013/12/curried-chickpeas-spinach/](http://www.budgetbytes.com/2013/12/curried-chickpeas-spinach/)
 
 <!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=curried_chickpeas.jpg; (User can specify image name) -->
+
 ![curried_chickpeas.jpg](./curried_chickpeas.jpg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

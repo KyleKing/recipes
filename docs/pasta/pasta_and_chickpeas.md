@@ -5,11 +5,15 @@
 > Based on [https://smittenkitchen.com/2017/10/quick-pasta-and-chickpeas-pasta-e-ceci/](https://smittenkitchen.com/2017/10/quick-pasta-and-chickpeas-pasta-e-ceci/)
 
 <!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=pasta_and_chickpeas.jpeg; (User can specify image name) -->
+
 ![pasta_and_chickpeas.jpeg](./pasta_and_chickpeas.jpeg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

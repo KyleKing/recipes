@@ -5,11 +5,15 @@
   [Chrissy Teigen Cravings Hungry for More]: https://www.penguinrandomhouse.com/books/553580/cravings-hungry-for-more-by-chrissy-teigen-with-adeena-sussman/
 
 <!-- {cts} rating=1; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=chicken_and_dumplings_teigen.jpeg; (User can specify image name) -->
+
 ![chicken_and_dumplings_teigen.jpeg](./chicken_and_dumplings_teigen.jpeg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

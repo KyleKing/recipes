@@ -3,11 +3,15 @@
 > Based on [https://www.chowhound.com/recipes/salmon-avocado-maki-31555](https://www.chowhound.com/recipes/salmon-avocado-maki-31555)
 
 <!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=_rolling.jpg; (User can specify image name) -->
+
 ![_rolling.jpg](./_rolling.jpg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Recipe

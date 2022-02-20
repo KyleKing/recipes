@@ -3,11 +3,15 @@
 > Based on [https://www.thekitchn.com/recipe-gnocchi-skillet-with-chicken-sausage-amp-tomatoes-206429](https://www.thekitchn.com/recipe-gnocchi-skillet-with-chicken-sausage-amp-tomatoes-206429)
 
 <!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=gnocchi_skillet_with_chicken_sausage_and_tomatoes.jpeg; (User can specify image name) -->
+
 ![gnocchi_skillet_with_chicken_sausage_and_tomatoes.jpeg](./gnocchi_skillet_with_chicken_sausage_and_tomatoes.jpeg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

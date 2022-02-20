@@ -3,11 +3,15 @@
 > Based on [https://www.myrecipes.com/recipe/coconut-sheet-cake](https://www.myrecipes.com/recipe/coconut-sheet-cake)
 
 <!-- {cts} rating=3; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=easter_coconut_cake.jpeg; (User can specify image name) -->
+
 ![easter_coconut_cake.jpeg](./easter_coconut_cake.jpeg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

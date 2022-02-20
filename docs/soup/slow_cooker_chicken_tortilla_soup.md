@@ -3,11 +3,15 @@
 # Slow Cooker Chicken Tortilla Soup
 
 <!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=slow_cooker_chicken_tortilla_soup.jpg; (User can specify image name) -->
+
 ![slow_cooker_chicken_tortilla_soup.jpg](./slow_cooker_chicken_tortilla_soup.jpg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

@@ -5,11 +5,15 @@
 > Based on [https://cooking.nytimes.com/recipes/8355-creamy-lemon-pasta](https://cooking.nytimes.com/recipes/8355-creamy-lemon-pasta)
 
 <!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=creamy_lemon_pasta.jpeg; (User can specify image name) -->
+
 ![creamy_lemon_pasta.jpeg](./creamy_lemon_pasta.jpeg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

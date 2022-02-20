@@ -22,10 +22,12 @@
 | [Pina Con Lima](./pina_con_lima.md)                             |        3 | <!-- TODO: Capture image -->                                                                    |
 | [Sidecar](./sidecar.md)                                         |        3 | <!-- TODO: Capture image -->                                                                    |
 | [Simple Syrup](./simple_syrup.md)                               |        3 | <!-- TODO: Capture image -->                                                                    |
+| [Spice 75](./spice_75.md)                                       |        3 | <!-- TODO: Capture image -->                                                                    |
 | [Spicy Margarita](./spicy_margarita.md)                         |        6 | ![spicy_margarita.jpg](./spicy_margarita.jpg){: .image-toc loading=lazy }                       |
 | [Spicy Watermelon Margarita](./spicy_watermelon_margarita.md)   |        3 | <!-- TODO: Capture image -->                                                                    |
 | [Spiked Cider](./spiked_cider.md)                               |        6 | ![spiked_cider.jpeg](./spiked_cider.jpeg){: .image-toc loading=lazy }                           |
 | [Spiked Milkshake](./spiked_milkshake.md)                       |        3 | <!-- TODO: Capture image -->                                                                    |
+| [Strawberry Whiskey Smash](./strawberry_whiskey_smash.md)       |        3 | <!-- TODO: Capture image -->                                                                    |
 | [Sweet Libertys Pina Colada](./sweet_libertys_pina_colada.md)   |        3 | <!-- TODO: Capture image -->                                                                    |
 | [That Butterscotch Drink](./that_butterscotch_drink.md)         |        7 | ![that_butterscotch_drink.jpeg](./that_butterscotch_drink.jpeg){: .image-toc loading=lazy }     |
 | [Watermelon Margarita](./watermelon_margarita.md)               |        6 | ![watermelon_margarita.jpg](./watermelon_margarita.jpg){: .image-toc loading=lazy }             |

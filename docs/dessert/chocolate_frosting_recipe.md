@@ -3,11 +3,15 @@
 > Based on [https://www.kingarthurflour.com/recipes/super-simple-chocolate-frosting-recipe](https://www.kingarthurflour.com/recipes/super-simple-chocolate-frosting-recipe)
 
 <!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=chocolate_frosting_recipe.jpg; (User can specify image name) -->
+
 ![chocolate_frosting_recipe.jpg](./chocolate_frosting_recipe.jpg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

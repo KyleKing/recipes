@@ -5,11 +5,15 @@
 > Based on [http://exploitsofamilitarymama.com/2012/08/slutty-orzo/](http://exploitsofamilitarymama.com/2012/08/slutty-orzo/)
 
 <!-- {cts} rating=1; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=orzo_and_cheese.jpg; (User can specify image name) -->
+
 ![orzo_and_cheese.jpg](./orzo_and_cheese.jpg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

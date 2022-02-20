@@ -5,11 +5,15 @@
 > Based on [https://www.giadzy.com/posts/recipes/436491/cherry-tomato-spaghetti](https://www.giadzy.com/posts/recipes/436491/cherry-tomato-spaghetti)
 
 <!-- {cts} rating=1; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=cherry_tomato_spaghetti.jpeg; (User can specify image name) -->
+
 ![cherry_tomato_spaghetti.jpeg](./cherry_tomato_spaghetti.jpeg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

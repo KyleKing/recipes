@@ -5,11 +5,15 @@
   [Chrissy Teigen Cravings]: https://www.penguinrandomhouse.com/books/252973/cravings-by-chrissy-teigen-with-adeena-sussman/
 
 <!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=egg_sandwich.jpeg; (User can specify image name) -->
+
 ![egg_sandwich.jpeg](./egg_sandwich.jpeg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

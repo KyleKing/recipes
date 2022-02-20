@@ -3,11 +3,15 @@
 > Based on [https://www.lecremedelacrumb.com/instant-pot-shredded-chicken-tacos/](https://www.lecremedelacrumb.com/instant-pot-shredded-chicken-tacos/) and [https://www.thekitchn.com/instant-pot-chicken-tacos-recipe-23153067](https://www.thekitchn.com/instant-pot-chicken-tacos-recipe-23153067) and [https://www.thereciperebel.com/instant-pot-chicken-breast/](https://www.thereciperebel.com/instant-pot-chicken-breast/)
 
 <!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=chicken_tacos.jpeg; (User can specify image name) -->
+
 ![chicken_tacos.jpeg](./chicken_tacos.jpeg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

@@ -5,11 +5,15 @@
 > Based on [https://www.halfbakedharvest.com/broccoli-cheddar-chicken-and-rice-casserole/#bo-recipe](https://www.halfbakedharvest.com/broccoli-cheddar-chicken-and-rice-casserole/#bo-recipe)
 
 <!-- {cts} rating=3; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=broccoli_cheddar_chicken_and_rice_casserole.jpeg; (User can specify image name) -->
+
 ![broccoli_cheddar_chicken_and_rice_casserole.jpeg](./broccoli_cheddar_chicken_and_rice_casserole.jpeg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

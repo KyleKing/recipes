@@ -3,11 +3,15 @@
 > Based on [https://www.verybestbaking.com/recipes/32014/original-nestle-toll-house-milk-chocolate-chip-cookies/](https://www.verybestbaking.com/recipes/32014/original-nestle-toll-house-milk-chocolate-chip-cookies/)
 
 <!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
+
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=chocolate_chip_cookies.jpeg; (User can specify image name) -->
+
 ![chocolate_chip_cookies.jpeg](./chocolate_chip_cookies.jpeg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients

@@ -3,11 +3,15 @@
 > Based on [https://www.foodnetwork.com/recipes/spaghetti-with-cilantro-sauce-recipe-2121155](https://www.foodnetwork.com/recipes/spaghetti-with-cilantro-sauce-recipe-2121155)
 
 <!-- {cts} rating=0; (User can specify rating on scale of 1-5) -->
+
 Personal rating: *Not yet rated*
+
 <!-- {cte} -->
 
 <!-- {cts} name_image=spaghetti_with_cilantro_sauce.jpg; (User can specify image name) -->
+
 ![spaghetti_with_cilantro_sauce.jpg](./spaghetti_with_cilantro_sauce.jpg){: .image-recipe loading=lazy }
+
 <!-- {cte} -->
 
 ## Ingredients
