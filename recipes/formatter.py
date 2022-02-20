@@ -120,9 +120,9 @@ def _handle_star_section(line: str, path_md: Path) -> list[str]:
     rating = int(_parse_var_comment(line)['rating'])
     stars = _format_stars(rating)
     return [
-        f'<!-- {{cts}} rating={rating}; (User can specify rating on scale of 1-5) -->',
+        f'<!-- {{cts}} rating={rating}; (User can specify rating on scale of 1-5) -->\n',
         'Personal rating: ' + stars,
-        '<!-- {cte} -->',
+        '\n<!-- {cte} -->',
     ]
 
 
@@ -164,9 +164,9 @@ def _handle_image_section(line: str, path_md: Path) -> list[str]:
     path_image = _parse_rel_file(line, path_md, 'name_image')
     name_image = path_image.name
     return [
-        f'<!-- {{cts}} name_image={name_image}; (User can specify image name) -->',
+        f'<!-- {{cts}} name_image={name_image}; (User can specify image name) -->\n',
         _format_image_md(name_image, attrs='.image-recipe'),
-        '<!-- {cte} -->',
+        '\n<!-- {cte} -->',
     ]
 
 
