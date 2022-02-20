@@ -51,6 +51,8 @@ repos:
           - mdformat-black
           - mdformat-config
           - mdformat-gfm
+          - mdformat-tables
+          - mdformat-toc
           - mdformat-web
         exclude: _.*\.md
   - repo: https://github.com/Yelp/detect-secrets
