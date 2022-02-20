@@ -1,6 +1,6 @@
 # Watermelon Margarita
 
-> Based on a [Watermelon Mock-a-rita posted by jesskeys_](https://www.instagram.com/jesskeys_)
+> Based on a [Watermelon Mock-a-rita posted by jesskeys](https://www.instagram.com/jesskeys_)
 
 <!-- {cts} rating=3; (User can specify rating on scale of 1-5) -->
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
