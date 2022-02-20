@@ -2,9 +2,15 @@
 
 ### Feat
 
+- add markdown autoformatter
 - initial hummus recipe
 - standardize cookie recipes
 - new Whiskey Sour recipe
+
+### Refactor
+
+- use beartype for annotations
+- apply mdformat
 
 ## 2021.0.3.0 (2022-01-04)
 

@@ -47,4 +47,12 @@ poetry run doit run lock document deploy_docs publish
 ## Current Status
 
 <!-- {cts} COVERAGE -->
+| File                   |   Statements |   Missing |   Excluded | Coverage   |
+|:-----------------------|-------------:|----------:|-----------:|:-----------|
+| `recipes/__init__.py`  |            4 |         0 |          0 | 100.0%     |
+| `recipes/formatter.py` |          104 |       104 |          0 | 0.0%       |
+| `recipes/tasks.py`     |           38 |        38 |          0 | 0.0%       |
+| **Totals**             |          146 |       142 |          0 | 2.7%       |
+
+Generated on: 2022-02-20T14:55:51.150197
 <!-- {cte} -->

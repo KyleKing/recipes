@@ -3,10 +3,10 @@ from collections import defaultdict
 from collections.abc import Callable
 from copy import deepcopy
 from pathlib import Path
-from typing import Optional, Union
 
 import pandas as pd
 from beartype import beartype
+from beartype.typing import Optional, Union, List
 from calcipy.doit_tasks.doc import _parse_var_comment, _ReplacementMachine, write_autoformatted_md_sections
 from calcipy.doit_tasks.doit_globals import DG
 from calcipy.file_helpers import get_doc_dir, read_lines
@@ -85,7 +85,7 @@ def _format_image_md(name_image: Optional[str], attrs: str) -> str:
 
 @beartype
 @contextmanager
-def _configure_recipe_lookup(new_lookup: dict[str, Callable[[str, Path], str]]):
+def _configure_recipe_lookup(new_lookup: dict[str, Callable[[str, Path], List[str]]]):
     """Configure the handler lookup for recipe tasks.
 
     Args:
