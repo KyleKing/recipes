@@ -4765,7 +4765,7 @@
   
     <li class="md-nav__item">
       <a href="../../adr/NNN-Template/" class="md-nav__link">
-        [short title of solved problem and solution]
+        \[short title of solved problem and solution\]
       </a>
     </li>
   
@@ -5145,19 +5145,15 @@
 <li>The type fix MUST be used when a commit represents a bug fix for your application.</li>
 <li>A scope MUST consist of a noun describing a section of the codebase surrounded by parenthesis, e.g., <code>fix(parser):</code> or issue number <code>fix(#32):</code></li>
 <li>A <code>!</code> can be used to indicate a breaking change, e.g. <code>refactor!: drop support for Node 6</code></li>
-<li>What if a commit fits multiple types?<ul>
+<li>What if a commit fits multiple types?</li>
 <li>Go back and make multiple commits whenever possible. Part of the benefit of Conventional Commits is its ability to drive us to make more organized commits and PRs.</li>
 <li>It discourages moving fast in a disorganized way. It helps you be able to move fast long term across multiple projects with varied contributors.</li>
-</ul>
-</li>
-<li><code>semver</code>: <code>fix : PATCH / feat : MINOR / BREAKING CHANGE : MAJOR</code><ul>
+<li><code>semver</code>: <code>fix : PATCH / feat : MINOR / BREAKING CHANGE : MAJOR</code></li>
 <li>Use <code>git rebase -i</code> to fix commit names prior to merging if incorrect types/scopes are used</li>
-</ul>
-</li>
 </ul>
 <h3 id="commitizen-types-and-scopes">Commitizen Types and Scopes<a class="headerlink" href="#commitizen-types-and-scopes" title="Permanent link">⚓︎</a></h3>
 <ul>
-<li>Types<ul>
+<li>Types</li>
 <li>fix: A bug fix</li>
 <li>feat: A new feature</li>
 <li>docs: Documentation-only changes (code comments, separate docs)</li>
@@ -5167,16 +5163,12 @@
 <li>test: Adding missing or correcting existing tests</li>
 <li>build: Changes that affect the build system or external dependencies (example scopes: pip, docker, npm)</li>
 <li>ci: Changes to our CI configuration files and scripts (example scopes: GitLabCI)</li>
-</ul>
-</li>
-<li>Scopes<ul>
+<li>Scopes</li>
 <li>Class, File name, Issue Number, other approved noun</li>
-</ul>
-</li>
 </ul>
 <h3 id="git-message-guidelines">Git Message Guidelines<a class="headerlink" href="#git-message-guidelines" title="Permanent link">⚓︎</a></h3>
 <ul>
-<li><a href="https://writingfordevelopers.substack.com/p/how-to-write-a-commit-message">Commit message guidelines</a><ul>
+<li><a href="https://writingfordevelopers.substack.com/p/how-to-write-a-commit-message">Commit message guidelines</a></li>
 <li>Full sentence with verb (<em>lowercase</em>) and concise description. Below are modified examples for Conventional Commits<ul>
 <li><code>fix(roles): bug in admin role permissions</code></li>
 <li><code>feat(ui): implement new button design</code></li>
@@ -5186,9 +5178,7 @@
 <li><code>feat(api): endpoints to implement new customer dashboard</code></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="https://chris.beams.io/posts/git-commit/">How to write a good commit message</a><ul>
+<li><a href="https://chris.beams.io/posts/git-commit/">How to write a good commit message</a></li>
 <li>A diff will tell you what changed, but only the commit message can properly tell you why.</li>
 <li>Keep in mind: <a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">This</a> <a href="https://www.git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines">has</a> <a href="https://github.com/torvalds/subsurface-for-dirk/blob/master/README.md#contributing">all</a> <a href="http://who-t.blogspot.co.at/2009/12/on-commit-messages.html">been</a> <a href="https://github.com/erlang/otp/wiki/writing-good-commit-messages">said</a> <a href="https://github.com/spring-projects/spring-framework/blob/30bce7/CONTRIBUTING.md#format-commit-messages">before</a>.</li>
 <li>The seven rules of a great Git commit message<ul>
@@ -5205,30 +5195,22 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 <h3 id="issue-labels-and-milestones">Issue Labels and Milestones<a class="headerlink" href="#issue-labels-and-milestones" title="Permanent link">⚓︎</a></h3>
 <p>Personal Guide</p>
 <ul>
-<li>Labels<ul>
-<li><code>Needs Discussion</code>: (#ff5722) Ticket needs discussion and prioritization</li>
-<li><code>Type: Bug</code>: (#d73a4a) Something isn&rsquo;t working</li>
-<li><code>Type: Documentation</code>: (#69cde9) Documentation changes</li>
-<li><code>Type: Maintenance</code>: (#c5def5) Chore including build/dep, CI, refactor, or perf</li>
-<li><code>Type: Idea</code>: (#fbca04) General idea or concept that could become a feature request</li>
-<li><code>Type: Feature</code>: (#0075ca) Clearly defined new feature request</li>
-</ul>
-</li>
-<li>Milestones<ul>
+<li>Labels</li>
+<li><code>Needs Discussion</code>: (<code>#ff5722</code>) Ticket needs discussion and prioritization</li>
+<li><code>Type: Bug</code>: (<code>#d73a4a</code>) Something isn&rsquo;t working</li>
+<li><code>Type: Documentation</code>: (<code>#69cde9</code>) Documentation changes</li>
+<li><code>Type: Maintenance</code>: (<code>#c5def5</code>) Chore including build/dep, CI, refactor, or perf</li>
+<li><code>Type: Idea</code>: (<code>#fbca04</code>) General idea or concept that could become a feature request</li>
+<li><code>Type: Feature</code>: (<code>#0075ca</code>) Clearly defined new feature request</li>
+<li>Milestones</li>
 <li>Current Tasks (Main Milestone) - name could change based on a specific project, sprint, or month</li>
 <li>Next Tasks</li>
 <li>Blue Sky</li>
-</ul>
-</li>
-<li>Search<ul>
-<li><code>is:open is:issue assignee:KyleKing archived:false milestone:"blue sky"</code> or <code>no:milestone</code> etc.</li>
-</ul>
-</li>
+<li>Search</li>
+<li><code>is:open is:issue assignee:{{ author_username }} archived:false milestone:"blue sky"</code> or <code>no:milestone</code> etc.</li>
 </ul>
 <details>
 <summary>Research</summary>
@@ -5304,32 +5286,26 @@
 <li><a href="https://github.com/atom/atom/blob/master/CONTRIBUTING.md#styleguides">Commit Messages</a> and <a href="https://news.ycombinator.com/item?id=8874177">why use the present tense</a></li>
 <li><a href="https://github.com/erlang/otp/wiki/Writing-good-commit-messages">Github&rsquo;s Advice on Github</a></li>
 <li><a href="https://chris.beams.io/posts/git-commit/">Most Comprehensive Guide</a></li>
-<li><a href="https://git-scm.com/book/en/v2">Git Pro Book (free)</a><ul>
+<li><a href="https://git-scm.com/book/en/v2">Git Pro Book (free)</a></li>
 <li><a href="https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash">Bash Tab-Completion Snippet</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="python">Python<a class="headerlink" href="#python" title="Permanent link">⚓︎</a></h2>
 <p><strong>TODO: Revisit</strong></p>
 <ul>
-<li>Python Style Guides<ul>
-<li>https://gist.github.com/sloria/7001839</li>
-<li>http://www.nilunder.com/blog/2013/08/03/pythonic-sensibilities/</li>
-<li>https://innoq.github.io/cards42org_en/</li>
-<li>https://docs.openstack.org/hacking/latest/user/hacking.html#styleguide</li>
-<li>https://www.python.org/doc/humor/</li>
-<li>https://docs.python-guide.org/writing/reading/</li>
-<li>https://realpython.com/python-refactoring/</li>
-</ul>
-</li>
+<li>Python Style Guides</li>
+<li><a href="https://gist.github.com/sloria/7001839">https://gist.github.com/sloria/7001839</a></li>
+<li><a href="http://www.nilunder.com/blog/2013/08/03/pythonic-sensibilities/">http://www.nilunder.com/blog/2013/08/03/pythonic-sensibilities/</a></li>
+<li><a href="https://innoq.github.io/cards42org_en/">https://innoq.github.io/cards42org_en/</a></li>
+<li><a href="https://docs.openstack.org/hacking/latest/user/hacking.html#styleguide">https://docs.openstack.org/hacking/latest/user/hacking.html#styleguide</a></li>
+<li><a href="https://www.python.org/doc/humor/">https://www.python.org/doc/humor/</a></li>
+<li><a href="https://docs.python-guide.org/writing/reading/">https://docs.python-guide.org/writing/reading/</a></li>
+<li><a href="https://realpython.com/python-refactoring/">https://realpython.com/python-refactoring/</a></li>
 </ul>
 <h2 id="adrs">ADRs<a class="headerlink" href="#adrs" title="Permanent link">⚓︎</a></h2>
 <p><strong>TODO: Revisit</strong></p>
 <ul>
-<li>Examples<ul>
-<li>https://github.com/pawamoy/mkdocstrings/issues/28</li>
-</ul>
-</li>
+<li>Examples</li>
+<li><a href="https://github.com/pawamoy/mkdocstrings/issues/28">https://github.com/pawamoy/mkdocstrings/issues/28</a></li>
 </ul>
 
   <hr>
@@ -5337,7 +5313,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">June 6, 2021</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 21, 2022</span>
       
         <br>
         Created:
