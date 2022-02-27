@@ -8,7 +8,7 @@ ignore_patterns = ["__TOC.md"]
 [tool.commitizen]
 name = "cz_legacy"
 version = "0.3.0"
-version_files = ["pyproject.toml", "recipes/__init__.py", "appveyor.yml"]
+version_files = ["pyproject.toml", "recipes/__init__.py"]
 change_type_order = [
     "BREAKING CHANGE",
     "Feat",
