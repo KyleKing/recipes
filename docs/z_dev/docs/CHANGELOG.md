@@ -2,14 +2,21 @@
 
 ### Feat
 
+- copier update. Add Github Actions
 - add markdown autoformatter
 - initial hummus recipe
 - standardize cookie recipes
 - new Whiskey Sour recipe
 
+### Fix
+
+- admonitions should be four spaces
+- admonitions are incorrectly modified
+
 ### Refactor
 
-- use beartype for annotations
+- use spacing consistent with mdformatter
+- Python type annotations from beartype
 - apply mdformat
 
 ## 2021.0.3.0 (2022-01-04)
