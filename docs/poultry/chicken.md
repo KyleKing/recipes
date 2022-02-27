@@ -33,5 +33,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - Place in oven on tin foil covered pan for 15 minutes
 - Flip and bake for 10 more minutes
 
+<!-- FIXME: Need to implement admonitions: https://github.com/executablebooks/mdformat/issues/309
 !!! tip
     Cook for 12 min/8 min for thinner pieces
+ -->
