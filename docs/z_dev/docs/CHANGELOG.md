@@ -10,6 +10,7 @@
 
 ### Fix
 
+- suppress mdformat errors on admonitions
 - admonitions should be four spaces
 - admonitions are incorrectly modified
 

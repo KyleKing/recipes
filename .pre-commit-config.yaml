@@ -76,7 +76,7 @@ repos:
         exclude: poetry\.lock|.*/cassettes/.*\.yaml
         stages: [push]
   - repo: https://github.com/lyz-code/yamlfix/
-    rev: 0.8.1
+    rev: 0.8.2
     hooks:
       - id: yamlfix
         exclude: \.copier-answers\.yml|.*/cassettes/.*\.yaml
