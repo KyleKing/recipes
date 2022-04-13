@@ -9,7 +9,7 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.1.0
+    rev: v4.2.0
     hooks:
       - id: check-added-large-files
       - id: check-json
@@ -38,13 +38,13 @@ repos:
     hooks:
       - id: beautysh
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v2.21.2
+    rev: v2.23.0
     hooks:
       - id: commitizen
         additional_dependencies: [cz_legacy]
         stages: [commit-msg]
   - repo: https://github.com/executablebooks/mdformat
-    rev: 0.7.13
+    rev: 0.7.14
     hooks:
       - id: mdformat
         additional_dependencies:
@@ -76,7 +76,7 @@ repos:
         exclude: poetry\.lock|.*/cassettes/.*\.yaml
         stages: [push]
   - repo: https://github.com/lyz-code/yamlfix/
-    rev: 0.8.2
+    rev: 0.9.0
     hooks:
       - id: yamlfix
         exclude: \.copier-answers\.yml|.*/cassettes/.*\.yaml

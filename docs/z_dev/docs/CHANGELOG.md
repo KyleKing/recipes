@@ -2,6 +2,7 @@
 
 ### Feat
 
+- Add Spicy Salmon Bowl recipe
 - copier update. Add Github Actions
 - add markdown autoformatter
 - initial hummus recipe
