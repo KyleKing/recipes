@@ -14,19 +14,42 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
+### Core
+
 - [ ] tortillas
 - [ ] 1 can of enchilada sauce
 - [ ] 2-3 chicken breast or rotisserie chicken
 - [ ] shredded cheese
 - [ ] 1 can black beans, strained
-- [ ] other vegetables (onion, cilantro, diced tomato, and/or diced green chilies)
+- [ ] Optional diced onions, diced tomatoes, can of diced green chilies, or other vegetables
+
+### Vegetarian
+
+The chicken can be substituted with all veggies based on [https://cookieandkate.com/vegetarian-enchiladas-recipe/](https://cookieandkate.com/vegetarian-enchiladas-recipe/)
+
+- [ ] 6 oz (5 cups) baby spinach
+- [ ] 1 red onion, diced
+- [ ] 1 red bell pepper, chopped
+- [ ] 1 lb of broccoli or cauliflower, remove florets and slice into bite-size pieces
+- [ ] 1 tsp Ground Cumin
+- [ ] 1/4 tsp Ground Cinnamon
 
 ## Recipe
+
+### Core
 
 - Bake the chicken (if not already cooked)
 - Preheat the oven to 375F
 - Roll the cooked chicken, cheese, beans, and other vegetables with the flap side down, then pour enchilada sauce over top
 - Bake for 25 minutes
+
+### Vegetarian
+
+- In a large skillet over medium heat, saute the onions in olive oil (5-7 min)
+- Add broccoli and bell pepper. Reduce heat to medium-low and cover. Cook for 8 min
+- Add the cumin and cinnamon
+- Add the spinach in handfuls and heat until all wilted
+- Spoon into each enchilada in place of the chicken
 
 ## Notes
 

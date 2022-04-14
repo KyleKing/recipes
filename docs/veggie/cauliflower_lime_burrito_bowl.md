@@ -51,7 +51,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
     - Once at pressure, quick release
     - Remove the cauliflower to cool
 - Prep the spice mix
-- In a large skillet, on medium-high heat, saute the onion with half of the spices
+- In a large skillet, on medium heat, saute the onion with half of the spices
 - Rinse the rice and store in 2-cup measure (and save strainer for beans and corn)
     - In the Instant Pot, combine rice and water at a 1:1.5 ratio with broth or water
     - Cook for 8 min at high pressure
