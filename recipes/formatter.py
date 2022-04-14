@@ -5,12 +5,13 @@ from copy import deepcopy
 from pathlib import Path
 
 import pandas as pd
+from attrs import field, mutable
 from beartype import beartype
 from beartype.typing import List, Optional, Union
 from calcipy.doit_tasks.doc import _parse_var_comment, _ReplacementMachine, write_autoformatted_md_sections
 from calcipy.doit_tasks.doit_globals import DG
 from calcipy.file_helpers import get_doc_dir, read_lines
-from decorator import contextmanager
+from decorator import ContextManager, contextmanager
 from loguru import logger
 
 # =====================================================================================
@@ -85,7 +86,7 @@ def _format_image_md(name_image: Optional[str], attrs: str) -> str:
 
 @beartype
 @contextmanager
-def _configure_recipe_lookup(new_lookup: dict[str, Callable[[str, Path], List[str]]]):
+def _configure_recipe_lookup(new_lookup: dict[str, Callable[[str, Path], List[str]]]) -> ContextManager:
     """Configure the handler lookup for recipe tasks.
 
     Args:
@@ -214,14 +215,12 @@ def _create_toc_record(
     }
 
 
-# TODO: Convert to attributes class
+@mutable
 class _TOCRecipes:  # noqa: H601
     """Store recipe metadata for TOC."""
 
-    @beartype
-    def __init__(self, sub_dir: Path) -> None:
-        self.sub_dir = sub_dir
-        self.recipes = defaultdict(dict)
+    sub_dir: Path
+    recipes: dict[str, dict[str, Union[int, Path]]] = field(init=False, factory=lambda: defaultdict(dict))
 
     @beartype
     def store_star(self, line: str, path_md: Path) -> list[str]:
@@ -252,7 +251,6 @@ class _TOCRecipes:  # noqa: H601
         """
         path_image = _parse_rel_file(line, path_md, 'name_image')
         self.recipes[path_md.as_posix()]['path_image'] = path_image
-
         return []
 
     @beartype
