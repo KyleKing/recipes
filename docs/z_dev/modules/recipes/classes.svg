@@ -15,7 +15,7 @@
 <polygon fill="none" stroke="black" points="0,-0.5 0,-114.5 266,-114.5 266,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="133" y="-99.3" font-family="Times,serif" font-size="14.00">_TOCRecipes</text>
 <polyline fill="none" stroke="black" points="0,-91.5 266,-91.5 "/>
-<text text-anchor="start" x="8" y="-76.3" font-family="Times,serif" font-size="14.00">recipes : defaultdict</text>
+<text text-anchor="start" x="8" y="-76.3" font-family="Times,serif" font-size="14.00">recipes : dict[str, dict[str, Union[int, Path]]]</text>
 <text text-anchor="start" x="8" y="-61.3" font-family="Times,serif" font-size="14.00">sub_dir : Path</text>
 <polyline fill="none" stroke="black" points="0,-53.5 266,-53.5 "/>
 <text text-anchor="start" x="8" y="-38.3" font-family="Times,serif" font-size="14.00">store_image(line: str, path_md: Path): list[str]</text>

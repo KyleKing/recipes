@@ -17,6 +17,7 @@
 
 ### Refactor
 
+- try to fix type errors
 - use spacing consistent with mdformatter
 - Python type annotations from beartype
 - apply mdformat
