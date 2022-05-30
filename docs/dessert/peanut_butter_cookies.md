@@ -16,7 +16,6 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-
 ### Wet
 
 - [ ] 1/2 cup butter, room temperature
