@@ -5,7 +5,7 @@ on:  # yamllint disable-line rule:truthy
   push:
     branches: [main]
     paths:
-      - docs/z_dev/**
+      - docs/**
       - mkdocs.yml
   workflow_dispatch:  # For manual runs
 
