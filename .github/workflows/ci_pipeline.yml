@@ -4,12 +4,17 @@ name: CI Pipeline
 on:  # yamllint disable-line rule:truthy
   push:
     branches: [main]
+    paths:
+      - recipes/**
+      - tests/**
+      - pyproject.toml
   pull_request:
     branches: [main]
     paths:
       - recipes/**
       - tests/**
       - pyproject.toml
+  workflow_dispatch:  # For manual runs
 
 jobs:
   lint:
