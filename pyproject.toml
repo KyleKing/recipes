@@ -59,7 +59,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.9"
-calcipy = ">=0.11.0"
+calcipy = ">=0.15.0"
 optimize-images = ">=1.4.0"
 pillow = ">=8.4.0"
 

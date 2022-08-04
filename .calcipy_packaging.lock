@@ -8,12 +8,12 @@
         "version": "0.3.1"
     },
     "add-trailing-comma": {
-        "datetime": "2022-03-30T21:32:32.014564Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-30T21:32:32.014564Z",
-        "latest_version": "2.2.2",
+        "datetime": "2022-04-17T13:58:01.414145Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-04-17T13:58:01.414145Z",
+        "latest_version": "2.2.3",
         "name": "add-trailing-comma",
-        "version": "2.2.2"
+        "version": "2.2.3"
     },
     "argcomplete": {
         "datetime": "2021-04-19T15:48:18.241321Z",
@@ -24,20 +24,20 @@
         "version": "1.12.3"
     },
     "astpretty": {
-        "datetime": "2021-01-01T02:41:06.557813Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-01-01T02:41:06.557813Z",
-        "latest_version": "2.1.0",
+        "datetime": "2022-05-16T23:41:23.422340Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-05-16T23:41:23.422340Z",
+        "latest_version": "3.0.0",
         "name": "astpretty",
-        "version": "2.1.0"
+        "version": "3.0.0"
     },
     "astroid": {
-        "datetime": "2022-03-26T19:45:02.821620Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-26T19:45:02.821620Z",
-        "latest_version": "2.11.2",
+        "datetime": "2022-07-09T14:50:59.226898Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-12T08:26:33.483179Z",
+        "latest_version": "2.12.2",
         "name": "astroid",
-        "version": "2.11.2"
+        "version": "2.11.7"
     },
     "asttokens": {
         "datetime": "2021-04-19T15:38:24.570187Z",
@@ -48,12 +48,12 @@
         "version": "2.0.5"
     },
     "atomicwrites": {
-        "datetime": "2020-04-28T21:42:43.189921Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2020-04-28T21:42:43.189921Z",
+        "datetime": "2022-07-08T18:31:40.459492Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-09T04:09:09.073080Z",
         "latest_version": "1.4.0",
         "name": "atomicwrites",
-        "version": "1.4.0"
+        "version": "1.4.1"
     },
     "attrs": {
         "datetime": "2021-12-29T13:15:06.703351Z",
@@ -80,28 +80,28 @@
         "version": "1.4"
     },
     "autopep8": {
-        "datetime": "2021-02-04T06:08:51.473314Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-04-30T06:04:42.998634Z",
-        "latest_version": "1.5.7",
+        "datetime": "2021-10-24T06:47:35.952397Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2021-10-24T06:47:35.952397Z",
+        "latest_version": "1.6.0",
         "name": "autopep8",
-        "version": "1.5.5"
+        "version": "1.6.0"
     },
     "babel": {
-        "datetime": "2021-04-28T19:31:38.181508Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-04-28T19:31:38.181508Z",
-        "latest_version": "2.9.1",
+        "datetime": "2022-06-16T06:31:20.746156Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-06-16T06:31:20.746156Z",
+        "latest_version": "2.10.3",
         "name": "babel",
-        "version": "2.9.1"
+        "version": "2.10.3"
     },
     "bandit": {
-        "datetime": "2022-01-26T01:00:17.920898Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-01-26T01:00:17.920898Z",
-        "latest_version": "1.7.2",
+        "datetime": "2022-03-04T07:43:44.165084Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-03-04T07:43:44.165084Z",
+        "latest_version": "1.7.4",
         "name": "bandit",
-        "version": "1.7.2"
+        "version": "1.7.4"
     },
     "beartype": {
         "datetime": "2022-03-15T06:06:23.515331Z",
@@ -119,21 +119,29 @@
         "name": "better-exceptions",
         "version": "0.3.3"
     },
+    "bidict": {
+        "datetime": "2022-03-23T22:21:10.919267Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-03-23T22:21:10.919267Z",
+        "latest_version": "0.22.0",
+        "name": "bidict",
+        "version": "0.22.0"
+    },
     "black": {
-        "datetime": "2022-03-28T20:10:57.319789Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-28T20:10:57.319789Z",
-        "latest_version": "22.3.0",
+        "datetime": "2022-06-28T02:24:58.717280Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-06-28T02:24:58.717280Z",
+        "latest_version": "22.6.0",
         "name": "black",
-        "version": "22.3.0"
+        "version": "22.6.0"
     },
     "calcipy": {
-        "datetime": "2022-03-05T20:53:23.852842Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-05T20:53:23.852842Z",
-        "latest_version": "0.14.5",
+        "datetime": "2022-08-04T03:25:31.194496Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-08-04T03:25:31.194496Z",
+        "latest_version": "0.15.0",
         "name": "calcipy",
-        "version": "0.14.5"
+        "version": "0.15.0"
     },
     "cement": {
         "datetime": "2021-12-18T18:27:13.099741Z",
@@ -144,12 +152,12 @@
         "version": "3.0.6"
     },
     "certifi": {
-        "datetime": "2021-10-08T19:32:10.712888Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-10-08T19:32:10.712888Z",
-        "latest_version": "2021.10.8",
+        "datetime": "2022-06-15T18:09:18.491288Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-06-15T18:09:18.491288Z",
+        "latest_version": "2022.6.15",
         "name": "certifi",
-        "version": "2021.10.8"
+        "version": "2022.6.15"
     },
     "cfgv": {
         "datetime": "2021-08-25T14:18:47.770979Z",
@@ -160,36 +168,36 @@
         "version": "3.3.1"
     },
     "chardet": {
-        "datetime": "2020-12-10T19:35:32.469759Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2020-12-10T19:35:32.469759Z",
-        "latest_version": "4.0.0",
+        "datetime": "2022-06-25T04:27:55.457436Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-06-25T04:27:55.457436Z",
+        "latest_version": "5.0.0",
         "name": "chardet",
-        "version": "4.0.0"
+        "version": "5.0.0"
     },
     "charset-normalizer": {
-        "datetime": "2022-02-12T14:33:12.294329Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-02-12T14:33:12.294329Z",
-        "latest_version": "2.0.12",
+        "datetime": "2022-06-19T22:03:21.542597Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-06-19T22:03:21.542597Z",
+        "latest_version": "2.1.0",
         "name": "charset-normalizer",
-        "version": "2.0.12"
+        "version": "2.1.0"
     },
     "click": {
-        "datetime": "2022-03-31T20:52:50.525645Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-31T20:52:50.525645Z",
-        "latest_version": "8.1.2",
+        "datetime": "2022-04-28T17:36:06.952869Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-04-28T17:36:06.952869Z",
+        "latest_version": "8.1.3",
         "name": "click",
-        "version": "8.1.2"
+        "version": "8.1.3"
     },
     "cloudpickle": {
-        "datetime": "2021-09-10T10:52:14.771587Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-09-10T10:52:14.771587Z",
-        "latest_version": "2.0.0",
+        "datetime": "2022-05-20T15:36:32.997460Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-05-20T15:36:32.997460Z",
+        "latest_version": "2.1.0",
         "name": "cloudpickle",
-        "version": "2.0.0"
+        "version": "2.1.0"
     },
     "cognitive-complexity": {
         "datetime": "2020-07-22T05:41:30.898464Z",
@@ -208,12 +216,12 @@
         "version": "1.0.0"
     },
     "colorama": {
-        "datetime": "2020-10-13T02:42:26.463288Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2020-10-13T02:42:26.463288Z",
-        "latest_version": "0.4.4",
+        "datetime": "2022-06-16T12:34:45.998806Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-06-16T12:34:45.998806Z",
+        "latest_version": "0.4.5",
         "name": "colorama",
-        "version": "0.4.4"
+        "version": "0.4.5"
     },
     "colorlog": {
         "datetime": "2021-11-08T16:56:43.532533Z",
@@ -224,12 +232,12 @@
         "version": "6.6.0"
     },
     "commitizen": {
-        "datetime": "2022-03-29T13:35:01.963405Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-29T13:35:01.963405Z",
-        "latest_version": "2.23.0",
+        "datetime": "2022-08-02T16:11:27.933712Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-08-02T16:11:27.933712Z",
+        "latest_version": "2.29.3",
         "name": "commitizen",
-        "version": "2.23.0"
+        "version": "2.29.3"
     },
     "commonmark": {
         "datetime": "2019-10-04T15:37:37.674968Z",
@@ -240,12 +248,12 @@
         "version": "0.9.1"
     },
     "coverage": {
-        "datetime": "2022-02-20T22:58:20.435301Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-02-20T22:58:20.435301Z",
-        "latest_version": "6.3.2",
+        "datetime": "2022-07-12T13:42:03.736645Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-12T13:42:03.736645Z",
+        "latest_version": "6.4.2",
         "name": "coverage",
-        "version": "6.3.2"
+        "version": "6.4.2"
     },
     "cz-legacy": {
         "datetime": "2022-02-18T21:01:09.403199Z",
@@ -288,28 +296,28 @@
         "version": "0.9.0"
     },
     "diff-cover": {
-        "datetime": "2022-03-24T22:31:29.276643Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-24T22:31:29.276643Z",
-        "latest_version": "6.4.5",
+        "datetime": "2022-06-22T22:07:50.268916Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-06-22T22:07:50.268916Z",
+        "latest_version": "6.5.1",
         "name": "diff-cover",
-        "version": "6.4.5"
+        "version": "6.5.1"
     },
     "dill": {
-        "datetime": "2021-06-13T17:11:45.043440Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-06-13T17:11:45.043440Z",
-        "latest_version": "0.3.4",
+        "datetime": "2022-05-20T11:21:11.969466Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-05-20T11:21:11.969466Z",
+        "latest_version": "0.3.5.1",
         "name": "dill",
-        "version": "0.3.4"
+        "version": "0.3.5.1"
     },
     "distlib": {
-        "datetime": "2021-12-08T16:34:37.487897Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-12-08T16:34:37.487897Z",
-        "latest_version": "0.3.4",
+        "datetime": "2022-07-14T14:28:17.414852Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-14T14:28:17.414852Z",
+        "latest_version": "0.3.5",
         "name": "distlib",
-        "version": "0.3.4"
+        "version": "0.3.5"
     },
     "dlint": {
         "datetime": "2021-10-27T13:15:42.845122Z",
@@ -328,12 +336,12 @@
         "version": "0.7.3"
     },
     "doit": {
-        "datetime": "2022-04-07T14:03:53.361272Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-04-07T14:03:53.361272Z",
-        "latest_version": "0.35.0",
+        "datetime": "2022-04-22T15:33:23.165732Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-04-22T15:33:23.165732Z",
+        "latest_version": "0.36.0",
         "name": "doit",
-        "version": "0.35.0"
+        "version": "0.36.0"
     },
     "eradicate": {
         "datetime": "2022-04-06T09:47:11.609069Z",
@@ -342,6 +350,14 @@
         "latest_version": "2.1.0",
         "name": "eradicate",
         "version": "2.1.0"
+    },
+    "exceptiongroup": {
+        "datetime": "2022-06-08T07:39:07.055347Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-06-08T07:39:07.055347Z",
+        "latest_version": "1.0.0rc8",
+        "name": "exceptiongroup",
+        "version": "1.0.0rc8"
     },
     "falcon": {
         "datetime": "2019-04-26T18:26:34.046785Z",
@@ -360,20 +376,20 @@
         "version": "2022"
     },
     "filelock": {
-        "datetime": "2022-02-17T18:26:21.342445Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-02-17T18:26:21.342445Z",
-        "latest_version": "3.6.0",
+        "datetime": "2022-05-31T20:21:36.753203Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-05-31T20:21:36.753203Z",
+        "latest_version": "3.7.1",
         "name": "filelock",
-        "version": "3.6.0"
+        "version": "3.7.1"
     },
     "flake8": {
-        "datetime": "2020-10-02T23:34:01.861264Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-05-08T19:52:32.476810Z",
-        "latest_version": "3.9.2",
+        "datetime": "2021-10-11T12:42:47.401147Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-08-03T23:21:25.027788Z",
+        "latest_version": "5.0.4",
         "name": "flake8",
-        "version": "3.8.4"
+        "version": "4.0.1"
     },
     "flake8-2020": {
         "datetime": "2021-11-30T01:32:26.232768Z",
@@ -392,12 +408,12 @@
         "version": "0.12.2"
     },
     "flake8-annotations": {
-        "datetime": "2022-03-30T16:19:35.615669Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-30T16:19:35.615669Z",
-        "latest_version": "2.8.0",
+        "datetime": "2022-08-01T19:01:19.932257Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-08-01T19:01:19.932257Z",
+        "latest_version": "2.9.1",
         "name": "flake8-annotations",
-        "version": "2.8.0"
+        "version": "2.9.1"
     },
     "flake8-assertive": {
         "datetime": "2022-03-15T22:37:33.137191Z",
@@ -408,12 +424,12 @@
         "version": "2.1.0"
     },
     "flake8-bandit": {
-        "datetime": "2019-10-08T03:58:31.889853Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2019-10-08T03:58:31.889853Z",
-        "latest_version": "2.1.2",
+        "datetime": "2022-03-11T03:32:21.684665Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-03-11T03:32:21.684665Z",
+        "latest_version": "3.0.0",
         "name": "flake8-bandit",
-        "version": "2.1.2"
+        "version": "3.0.0"
     },
     "flake8-blind-except": {
         "datetime": "2022-03-18T16:49:13.002213Z",
@@ -440,12 +456,12 @@
         "version": "0.4.0"
     },
     "flake8-bugbear": {
-        "datetime": "2022-03-23T21:33:22.948489Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-23T21:33:22.948489Z",
-        "latest_version": "22.3.23",
+        "datetime": "2022-07-01T18:02:11.046963Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-01T18:02:11.046963Z",
+        "latest_version": "22.7.1",
         "name": "flake8-bugbear",
-        "version": "22.3.23"
+        "version": "22.7.1"
     },
     "flake8-builtins": {
         "datetime": "2020-05-14T10:45:01.642922Z",
@@ -464,20 +480,20 @@
         "version": "0.1.0"
     },
     "flake8-comprehensions": {
-        "datetime": "2022-01-10T17:10:08.584035Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-01-10T17:10:08.584035Z",
-        "latest_version": "3.8.0",
+        "datetime": "2022-05-19T09:53:53.883664Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-05-19T09:53:53.883664Z",
+        "latest_version": "3.10.0",
         "name": "flake8-comprehensions",
-        "version": "3.8.0"
+        "version": "3.10.0"
     },
     "flake8-debugger": {
-        "datetime": "2020-11-29T14:34:58.797814Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2020-11-29T14:34:58.797814Z",
-        "latest_version": "4.0.0",
+        "datetime": "2022-04-30T16:50:57.294514Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-04-30T16:50:57.294514Z",
+        "latest_version": "4.1.2",
         "name": "flake8-debugger",
-        "version": "4.0.0"
+        "version": "4.1.2"
     },
     "flake8-docstrings": {
         "datetime": "2021-03-19T00:57:12.120470Z",
@@ -488,12 +504,12 @@
         "version": "1.6.0"
     },
     "flake8-eradicate": {
-        "datetime": "2021-10-19T12:43:12.399837Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-10-19T12:43:12.399837Z",
-        "latest_version": "1.2.0",
+        "datetime": "2022-04-26T07:35:19.944044Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-04-26T07:35:19.944044Z",
+        "latest_version": "1.2.1",
         "name": "flake8-eradicate",
-        "version": "1.2.0"
+        "version": "1.2.1"
     },
     "flake8-expression-complexity": {
         "datetime": "2022-03-19T07:13:03.128527Z",
@@ -520,12 +536,12 @@
         "version": "0.0.7"
     },
     "flake8-isort": {
-        "datetime": "2021-10-14T11:43:49.840881Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-10-14T11:43:49.840881Z",
-        "latest_version": "4.1.1",
+        "datetime": "2022-07-25T13:26:12.101046Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-25T13:26:12.101046Z",
+        "latest_version": "4.1.2.post0",
         "name": "flake8-isort",
-        "version": "4.1.1"
+        "version": "4.1.2.post0"
     },
     "flake8-logging-format": {
         "datetime": "2019-01-10T17:24:16.976076Z",
@@ -576,12 +592,12 @@
         "version": "1.0.2"
     },
     "flake8-print": {
-        "datetime": "2020-11-29T14:56:01.182294Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2020-11-29T14:56:01.182294Z",
-        "latest_version": "4.0.0",
+        "datetime": "2022-04-30T16:19:24.307875Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-04-30T16:19:24.307875Z",
+        "latest_version": "5.0.0",
         "name": "flake8-print",
-        "version": "4.0.0"
+        "version": "5.0.0"
     },
     "flake8-printf-formatting": {
         "datetime": "2021-02-01T02:14:58.801285Z",
@@ -656,12 +672,12 @@
         "version": "0.18.2"
     },
     "ghp-import": {
-        "datetime": "2021-09-26T00:51:21.389483Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-09-26T00:51:21.389483Z",
-        "latest_version": "2.0.2",
+        "datetime": "2022-05-02T15:47:14.552377Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-05-02T15:47:14.552377Z",
+        "latest_version": "2.1.0",
         "name": "ghp-import",
-        "version": "2.0.2"
+        "version": "2.1.0"
     },
     "gitdb": {
         "datetime": "2021-10-24T13:40:41.887593Z",
@@ -679,14 +695,6 @@
         "name": "gitpython",
         "version": "3.1.27"
     },
-    "hacking": {
-        "datetime": "2021-04-21T10:37:50.757191Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-04-21T10:37:50.757191Z",
-        "latest_version": "4.1.0",
-        "name": "hacking",
-        "version": "4.1.0"
-    },
     "hug": {
         "datetime": "2020-02-06T18:13:37.987522Z",
         "domain": "https://pypi.org/pypi/{name}/{version}/json",
@@ -696,20 +704,20 @@
         "version": "2.6.1"
     },
     "hypothesis": {
-        "datetime": "2022-04-13T09:47:55.304465Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-04-13T09:47:55.304465Z",
-        "latest_version": "6.43.1",
+        "datetime": "2022-08-02T07:05:22.323135Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-08-02T07:05:22.323135Z",
+        "latest_version": "6.54.1",
         "name": "hypothesis",
-        "version": "6.43.1"
+        "version": "6.54.1"
     },
     "identify": {
-        "datetime": "2022-03-16T16:52:07.698913Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-16T16:52:07.698913Z",
-        "latest_version": "2.4.12",
+        "datetime": "2022-08-03T22:51:39.028061Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-08-03T22:51:39.028061Z",
+        "latest_version": "2.5.3",
         "name": "identify",
-        "version": "2.4.12"
+        "version": "2.5.3"
     },
     "idna": {
         "datetime": "2021-10-12T23:33:38.020888Z",
@@ -719,13 +727,21 @@
         "name": "idna",
         "version": "3.3"
     },
+    "implements": {
+        "datetime": "2021-02-17T14:40:03.034474Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2021-02-17T14:40:03.034474Z",
+        "latest_version": "0.3.0",
+        "name": "implements",
+        "version": "0.3.0"
+    },
     "importlib-metadata": {
-        "datetime": "2022-03-13T18:08:51.841454Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-13T18:08:51.841454Z",
-        "latest_version": "4.11.3",
+        "datetime": "2022-06-25T17:01:22.940893Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-06-25T17:01:22.940893Z",
+        "latest_version": "4.12.0",
         "name": "importlib-metadata",
-        "version": "4.11.3"
+        "version": "4.12.0"
     },
     "iniconfig": {
         "datetime": "2020-10-16T17:37:23.050185Z",
@@ -744,12 +760,12 @@
         "version": "5.10.1"
     },
     "jinja2": {
-        "datetime": "2022-03-25T22:32:55.469243Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-25T22:32:55.469243Z",
-        "latest_version": "3.1.1",
+        "datetime": "2022-04-28T17:21:25.336093Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-04-28T17:21:25.336093Z",
+        "latest_version": "3.1.2",
         "name": "jinja2",
-        "version": "3.1.1"
+        "version": "3.1.2"
     },
     "lazy-object-proxy": {
         "datetime": "2021-12-15T16:56:08.192891Z",
@@ -760,12 +776,12 @@
         "version": "1.7.1"
     },
     "libcst": {
-        "datetime": "2021-11-23T13:05:48.558302Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-01-28T13:42:50.295385Z",
-        "latest_version": "0.4.1",
+        "datetime": "2022-07-12T15:12:04.492477Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-12T15:12:04.492477Z",
+        "latest_version": "0.4.7",
         "name": "libcst",
-        "version": "0.3.23"
+        "version": "0.4.7"
     },
     "licensecheck": {
         "datetime": "2022-04-09T17:01:30.268809Z",
@@ -774,14 +790,6 @@
         "latest_version": "2022.1.1",
         "name": "licensecheck",
         "version": "2022.1.1"
-    },
-    "livereload": {
-        "datetime": "2020-08-22T15:31:53.202849Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2020-08-22T15:31:53.202849Z",
-        "latest_version": "2.6.3",
-        "name": "livereload",
-        "version": "2.6.3"
     },
     "loguru": {
         "datetime": "2022-01-29T13:47:29.921115Z",
@@ -792,28 +800,20 @@
         "version": "0.6.0"
     },
     "lxml": {
-        "datetime": "2022-02-17T14:33:16.238304Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-02-17T14:33:16.238304Z",
-        "latest_version": "4.8.0",
+        "datetime": "2022-07-01T20:09:49.309086Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-01T20:09:49.309086Z",
+        "latest_version": "4.9.1",
         "name": "lxml",
-        "version": "4.8.0"
-    },
-    "macfsevents": {
-        "datetime": "2018-02-21T11:40:45.266624Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2018-02-21T11:40:45.266624Z",
-        "latest_version": "0.8.1",
-        "name": "macfsevents",
-        "version": "0.8.1"
+        "version": "4.9.1"
     },
     "mako": {
-        "datetime": "2022-03-10T20:52:57.483228Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-10T20:52:57.483228Z",
-        "latest_version": "1.2.0",
+        "datetime": "2022-06-30T15:46:37.401060Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-06-30T15:46:37.401060Z",
+        "latest_version": "1.2.1",
         "name": "mako",
-        "version": "1.2.0"
+        "version": "1.2.1"
     },
     "mando": {
         "datetime": "2017-06-05T07:02:57.728157Z",
@@ -824,12 +824,12 @@
         "version": "0.6.4"
     },
     "markdown": {
-        "datetime": "2021-11-17T15:59:43.009774Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-11-17T15:59:43.009774Z",
-        "latest_version": "3.3.6",
+        "datetime": "2022-07-15T19:15:37.044395Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-15T19:15:37.044395Z",
+        "latest_version": "3.4.1",
         "name": "markdown",
-        "version": "3.3.6"
+        "version": "3.4.1"
     },
     "markupsafe": {
         "datetime": "2022-03-15T13:22:05.942273Z",
@@ -864,20 +864,20 @@
         "version": "1.3.0"
     },
     "mkdocs-git-revision-date-localized-plugin": {
-        "datetime": "2022-03-30T09:57:04.334787Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-30T09:57:04.334787Z",
-        "latest_version": "1.0.1",
+        "datetime": "2022-07-02T11:14:43.680107Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-02T11:14:43.680107Z",
+        "latest_version": "1.1.0",
         "name": "mkdocs-git-revision-date-localized-plugin",
-        "version": "1.0.1"
+        "version": "1.1.0"
     },
     "mkdocs-material": {
-        "datetime": "2022-04-08T20:29:41.689383Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-04-08T20:29:41.689383Z",
-        "latest_version": "8.2.9",
+        "datetime": "2022-07-04T11:30:27.455652Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-20T15:40:08.193155Z",
+        "latest_version": "8.4.0rc1",
         "name": "mkdocs-material",
-        "version": "8.2.9"
+        "version": "8.3.9"
     },
     "mkdocs-material-extensions": {
         "datetime": "2021-09-03T20:49:40.072718Z",
@@ -904,12 +904,12 @@
         "version": "6.0.2"
     },
     "mypy": {
-        "datetime": "2022-03-24T17:23:21.974681Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-24T17:23:21.974681Z",
-        "latest_version": "0.942",
+        "datetime": "2022-07-19T15:03:09.188215Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-19T15:03:09.188215Z",
+        "latest_version": "0.971",
         "name": "mypy",
-        "version": "0.942"
+        "version": "0.971"
     },
     "mypy-extensions": {
         "datetime": "2019-10-17T22:38:56.922784Z",
@@ -920,12 +920,12 @@
         "version": "0.4.3"
     },
     "nodeenv": {
-        "datetime": "2021-04-09T08:13:13.229914Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-04-09T08:13:13.229914Z",
-        "latest_version": "1.6.0",
+        "datetime": "2022-06-25T15:38:17.819693Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-06-25T15:38:17.819693Z",
+        "latest_version": "1.7.0",
         "name": "nodeenv",
-        "version": "1.6.0"
+        "version": "1.7.0"
     },
     "nox": {
         "datetime": "2022-01-07T23:34:01.412728Z",
@@ -936,28 +936,28 @@
         "version": "2022.1.7"
     },
     "nox-poetry": {
-        "datetime": "2021-11-17T15:39:30.839383Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-11-17T15:39:30.839383Z",
-        "latest_version": "0.9.0",
+        "datetime": "2022-06-24T20:42:24.066267Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-06-24T20:42:24.066267Z",
+        "latest_version": "1.0.1",
         "name": "nox-poetry",
-        "version": "0.9.0"
+        "version": "1.0.1"
     },
     "numpy": {
-        "datetime": "2022-03-07T22:39:39.822214Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-04-12T14:48:15.695596Z",
-        "latest_version": "1.21.6",
+        "datetime": "2022-07-09T01:07:24.593590Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-09T01:07:24.593590Z",
+        "latest_version": "1.23.1",
         "name": "numpy",
-        "version": "1.22.3"
+        "version": "1.23.1"
     },
     "optimize-images": {
-        "datetime": "2020-11-01T23:00:54.937991Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-05-29T16:56:51.490979Z",
-        "latest_version": "1.5.0",
+        "datetime": "2022-04-17T23:59:14.298596Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-04-17T23:59:14.298596Z",
+        "latest_version": "1.5.1",
         "name": "optimize-images",
-        "version": "1.4.0"
+        "version": "1.5.1"
     },
     "packaging": {
         "datetime": "2021-11-18T00:39:10.932370Z",
@@ -968,12 +968,12 @@
         "version": "21.3"
     },
     "pandas": {
-        "datetime": "2022-04-02T10:32:27.198227Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-04-02T10:32:27.198227Z",
-        "latest_version": "1.4.2",
+        "datetime": "2022-06-23T13:30:09.536882Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-06-23T13:30:09.536882Z",
+        "latest_version": "1.4.3",
         "name": "pandas",
-        "version": "1.4.2"
+        "version": "1.4.3"
     },
     "pandas-vet": {
         "datetime": "2022-02-09T02:48:57.434022Z",
@@ -992,12 +992,12 @@
         "version": "0.9.0"
     },
     "pbr": {
-        "datetime": "2022-02-07T07:49:13.152217Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-02-07T07:49:13.152217Z",
-        "latest_version": "5.8.1",
+        "datetime": "2022-05-05T09:53:36.071744Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-05-05T09:53:36.071744Z",
+        "latest_version": "5.9.0",
         "name": "pbr",
-        "version": "5.8.1"
+        "version": "5.9.0"
     },
     "pdocs": {
         "datetime": "2021-01-29T08:14:55.588161Z",
@@ -1016,12 +1016,12 @@
         "version": "2.1.2"
     },
     "pep8-naming": {
-        "datetime": "2020-06-16T23:48:52.815637Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2020-06-16T23:48:52.815637Z",
-        "latest_version": "0.11.1",
+        "datetime": "2022-07-15T19:54:08.859869Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-15T19:54:08.859869Z",
+        "latest_version": "0.13.1",
         "name": "pep8-naming",
-        "version": "0.11.1"
+        "version": "0.13.1"
     },
     "piexif": {
         "datetime": "2019-07-01T15:43:20.907670Z",
@@ -1032,12 +1032,12 @@
         "version": "1.1.3"
     },
     "pillow": {
-        "datetime": "2022-04-01T14:37:06.263613Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-04-01T14:37:06.263613Z",
-        "latest_version": "9.1.0",
+        "datetime": "2022-07-01T18:28:52.815507Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-01T18:28:52.815507Z",
+        "latest_version": "9.2.0",
         "name": "pillow",
-        "version": "9.1.0"
+        "version": "9.2.0"
     },
     "pip-check": {
         "datetime": "2021-11-16T21:10:44.740100Z",
@@ -1048,12 +1048,12 @@
         "version": "2.7"
     },
     "platformdirs": {
-        "datetime": "2022-02-19T17:27:39.081061Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-02-19T17:27:39.081061Z",
-        "latest_version": "2.5.1",
+        "datetime": "2022-04-18T08:48:47.670933Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-04-18T08:48:47.670933Z",
+        "latest_version": "2.5.2",
         "name": "platformdirs",
-        "version": "2.5.1"
+        "version": "2.5.2"
     },
     "pluggy": {
         "datetime": "2021-08-25T16:25:59.674784Z",
@@ -1064,20 +1064,20 @@
         "version": "1.0.0"
     },
     "pre-commit": {
-        "datetime": "2022-04-03T01:33:19.247597Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-04-03T01:33:19.247597Z",
-        "latest_version": "2.18.1",
+        "datetime": "2022-07-11T00:55:29.799163Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-11T00:55:29.799163Z",
+        "latest_version": "2.20.0",
         "name": "pre-commit",
-        "version": "2.18.1"
+        "version": "2.20.0"
     },
     "prompt-toolkit": {
-        "datetime": "2022-04-04T14:35:38.326087Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-04-04T14:35:38.326087Z",
-        "latest_version": "3.0.29",
+        "datetime": "2022-06-27T09:43:39.392899Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-06-27T09:43:39.392899Z",
+        "latest_version": "3.0.30",
         "name": "prompt-toolkit",
-        "version": "3.0.29"
+        "version": "3.0.30"
     },
     "proselint": {
         "datetime": "2021-11-07T02:02:04.531115Z",
@@ -1112,20 +1112,20 @@
         "version": "8.0.0"
     },
     "pycln": {
-        "datetime": "2022-03-12T13:19:07.910680Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-12T13:19:07.910680Z",
-        "latest_version": "1.2.5",
+        "datetime": "2022-07-28T09:23:15.908881Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-28T09:23:15.908881Z",
+        "latest_version": "2.1.1",
         "name": "pycln",
-        "version": "1.2.5"
+        "version": "2.1.1"
     },
     "pycodestyle": {
-        "datetime": "2020-05-11T20:02:52.968686Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-03-14T18:44:02.097681Z",
-        "latest_version": "2.7.0",
+        "datetime": "2021-10-11T00:56:25.599776Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-08-03T23:13:27.416880Z",
+        "latest_version": "2.9.1",
         "name": "pycodestyle",
-        "version": "2.6.0"
+        "version": "2.8.0"
     },
     "pydocstyle": {
         "datetime": "2021-05-17T20:37:45.262782Z",
@@ -1136,52 +1136,44 @@
         "version": "6.1.1"
     },
     "pyflakes": {
-        "datetime": "2020-04-10T03:52:17.620612Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-03-24T16:32:54.562790Z",
-        "latest_version": "2.3.1",
+        "datetime": "2021-10-06T20:39:49.185151Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-30T17:29:04.179569Z",
+        "latest_version": "2.5.0",
         "name": "pyflakes",
-        "version": "2.2.0"
+        "version": "2.4.0"
     },
     "pygments": {
-        "datetime": "2022-01-06T11:16:10.736895Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-01-06T11:16:10.736895Z",
-        "latest_version": "2.11.2",
+        "datetime": "2022-04-24T13:37:38.352532Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-04-24T13:37:38.352532Z",
+        "latest_version": "2.12.0",
         "name": "pygments",
-        "version": "2.11.2"
-    },
-    "pyinotify": {
-        "datetime": "2015-06-04T15:50:23.633153Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2015-06-04T15:50:23.633153Z",
-        "latest_version": "0.9.6",
-        "name": "pyinotify",
-        "version": "0.9.6"
+        "version": "2.12.0"
     },
     "pylint": {
-        "datetime": "2022-04-06T20:05:58.968905Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-04-06T20:05:58.968905Z",
-        "latest_version": "2.13.5",
+        "datetime": "2022-07-17T19:45:51.432760Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-17T19:45:51.432760Z",
+        "latest_version": "2.14.5",
         "name": "pylint",
-        "version": "2.13.5"
+        "version": "2.14.5"
     },
     "pymdown-extensions": {
-        "datetime": "2022-03-19T16:53:40.015099Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-19T16:53:40.015099Z",
-        "latest_version": "9.3",
+        "datetime": "2022-06-06T14:22:57.204037Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-06-06T14:22:57.204037Z",
+        "latest_version": "9.5",
         "name": "pymdown-extensions",
-        "version": "9.3"
+        "version": "9.5"
     },
     "pyparsing": {
-        "datetime": "2022-04-10T03:19:08.832519Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-04-10T03:19:08.832519Z",
-        "latest_version": "3.0.8",
+        "datetime": "2022-05-10T23:26:03.201008Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-05-10T23:26:03.201008Z",
+        "latest_version": "3.0.9",
         "name": "pyparsing",
-        "version": "3.0.8"
+        "version": "3.0.9"
     },
     "pyrate-limiter": {
         "datetime": "2022-04-12T06:05:20.346448Z",
@@ -1192,12 +1184,12 @@
         "version": "2.8.1"
     },
     "pytest": {
-        "datetime": "2022-03-17T21:15:01.040621Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-17T21:15:01.040621Z",
-        "latest_version": "7.1.1",
+        "datetime": "2022-04-23T14:35:55.107169Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-04-23T14:35:55.107169Z",
+        "latest_version": "7.1.2",
         "name": "pytest",
-        "version": "7.1.1"
+        "version": "7.1.2"
     },
     "pytest-benchmark": {
         "datetime": "2021-04-17T19:47:26.558700Z",
@@ -1208,12 +1200,12 @@
         "version": "3.4.1"
     },
     "pytest-cache-assert": {
-        "datetime": "2022-03-03T17:07:49.947285Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-03T17:07:49.947285Z",
-        "latest_version": "1.3.5",
+        "datetime": "2022-05-02T02:57:46.765001Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-05-02T02:57:46.765001Z",
+        "latest_version": "2.0.0",
         "name": "pytest-cache-assert",
-        "version": "1.3.5"
+        "version": "2.0.0"
     },
     "pytest-html": {
         "datetime": "2020-12-13T15:24:58.788568Z",
@@ -1224,28 +1216,28 @@
         "version": "3.1.1"
     },
     "pytest-metadata": {
-        "datetime": "2022-03-22T14:36:19.716006Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-26T22:35:01.995825Z",
-        "latest_version": "2.0.1",
+        "datetime": "2022-07-15T12:23:50.102470Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-15T12:23:50.102470Z",
+        "latest_version": "2.0.2",
         "name": "pytest-metadata",
-        "version": "2.0.0"
+        "version": "2.0.2"
     },
     "pytest-randomly": {
-        "datetime": "2022-01-10T17:14:34.172677Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-01-10T17:14:34.172677Z",
-        "latest_version": "3.11.0",
+        "datetime": "2022-05-11T17:35:06.578594Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-05-11T17:35:06.578594Z",
+        "latest_version": "3.12.0",
         "name": "pytest-randomly",
-        "version": "3.11.0"
+        "version": "3.12.0"
     },
     "pytest-recording": {
-        "datetime": "2021-07-08T18:25:31.965705Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-07-08T18:25:31.965705Z",
-        "latest_version": "0.12.0",
+        "datetime": "2022-06-20T18:05:33.272976Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-06-20T18:05:33.272976Z",
+        "latest_version": "0.12.1",
         "name": "pytest-recording",
-        "version": "0.12.0"
+        "version": "0.12.1"
     },
     "pytest-subprocess": {
         "datetime": "2022-02-09T06:22:20.070875Z",
@@ -1296,20 +1288,20 @@
         "version": "2020.1"
     },
     "pyupgrade": {
-        "datetime": "2022-04-08T18:55:42.554787Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-04-08T18:55:42.554787Z",
-        "latest_version": "2.32.0",
+        "datetime": "2022-07-26T16:55:54.891881Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-26T16:55:54.891881Z",
+        "latest_version": "2.37.3",
         "name": "pyupgrade",
-        "version": "2.32.0"
+        "version": "2.37.3"
     },
     "pyyaml": {
-        "datetime": "2021-01-20T22:07:31.474651Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
+        "datetime": "2021-10-13T19:39:42.916039Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
         "latest_datetime": "2021-10-13T19:39:42.916039Z",
         "latest_version": "6.0",
         "name": "pyyaml",
-        "version": "5.4.1"
+        "version": "6.0"
     },
     "pyyaml-env-tag": {
         "datetime": "2020-11-12T02:38:24.638742Z",
@@ -1336,12 +1328,12 @@
         "version": "5.1.0"
     },
     "requests": {
-        "datetime": "2022-01-05T15:40:49.334679Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-01-05T15:40:49.334679Z",
-        "latest_version": "2.27.1",
+        "datetime": "2022-06-29T15:13:40.685859Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-06-29T15:13:40.685859Z",
+        "latest_version": "2.28.1",
         "name": "requests",
-        "version": "2.27.1"
+        "version": "2.28.1"
     },
     "requirements-parser": {
         "datetime": "2022-01-20T08:52:07.321242Z",
@@ -1351,21 +1343,21 @@
         "name": "requirements-parser",
         "version": "0.5.0"
     },
-    "returns": {
-        "datetime": "2022-03-13T14:33:17.868947Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-13T14:33:17.868947Z",
-        "latest_version": "0.19.0",
-        "name": "returns",
-        "version": "0.19.0"
-    },
     "rich": {
-        "datetime": "2022-04-05T11:57:27.914895Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-04-05T11:57:27.914895Z",
-        "latest_version": "12.2.0",
+        "datetime": "2022-07-11T14:36:45.638667Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-11T14:36:45.638667Z",
+        "latest_version": "12.5.1",
         "name": "rich",
-        "version": "12.2.0"
+        "version": "12.5.1"
+    },
+    "setuptools-scm": {
+        "datetime": "2022-07-11T12:51:57.671747Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-11T12:51:57.671747Z",
+        "latest_version": "7.0.5",
+        "name": "setuptools-scm",
+        "version": "7.0.5"
     },
     "six": {
         "datetime": "2021-05-05T14:18:17.237677Z",
@@ -1416,12 +1408,12 @@
         "version": "0.8.0"
     },
     "stevedore": {
-        "datetime": "2021-10-18T09:48:08.748152Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-10-18T09:48:08.748152Z",
-        "latest_version": "3.5.0",
+        "datetime": "2022-07-12T09:06:44.671713Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-12T09:06:44.671713Z",
+        "latest_version": "4.0.0",
         "name": "stevedore",
-        "version": "3.5.0"
+        "version": "4.0.0"
     },
     "sty": {
         "datetime": "2022-02-05T13:11:22.693545Z",
@@ -1432,12 +1424,12 @@
         "version": "1.0.4"
     },
     "tabulate": {
-        "datetime": "2021-02-22T07:34:12.229281Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-02-22T07:34:12.229281Z",
-        "latest_version": "0.8.9",
+        "datetime": "2022-06-21T16:26:40.167441Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-06-21T16:26:40.167441Z",
+        "latest_version": "0.8.10",
         "name": "tabulate",
-        "version": "0.8.9"
+        "version": "0.8.10"
     },
     "termcolor": {
         "datetime": "2011-01-13T18:45:33.979856Z",
@@ -1454,14 +1446,6 @@
         "latest_version": "3.1.10",
         "name": "terminaltables",
         "version": "3.1.10"
-    },
-    "testfixtures": {
-        "datetime": "2022-03-01T10:48:28.197377Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-01T10:48:28.197377Z",
-        "latest_version": "6.18.5",
-        "name": "testfixtures",
-        "version": "6.18.5"
     },
     "tokenize-rt": {
         "datetime": "2021-10-21T15:20:18.870116Z",
@@ -1488,20 +1472,12 @@
         "version": "2.0.1"
     },
     "tomlkit": {
-        "datetime": "2021-05-20T20:28:07.040855Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-05-20T20:28:07.040855Z",
-        "latest_version": "0.7.2",
+        "datetime": "2022-07-07T02:46:24.664209Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-07T02:46:24.664209Z",
+        "latest_version": "0.11.1",
         "name": "tomlkit",
-        "version": "0.7.2"
-    },
-    "tornado": {
-        "datetime": "2020-10-30T19:08:01.422172Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2020-10-30T19:08:01.422172Z",
-        "latest_version": "6.1",
-        "name": "tornado",
-        "version": "6.1"
+        "version": "0.11.1"
     },
     "transitions": {
         "datetime": "2022-02-24T09:28:15.477234Z",
@@ -1512,28 +1488,28 @@
         "version": "0.8.11"
     },
     "typer": {
-        "datetime": "2022-03-30T19:18:48.180393Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-30T19:18:48.180393Z",
-        "latest_version": "0.4.1",
+        "datetime": "2022-07-12T20:30:38.849829Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-12T20:30:38.849829Z",
+        "latest_version": "0.6.1",
         "name": "typer",
-        "version": "0.4.1"
+        "version": "0.6.1"
     },
     "types-setuptools": {
-        "datetime": "2022-04-05T09:18:17.110627Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-04-05T09:18:17.110627Z",
-        "latest_version": "57.4.12",
+        "datetime": "2022-08-03T12:38:55.356129Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-08-03T12:38:55.356129Z",
+        "latest_version": "63.2.3",
         "name": "types-setuptools",
-        "version": "57.4.12"
+        "version": "63.2.3"
     },
     "typing-extensions": {
-        "datetime": "2022-02-14T03:19:55.773679Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-02-14T03:19:55.773679Z",
-        "latest_version": "4.1.1",
+        "datetime": "2022-07-01T14:56:11.904033Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-01T14:56:11.904033Z",
+        "latest_version": "4.3.0",
         "name": "typing-extensions",
-        "version": "4.1.1"
+        "version": "4.3.0"
     },
     "typing-inspect": {
         "datetime": "2021-06-07T16:12:08.580739Z",
@@ -1543,45 +1519,53 @@
         "name": "typing-inspect",
         "version": "0.7.1"
     },
+    "ujson": {
+        "datetime": "2022-07-02T05:31:48.518065Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-02T05:31:48.518065Z",
+        "latest_version": "5.4.0",
+        "name": "ujson",
+        "version": "5.4.0"
+    },
     "urllib3": {
-        "datetime": "2022-03-16T13:28:16.026094Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-16T13:28:16.026094Z",
-        "latest_version": "1.26.9",
+        "datetime": "2022-07-25T13:02:21.294138Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-25T13:02:21.294138Z",
+        "latest_version": "1.26.11",
         "name": "urllib3",
-        "version": "1.26.9"
+        "version": "1.26.11"
     },
     "vcrpy": {
-        "datetime": "2020-10-09T20:43:45.751932Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2020-10-09T20:43:45.751932Z",
-        "latest_version": "4.1.1",
+        "datetime": "2022-06-29T21:56:42.103213Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-06-29T21:56:42.103213Z",
+        "latest_version": "4.2.0",
         "name": "vcrpy",
-        "version": "4.1.1"
+        "version": "4.2.0"
     },
     "virtualenv": {
-        "datetime": "2022-04-11T10:39:05.471847Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-04-11T10:39:05.471847Z",
-        "latest_version": "20.14.1",
+        "datetime": "2022-07-27T21:53:47.076116Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-27T21:53:47.076116Z",
+        "latest_version": "20.16.2",
         "name": "virtualenv",
-        "version": "20.14.1"
+        "version": "20.16.2"
     },
     "vulture": {
-        "datetime": "2021-01-16T17:49:50.239866Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-01-16T17:49:50.239866Z",
-        "latest_version": "2.3",
+        "datetime": "2022-07-03T20:36:20.968411Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-03T20:36:20.968411Z",
+        "latest_version": "2.5",
         "name": "vulture",
-        "version": "2.3"
+        "version": "2.5"
     },
     "watchdog": {
-        "datetime": "2022-03-25T13:52:16.312891Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-25T13:52:16.312891Z",
-        "latest_version": "2.1.7",
+        "datetime": "2022-06-10T10:28:22.716530Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-06-10T10:28:22.716530Z",
+        "latest_version": "2.1.9",
         "name": "watchdog",
-        "version": "2.1.7"
+        "version": "2.1.9"
     },
     "wcwidth": {
         "datetime": "2020-06-23T16:10:28.529454Z",
@@ -1600,12 +1584,12 @@
         "version": "1.1.0"
     },
     "wrapt": {
-        "datetime": "2022-03-10T08:26:09.641957Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-03-10T08:26:09.641957Z",
-        "latest_version": "1.14.0",
+        "datetime": "2022-05-02T05:26:13.235405Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-05-02T05:26:13.235405Z",
+        "latest_version": "1.14.1",
         "name": "wrapt",
-        "version": "1.14.0"
+        "version": "1.14.1"
     },
     "xenon": {
         "datetime": "2022-02-24T08:21:17.992203Z",
@@ -1616,27 +1600,27 @@
         "version": "0.9.0"
     },
     "yamllint": {
-        "datetime": "2021-08-21T17:26:55.668685Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-08-21T17:26:55.668685Z",
-        "latest_version": "1.26.3",
+        "datetime": "2022-07-08T16:07:39.590701Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-08T16:07:39.590701Z",
+        "latest_version": "1.27.1",
         "name": "yamllint",
-        "version": "1.26.3"
+        "version": "1.27.1"
     },
     "yarl": {
-        "datetime": "2021-11-01T20:23:48.638780Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2021-11-01T20:23:48.638780Z",
-        "latest_version": "1.7.2",
+        "datetime": "2022-08-02T07:12:14.936535Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-08-02T07:12:14.936535Z",
+        "latest_version": "1.8.1",
         "name": "yarl",
-        "version": "1.7.2"
+        "version": "1.8.1"
     },
     "zipp": {
-        "datetime": "2022-04-03T15:07:27.225245Z",
-        "domain": "https://pypi.org/pypi/{name}/{version}/json",
-        "latest_datetime": "2022-04-03T15:07:27.225245Z",
-        "latest_version": "3.8.0",
+        "datetime": "2022-07-12T14:21:20.506913Z",
+        "domain": "https://pypi.org/pypi/{name}/json",
+        "latest_datetime": "2022-07-12T14:21:20.506913Z",
+        "latest_version": "3.8.1",
         "name": "zipp",
-        "version": "3.8.0"
+        "version": "3.8.1"
     }
 }
