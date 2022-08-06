@@ -1,6 +1,6 @@
 # ADR Documentation
 
-*ADR*: Architectural Design Decision
+*ADR*: Architectural Design Record
 
 ## ADRs
 
