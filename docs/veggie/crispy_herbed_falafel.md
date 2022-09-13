@@ -38,12 +38,12 @@ Personal rating: *Not yet rated*
     - The mixture should resemble coarse meal, not a smooth hummus. It should mostly hold together when you press a clump in your hands
     - Add the cilantro and parsley to the food processor. Pulse until the herbs are finely chopped and evenly distributed
     - Test the mixture again by trying to shape it into a mound. Continue to process until it keeps its shape.
+- Use a 1.5-inch ice cream scoop or your hands to form a total of 30-40 slightly mounded disks that are about 1.5 inches wide. (If using a scoop, gently flatten them a bit with your hands--helps to promote even cooking better than a ball)
 - Baking
     - To bake the falafel, place them on a rimmed baking sheet generously slicked with olive oil. Bake at 375 degrees for about 30 minutes, or until browned and crisped, flipping them over halfway through
 - (Alternatively) Frying
     - When ready to fry, heat 2 inches of oil in a deep, heavy pot over medium heat (375 degrees)
         - Line a baking sheet with paper towels, then seat a wire cooling rack on top.
-        - Use a 1.5-inch ice cream scoop or your hands to form a total of 30-40 slightly mounded disks that are about 1.5 inches wide. (If using a scoop, gently flatten them a bit with your hands--helps to promote even cooking better than a ball)
     - Carefully add 6-8 falafel at a time to the hot oil; cook for 60-90 seconds, or until browned and cooked through
         - Use a slotted spoon to transfer them to the rack to drain. Repeat to cook all the falafel, making sure the oil returns to the proper temperature before adding the next batch.
 
