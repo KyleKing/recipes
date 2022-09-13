@@ -1,7 +1,7 @@
 # yamllint disable-file
 # Answer file maintained by Copier for: https://github.com/KyleKing/calcipy_template
 # Check into version control. Edit by re-running copier and changing responses to the questions
-_commit: 0.7.2
+_commit: 0.8.4
 _src_path: gh:KyleKing/calcipy_template
 author_email: dev.act.kyle@gmail.com
 author_name: Kyle King
@@ -10,6 +10,7 @@ cname: recipes.kyleking.me
 copyright_date: '2021'
 doc_dir: docs/z_dev
 install_extras: ''
+minimum_python: 3.9.5
 package_name_py: recipes
 project_description: Recipe Website
 project_name: recipes
