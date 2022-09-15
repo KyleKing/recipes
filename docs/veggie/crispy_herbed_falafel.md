@@ -8,9 +8,9 @@ Personal rating: *Not yet rated*
 
 <!-- {cte} -->
 
-<!-- {cts} name_image=None; (User can specify image name) -->
+<!-- {cts} name_image=crispy_herbed_falafel.jpg; (User can specify image name) -->
 
-<!-- TODO: Capture image -->
+![crispy_herbed_falafel.jpg](./crispy_herbed_falafel.jpg){: .image-recipe loading=lazy }
 
 <!-- {cte} -->
 
@@ -48,6 +48,8 @@ Personal rating: *Not yet rated*
         - Use a slotted spoon to transfer them to the rack to drain. Repeat to cook all the falafel, making sure the oil returns to the proper temperature before adding the next batch.
 
 ## Notes
+
+> These turned out OK. They mostly held together and I had the leftovers in a couple of meals including the meal in the photo
 
 - Tip: get the mixture right. You really do want to break it down enough so the mixture holds together. As long as you don't take it to a puree, you're fine. Check it along the way, squeezing it together with your fingers. The addition of the herbs to the chickpea mixture will add a little moisture to make it more cohesive
 - Tip: Also, make sure you're giving yourself enough room to process the dried chickpeas. Our 8-cup food processor in the Food Lab was not big enough to hold everything and efficiently mix it. Dividing it into two batches helped, but even then I used a spatula every so often to push the mixture around and confirm it was all coming in contact with the blade.

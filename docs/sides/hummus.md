@@ -16,6 +16,8 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
+<!-- FIXME: The indented bullets don't appear correctly. May need to change spacing -->
+
 - [ ] Process (1 Minute)
   - [ ] 3/4 cup tahini (shake to mix)
   - [ ] 1/2 cup water

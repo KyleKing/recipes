@@ -8,14 +8,15 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cte} -->
 
-<!-- {cts} name_image=favorite_snacks.jpg; (User can specify image name) -->
+<!-- {cts} name_image=favorites_of_alex.jpg; (User can specify image name) -->
 
-![favorite_snacks.jpg](./favorite_snacks.jpg){: .image-recipe loading=lazy }
+![favorites_of_alex.jpg](./favorites_of_alex.jpg){: .image-recipe loading=lazy }
 
 <!-- {cte} -->
 
 ## Ingredients
 
+* Starbucks Cafe Verona, Ground (Alt: beans if cheaper + dark roast)
 * Seltzer
     * Grapefruit or lemon seltzer (avoid citrus & orange)
 * Yogurt's
@@ -23,6 +24,8 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
     * Chobani Raspberry
     * Siggi's Raspberry
     * Siggi's Vanilla
+* Breakfast
+    * Quaker Low Sugar Apple Cinnamon
 * Dessert
     * Chocolate Butter Cream Frosting (avoid cream cheese frosting)
 * Other
