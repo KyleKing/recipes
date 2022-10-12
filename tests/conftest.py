@@ -1,4 +1,8 @@
-"""PyTest configuration."""
+"""PyTest configuration.
+
+Note: the calcipy imports are required for a nicer test HTML report
+
+"""
 
 from pathlib import Path
 

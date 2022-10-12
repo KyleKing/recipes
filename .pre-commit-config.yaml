@@ -12,6 +12,7 @@ repos:
     rev: v4.3.0
     hooks:
       - id: check-added-large-files
+      - id: check-executables-have-shebangs
       - id: check-json
       - id: check-merge-conflict
       - id: check-symlinks
@@ -31,19 +32,20 @@ repos:
       - id: mixed-line-ending
         args: [--fix=auto]
       - id: pretty-format-json
-        args: [--autofix]
+        args: [--autofix, --indent=4]
+        exclude: (tests/.*assert-cache.*/.+\.json)
       - id: trailing-whitespace
   - repo: https://github.com/lovesegfault/beautysh
     rev: v6.2.1
     hooks:
       - id: beautysh
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v2.32.7
+    rev: v2.35.0
     hooks:
       - id: commitizen
         additional_dependencies: [cz_legacy]
         stages: [commit-msg]
-  # PLANNED: Needs to support mkdocs: https://github.com/executablebooks/mdformat/issues/317
+  # FIXME: Needs to support mkdocs: https://github.com/executablebooks/mdformat/issues/317
   - repo: https://github.com/executablebooks/mdformat
     rev: 0.7.16
     hooks:
@@ -58,6 +60,7 @@ repos:
           - mdformat-toc
           - mdformat-web
         exclude: _.*\.md|CHANGELOG\.md
+        args: [--wrap=no]
   - repo: https://github.com/gaborbernat/pyproject-fmt
     rev: 0.2.0
     hooks:
@@ -93,10 +96,8 @@ repos:
         language: fail
         files: \.rej$
         # Note: there are occasional errors when running doit in pre-commit
-        #   Moving the .doit.db outside of the git directory helps, but there
-        #   are obvious drawbacks
-        # "doit.dependency.DatabaseException: [Errno 35] Resource
-        #   temporarily unavailable: '.doit.db'"
+        #  "doit.dependency.DatabaseException: [Errno 35] Resource temporarily unavailable: '.doit.db'"
+        #  Using './.doit.tmp-*' helps, but sometimes the file needs to be manually removed
       - id: python-formatter
         name: Python Auto-Formatter
         description: Apply calcipy formatting
