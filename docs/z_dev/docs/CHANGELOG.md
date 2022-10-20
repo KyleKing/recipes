@@ -2,6 +2,8 @@
 
 ### Feat
 
+- symlink obsidian vault for editing
+- add Gnocchi Bake
 - add tomato butter noodles
 - Add Spicy Salmon Bowl recipe
 - copier update. Add Github Actions

@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Chickpea Spicy Buffalo Wrap
 
 > Based on [https://minimalistbaker.com/spicy-buffalo-chickpea-wraps/](https://minimalistbaker.com/spicy-buffalo-chickpea-wraps/)
@@ -18,23 +16,28 @@ Personal rating: *Not yet rated*
 
 ## Ingredients
 
-* [ ] BUFFALO CHICKPEAS
-    * [ ] 1 15-ounce can chickpeas, rinsed, drained, and dried
-    * [ ] 1 tbsp olive oil or coconut oil
-    * [ ] 4 tbsp hot sauce, divided
-    * [ ] 1/4 tsp garlic powder
-    * [ ] pinch sea salt
-* [ ] DRESSING + SALAD
-    * [ ] 1/3 cup hummus
-    * [ ] 1.5-2 tbsp maple syrup
-    * [ ] 1 small lemon, juiced (1 small lemon yields ~2 tbsp or 30 ml)
-    * [ ] 1-2 tbsp hot water (to thin)
-    * [ ] 1 head romaine lettuce, cleaned, large stems removed, and roughly chopped)
-* [ ] FOR SERVING
-    * [ ] 3-4 flour tortillas, pita, or naan
-    * [ ] 1/4 cup red onion, diced (optional)
-    * [ ] 1/4 cup baby tomato, diced (optional)
-    * [ ] 1/4 ripe avocado, thinly sliced (optional)
+### BUFFALO CHICKPEAS
+
+* [ ] 1 15-ounce can chickpeas, rinsed, drained, and dried
+* [ ] 1 tbsp olive oil or coconut oil
+* [ ] 4 tbsp hot sauce, divided
+* [ ] 1/4 tsp garlic powder
+* [ ] pinch sea salt
+
+### DRESSING + SALAD
+
+* [ ] 1/3 cup hummus
+* [ ] 1.5-2 tbsp maple syrup
+* [ ] 1 small lemon, juiced (1 small lemon yields ~2 tbsp or 30 ml)
+* [ ] 1-2 tbsp hot water (to thin)
+* [ ] 1 head romaine lettuce, cleaned, large stems removed, and roughly chopped)
+
+### FOR SERVING
+
+* [ ] 3-4 flour tortillas, pita, or naan
+* [ ] 1/4 cup red onion, diced (optional)
+* [ ] 1/4 cup baby tomato, diced (optional)
+* [ ] 1/4 ripe avocado, thinly sliced (optional)
 
 ## Recipe
 

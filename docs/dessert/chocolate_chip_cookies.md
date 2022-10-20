@@ -17,19 +17,24 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Ingredients
 
 
-* [ ] 1 - In a medium bowl, whisk:
-    * [ ] 2.25 cups all-purpose flour
-    * [ ] 1 tsp baking soda
-    * [ ] 1 tsp salt
-* [ ] 2 - In a large bowl, combine:
-    * [ ] 1 cup (2 sticks) butter, softened
-    * [ ] 3/4 cup granulated sugar
-    * [ ] 3/4 cup brown sugar, packed
-* [ ] 3 - Then:
-    * [ ] 1 tsp vanilla extract
-    * [ ] 2 large eggs
-    * [ ] 2 cups (12 oz) chocolate chips
-    * [ ] 1 cup chopped nuts or additional 1-2 tbsp flour
+### 1: In a medium bowl, whisk
+
+* [ ] 2.25 cups all-purpose flour
+* [ ] 1 tsp baking soda
+* [ ] 1 tsp salt
+
+### 2: In a large bowl, combine
+
+* [ ] 1 cup (2 sticks) butter, softened
+* [ ] 3/4 cup granulated sugar
+* [ ] 3/4 cup brown sugar, packed
+
+### 3: Then
+
+* [ ] 1 tsp vanilla extract
+* [ ] 2 large eggs
+* [ ] 2 cups (12 oz) chocolate chips
+* [ ] 1 cup chopped nuts or additional 1-2 tbsp flour
 
 ## Recipe
 

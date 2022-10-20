@@ -37,12 +37,11 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Recipe
 
 * Toast the English Muffin (or biscuit, etc.)
-* Make the eggs in a non-stick skillet ro with the help of butter and olive oil
-* Add selected optional toppings and enjoy!
+* Prep eggs with butter and/or olive oil
 
 ## Notes
 
-* For the onions and arugula...
-    * On medium heat cook the thinly sliced onion in olive oil for 10 min, then add the butter and salt and pepper and cook for an additional 12-15 until caramelized. Add arugula or spinach a handful at a time until wilted. Serve on the egg sandwich
-    * In the same skillet, brown the canadian bacon and ham
-    * Then cook the eggs
+* *For the onions and arugula...*
+* On medium heat cook the thinly sliced onion in olive oil for 10 min, then add the butter and salt and pepper and cook for an additional 12-15 until caramelized. Add arugula or spinach a handful at a time until wilted. Serve on the egg sandwich
+* In the same skillet, brown the canadian bacon and ham
+* Then cook the eggs

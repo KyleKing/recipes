@@ -1,8 +1,6 @@
-<!-- Needs Manual Review -->
-
 # Slow Cooker Chicken Tortilla Soup
 
-<!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
+<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
@@ -16,16 +14,19 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] Toppings
-    * [ ] Tortilla chips
-    * [ ] 2 cups grated cheese
-* [ ] soup
-    * [ ] 2 large chicken breast, halved
-    * [ ] 2 cans of black beans (30 oz)
-    * [ ] 3 cans of Original Rotel Diced Tomatoes and Green Chilies (30 oz)
-    * [ ] 1 cup salsa
-    * [ ] 4 oz green chilies, chopped
-    * [ ] 14.5 oz can tomato sauce
+### Toppings
+
+* [ ] Tortilla chips
+* [ ] 2 cups grated cheese
+
+### soup
+
+* [ ] 2 large chicken breast, halved
+* [ ] 2 cans of black beans (30 oz)
+* [ ] 3 cans of Original Rotel Diced Tomatoes and Green Chilies (30 oz)
+* [ ] 1 cup salsa
+* [ ] 4 oz green chilies, chopped
+* [ ] 14.5 oz can tomato sauce
 
 ## Recipe
 

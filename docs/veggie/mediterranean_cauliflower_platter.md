@@ -18,35 +18,42 @@ Personal rating: *Not yet rated*
 
 ## Ingredients
 
-* [ ] cauliflower
-    * [ ] 1 large head cauliflower (2 pounds), cored and cut into florets
-    * [ ] 1 tbsp extra-virgin olive oil
-    * [ ] 1 tsp dried thyme
-    * [ ] 1/2 tsp ground cumin
-    * [ ] 1/2 tsp ground turmeric
-    * [ ] 2 tsp finely grated lemon zest (from 1/2 lemon)
-    * [ ] 1/2 tsp kosher salt
-* [ ] quinoa
-    * [ ] 3/4 cup dried quinoa, rinsed as needed
-    * [ ] 1/2 tsp kosher salt, or more as needed
-    * [ ] 1 1/2 cups water
-    * [ ] 1/2 cup chopped fresh parsley
-    * [ ] 1/2 cup chopped cherry tomatoes
-    * [ ] 1/2 medium red bell pepper, seeded and minced (½ cup)
-    * [ ] 2 tbsp fresh lemon juice (from the lemon you zested above)
-    * [ ] 1 tbsp extra-virgin olive oil
-    * [ ] Freshly ground black pepper
-* [ ] olives
-    * [ ] 1 1/2 tsp extra-virgin olive oil
-    * [ ] 1 clove garlic
-    * [ ] 3/4 cup canned ripe green olives, drained
-    * [ ] Pinch dried thyme
-* [ ] platter
-    * [ ] 1 cup hummus
-    * [ ] 1 English (seedless) cucumber, thinly sliced crosswise
-    * [ ] Handful roasted, salted almonds
-    * [ ] Two pitas, cut into wedges
-    * [ ] Sweet paprika (optional)
+### Cauliflower
+
+* [ ] 1 large head cauliflower (2 pounds), cored and cut into florets
+* [ ] 1 tbsp extra-virgin olive oil
+* [ ] 1 tsp dried thyme
+* [ ] 1/2 tsp ground cumin
+* [ ] 1/2 tsp ground turmeric
+* [ ] 2 tsp finely grated lemon zest (from 1/2 lemon)
+* [ ] 1/2 tsp kosher salt
+
+### Quinoa
+
+* [ ] 3/4 cup dried quinoa, rinsed as needed
+* [ ] 1/2 tsp kosher salt, or more as needed
+* [ ] 1 1/2 cups water
+* [ ] 1/2 cup chopped fresh parsley
+* [ ] 1/2 cup chopped cherry tomatoes
+* [ ] 1/2 medium red bell pepper, seeded and minced (½ cup)
+* [ ] 2 tbsp fresh lemon juice (from the lemon you zested above)
+* [ ] 1 tbsp extra-virgin olive oil
+* [ ] Freshly ground black pepper
+
+### Olives
+
+* [ ] 1 1/2 tsp extra-virgin olive oil
+* [ ] 1 clove garlic
+* [ ] 3/4 cup canned ripe green olives, drained
+* [ ] Pinch dried thyme
+
+### Platter
+
+* [ ] 1 cup hummus
+* [ ] 1 English (seedless) cucumber, thinly sliced crosswise
+* [ ] Handful roasted, salted almonds
+* [ ] Two pitas, cut into wedges
+* [ ] Sweet paprika (optional)
 
 ## Recipe
 

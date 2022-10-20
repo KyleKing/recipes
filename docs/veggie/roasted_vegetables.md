@@ -1,8 +1,6 @@
-<!-- Needs Manual Review -->
-
 # Roasted Vegetables
 
-<!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
+<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
@@ -18,20 +16,14 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ### Seasonings
 
-* [ ] Thyme
-* [ ] Rosemary
-* [ ] Salt and pepper
-* [ ] Garlic powder
-* [ ] Onion powder
 * [ ] Olive Oil
+* [ ] (Standard) Thyme, Rosemary, Garlic, Onion, and Salt and pepper
+* [ ] (Alternative) Paprika, Thyme, Garlic, and Onion
 
-### First Half
+### Veggies
 
 * [ ] Potatoes
 * [ ] Sweet potatoes
-
-### Second Half
-
 * [ ] Carrots
 * [ ] Broccoli
 * [ ] Mushrooms
@@ -42,9 +34,8 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Recipe
 
-* Cut all vegetables into roughly the same size
-    * Start with the (regular and sweet) potatoes
-    * Chunk then mix in a bowl with seasonings
-    * Set the oven to 425 (no need to wait for pre-heat) and bake for ~50 minutes
-* Cut up the rest of the vegetables (broccoli, carrots, and/or mushrooms) and mix with seasonings in the same bowl. Set aside
-* After the initial roast is done, add the next set of vegetables and bake for ~40 minutes
+* Set the oven to 425 (no need to wait for pre-heat)
+* Cut up all the vegetables into roughly the same size
+* Mix with seasonings and oil in a bowl, then spread out over two baking sheets or in a roasting pan
+* Bake for 30 minutes, check and flip, then bake for an additional 30 min
+* Wait to add the software ingredients, such as mushrooms, zucchini, etc. until the mid-point

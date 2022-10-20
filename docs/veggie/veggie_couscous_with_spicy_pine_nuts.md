@@ -34,9 +34,9 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ### Couscous
 
 * [ ] Prep the couscous following package instructions
-    * [ ] If regular couscous, add 1/3 cup sliced almonds
+* [ ] If regular couscous, add 1/3 cup sliced almonds
 
-> Note: we couldn't find pine nuts, so we used a pine nut boxed couscous. For the full recipe with the nuts, see the cookbook!
+*Note: we couldn't find pine nuts, so we used a pine nut boxed couscous. For the full recipe with the nuts, see the cookbook!*
 
 ## Recipe
 

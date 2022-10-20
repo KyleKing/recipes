@@ -20,17 +20,20 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] gnocchi
-    * [ ] 1 large sweet potato
-    * [ ] 1/3 cup whole milk ricotta cheese
-    * [ ] 3/4 cup flour
-    * [ ] 1 tsp salt
-    * [ ] 1/4 tsp black pepper
-* [ ] sauce
-    * [ ] 2/3 stick butter
-    * [ ] 1/4 cup fresh sage leaves, chopped or 2-4 tsp of ground
-    * [ ] 1/2 cup finely grated Parmesan
-    * [ ] salt and pepper
+### Gnocchi
+
+* [ ] 1 large sweet potato
+* [ ] 1/3 cup whole milk ricotta cheese
+* [ ] 3/4 cup flour
+* [ ] 1 tsp salt
+* [ ] 1/4 tsp black pepper
+
+### Sauce
+
+* [ ] 2/3 stick butter
+* [ ] 1/4 cup fresh sage leaves, chopped or 2-4 tsp of ground
+* [ ] 1/2 cup finely grated Parmesan
+* [ ] salt and pepper
 
 ## Recipe
 
