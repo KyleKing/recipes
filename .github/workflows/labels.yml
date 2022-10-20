@@ -3,6 +3,7 @@
 
 name: github_labeler
 
+# Will only be run each push or PR merge to the main branch
 on:  # yamllint disable-line rule:truthy
   push:
     branches:

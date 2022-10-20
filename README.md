@@ -1,4 +1,4 @@
-# recipes (recipes)
+# recipes
 
 Recipe Website
 

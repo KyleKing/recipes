@@ -1,7 +1,8 @@
 ---
-site_name: Recipes
+site_name: recipes
 site_author: Kyle King and Alexandra Gabitzer
 site_description: Kyle and Alex's Personal Recipes
+site_url: https://recipes.kyleking.me
 repo_name: kyleking/recipes
 repo_url: https://github.com/kyleking/recipes
 # Note: modified for top-level docs/ directory
@@ -24,6 +25,15 @@ theme:
     - toc.autohide
 
 plugins:
+  - build_plantuml:
+      render: server  # or "local"
+      bin_path: /usr/local/bin/plantuml  # ignored when render: server
+      server: http://www.plantuml.com/plantuml  # official plantuml server
+      output_format: svg
+      diagram_root: docs/diagrams
+      output_folder: out
+      input_folder: src
+      input_extensions: puml
   - search
   - gen-files:
       scripts:
