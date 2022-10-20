@@ -9,7 +9,7 @@ from attrs import field, mutable
 from beartype import beartype
 from beartype.typing import List, Optional, Union
 from calcipy.doit_tasks.doc import _parse_var_comment, _ReplacementMachine, write_autoformatted_md_sections
-from calcipy.doit_tasks.doit_globals import DG
+from calcipy.doit_tasks.doit_globals import get_dg
 from calcipy.file_helpers import get_doc_dir, read_lines
 from decorator import ContextManager, contextmanager
 from loguru import logger
@@ -17,8 +17,11 @@ from loguru import logger
 # =====================================================================================
 # Shared Functionality
 
-DIR_MD = DG.meta.path_project / 'docs'
-"""Markdown directory (~2-levels up of `DG.doc.doc_sub_dir`)."""
+
+def get_dir_md() -> Path:
+    """Markdown directory (~2-levels up of `DG.doc.doc_sub_dir`)."""
+    return get_dg().meta.path_project / 'docs'
+
 
 BUMP_RATING = 3
 """Integer to increase the rating so that the lowest is not 1."""
@@ -96,10 +99,11 @@ def _configure_recipe_lookup(new_lookup: dict[str, Callable[[str, Path], List[st
         None
 
     """
-    original_lookup = deepcopy(DG.doc.handler_lookup)
-    DG.doc.handler_lookup = new_lookup
+    dg = get_dg()
+    original_lookup = deepcopy(dg.doc.handler_lookup)
+    dg.doc.handler_lookup = new_lookup
     yield
-    DG.doc.handler_lookup = original_lookup
+    dg.doc.handler_lookup = original_lookup
 
 
 # =====================================================================================
@@ -269,12 +273,14 @@ class _TOCRecipes:  # noqa: H601
 @beartype
 def _write_toc() -> None:
     """Write the table of contents for each section."""
+    dg = get_dg()
     # Get all subdirectories
-    md_dirs = {path_md.parent for path_md in DG.doc.paths_md}
+    md_dirs = {path_md.parent for path_md in dg.doc.paths_md}
 
     # Filter out any directories for calcipy that are not recipes
-    doc_dir = get_doc_dir(DG.meta.path_project)
-    filtered_dir = [pth for pth in md_dirs if pth.parent == DIR_MD and pth.name not in [doc_dir.name]]
+    dir_md = get_dir_md()
+    doc_dir = get_doc_dir(dg.meta.path_project)
+    filtered_dir = [pth for pth in md_dirs if pth.parent == dir_md and pth.name not in [doc_dir.name]]
 
     # Create a TOC for each directory
     for sub_dir in filtered_dir:
@@ -284,10 +290,10 @@ def _write_toc() -> None:
             'rating=': toc_recipes.store_star,
             'name_image=': toc_recipes.store_image,
         }
-        sub_dir_paths = [pth for pth in DG.doc.paths_md if pth.is_relative_to(sub_dir)]
+        sub_dir_paths = [pth for pth in dg.doc.paths_md if pth.is_relative_to(sub_dir)]
         with _configure_recipe_lookup(recipe_lookup):
             for path_md in sub_dir_paths:
-                _ReplacementMachine().parse(read_lines(path_md), DG.doc.handler_lookup, path_md)
+                _ReplacementMachine().parse(read_lines(path_md), dg.doc.handler_lookup, path_md)
         toc_recipes.write_toc()
 
 

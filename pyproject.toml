@@ -48,10 +48,11 @@ readme = "docs/z_dev/README.md"
 include = ["LICENSE.md"]
 keywords = []
 classifiers = [
-    "Development Status :: 1 - Planning",
+    "Development Status :: 5 - Production/Stable",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
 ] # https://pypi.org/classifiers/
 
 [tool.poetry.urls]
@@ -59,7 +60,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.9"
-calcipy = ">=0.16.0"
+calcipy = ">=0.20.1"
 optimize-images = ">=1.5.1"
 pillow = ">=9.2.0"
 

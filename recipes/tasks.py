@@ -11,7 +11,7 @@ from doit.tools import Interactive
 from loguru import logger
 from PIL import Image
 
-from .formatter import DIR_MD, format_recipes
+from .formatter import format_recipes, get_dir_md
 
 # Log the positional arguments to help with debugging tasks if needed
 logger.debug('sys.argv={sys_argv}', sys_argv=sys.argv)
@@ -31,7 +31,7 @@ def task_format_recipes() -> DoitTask:
 @beartype
 def _convert_png_to_jpg() -> None:
     """Convert any remaining PNG files to jpg."""
-    for path_png in DIR_MD.glob('*/*.png'):
+    for path_png in get_dir_md().glob('*/*.png'):
         if path_png.parent.name != '_icons':
             logger.warning(f'Convert to jpg and deleting original for: {path_png}')
             Image.open(path_png).save(path_png.parent / f'{path_png.stem}.jpg')
