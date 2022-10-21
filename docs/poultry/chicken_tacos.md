@@ -8,9 +8,9 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cte} -->
 
-<!-- {cts} name_image=chicken_tacos.jpeg; (User can specify image name) -->
+<!-- {cts} name_image=chicken_tacos.jpg; (User can specify image name) -->
 
-![chicken_tacos.jpeg](./chicken_tacos.jpeg){: .image-recipe loading=lazy }
+![chicken_tacos.jpg](./chicken_tacos.jpg){: .image-recipe loading=lazy }
 
 <!-- {cte} -->
 

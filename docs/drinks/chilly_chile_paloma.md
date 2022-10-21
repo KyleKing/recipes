@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Chilly Chile Paloma
 
 > Based on [https://www.washingtonpost.com/recipes/chilly-chile-paloma/13478/](https://www.washingtonpost.com/recipes/chilly-chile-paloma/13478/)
@@ -35,7 +33,6 @@ Personal rating: *Not yet rated*
 
 ## Notes
 
-* TODO: Need to revisit
 * This frozen version of the Paloma brings in grapefruit juice instead of the traditional grapefruit soda and substitutes a mild chili-infused simple syrup for agave nectar.
 * You’ll want to freeze the grapefruit juice cubes the night before: 1 oz of juice fits in a single well of a standard ice cube tray. We found Royal Rose’s Three Chile Simple Syrup in the District, at Ace Beverage and Salt & Sundry in Union Market
 * Make Ahead: The grapefruit juice needs to be frozen for a few hours or up to a day in advance
