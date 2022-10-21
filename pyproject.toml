@@ -7,7 +7,7 @@ ignore_patterns = ["__TOC.md"]
 
 [tool.commitizen]
 name = "cz_legacy"
-version = "0.3.0"
+version = "0.4.0"
 version_files = ["pyproject.toml", "recipes/__init__.py"]
 change_type_order = [
     "BREAKING CHANGE",
@@ -37,7 +37,7 @@ multi_line_output = 5
 
 [tool.poetry]
 name = "recipes"
-version = "0.3.0"
+version = "0.4.0"
 description = "Recipe Website"
 license = "MIT"
 authors = ["Kyle King <dev.act.kyle@gmail.com>"]
