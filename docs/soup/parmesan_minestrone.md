@@ -20,6 +20,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 * [ ] 3 tbsp olive oil
 * [ ] 1 large yellow onion, cut into 1/2" dice
+* [ ] 6 cloves garlic (3 tsp)
 * [ ] 2 medium carrots, cut into 1/2" dice
 * [ ] 2 celery sticks, cut into 1/2" dice
 * [ ] 7 cups vegetable or chicken broth
