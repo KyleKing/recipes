@@ -2,6 +2,12 @@
 
 ### Feat
 
+- migrate to Python 3.11
+
+## 0.4.0 (2022-10-20)
+
+### Feat
+
 - symlink obsidian vault for editing
 - add Gnocchi Bake
 - add tomato butter noodles
@@ -11,6 +17,24 @@
 - initial hummus recipe
 - standardize cookie recipes
 - new Whiskey Sour recipe
+
+### Fix
+
+- suppress mdformat errors on admonitions
+- admonitions should be four spaces
+- admonitions are incorrectly modified
+
+### Refactor
+
+- try to fix type errors
+- use spacing consistent with mdformatter
+- Python type annotations from beartype
+- apply mdformat
+
+## 2021.0.3.0 (2022-01-04)
+
+### Feat
+
 - new fish and carbonara recipes!
 - minor cleanup and new photos
 - beach enchiladas
@@ -26,9 +50,6 @@
 
 ### Fix
 
-- suppress mdformat errors on admonitions
-- admonitions should be four spaces
-- admonitions are incorrectly modified
 - the earlier PEP585 issues were an error with poetry using 3.8 and not 3.9
 - sync pre-commit and delay PEP585
 - restore Python 3.9-safe type annotations
@@ -44,10 +65,6 @@
 
 ### Refactor
 
-- try to fix type errors
-- use spacing consistent with mdformatter
-- Python type annotations from beartype
-- apply mdformat
 - minor update
 - update pizza
 - upgrade type annotations for 3.9

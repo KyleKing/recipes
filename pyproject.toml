@@ -1,9 +1,14 @@
 [build-system]
-requires = ["poetry-core>=1.0.7"]
 build-backend = "poetry.core.masonry.api"
+requires = [
+  "poetry-core>=1.0.7",
+]
 
 [tool.calcipy]
 ignore_patterns = ["__TOC.md"]
+
+[tool.calcipy.test]
+pythons = ["3.11"]
 
 [tool.commitizen]
 name = "cz_legacy"
@@ -51,16 +56,15 @@ classifiers = [
     "Development Status :: 5 - Production/Stable",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
 ] # https://pypi.org/classifiers/
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/kyleking/recipes/issues"
 
 [tool.poetry.dependencies]
-python = "^3.9"
-calcipy = ">=0.20.1"
+python = "^3.11"
+calcipy = ">=0.21.0"
 optimize-images = ">=1.5.1"
 pillow = ">=9.2.0"
 

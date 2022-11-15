@@ -30,11 +30,14 @@ We welcome pull requests! For your pull request to be accepted smoothly, we sugg
 
 - [DEVELOPER_GUIDE]
 - [STYLE_GUIDE]
-- [CONTRIBUTING]
 
 ## Code of Conduct
 
 We follow the [Contributor Covenant Code of Conduct][contributor-covenant].
+
+### Open Source Status
+
+We try to reasonably meet most aspects of the "OpenSSF scorecard" from [Open Source Insights](https://deps.dev/pypi/recipes)
 
 ## Responsible Disclosure
 
@@ -46,7 +49,6 @@ If you have any security issue to report, please contact the project maintainers
 
 [changelog]: ./docs/CHANGELOG.md
 [code_tag_summary]: ./docs/CODE_TAG_SUMMARY.md
-[contributing]: ./docs/CONTRIBUTING.md
 [contributor-covenant]: https://www.contributor-covenant.org
 [developer_guide]: ./docs/DEVELOPER_GUIDE.md
 [license]: https://github.com/kyleking/recipes/LICENSE

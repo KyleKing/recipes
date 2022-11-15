@@ -40,7 +40,7 @@ repos:
     hooks:
       - id: beautysh
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v2.35.0
+    rev: v2.37.0
     hooks:
       - id: commitizen
         additional_dependencies: [cz_legacy]
@@ -61,11 +61,10 @@ repos:
           - mdformat-web
         exclude: _.*\.md|CHANGELOG\.md
         args: [--wrap=no]
-  - repo: https://github.com/gaborbernat/pyproject-fmt
-    rev: 0.2.0
+  - repo: https://github.com/tox-dev/pyproject-fmt
+    rev: 0.3.5
     hooks:
       - id: pyproject-fmt
-      # PLANNED: newest version fails on positional argument errors: https://github.com/tox-dev/pyproject-fmt
   - repo: https://github.com/shellcheck-py/shellcheck-py
     rev: v0.8.0.4
     hooks:

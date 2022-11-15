@@ -6,7 +6,7 @@
 
 <!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
 
-Personal rating: *Not yet rated*
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 
 <!-- {cte} -->
 
@@ -43,4 +43,3 @@ Personal rating: *Not yet rated*
 * Whisk together the olive oil, honey, lime juice, garlic, salt, and pepper
 * Simmer the sauce in a sauce pan for a few minutes, then add the shrimp
 * Cook shrimp on one side until pink, then flip, and cook until just pink all over (~6 min)
- 

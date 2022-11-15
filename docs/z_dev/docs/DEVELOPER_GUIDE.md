@@ -50,9 +50,9 @@ poetry run doit run lock document deploy_docs publish
 | File                   |   Statements |   Missing |   Excluded | Coverage   |
 |------------------------|--------------|-----------|------------|------------|
 | `recipes/__init__.py`  |            5 |         0 |          0 | 100.0%     |
-| `recipes/formatter.py` |          108 |       108 |          0 | 0.0%       |
-| `recipes/tasks.py`     |           38 |        38 |          0 | 0.0%       |
-| **Totals**             |          151 |       146 |          0 | 3.3%       |
+| `recipes/formatter.py` |          111 |       111 |          0 | 0.0%       |
+| `recipes/tasks.py`     |           39 |        39 |          0 | 0.0%       |
+| **Totals**             |          155 |       150 |          0 | 3.2%       |
 
-Generated on: 2022-10-20
+Generated on: 2022-11-14
 <!-- {cte} -->
