@@ -20,7 +20,6 @@ theme:
   icon:
     repo: fontawesome/brands/github
   features:
-    - navigation.instant
     - navigation.tabs
     - toc.autohide
 
@@ -84,7 +83,7 @@ markdown_extensions:
       toc_depth: 5
 
 extra_css:
-  - css/mkdocstrings.css
+  - _styles/mkdocstrings.css
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
