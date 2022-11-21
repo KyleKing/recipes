@@ -31,7 +31,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 3 cloves garlic, minced
 - [ ] 2 cups water
 - [ ] 2 (15 oz) cans tomato sauce
-- [ ] 2 (15 oz) cans kidney beans
+- [ ] 2 (15 oz) cans kidney beans, drained
 - [ ] 2 tbsp light brown sugar
 
 ### Lawry's Seasoning Salt Substitute
