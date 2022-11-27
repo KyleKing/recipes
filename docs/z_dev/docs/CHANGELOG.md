@@ -4,6 +4,15 @@
 
 - migrate to Python 3.11
 
+### Fix
+
+- add missing instruction to drain
+- correct indentation for tonight's dinner!
+
+### Refactor
+
+- update copier
+
 ## 0.4.0 (2022-10-20)
 
 ### Feat
