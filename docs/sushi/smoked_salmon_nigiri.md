@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Smoked Salmon Nigiri
 
 > Based on [https://makemysushi.com/Recipes/make-smoked-salmon-nigiri](https://makemysushi.com/Recipes/make-smoked-salmon-nigiri)

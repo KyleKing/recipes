@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Guacamole
 
 > Based on [https://www.simplyrecipes.com/recipes/perfect_guacamole/](https://www.simplyrecipes.com/recipes/perfect_guacamole/)

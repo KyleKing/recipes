@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Sweet Potato Gnocchi
 
 > Based on [Chrissy Teigen Cravings], pg. 176

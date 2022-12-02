@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Johns Chili
 
 > Based on [Chrissy Teigen Cravings], pg. 148

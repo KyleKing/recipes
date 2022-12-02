@@ -1,6 +1,4 @@
-<!-- Needs Manual Review -->
-
-# Baked Potatoes Instant Pot
+# Baked Potatoes (Instant Pot)
 
 > Based on [https://amindfullmom.com/instant-pot-baked-potatoes/](https://amindfullmom.com/instant-pot-baked-potatoes/)
 

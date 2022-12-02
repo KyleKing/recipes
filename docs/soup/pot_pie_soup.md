@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Pot Pie Soup
 
 > Based on [Chrissy Teigen Cravings], pg. 51-52 (and recipe for crackers)

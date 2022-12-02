@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Smoked Salmon Rolls
 
 <!-- {cts} rating=1; (User can specify rating on scale of 1-5) -->

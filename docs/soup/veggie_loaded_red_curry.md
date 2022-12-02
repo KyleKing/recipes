@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Veggie Loaded Red Curry
 
 > Based on [https://www.washingtonpost.com/recipes/veggie-loaded-red-curry/17022/](https://www.washingtonpost.com/recipes/veggie-loaded-red-curry/17022/)

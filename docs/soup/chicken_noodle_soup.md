@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Chicken Noodle Soup
 
 > Based on [Chrissy Teigen Cravings], pg. 44

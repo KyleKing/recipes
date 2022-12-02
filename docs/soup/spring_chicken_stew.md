@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Spring Chicken Stew
 
 <!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->

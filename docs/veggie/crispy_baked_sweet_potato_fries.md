@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Crispy Baked Sweet Potato Fries
 
 > Based on [https://cookieandkate.com/2010/baked-sweet-potato-fries/](https://cookieandkate.com/2010/baked-sweet-potato-fries/)
@@ -18,7 +16,7 @@ Personal rating: *Not yet rated*
 
 ## Ingredients
 
-* [ ] sweet potatoes
+* [ ] Sweet potatoes
 * [ ] sprinkle of corn starch (optional)
 * [ ] olive oil to lightly cover each fry
 * [ ] salt

@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Shrimp Nigiri
 
 > Based on [http://www.foodrepublic.com/recipes/how-to-cook-shrimp-for-nigiri-sushi/](http://www.foodrepublic.com/recipes/how-to-cook-shrimp-for-nigiri-sushi/)

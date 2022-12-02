@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Baked Potatoes
 
 > Based on [https://www.tastesoflizzyt.com/oven-baked-potatoes/](https://www.tastesoflizzyt.com/oven-baked-potatoes/)

@@ -8,5 +8,5 @@
 | [Oven Baked Fish With Tomatoes](./oven_baked_fish_with_tomatoes.md) |        3 | <!-- TODO: Capture image -->                                                                  |
 | [Shrimp Creole](./shrimp_creole.md)                                 |        6 | ![shrimp_creole.jpeg](./shrimp_creole.jpeg){: .image-toc loading=lazy }                       |
 | [Shrimp Scampi](./shrimp_scampi.md)                                 |        6 | ![shrimp_scampi.jpeg](./shrimp_scampi.jpeg){: .image-toc loading=lazy }                       |
-| [Shrimp Tacos](./shrimp_tacos.md)                                   |        7 | <!-- TODO: Capture image -->                                                                  |
+| [Shrimp Tacos](./shrimp_tacos.md)                                   |        7 | ![shrimp_tacos.jpg](./shrimp_tacos.jpg){: .image-toc loading=lazy }                           |
 | [Spicy Salmon Roll Bowls](./spicy_salmon_roll_bowls.md)             |        3 | <!-- TODO: Capture image -->                                                                  |

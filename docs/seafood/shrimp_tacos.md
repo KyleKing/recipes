@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Shrimp Tacos
 
 > Based on [http://www.yummly.co/recipe/Honey-Lime-Shrimp-Tacos-1576139](http://www.yummly.co/recipe/Honey-Lime-Shrimp-Tacos-1576139)
@@ -10,9 +8,9 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cte} -->
 
-<!-- {cts} name_image=None; (User can specify image name) -->
+<!-- {cts} name_image=shrimp_tacos.jpg; (User can specify image name) -->
 
-<!-- TODO: Capture image -->
+![shrimp_tacos.jpg](./shrimp_tacos.jpg){: .image-recipe loading=lazy }
 
 <!-- {cte} -->
 

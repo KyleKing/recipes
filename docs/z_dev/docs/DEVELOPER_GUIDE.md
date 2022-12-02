@@ -54,5 +54,5 @@ poetry run doit run lock document deploy_docs publish
 | `recipes/tasks.py`     |           39 |        39 |          0 | 0.0%       |
 | **Totals**             |          155 |       150 |          0 | 3.2%       |
 
-Generated on: 2022-11-27
+Generated on: 2022-12-02
 <!-- {cte} -->

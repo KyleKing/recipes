@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Green Chile Mac
 
 > Based on [https://www.washingtonpost.com/recipes/green-chile-mac/17021/](https://www.washingtonpost.com/recipes/green-chile-mac/17021/)

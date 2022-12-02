@@ -11,6 +11,7 @@
 
 ### Refactor
 
+- remove cauliflower platter and cleanup checklists
 - update copier
 
 ## 0.4.0 (2022-10-20)

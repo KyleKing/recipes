@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Canned Spicy Tuna Roll
 
 > Based on [https://makemysushi.com/Recipes/canned-spicy-tuna-sushi-roll-twist](https://makemysushi.com/Recipes/canned-spicy-tuna-sushi-roll-twist)

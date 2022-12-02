@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Rice
 
 > Based on [https://recipes.instantpot.com/recipe/pressure-cooker-sushi-rice/](https://recipes.instantpot.com/recipe/pressure-cooker-sushi-rice/)

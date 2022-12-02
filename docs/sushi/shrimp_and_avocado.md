@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Shrimp And Avocado
 
 > Based on [https://www.geniuskitchen.com/recipe/avocado-and-shrimp-sushi-331300](https://www.geniuskitchen.com/recipe/avocado-and-shrimp-sushi-331300)

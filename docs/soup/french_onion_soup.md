@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # French Onion Soup
 
 > Based on [Chrissy Teigen Cravings Hungry for More], pg. 48
