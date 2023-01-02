@@ -32,8 +32,22 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
   - [ ] tomato, thinly sliced
   - [ ] olive oil
   - [ ] Parmesan cheese
+- [ ] __Blackened Seasoning__:
+  - [ ] 1 lb Salmon or Chicken
+  - [ ] 1 tsp smoked paprika
+  - [ ] 1/2 tsp garlic powder
+  - [ ] 1/2 tsp onion powder
+  - [ ] 1/2 tsp dried thyme
+  - [ ] 1/2 tsp Kosher Salt
+  - [ ] Neutral oil or butter for blackening
 
 ## Recipe
+
+### Cast Iron
+
+- On medium heat, sear face down for 10 minutes, then flip and cook for another 10-15 min based on thickness
+
+### Oven Baked
 
 - Preheat oven to 400F
 - Cover a baking sheet with tin foil and prep the fish
@@ -41,7 +55,5 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
   - For the _Tomato Basil_ variant, drizzle the olive oil, sprinkle the basil and pepper, add the tomatoes, then sprinkle with the Parmesan cheese
 - Bake for 15-25 min depending on thickness with most being around 20 min
 
-<!-- FIXME: Need to implement admonitions: https://github.com/executablebooks/mdformat/issues/309
 !!! note
     For *thin* frozen fillet, bake at 450F for 4 minutes, then flip and bake for 8-12 min ([frozen recipe source](http://cookthestory.com/how-to-cook-fish-from-frozen/))
- -->

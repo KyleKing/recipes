@@ -52,6 +52,7 @@ repos:
     hooks:
       - id: mdformat
         additional_dependencies:
+          - mdformat-admon
           - mdformat-beautysh
           - mdformat-black
           - mdformat-config
