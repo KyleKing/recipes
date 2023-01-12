@@ -50,7 +50,7 @@ repos:
     rev: 0.7.16
     hooks:
       - id: mdformat
-        additional_dependencies: ['mdformat-mkdocs[recommneded]']
+        additional_dependencies: ["mdformat-mkdocs[recommneded]"]
         exclude: _.*\.md|CHANGELOG\.md
         args: [--wrap=no]
   - repo: https://github.com/tox-dev/pyproject-fmt
@@ -70,13 +70,14 @@ repos:
       - id: detect-secrets
         # args: ["--baseline", ".secrets.baseline"]
         exclude: poetry\.lock|.*/cassettes/.*\.yaml
-  - repo: https://github.com/lyz-code/yamlfix/
-    rev: 1.3.1
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: "v3.0.0-alpha.4"
     hooks:
-      - id: yamlfix
+      - id: prettier
+        additional_dependencies:
+          - "prettier-plugin-sh"
         exclude: \.copier-answers\.yml|.*/cassettes/.*\.yaml
-        types_or: []
-        types: [file, yaml]
+        types: [yaml]
   - repo: local
     hooks:
       - id: copier-forbidden-files

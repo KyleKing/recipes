@@ -1,11 +1,11 @@
 ---
 # See: https://docs.sourcery.ai/Configuration/
 refactor:
-  python_version: '3.11'
+  python_version: "3.11"
 
 # Full Google Style Set from: https://sourcery.ai/blog/google-python-style-guide/
 rules:
-# Import Rules
+  # Import Rules
   - id: no-wildcard-imports
     pattern: from ... import *
     description: Do not use wildcard imports
@@ -22,7 +22,7 @@ rules:
       - match: from .something import *
       - no-match: from math import sin
 
-   #  # NOTE: relative imports are preferred. Google's justification doesn't apply when using automated tooling (isort, absolufy-imports, unimport, etc.)
+    #  # NOTE: relative imports are preferred. Google's justification doesn't apply when using automated tooling (isort, absolufy-imports, unimport, etc.)
   # - id: no-relative-imports
   #   description: Always use absolute imports instead of relative imports
   #   explanation: |
@@ -146,7 +146,7 @@ rules:
       - match: import multiprocessing as multi
       - match: import pandas, multiprocessing as multi, tensorflow
 
-# Naming Rules
+  # Naming Rules
 
   - id: avoid-single-character-names-variables
     pattern: ${var} = ${value}
@@ -250,7 +250,8 @@ rules:
     pattern: |
       class ${error}(${base}):
         ${statements*}
-    condition: (base.is_exception_type() or base.matches_regex("[A-Z][a-zA-Z]*Error"))
+    condition:
+      (base.is_exception_type() or base.matches_regex("[A-Z][a-zA-Z]*Error"))
       and not error.matches_regex("[A-Z][a-zA-Z]*Error")
     description: Exception names must end in Error
     explanation: |
@@ -415,7 +416,7 @@ rules:
           class B:
             pass
 
-# Structural Rules
+  # Structural Rules
 
   - id: do-not-use-staticmethod
     pattern: |
@@ -450,13 +451,16 @@ rules:
       Each portion [of the conditional expression] must fit on one line: `true-expression`, `if-expression`, `else-expression`. Use a complete if statement when things get more complicated.
       From Google Style Guide [2.11.4](https://google.github.io/styleguide/pyguide.html#2114-decision)
     pattern: ${value} if ${test} else ${default}
-    condition: value.character_count() > 80 or test.character_count() > 80 or default.character_count()
+    condition:
+      value.character_count() > 80 or test.character_count() > 80 or default.character_count()
       > 80
     tests:
       - no-match: a = 1 if cond else 2
-      - match: a = 1 if this_is_an_incredibly_long_condition_that_is_more_than_80_characters_long_no_joking_around
+      - match:
+          a = 1 if this_is_an_incredibly_long_condition_that_is_more_than_80_characters_long_no_joking_around
           else 2
-      - match: a = this_is_an_incredibly_long_value_that_is_more_than_80_characters_long_no_joking_around
+      - match:
+          a = this_is_an_incredibly_long_value_that_is_more_than_80_characters_long_no_joking_around
           if cond else 2
       - match: a = 1 if cond else this_is_an_incredibly_long_value_that_is_more_than_80_characters_long_no_joking_around
       - match: a = 1 if cond else this_is_an_incredibly_long_value + is_more_than_80_characters_long_no_joking_around()
@@ -467,46 +471,48 @@ rules:
       Okay to use them for one-liners.
       If the code inside the lambda function is longer than 60-80 chars, it’s probably better to define it as a regular nested function.
       From Google Style Guide [2.10.4](https://google.github.io/styleguide/pyguide.html#2104-decision)
-    pattern: 'lambda ...: ${body}'
+    pattern: "lambda ...: ${body}"
     condition: body.character_count() > 80
     tests:
-      - no-match: 'lambda x: x**2'
-      - no-match: 'lambda x, y: x**y'
-      - match: 'lambda x: do_something_very_long_and_involved_with(x) - do_other_very_long_and_involved_things_with(x)'
-      - match: 'lambda x, y, z: do_something_very_long_and_involved_with(x) - do_other_very_long_and_involved_things_with(y,
-          z)'
+      - no-match: "lambda x: x**2"
+      - no-match: "lambda x, y: x**y"
+      - match: "lambda x: do_something_very_long_and_involved_with(x) - do_other_very_long_and_involved_things_with(x)"
+      - match:
+          "lambda x, y, z: do_something_very_long_and_involved_with(x) - do_other_very_long_and_involved_things_with(y,
+          z)"
 
   - id: map-lambda-to-generator
-    pattern: 'map(lambda ${arg}: ${expr}, ${items})'
+    pattern: "map(lambda ${arg}: ${expr}, ${items})"
     replacement: (${expr} for ${arg} in ${items})
     description: Replace mapping a lambda with a generator expression
     explanation: |
       Prefer generator expressions over map() or filter() with a lambda.
       From Google Style Guide [2.10](https://google.github.io/styleguide/pyguide.html#210-lambda-functions)
     tests:
-      - match: 'transformed_things = map(lambda x: x**2, things)'
+      - match: "transformed_things = map(lambda x: x**2, things)"
         expect: transformed_things = (x**2 for x in things)
-      - match: 'list(map(lambda x: x**2, things))'
+      - match: "list(map(lambda x: x**2, things))"
         expect: list(x**2 for x in things)
-      - no-match: 'filter(lambda x: x > x**2, things)'
+      - no-match: "filter(lambda x: x > x**2, things)"
 
   - id: filter-lambda-to-generator
-    pattern: 'filter(lambda ${arg}: ${expr}, ${items})'
+    pattern: "filter(lambda ${arg}: ${expr}, ${items})"
     replacement: (${arg} for ${arg} in ${items} if ${expr})
     description: Replace filtering with a lambda with a generator expression
     explanation: |
       Prefer generator expressions over map() or filter() with a lambda.
       From Google Style Guide [2.10](https://google.github.io/styleguide/pyguide.html#210-lambda-functions)
     tests:
-      - match: 'filtered_things = filter(lambda x: x > x**2, things)'
+      - match: "filtered_things = filter(lambda x: x > x**2, things)"
         expect: filtered_things = (x for x in things if x > x**2)
-      - match: 'list(filter(lambda x: x > x**2, things))'
+      - match: "list(filter(lambda x: x > x**2, things))"
         expect: list(x for x in things if x > x**2)
-      - no-match: 'map(lambda x: x**2, things)'
+      - no-match: "map(lambda x: x**2, things)"
 
   - id: avoid-global-variables
     pattern: ${var} = ${value}
-    condition: pattern.in_module_scope() and var.is_lower_case() and not var.starts_with("_")
+    condition:
+      pattern.in_module_scope() and var.is_lower_case() and not var.starts_with("_")
       and var.is_identifier()
     description: Do not define variables at the module level - (found variable ${var})
     explanation: |
@@ -516,7 +522,7 @@ rules:
       From Google Style Guide [2.5.4](https://google.github.io/styleguide/pyguide.html#254-decision)
     tests:
       - match: max_holy_handgrenade_count = 3
-      - match: 'max_holy_handgrenade_count: int = 3'
+      - match: "max_holy_handgrenade_count: int = 3"
       - no-match: holy_handgrenade[1] = 3
       - no-match: _max_holy_handgrenade_count = 3
       - no-match: HolyGrenades = Dict[str, Grenade]
@@ -621,7 +627,8 @@ rules:
     pattern: ${d}.has_key(${key})
     condition: d.has_type("dict")
     replacement: ${key} in ${d}
-    description: Replace Python 2 syntax `dict.has_key` with a Python 3 membership
+    description:
+      Replace Python 2 syntax `dict.has_key` with a Python 3 membership
       test
     explanation: |
       Use default iterators and operators for types that support them, like lists, dictionaries, and files. The built-in types define iterator methods, too. Prefer these methods to methods that return lists, except that you should not mutate a container while iterating over it.
@@ -669,7 +676,7 @@ rules:
           database: Database = get_database()
           print(database.has_key("dinosaur"))
 
-# Typing Rules
+  # Typing Rules
 
   - id: require-return-annotation
     pattern: |
