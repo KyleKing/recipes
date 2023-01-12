@@ -23,6 +23,9 @@ theme:
     - navigation.tabs
     - toc.autohide
 
+watch:
+  - recipes
+
 plugins:
   - build_plantuml:
       render: server # or "local"
@@ -51,7 +54,7 @@ plugins:
             show_category_heading: true
   - literate-nav:
       nav_file: SUMMARY.md
-  - section-index:
+  - section-index
 
 markdown_extensions:
   - abbr

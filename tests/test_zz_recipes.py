@@ -7,7 +7,7 @@ from recipes import __version__
 try:
     import tomllib
 except ModuleNotFoundError:
-    import tomli as tomllib  # ignore: type[no-redef]
+    import tomli as tomllib  # type: ignore[no-redef]
 
 
 def test_version():
