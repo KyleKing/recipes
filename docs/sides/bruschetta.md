@@ -27,5 +27,5 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 - Blend in mini food processor or mince and combine
 - **Variations**
-  - For a meal, serve on toast with poached egg. Top with oregano
-  - Serve on sliced baguette crisps. Add parmesan cheese
+    - For a meal, serve on toast with poached egg. Top with oregano
+    - Serve on sliced baguette crisps. Add parmesan cheese

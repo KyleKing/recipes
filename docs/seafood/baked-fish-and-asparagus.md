@@ -15,11 +15,11 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Ingredients
 
 - In a small bowl, whisk together
-  - [ ] Olive Oil (~1/4 cup)
-  - [ ] 1/8 tsp of paprika
-  - [ ] 1/8 tsp cayenne pepper
-  - [ ] 2/3 tbsp lemon juice
-  - [ ] pinch of salt
+    - [ ] Olive Oil (~1/4 cup)
+    - [ ] 1/8 tsp of paprika
+    - [ ] 1/8 tsp cayenne pepper
+    - [ ] 2/3 tbsp lemon juice
+    - [ ] pinch of salt
 - [ ] Salmon filet
 - [ ] Tomato, thinly sliced
 - [ ] (Optional) Asparagus

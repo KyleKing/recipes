@@ -20,8 +20,8 @@ Personal rating: *Not yet rated*
 
 - [ ] 1/2 stick unsalted butter or 1 tbsp olive or vegetable oil
 - [ ] (optional) 1.5 cups fingerling or yukon gold potatoes, steamed until tender then cut into 1/2" dice (or cubed then microwaved for 4-6 min)
-  - [ ] sweet, white, or yellow potatoes or winter squash
-  - [ ] couscous and rice also work
+    - [ ] sweet, white, or yellow potatoes or winter squash
+    - [ ] couscous and rice also work
 - [ ] (optional) 1 cup (2 ounces) button mushrooms, small dice
 - [ ] (optional) medium red onion, small dice
 - [ ] (optional) red bell pepper, small dice

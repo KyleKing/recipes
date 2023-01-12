@@ -33,9 +33,9 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - Add ~1/2 tbsp oil to the original bowl and roll around until coated
 - Cover the bowl and proof until doubled in size (about ~60 minutes depending on temp)
 - Remove and briefly knead. Cut into 8 pieces, roll each piece into 30-36" long ropes
-  - Carefully stretch and roll to avoid tearing
-  - Once long enough, loop, rotate, and pinch down in a pretzel shape
-  - Transfer to a lightly greased light colored baking sheet
+    - Carefully stretch and roll to avoid tearing
+    - Once long enough, loop, rotate, and pinch down in a pretzel shape
+    - Transfer to a lightly greased light colored baking sheet
 - Cover with a towel and let rise for 15 minutes
 - Meanwhile, start bowling the water and baking soda
 - With a spatula and slotted spoon carefully dip each pretzel for 30 seconds. Return to the baking sheet

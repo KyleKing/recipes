@@ -17,21 +17,21 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Ingredients
 
 - [ ] Chicken
-  - [ ] 1-2 chicken breast (should be lamb)
-  - [ ] 2 naan slices
-  - [ ] 1/2 onion
-  - [ ] 2 tomatoes
-  - [ ] fries
-  - [ ] lettuce
+    - [ ] 1-2 chicken breast (should be lamb)
+    - [ ] 2 naan slices
+    - [ ] 1/2 onion
+    - [ ] 2 tomatoes
+    - [ ] fries
+    - [ ] lettuce
 - [ ] Tzatziki Sauce
-  - [ ] 1 cup plain yogurt
-  - [ ] 1/2 cucumber peeled, seeded, and finely diced
-  - [ ] 1 tbsp olive oil
-  - [ ] 1 tbsp dill, chopped
-  - [ ] 1 tbsp mint, chopped
-  - [ ] 1 tbsp fresh lemon juice
-  - [ ] 1 garlic clove, minced
-  - [ ] 1/2 tsp salt
+    - [ ] 1 cup plain yogurt
+    - [ ] 1/2 cucumber peeled, seeded, and finely diced
+    - [ ] 1 tbsp olive oil
+    - [ ] 1 tbsp dill, chopped
+    - [ ] 1 tbsp mint, chopped
+    - [ ] 1 tbsp fresh lemon juice
+    - [ ] 1 garlic clove, minced
+    - [ ] 1/2 tsp salt
 
 ## Recipe
 

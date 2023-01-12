@@ -24,9 +24,9 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 3/4 oz Cointreau
 - [ ] 3/4 oz fresh lime juice
 - [ ] *simple syrup (see recipe in Drinks section)*
-  - [ ] Dry: *none*
-  - [ ] Classic: *1/4 oz*
-  - [ ] Sweet: *1/2 oz*
+    - [ ] Dry: *none*
+    - [ ] Classic: *1/4 oz*
+    - [ ] Sweet: *1/2 oz*
 
 ## Recipe
 

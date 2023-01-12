@@ -22,8 +22,8 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Recipe
 
 - Use the formula to make *n* cups of coffee
-  - 3x heaping tablespoons (*n + 1*)
-  - fill to 2 line for water (*n*)
-  - 2 tsp coffee mate
-  - 1.5 tsp sugar
+    - 3x heaping tablespoons (*n + 1*)
+    - fill to 2 line for water (*n*)
+    - 2 tsp coffee mate
+    - 1.5 tsp sugar
 - TODO: To make ice coffee...

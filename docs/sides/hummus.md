@@ -19,25 +19,25 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 <!-- FIXME: The indented bullets don't appear correctly. May need to change spacing -->
 
 - [ ] Process (1 Minute)
-  - [ ] 3/4 cup tahini (shake to mix)
-  - [ ] 1/2 cup water
-  - [ ] 3 tbsp lemon juice
-  - [ ] 1/2 tsp cumin
-  - [ ] 1/2 tsp salt
-  - [ ] 2 garlic cloves
-  - [ ] 1 tbsp extra virgin olive oil
-  - [ ] (Optional) 2-3 tbsp Harissa, additional for topping
-  - [ ] Optional Additional Seasonings
-    - Cumin, Coriander, Caraway, Cayenne Pepper, Smoked Paprika, Chopped Mint
+    - [ ] 3/4 cup tahini (shake to mix)
+    - [ ] 1/2 cup water
+    - [ ] 3 tbsp lemon juice
+    - [ ] 1/2 tsp cumin
+    - [ ] 1/2 tsp salt
+    - [ ] 2 garlic cloves
+    - [ ] 1 tbsp extra virgin olive oil
+    - [ ] (Optional) 2-3 tbsp Harissa, additional for topping
+    - [ ] Optional Additional Seasonings
+        - Cumin, Coriander, Caraway, Cayenne Pepper, Smoked Paprika, Chopped Mint
 - [ ] Process (3 Minutes)
-  - [ ] 2 can chickpea, rinsed and drained
-  - [ ] (Optional) up to 1/4 cup of water if too thick
+    - [ ] 2 can chickpea, rinsed and drained
+    - [ ] (Optional) up to 1/4 cup of water if too thick
 - [ ] Optional Toppings
-  - Extra Virgin Olive Oil
-  - Harissa
-  - Parsley
-  - Za'atar
-  - Roasted Red Peppers
+    - Extra Virgin Olive Oil
+    - Harissa
+    - Parsley
+    - Za'atar
+    - Roasted Red Peppers
 
 ## Recipe
 
