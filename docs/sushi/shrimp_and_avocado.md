@@ -16,15 +16,15 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] cooked shrimp
-* [ ] cucumber
-* [ ] 1/5 avocado, peeled and mashed
-* [ ] 1 tbsps fresh cilantro, finely chopped
-* [ ] chives
-* [ ] sushi rice
-* [ ] wasabi
-* [ ] nori
+- [ ] cooked shrimp
+- [ ] cucumber
+- [ ] 1/5 avocado, peeled and mashed
+- [ ] 1 tbsps fresh cilantro, finely chopped
+- [ ] chives
+- [ ] sushi rice
+- [ ] wasabi
+- [ ] nori
 
 ## Recipe
 
-* Spread rice over the nori, then with rice-side up, add the fillings. Roll
+- Spread rice over the nori, then with rice-side up, add the fillings. Roll

@@ -18,9 +18,9 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] Sausage
+- [ ] Sausage
 
 ## Recipe
 
-* Pre-heat oven to 400F
-* Cover pan with tin foil and a place a cooling rack on top. Place the sausage on the cooling rack and back for 20-30 min based on size
+- Pre-heat oven to 400F
+- Cover pan with tin foil and a place a cooling rack on top. Place the sausage on the cooling rack and back for 20-30 min based on size

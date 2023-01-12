@@ -16,5 +16,5 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Recipe
 
-* 1:1 *Baileys Irish Cream* and *Butterscotch Schnapps* (or Sambuca)
-* Can be served as a cocktail or a layered shooter (if using Sambuca)
+- 1:1 *Baileys Irish Cream* and *Butterscotch Schnapps* (or Sambuca)
+- Can be served as a cocktail or a layered shooter (if using Sambuca)

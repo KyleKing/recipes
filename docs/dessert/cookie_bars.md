@@ -16,11 +16,11 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] 1 pkg cake mix
-* [ ] 2 eggs
-* [ ] 5 tbsp melted butter
-* [ ] 1 bag chocolate chips
+- [ ] 1 pkg cake mix
+- [ ] 2 eggs
+- [ ] 5 tbsp melted butter
+- [ ] 1 bag chocolate chips
 
 ## Recipe
 
-* Mix all together in a 9x13 pan and bake at 350 for 20-25 minutes
+- Mix all together in a 9x13 pan and bake at 350 for 20-25 minutes

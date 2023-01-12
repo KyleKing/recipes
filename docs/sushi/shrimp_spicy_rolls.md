@@ -16,15 +16,15 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] cooked shrimp, chopped
-* [ ] cucumber
-* [ ] mayo
-* [ ] Sriracha
-* [ ] sushi rice
-* [ ] wasabi
-* [ ] nori
+- [ ] cooked shrimp, chopped
+- [ ] cucumber
+- [ ] mayo
+- [ ] Sriracha
+- [ ] sushi rice
+- [ ] wasabi
+- [ ] nori
 
 ## Recipe
 
-* Cut the Nori sheet in half. Spread rice over the nori, then flip rice side down
-* Add the fillings and roll. Drizzle with extra spicy mayo sauce on top
+- Cut the Nori sheet in half. Spread rice over the nori, then flip rice side down
+- Add the fillings and roll. Drizzle with extra spicy mayo sauce on top

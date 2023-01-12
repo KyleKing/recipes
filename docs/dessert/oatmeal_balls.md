@@ -16,16 +16,16 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] 1 cup rolled oats (quick or old fashioned)
-* [ ] 1/2 cup chocolate chips (mini or normal)
-* [ ] 1/4 cup peanut butter
-* [ ] 1/4 cup maple syrup (or honey)
-* [ ] 2 tbsp cocoa powder (optional)
+- [ ] 1 cup rolled oats (quick or old fashioned)
+- [ ] 1/2 cup chocolate chips (mini or normal)
+- [ ] 1/4 cup peanut butter
+- [ ] 1/4 cup maple syrup (or honey)
+- [ ] 2 tbsp cocoa powder (optional)
 
 ## Recipe
 
-* Combine all ingredients into one bowl, form into balls, and freeze
+- Combine all ingredients into one bowl, form into balls, and freeze
 
 ## Notes
 
-* More tasty [no-bake energy bites from tasty.co](https://tasty.co/compilation/no-bake-energy-bites)
+- More tasty [no-bake energy bites from tasty.co](https://tasty.co/compilation/no-bake-energy-bites)

@@ -16,16 +16,16 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] 3 oz Watermelon (strained) (about 3 slices of medium watermelon blended)
-* [ ] 3/4 oz lime juice
-* [ ] 1 oz tequila
-* [ ] 1 oz cointreau
-* [ ] pinch of sugar
+- [ ] 3 oz Watermelon (strained) (about 3 slices of medium watermelon blended)
+- [ ] 3/4 oz lime juice
+- [ ] 1 oz tequila
+- [ ] 1 oz cointreau
+- [ ] pinch of sugar
 
 ## Recipe
 
-* Salt glasses
-* Blend watermelon into a juice
-* In a shaker, measure out the alcohol, lime juice, and watermelon juice
-* Add ice and shake
-* Serve with an ice cube and lime (or watermelon) garnish
+- Salt glasses
+- Blend watermelon into a juice
+- In a shaker, measure out the alcohol, lime juice, and watermelon juice
+- Add ice and shake
+- Serve with an ice cube and lime (or watermelon) garnish

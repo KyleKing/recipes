@@ -18,15 +18,15 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] 2/3 cup semi-sweet chocolate or peanut butter chips or chopped semi-sweet chocolate
-* [ ] 1/3 cup heavy cream
-* [ ] (optional) spoon full of peanut butter
+- [ ] 2/3 cup semi-sweet chocolate or peanut butter chips or chopped semi-sweet chocolate
+- [ ] 1/3 cup heavy cream
+- [ ] (optional) spoon full of peanut butter
 
 ## Recipe
 
-* In a large glass bowl, combine chocolate or peanut butter chips and heavy cream
-* Microwave for 30 seconds, whisk, microwave for 15 seconds, whisk, and if not yet smooth, microwave for an additional 15 seconds and whisk
+- In a large glass bowl, combine chocolate or peanut butter chips and heavy cream
+- Microwave for 30 seconds, whisk, microwave for 15 seconds, whisk, and if not yet smooth, microwave for an additional 15 seconds and whisk
 
 ## Notes
 
-* Slightly modified from the Choc-PB-Bundt cake
+- Slightly modified from the Choc-PB-Bundt cake

@@ -14,7 +14,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Recipe
 
-* Butter pan and heat until starts to foam, but not brown
-* Add one slice and cheese
-* Shake pan back and forth waiting for sizzle
-* Add top slice, flip, and cook until browned
+- Butter pan and heat until starts to foam, but not brown
+- Add one slice and cheese
+- Shake pan back and forth waiting for sizzle
+- Add top slice, flip, and cook until browned

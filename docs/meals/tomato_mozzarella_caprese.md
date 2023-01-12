@@ -16,15 +16,15 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] tomato, sliced
-* [ ] mozzarella ball, sliced
-* [ ] extra virgin olive oil, the good stuff
-* [ ] basil
-* [ ] oregano
-* [ ] ground pepper
-* [ ] baguette
+- [ ] tomato, sliced
+- [ ] mozzarella ball, sliced
+- [ ] extra virgin olive oil, the good stuff
+- [ ] basil
+- [ ] oregano
+- [ ] ground pepper
+- [ ] baguette
 
 ## Recipe
 
-* Slice the tomatoes and mozzarella. Drizzle olive oil on top with a small amount of balsamic vinegar
-* For the bread, add a bowl of ground pepper and olive oil for dipping
+- Slice the tomatoes and mozzarella. Drizzle olive oil on top with a small amount of balsamic vinegar
+- For the bread, add a bowl of ground pepper and olive oil for dipping

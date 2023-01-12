@@ -14,16 +14,16 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] smoked salmon
-* [ ] avocado
-* [ ] carrot
-* [ ] cucumber
-* [ ] wasabi
+- [ ] smoked salmon
+- [ ] avocado
+- [ ] carrot
+- [ ] cucumber
+- [ ] wasabi
 
 ## Recipe
 
-* Sliced all ingredients into long strips then roll
+- Sliced all ingredients into long strips then roll
 
 ## Notes
 
-* Can mix rice vinegar or lemon juice to help prevent the avocado from browning
+- Can mix rice vinegar or lemon juice to help prevent the avocado from browning

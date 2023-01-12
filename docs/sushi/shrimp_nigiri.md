@@ -16,14 +16,14 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] Shrimp
-* [ ] Skewer
+- [ ] Shrimp
+- [ ] Skewer
 
 ## Recipe
 
-* Skewer the shrimp between the belly and shell to keep them straight
-* Boil for 2-3 minutes until pink
-* Cool in a bowl of ice water
-* Peel off the legs, then the shell leaving the tail
-* Cut from the head to the tail only down to the intestine. Remove with the tip of the knife without piercing
-* Flatten out the shrimp and trim the tail
+- Skewer the shrimp between the belly and shell to keep them straight
+- Boil for 2-3 minutes until pink
+- Cool in a bowl of ice water
+- Peel off the legs, then the shell leaving the tail
+- Cut from the head to the tail only down to the intestine. Remove with the tip of the knife without piercing
+- Flatten out the shrimp and trim the tail

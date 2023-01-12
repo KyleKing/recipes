@@ -16,18 +16,18 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] 2-4 Russet Potatoes, scrubbed clean
-* [ ] olive oil
-* [ ] 1 tbsp salt
-* [ ] Instant Pot
+- [ ] 2-4 Russet Potatoes, scrubbed clean
+- [ ] olive oil
+- [ ] 1 tbsp salt
+- [ ] Instant Pot
 
 ## Recipe
 
-* Scrub the potatoes clean.
-* Insert the steamer rack into the instant pot, add 1 cup of (cold) water, then add the potatoes. Make sure the potatoes and water do not touch
-* Close lid and turn the sealing vent to 'sealed.' Then use manual mode with high pressure for 20 minutes. Allow for natural release (~5 minutes)
-* The potatoes can be quartered or cooked whole. For a crispy skin place in the oven at 400℉ for 8 minutes. Serve with whatever toppings you prefer.
+- Scrub the potatoes clean.
+- Insert the steamer rack into the instant pot, add 1 cup of (cold) water, then add the potatoes. Make sure the potatoes and water do not touch
+- Close lid and turn the sealing vent to 'sealed.' Then use manual mode with high pressure for 20 minutes. Allow for natural release (~5 minutes)
+- The potatoes can be quartered or cooked whole. For a crispy skin place in the oven at 400℉ for 8 minutes. Serve with whatever toppings you prefer.
 
 ## Notes
 
-* For smaller potatoes, use 15 minutes
+- For smaller potatoes, use 15 minutes

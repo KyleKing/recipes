@@ -16,24 +16,24 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] 4 scallions
-* [ ] 1 red onion, thinly sliced
-* [ ] 1/2 cup lime juice (from 2 or 3 limes)
-* [ ] 1/4 tsp Kosher salt
-* [ ] ~4 tbsp extra-virgin olive oil
-* [ ] 2x 15.5-ounce can no-salt-added black beans, with the liquid
-* [ ] 2 tsp chili powder
-* [ ] 2 tsp ground cumin
-* [ ] 2 tsp Spanish smoked paprika (pimentón; sweet or hot)
-* [ ] 1 tsp Dijon mustard
-* [ ] 12 6-inch corn tortillas
-* [ ] 2 cups chopped romaine lettuce (from 1 heart of romaine)
-* [ ] Hot sauce, such as Cholula
-* [ ] Other optional toppings including avocado, tomato, sour cream, etc
+- [ ] 4 scallions
+- [ ] 1 red onion, thinly sliced
+- [ ] 1/2 cup lime juice (from 2 or 3 limes)
+- [ ] 1/4 tsp Kosher salt
+- [ ] ~4 tbsp extra-virgin olive oil
+- [ ] 2x 15.5-ounce can no-salt-added black beans, with the liquid
+- [ ] 2 tsp chili powder
+- [ ] 2 tsp ground cumin
+- [ ] 2 tsp Spanish smoked paprika (pimentón; sweet or hot)
+- [ ] 1 tsp Dijon mustard
+- [ ] 12 6-inch corn tortillas
+- [ ] 2 cups chopped romaine lettuce (from 1 heart of romaine)
+- [ ] Hot sauce, such as Cholula
+- [ ] Other optional toppings including avocado, tomato, sour cream, etc
 
 ## Recipe
 
-* (quick pickle) Combine scallions, half the red onion, and lime juice in a mason jar. Add a pinch of kosher salt, shake, and let stand for at least 10 minutes
-* Heat oil in a large skillet over medium heat. Add the remaining red onion and cook without stirring until lightly browned (~3 min). Add black beans and liquid, chili powder, cumin, Spanish paprika, Dijon mustard, and 1/4 tsp of kosher salt; stir to incorporate. Cook until the liquid reduces to a thick sauce (~7 min)
-* In parallel, warm the tortillas
-* Assemble the tacos with lettuce, black beans, pickled onion, amd other toppings
+- (quick pickle) Combine scallions, half the red onion, and lime juice in a mason jar. Add a pinch of kosher salt, shake, and let stand for at least 10 minutes
+- Heat oil in a large skillet over medium heat. Add the remaining red onion and cook without stirring until lightly browned (~3 min). Add black beans and liquid, chili powder, cumin, Spanish paprika, Dijon mustard, and 1/4 tsp of kosher salt; stir to incorporate. Cook until the liquid reduces to a thick sauce (~7 min)
+- In parallel, warm the tortillas
+- Assemble the tacos with lettuce, black beans, pickled onion, amd other toppings

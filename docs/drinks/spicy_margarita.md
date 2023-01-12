@@ -18,22 +18,22 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 Makes 2 drinks
 
-* Drink
-    * [ ] 4 oz blanco tequila⁠
-    * [ ] 3 oz fresh lime juice
-    * [ ] 1.5 oz orange juice⁠
-    * [ ] 1 oz agave syrup (or possibly substitute simple syrup)⁠
-    * [ ] 3-4 rounds sliced from a small jalapeño
-* Garnish
-    * [ ] Lime wheels
-    * [ ] Kosher salt, for rimming the glasses⁠
+- Drink
+    - [ ] 4 oz blanco tequila⁠
+    - [ ] 3 oz fresh lime juice
+    - [ ] 1.5 oz orange juice⁠
+    - [ ] 1 oz agave syrup (or possibly substitute simple syrup)⁠
+    - [ ] 3-4 rounds sliced from a small jalapeño
+- Garnish
+    - [ ] Lime wheels
+    - [ ] Kosher salt, for rimming the glasses⁠
 
 ## Recipe
 
-* Combine ingredients in a shaker
-* Salt the glasses and add ice cubes
-* Add ice cubes in the shaker, shake, and strain
-    * Optionally, toss in a one or two jalapeño rounds for garnish
+- Combine ingredients in a shaker
+- Salt the glasses and add ice cubes
+- Add ice cubes in the shaker, shake, and strain
+    - Optionally, toss in a one or two jalapeño rounds for garnish
 
 ## Notes
 

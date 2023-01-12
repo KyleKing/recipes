@@ -16,14 +16,14 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] 1 tbsp Mayonnaise
-* [ ] 2 cans of Tuna
-* [ ] 4-5 English Muffins
-* [ ] 1 pickle
-* [ ] Your Choice of Cheese slices
+- [ ] 1 tbsp Mayonnaise
+- [ ] 2 cans of Tuna
+- [ ] 4-5 English Muffins
+- [ ] 1 pickle
+- [ ] Your Choice of Cheese slices
 
 ## Recipe
 
-* Preheat oven to Broil (~10 min)
-* Chop pickle and mix ingredients together. Toast English muffins
-* On a foil-lined pan, cover the muffins with the tuna, then a slice of cheese. Broil until the cheese has melted
+- Preheat oven to Broil (~10 min)
+- Chop pickle and mix ingredients together. Toast English muffins
+- On a foil-lined pan, cover the muffins with the tuna, then a slice of cheese. Broil until the cheese has melted

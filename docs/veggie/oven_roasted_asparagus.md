@@ -16,18 +16,18 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] 1 bunch Asparagus
-* [ ] 3 tbsp olive oil
-* [ ] 1.5 tbsp grated Parmesan cheese
-* [ ] 1 clove garlic, minced
-* [ ] 1/2 tsp salt
-* [ ] 1/2 tsp ground black pepper
-* [ ] 1 tbsp lemon juice
+- [ ] 1 bunch Asparagus
+- [ ] 3 tbsp olive oil
+- [ ] 1.5 tbsp grated Parmesan cheese
+- [ ] 1 clove garlic, minced
+- [ ] 1/2 tsp salt
+- [ ] 1/2 tsp ground black pepper
+- [ ] 1 tbsp lemon juice
 
 ## Recipe
 
-* Preheat an oven to 425
-* Place the asparagus into a mixing bowl and drizzle with the olive oil
-* Toss to coat, then sprinkle with Parmesan, garlic, salt, and pepper
-* Arrange the asparagus onto a baking sheet in a single layer and bake for 12-15 min depending on thickness
-* Sprinkle with lemon juice before serving
+- Preheat an oven to 425
+- Place the asparagus into a mixing bowl and drizzle with the olive oil
+- Toss to coat, then sprinkle with Parmesan, garlic, salt, and pepper
+- Arrange the asparagus onto a baking sheet in a single layer and bake for 12-15 min depending on thickness
+- Sprinkle with lemon juice before serving

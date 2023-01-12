@@ -51,7 +51,6 @@ Personal rating: *Not yet rated*
 - [ ] large skillet
 - [ ] 2 small mixing bowls
 
-
 ## Recipe
 
 - Cook the rice
@@ -59,8 +58,8 @@ Personal rating: *Not yet rated*
 - In a small bowl, combine the mayonnaise, sriracha, soy sauce, and maple syrup. Whisk until well combined
 - Chop and prep the rest of the vegetables
 - Remove salmon skin and bones, then cube into bite-sized pieces
-  - Pat the salmon dry with a paper towel and toss with the blackening spice until its well coated
-  - Pan fry the salmon for 3-4 minutes in olive oil on medium-high heat
+    - Pat the salmon dry with a paper towel and toss with the blackening spice until its well coated
+    - Pan fry the salmon for 3-4 minutes in olive oil on medium-high heat
 - For two bowls:
-  - Add the rice as a base, then top with the sliced avocado, chopped green onion, sliced jalapeno, sliced cucumber, and seared salmon cubes
-  - Finish with cilantro, fresh squeezed lime, sesame seeds/furikake, and spicy sauce
+    - Add the rice as a base, then top with the sliced avocado, chopped green onion, sliced jalapeno, sliced cucumber, and seared salmon cubes
+    - Finish with cilantro, fresh squeezed lime, sesame seeds/furikake, and spicy sauce

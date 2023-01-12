@@ -35,13 +35,12 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ### Toppings
 
->  Note: this serves 4, so save one of each for the 2nd day
+> Note: this serves 4, so save one of each for the 2nd day
 
 - [ ] 2 avocados, diced
 - [ ] 2 limes, diced
 - [ ] 2 tomatoes, diced
 - [ ] 1 small bunch cilantro, remove and mince the leaves
-
 
 ## Recipe
 

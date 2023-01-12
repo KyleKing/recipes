@@ -5,7 +5,7 @@
 ## Installation
 
 1. Clone the repository (`gh repo clon KyleKing/recipes`)
-2. Run `poetry install`
+1. Run `poetry install`
 
 ## Usage
 

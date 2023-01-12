@@ -16,13 +16,13 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] Pancetta
+- [ ] Pancetta
 
 ## Recipe
 
-* Bake at 400F for 11 min
-* Works well in salad, pasta, or on a baguette (see Notes)
+- Bake at 400F for 11 min
+- Works well in salad, pasta, or on a baguette (see Notes)
 
 ## Notes
 
-* On a baguette, stack spinach/kale, mozzarella, tomato, basil, and the pancetta crisps
+- On a baguette, stack spinach/kale, mozzarella, tomato, basil, and the pancetta crisps

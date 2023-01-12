@@ -14,13 +14,13 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] cucumber
-* [ ] carrots
-* [ ] avocado
-* [ ] sushi rice
-* [ ] wasabi
-* [ ] nori
+- [ ] cucumber
+- [ ] carrots
+- [ ] avocado
+- [ ] sushi rice
+- [ ] wasabi
+- [ ] nori
 
 ## Recipe
 
-* Spread rice over the nori, then with rice-side up, add the fillings. Roll
+- Spread rice over the nori, then with rice-side up, add the fillings. Roll

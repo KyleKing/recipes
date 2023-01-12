@@ -18,15 +18,15 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] baguette
-* [ ] ham
-* [ ] gruyere cheese
-* [ ] butter
+- [ ] baguette
+- [ ] ham
+- [ ] gruyere cheese
+- [ ] butter
 
 ## Recipe
 
-* Don't skimp on the butter
+- Don't skimp on the butter
 
 ## Notes
 
-* The essential French ham sandwich
+- The essential French ham sandwich

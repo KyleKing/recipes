@@ -16,24 +16,24 @@ Personal rating: *Not yet rated*
 
 ## Ingredients
 
-* [ ] 1 lb Salmon Filet with skin
-* [ ] 1 clove garlic, sliced
-* [ ] 1.5 tbsp mayonnaise
-* [ ] 1/4 tsp Dijon mustard
-* [ ] 1/2 tsp fresh lemon juice
-* [ ] 1/2 tsp vegetable oil
-* [ ] 1 tsp basil
-* [ ] 1 tsp thyme
-* [ ] pinch of kosher salt
-* [ ] pinch cayenne pepper
+- [ ] 1 lb Salmon Filet with skin
+- [ ] 1 clove garlic, sliced
+- [ ] 1.5 tbsp mayonnaise
+- [ ] 1/4 tsp Dijon mustard
+- [ ] 1/2 tsp fresh lemon juice
+- [ ] 1/2 tsp vegetable oil
+- [ ] 1 tsp basil
+- [ ] 1 tsp thyme
+- [ ] pinch of kosher salt
+- [ ] pinch cayenne pepper
 
 ## Recipe
 
-* Combine sauce in a small bowl and mix
-* Preheat oven to 400
-* Place on tin foil and fold up the sides
-* Bake for 10-12 minutes until internal temperature of 120-130
+- Combine sauce in a small bowl and mix
+- Preheat oven to 400
+- Place on tin foil and fold up the sides
+- Bake for 10-12 minutes until internal temperature of 120-130
 
 ## Notes
 
-* Recipe has mostly been cut in half to reduce the volume of the sauce and reduce the proportion of dijon mustard
+- Recipe has mostly been cut in half to reduce the volume of the sauce and reduce the proportion of dijon mustard

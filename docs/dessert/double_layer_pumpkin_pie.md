@@ -16,20 +16,20 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] Graham Cracker Pie Crust
-* [ ] 4 oz cream cheese, softened (microwave on high for 15-20 seconds)
-* [ ] 1 tbsp milk
-* [ ] 1 tbsp sugar
-* [ ] 1 tub whipped topping (thawed if frozen)
-* [ ] 1 cup milk, cold
-* [ ] 2 packages vanilla flavor instance pudding (2x 4-serving size)
-* [ ] 1 can (16 oz) pumpkin
-* [ ] 1 tsp ground cinnamon
-* [ ] 1/2 tsp ground ginger
-* [ ] 1/4 tsp ground cloves
+- [ ] Graham Cracker Pie Crust
+- [ ] 4 oz cream cheese, softened (microwave on high for 15-20 seconds)
+- [ ] 1 tbsp milk
+- [ ] 1 tbsp sugar
+- [ ] 1 tub whipped topping (thawed if frozen)
+- [ ] 1 cup milk, cold
+- [ ] 2 packages vanilla flavor instance pudding (2x 4-serving size)
+- [ ] 1 can (16 oz) pumpkin
+- [ ] 1 tsp ground cinnamon
+- [ ] 1/2 tsp ground ginger
+- [ ] 1/4 tsp ground cloves
 
 ## Recipe
 
-* In a large bowl, mix cream cheese, 1 tbsp milk, and sugar. Gently stir in **half** of the whipped topping. Spread on bottom of crust
-* Pour 1 cup of milk into the bowl, add pugging, and beat for 1 min. Stir in pumpkin and spices until mixed. Spread over cream cheese layer
-* Refrigerate 4 hours or until set. Garnish with remaining whipped topping
+- In a large bowl, mix cream cheese, 1 tbsp milk, and sugar. Gently stir in **half** of the whipped topping. Spread on bottom of crust
+- Pour 1 cup of milk into the bowl, add pugging, and beat for 1 min. Stir in pumpkin and spices until mixed. Spread over cream cheese layer
+- Refrigerate 4 hours or until set. Garnish with remaining whipped topping

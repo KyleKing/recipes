@@ -2,8 +2,6 @@
 
 > Based on [Chrissy Teigen Cravings], pg. 148
 
-  [Chrissy Teigen Cravings]: https://www.penguinrandomhouse.com/books/252973/cravings-by-chrissy-teigen-with-adeena-sussman/
-
 <!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
@@ -49,12 +47,14 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Recipe
 
-* Heat a large pot over medium heat. Add the ground turkey, onion, mushrooms, seasoning salt (or substitute), chili powder, and cayenne
-* Cook for 8 min. Add the garlic and cook for 1 additional min
-* Add 2 cups water, the tomato sauce, kidney beans, brown sugar, and bring to a boil
-* Reduce heat to medium-low and simmer for 35-45 min to thicken slightly and flavor-mingle
+- Heat a large pot over medium heat. Add the ground turkey, onion, mushrooms, seasoning salt (or substitute), chili powder, and cayenne
+- Cook for 8 min. Add the garlic and cook for 1 additional min
+- Add 2 cups water, the tomato sauce, kidney beans, brown sugar, and bring to a boil
+- Reduce heat to medium-low and simmer for 35-45 min to thicken slightly and flavor-mingle
 
 ## Notes
 
-* Freezes or can be stored in the fridge. Tastes great when reheated.
-* Serves 6-8
+- Freezes or can be stored in the fridge. Tastes great when reheated.
+- Serves 6-8
+
+[chrissy teigen cravings]: https://www.penguinrandomhouse.com/books/252973/cravings-by-chrissy-teigen-with-adeena-sussman/

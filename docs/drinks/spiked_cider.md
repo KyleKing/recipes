@@ -14,23 +14,22 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-* [ ] 2 cups apple cider
-* [ ] 1/2 cup rum
-* [ ] Optional
-    * [ ] 1/2 teaspoon whole cloves
-    * [ ] 1/4 teaspoon allspice
-    * [ ] 1 pinch nutmeg
-    * [ ] 2 tsp light brown sugar
-* [ ] Orange slices, garnish
+- [ ] 2 cups apple cider
+- [ ] 1/2 cup rum
+- [ ] Optional
+    - [ ] 1/2 teaspoon whole cloves
+    - [ ] 1/4 teaspoon allspice
+    - [ ] 1 pinch nutmeg
+    - [ ] 2 tsp light brown sugar
+- [ ] Orange slices, garnish
 
 ## Recipe
 
-* In a pot, heat the cider and any chosen spices
-* Add the rum and serve hot with an Orange slice garnish
+- In a pot, heat the cider and any chosen spices
+- Add the rum and serve hot with an Orange slice garnish
 
 ## Notes
 
-* We used Bacardi Gold when making this the first time
+- We used Bacardi Gold when making this the first time
 
-!!! warning
-    If using spices, make sure to filter before pouring
+!!! warning If using spices, make sure to filter before pouring

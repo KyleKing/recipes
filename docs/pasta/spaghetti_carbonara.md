@@ -18,30 +18,30 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ### Sauce
 
-* [ ] 2 large eggs
-* [ ] 2 yolks
-* [ ] 1/3 cup grated pecorino Romano (~1 oz), plus additional for serving
-* [ ] 1/3 cup grated Parmesan (~1 oz)
-* [ ] Black Pepper
+- [ ] 2 large eggs
+- [ ] 2 yolks
+- [ ] 1/3 cup grated pecorino Romano (~1 oz), plus additional for serving
+- [ ] 1/3 cup grated Parmesan (~1 oz)
+- [ ] Black Pepper
 
 ### Pasta
 
-* [ ] 1 tbsp olive oil
-* [ ] 3.5 ounces Pancetta, sliced into small pieces
-* [ ] 12 ounces spaghetti (about 3/4 box)
+- [ ] 1 tbsp olive oil
+- [ ] 3.5 ounces Pancetta, sliced into small pieces
+- [ ] 12 ounces spaghetti (about 3/4 box)
 
 ## Recipe
 
-* Boil a large pot of water
-* Prep the sauce in a glass mixing bowl, whisk, and set aside
-* With the olive oil, in a small pan, heat the pancetta under medium-low heat
-* Cook the spaghetti and turn up the heat on the pancetta to medium
-* Set one cup of pasta water aside
-	* In the sink, place a large stainless steel mixing bowl under the colander and drain the pasta
-	* Allow the hot water to warm the bowl and discard
-	* Mix the pasta, sauce, and pancetta together in the warmed mixing bowl. Add some of the pasta water if needed for a creamier sauce
-* Serve immediately with a garnish of pecorino Romano and black pepper
+- Boil a large pot of water
+- Prep the sauce in a glass mixing bowl, whisk, and set aside
+- With the olive oil, in a small pan, heat the pancetta under medium-low heat
+- Cook the spaghetti and turn up the heat on the pancetta to medium
+- Set one cup of pasta water aside
+    - In the sink, place a large stainless steel mixing bowl under the colander and drain the pasta
+    - Allow the hot water to warm the bowl and discard
+    - Mix the pasta, sauce, and pancetta together in the warmed mixing bowl. Add some of the pasta water if needed for a creamier sauce
+- Serve immediately with a garnish of pecorino Romano and black pepper
 
 ## Notes
 
-* Never combine the ingredients in the pan you have had on the burner because it will cook and harden the eggs
+- Never combine the ingredients in the pan you have had on the burner because it will cook and harden the eggs
