@@ -2,17 +2,14 @@
 
 from pathlib import Path
 
-from recipes import __version__
+from corallium.tomllib import tomllib
 
-try:
-    import tomllib
-except ModuleNotFoundError:
-    import tomli as tomllib  # type: ignore[no-redef]
+from recipes import __version__
 
 
 def test_version():
-    """Check that PyProject and __version__ are equivalent."""
-    data = Path('pyproject.toml').read_text()
+    """Check that PyProject and package __version__ are equivalent."""
+    data = Path('pyproject.toml').read_text(encoding='utf-8')
 
     result = tomllib.loads(data)['tool']['poetry']['version']
 

@@ -1,29 +1,11 @@
 [build-system]
 build-backend = "poetry.core.masonry.api"
-requires = [
-  "poetry-core>=1.0.7",
-]
-
-[tool.isort]
-balanced_wrapping = true
-default_section = "THIRDPARTY"
-force_grid_wrap = 0
-include_trailing_comma = true
-known_first_party = "recipes"
-length_sort = false
-line_length = 120
-multi_line_output = 5
-
-[tool.calcipy]
-ignore_patterns = ["__TOC.md"]
-
-[tool.calcipy.test]
-pythons = ["3.11"]
+requires = ["poetry-core"]
 
 [tool.commitizen]
 name = "cz_legacy"
 version = "0.4.0"
-version_files = ["pyproject.toml", "recipes/__init__.py"]
+version_files = ["pyproject.toml:^version", "recipes/__init__.py:^__version"]
 change_type_order = [
     "BREAKING CHANGE",
     "Feat",
@@ -40,6 +22,8 @@ Chg = "Change (Old)"
 Fix = "Fix (Old)"
 New = "New (Old)"
 
+# FIXME: ignore_patterns = ["__TOC.md"]
+
 [tool.poetry]
 name = "recipes"
 version = "0.4.0"
@@ -48,9 +32,9 @@ license = "MIT"
 authors = ["Kyle King <dev.act.kyle@gmail.com>"]
 maintainers = []
 repository = "https://github.com/kyleking/recipes"
-documentation = "https://github.com/kyleking/recipes/docs"
+documentation = "https://recipes.kyleking.me"
 readme = "docs/z_dev/README.md"
-include = ["LICENSE.md"]
+include = ["LICENSE"]
 keywords = []
 classifiers = [
     "Development Status :: 5 - Production/Stable",
@@ -59,19 +43,22 @@ classifiers = [
     "Programming Language :: Python :: 3.11",
 ] # https://pypi.org/classifiers/
 
+[tool.poetry.scripts]
+recipes = "recipes.scripts:start"
+
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/kyleking/recipes/issues"
+"Changelog" = "https://github.com/kyleking/recipes/blob/main/docs/z_dev/docs/CHANGELOG.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
-calcipy = ">=0.21.0"
+python = "^3.11.0"
+corallium = ">=0.1.0"
 optimize-images = ">=1.5.1"
 pillow = ">=9.2.0"
 
-[tool.poetry.dev-dependencies]
-calcipy = { version = "*", extras = [
-    "dev",
-    "lint",
-    "test",
-    "commitizen_legacy",
-] }
+[tool.poetry.group.dev.dependencies]
+calcipy = {extras = ["doc", "lint", "nox", "stale", "tags", "test", "types"], version = ">=1.0.0"}
+
+[tool.pyright]
+include = ["recipes"]
+pythonVersion = "3.11"

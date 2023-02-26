@@ -1,16 +1,7 @@
-"""Check that all imports work as expected.
-
-Primarily checking that:
-
-1. No optional dependencies are required
-
-FIXME: Replace with programmatic imports? Maybe explicit imports to check backward compatibility of public API?
-    https://stackoverflow.com/questions/34855071/importing-all-functions-from-a-package-from-import
-
-"""
+"""Check that all imports work as expected in the built package."""
 
 from pprint import pprint
 
-# TODO: Replace with imports to test
+from recipes import replace_me
 
-pprint(locals())  # noqa: T003
+pprint(locals())  # noqa: T203

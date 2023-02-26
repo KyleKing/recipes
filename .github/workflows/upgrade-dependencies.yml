@@ -8,6 +8,11 @@ on: # yamllint disable-line rule:truthy
     # First day of every month at 08:00 UTC
     - cron: 0 8 1 * *
 
+permissions:
+  pull-requests: write
+  # Repository contents, commits, branches, downloads, releases, and merges.
+  contents: write
+
 jobs:
   upgrade:
     name: Upgrade & Open Pull Request
@@ -20,10 +25,10 @@ jobs:
       - uses: actions/checkout@v3
         with:
           ref: main
-
       - uses: ./.github/actions/setup
         with:
           python-version: ${{ matrix.python-version }}
+
       - name: Upgrade Python dependencies
         run: poetry update
 
@@ -32,6 +37,6 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           title: "build: automated dependency upgrades"
-          body: "Full log: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          body: "Full log: https://github.com/${{ github.repository }}/actions/runs/${{github.run_id }}"
           branch: auto-dependency-upgrades
           delete-branch: true

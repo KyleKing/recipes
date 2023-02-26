@@ -11,6 +11,9 @@ on: # yamllint disable-line rule:truthy
       - tests/**
       - pyproject.toml
 
+env:
+  COLUMNS: 120
+
 jobs:
   lint:
     runs-on: ${{ matrix.os }}
@@ -25,8 +28,8 @@ jobs:
           os: ${{ matrix.os }}
           python-version: ${{ matrix.python-version }}
 
-      - name: Run linters
-        run: poetry run doit run --continue lint_project static_checks security_checks
+      - name: Run static linters
+        run: ./run lint.check
 
   test:
     runs-on: ${{ matrix.os }}
@@ -41,11 +44,10 @@ jobs:
           os: ${{ matrix.os }}
           python-version: ${{ matrix.python-version }}
 
-      - name: Test with pytest
-        run: |-
-          poetry run doit run test_all
+      - name: Run test
+        run: poetry run calcipy test.pytest
 
-  check_types:
+  typecheck:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -58,5 +60,8 @@ jobs:
           os: ${{ matrix.os }}
           python-version: ${{ matrix.python-version }}
 
-      - name: Run linters
-        run: poetry run doit run check_types
+      - name: Run typecheck
+        run: ./run types.mypy
+
+      # TODO: Resolve why the virtual environment isn't found
+      # - uses: jakebailey/pyright-action@v1

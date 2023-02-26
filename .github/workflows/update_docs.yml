@@ -9,6 +9,11 @@ on: # yamllint disable-line rule:truthy
       - mkdocs.yml
   workflow_dispatch: # For manual runs
 
+# Docs: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#permissions
+permissions:
+  # Repository contents, commits, branches, downloads, releases, and merges.
+  contents: write
+
 jobs:
   docs:
     runs-on: ${{ matrix.os }}
@@ -33,4 +38,4 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
       - name: Build and deploy documentation
-        run: poetry run doit run cl_write document deploy_docs
+        run: ./run cl.write doc.build doc.deploy

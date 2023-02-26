@@ -12,15 +12,12 @@ site_dir: releases/site
 
 theme:
   name: material
-  custom_dir: docs/_theme
   palette:
     - scheme: default
-      primary: white
       accent: green
   icon:
     repo: fontawesome/brands/github
   features:
-    - navigation.tabs
     - toc.autohide
 
 watch:
