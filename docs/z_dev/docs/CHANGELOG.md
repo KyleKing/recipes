@@ -2,15 +2,18 @@
 
 ### Feat
 
+- add blackened seasoning
 - migrate to Python 3.11
 
 ### Fix
 
+- migrate to mdformat-mkdocs
 - add missing instruction to drain
 - correct indentation for tonight's dinner!
 
 ### Refactor
 
+- remove Obsidian vault reference
 - remove cauliflower platter and cleanup checklists
 - update copier
 
@@ -135,7 +138,7 @@
 - compress images for #6
 - update README instructions
 - remove temporary hack for image_name
-- “stylesheets” folder name for sorting
+- ‚Äústylesheets‚Äù folder name for sorting
 - make rating a special section in prep for #9
 - remove unused (for #7)
 - update README
@@ -192,4 +195,4 @@
 - rotation of image
 - error when highlighting text
 - scroll to link & Refac: eslint
-- missing ‘end’ statements on lists
+- missing ‚Äòend‚Äô statements on lists

@@ -4,6 +4,16 @@ requires = [
   "poetry-core>=1.0.7",
 ]
 
+[tool.isort]
+balanced_wrapping = true
+default_section = "THIRDPARTY"
+force_grid_wrap = 0
+include_trailing_comma = true
+known_first_party = "recipes"
+length_sort = false
+line_length = 120
+multi_line_output = 5
+
 [tool.calcipy]
 ignore_patterns = ["__TOC.md"]
 
@@ -29,16 +39,6 @@ change_type_order = [
 Chg = "Change (Old)"
 Fix = "Fix (Old)"
 New = "New (Old)"
-
-[tool.isort]
-balanced_wrapping = true
-default_section = "THIRDPARTY"
-force_grid_wrap = 0
-include_trailing_comma = true
-known_first_party = "recipes"
-length_sort = false
-line_length = 120
-multi_line_output = 5
 
 [tool.poetry]
 name = "recipes"
