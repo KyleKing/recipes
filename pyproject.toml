@@ -3,52 +3,43 @@ build-backend = "poetry.core.masonry.api"
 requires = ["poetry-core"]
 
 [tool.commitizen]
+change_type_order = [
+  "BREAKING CHANGE",
+  "Change (Old)",
+  "Feat",
+  "Fix (Old)",
+  "Fix",
+  "New (Old)",
+  "Perf",
+  "Refactor",
+]
 name = "cz_legacy"
 version = "0.4.0"
 version_files = ["pyproject.toml:^version", "recipes/__init__.py:^__version"]
-change_type_order = [
-    "BREAKING CHANGE",
-    "Feat",
-    "Fix",
-    "Refactor",
-    "Perf",
-    "New (Old)",
-    "Change (Old)",
-    "Fix (Old)",
-]
 
 [tool.commitizen.cz_legacy_map]
 Chg = "Change (Old)"
 Fix = "Fix (Old)"
 New = "New (Old)"
 
-# FIXME: ignore_patterns = ["__TOC.md"]
-
 [tool.poetry]
-name = "recipes"
-version = "0.4.0"
-description = "Recipe Website"
-license = "MIT"
 authors = ["Kyle King <dev.act.kyle@gmail.com>"]
-maintainers = []
-repository = "https://github.com/kyleking/recipes"
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3.11",
+] # https://pypi.org/classifiers/
+description = "Recipe Website"
 documentation = "https://recipes.kyleking.me"
-readme = "docs/z_dev/README.md"
 include = ["LICENSE"]
 keywords = []
-classifiers = [
-    "Development Status :: 5 - Production/Stable",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3.11",
-] # https://pypi.org/classifiers/
-
-[tool.poetry.scripts]
-recipes = "recipes.scripts:start"
-
-[tool.poetry.urls]
-"Bug Tracker" = "https://github.com/kyleking/recipes/issues"
-"Changelog" = "https://github.com/kyleking/recipes/blob/main/docs/z_dev/docs/CHANGELOG.md"
+license = "MIT"
+maintainers = []
+name = "recipes"
+readme = "docs/z_dev/README.md"
+repository = "https://github.com/kyleking/recipes"
+version = "0.4.0"
 
 [tool.poetry.dependencies]
 python = "^3.11.0"
@@ -58,6 +49,13 @@ pillow = ">=9.2.0"
 
 [tool.poetry.group.dev.dependencies]
 calcipy = {extras = ["doc", "lint", "nox", "stale", "tags", "test", "types"], version = ">=1.0.0"}
+
+[tool.poetry.scripts]
+recipes = "recipes.scripts:start"
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/kyleking/recipes/issues"
+"Changelog" = "https://github.com/kyleking/recipes/blob/main/docs/z_dev/docs/CHANGELOG.md"
 
 [tool.pyright]
 include = ["recipes"]
