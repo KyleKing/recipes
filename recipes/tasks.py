@@ -65,6 +65,24 @@ ns.add_task(compress_all)
 ns.add_task(compress)
 
 
+@task()
+@beartype
+def recipes_deploy(ctx: Context) -> None:
+    """HACK: Test out fixes to calcipy."""
+    try:
+        run(ctx, 'pre-commit uninstall')  # To prevent pre-commit failures when mkdocs calls push
+    except Exception:
+        logger.exception('Skipping uninstall!')
+    run(ctx, 'poetry run mkdocs gh-deploy --force')
+    try:
+        run(ctx, 'pre-commit install')  # Restore pre-commit
+    except Exception:
+        logger.exception('Skipping uninstall!')
+
+
+ns.add_task(recipes_deploy)
+
+
 @task(post=with_progress([format_recipes, *_MAIN_TASKS]))
 @beartype
 def main(_ctx: Context) -> None:
