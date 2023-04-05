@@ -53,6 +53,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - Add large tablespoons of the dumpling dough, spacing evenly
 - Cover the pot with a glass lid and cook for 15 minutes
 
-!!! tip To make breadcrumbs, leave bread out uncovered to dry, then freeze. When you need it, microwave for 20 seconds and toss in a food processor (definitely don't use a grater...)
+!!! tip
+    To make breadcrumbs, leave bread out uncovered to dry, then freeze. When you need it, microwave for 20 seconds and toss in a food processor (definitely don't use a grater...)
 
 [the essential instant pot cookbook]: https://smile.amazon.com/Essential-Instant-Pot-Cookbook-Foolproof/dp/0399580883

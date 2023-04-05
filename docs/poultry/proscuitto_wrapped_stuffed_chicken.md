@@ -55,8 +55,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - Place seam side down in the skillet
 - Scatter tomatoes around the chicken then bake until the chicken is cooked (~30 min)
 
-## Notes
-
-!!! tip Try to get two equally sized chicken breasts. Flatten by pounding with a rolling pin until ~1/2 in thickness. Can wrap in plastic wrap if needed
+!!! tip
+    Try to get two equally sized chicken breasts. Flatten by pounding with a rolling pin until ~1/2 in thickness. Can wrap in plastic wrap if needed
 
 [chrissy teigen cravings]: https://www.penguinrandomhouse.com/books/252973/cravings-by-chrissy-teigen-with-adeena-sussman/
