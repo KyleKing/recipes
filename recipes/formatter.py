@@ -214,8 +214,8 @@ class _TOCRecipes:  # noqa: H601
     recipes: RecipesT = field(init=False, factory=lambda: defaultdict(dict))
 
     @beartype
-    def store_star(self, line: str, path_md: Path) -> list[str]:
-        """Store the star rating.
+    def handle_star(self, line: str, path_md: Path) -> list[str]:
+        """Store the star rating and write.
 
         Args:
             line: first line of the section
@@ -226,11 +226,11 @@ class _TOCRecipes:  # noqa: H601
 
         """
         self.recipes[path_md.as_posix()]['rating'] = _parse_var_comment(line)['rating']
-        return []
+        return _handle_star_section(line, path_md)
 
     @beartype
-    def store_image(self, line: str, path_md: Path) -> list[str]:
-        """Store image name.
+    def handle_image(self, line: str, path_md: Path) -> list[str]:
+        """Store image name and write.
 
         Args:
             line: first line of the section
@@ -242,7 +242,7 @@ class _TOCRecipes:  # noqa: H601
         """
         path_image = _parse_rel_file(line, path_md, 'name_image')
         self.recipes[path_md.as_posix()]['path_image'] = path_image
-        return []
+        return _handle_image_section(line, path_md)
 
     @beartype
     def write_toc(self) -> None:
@@ -257,14 +257,18 @@ class _TOCRecipes:  # noqa: H601
             (self.sub_dir / '__TOC.md').write_text('\n'.join([*header, '', *toc_table] + ['']))
 
 
+# =====================================================================================
+# Main Task
+
+
 @beartype
-def _write_toc() -> None:
-    """Write the table of contents for each section."""
-    # Get all subdirectories
+def format_recipes() -> None:
+    """Format the Recipes."""
+    # Get all sub-directories
     paths_md = find_project_files_by_suffix(get_project_path()).get('md') or []
     md_dirs = {path_md.parent for path_md in paths_md}
 
-    # Filter out any directories for calcipy that are not recipes
+    # Filter out any directories from calcipy
     dir_md = get_recipes_doc_dir()
     doc_dir = get_doc_subdir(get_project_path())
     filtered_dir = [pth for pth in md_dirs if pth.parent == dir_md and pth.name not in [doc_dir.name]]
@@ -274,25 +278,9 @@ def _write_toc() -> None:
         logger.info('Creating TOC', sub_dir=sub_dir)
         toc_recipes = _TOCRecipes(sub_dir)
         recipe_lookup = {
-            'rating=': toc_recipes.store_star,
-            'name_image=': toc_recipes.store_image,
+            'rating=': toc_recipes.handle_star,
+            'name_image=': toc_recipes.handle_image,
         }
         sub_dir_paths = [pth for pth in paths_md if pth.is_relative_to(sub_dir)]
         write_autoformatted_md_sections(handler_lookup=recipe_lookup, paths_md=sub_dir_paths)
         toc_recipes.write_toc()
-
-
-# =====================================================================================
-# Main Task
-
-
-@beartype
-def format_recipes() -> None:
-    """Format the markdown files."""
-    recipe_lookup = {
-        'rating=': _handle_star_section,
-        'name_image=': _handle_image_section,
-    }
-    write_autoformatted_md_sections(handler_lookup=recipe_lookup)
-
-    _write_toc()

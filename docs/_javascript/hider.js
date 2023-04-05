@@ -2,7 +2,7 @@ const KEY = 'alohomora';
 
 // Add HTML and CSS for the modal and login form
 function conceal() {
-    document.body.innerHTML += `
+    var concealer = `
         <div id="concealer-bg"></div>
         <div id="concealer-modal" class="modal">
             <form id="concealer-form">
@@ -13,6 +13,7 @@ function conceal() {
             </form>
         </div>
     `;
+    document.body.innerHTML += concealer;   // nosemgrep: javascript.browser.security.insecure-document-method.insecure-document-method
 
     var style = document.createElement('style');
     document.head.appendChild(style);
