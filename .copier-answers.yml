@@ -2,7 +2,7 @@
 # Answer file maintained by Copier for: https://github.com/KyleKing/calcipy_template
 # DO NOT MODIFY THIS FILE. Edit by re-running copier and changing responses to the questions
 # Check into version control.
-_commit: 1.2.6
+_commit: 1.4.1
 _src_path: gh:KyleKing/calcipy_template
 author_email: dev.act.kyle@gmail.com
 author_name: Kyle King
@@ -21,5 +21,6 @@ project_description: Recipe Website
 project_name: recipes
 repository_namespace: kyleking
 repository_provider: https://github.com
+repository_source_url: https://github.com/kyleking/recipes/blob/main
 repository_url: https://github.com/kyleking/recipes
 

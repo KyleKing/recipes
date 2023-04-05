@@ -32,7 +32,7 @@ classifiers = [
 ] # https://pypi.org/classifiers/
 description = "Recipe Website"
 documentation = "https://recipes.kyleking.me"
-include = ["LICENSE"]
+include = ["LICENSE.md"]
 keywords = []
 license = "MIT"
 maintainers = []

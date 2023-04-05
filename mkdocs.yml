@@ -38,9 +38,10 @@ plugins:
       scripts:
         - docs/z_dev/gen_ref_nav.py
   - git-revision-date-localized:
-      type: date
-      fallback_to_build_date: true
       enable_creation_date: true
+      fallback_to_build_date: true
+      strict: false
+      type: date
   - mkdocstrings:
       handlers:
         python:
