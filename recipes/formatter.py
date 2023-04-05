@@ -1,26 +1,26 @@
 """Format Markdown Files for MKDocs."""
+
 from collections import defaultdict
-from collections.abc import Callable
-from copy import deepcopy
 from pathlib import Path
 
 import pandas as pd
 from attrs import field, mutable
 from beartype import beartype
-from beartype.typing import List, Optional, Union
-from calcipy.doit_tasks.doc import _parse_var_comment, _ReplacementMachine, write_autoformatted_md_sections
-from calcipy.doit_tasks.doit_globals import get_dg
-from calcipy.file_helpers import get_doc_dir, read_lines
-from decorator import ContextManager, contextmanager
-from loguru import logger
+from beartype.typing import Optional, Union
+from calcipy.file_search import find_project_files_by_suffix
+from calcipy.invoke_helpers import get_doc_subdir, get_project_path
+from calcipy.md_writer import write_autoformatted_md_sections
+from calcipy.md_writer._writer import _parse_var_comment
+from corallium.log import logger
 
 # =====================================================================================
 # Shared Functionality
 
 
-def get_dir_md() -> Path:
-    """Markdown directory (~2-levels up of `DG.doc.doc_sub_dir`)."""
-    return get_dg().meta.path_project / 'docs'
+@beartype
+def get_recipes_doc_dir() -> Path:
+    """Markdown directory (~2-levels up of `get_doc_subdir()`)."""
+    return get_project_path() / 'docs'
 
 
 BUMP_RATING = 3
@@ -83,27 +83,8 @@ def _format_image_md(name_image: Optional[str], attrs: str) -> str:
     """
     if name_image and name_image.lower() != 'none':
         return f'![{name_image}](./{name_image}){{: {attrs} loading=lazy }}'
-    logger.debug(f'WARN: No image specified: `{name_image}`')
+    logger.debug('WARN: No image specified', name_image=name_image)
     return '<!-- TODO: Capture image -->'  # noqa: T101
-
-
-@beartype
-@contextmanager
-def _configure_recipe_lookup(new_lookup: dict[str, Callable[[str, Path], List[str]]]) -> ContextManager:
-    """Configure the handler lookup for recipe tasks.
-
-    Args:
-        new_lookup: new handler_lookup to use temporarily
-
-    Yields:
-        None
-
-    """
-    dg = get_dg()
-    original_lookup = deepcopy(dg.doc.handler_lookup)
-    dg.doc.handler_lookup = new_lookup
-    yield
-    dg.doc.handler_lookup = original_lookup
 
 
 # =====================================================================================
@@ -111,7 +92,7 @@ def _configure_recipe_lookup(new_lookup: dict[str, Callable[[str, Path], List[st
 
 
 @beartype
-def _handle_star_section(line: str, path_md: Path) -> list[str]:
+def _handle_star_section(line: str, path_md: Path) -> list[str]:  # noqa: ARG001
     """Format the star rating as markdown.
 
     Args:
@@ -150,7 +131,7 @@ def _parse_rel_file(line: str, path_md: Path, key: str) -> Path:
     filename = _parse_var_comment(line)[key]
     path_file = path_md.parent / filename
     if filename.lower() != 'none' and not path_file.is_file():
-        raise FileNotFoundError(f'Could not locate {path_file} from {path_md}')
+        raise FileNotFoundError(f'Could not locate {path_file} from {path_md}')  # noqa: EM102
     return path_file
 
 
@@ -178,9 +159,12 @@ def _handle_image_section(line: str, path_md: Path) -> list[str]:
 # =====================================================================================
 # Utilities for TOC
 
+TOCRecordT = dict[str, Union[str, int]]
+"""TOC Record."""
+
 
 @beartype
-def _format_toc_table(toc_records: list[dict[str, Union[str, int]]]) -> list[str]:
+def _format_toc_table(toc_records: list[TOCRecordT]) -> list[str]:
     """Format TOC data as a markdown table.
 
     Args:
@@ -198,7 +182,7 @@ def _format_toc_table(toc_records: list[dict[str, Union[str, int]]]) -> list[str
 @beartype
 def _create_toc_record(
     path_recipe: Path, path_img: Path, rating: Union[str, int],
-) -> dict[str, Union[str, int]]:
+) -> TOCRecordT:
     """Create the dictionary summarizing data for the table of contents.
 
     Args:
@@ -207,7 +191,7 @@ def _create_toc_record(
         rating: recipe user-rating
 
     Returns:
-        Dict[str, Union[str, int]]: single records
+        TOCRecordT: single records
 
     """
     link = f'[{_format_titlecase(path_recipe.stem)}](./{path_recipe.name})'
@@ -219,12 +203,15 @@ def _create_toc_record(
     }
 
 
+RecipesT = dict[str, dict[str, Union[str, Path]]]
+
+
 @mutable
 class _TOCRecipes:  # noqa: H601
     """Store recipe metadata for TOC."""
 
     sub_dir: Path
-    recipes: dict[str, dict[str, Union[int, Path]]] = field(init=False, factory=lambda: defaultdict(dict))
+    recipes: RecipesT = field(init=False, factory=lambda: defaultdict(dict))
 
     @beartype
     def store_star(self, line: str, path_md: Path) -> list[str]:
@@ -267,33 +254,31 @@ class _TOCRecipes:  # noqa: H601
             ]
             toc_table = _format_toc_table(records)
             header = [f'# Table of Contents ({_format_titlecase(self.sub_dir.name)})']
-            (self.sub_dir / '__TOC.md').write_text('\n'.join(header + [''] + toc_table + ['']))
+            (self.sub_dir / '__TOC.md').write_text('\n'.join([*header, '', *toc_table] + ['']))
 
 
 @beartype
 def _write_toc() -> None:
     """Write the table of contents for each section."""
-    dg = get_dg()
     # Get all subdirectories
-    md_dirs = {path_md.parent for path_md in dg.doc.paths_md}
+    paths_md = find_project_files_by_suffix(get_project_path()).get('md') or []
+    md_dirs = {path_md.parent for path_md in paths_md}
 
     # Filter out any directories for calcipy that are not recipes
-    dir_md = get_dir_md()
-    doc_dir = get_doc_dir(dg.meta.path_project)
+    dir_md = get_recipes_doc_dir()
+    doc_dir = get_doc_subdir(get_project_path())
     filtered_dir = [pth for pth in md_dirs if pth.parent == dir_md and pth.name not in [doc_dir.name]]
 
     # Create a TOC for each directory
     for sub_dir in filtered_dir:
-        logger.info(f'Creating TOC for: {sub_dir}')
+        logger.info('Creating TOC', sub_dir=sub_dir)
         toc_recipes = _TOCRecipes(sub_dir)
         recipe_lookup = {
             'rating=': toc_recipes.store_star,
             'name_image=': toc_recipes.store_image,
         }
-        sub_dir_paths = [pth for pth in dg.doc.paths_md if pth.is_relative_to(sub_dir)]
-        with _configure_recipe_lookup(recipe_lookup):
-            for path_md in sub_dir_paths:
-                _ReplacementMachine().parse(read_lines(path_md), dg.doc.handler_lookup, path_md)
+        sub_dir_paths = [pth for pth in paths_md if pth.is_relative_to(sub_dir)]
+        write_autoformatted_md_sections(handler_lookup=recipe_lookup, paths_md=sub_dir_paths)
         toc_recipes.write_toc()
 
 
@@ -308,7 +293,6 @@ def format_recipes() -> None:
         'rating=': _handle_star_section,
         'name_image=': _handle_image_section,
     }
-    with _configure_recipe_lookup(recipe_lookup):
-        write_autoformatted_md_sections()
+    write_autoformatted_md_sections(handler_lookup=recipe_lookup)
 
     _write_toc()

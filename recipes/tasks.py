@@ -1,39 +1,31 @@
-"""Doit Tasks for the MKDocs project."""
+"""Invoke Tasks."""
 
-import shlex
-import subprocess  # nosec # noqa S404
-import sys
+from pathlib import Path
 
 from beartype import beartype
-from calcipy.doit_tasks.base import debug_task
-from calcipy.doit_tasks.doit_globals import DoitTask
-from doit.tools import Interactive
-from loguru import logger
+from calcipy.cli import task
+from calcipy.invoke_helpers import run
+from calcipy.tasks.all_tasks import _MAIN_TASKS, ns, with_progress
+from corallium.log import logger
+from invoke import Context
 from PIL import Image
 
-from .formatter import format_recipes, get_dir_md
+from . import formatter
 
-# Log the positional arguments to help with debugging tasks if needed
-logger.debug('sys.argv={sys_argv}', sys_argv=sys.argv)
+
+@task()
+@beartype
+def format_recipes(_ctx: Context) -> None:
+    """Format recipes."""
+    formatter.format_recipes()
 
 
 @beartype
-def task_format_recipes() -> DoitTask:
-    """Format recipes.
-
-    Returns:
-        DoitTask: DoIt task
-
-    """
-    return debug_task([(format_recipes, ())])
-
-
-@beartype
-def _convert_png_to_jpg() -> None:
+def _convert_png_to_jpg(dir_md: Path) -> None:
     """Convert any remaining PNG files to jpg."""
-    for path_png in get_dir_md().glob('*/*.png'):
+    for path_png in dir_md.glob('*/*.png'):
         if path_png.parent.name != '_icons':
-            logger.warning(f'Convert to jpg and deleting original for: {path_png}')
+            logger.warning('Convert to jpg and deleting original', path_png=path_png)
             Image.open(path_png).save(path_png.parent / f'{path_png.stem}.jpg')
             path_png.unlink()
 
@@ -42,49 +34,40 @@ _OPTIMIZE_CMD = 'poetry run optimize-images -mh 900 --convert-all --force-delete
 """Command for optimize-images run from poetry. Requires the path to the folder or image."""
 
 
+@task()
 @beartype
-def task_compress_all() -> DoitTask:
-    """Compress images.
-
-    Returns:
-        DoitTask: DoIt task
-
-    """
-    return debug_task([
-        (_convert_png_to_jpg,),
-        Interactive(f'{_OPTIMIZE_CMD} {DIR_MD}/'),
-    ])
+def convert_png_to_jpg(_ctx: Context) -> None:
+    """Convert PNG images to JPG."""
+    _convert_png_to_jpg(dir_md=formatter.get_dir_md())
 
 
+@task(
+    pre=[convert_png_to_jpg],
+)
 @beartype
-def task_convert_png_to_jpg() -> DoitTask:
-    """Convert PNG images to JPG.
-
-    Returns:
-        DoitTask: DoIt task
-
-    """
-    return debug_task([
-        (_convert_png_to_jpg,),
-    ])
+def compress_all(ctx: Context) -> None:
+    """Compress images."""
+    run(ctx, f'{_OPTIMIZE_CMD} {formatter.get_dir_md()}/')
 
 
+@task()
 @beartype
-def task_compress() -> DoitTask:
-    """Compress one or more specific images.
+def compress(ctx: Context) -> None:
+    """Compress one or more specific images."""
+    for file_arg in ctx.config.gto.file_args:
+        run(ctx, f'{_OPTIMIZE_CMD} {file_arg}')
 
-    Example: `poetry run doit run compress ./docs/dessert/biscotti.jpg`
 
-    Returns:
-        DoitTask: DoIt task
+ns.add_task(format_recipes)
+ns.add_task(convert_png_to_jpg)
+ns.add_task(compress_all)
+ns.add_task(compress)
 
-    """
-    def _run_params(pos: list[str]) -> None:
-        for pos_arg in pos:
-            cmds = shlex.split(f'{_OPTIMIZE_CMD} {pos_arg}')
-            logger.info('Running: {cmds}', cmds=cmds)
-            subprocess.run(cmds, check=True)  # nosec # noqa S603
 
-    task = debug_task([(_run_params,)])  # _OPTIMIZE_CMD + ' %(pos)s'])
-    task['pos_arg'] = 'pos'
-    return task
+@task(post=with_progress([format_recipes, *_MAIN_TASKS]))
+@beartype
+def main(_ctx: Context) -> None:
+    """Override the main task pipeline."""
+
+
+ns.add_task(main)

@@ -44,6 +44,7 @@ repos:
     rev: v2.42.0
     hooks:
       - id: commitizen
+        additional_dependencies: ["cz-legacy"]
         stages: [commit-msg]
   - repo: https://github.com/executablebooks/mdformat
     rev: 0.7.16
