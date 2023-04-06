@@ -66,8 +66,6 @@ markdown_extensions:
   - extra
   - fenced_code
   - footnotes
-  - mdx_truly_sane_lists:
-      nested_indent: 4
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg

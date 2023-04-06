@@ -79,8 +79,7 @@
 | TODO   | Capture image -->                                                                                                                                          | 2022-04-14  | [docs/veggie/instant_pot_vegetarian_chili.md:13](https://github.com/KyleKing/recipes/blame/ac05846f420851ce02a60d56852742469c1aae70/docs/veggie/instant_pot_vegetarian_chili.md#L13)       |
 | TODO   | Capture image -->                                                                                                                                          | 2020-12-06  | [docs/veggie/karens_roasted_veggie_bowls.md:11](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/veggie/karens_roasted_veggie_bowls.md#L14)         |
 | TODO   | Capture image -->'  # noqa: T101                                                                                                                           | 2020-12-06  | [recipes/formatter.py:87](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/recipes/formatter.py#L63)                                                     |
-| HACK   | Test out fixes to calcipy."""                                                                                                                              | 2023-04-05  | [recipes/tasks.py:71](https://github.com/KyleKing/recipes/blame/303c807e4cdbbc730f274712e4d25a70bcbee228/recipes/tasks.py#L71)                                                             |
 
-Found code tags for FIXME (2), TODO (75), HACK (1)
+Found code tags for FIXME (2), TODO (75)
 
 <!-- calcipy_skip_tags -->
