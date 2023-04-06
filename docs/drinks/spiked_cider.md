@@ -32,4 +32,5 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 - We used Bacardi Gold when making this the first time
 
-!!! warning If using spices, make sure to filter before pouring
+!!! warning
+    If using spices, make sure to filter before pouring
