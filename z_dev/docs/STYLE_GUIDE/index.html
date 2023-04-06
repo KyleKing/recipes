@@ -3489,7 +3489,7 @@
 <p><code>type(scope): description</code></p>
 </blockquote>
 <ul>
-<li><strong>Types</strong><ul>
+<li><strong>Types</strong></li>
 <li><em>fix</em>: A bug fix</li>
 <li><em>feat</em>: A new feature</li>
 <li><em>docs</em>: Documentation-only changes (code comments, separate docs)</li>
@@ -3504,24 +3504,18 @@
 <li>Based on commit type, the version will be auto-incremented: <code>fix : PATCH // feat : MINOR // BREAKING CHANGE : MAJOR</code></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><strong>Scopes</strong><ul>
+<li><strong>Scopes</strong></li>
 <li>A Class, File name, Issue Number, other appropriate noun. As examples: <code>build(poetry): bump requests to v3</code> or <code>style(#32): add missing type annotations</code></li>
-</ul>
-</li>
-<li><strong>Tips</strong><ul>
+<li><strong>Tips</strong></li>
 <li>What if a commit fits multiple types?<ul>
 <li>Go back and make multiple commits whenever possible. Part of the benefit of Conventional Commits is the focus on more organized and intentional changes</li>
 </ul>
 </li>
 <li>Use <code>git rebase -i</code> to fix commit names prior to merging if incorrect types/scopes are used</li>
 </ul>
-</li>
-</ul>
 <h3 id="git-description-guidelines">Git Description Guidelines<a class="headerlink" href="#git-description-guidelines" title="Permanent link">⚓︎</a></h3>
 <ul>
-<li><a href="https://writingfordevelopers.substack.com/p/how-to-write-a-commit-message">Commit message guidelines</a><ul>
+<li><a href="https://writingfordevelopers.substack.com/p/how-to-write-a-commit-message">Commit message guidelines</a></li>
 <li>Full sentence with verb (<em>lowercase</em>) and concise description. Below are modified examples for Conventional Commits<ul>
 <li><code>fix(roles): bug in admin role permissions</code></li>
 <li><code>feat(ui): implement new button design</code></li>
@@ -3531,9 +3525,7 @@
 <li><code>feat(api): endpoints to implement new customer dashboard</code></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="https://chris.beams.io/posts/git-commit/">How to write a good commit message</a><ul>
+<li><a href="https://chris.beams.io/posts/git-commit/">How to write a good commit message</a></li>
 <li>A diff will tell you what changed, but only the commit message can properly tell you why.</li>
 <li>Keep in mind: <a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">This</a> <a href="https://www.git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines">has</a> <a href="https://github.com/torvalds/subsurface-for-dirk/blob/master/README.md#contributing">all</a> <a href="http://who-t.blogspot.co.at/2009/12/on-commit-messages.html">been</a> <a href="https://github.com/erlang/otp/wiki/writing-good-commit-messages">said</a> <a href="https://github.com/spring-projects/spring-framework/blob/30bce7/CONTRIBUTING.md#format-commit-messages">before</a>.</li>
 <li>From the seven rules of a great Git commit message:<ul>
@@ -3550,18 +3542,14 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 <h3 id="issue-labels-and-milestones">Issue Labels and Milestones<a class="headerlink" href="#issue-labels-and-milestones" title="Permanent link">⚓︎</a></h3>
 <p>Personal Guide</p>
 <ul>
 <li>For Issue Labels, see <a href="https://github.com/kyleking/.github/labels.yml">labels.yml</a></li>
-<li>Milestones<ul>
+<li>Milestones</li>
 <li><strong>Current Tasks</strong>: main milestone (<em>name could change based on a specific project, sprint, or month</em>)</li>
 <li><strong>Next Tasks</strong></li>
 <li><strong>Blue Sky</strong></li>
-</ul>
-</li>
 </ul>
 <details>
 <summary>Research</summary>
@@ -3638,15 +3626,13 @@
 <li><a href="https://github.com/atom/atom/blob/master/CONTRIBUTING.md#styleguides">Commit Messages</a> and <a href="https://news.ycombinator.com/item?id=8874177">why use the present tense</a></li>
 <li><a href="https://github.com/erlang/otp/wiki/Writing-good-commit-messages">Github&rsquo;s Advice on Github</a></li>
 <li><a href="https://chris.beams.io/posts/git-commit/">Most Comprehensive Guide</a></li>
-<li><a href="https://git-scm.com/book/en/v2">Git Pro Book (free)</a><ul>
+<li><a href="https://git-scm.com/book/en/v2">Git Pro Book (free)</a></li>
 <li><a href="https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Bash">Bash Tab-Completion Snippet</a></li>
-</ul>
-</li>
 </ul>
 <h2 id="python">Python<a class="headerlink" href="#python" title="Permanent link">⚓︎</a></h2>
 <p><strong>TODO: Revisit</strong></p>
 <ul>
-<li>Python Style Guides<ul>
+<li>Python Style Guides</li>
 <li><a href="https://gist.github.com/sloria/7001839">https://gist.github.com/sloria/7001839</a></li>
 <li><a href="http://www.nilunder.com/blog/2013/08/03/pythonic-sensibilities/">http://www.nilunder.com/blog/2013/08/03/pythonic-sensibilities/</a></li>
 <li><a href="https://innoq.github.io/cards42org_en/">https://innoq.github.io/cards42org_en/</a></li>
@@ -3655,15 +3641,11 @@
 <li><a href="https://docs.python-guide.org/writing/reading/">https://docs.python-guide.org/writing/reading/</a></li>
 <li><a href="https://realpython.com/python-refactoring/">https://realpython.com/python-refactoring/</a></li>
 </ul>
-</li>
-</ul>
 <h2 id="adrs">ADRs<a class="headerlink" href="#adrs" title="Permanent link">⚓︎</a></h2>
 <p><strong>TODO: Revisit</strong></p>
 <ul>
-<li>Examples<ul>
+<li>Examples</li>
 <li><a href="https://github.com/pawamoy/mkdocstrings/issues/28">https://github.com/pawamoy/mkdocstrings/issues/28</a></li>
-</ul>
-</li>
 </ul>
 <p>&lt;&ndash; Links &ndash;&gt;</p>
 
