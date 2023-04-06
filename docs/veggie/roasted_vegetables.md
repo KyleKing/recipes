@@ -38,4 +38,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - Cut up all the vegetables into roughly the same size
 - Mix with seasonings and oil in a bowl, then spread out over two baking sheets or in a roasting pan
 - Bake for 30 minutes, check and flip, then bake for an additional 30 min
-- Wait to add the software ingredients, such as mushrooms, zucchini, etc. until the mid-point
+- Wait to add the softer ingredients, such as mushrooms, zucchini, etc. until the mid-point
