@@ -14,7 +14,7 @@ from .formatter import format_recipes as formatter_format_recipes
 from .formatter import get_recipes_doc_dir
 
 
-@task()
+@task()  # type: ignore[misc]
 def format_recipes(_ctx: Context) -> None:
     """Format recipes."""
     formatter_format_recipes()
@@ -34,13 +34,13 @@ _OPTIMIZE_CMD = 'poetry run optimize-images -mh 900 --convert-all --force-delete
 """Command for optimize-images run from poetry. Requires the path to the folder or image."""
 
 
-@task()
+@task()  # type: ignore[misc]
 def convert_png_to_jpg(_ctx: Context) -> None:
     """Convert PNG images to JPG."""
     _convert_png_to_jpg(dir_md=get_recipes_doc_dir())
 
 
-@task(
+@task(  # type: ignore[misc]
     pre=[convert_png_to_jpg],
 )
 def compress_all(ctx: Context) -> None:
@@ -48,7 +48,7 @@ def compress_all(ctx: Context) -> None:
     run(ctx, f'{_OPTIMIZE_CMD} {get_recipes_doc_dir()}/')
 
 
-@task()
+@task()  # type: ignore[misc]
 def compress(ctx: Context) -> None:
     """Compress one or more specific images."""
     for file_arg in ctx.config.gto.file_args:
@@ -61,7 +61,7 @@ ns.add_task(compress_all)
 ns.add_task(compress)
 
 
-@task(post=with_progress([format_recipes, *_MAIN_TASKS]))
+@task(post=with_progress([format_recipes, *_MAIN_TASKS]))  # type: ignore[misc]
 def main(_ctx: Context) -> None:
     """Override the main task pipeline."""
 

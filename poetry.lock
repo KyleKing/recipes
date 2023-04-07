@@ -179,14 +179,14 @@ files = [
 
 [[package]]
 name = "calcipy"
-version = "1.1.1"
+version = "1.2.0"
 description = "Python package to simplify development"
 category = "dev"
 optional = false
 python-versions = ">=3.8.12,<4.0.0"
 files = [
-    {file = "calcipy-1.1.1-py3-none-any.whl", hash = "sha256:98e88293039dc336554c0fedca46c5f809c57b6ad5d6727ee4722145971631f7"},
-    {file = "calcipy-1.1.1.tar.gz", hash = "sha256:c0c746c36e9cd24bb8df449a7e96765f88428079891226832c462f023ca228cf"},
+    {file = "calcipy-1.2.0-py3-none-any.whl", hash = "sha256:ea6af2612fca2848ef79cb32cfc6510ec0e83a3639726f6f7dbc179fbd30e0b5"},
+    {file = "calcipy-1.2.0.tar.gz", hash = "sha256:c8b59a1b1fcadd9cc09519cef5110ece0a3bffb2eae175a49d94b111b230d147"},
 ]
 
 [package.dependencies]
@@ -1041,14 +1041,14 @@ mkdocs = ">=1.0.3"
 
 [[package]]
 name = "mkdocs-material"
-version = "9.1.5"
+version = "9.1.6"
 description = "Documentation that simply works"
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "mkdocs_material-9.1.5-py3-none-any.whl", hash = "sha256:981e1ef0250e2fbcc23610e9b20e5f242fe1f808079b9bcfbb6c49aa2999343c"},
-    {file = "mkdocs_material-9.1.5.tar.gz", hash = "sha256:744519bca52b1e8fe7c2e80e15ed59baf8948111ec763ae6ae629c409bd16d6e"},
+    {file = "mkdocs_material-9.1.6-py3-none-any.whl", hash = "sha256:f2eb1d40db89da9922944833c1387207408f8937e1c2b46ab86e0c8f170b71e0"},
+    {file = "mkdocs_material-9.1.6.tar.gz", hash = "sha256:2e555152f9771646bfa62dc78a86052876183eff69ce30db03a33e85702b21fc"},
 ]
 
 [package.dependencies]
@@ -1659,14 +1659,14 @@ testutils = ["gitpython (>3)"]
 
 [[package]]
 name = "pymdown-extensions"
-version = "9.10"
+version = "9.11"
 description = "Extension pack for Python Markdown."
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "pymdown_extensions-9.10-py3-none-any.whl", hash = "sha256:31eaa76ce6f96aabfcea98787c2fff2c5c0611b20a53a94213970cfbf05f02b8"},
-    {file = "pymdown_extensions-9.10.tar.gz", hash = "sha256:562c38eee4ce3f101ce631b804bfc2177a8a76c7e4dc908871fb6741a90257a7"},
+    {file = "pymdown_extensions-9.11-py3-none-any.whl", hash = "sha256:a499191d8d869f30339de86fcf072a787e86c42b6f16f280f5c2cf174182b7f3"},
+    {file = "pymdown_extensions-9.11.tar.gz", hash = "sha256:f7e86c1d3981f23d9dc43294488ecb54abadd05b0be4bf8f0e15efc90f7853ff"},
 ]
 
 [package.dependencies]
@@ -2547,4 +2547,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11.0"
-content-hash = "cdc07fe37b39f143bac9d1bf700c98a3108f6c4a47b4dd9d0e7e1465be8788a2"
+content-hash = "3d4c5813f61d14a0ab12cfb25561e7525c0d8de325efb00562e45bc0447c28fc"

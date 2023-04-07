@@ -1,10 +1,8 @@
 """Format Markdown Files for MKDocs."""
 
-from collections import defaultdict
 from pathlib import Path
 
 import pandas as pd
-from attrs import field, mutable
 from beartype import beartype
 from beartype.typing import Optional, Union
 from calcipy.file_search import find_project_files_by_suffix
@@ -12,6 +10,7 @@ from calcipy.invoke_helpers import get_doc_subdir, get_project_path
 from calcipy.md_writer import write_autoformatted_md_sections
 from calcipy.md_writer._writer import _parse_var_comment
 from corallium.log import logger
+from pydantic import BaseModel, Field
 
 # =====================================================================================
 # Shared Functionality
@@ -20,7 +19,8 @@ from corallium.log import logger
 @beartype
 def get_recipes_doc_dir() -> Path:
     """Markdown directory (~2-levels up of `get_doc_subdir()`)."""
-    return get_project_path() / 'docs'
+    project_path: Path = get_project_path()
+    return project_path / 'docs'
 
 
 BUMP_RATING = 3
@@ -129,7 +129,7 @@ def _parse_rel_file(line: str, path_md: Path, key: str) -> Path:
 
     """
     filename = _parse_var_comment(line)[key]
-    path_file = path_md.parent / filename
+    path_file: Path = path_md.parent / filename
     if filename.lower() != 'none' and not path_file.is_file():
         raise FileNotFoundError(f'Could not locate {path_file} from {path_md}')  # noqa: EM102
     return path_file
@@ -176,7 +176,9 @@ def _format_toc_table(toc_records: list[TOCRecordT]) -> list[str]:
     """
     # Format table for Github Markdown
     df_toc = pd.DataFrame(toc_records)
-    return df_toc.to_markdown(index=False).split('\n')
+    content = df_toc.to_markdown(index=False)
+    assert content is not None  # noqa: S101 for pyright
+    return [*content.split('\n')]  # for mypy
 
 
 @beartype
@@ -203,15 +205,18 @@ def _create_toc_record(
     }
 
 
-RecipesT = dict[str, dict[str, Union[str, Path]]]
+class Recipe(BaseModel):
+    """Recipe Model."""
+
+    rating: str = ''
+    path_image: Path = Path()
 
 
-@mutable
-class _TOCRecipes:  # noqa: H601
+class _TOCRecipes(BaseModel):  # noqa: H601
     """Store recipe metadata for TOC."""
 
     sub_dir: Path
-    recipes: RecipesT = field(init=False, factory=lambda: defaultdict(dict))
+    recipes: dict[str, Recipe] = Field(default_factory=dict)
 
     @beartype
     def handle_star(self, line: str, path_md: Path) -> list[str]:
@@ -225,7 +230,10 @@ class _TOCRecipes:  # noqa: H601
             List[str]: empty list
 
         """
-        self.recipes[path_md.as_posix()]['rating'] = _parse_var_comment(line)['rating']
+        key = path_md.as_posix()
+        recipe = self.recipes.get(key) or Recipe()
+        recipe.rating = _parse_var_comment(line)['rating']
+        self.recipes[key] = recipe
         return _handle_star_section(line, path_md)
 
     @beartype
@@ -240,8 +248,10 @@ class _TOCRecipes:  # noqa: H601
             List[str]: empty list
 
         """
-        path_image = _parse_rel_file(line, path_md, 'name_image')
-        self.recipes[path_md.as_posix()]['path_image'] = path_image
+        key = path_md.as_posix()
+        recipe = self.recipes.get(key) or Recipe()
+        recipe.path_image = _parse_rel_file(line, path_md, 'name_image')
+        self.recipes[key] = recipe
         return _handle_image_section(line, path_md)
 
     @beartype
@@ -249,7 +259,7 @@ class _TOCRecipes:  # noqa: H601
         """Write the table of contents."""
         if self.recipes:
             records = [
-                _create_toc_record(Path(path_md), info['path_image'], info['rating'])
+                _create_toc_record(Path(path_md), info.path_image, info.rating)
                 for path_md, info in self.recipes.items()
             ]
             toc_table = _format_toc_table(records)
@@ -276,7 +286,7 @@ def format_recipes() -> None:
     # Create a TOC for each directory
     for sub_dir in filtered_dir:
         logger.info('Creating TOC', sub_dir=sub_dir)
-        toc_recipes = _TOCRecipes(sub_dir)
+        toc_recipes = _TOCRecipes(sub_dir=sub_dir)
         recipe_lookup = {
             'rating=': toc_recipes.handle_star,
             'name_image=': toc_recipes.handle_image,
