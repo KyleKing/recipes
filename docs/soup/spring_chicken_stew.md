@@ -2,7 +2,7 @@
 
 > Based on a Giant Grocery Catalog recipe
 
-<!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
+<!-- {cts} rating=3; (User can specify rating on scale of 1-5) -->
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
@@ -17,25 +17,29 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Ingredients
 
 - [ ] 1 large yellow onion, 1/2” dice
-- [ ] 1 tbsp olive oil
-- [ ] 2 carrots, thinly sliced
-- [ ] 2 tbsp flour
+- [ ] 1 tsp olive oil
+- [ ] 5 carrots, thinly coined
 - [ ] 1 cup low-sodium chicken broth
+- [ ] 1 cup white wine or 1 cup chicken broth
 - [ ] 1 bay leaf
 - [ ] 2 tsp dried thyme
-- [ ] 1.5 lb golden potatoes, quartered
+- [ ] 2 tsp dried rosemary
+- [ ] 2 tsp pepper
+- [ ] 1 tsp salt
+- [ ] 1.5 lb golden or red potatoes, quartered
 - [ ] 1.5 lb boneless skinless chicken thighs
-- [ ] 2 cups frozen peas, thawed
-- [ ] salt and pepper
+- [ ] bag of frozen peas
 
 ## Recipe
 
-- In an Instant Pot, heat the oil on saute. Add onion and carrots. Cook 5 min until golden, stirring occasionally.
-- Stir in the flour. Add the chicken broth, bay leaf, thyme, potatoes, salt, and pepper. Top with chicken.
-- Seal and set to high pressure. Cook 10 and natural release 10 min
-- While microwaving the peas, shred the chicken, and return both to the pot
-- Season with additional salt and pepper
+- Prep the onion and carrots
+- In an Instant Pot use the saute setting to brown the onion and carrots in a small amount of olive oil
+- Quarter the potatoes
+- To the pot, add the chicken broth and/or white wine, potatoes, and spices. Top with chicken.
+- Seal and set to high pressure. Cook for 13 minutes and natural release for 5 min
+- Open the pot and while on keep warm, remove the chicken, and add the frozen peas
+- Shred and replace the chicken. Add salt and pepper to taste. Serve once the peas have heated
 
 ## Notes
 
-- For frozen boneless, skinless chicken thighs, put in without thawing. Keep potatoes whole and increase cook time from 10 to 20-25 min
+- For frozen boneless, skinless chicken thighs, put in without thawing. Keep potatoes whole and increase cook time to 20-25 min
