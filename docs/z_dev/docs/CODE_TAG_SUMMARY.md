@@ -2,7 +2,6 @@
 
 | Type   | Comment                                                                                                                                                    | Last Edit   | Source File                                                                                                                                                                                |
 |--------|------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| TODO   | https://github.com/pappasam/toml-sort/issues/42                                                                                                            | 2023-02-26  | [.pre-commit-config.yaml:74](https://github.com/KyleKing/recipes/blame/d7cf622daf5550db5fb8501d379de6ac8269f360/.pre-commit-config.yaml#L73)                                               |
 | TODO   | Capture image -->                                                                                                                                          | 2021-06-06  | [_recipe_template.md:13](https://github.com/KyleKing/recipes/blame/2f5f04155f293e8b8a4a6f94c895f9a199038045/_recipe_template.md#L10)                                                       |
 | TODO   | Capture image -->                                                    |                                                                                     | 2021-10-26  | [docs/bread/__TOC.md:5](https://github.com/KyleKing/recipes/blame/46e6db7083ad3b0a608b1b82502ebedb3e66cdec/docs/bread/__TOC.md#L5)                                                         |
 | TODO   | Capture image -->                                                    |                                                                                     | 2021-10-26  | [docs/bread/__TOC.md:7](https://github.com/KyleKing/recipes/blame/46e6db7083ad3b0a608b1b82502ebedb3e66cdec/docs/bread/__TOC.md#L7)                                                         |
@@ -80,6 +79,6 @@
 | TODO   | Capture image -->                                                                                                                                          | 2020-12-06  | [docs/veggie/karens_roasted_veggie_bowls.md:11](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/veggie/karens_roasted_veggie_bowls.md#L14)         |
 | TODO   | Capture image -->'  # noqa: T101                                                                                                                           | 2020-12-06  | [recipes/formatter.py:87](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/recipes/formatter.py#L63)                                                     |
 
-Found code tags for FIXME (2), TODO (75)
+Found code tags for FIXME (2), TODO (74)
 
 <!-- calcipy_skip_tags -->

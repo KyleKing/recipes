@@ -2,17 +2,23 @@
 
 ### Feat
 
+- begin converting tasks to Invoke
 - add blackened seasoning
 - migrate to Python 3.11
 
 ### Fix
 
+- set indent to 4
+- resolve bugs in recipe formatter
 - migrate to mdformat-mkdocs
 - add missing instruction to drain
 - correct indentation for tonight's dinner!
 
 ### Refactor
 
+- remove duplicate beartype wrapper
+- use patched deploy from calcipy
+- remove the difficult Chicken and Dumpling recipe
 - remove Obsidian vault reference
 - remove cauliflower platter and cleanup checklists
 - update copier
@@ -46,6 +52,56 @@
 
 ## 2021.0.3.0 (2022-01-04)
 
+### Change (Old)
+
+- update chocolatines
+- move robotos to template
+- update web manifest and close #5
+- move icons to deployment doc directory
+- try to fix CNAME, manifest, & robots for #5
+- updated recipes from beach trip
+- try image alignment @WIP
+- implement None option for image_name
+- convert rest of png images to jpg #11
+- mark all md files for manual review (#11)
+- bump ratings by 3 stars for 4-8 (from 1-5)
+- prevent dash_dev from writing to MKDocs dir
+- compress images for #6
+- update README instructions
+- remove temporary hack for image_name
+- “stylesheets” folder name for sorting
+- make rating a special section in prep for #9
+- remove unused (for #7)
+- update README
+- remove other unused files (#5)
+- update TODO items
+- migrate the rest of the recipes
+- track icons
+- remove unused files
+- mark all WIP files
+- update toml
+- minor recipe updates
+- add potatoes and updated popcorn recipes
+- add margarita and shaker recipes
+- minor recipe updates
+- update README
+- add dash_dev for flake8 dependencies
+- minor tweaks to recipes
+- add slight variation of vanilla ice cream
+- rename veggie wraps & move to veggie section
+- update chili recipe
+- simplify red curry recipe
+- puch new pasta e ceci photo
+- rename ceci to chickpeas and add orange noolde photo
+- set all uncooked meals to rating of 0 for filtering
+- week 3 and 4 of veggie WAPO
+- fix veggie folder naming
+- add first two weeks of veggie WAPO
+- removed duplicate recipe and added Porcelain pot care
+- Back in business!
+- added choc-oat-cookies and pineapple cake
+- fix tacos/scampi/Choc-Nuttella
+
 ### Feat
 
 - new fish and carbonara recipes!
@@ -61,6 +117,32 @@
 - add recipes using-up leftovers
 - show password modal
 
+### Fix (Old)
+
+- make rating sortable (#9)
+- edit URI
+- relative links from ROC (#9)
+- check all images with duplicates
+- full image filename matching
+- indent on sublists
+- handle sublists (dict) from JSON
+- banana bread, rice, and pasta
+- section headers & Add: new recipes
+- remove images missed in first-pass
+- regenerate placeholder SVG images
+- rename scampi recipe
+- typo in recipe names
+- outdated image
+- searching ingredients by using deep copy
+- lazy load & Add: new family recipes and guac
+- mobile zoom on input selection
+- minified database.js
+- bug in Fuse searching
+- rotation of image
+- error when highlighting text
+- scroll to link & Refac: eslint
+- missing ‘end’ statements on lists
+
 ### Fix
 
 - the earlier PEP585 issues were an error with poetry using 3.8 and not 3.9
@@ -75,17 +157,6 @@
 - password prompt on mobile
 - skip icons from png to jpg conversion
 - remove duplicate images
-
-### Refactor
-
-- minor update
-- update pizza
-- upgrade type annotations for 3.9
-- move docs to z_dev
-- fix and improve dodo
-- comment-out duplicate task
-- update Cravings book links
-- update to calcipy from dash_dev
 
 ### New (Old)
 
@@ -121,78 +192,13 @@
 - H-BPLTs and fixed Banana Bread
 - Microwaveable Cacio Pepe and more
 
-### Change (Old)
+### Refactor
 
-- update chocolatines
-- move robotos to template
-- update web manifest and close #5
-- move icons to deployment doc directory
-- try to fix CNAME, manifest, & robots for #5
-- updated recipes from beach trip
-- try image alignment @WIP
-- implement None option for image_name
-- convert rest of png images to jpg #11
-- mark all md files for manual review (#11)
-- bump ratings by 3 stars for 4-8 (from 1-5)
-- prevent dash_dev from writing to MKDocs dir
-- compress images for #6
-- update README instructions
-- remove temporary hack for image_name
-- ‚Äústylesheets‚Äù folder name for sorting
-- make rating a special section in prep for #9
-- remove unused (for #7)
-- update README
-- remove other unused files (#5)
-- update TODO items
-- migrate the rest of the recipes
-- track icons
-- remove unused files
-- mark all WIP files
-- update toml
-- minor recipe updates
-- add potatoes and updated popcorn recipes
-- add margarita and shaker recipes
-- minor recipe updates
-- update README
-- add dash_dev for flake8 dependencies
-- minor tweaks to recipes
-- add slight variation of vanilla ice cream
-- rename veggie wraps & move to veggie section
-- update chili recipe
-- simplify red curry recipe
-- puch new pasta e ceci photo
-- rename ceci to chickpeas and add orange noolde photo
-- set all uncooked meals to rating of 0 for filtering
-- week 3 and 4 of veggie WAPO
-- fix veggie folder naming
-- add first two weeks of veggie WAPO
-- removed duplicate recipe and added Porcelain pot care
-- Back in business!
-- added choc-oat-cookies and pineapple cake
-- fix tacos/scampi/Choc-Nuttella
-
-### Fix (Old)
-
-- make rating sortable (#9)
-- edit URI
-- relative links from ROC (#9)
-- check all images with duplicates
-- full image filename matching
-- indent on sublists
-- handle sublists (dict) from JSON
-- banana bread, rice, and pasta
-- section headers & Add: new recipes
-- remove images missed in first-pass
-- regenerate placeholder SVG images
-- rename scampi recipe
-- typo in recipe names
-- outdated image
-- searching ingredients by using deep copy
-- lazy load & Add: new family recipes and guac
-- mobile zoom on input selection
-- minified database.js
-- bug in Fuse searching
-- rotation of image
-- error when highlighting text
-- scroll to link & Refac: eslint
-- missing ‚Äòend‚Äô statements on lists
+- minor update
+- update pizza
+- upgrade type annotations for 3.9
+- move docs to z_dev
+- fix and improve dodo
+- comment-out duplicate task
+- update Cravings book links
+- update to calcipy from dash_dev

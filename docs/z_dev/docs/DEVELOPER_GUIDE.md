@@ -44,5 +44,13 @@ poetry config pypi-token.pypi ...
 ## Current Status
 
 <!-- {cts} COVERAGE -->
+| File                   |   Statements |   Missing |   Excluded | Coverage   |
+|------------------------|--------------|-----------|------------|------------|
+| `recipes/__init__.py`  |            2 |         0 |          0 | 100.0%     |
+| `recipes/formatter.py` |          105 |         1 |          0 | 99.0%      |
+| `recipes/scripts.py`   |            4 |         4 |          4 | 0.0%       |
+| `recipes/tasks.py`     |           39 |         7 |          0 | 82.1%      |
+| **Totals**             |          150 |        12 |          4 | 92.0%      |
 
+Generated on: 2023-04-10
 <!-- {cte} -->

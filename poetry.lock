@@ -119,21 +119,21 @@ yaml = ["PyYAML"]
 
 [[package]]
 name = "beartype"
-version = "0.12.0"
+version = "0.13.0"
 description = "Unbearably fast runtime type checking in pure Python."
 category = "main"
 optional = false
 python-versions = ">=3.7.0"
 files = [
-    {file = "beartype-0.12.0-py3-none-any.whl", hash = "sha256:3d9d5bec198bcf965c000d7b5120bebdd19a444ef6e39e97d0e93eb8832e10c8"},
-    {file = "beartype-0.12.0.tar.gz", hash = "sha256:3b7545b3f333a6b07042b68b102141554c9add2e979dab7b0f8ed6378f7af7d7"},
+    {file = "beartype-0.13.0-py3-none-any.whl", hash = "sha256:98fdce5b2819aeab77fbb7c35c9d30733420e368fcc424d85744d00d606b03ca"},
+    {file = "beartype-0.13.0.tar.gz", hash = "sha256:fb9e876c99baf1b972992db172682462a74a95328963d9f13cbb5ee3d68db09c"},
 ]
 
 [package.extras]
 all = ["typing-extensions (>=3.10.0.0)"]
-dev = ["autoapi (>=0.9.0)", "coverage (>=5.5)", "mypy (>=0.800)", "numpy", "pytest (>=4.0.0)", "sphinx", "sphinx (>=4.1.0)", "tox (>=3.20.1)", "typing-extensions"]
-doc-rtd = ["furo (==2022.6.21)", "sphinx (==4.1.0)"]
-test-tox = ["mypy (>=0.800)", "numpy", "pytest (>=4.0.0)", "sphinx", "typing-extensions"]
+dev = ["autoapi (>=0.9.0)", "coverage (>=5.5)", "mypy (>=0.800)", "numpy", "pandera", "pydata-sphinx-theme (<=0.7.2)", "pytest (>=4.0.0)", "sphinx", "sphinx (>=4.2.0,<6.0.0)", "sphinxext-opengraph (>=0.7.5)", "tox (>=3.20.1)", "typing-extensions"]
+doc-rtd = ["autoapi (>=0.9.0)", "pydata-sphinx-theme (<=0.7.2)", "sphinx (>=4.2.0,<6.0.0)", "sphinxext-opengraph (>=0.7.5)"]
+test-tox = ["mypy (>=0.800)", "numpy", "pandera", "pytest (>=4.0.0)", "sphinx", "typing-extensions"]
 test-tox-coverage = ["coverage (>=5.5)"]
 
 [[package]]
@@ -179,14 +179,14 @@ files = [
 
 [[package]]
 name = "calcipy"
-version = "1.2.0"
+version = "1.2.3"
 description = "Python package to simplify development"
 category = "dev"
 optional = false
 python-versions = ">=3.8.12,<4.0.0"
 files = [
-    {file = "calcipy-1.2.0-py3-none-any.whl", hash = "sha256:ea6af2612fca2848ef79cb32cfc6510ec0e83a3639726f6f7dbc179fbd30e0b5"},
-    {file = "calcipy-1.2.0.tar.gz", hash = "sha256:c8b59a1b1fcadd9cc09519cef5110ece0a3bffb2eae175a49d94b111b230d147"},
+    {file = "calcipy-1.2.3-py3-none-any.whl", hash = "sha256:30536aa15253e22569c0023e83918f2d6d1d8354e608f700c75a9e7fabd49f0a"},
+    {file = "calcipy-1.2.3.tar.gz", hash = "sha256:ec5719305115104909df7c6b9d7f189a1e1c3a3305138df8633a81d2488b6fb6"},
 ]
 
 [package.dependencies]
@@ -196,7 +196,7 @@ bandit = {version = ">=1.7.4", optional = true, markers = "extra == \"lint\""}
 beartype = ">=0.12.0"
 bidict = {version = ">=0.22.1", optional = true, markers = "extra == \"stale\""}
 commitizen = {version = ">=2.42.0", optional = true, markers = "extra == \"doc\""}
-corallium = ">=0.1.0"
+corallium = ">=0.1.1"
 invoke = ">=2.0.0"
 mkdocs = {version = ">=1.4.1", optional = true, markers = "extra == \"doc\""}
 mkdocs-build-plantuml-plugin = {version = ">=1.7.4", optional = true, markers = "extra == \"doc\""}
@@ -356,14 +356,14 @@ typing-extensions = ">=4.0.1,<5.0.0"
 
 [[package]]
 name = "corallium"
-version = "0.1.0"
+version = "0.1.1"
 description = "Shared functionality for calcipy-ecosystem"
 category = "main"
 optional = false
 python-versions = ">=3.8.12,<4.0.0"
 files = [
-    {file = "corallium-0.1.0-py3-none-any.whl", hash = "sha256:12d5bcf177f28a6c321a43aa8f5b32ef68057938ab36d6356100c637b4f9cc9e"},
-    {file = "corallium-0.1.0.tar.gz", hash = "sha256:de19791a0f92c3644ed802fb05fae0d8c86d0a2f32bd50f17f739620c17e357b"},
+    {file = "corallium-0.1.1-py3-none-any.whl", hash = "sha256:2d143fa5a96c36155af700e314af5bac50c2e97fd8a95aa3a50def2eb57d1100"},
+    {file = "corallium-0.1.1.tar.gz", hash = "sha256:a66431269c27a2937b59c028cef35cee59c6ab13ec0805253e1201154fa6b7fc"},
 ]
 
 [package.dependencies]
@@ -614,14 +614,14 @@ yaml = ["PyYAML"]
 
 [[package]]
 name = "griffe"
-version = "0.26.0"
+version = "0.27.0"
 description = "Signatures for entire Python programs. Extract the structure, the frame, the skeleton of your project, to generate API documentation or find breaking changes in your API."
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "griffe-0.26.0-py3-none-any.whl", hash = "sha256:38f3f6bbe834501cc199a07b7b7e0e2550aaf19a9d1ee27acf879027e47c9b9e"},
-    {file = "griffe-0.26.0.tar.gz", hash = "sha256:08675ffe8c17139e7769e950dd21f8e98a2e76205cbbd2911d5dec26d2cbf1be"},
+    {file = "griffe-0.27.0-py3-none-any.whl", hash = "sha256:f3a5726e2d5876ac882d48ff9ca1a95c5bc267196a8f114263e66e234141bb84"},
+    {file = "griffe-0.27.0.tar.gz", hash = "sha256:dcf3cc4205f33cbb16095324803a6904e0b293cd1630ceab4b66a9115af6b818"},
 ]
 
 [package.dependencies]
@@ -1619,14 +1619,14 @@ email = ["email-validator (>=1.0.3)"]
 
 [[package]]
 name = "pygments"
-version = "2.14.0"
+version = "2.15.0"
 description = "Pygments is a syntax highlighting package written in Python."
 category = "main"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.7"
 files = [
-    {file = "Pygments-2.14.0-py3-none-any.whl", hash = "sha256:fa7bd7bd2771287c0de303af8bfdfc731f51bd2c6a47ab69d117138893b82717"},
-    {file = "Pygments-2.14.0.tar.gz", hash = "sha256:b3ed06a9e8ac9a9aae5a6f5dbe78a8a58655d17b43b93c078f094ddc476ae297"},
+    {file = "Pygments-2.15.0-py3-none-any.whl", hash = "sha256:77a3299119af881904cd5ecd1ac6a66214b6e9bed1f2db16993b54adede64094"},
+    {file = "Pygments-2.15.0.tar.gz", hash = "sha256:f7e36cffc4c517fbc252861b9a6e4644ca0e5abadf9a113c72d1358ad09b9500"},
 ]
 
 [package.extras]
@@ -1743,25 +1743,24 @@ files = [
 
 [[package]]
 name = "pytest"
-version = "7.2.2"
+version = "7.3.0"
 description = "pytest: simple powerful testing with Python"
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "pytest-7.2.2-py3-none-any.whl", hash = "sha256:130328f552dcfac0b1cec75c12e3f005619dc5f874f0a06e8ff7263f0ee6225e"},
-    {file = "pytest-7.2.2.tar.gz", hash = "sha256:c99ab0c73aceb050f68929bc93af19ab6db0558791c6a0715723abe9d0ade9d4"},
+    {file = "pytest-7.3.0-py3-none-any.whl", hash = "sha256:933051fa1bfbd38a21e73c3960cebdad4cf59483ddba7696c48509727e17f201"},
+    {file = "pytest-7.3.0.tar.gz", hash = "sha256:58ecc27ebf0ea643ebfdf7fb1249335da761a00c9f955bcd922349bcb68ee57d"},
 ]
 
 [package.dependencies]
-attrs = ">=19.2.0"
 colorama = {version = "*", markers = "sys_platform == \"win32\""}
 iniconfig = "*"
 packaging = "*"
 pluggy = ">=0.12,<2.0"
 
 [package.extras]
-testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.7.2)", "requests", "xmlschema"]
+testing = ["argcomplete", "attrs (>=19.2.0)", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.7.2)", "requests", "xmlschema"]
 
 [[package]]
 name = "pytest-cov"
@@ -2547,4 +2546,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11.0"
-content-hash = "3d4c5813f61d14a0ab12cfb25561e7525c0d8de325efb00562e45bc0447c28fc"
+content-hash = "faa4b021b8eafd8b99576f12dcfca50d0542c99effaafa69d6df53e932fa6e36"
