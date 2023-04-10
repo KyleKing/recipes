@@ -70,9 +70,8 @@ repos:
     rev: v0.23.0
     hooks:
       - id: toml-sort-fix
-        args: [--in-place, --all, --trailing-comma-inline-array]
-        # TODO: https://github.com/pappasam/toml-sort/issues/42
-        exclude: poetry\.lock|pyproject\.toml
+        args: [--in-place, --all, --trailing-comma-inline-array, --sort-first=python]
+        exclude: poetry\.lock
   - repo: https://github.com/MarcoGorelli/absolufy-imports
     rev: v0.3.1
     hooks:
@@ -80,7 +79,7 @@ repos:
         args: [--never]
         files: recipes/.*\.py
   - repo: https://github.com/KyleKing/calcipy
-    rev: 1.2.1
+    rev: 1.2.3
     hooks:
       - id: copier-forbidden-files
       - id: lint-fix
