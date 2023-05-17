@@ -8,6 +8,7 @@
 
 ### Fix
 
+- bump minimum pymdown dependency
 - set indent to 4
 - resolve bugs in recipe formatter
 - migrate to mdformat-mkdocs
@@ -49,6 +50,9 @@
 - use spacing consistent with mdformatter
 - Python type annotations from beartype
 - apply mdformat
+
+
+- remove old recipes
 
 ## 2021.0.3.0 (2022-01-04)
 

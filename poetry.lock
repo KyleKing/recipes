@@ -507,18 +507,18 @@ toml = ["tomli"]
 
 [[package]]
 name = "cz-legacy"
-version = "0.1.7"
+version = "1.0.0"
 description = "Extends Conventional Commits Change Types with User-Defined Legacy Types for Commitizen"
 category = "main"
 optional = false
-python-versions = ">=3.6.2,<4.0.0"
+python-versions = ">=3.7,<4.0"
 files = [
-    {file = "cz_legacy-0.1.7-py3-none-any.whl", hash = "sha256:92b9d8adfe4eb64081dac9b344f9af9a314509fa9de85e5bbbfafe186f28eea4"},
-    {file = "cz_legacy-0.1.7.tar.gz", hash = "sha256:4145958f86308d9419baf1417f00551d128c94507ae8533e89c1f4e3c05ad8c0"},
+    {file = "cz_legacy-1.0.0-py3-none-any.whl", hash = "sha256:058462800c5920f58917d39b0bac31011a076447de13fde9b4b69c235cce8566"},
+    {file = "cz_legacy-1.0.0.tar.gz", hash = "sha256:7a381f34419f7612d0b047141ad1bdf6809ed242bcf757ad524cc494954c193d"},
 ]
 
 [package.dependencies]
-commitizen = ">=2.0.0"
+commitizen = ">=3.0.0"
 
 [[package]]
 name = "decli"
@@ -2726,4 +2726,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11.0"
-content-hash = "c6e339b36a41a073b7ed680058200be37b2dfdb7056bcc2835a02410d60e38f3"
+content-hash = "aa1fed0324012b3ef191325fc82ca10f6c722639e7326159995d9af8e968febb"

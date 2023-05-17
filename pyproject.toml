@@ -44,7 +44,7 @@ version = "0.4.0"
 [tool.poetry.dependencies]
 python = "^3.11.0"
 corallium = ">=0.1.0"
-cz-legacy = ">=0.1.7"
+cz-legacy = ">=1.0.0"
 decorator = ">=5.1.1"
 optimize-images = ">=1.5.1"
 pillow = ">=9.2.0"
