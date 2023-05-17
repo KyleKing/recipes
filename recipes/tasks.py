@@ -7,7 +7,7 @@ from calcipy.cli import task
 from calcipy.invoke_helpers import run
 from calcipy.tasks.all_tasks import _MAIN_TASKS, ns, with_progress
 from corallium.log import logger
-from invoke import Context
+from invoke.context import Context
 from PIL import Image
 
 from .formatter import format_recipes as formatter_format_recipes

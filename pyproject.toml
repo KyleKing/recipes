@@ -50,7 +50,7 @@ optimize-images = ">=1.5.1"
 pillow = ">=9.2.0"
 
 [tool.poetry.group.dev.dependencies]
-calcipy = {extras = ["doc", "lint", "nox", "stale", "tags", "test", "types"], version = ">=1.2.3"}
+calcipy = {extras = ["doc", "lint", "nox", "stale", "tags", "test", "types"], version = ">=1.2.4"}
 
 [tool.poetry.scripts]
 recipes = "recipes.scripts:start"
