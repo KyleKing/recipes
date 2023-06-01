@@ -1,5 +1,5 @@
 {
     "test": {
-       "min_cover": 85
+        "min_cover": 85
     }
 }
