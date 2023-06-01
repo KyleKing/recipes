@@ -264,7 +264,7 @@ class _TOCRecipes(BaseModel):  # noqa: H601
             ]
             toc_table = _format_toc_table(records)
             header = [f'# Table of Contents ({_format_titlecase(self.sub_dir.name)})']
-            (self.sub_dir / '__TOC.md').write_text('\n'.join([*header, '', *toc_table] + ['']))
+            (self.sub_dir / '__TOC.md').write_text('\n'.join([*header, '', *toc_table, '']))
 
 
 # =====================================================================================
