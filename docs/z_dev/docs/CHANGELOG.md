@@ -8,6 +8,8 @@
 
 ### Fix
 
+- upgrade with copier
+- update cz-legacy for breaking changes
 - bump minimum pymdown dependency
 - set indent to 4
 - resolve bugs in recipe formatter
@@ -17,6 +19,7 @@
 
 ### Refactor
 
+- run prettier
 - remove duplicate beartype wrapper
 - use patched deploy from calcipy
 - remove the difficult Chicken and Dumpling recipe
