@@ -17,10 +17,10 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Ingredients
 
 - [ ] 1 lb frozen or shelf-stable gnocchi
-- [ ] salt and pepper
 - [ ] 9 oz cooked chicken sausage (about 3 links), 1/4" coins
-- [ ] 1 pint cherry or grape tomatoes, sliced in half lengthwise
+- [ ] 1-2 pints of cherry or grape tomatoes, sliced in half lengthwise
 - [ ] 1-2 oz fresh basil leaves, thinly sliced (1/2-1 cup loosely packed)
+- [ ] Optionally a half bag of spinach and/or pasta sauce
 
 ## Recipe
 
