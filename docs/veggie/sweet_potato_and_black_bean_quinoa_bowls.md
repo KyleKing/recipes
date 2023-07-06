@@ -51,13 +51,12 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Recipe
 
 - Start the quinoa in a rice cooker
-- Roasted Sweet Potato
+- Roast the Sweet Potato:
     - Preheat oven to 425F. Prepare a large baking sheet with a baking mat, foil, or cooking spray
     - Toss the diced sweet potato in the olive oil and spices. Spread out in an even layer on the baking sheet
     - Roast the sweet potato for 12-15 minutes or until it is fork tender
-- Cilantro Cream Drizzle
-    - In a blender add all of the ingredients and blend until smooth.
-- Once the quinoa is done, season with the remaining 1/4 tsp of kosher salt, chili powder, cumin, garlic powder, lime juice, and cilantro
+- For the Cilantro Cream Drizzle, in a blender, add all of the ingredients and blend until smooth
+- Once the quinoa is done, season with the specified spices
 - Assembling the Bowls:
     - In 2 or 3 serving bowls divide the quinoa mixture
     - Top the quinoa with the black beans and roasted sweet potato

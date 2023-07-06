@@ -19,6 +19,7 @@
 
 ### Refactor
 
+- hide the right TOC sidebar
 - run prettier
 - remove duplicate beartype wrapper
 - use patched deploy from calcipy
