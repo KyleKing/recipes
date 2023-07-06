@@ -46,6 +46,7 @@ python = "^3.11.0"
 corallium = ">=0.2.2"
 cz-legacy = ">=1.0.0"
 decorator = ">=5.1.1"
+mkdocs-live-edit-plugin = "^0.1.2"
 optimize-images = ">=1.5.1"
 pillow = ">=9.2.0"
 
