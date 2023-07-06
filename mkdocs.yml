@@ -83,7 +83,7 @@ markdown_extensions:
   - tables
   - toc:
       permalink: ⚓︎
-      toc_depth: 5
+      toc_depth: 0
 
 extra_css:
   - _styles/mkdocstrings.css
