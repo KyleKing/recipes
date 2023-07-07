@@ -53,3 +53,10 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - Also see the alternative [Chocolate Chip Oatmeal Cookies](./chocolate_chip_oatmeal_cookies.md)
     - And [a Peanut Butter version](https://www.verybestbaking.com/recipes/144792/peanut-butter-chocolate-chip-cookies/)
     - Or [chunky chocolate chip peanut butter cookies](https://www.verybestbaking.com/recipes/30364/chunky-chocolate-chip-peanut-butter-cookies/)
+- The secrets to a fluffy cookie:
+    - Aerate when creaming the butter and sugar
+    - Ensure that the leavening agent is not expired
+    - Beat the eggs separately, then evenly incorporate
+    - Over-mixing when adding the dry ingredients can form gluten
+    - Chill the dough for at least an hour or overnight to solidify the fats and minimize spreading when baking
+    - Bake at a slightly higher 375F for a shorter time to have a quick rise that can avoid flat and dense cookies
