@@ -30,7 +30,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
     - [ ] 1/2 tsp freshly ground black pepper
     - [ ] Chopped fresh parsley, for garnish
 - [ ] For the Parm Toasts
-    - [ ] 1 small baguette, cut into ¼-inch thick slices
+    - [ ] 1 small baguette, cut into 1/4-inch thick slices
     - [ ] 1 tbsp olive oil
     - [ ] Kosher salt and freshly ground black pepper to taste
     - [ ] 1/3 cup finely grated Parmigiano Reggiano

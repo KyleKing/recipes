@@ -18,7 +18,7 @@ Personal rating: *Not yet rated*
 
 ### For the rice
 
-- [ ] 1½ cups pho broth (or any type of broth or water if you don’t have pho)
+- [ ] 1.5 cups pho broth (or any type of broth or water if you don’t have pho)
 - [ ] 1 cup long-grain red rice
 - [ ] 1 bay leaf
 - [ ] Salt
@@ -27,7 +27,7 @@ Personal rating: *Not yet rated*
 ### For the vegetables
 
 - [ ] 2 avocados
-- [ ] Juice of ½ lime
+- [ ] Juice of 1/2 lime
 - [ ] Flake salt and pepper to taste
 - [ ] Olive oil
 - [ ] 4 cups assorted vegetables (broccoli, cabbage, bean sprouts, mushrooms, onions)

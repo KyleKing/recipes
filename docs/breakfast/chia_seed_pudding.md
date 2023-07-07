@@ -16,10 +16,10 @@ Personal rating: *Not yet rated*
 
 ## Ingredients
 
-- [ ] ½ cup organic white chia seeds
+- [ ] 1/2 cup organic white chia seeds
 - [ ] One 15.5-ounce can organic light coconut milk
 - [ ] One 15.5-ounce can organic coconut cream
-- [ ] ½ lime, juiced
+- [ ] 1/2 lime, juiced
 - [ ] 1 tablespoon maple syrup
 - [ ] 2 drops vanilla extract
 - [ ] Dash of salt

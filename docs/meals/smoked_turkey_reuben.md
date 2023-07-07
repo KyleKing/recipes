@@ -16,13 +16,13 @@ Personal rating: *Not yet rated*
 
 ## Ingredients
 
-- [ ] ¼ pound Swiss or Emmentaler cheese, thinly sliced
+- [ ] 1/4 pound Swiss or Emmentaler cheese, thinly sliced
 - [ ] 8 slices rye bread with caraway seeds
-- [ ] ¼ cup butter
+- [ ] 1/4 cup butter
 - [ ] 1 cup sauerkraut, squeezed of liquid
 - [ ] 2 pounds smoked turkey, shaved thin
-- [ ] ½ cup Russian dressing:
-    - [ ] ½ cup mayonnaise
+- [ ] 1/2 cup Russian dressing:
+    - [ ] 1/2 cup mayonnaise
     - [ ] 2 tablespoons ketchup
     - [ ] 3 tablespoons finely chopped cornichons or dill pickles
     - [ ] 2 tablespoons chopped tarragon

@@ -21,12 +21,12 @@ Personal rating: *Not yet rated*
 - [ ] 1/4 cup full-fat coconut milk (see Note)
 - [ ] 1 tbsp extra-virgin olive oil
 - [ ] 2/3 cup low-sodium vegetable broth, or more as needed
-- [ ] 1½ tsp Dijon mustard
+- [ ] 1.5 tsp Dijon mustard
 - [ ] 2 tbsp nutritional yeast
 - [ ] 1 garlic clove, quartered
 - [ ] 1/2 tsp onion powder
 - [ ] 1/2 tsp Spanish smoked paprika (pimentón), plus more for garnish
-- [ ] 6 oz (1½ cups) frozen cubed butternut squash
+- [ ] 6 oz (1.5 cups) frozen cubed butternut squash
 - [ ] 2 oz (1/3 cup) roasted, salted cashews
 - [ ] One 4-oz can diced mild green chiles, drained
 - [ ] Ground cumin, for garnish

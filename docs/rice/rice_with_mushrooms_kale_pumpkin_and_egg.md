@@ -36,7 +36,7 @@ Personal rating: *Not yet rated*
 
 ### For the pumpkin
 
-- [ ] ½ Hokkaido pumpkin (or butternut squash)
+- [ ] 1/2 Hokkaido pumpkin (or butternut squash)
 - [ ] 2 tablespoons grapeseed oil
 - [ ] Salt
 - [ ] 1 teaspoon toasted black pepper

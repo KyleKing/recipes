@@ -19,23 +19,23 @@ Personal rating: *Not yet rated*
 ### For the cream cheese
 
 1 cup spicy olives, pitted
-⅔ cup spicy pickled cherry peppers from a jar, stems removed
-⅔ cup capers
+2/3 cup spicy pickled cherry peppers from a jar, stems removed
+2/3 cup capers
 1 pound cream cheese
-⅔ cup crumbled feta
+2/3 cup crumbled feta
 Kosher salt to taste
 
 ### For the sandwich
 
-½ cup butter, room temperature
+1/2 cup butter, room temperature
 8 thick slices white bread
 4 tablespoons Duke’s Mayo
 8 thin slices mortadella
 8 slices provolone cheese
 20 thin slices soppressata
 2 cups arugula
-½ red onion, thinly sliced
-½ cup pickled banana peppers
+1/2 red onion, thinly sliced
+1/2 cup pickled banana peppers
 
 ## Recipe
 
