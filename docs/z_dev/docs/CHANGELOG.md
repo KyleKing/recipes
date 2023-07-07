@@ -2,6 +2,7 @@
 
 ### Feat
 
+- add recipes from Chef's Fridges and Crispy Tofu from WaPo
 - begin converting tasks to Invoke
 - add blackened seasoning
 - migrate to Python 3.11
@@ -19,6 +20,7 @@
 
 ### Refactor
 
+- convert fractions to ascii and remove gremlins
 - hide the right TOC sidebar
 - run prettier
 - remove duplicate beartype wrapper

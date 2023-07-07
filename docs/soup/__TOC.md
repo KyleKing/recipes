@@ -2,6 +2,7 @@
 
 | Link                                                                                                |   Rating | Image                                                                                                                                   |
 |:----------------------------------------------------------------------------------------------------|---------:|:----------------------------------------------------------------------------------------------------------------------------------------|
+| [Cashew Curry Beef With Rice Noodles](./cashew_curry_beef_with_rice_noodles.md)                     |        7 | <!-- TODO: Capture image -->                                                                                                            |
 | [Chicken Noodle Soup](./chicken_noodle_soup.md)                                                     |        5 | <!-- TODO: Capture image -->                                                                                                            |
 | [Chili Con Carne](./chili_con_carne.md)                                                             |        7 | ![chili_con_carne.jpeg](./chili_con_carne.jpeg){: .image-toc loading=lazy }                                                             |
 | [Creamy Tomato Soup](./creamy_tomato_soup.md)                                                       |        3 | ![creamy_tomato_soup.jpeg](./creamy_tomato_soup.jpeg){: .image-toc loading=lazy }                                                       |
