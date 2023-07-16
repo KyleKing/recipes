@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Broccoli Cheddar Chicken And Rice Casserole
 
 > Based on [https://www.halfbakedharvest.com/broccoli-cheddar-chicken-and-rice-casserole/#bo-recipe](https://www.halfbakedharvest.com/broccoli-cheddar-chicken-and-rice-casserole/#bo-recipe)
@@ -50,3 +48,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Notes
 
 - To Make Ahead: Prepare the casserole and refrigerate. Let warm while pre-heating the oven and bake for 15-20 minutes as recommended
+- Related to the [One-Pot Orzo with Sausage, Spinach, and Corn](./one_pot_orzo_with_sausage_spinach_and_corn.md)
