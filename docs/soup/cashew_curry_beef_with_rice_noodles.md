@@ -24,8 +24,8 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 2 1/2 cups reduced-sodium beef broth
 - [ ] 4 small red potatoes, scrubbed and quartered
 - [ ] 1 (13.5 oz) can lite unsweetened coconut milk
-- [ ] 1 (10 oz) bag Nature's Promise® Organic Green Beans
-- [ ] 1/2 (16 oz) box thin rice noodles
+- [ ] 1 (10 oz) bag Nature's Promise Organic Green Beans
+- [ ] 4 oz thin rice noodles (note: typically sold in 8 or 16 oz containers)
 - [ ] 1/3 cup cashews
 - [ ] 1/2 chopped cilantro
 

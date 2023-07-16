@@ -1,6 +1,6 @@
 # Dragon Noodles
 
-> Found this somewhere, but lost the source!
+> I can't re-locate where I initially found this recipe
 
 <!-- {cts} rating=1; (User can specify rating on scale of 1-5) -->
 
