@@ -3,6 +3,7 @@
 | Link                                                                          |   Rating | Image                                                                                                             |
 |:------------------------------------------------------------------------------|---------:|:------------------------------------------------------------------------------------------------------------------|
 | [Chicken Cacciatore](./chicken_cacciatore.md)                                 |        8 | ![chicken_cacciatore.jpg](./chicken_cacciatore.jpg){: .image-toc loading=lazy }                                   |
+| [Chicken Salad Sandwich](./chicken_salad_sandwich.md)                         |        3 | <!-- TODO: Capture image -->                                                                                      |
 | [Chicken Shawarma](./chicken_shawarma.md)                                     |        3 | <!-- TODO: Capture image -->                                                                                      |
 | [Chicken Tacos](./chicken_tacos.md)                                           |        7 | ![chicken_tacos.jpg](./chicken_tacos.jpg){: .image-toc loading=lazy }                                             |
 | [Enchiladas](./enchiladas.md)                                                 |        8 | ![enchiladas.jpg](./enchiladas.jpg){: .image-toc loading=lazy }                                                   |
