@@ -42,7 +42,7 @@ repository = "https://github.com/kyleking/recipes"
 version = "0.4.0"
 
 [tool.poetry.dependencies]
-python = "^3.11.0"
+python = "^3.11.2"
 corallium = ">=0.2.2"
 cz-legacy = ">=1.0.0"
 decorator = ">=5.1.1"

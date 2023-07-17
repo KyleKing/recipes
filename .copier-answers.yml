@@ -13,7 +13,7 @@ development_branch: main
 doc_dir: docs/z_dev
 extends_calcipy: true
 install_extras: ''
-minimum_python: 3.11.0
+minimum_python: 3.11.2
 minimum_python_short: '3.11'
 package_name_py: recipes
 project_description: Recipe Website
