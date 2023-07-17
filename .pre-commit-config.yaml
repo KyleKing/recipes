@@ -97,3 +97,11 @@ repos:
       - id: lint-fix
       - id: flake8
       - id: tags
+  - repo: local
+    hooks:
+      - id: format-recipes
+        name: format recipes
+        language: system
+        entry: ./run format-recipes
+        files: docs/.+.md
+        pass_filenames: false
