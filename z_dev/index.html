@@ -21,7 +21,7 @@
         <link rel="next" href="docs/Advanced_Documentation/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
@@ -1303,20 +1303,6 @@
     <li class="md-nav__item">
       <a href="../meals/lasagna/" class="md-nav__link">
         Lasagna
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../meals/muffuletta_sandwich/" class="md-nav__link">
-        Muffuletta Sandwich
       </a>
     </li>
   
@@ -3535,23 +3521,16 @@
 
 
 <h1 id="recipes">recipes<a class="headerlink" href="#recipes" title="Permanent link">⚓︎</a></h1>
-<p><a href="https://squidfunk.github.io/mkdocs-material/">mkdocs-material</a>-based personal recipes website (<a href="https://recipes.kyleking.me">https://recipes.kyleking.me</a>)</p>
+<p>Recipe Website</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">⚓︎</a></h2>
-<ol>
-<li>Clone the repository (<code>gh repo clon KyleKing/recipes</code>)</li>
-<li>Run <code>poetry install</code></li>
-</ol>
+<p>Install local dependencies, then see the local tasks available</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>poetry<span class="w"> </span>install
+<span class="linenos" data-linenos="2 "></span>./run<span class="w"> </span>--help
+</code></pre></div>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">⚓︎</a></h2>
-<p>Locally, these are typical tasks for editing, previewing, and publishing the recipes</p>
-<ol>
-<li>Create or edit markdown files in <a href="https://github.com/KyleKing/recipes/tree/main/docs"><code>./docs/\*/\*.md</code></a>. For new recipes, use the <a href="https://github.com/KyleKing/recipes/blob/main/_recipe_template.md"><code>./_recipe_template.md</code></a></li>
-<li>Run <code>poetry run doit</code> to run all local tasks</li>
-<li>Run <code>poetry run doit run format_recipes</code> to update the auto-formatted rating and image sections for the recipes</li>
-<li>Run <code>poetry run doit run compress ./docs/path/</code> to reduce image file sizes. Can either be a directory or an individual file</li>
-<li>Run <code>poetry run doit run open_docs</code> to preview the recipes website in a browser</li>
-<li>Run <code>poetry run doit run main deploy_docs</code> to deploy to <code>gh-pages</code></li>
-</ol>
-<p>For more example code, see the <a href="https://github.com/kyleking/recipes/blob/main/scripts">scripts</a> directory or the <a href="https://github.com/kyleking/recipes/blob/main/tests">tests</a>.</p>
+<p>Format the TOC and formatted sections then run locally</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>./run<span class="w"> </span>format-recipes<span class="w"> </span>doc.watch
+</code></pre></div>
 <h2 id="project-status">Project Status<a class="headerlink" href="#project-status" title="Permanent link">⚓︎</a></h2>
 <p>See the <code>Open Issues</code> and/or the <a href="https://recipes.kyleking.me/docs/CODE_TAG_SUMMARY">CODE_TAG_SUMMARY</a>. For release history, see the <a href="https://recipes.kyleking.me/docs/CHANGELOG">CHANGELOG</a>.</p>
 <h2 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permanent link">⚓︎</a></h2>
@@ -3574,7 +3553,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 5, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 17, 2023</span>
       
         <br>
         Created:
@@ -3620,14 +3599,18 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["toc.autohide"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["toc.autohide"], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+        
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+        
       
-        <script src="../_javascript/tables.js"></script>
+        
+          <script src="../_javascript/tables.js"></script>
+        
       
     
   </body>

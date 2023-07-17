@@ -21,7 +21,7 @@
         <link rel="next" href="../../../rice/__TOC/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
@@ -1303,20 +1303,6 @@
     <li class="md-nav__item">
       <a href="../../../meals/lasagna/" class="md-nav__link">
         Lasagna
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../meals/muffuletta_sandwich/" class="md-nav__link">
-        Muffuletta Sandwich
       </a>
     </li>
   
@@ -3566,12 +3552,13 @@
 
 <h2 id="recipes.tasks-functions">Functions<a href="#recipes.tasks-functions" class="headerlink" title="Permanent link">⚓︎</a></h2>
 
+
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="recipes.tasks.compress" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">compress</span>
+          <span class="doc doc-object-name doc-function-name">compress</span>
 
 
 <a href="#recipes.tasks.compress" class="headerlink" title="Permanent link">⚓︎</a></h3>
@@ -3582,25 +3569,26 @@
   
       <p>Compress one or more specific images.</p>
 
-      <details class="quote">
-        <summary>Source code in <code>recipes/tasks.py</code></summary>
-        <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="51 "></span><span class="nd">@task</span><span class="p">()</span>  <span class="c1"># type: ignore[misc]</span>
+          <details class="quote">
+            <summary>Source code in <code>recipes/tasks.py</code></summary>
+            <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="51 "></span><span class="nd">@task</span><span class="p">()</span>  <span class="c1"># type: ignore[misc]</span>
 <span class="linenos" data-linenos="52 "></span><span class="k">def</span> <span class="nf">compress</span><span class="p">(</span><span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="linenos" data-linenos="53 "></span><span class="w">    </span><span class="sd">&quot;&quot;&quot;Compress one or more specific images.&quot;&quot;&quot;</span>
 <span class="linenos" data-linenos="54 "></span>    <span class="k">for</span> <span class="n">file_arg</span> <span class="ow">in</span> <span class="n">ctx</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">gto</span><span class="o">.</span><span class="n">file_args</span><span class="p">:</span>
 <span class="linenos" data-linenos="55 "></span>        <span class="n">run</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">_OPTIMIZE_CMD</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">file_arg</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 </code></pre></div>
-      </details>
+          </details>
   </div>
 
 </div>
+
 
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="recipes.tasks.compress_all" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">compress_all</span>
+          <span class="doc doc-object-name doc-function-name">compress_all</span>
 
 
 <a href="#recipes.tasks.compress_all" class="headerlink" title="Permanent link">⚓︎</a></h3>
@@ -3611,26 +3599,27 @@
   
       <p>Compress images.</p>
 
-      <details class="quote">
-        <summary>Source code in <code>recipes/tasks.py</code></summary>
-        <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="43 "></span><span class="nd">@task</span><span class="p">(</span>  <span class="c1"># type: ignore[misc]</span>
+          <details class="quote">
+            <summary>Source code in <code>recipes/tasks.py</code></summary>
+            <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="43 "></span><span class="nd">@task</span><span class="p">(</span>  <span class="c1"># type: ignore[misc]</span>
 <span class="linenos" data-linenos="44 "></span>    <span class="n">pre</span><span class="o">=</span><span class="p">[</span><span class="n">convert_png_to_jpg</span><span class="p">],</span>
 <span class="linenos" data-linenos="45 "></span><span class="p">)</span>
 <span class="linenos" data-linenos="46 "></span><span class="k">def</span> <span class="nf">compress_all</span><span class="p">(</span><span class="n">ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="linenos" data-linenos="47 "></span><span class="w">    </span><span class="sd">&quot;&quot;&quot;Compress images.&quot;&quot;&quot;</span>
 <span class="linenos" data-linenos="48 "></span>    <span class="n">run</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">_OPTIMIZE_CMD</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">get_recipes_doc_dir</span><span class="p">()</span><span class="si">}</span><span class="s1">/&#39;</span><span class="p">)</span>
 </code></pre></div>
-      </details>
+          </details>
   </div>
 
 </div>
+
 
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="recipes.tasks.convert_png_to_jpg" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">convert_png_to_jpg</span>
+          <span class="doc doc-object-name doc-function-name">convert_png_to_jpg</span>
 
 
 <a href="#recipes.tasks.convert_png_to_jpg" class="headerlink" title="Permanent link">⚓︎</a></h3>
@@ -3641,24 +3630,25 @@
   
       <p>Convert PNG images to JPG.</p>
 
-      <details class="quote">
-        <summary>Source code in <code>recipes/tasks.py</code></summary>
-        <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="37 "></span><span class="nd">@task</span><span class="p">()</span>  <span class="c1"># type: ignore[misc]</span>
+          <details class="quote">
+            <summary>Source code in <code>recipes/tasks.py</code></summary>
+            <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="37 "></span><span class="nd">@task</span><span class="p">()</span>  <span class="c1"># type: ignore[misc]</span>
 <span class="linenos" data-linenos="38 "></span><span class="k">def</span> <span class="nf">convert_png_to_jpg</span><span class="p">(</span><span class="n">_ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="linenos" data-linenos="39 "></span><span class="w">    </span><span class="sd">&quot;&quot;&quot;Convert PNG images to JPG.&quot;&quot;&quot;</span>
 <span class="linenos" data-linenos="40 "></span>    <span class="n">_convert_png_to_jpg</span><span class="p">(</span><span class="n">dir_md</span><span class="o">=</span><span class="n">get_recipes_doc_dir</span><span class="p">())</span>
 </code></pre></div>
-      </details>
+          </details>
   </div>
 
 </div>
+
 
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="recipes.tasks.format_recipes" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">format_recipes</span>
+          <span class="doc doc-object-name doc-function-name">format_recipes</span>
 
 
 <a href="#recipes.tasks.format_recipes" class="headerlink" title="Permanent link">⚓︎</a></h3>
@@ -3669,24 +3659,25 @@
   
       <p>Format recipes.</p>
 
-      <details class="quote">
-        <summary>Source code in <code>recipes/tasks.py</code></summary>
-        <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="17 "></span><span class="nd">@task</span><span class="p">()</span>  <span class="c1"># type: ignore[misc]</span>
+          <details class="quote">
+            <summary>Source code in <code>recipes/tasks.py</code></summary>
+            <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="17 "></span><span class="nd">@task</span><span class="p">()</span>  <span class="c1"># type: ignore[misc]</span>
 <span class="linenos" data-linenos="18 "></span><span class="k">def</span> <span class="nf">format_recipes</span><span class="p">(</span><span class="n">_ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="linenos" data-linenos="19 "></span><span class="w">    </span><span class="sd">&quot;&quot;&quot;Format recipes.&quot;&quot;&quot;</span>
 <span class="linenos" data-linenos="20 "></span>    <span class="n">formatter_format_recipes</span><span class="p">()</span>
 </code></pre></div>
-      </details>
+          </details>
   </div>
 
 </div>
+
 
 <div class="doc doc-object doc-function">
 
 
 
 <h3 id="recipes.tasks.main" class="doc doc-heading">
-        <span class="doc doc-object-name doc-function-name">main</span>
+          <span class="doc doc-object-name doc-function-name">main</span>
 
 
 <a href="#recipes.tasks.main" class="headerlink" title="Permanent link">⚓︎</a></h3>
@@ -3697,13 +3688,13 @@
   
       <p>Override the main task pipeline.</p>
 
-      <details class="quote">
-        <summary>Source code in <code>recipes/tasks.py</code></summary>
-        <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="64 "></span><span class="nd">@task</span><span class="p">(</span><span class="n">post</span><span class="o">=</span><span class="n">with_progress</span><span class="p">([</span><span class="n">format_recipes</span><span class="p">,</span> <span class="o">*</span><span class="n">_MAIN_TASKS</span><span class="p">]))</span>  <span class="c1"># type: ignore[misc]</span>
+          <details class="quote">
+            <summary>Source code in <code>recipes/tasks.py</code></summary>
+            <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="64 "></span><span class="nd">@task</span><span class="p">(</span><span class="n">post</span><span class="o">=</span><span class="n">with_progress</span><span class="p">([</span><span class="n">format_recipes</span><span class="p">,</span> <span class="o">*</span><span class="n">_MAIN_TASKS</span><span class="p">]))</span>  <span class="c1"># type: ignore[misc]</span>
 <span class="linenos" data-linenos="65 "></span><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">_ctx</span><span class="p">:</span> <span class="n">Context</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="linenos" data-linenos="66 "></span><span class="w">    </span><span class="sd">&quot;&quot;&quot;Override the main task pipeline.&quot;&quot;&quot;</span>
 </code></pre></div>
-      </details>
+          </details>
   </div>
 
 </div>
@@ -3721,11 +3712,11 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 17, 2023</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 16, 2023</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 17, 2023</span>
       
     
   </small>
@@ -3767,14 +3758,18 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["toc.autohide"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["toc.autohide"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+        
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js"></script>
+        
       
-        <script src="../../../_javascript/tables.js"></script>
+        
+          <script src="../../../_javascript/tables.js"></script>
+        
       
     
   </body>
