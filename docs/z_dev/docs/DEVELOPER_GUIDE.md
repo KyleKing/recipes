@@ -48,9 +48,9 @@ poetry config pypi-token.pypi ...
 |------------------------|--------------|-----------|------------|------------|
 | `recipes/__init__.py`  |            2 |         0 |          0 | 100.0%     |
 | `recipes/formatter.py` |          105 |         1 |          0 | 98.7%      |
-| `recipes/scripts.py`   |            4 |         4 |          4 | 0.0%       |
+| `recipes/scripts.py`   |            7 |         7 |          0 | 0.0%       |
 | `recipes/tasks.py`     |           39 |         7 |          0 | 80.7%      |
-| **Totals**             |          150 |        12 |          4 | 92.0%      |
+| **Totals**             |          153 |        15 |          0 | 89.9%      |
 
-Generated on: 2023-07-06
+Generated on: 2023-07-16
 <!-- {cte} -->

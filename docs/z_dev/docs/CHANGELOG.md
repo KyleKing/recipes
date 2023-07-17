@@ -20,6 +20,8 @@
 
 ### Refactor
 
+- run copier update
+- remove the mufuletta sanwich
 - convert fractions to ascii and remove gremlins
 - hide the right TOC sidebar
 - run prettier

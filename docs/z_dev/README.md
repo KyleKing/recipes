@@ -1,24 +1,23 @@
 # recipes
 
-[mkdocs-material](https://squidfunk.github.io/mkdocs-material/)-based personal recipes website ([https://recipes.kyleking.me](https://recipes.kyleking.me))
+Recipe Website
 
 ## Installation
 
-1. Clone the repository (`gh repo clon KyleKing/recipes`)
-1. Run `poetry install`
+Install local dependencies, then see the local tasks available
+
+```sh
+poetry install
+./run --help
+```
 
 ## Usage
 
-Locally, these are typical tasks for editing, previewing, and publishing the recipes
+Format the TOC and formatted sections then run locally
 
-1. Create or edit markdown files in [`./docs/\*/\*.md`](https://github.com/KyleKing/recipes/tree/main/docs). For new recipes, use the [`./_recipe_template.md`](https://github.com/KyleKing/recipes/blob/main/_recipe_template.md)
-1. Run `poetry run doit` to run all local tasks
-1. Run `poetry run doit run format_recipes` to update the auto-formatted rating and image sections for the recipes
-1. Run `poetry run doit run compress ./docs/path/` to reduce image file sizes. Can either be a directory or an individual file
-1. Run `poetry run doit run open_docs` to preview the recipes website in a browser
-1. Run `poetry run doit run main deploy_docs` to deploy to `gh-pages`
-
-For more example code, see the [scripts] directory or the [tests].
+```sh
+./run format-recipes doc.watch
+```
 
 ## Project Status
 
