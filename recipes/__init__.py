@@ -1,6 +1,5 @@
 """recipes."""
 
-from contextlib import suppress
 from enum import Enum
 from os import getenv
 
@@ -35,20 +34,18 @@ class _BeartypeModes(Enum):
 def configure_beartype() -> None:
     """Optionally configure beartype globally."""
     beartype_mode = _BeartypeModes.from_environment()
-    is_stdout = True
 
     if beartype_mode != _BeartypeModes.OFF:
-        conf = {}
-        if beartype_mode == _BeartypeModes.ERROR:
-            conf['warning_cls_on_decorator_exception'] = None
+        # PLANNED: Appease mypy and pyright, but this is a private import
+        from beartype.roar._roarwarn import _BeartypeConfReduceDecoratorExceptionToWarningDefault
+        beartype_warning_default = _BeartypeConfReduceDecoratorExceptionToWarningDefault
 
-        with suppress(ImportError):
-            from beartype._util.os.utilostty import is_stdout_terminal
-            is_stdout = is_stdout_terminal()
-        if getenv('BEARTYPE_NO_COLOR') or not is_stdout:
-            conf['is_color'] = False
-
-        beartype_this_package(conf=BeartypeConf(**conf))
+        beartype_this_package(conf=BeartypeConf(
+            warning_cls_on_decorator_exception=(
+                None if beartype_mode == _BeartypeModes.ERROR else beartype_warning_default
+            ),
+            is_color=getenv('BEARTYPE_NO_COLOR') is not None),
+        )
 
 
 configure_beartype()
