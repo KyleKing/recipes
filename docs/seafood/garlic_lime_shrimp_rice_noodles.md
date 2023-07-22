@@ -2,15 +2,15 @@
 
 > Based on [https://www.theflavorbender.com/garlic-lime-shrimp-rice-noodles/#recipe](https://www.theflavorbender.com/garlic-lime-shrimp-rice-noodles/#recipe)
 
-<!-- {cts} rating=0; (User can specify rating on scale of 1-5) -->
+<!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
 
-Personal rating: *Not yet rated*
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
 <!-- {cte} -->
 
-<!-- {cts} name_image=None; (User can specify image name) -->
+<!-- {cts} name_image=garlic_lime_shrimp_rice_noodles.jpeg; (User can specify image name) -->
 
-<!-- TODO: Capture image -->
+![garlic_lime_shrimp_rice_noodles.jpeg](./garlic_lime_shrimp_rice_noodles.jpeg){: .image-recipe loading=lazy }
 
 <!-- {cte} -->
 
@@ -24,13 +24,13 @@ Personal rating: *Not yet rated*
 
 ### Garlic Lime Sauce (Nuoc Cham Sauce)
 
-- [ ] 4 garlic cloves
-- [ ] 3 tbsp lime juice
-- [ ] 3 tbsp brown sugar
-- [ ] 1/4 cup water
-- [ ] 1 tbsp fish sauce
-- [ ] 2 tsp cornstarch and 1 tbsp water
-- [ ] 2-3 Thai red chili peppers, sliced deseeded OR 1 tsp sambal oelek
+- [ ] 8 garlic cloves
+- [ ] 6 tbsp lime juice
+- [ ] 5 tbsp brown sugar
+- [ ] 2/3 cup water
+- [ ] 2 tbsp fish sauce
+- [ ] 4 tsp cornstarch and 2 *tbsp* water
+- [ ] 2-3 Thai red chili peppers, sliced deseeded OR 1 tsp sambal oelek OR see below
 
 ### Noodle Salad
 
@@ -60,3 +60,4 @@ Personal rating: *Not yet rated*
 ## Notes
 
 - If you can't find Thai Chiles, you can substitute them with Serrano peppers or *diced* jalapenos along with a tsp of Red Pepper Flakes, Cayenne, or Hot Paprika to restore some of the heat
+- Note: I tripled the sauce, but I would recommend just turning these into spring rolls instead
