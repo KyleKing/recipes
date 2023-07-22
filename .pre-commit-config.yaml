@@ -92,7 +92,7 @@ repos:
         args: [--never]
         files: recipes/.*\.py
   - repo: https://github.com/KyleKing/calcipy
-    rev: 1.4.1
+    rev: 1.5.0
     hooks:
       - id: copier-forbidden-files
       - id: lint-fix
