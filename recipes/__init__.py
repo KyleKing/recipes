@@ -32,20 +32,25 @@ class _BeartypeModes(Enum):
             ) from None
 
 
-BEARTYPE_MODE = _BeartypeModes.from_environment()
-IS_STDOUT = True
+def configure_beartype() -> None:
+    """Optionally configure beartype globally."""
+    beartype_mode = _BeartypeModes.from_environment()
+    is_stdout = True
 
-if BEARTYPE_MODE != _BeartypeModes.OFF:
-    conf = {}
-    if BEARTYPE_MODE == _BeartypeModes.ERROR:
-        conf['warning_cls_on_decorator_exception'] = None
+    if beartype_mode != _BeartypeModes.OFF:
+        conf = {}
+        if beartype_mode == _BeartypeModes.ERROR:
+            conf['warning_cls_on_decorator_exception'] = None
 
-    with suppress(ImportError):
-        from beartype._util.os.utilostty import is_stdout_terminal
-        IS_STDOUT = is_stdout_terminal()
-    if getenv('BEARTYPE_NO_COLOR') or not IS_STDOUT:
-        conf['is_color'] = False
+        with suppress(ImportError):
+            from beartype._util.os.utilostty import is_stdout_terminal
+            is_stdout = is_stdout_terminal()
+        if getenv('BEARTYPE_NO_COLOR') or not is_stdout:
+            conf['is_color'] = False
 
-    beartype_this_package(conf=BeartypeConf(**conf))
+        beartype_this_package(conf=BeartypeConf(**conf))
+
+
+configure_beartype()
 
 # ====== Above is the recommended code from calcipy_template and may be updated on new releases ======
