@@ -17,6 +17,7 @@ ignore = [
   'FIX002', # Line contains TODO
   'FIX004', # Line contains HACK
   'N999', # Invalid module name: '_noxfile'
+  'RUF013', # PEP 484 prohibits implicit `Optional`
   'RUF100', # Unused noqa directive (remove once flake8 is fully replaced)
   'TCH001', # Move application import `{}` into a type-checking block
   'TCH002', # Move third-party import `{}` into a type-checking block

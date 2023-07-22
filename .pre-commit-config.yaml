@@ -41,7 +41,7 @@ repos:
         args: [--fix=auto]
       - id: trailing-whitespace
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: 3.4.0
+    rev: 3.5.3
     hooks:
       - id: commitizen
         additional_dependencies: ["cz-legacy"]
@@ -59,19 +59,20 @@ repos:
       - id: shellcheck
         args: [--severity=warning]
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: "v3.0.0-alpha.9-for-vscode"
+    rev: "v3.0.0"
     hooks:
       - id: prettier
         additional_dependencies:
           # Note: this version must be the same as the hook revision
-          - "prettier@3.0.0-alpha.9-for-vscode"
+          - "prettier@3.0.0"
           - "prettier-plugin-sh"
-        exclude: \.copier-answers\.yml|.*/cassettes/.*\.yaml|tests/.*assert-cache.*/.+\.json
+        exclude: \.copier-answers\.yml|tests/.*/cassettes/.*\.yaml|tests/.*assert-cache.*/.+\.json
         types_or: [html, javascript, json, shell, yaml]
   - repo: https://github.com/adrienverge/yamllint.git
     rev: v1.32.0
     hooks:
       - id: yamllint
+        exclude: tests/.*/cassettes/.*\.yaml
   - repo: https://github.com/pappasam/toml-sort
     rev: v0.23.1
     hooks:
@@ -91,7 +92,7 @@ repos:
         args: [--never]
         files: recipes/.*\.py
   - repo: https://github.com/KyleKing/calcipy
-    rev: 1.3.0
+    rev: 1.4.1
     hooks:
       - id: copier-forbidden-files
       - id: lint-fix

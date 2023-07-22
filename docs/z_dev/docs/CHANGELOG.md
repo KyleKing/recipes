@@ -2,6 +2,7 @@
 
 ### Feat
 
+- experiment with beartype_this_package
 - add recipes from Chef's Fridges and Crispy Tofu from WaPo
 - begin converting tasks to Invoke
 - add blackened seasoning
@@ -9,6 +10,7 @@
 
 ### Fix
 
+- use the new ignore_patterns configuration
 - upgrade with copier
 - update cz-legacy for breaking changes
 - bump minimum pymdown dependency
@@ -20,6 +22,7 @@
 
 ### Refactor
 
+- use a function for the global beartype
 - remove redundant 3.11 python constraint
 - run copier update
 - remove the mufuletta sanwich
