@@ -20,6 +20,7 @@
 
 ### Refactor
 
+- remove redundant 3.11 python constraint
 - run copier update
 - remove the mufuletta sanwich
 - convert fractions to ascii and remove gremlins
