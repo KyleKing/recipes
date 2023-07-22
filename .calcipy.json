@@ -1,4 +1,7 @@
 {
+    "tags": {
+        "ignore_patterns": "docs/*/__TOC.md"
+    },
     "test": {
         "min_cover": 85
     }
