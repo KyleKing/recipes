@@ -2,6 +2,7 @@
 
 ### Feat
 
+- add the Creamy Orzo Skillet
 - experiment with beartype_this_package
 - add recipes from Chef's Fridges and Crispy Tofu from WaPo
 - begin converting tasks to Invoke
@@ -22,6 +23,8 @@
 
 ### Refactor
 
+- another round of recipe cleanup
+- resolve next batch of manual review comments
 - use a function for the global beartype
 - remove redundant 3.11 python constraint
 - run copier update

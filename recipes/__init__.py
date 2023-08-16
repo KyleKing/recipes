@@ -1,53 +1,55 @@
 """recipes."""
 
+from datetime import UTC, datetime, timezone
 from enum import Enum
 from os import getenv
+from warnings import filterwarnings
 
 from beartype import BeartypeConf
 from beartype.claw import beartype_this_package
-from beartype.typing import Self
+from beartype.roar import BeartypeDecorHintPep585DeprecationWarning
+from typing_extensions import Self  # noqa: UP035
 
 __version__ = '0.4.0'
 __pkg_name__ = 'recipes'
 
 
-class _BeartypeModes(Enum):
-    """Supported global beartype modes."""
+class _RuntimeTypeCheckingModes(Enum):
+    """Supported global runtime type checking modes."""
 
     ERROR = 'ERROR'
     WARNING = 'WARNING'
     OFF = None
 
     @classmethod
-    def from_environment(cls) -> Self:
+    def from_environment(cls) -> Self:  # pragma: no cover
         """Return the configured mode."""
-        beartype_mode = getenv('BEARTYPE_MODE') or None
+        rtc_mode = getenv('RUNTIME_TYPE_CHECKING_MODE') or None
         try:
-            return cls(beartype_mode)
+            return cls(rtc_mode)
         except ValueError:
-            msg = f"'BEARTYPE_MODE={beartype_mode}' is not an allowed mode from {[_e.value for _e in cls]}"
-            raise ValueError(
-                msg,
-            ) from None
+            modes = [_e.value for _e in cls]
+            msg = f"'RUNTIME_TYPE_CHECKING_MODE={rtc_mode}' is not an allowed mode from {modes}"
+            raise ValueError(msg) from None
 
 
-def configure_beartype() -> None:
-    """Optionally configure beartype globally."""
-    beartype_mode = _BeartypeModes.from_environment()
+def configure_runtime_type_checking_mode() -> None:  # pragma: no cover
+    """Optionally configure runtime type checking mode globally."""
+    rtc_mode = _RuntimeTypeCheckingModes.from_environment()
 
-    if beartype_mode != _BeartypeModes.OFF:
-        # PLANNED: Appease mypy and pyright, but this is a private import
-        from beartype.roar._roarwarn import _BeartypeConfReduceDecoratorExceptionToWarningDefault
-        beartype_warning_default = _BeartypeConfReduceDecoratorExceptionToWarningDefault
+    if rtc_mode is not _RuntimeTypeCheckingModes.OFF:
+        from beartype.roar import BeartypeClawDecorWarning
 
         beartype_this_package(conf=BeartypeConf(
             warning_cls_on_decorator_exception=(
-                None if beartype_mode == _BeartypeModes.ERROR else beartype_warning_default
+                None if rtc_mode is _RuntimeTypeCheckingModes.ERROR else BeartypeClawDecorWarning
             ),
-            is_color=getenv('BEARTYPE_NO_COLOR') is not None),
-        )
+        ))
 
 
-configure_beartype()
+_PEP585_DATE = 2025
+if datetime.now(tz=UTC).year <= _PEP585_DATE:  # pragma: no cover
+    filterwarnings('ignore', category=BeartypeDecorHintPep585DeprecationWarning)
+configure_runtime_type_checking_mode()
 
 # ====== Above is the recommended code from calcipy_template and may be updated on new releases ======
