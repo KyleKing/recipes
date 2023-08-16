@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Quesadillas
 
 <!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
@@ -20,7 +18,3 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] Shredded Cheese
 - [ ] Beans, Diced Tomatoes, etc.
 - [ ] Hot Sauce
-
-## Recipe
-
-- Heat : Pan : Tortilla : Filling : Tortilla

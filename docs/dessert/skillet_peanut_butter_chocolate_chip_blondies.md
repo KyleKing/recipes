@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Skillet Peanut Butter Chocolate Chip Blondies
 
 > Based on [Chrissy Teigen Cravings], pg. 243

@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Tomato Mozzarella Caprese
 
 <!-- {cts} rating=1; (User can specify rating on scale of 1-5) -->

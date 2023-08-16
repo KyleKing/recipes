@@ -1,8 +1,6 @@
-<!-- Needs Manual Review -->
-
 # Microwave Cacio E Pepe
 
-> Based on [https://www.amazon.com/Vegetables-Unleashed-Cookbook-Jose-Andres/dp/0062668382/](https://www.amazon.com/Vegetables-Unleashed-Cookbook-Jose-Andres/dp/0062668382/)
+> Based on [Vegetables Unleashed Jose Andreas](https://www.amazon.com/Vegetables-Unleashed-Cookbook-Jose-Andres/dp/0062668382), pg. 102
 
 <!-- {cts} rating=3; (User can specify rating on scale of 1-5) -->
 
@@ -36,5 +34,5 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Notes
 
-- Vegetables Unleashed Jose Andreas, pg. 102
-- Note recipe is doubled. Can also be made by boiling pasta and adding the ingredients after
+- The recipe is doubled
+- Can also be made by boiling pasta and adding the ingredients after

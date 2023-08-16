@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Lasagna
 
 > Based on [https://www.delish.com/cooking/recipe-ideas/recipes/a51337/classic-lasagna-recipe/](https://www.delish.com/cooking/recipe-ideas/recipes/a51337/classic-lasagna-recipe/)

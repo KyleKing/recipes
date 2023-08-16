@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Pina Colada
 
 > Based on [https://www.washingtonpost.com/recipes/pina-colada/10696/](https://www.washingtonpost.com/recipes/pina-colada/10696/) and [https://www.thecocktaildb.com/drink.php?c=17207](https://www.thecocktaildb.com/drink.php?c=17207)

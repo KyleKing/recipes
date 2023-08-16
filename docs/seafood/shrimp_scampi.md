@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Shrimp Scampi
 
 > Based on [https://cooking.nytimes.com/recipes/9101-classic-shrimp-scampi](https://cooking.nytimes.com/recipes/9101-classic-shrimp-scampi)
@@ -41,6 +39,5 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Notes
 
-- \*Save some of the starchy pasta water to help thicken up the sauce when combining
+- Save some of the starchy pasta water to help thicken up the sauce when combining
 - Seasonings were slightly increase to taste. Could also be served with bread, but the ratios may need to be adjusted
-- Btw, Scampi are a small lobster common in the North Atlantic/Mediterranean, but Shrimp is commonly substituted, especially in the US

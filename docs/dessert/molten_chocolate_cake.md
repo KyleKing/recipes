@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Molten Chocolate Cake
 
 > Based on [http://spoonuniversity.com/recipe/valentines-chocolate-cake](http://spoonuniversity.com/recipe/valentines-chocolate-cake)

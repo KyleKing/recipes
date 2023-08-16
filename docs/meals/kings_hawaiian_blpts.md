@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # King's Hawaiian Blpts
 
 > Based on [Chrissy Teigen Cravings], pg. 139

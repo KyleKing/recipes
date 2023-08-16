@@ -1,6 +1,6 @@
-<!-- Needs Manual Review -->
-
 # Peanut Noodles
+
+> Source: My Coworkers Dani and Michael
 
 <!-- {cts} rating=1; (User can specify rating on scale of 1-5) -->
 
@@ -38,7 +38,3 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 - Mix the sauce until smooth and prep the vegetables separately
 - Boil the pasta, drain, then immediately toss with vegetables and sauce
-
-## Notes
-
-- (Original Source: My Coworkers Dani and Michael)

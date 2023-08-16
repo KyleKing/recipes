@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Naan Pizza
 
 <!-- {cts} rating=1; (User can specify rating on scale of 1-5) -->
@@ -19,7 +17,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 2 naan
 - [ ] olive oil
 - [ ] pasta sauce
-- [ ] red pepper flakes
+- [ ] red pepper flakes, pinch
 - [ ] 1/2 ball mozzarella, sliced into chunks
 - [ ] 1 tomato, sliced
 - [ ] fresh basil

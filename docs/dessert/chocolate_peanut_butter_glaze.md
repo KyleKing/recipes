@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Chocolate Peanut Butter Glaze
 
 > Based on [https://www.lovefromtheoven.com/chocolate-peanut-butter-bundt-cake/](https://www.lovefromtheoven.com/chocolate-peanut-butter-bundt-cake/)

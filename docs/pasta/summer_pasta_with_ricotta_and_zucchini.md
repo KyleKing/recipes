@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Summer Pasta With Ricotta And Zucchini
 
 > Based on [https://cooking.nytimes.com/recipes/1017463-summer-pasta-with-zucchini-ricotta-and-basil](https://cooking.nytimes.com/recipes/1017463-summer-pasta-with-zucchini-ricotta-and-basil)

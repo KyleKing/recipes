@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Oatmeal Raisin Cookies
 
 <!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->

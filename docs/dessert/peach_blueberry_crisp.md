@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Peach Blueberry Crisp
 
 > Based on [https://www.mccormick.com/recipes/dessert/peach-blueberry-crisp?amp=1](https://www.mccormick.com/recipes/dessert/peach-blueberry-crisp?amp=1)

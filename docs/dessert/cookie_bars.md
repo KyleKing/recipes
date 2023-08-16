@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Cookie Bars
 
 <!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->

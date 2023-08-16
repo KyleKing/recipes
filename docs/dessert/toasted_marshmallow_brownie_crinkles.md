@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Toasted Marshmallow Brownie Crinkles
 
 > Based on [https://www.washingtonpost.com/recipes/toasted-marshmallow-brownie-krinkles/16191/?utm_term=.d8bf01e84ac3](https://www.washingtonpost.com/recipes/toasted-marshmallow-brownie-krinkles/16191/?utm_term=.d8bf01e84ac3)

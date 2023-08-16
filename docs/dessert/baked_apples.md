@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Baked Apples
 
 > Based on [https://www.simplyrecipes.com/recipes/baked_apples/](https://www.simplyrecipes.com/recipes/baked_apples/)

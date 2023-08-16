@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Spaghetti Cacio E Cepe
 
 > Based on [Chrissy Teigen Cravings], pg. 78

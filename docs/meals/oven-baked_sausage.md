@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Oven-Baked Sausage
 
 > Based on [https://wearenotfoodies.com/oven-baking-sausage-quick-easy-and-minimal-mess/](https://wearenotfoodies.com/oven-baking-sausage-quick-easy-and-minimal-mess/)

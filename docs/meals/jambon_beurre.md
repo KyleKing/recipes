@@ -1,6 +1,4 @@
-<!-- Needs Manual Review -->
-
-# Jambon Beurre
+# Jambon Beurre: The essential French ham sandwich
 
 > Based on [https://www.youtube.com/watch?v=ge49xawecJk](https://www.youtube.com/watch?v=ge49xawecJk)
 
@@ -20,13 +18,9 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 - [ ] baguette
 - [ ] ham
-- [ ] gruyere cheese
+- [ ] Gruyère cheese
 - [ ] butter
 
 ## Recipe
 
 - Don't skimp on the butter
-
-## Notes
-
-- The essential French ham sandwich

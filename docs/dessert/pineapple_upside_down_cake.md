@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Pineapple Upside Down Cake
 
 > Based on [https://duncanhines.com/recipe/double-pineapple-upside-down-cake/](https://duncanhines.com/recipe/double-pineapple-upside-down-cake/)

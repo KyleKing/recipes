@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Classic Pasta And Mushrooms
 
 > Based on [https://www.washingtonpost.com/news/voraciously/wp/2020/01/19/no-flash-all-substance-pasta-with-mushrooms-is-a-weeknight-classic/](https://www.washingtonpost.com/news/voraciously/wp/2020/01/19/no-flash-all-substance-pasta-with-mushrooms-is-a-weeknight-classic/)

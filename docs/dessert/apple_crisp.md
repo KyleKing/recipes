@@ -1,12 +1,10 @@
-<!-- Needs Manual Review -->
-
 # Apple Crisp
 
 > Based on [https://www.tasteofhome.com/recipes/winning-apple-crisp/](https://www.tasteofhome.com/recipes/winning-apple-crisp/)
 
-<!-- {cts} rating=1; (User can specify rating on scale of 1-5) -->
+<!-- {cts} rating=3; (User can specify rating on scale of 1-5) -->
 
-Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
 <!-- {cte} -->
 

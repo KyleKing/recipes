@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Oven Baked Fish With Tomatoes
 
 > Based on [https://www.budgetbytes.com/easy-oven-baked-fish-with-tomatoes/](https://www.budgetbytes.com/easy-oven-baked-fish-with-tomatoes/). Recommended by Becky and Will

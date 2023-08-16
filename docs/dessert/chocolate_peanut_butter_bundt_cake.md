@@ -1,12 +1,10 @@
-<!-- Needs Manual Review -->
-
 # Chocolate Peanut Butter Bundt Cake
 
 > Based on [https://www.lovefromtheoven.com/chocolate-peanut-butter-bundt-cake/](https://www.lovefromtheoven.com/chocolate-peanut-butter-bundt-cake/)
 
-<!-- {cts} rating=3; (User can specify rating on scale of 1-5) -->
+<!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
 
-Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
 <!-- {cte} -->
 
@@ -33,7 +31,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
     - [ ] 1 tsp vanilla extract
     - [ ] 1/8 tsp salt
 - [ ] Glaze
-    - [ ] See recipe: 'Chocolate Peanut Butter Glaze'
+    - [ ] See recipe: ['Chocolate Peanut Butter Glaze'](./chocolate_peanut_butter_glaze.md)
 
 ## Recipe
 

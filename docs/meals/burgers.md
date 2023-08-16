@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Burgers
 
 > Based on [https://www.youtube.com/watch?v=ERUugjLmwuY](https://www.youtube.com/watch?v=ERUugjLmwuY)

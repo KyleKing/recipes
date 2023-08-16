@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Fried Rice
 
 > Based on [http://www.geniuskitchen.com/recipe/chinese-fried-rice-38748](http://www.geniuskitchen.com/recipe/chinese-fried-rice-38748)
@@ -18,7 +16,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-Combine below
+Combine:
 
 - [ ] 2 cups day-old rice
 - [ ] 1 chicken breast chopped (or shrimp, etc)

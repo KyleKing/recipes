@@ -1,5 +1,3 @@
-<!-- Needs Manual Review -->
-
 # Pina Con Lima
 
 > Based on [https://www.washingtonpost.com/recipes/pina-con-lima/14680/](https://www.washingtonpost.com/recipes/pina-con-lima/14680/)
