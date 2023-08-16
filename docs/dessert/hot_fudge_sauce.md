@@ -1,5 +1,7 @@
 # Hot Fudge Sauce
 
+> Alex's Family recipe
+
 <!-- {cts} rating=3; (User can specify rating on scale of 1-5) -->
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
@@ -31,4 +33,3 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Notes
 
 - If using Cocoa powder, for every 1 oz chocolate, use 3 tbsp cocoa powder + 1 tbsp butter
-- Nano's (Alex's Family) recipe

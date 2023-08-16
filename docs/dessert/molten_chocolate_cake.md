@@ -42,4 +42,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Notes
 
-- Recipe cut in half for 2 cakes
+- Recipe was cut in half to only make 2 cakes

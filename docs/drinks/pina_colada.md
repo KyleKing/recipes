@@ -29,6 +29,5 @@ Personal rating: *Not yet rated*
 
 ## Notes
 
-- TODO: Need to revisit
 - This light, frothy version is an alternative to the heavy, super-sweet variety you find at most bars. To make the pineapple puree, just run fresh pineapple slices through a blender, juicer or food processor
 - Pina colada means 'strained pineapple,' but this version is 'sin colar' (unstrained), which is easier and helps keep the drink from separating too quickly. Make sure to use coconut water, not coconut milk or cream of coconut mix. White rhum agricole, pure sugar cane rum from Martinique such as Rhum Clement or Neisson, gives the drink a fresher taste

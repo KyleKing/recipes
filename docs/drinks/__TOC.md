@@ -9,7 +9,6 @@
 | [Margarita](./margarita.md)                                   |        6 | ![margarita.jpg](./margarita.jpg){: .image-toc loading=lazy }                               |
 | [Mock-A-Rita](./mock-a-rita.md)                               |        3 | <!-- TODO: Capture image -->                                                                |
 | [Pina Colada](./pina_colada.md)                               |        3 | <!-- TODO: Capture image -->                                                                |
-| [Pina Con Lima](./pina_con_lima.md)                           |        3 | <!-- TODO: Capture image -->                                                                |
 | [Sidecar](./sidecar.md)                                       |        3 | <!-- TODO: Capture image -->                                                                |
 | [Simple Syrup](./simple_syrup.md)                             |        3 | <!-- TODO: Capture image -->                                                                |
 | [Spice 75](./spice_75.md)                                     |        3 | <!-- TODO: Capture image -->                                                                |

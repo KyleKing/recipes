@@ -31,7 +31,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Recipe
 
-- > > Make ahead: prep the dough and refrigerate for 30 minutes - overnight
+- *Make ahead: prep the dough and refrigerate for 30 minutes - overnight*
 - In a measuring cup, whisk together the eggs and vanilla extract
 - In a medium bowl, whisk together the flour, cocoa powder, baking powder, and both salts
 - In a large bowl, combine the oil and granulated sugar with an electric mixer on medium speed to blend well, then add the egg-vanilla mixture in 3 additions and the melted chocolate. Stop to scrape down the bowl
