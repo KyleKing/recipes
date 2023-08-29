@@ -59,7 +59,10 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 - *In parallel to the Hollandaise step...*
 - Cook Canadian bacon or ham (or bacon) in a medium skillet over medium–high heat until golden brown and just crisp at the edges, about 6 minutes.
-- Poach the eggs: Fill a lidded pan with water up to the edge of the egg poaching cups and begin heating. Once boiling, poach the eggs for ~6 minutes or until slightly firm, but still runny. Will need to do two batches of four.
+- Poach the eggs:
+    - Bring a large pot of water to a boil, then reduce to low. Add 1 tbsp of vinegar
+    - Over a small bowl, crack the egg in a fine mesh sieve to let the liquidy part drain, then transfer the remaining yolk and white to a small bowl and pour into the pot
+    - Cook for 3 minutes and remove with a slotted spoon
 - Thoroughly toast the English muffins until crisp and golden brown--they will need to be sturdy
 
 ### Assemble

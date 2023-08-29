@@ -16,12 +16,13 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ### Core
 
-- [ ] tortillas
-- [ ] 1 can of enchilada sauce
-- [ ] 2-3 chicken breast or rotisserie chicken
-- [ ] shredded cheese
-- [ ] 1 can black beans, strained
-- [ ] Optional diced onions, diced tomatoes, can of diced green chilies, or other vegetables
+- [ ] Rotisserie chicken
+- [ ] Tortillas
+- [ ] 1-2 cans of enchilada sauce (~20 oz)
+- [ ] 1 or 2 cans of black beans, strained
+- [ ] Can of diced green chilies
+- [ ] Shredded cheese
+- [ ] Optional diced onions, diced tomatoes (drained), spinach, or other vegetables
 
 ### Vegetarian
 
