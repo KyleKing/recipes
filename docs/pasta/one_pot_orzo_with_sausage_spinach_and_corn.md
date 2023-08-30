@@ -38,4 +38,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Notes
 
-- Related to the [Broccoli Cheddar Chicken and Rice Casserole](./broccoli_cheddar_chicken_and_rice_casserole.md)
+- Related to the [Broccoli Cheddar Chicken and Rice Casserole](../meals/broccoli_cheddar_chicken_and_rice_casserole.md)

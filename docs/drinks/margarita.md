@@ -40,4 +40,3 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [Spicy Margarita](./spicy_margarita.md)
 - [Spicy Watermelon Margarita](./spicy_watermelon_margarita.md)
 - [Watermelon Margarita](./watermelon_margarita.md)
-- [Frozen Strawberry Margarita](./frozen_strawberry_margarita.md)

@@ -48,4 +48,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Notes
 
 - To Make Ahead: Prepare the casserole and refrigerate. Let warm while pre-heating the oven and bake for 15-20 minutes as recommended
-- Related to the [One-Pot Orzo with Sausage, Spinach, and Corn](./one_pot_orzo_with_sausage_spinach_and_corn.md)
+- Related to the [One-Pot Orzo with Sausage, Spinach, and Corn](../pasta/one_pot_orzo_with_sausage_spinach_and_corn.md)
