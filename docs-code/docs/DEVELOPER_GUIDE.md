@@ -47,10 +47,10 @@ poetry config pypi-token.pypi ...
 | File                   |   Statements |   Missing |   Excluded | Coverage   |
 |------------------------|--------------|-----------|------------|------------|
 | `recipes/__init__.py`  |           17 |         0 |         17 | 100.0%     |
-| `recipes/formatter.py` |          105 |         1 |          0 | 94.0%      |
+| `recipes/formatter.py` |          105 |         1 |          0 | 93.3%      |
 | `recipes/scripts.py`   |            5 |         5 |          0 | 0.0%       |
 | `recipes/tasks.py`     |           39 |         4 |          0 | 78.9%      |
-| **Totals**             |          166 |        10 |         17 | 88.6%      |
+| **Totals**             |          166 |        10 |         17 | 88.2%      |
 
-Generated on: 2023-08-18
+Generated on: 2023-09-01
 <!-- {cte} -->

@@ -16,7 +16,7 @@ install_extras: ''
 minimum_python: 3.11.2
 minimum_python_short: '3.11'
 package_name_py: recipes
-project_description: Recipe Website
+project_description: Kyle and Alex's Personal Recipes
 project_name: recipes
 repository_namespace: kyleking
 repository_provider: https://github.com

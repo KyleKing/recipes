@@ -23,6 +23,8 @@
 
 ### Refactor
 
+- move z_dev/ out to docs-code/
+- fix links
 - another round of recipe cleanup
 - resolve next batch of manual review comments
 - use a function for the global beartype

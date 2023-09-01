@@ -30,9 +30,9 @@ classifiers = [
   "Operating System :: OS Independent",
   "Programming Language :: Python :: 3.11",
 ] # https://pypi.org/classifiers/
-description = "Recipe Website"
+description = "Kyle and Alex's Personal Recipes"
 documentation = "https://recipes.kyleking.me"
-include = ["LICENSE.md"]
+include = ["LICENSE"]
 keywords = []
 license = "MIT"
 maintainers = []

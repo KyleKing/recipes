@@ -1,6 +1,6 @@
 # recipes
 
-Recipe Website
+Kyle and Alex's Personal Recipes
 
 ## Installation
 

@@ -6,6 +6,8 @@ name: Update Docs
     branches: [main]
     paths:
       - docs/**
+      # # Ignore the code documentation
+      # - docs-code/**
       - mkdocs.yml
   workflow_dispatch: null # For manual runs
 
