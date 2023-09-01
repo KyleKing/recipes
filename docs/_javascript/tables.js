@@ -1,1 +1,1 @@
-../z_dev/_javascript/tables.js
+../../docs-code/_javascript/tables.js

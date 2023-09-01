@@ -220,11 +220,11 @@ coverage.json
 /releases/
 
 # Ignore auto-created files by documentation tasks
-/docs/z_dev/modules/*.md
-/docs/z_dev/modules/**/*.md
+/docs-code/modules/*.md
+/docs-code/modules/**/*.md
 
 # Allow List
-!/docs/z_dev/*.*
+!/docs-code/*.*
 !supporting/**
 !tests/data/**
 

@@ -51,6 +51,4 @@ If you have any security issue to report, please contact the project maintainers
 [contributor-covenant]: https://www.contributor-covenant.org
 [developer_guide]: https://recipes.kyleking.me/docs/DEVELOPER_GUIDE
 [license]: https://github.com/kyleking/recipes/blob/main/LICENSE
-[scripts]: https://github.com/kyleking/recipes/blob/main/scripts
 [style_guide]: https://recipes.kyleking.me/docs/STYLE_GUIDE
-[tests]: https://github.com/kyleking/recipes/blob/main/tests

@@ -37,7 +37,7 @@ keywords = []
 license = "MIT"
 maintainers = []
 name = "recipes"
-readme = "docs/z_dev/README.md"
+readme = "docs-code/README.md"
 repository = "https://github.com/kyleking/recipes"
 version = "0.4.0"
 
@@ -58,7 +58,7 @@ recipes = "recipes.scripts:start"
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/kyleking/recipes/issues"
-"Changelog" = "https://github.com/kyleking/recipes/blob/main/docs/z_dev/docs/CHANGELOG.md"
+"Changelog" = "https://github.com/kyleking/recipes/blob/main/docs-code/docs/CHANGELOG.md"
 
 [tool.pyright]
 include = ["recipes"]

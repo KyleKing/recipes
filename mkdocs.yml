@@ -35,24 +35,26 @@ plugins:
       output_folder: out
       input_folder: src
       input_extensions: puml
-  - gen-files:
-      scripts:
-        - docs/z_dev/gen_ref_nav.py
+  # # Don't generate code documentation
+  # - gen-files:
+  #     scripts:
+  #       - docs-code/gen_ref_nav.py
   - git-revision-date-localized:
       enable_creation_date: true
       fallback_to_build_date: true
       strict: false
       type: date
-  - literate-nav:
-      nav_file: SUMMARY.md
-  - mkdocstrings:
-      handlers:
-        python:
-          options:
-            docstring_section_style: spacy
-            line_length: 120
-            separate_signature: true
-            show_category_heading: true
+  # # Don't generate code documentation
+  # - literate-nav:
+  #     nav_file: SUMMARY.md
+  # - mkdocstrings:
+  #     handlers:
+  #       python:
+  #         options:
+  #           docstring_section_style: spacy
+  #           line_length: 120
+  #           separate_signature: true
+  #           show_category_heading: true
   - search
   - section-index
   - live-edit

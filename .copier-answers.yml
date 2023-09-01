@@ -10,7 +10,7 @@ author_username: kyleking
 cname: recipes.kyleking.me
 copyright_date: '2021'
 development_branch: main
-doc_dir: docs/z_dev
+doc_dir: docs-code
 extends_calcipy: true
 install_extras: ''
 minimum_python: 3.11.2
