@@ -2,9 +2,9 @@
 
 > Based on [https://www.spoonfulofflavor.com/sweet-potato-black-bean-quinoa-bowls/](https://www.spoonfulofflavor.com/sweet-potato-black-bean-quinoa-bowls/)
 
-<!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
+<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
 
-Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
 <!-- {cte} -->
 
@@ -23,7 +23,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] Taco Seasoning (add to either peppers or meat)
     - [ ] (Optional) 1 lb ground meat and tsp of salt
     - [ ] (Optional) Sauteed peppers and red onion, thinly sliced
-- [ ] 1 (16-oz) can refried beans, black beans, or pinto beans, rinsed
+- [ ] 1 (16-oz) can black beans, refried beans, or pinto beans, rinsed
 - [ ] 1 (16-oz) can corn, rinsed
 - [ ] 1/2 cup chunky salsa or a tomato, diced
 - [ ] 1/4 cup onion, diced
