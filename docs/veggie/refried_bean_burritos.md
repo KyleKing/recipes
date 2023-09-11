@@ -1,4 +1,4 @@
-# Refried Bean Burritos
+# Burritos
 
 > Based on [https://www.spoonfulofflavor.com/sweet-potato-black-bean-quinoa-bowls/](https://www.spoonfulofflavor.com/sweet-potato-black-bean-quinoa-bowls/)
 
@@ -8,29 +8,35 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cte} -->
 
-<!-- {cts} name_image=refried_bean_burritos.jpeg; (User can specify image name) -->
+<!-- {cts} name_image=None; (User can specify image name) -->
 
-![refried_bean_burritos.jpeg](./refried_bean_burritos.jpeg){: .image-recipe loading=lazy }
+<!-- TODO: Capture image -->
 
 <!-- {cte} -->
 
 ## Ingredients
 
-- [ ] 1 (16-oz) can refried beans
-- [ ] 1/2 cup chunky salsa
-- [ ] 1/4 cup diced onion
-- [ ] 1 tsp taco seasoning
-- [ ] 1/4 tsp kosher salt, plus more to taste
-- [ ] 2 cup shredded cheddar cheese
-- [ ] 4 (10-inch) burrito sized tortillas
+- [ ] (10-inch) burrito sized tortillas
+- [ ] Brown rice, cooked
+    - [ ] Add lime zest and juice
+    - [ ] Add cilantro
+- [ ] Taco Seasoning (add to either peppers or meat)
+    - [ ] (Optional) 1 lb ground meat and tsp of salt
+    - [ ] (Optional) Sauteed peppers and red onion, thinly sliced
+- [ ] 1 (16-oz) can refried beans, black beans, or pinto beans, rinsed
+- [ ] 1 (16-oz) can corn, rinsed
+- [ ] 1/2 cup chunky salsa or a tomato, diced
+- [ ] 1/4 cup onion, diced
+- [ ] Diced jalapeno
+- [ ] Avocado, diced
+- [ ] Shredded lettuce
+- [ ] Shredded cheddar cheese
+- [ ] Sour cream
+- [ ] Hot sauce
 
 ## Recipe
 
-- Preheat oven to 375F and pull out a large sheet pan
-- In a medium bowl, mix refried beans, salsa, onion, taco seasoning, and salt
-- For each tortilla:
-    - Spread 1/4 of the mixture evenly; leave an inch from the end empty
-    - Sprinkle 1/2 cup of cheese over the top of each
-    - Wrap up the burrito making sure to tuck in the sides
-    - Lay seam side down spread out on the sheet pan
-- Transfer to the oven and bake 12-15 min
+- Start the rice
+- Prep and rinse the vegetables
+- Prep the meat and/or saute the veggies with the taco seasoning
+- Heat the tortillas
