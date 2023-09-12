@@ -24,6 +24,7 @@
 | TODO   | Capture image -->                                                                     | 2021-01-13  | [docs/drinks/spicy_watermelon_margarita.md:11](https://github.com/KyleKing/recipes/blame/043d0c178ea20ae3561327524a34c912ab72c06d/docs/drinks/spicy_watermelon_margarita.md#L12)                         |
 | TODO   | Capture image -->                                                                     | 2022-02-18  | [docs/drinks/strawberry_whiskey_smash.md:13](https://github.com/KyleKing/recipes/blame/a3fc708a22d497b4d5e204e542154c052d7e3f49/docs/drinks/strawberry_whiskey_smash.md#L10)                             |
 | TODO   | Capture image -->                                                                     | 2022-01-15  | [docs/drinks/winter_whiskey_sour.md:13](https://github.com/KyleKing/recipes/blame/7c4664a8053c6f11a21640d04846db75c6c8cd16/docs/drinks/winter_whiskey_sour.md#L10)                                       |
+| TODO   | Capture image -->                                                                     | 2023-09-11  | [docs/meals/burrito.md:13](https://github.com/KyleKing/recipes/blame/a1b3e5da53616d700dc4839f85c40a81d7003b9f/docs/veggie/refried_bean_burritos.md#L13)                                                  |
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/meals/oven-baked_sausage.md:13](https://github.com/KyleKing/recipes/blame/37e530b8bd978ab3d5f92326044dc04a13586ce8/docs/meals/oven-baked_sausage.md#L16)                                           |
 | TODO   | Capture image -->                                                                     | 2023-07-06  | [docs/meals/smoked_turkey_reuben.md:13](https://github.com/KyleKing/recipes/blame/f213c39fb2cb16cab5c91601e9ff1ff3a8314423/docs/meals/smoked_turkey_reuben.md#L13)                                       |
 | TODO   | Capture image -->                                                                     | 2023-07-06  | [docs/pasta/butternut_squash_gnocchi_with_chickpeas.md:13](https://github.com/KyleKing/recipes/blame/f213c39fb2cb16cab5c91601e9ff1ff3a8314423/docs/pasta/butternut_squash_gnocchi_with_chickpeas.md#L13) |
@@ -49,6 +50,6 @@
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/veggie/karens_roasted_veggie_bowls.md:11](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/veggie/karens_roasted_veggie_bowls.md#L14)                       |
 | TODO   | Capture image -->'  # noqa: T101                                                      | 2020-12-06  | [recipes/formatter.py:87](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/recipes/formatter.py#L63)                                                                   |
 
-Found code tags for FIXME (2), TODO (44)
+Found code tags for FIXME (2), TODO (45)
 
 <!-- calcipy_skip_tags -->
