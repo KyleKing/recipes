@@ -49,7 +49,7 @@ mkdocs-live-edit-plugin = ">=0.1.2"
 optimize-images = ">=1.5.1"
 
 [tool.poetry.group.dev.dependencies]
-calcipy = {extras = ["doc", "lint", "nox", "stale", "tags", "test", "types"], version = ">=1.6.3"}
+calcipy = {extras = ["doc", "lint", "nox", "stale", "tags", "test", "types"], version = ">=2.0.1"}
 
 [tool.poetry.scripts]
 recipes = "recipes.scripts:start"
