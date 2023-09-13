@@ -2,6 +2,7 @@
 
 ### Feat
 
+- simplify the pizza recipe
 - add the Creamy Orzo Skillet
 - experiment with beartype_this_package
 - add recipes from Chef's Fridges and Crispy Tofu from WaPo
@@ -23,6 +24,9 @@
 
 ### Refactor
 
+- rename the burrito recipe
+- generalize the burrito recipe
+- one pizza recipe!
 - move z_dev/ out to docs-code/
 - fix links
 - another round of recipe cleanup

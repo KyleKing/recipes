@@ -35,8 +35,8 @@ _ICON_FA_STAR_OUT = ':fontawesome-regular-star:'
 # Alternatives to the Font-Awesome star icons
 # > _ICON_M_STAR = ':material-star:'
 # > _ICON_M_STAR_OUT = ':material-star-outline:'
-# > _ICON_O_STAR = ':octicons-star-fill-24:{: .yellow }'  # noqa: P103
-# > _ICON_O_STAR_OUT = ':octicons-star-24:{: .yellow }'  # noqa: P103
+# > _ICON_O_STAR = ':octicons-star-fill-24:{: .yellow }'
+# > _ICON_O_STAR_OUT = ':octicons-star-24:{: .yellow }'
 
 
 @beartype
@@ -84,7 +84,7 @@ def _format_image_md(name_image: Optional[str], attrs: str) -> str:
     if name_image and name_image.lower() != 'none':
         return f'![{name_image}](./{name_image}){{: {attrs} loading=lazy }}'
     logger.debug('WARN: No image specified', name_image=name_image)
-    return '<!-- TODO: Capture image -->'  # noqa: T101
+    return '<!-- TODO: Capture image -->'
 
 
 # =====================================================================================
@@ -212,7 +212,7 @@ class Recipe(BaseModel):
     path_image: Path = Path()
 
 
-class _TOCRecipes(BaseModel):  # noqa: H601
+class _TOCRecipes(BaseModel):
     """Store recipe metadata for TOC."""
 
     sub_dir: Path
