@@ -17,7 +17,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Ingredients
 
 - [ ] For the Soup
-    - [ ] 1 head curly kale
+    - [ ] 1 head curly kale or bag of Kale
     - [ ] 2 (14-ounce) cans cannellini beans, drained and rinsed
     - [ ] 1 tbsp extra virgin olive oil
     - [ ] 8 oz spicy fresh sausage, casings removed, crumbled
@@ -25,7 +25,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
     - [ ] 2 tbsp minced garlic
     - [ ] 1/2 tsp chili flakes, plus more for seasoning
     - [ ] 2 tbsp all-purpose flour
-    - [ ] 6 cups low sodium chicken broth
+    - [ ] 6-8 cups low sodium chicken broth
     - [ ] 1 tsp kosher salt, plus more for seasoning
     - [ ] 1/2 tsp freshly ground black pepper
     - [ ] Chopped fresh parsley, for garnish

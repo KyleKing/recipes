@@ -21,7 +21,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 6 cloves garlic (3 tsp)
 - [ ] 2 medium carrots, cut into 1/2" dice
 - [ ] 2 celery sticks, cut into 1/2" dice
-- [ ] 7 cups vegetable or chicken broth
+- [ ] 7-8 cups vegetable or chicken broth
 - [ ] 1 (28-oz) can of diced tomatoes (keep juice)
 - [ ] 1 (15-oz) can cannellini (navy) beans, drained and rinsed
 - [ ] 1 (15-oz) can green beans (keep juice)

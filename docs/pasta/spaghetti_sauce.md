@@ -17,9 +17,9 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ### Saute in Olive Oil
 
 - [ ] 2 onions, chopped
-- [ ] 1/2 green pepper, chopped
+- [ ] 0.5-1 green pepper, chopped
 - [ ] 3 stalks celery, chopped
-- [ ] 5 cloves garlic, chopped
+- [ ] 5 cloves garlic, chopped (2.5 tsp minced)
 - [ ] 3 carrot sticks, peeled and coined
 
 ### Brown in Pan
