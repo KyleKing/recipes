@@ -7,3 +7,4 @@
 | [Emily English Roasted Potatoes](./emily_english_roasted_potatoes.md) |        3 | ![emily_english_roasted_potatoes.jpeg](./emily_english_roasted_potatoes.jpeg){: .image-toc loading=lazy } |
 | [Garlic Bread](./garlic_bread.md)                                     |        7 | ![garlic_bread.jpeg](./garlic_bread.jpeg){: .image-toc loading=lazy }                                     |
 | [Hummus](./hummus.md)                                                 |        8 | ![hummus.jpeg](./hummus.jpeg){: .image-toc loading=lazy }                                                 |
+| [Spices Garam Masala](./spices_garam_masala.md)                       |        7 | <!-- TODO: Capture image -->                                                                              |

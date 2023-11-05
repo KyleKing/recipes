@@ -18,7 +18,7 @@ Personal rating: *Not yet rated*
 
 ### Masala Spice Mix
 
-- [ ] 2 Tbsp garam masala
+- [ ] 2 Tbsp garam masala ([../sides/spices_garam_masala.md]([../sides/spices_garam_masala.md]))
 - [ ] 1/2 tsp cumin
 - [ ] 1/2 tsp turmeric
 - [ ] 1/2 tsp smoked paprika

@@ -232,7 +232,11 @@ class _TOCRecipes(BaseModel):
         """
         key = path_md.as_posix()
         recipe = self.recipes.get(key) or Recipe()
-        recipe.rating = _parse_var_comment(line)['rating']
+        try:
+            recipe.rating = _parse_var_comment(line)['rating']
+        except KeyError as exc:
+            msg = f"'rating' not found in '{line}' from {path_md}"
+            raise RuntimeError(msg) from exc
         self.recipes[key] = recipe
         return _handle_star_section(line, path_md)
 
@@ -250,7 +254,11 @@ class _TOCRecipes(BaseModel):
         """
         key = path_md.as_posix()
         recipe = self.recipes.get(key) or Recipe()
-        recipe.path_image = _parse_rel_file(line, path_md, 'name_image')
+        try:
+            recipe.path_image = _parse_rel_file(line, path_md, 'name_image')
+        except KeyError as exc:
+            msg = f"'name_image' not found in '{line}' from {path_md}"
+            raise RuntimeError(msg) from exc
         self.recipes[key] = recipe
         return _handle_image_section(line, path_md)
 

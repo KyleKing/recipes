@@ -35,23 +35,12 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 1/2 tsp kosher salt
 - [ ] 1 tsp coriander
 - [ ] ~1/3 tbsp ground cumin
-- [ ] 1/4 tsp cayenne pepper\*
+- [ ] 1/4 tsp cayenne pepper
 - [ ] 1/4 tsp ground tumeric
 - [ ] ~1/3 tbsp sweet paprika
-- [ ] ~1/3 tbsp garam masala\*
+- [ ] ~1/3 tbsp garam masala ([../sides/spices_garam_masala.md]([../sides/spices_garam_masala.md]))
 - [ ] 1 small (15oz) can whole tomatoes and liquid
 - [ ] 1/3 cup water
-
-### DIY Garam Masala
-
-> Source for [DIY Garam Masala](https://www.allrecipes.com/recipe/142967/easy-garam-masala/)
-
-- [ ] 1 tbsp ground cumin
-- [ ] 1.5 tsp ground coriander
-- [ ] 1.5 tsp ground black pepper
-- [ ] 1 tsp ground cinnamon
-- [ ] 1/2 tsp ground cloves
-- [ ] 1/2 tsp ground nutmeg
 
 ## Recipe
 
