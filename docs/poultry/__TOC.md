@@ -8,5 +8,6 @@
 | [Chicken Tacos](./chicken_tacos.md)                                           |        7 | ![chicken_tacos.jpg](./chicken_tacos.jpg){: .image-toc loading=lazy }                                             |
 | [Enchiladas](./enchiladas.md)                                                 |        8 | ![enchiladas.jpg](./enchiladas.jpg){: .image-toc loading=lazy }                                                   |
 | [Fajitas](./fajitas.md)                                                       |        4 | ![fajitas.jpg](./fajitas.jpg){: .image-toc loading=lazy }                                                         |
+| [Poached Chicken](./poached_chicken.md)                                       |        3 | <!-- TODO: Capture image -->                                                                                      |
 | [Proscuitto Wrapped Stuffed Chicken](./proscuitto_wrapped_stuffed_chicken.md) |        8 | ![proscuitto_wrapped_stuffed_chicken.jpeg](./proscuitto_wrapped_stuffed_chicken.jpeg){: .image-toc loading=lazy } |
 | [Teryaki Chicken](./teryaki_chicken.md)                                       |        5 | ![teryaki_chicken.jpeg](./teryaki_chicken.jpeg){: .image-toc loading=lazy }                                       |
