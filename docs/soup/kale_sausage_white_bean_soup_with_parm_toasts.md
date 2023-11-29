@@ -17,12 +17,12 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Ingredients
 
 - [ ] 1 head curly kale or bag of Kale
-- [ ] 2 (14-ounce) cans cannellini beans, drained and rinsed
-- [ ] 1 tbsp extra virgin olive oil
-- [ ] 8 oz spicy fresh sausage, casings removed, crumbled
 - [ ] 1 large onion, diced
-- [ ] 2 tbsp minced garlic
-- [ ] 1/2 tsp chili flakes, plus more for seasoning
+- [ ] 2 (14-ounce) cans cannellini beans, drained and rinsed
+- [ ] 8 oz spicy fresh sausage, casings removed, crumbled
+- [ ] 1 tbsp extra virgin olive oil
+- [ ] 8 cloves garlic, minced
+- [ ] 1/4 tsp red pepper flakes
 - [ ] 2 tbsp all-purpose flour
 - [ ] 6-8 cups low sodium chicken broth
 - [ ] 1 tsp kosher salt, plus more for seasoning
@@ -31,10 +31,17 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Recipe
 
 - If not using a bag of washed and pre-cut Kale, separate the kale leaves from the stalks (discard the stalks), tear the kale into large pieces, then wash and dry the kale (use a salad spinner or pat dry with a clean kitchen towel)
-- Dump the beans into a bowl and mash them partially with a potato masher so some are whole and some are mashed (this will help thicken the soup)
-- Heat 1 tbsp of the oil in a large (at least 5-quart) pot over medium heat. Add the sausage and cook, stirring, until browned and no longer pink, 5 to 6 minutes. Add the onions and cook, stirring, until lightly golden, 9 to 10 minutes
-- Add the garlic and chili flakes and cook, stirring, 1 more minute. Add the flour and cook, stirring, until it is absorbed into the mixture, 1 to 2 minutes
-- Add the beans, chicken broth, salt, and pepper. Bring to a boil, then add the kale to the soup in batches so it wilts into the liquid. Reduce the heat to low and simmer, stirring occasionally, until the soup thickens, 15 to 20 minutes. Season with more salt and chili flakes to taste.
+- Quarter the onion and lightly pulse in a food processor until diced, but not pulverized; set aside
+- Drain and rinse the beans, then lightly pulse to mash up around half of the beans while keeping around half mostly whole.
+- Slice the sausage length wise, remove the casing, then break apart into small pieces
+- Heat 1 tbsp of the oil in a large (at least 5-quart) pot over medium heat
+    - Add the sausage and cook, stirring, until browned and no longer pink (5-6 min)
+    - Add the onions and cook, stirring, until lightly golden (~8 min)
+    - Add the garlic and red pepper flakes, stir, and cook for one more minute
+    - Add the flour and cook, stirring, until absorbed into the mixture
+- Add the beans, chicken broth, salt, and pepper. Bring to a boil.
+    - Then add the kale to the soup in batches so it wilts into the liquid. Reduce the heat to low and simmer, stirring occasionally, until the soup thickens (15-20 min)
+    - Season with more salt and red pepper flakes to taste
 
 ### Parmesan Toasts
 
