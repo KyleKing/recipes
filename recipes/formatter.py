@@ -4,7 +4,6 @@ from pathlib import Path
 
 import pandas as pd
 from beartype import beartype
-from beartype.typing import Optional, Union
 from calcipy.file_search import find_project_files_by_suffix
 from calcipy.invoke_helpers import get_doc_subdir, get_project_path
 from calcipy.md_writer import write_autoformatted_md_sections
@@ -23,9 +22,6 @@ def get_recipes_doc_dir() -> Path:
     return project_path / 'docs'
 
 
-BUMP_RATING = 3
-"""Integer to increase the rating so that the lowest is not 1."""
-
 _ICON_FA_STAR = ':fontawesome-solid-star:'
 """Font Awesome Star Icon."""
 
@@ -40,7 +36,7 @@ _ICON_FA_STAR_OUT = ':fontawesome-regular-star:'
 
 
 @beartype
-def _format_titlecase(raw_title: Optional[str]) -> str:
+def _format_titlecase(raw_title: str | None) -> str:
     """Format string in titlecase replacing underscores with spaces.
 
     Args:
@@ -64,13 +60,13 @@ def _format_stars(rating: int) -> str:
         str: formatted string icons
 
     """
-    if rating != 0:
-        return ' '.join([_ICON_FA_STAR] * (rating + BUMP_RATING) + [_ICON_FA_STAR_OUT] * (5 - rating))
-    return '*Not yet rated*'
+    if not rating:
+        return '*Not yet rated*'
+    return ' '.join([_ICON_FA_STAR] * rating + [_ICON_FA_STAR_OUT] * (5 - rating))
 
 
 @beartype
-def _format_image_md(name_image: Optional[str], attrs: str) -> str:
+def _format_image_md(name_image: str | None, attrs: str) -> str:
     """Format the image as markdown.
 
     Args:
@@ -159,7 +155,7 @@ def _handle_image_section(line: str, path_md: Path) -> list[str]:
 # =====================================================================================
 # Utilities for TOC
 
-TOCRecordT = dict[str, Union[str, int]]
+TOCRecordT = dict[str, str | int]
 """TOC Record."""
 
 
@@ -183,7 +179,7 @@ def _format_toc_table(toc_records: list[TOCRecordT]) -> list[str]:
 
 @beartype
 def _create_toc_record(
-    path_recipe: Path, path_img: Path, rating: Union[str, int],
+    path_recipe: Path, path_img: Path, rating: str | int,
 ) -> TOCRecordT:
     """Create the dictionary summarizing data for the table of contents.
 
@@ -200,7 +196,7 @@ def _create_toc_record(
     img_md = _format_image_md(path_img.name, attrs='.image-toc')
     return {
         'Link': link,
-        'Rating': int(rating) + BUMP_RATING,
+        'Rating': int(rating),
         'Image': img_md,
     }
 
