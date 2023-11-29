@@ -6,7 +6,7 @@ The recipe includes a series of steps shared with other recipes, such as Focacci
 
 <!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
 
-Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
 <!-- {cte} -->
 
