@@ -1,6 +1,6 @@
 # Spaghetti Meatballs Teigen
 
-> Based on [https://cravingsbychrissyteigen.com/cravings/spaghetti-meatballs/](https://cravingsbychrissyteigen.com/cravings/spaghetti-meatballs/)
+> Based on [https://cravingsbychrissyteigen.com/blogs/recipes/spaghetti-meatballs/](https://cravingsbychrissyteigen.com/blogs/recipes/spaghetti-meatballs/)
 
 <!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
 
