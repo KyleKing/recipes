@@ -1,4 +1,4 @@
-# Sausage and Lentil Instant Pot Soup
+# Lentils and Sausage Instant Pot Soup
 
 > Adapted for an Instant Pot from [https://www.allrecipes.com/recipe/45426/lentil-and-sausage-soup](https://www.allrecipes.com/recipe/45426/lentil-and-sausage-soup)
 
@@ -8,21 +8,21 @@ Personal rating: *Not yet rated*
 
 <!-- {cte} -->
 
-<!-- {cts} name_image=None; (User can specify image name) -->
+<!-- {cts} name_image=lentils_and_sausage_instant_pot_soup.jpeg; (User can specify image name) -->
 
-<!-- TODO: Capture image -->
+![lentils_and_sausage_instant_pot_soup.jpeg](./lentils_and_sausage_instant_pot_soup.jpeg){: .image-recipe loading=lazy }
 
 <!-- {cte} -->
 
 ## Ingredients
 
+- [ ] 1 tsp black pepper
+- [ ] 1 tsp dried basil
 - [ ] 1 tsp dried oregano
+- [ ] 1 tsp dried parsley
+- [ ] 1 tsp dried thyme
 - [ ] 1 tsp garlic powder
 - [ ] 1 tsp salt
-- [ ] 1/2 tsp black pepper
-- [ ] 1/2 tsp dried basil
-- [ ] 1/2 tsp dried parsley
-- [ ] 1/2 tsp dried thyme
 - [ ] 2 large bay leaves
 - [ ] 1 large onion, chopped
 - [ ] 2 stalk celery, finely chopped (optional)
