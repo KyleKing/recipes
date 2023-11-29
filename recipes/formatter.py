@@ -285,7 +285,7 @@ def format_recipes() -> None:
     # Filter out any directories from calcipy
     dir_md = get_recipes_doc_dir()
     doc_dir = get_doc_subdir(get_project_path())
-    filtered_dir = [pth for pth in md_dirs if pth.parent == dir_md and pth.name not in [doc_dir.name]]
+    filtered_dir = [pth for pth in md_dirs if pth.parent == dir_md and pth.name != doc_dir.name]
 
     # Create a TOC for each directory
     for sub_dir in filtered_dir:

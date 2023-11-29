@@ -24,6 +24,8 @@
 
 ### Refactor
 
+- apply rating deflation
+- remove BUMP_RATING
 - rename the burrito recipe
 - generalize the burrito recipe
 - one pizza recipe!
