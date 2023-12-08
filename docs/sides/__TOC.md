@@ -6,5 +6,6 @@
 | [Bruschetta](./bruschetta.md)                                         |        3 | ![bruschetta_toast.jpeg](./bruschetta_toast.jpeg){: .image-toc loading=lazy }                             |
 | [Emily English Roasted Potatoes](./emily_english_roasted_potatoes.md) |        0 | ![emily_english_roasted_potatoes.jpeg](./emily_english_roasted_potatoes.jpeg){: .image-toc loading=lazy } |
 | [Garlic Bread](./garlic_bread.md)                                     |        4 | ![garlic_bread.jpeg](./garlic_bread.jpeg){: .image-toc loading=lazy }                                     |
+| [Garlic Rice](./garlic_rice.md)                                       |        0 | <!-- TODO: Capture image -->                                                                              |
 | [Hummus](./hummus.md)                                                 |        5 | ![hummus.jpeg](./hummus.jpeg){: .image-toc loading=lazy }                                                 |
 | [Spices Garam Masala](./spices_garam_masala.md)                       |        4 | <!-- TODO: Capture image -->                                                                              |

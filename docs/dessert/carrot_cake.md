@@ -16,26 +16,29 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-- Cake
-    - [ ] 2 cups all-purpose flour
-    - [ ] 2 teaspoons baking powder
-    - [ ] 2 teaspoons baking soda
-    - [ ] 2 teaspoons ground cinnamon
-    - [ ] 4/4 teaspoon salt
-    - [ ] 3 cups grated carrots (you can grate the carrots in a food processor fitted with a shredding blade)
-    - [ ] 1 cup coarsely chopped walnuts or pecans
-    - [ ] 1 cup shredded coconut, sweetened or unsweetened
-    - [ ] ½ cup moist, plump raisins (dark or golden) or dried cranberries
-    - [ ] 2 cups sugar
-    - [ ] 1 cup canola or safflower oil
-    - [ ] 4 large eggs
-- Frosting
-    - [ ] 8 ounces cream cheese, at room temperature
-    - [ ] 1 stick (8 tablespoons) unsalted butter, at room temperature
-    - [ ] 1 pound (3¾ cups) confectioners' sugar
-    - [ ] 1 tablespoon fresh lemon juice or ½ teaspoon pure lemon extract
-    - [ ] 1/2 cup shredded coconut, optional
-    - [ ] Toasted finely chopped nuts and/or toasted coconut, for topping, optional
+### Cake
+
+- [ ] 2 cups all-purpose flour
+- [ ] 2 teaspoons baking powder
+- [ ] 2 teaspoons baking soda
+- [ ] 2 teaspoons ground cinnamon
+- [ ] 4/4 teaspoon salt
+- [ ] 3 cups grated carrots (you can grate the carrots in a food processor fitted with a shredding blade)
+- [ ] 1 cup coarsely chopped walnuts or pecans
+- [ ] 1 cup shredded coconut, sweetened or unsweetened
+- [ ] ½ cup moist, plump raisins (dark or golden) or dried cranberries
+- [ ] 2 cups sugar
+- [ ] 1 cup canola or safflower oil
+- [ ] 4 large eggs
+
+### Frosting
+
+- [ ] 8 ounces cream cheese, at room temperature
+- [ ] 1 stick (8 tablespoons) unsalted butter, at room temperature
+- [ ] 1 pound (3¾ cups) confectioners' sugar
+- [ ] 1 tablespoon fresh lemon juice or ½ teaspoon pure lemon extract
+- [ ] 1/2 cup shredded coconut, optional
+- [ ] Toasted finely chopped nuts and/or toasted coconut, for topping, optional
 
 ## Recipe
 

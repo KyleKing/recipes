@@ -86,3 +86,4 @@ t_water = (76 * 3) - (65 + 65 + 5) = 93
 ## Notes
 
 - See the book for a full page of common F&Q's and additional tips throughout the recipe
+- Also see <https://cooking.nytimes.com/recipes/11376-no-knead-bread> (the NYT most popular recipe) for comparison

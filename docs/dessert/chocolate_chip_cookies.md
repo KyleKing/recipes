@@ -1,6 +1,6 @@
 # Chocolate Chip Cookies
 
-> Based on [https://www.verybestbaking.com/recipes/32014/original-nestle-toll-house-milk-chocolate-chip-cookies/](https://www.verybestbaking.com/recipes/32014/original-nestle-toll-house-milk-chocolate-chip-cookies/)
+> Based on [https://www.verybestbaking.com/toll-house/recipes/original-nestle-toll-house-chocolate-chip-cookies](https://www.verybestbaking.com/toll-house/recipes/original-nestle-toll-house-chocolate-chip-cookies)
 
 <!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
 

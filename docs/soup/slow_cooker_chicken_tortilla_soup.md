@@ -18,6 +18,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 - [ ] Tortilla chips
 - [ ] 2 cups grated cheese
+- [ ] Sour cream
 
 ### soup
 

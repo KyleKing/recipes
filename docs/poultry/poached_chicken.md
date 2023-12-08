@@ -23,12 +23,12 @@ Personal rating: *Not yet rated*
 
 ## Recipe
 
-- Fill a pot with water. Place over medium-low heat. Add salt and bay leaves, the water should taste well salted. Bring the water to 160 F to 180 F, just below a simmer.
-- Add the chicken thighs and cook until the internal temp is 165 F (155 F if using breasts), about 15 minutes.
-- Remove chicken and let cool before shredding. Store in an airtight container in the fridge for about 5 days.
+- Fill a pot with water. Place over medium-low heat. Add salt and bay leaves, the water should taste well salted. Bring the water to 160 F to 180 F, just below a simmer
+- Add the chicken thighs and cook until the internal temp is 165 F (155 F if using breasts), about 15 minutes
+- Remove chicken and let cool before shredding. Store in an airtight container in the fridge for about 5 days
 
 ## Recipe (Instant Pot)
 
-- Pour in the broth and secure the Instant Pot lid.
-- Cook at manual or pressure cook for 12 minutes.
+- Pour in the broth and secure the Instant Pot lid
+- Cook at manual or pressure cook for 12 minutes
 - Natural or quick release, as desired

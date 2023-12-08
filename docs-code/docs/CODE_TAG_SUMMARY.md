@@ -35,6 +35,7 @@
 | TODO   | Capture image -->                                                                     | 2023-07-06  | [docs/rice/charred_vegetables_and_pho_rice.md:13](https://github.com/KyleKing/recipes/blame/f213c39fb2cb16cab5c91601e9ff1ff3a8314423/docs/rice/charred_vegetables_and_pho_rice.md#L13)                   |
 | TODO   | Capture image -->                                                                     | 2023-07-06  | [docs/rice/rice_with_mushrooms_kale_pumpkin_and_egg.md:13](https://github.com/KyleKing/recipes/blame/f213c39fb2cb16cab5c91601e9ff1ff3a8314423/docs/rice/rice_with_mushrooms_kale_pumpkin_and_egg.md#L13) |
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/seafood/oven_baked_fish_with_tomatoes.md:13](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/seafood/oven_baked_fish_with_tomatoes.md#L16)                 |
+| TODO   | Capture image -->                                                                     | 2023-12-08  | [docs/sides/garlic_rice.md:13](https://github.com/KyleKing/recipes/blame/073fc19bd8c63b1fc5dd602a39e74d454d3b5f77/docs/sides/garlic_rice.md#L13)                                                         |
 | FIXME  | The indented bullets don't appear correctly. May need to change spacing -->           | 2022-09-15  | [docs/sides/hummus.md:19](https://github.com/KyleKing/recipes/blame/4033ab8e31206f15637e08d7fe642b5e937b0e9b/docs/sides/hummus.md#L19)                                                                   |
 | TODO   | Capture image -->                                                                     | 2023-11-05  | [docs/sides/spices_garam_masala.md:13](https://github.com/KyleKing/recipes/blame/d7752e327326dc51148a1801b4a736be25c76342/docs/sides/spices_garam_masala.md#L13)                                         |
 | TODO   | Capture image -->                                                                     | 2023-07-07  | [docs/soup/cashew_curry_beef_with_rice_noodles.md:13](https://github.com/KyleKing/recipes/blame/c6372255486413b94c3247858de24f2d577e2b98/docs/soup/cashew_curry_beef_with_rice_noodles.md#L13)           |
@@ -53,6 +54,6 @@
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/veggie/karens_roasted_veggie_bowls.md:11](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/veggie/karens_roasted_veggie_bowls.md#L14)                       |
 | TODO   | Capture image -->'                                                                    | 2023-09-13  | [recipes/formatter.py:83](https://github.com/KyleKing/recipes/blame/2317785c860e44cafe43bab5bc11f3d1ad5984b8/recipes/formatter.py#L87)                                                                   |
 
-Found code tags for FIXME (2), TODO (48)
+Found code tags for FIXME (2), TODO (49)
 
 <!-- calcipy_skip_tags -->
