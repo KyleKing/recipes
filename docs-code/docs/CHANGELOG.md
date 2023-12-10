@@ -2,6 +2,7 @@
 
 ### Feat
 
+- add garlic rice and new links
 - simplify the pizza recipe
 - add the Creamy Orzo Skillet
 - experiment with beartype_this_package
