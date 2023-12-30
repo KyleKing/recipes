@@ -4,7 +4,7 @@
 |:--------------------------------------------------------------|---------:|:--------------------------------------------------------------------------------------------|
 | [Between The Sheets](./between_the_sheets.md)                 |        0 | <!-- TODO: Capture image -->                                                                |
 | [Chilly Chile Paloma](./chilly_chile_paloma.md)               |        0 | <!-- TODO: Capture image -->                                                                |
-| [Coffee](./coffee.md)                                         |        1 | ![coffee.jpeg](./coffee.jpeg){: .image-toc loading=lazy }                                   |
+| [Coffee](./coffee.md)                                         |        4 | ![coffee.jpeg](./coffee.jpeg){: .image-toc loading=lazy }                                   |
 | [Eggnog](./eggnog.md)                                         |        0 | <!-- TODO: Capture image -->                                                                |
 | [Margarita](./margarita.md)                                   |        3 | ![margarita.jpg](./margarita.jpg){: .image-toc loading=lazy }                               |
 | [Mock-A-Rita](./mock-a-rita.md)                               |        0 | <!-- TODO: Capture image -->                                                                |

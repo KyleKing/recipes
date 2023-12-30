@@ -14,7 +14,6 @@
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/dessert/pineapple_upside_down_cake.md:13](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/dessert/pineapple_upside_down_cake.md#L16)                       |
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/drinks/between_the_sheets.md:11](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/drinks/between_the_sheets.md#L14)                                         |
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/drinks/chilly_chile_paloma.md:13](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/drinks/chilly_chile_paloma.md#L16)                                       |
-| TODO   | To make ice coffee...                                                                 | 2022-02-20  | [docs/drinks/coffee.md:29](https://github.com/KyleKing/recipes/blame/7308849bf0d83ec329a3f1cf4f38b58401992e8c/docs/drinks/coffee.md#L29)                                                                 |
 | TODO   | Capture image -->                                                                     | 2021-01-17  | [docs/drinks/eggnog.md:13](https://github.com/KyleKing/recipes/blame/d3efdf41b90b163fbc58c10290088faf4eb21173/docs/drinks/eggnog.md#L14)                                                                 |
 | TODO   | Capture image -->                                                                     | 2021-05-16  | [docs/drinks/mock-a-rita.md:13](https://github.com/KyleKing/recipes/blame/ab60a24d31738a63c6c864a175e4507bc7807f5c/docs/drinks/mock-a-rita.md#L14)                                                       |
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/drinks/pina_colada.md:13](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/drinks/pina_colada.md#L16)                                                       |
@@ -54,6 +53,6 @@
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/veggie/karens_roasted_veggie_bowls.md:11](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/veggie/karens_roasted_veggie_bowls.md#L14)                       |
 | TODO   | Capture image -->'                                                                    | 2023-09-13  | [recipes/formatter.py:83](https://github.com/KyleKing/recipes/blame/2317785c860e44cafe43bab5bc11f3d1ad5984b8/recipes/formatter.py#L87)                                                                   |
 
-Found code tags for FIXME (2), TODO (49)
+Found code tags for FIXME (2), TODO (48)
 
 <!-- calcipy_skip_tags -->

@@ -1,8 +1,8 @@
 # Coffee
 
-<!-- {cts} rating=1; (User can specify rating on scale of 1-5) -->
+<!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
 
-Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 
 <!-- {cte} -->
 
@@ -21,9 +21,13 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 ## Recipe
 
-- Use the formula to make *n* cups of coffee
-    - 3x heaping tablespoons (*n + 1*)
-    - fill to 2 line for water (*n*)
-    - 2 tsp coffee mate
+- Per cup of coffee:
+    - 2 scoops of ground coffee
+    - fill to the "2" line for water
+    - switch to the "mug" setting, if making a single cup
+    - Add 2 tsp coffee mate
     - 1.5 tsp sugar
-- TODO: To make ice coffee...
+- To make ice coffee:
+    - Fill a small cup with ice
+    - Fill with ice coffee
+    - Add a small amount of creamer to taste
