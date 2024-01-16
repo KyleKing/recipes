@@ -2,6 +2,7 @@
 
 ### Feat
 
+- add grinder_salad_sandwich
 - add garlic rice and new links
 - simplify the pizza recipe
 - add the Creamy Orzo Skillet

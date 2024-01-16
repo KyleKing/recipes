@@ -2,9 +2,9 @@
 
 > Based on [https://www.youtube.com/watch?v=ge49xawecJk](https://www.youtube.com/watch?v=ge49xawecJk)
 
-<!-- {cts} rating=1; (User can specify rating on scale of 1-5) -->
+<!-- {cts} rating=3; (User can specify rating on scale of 1-5) -->
 
-Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
 <!-- {cte} -->
 
@@ -24,3 +24,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 ## Recipe
 
 - Don't skimp on the butter
+- Needs something *more* for more flavor
