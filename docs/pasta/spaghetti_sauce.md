@@ -28,8 +28,8 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ### Remaining Ingredients
 
-- [ ] 3 lbs whole tomatoes (2-3 cans)
-- [ ] 1 large can of water
+- [ ] 3 lbs whole peeled tomatoes (2-3 cans)
+- [ ] 1 large can of water (using the large whole tomato can)
 - [ ] 12 oz tomato paste (2 cans)
 - [ ] 1 tbsp basil
 - [ ] 1 tbsp Worcestershire sauce (they use a lot)
