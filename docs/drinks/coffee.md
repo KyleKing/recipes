@@ -14,10 +14,14 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-- [ ] Starbucks Dark Roast Unsweetened Iced Coffee (Purple Band, Green Lid)
-- [ ] Stok Unsweetened Extra Bold Cold Brew (Vertical Purple Strip)
-- [ ] Original Nestle Coffee Mate
-- [ ] Caramel Macchiato International Delight Coffee Creamer
+- Hot Coffee
+    - [ ] Starbucks Cafe Verona
+- Iced
+    - [ ] Starbucks Dark Roast Unsweetened Iced Coffee (Purple Band, Green Lid)
+    - [ ] Stok Unsweetened Extra Bold Cold Brew (Vertical Purple Strip)
+- Accompaniements
+    - [ ] Original Nestle Coffee Mate
+    - [ ] Caramel Macchiato International Delight Coffee Creamer
 
 ## Recipe
 

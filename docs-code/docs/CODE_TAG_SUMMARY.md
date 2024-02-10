@@ -7,6 +7,7 @@
 | TODO   | Capture image -->                                                                     | 2021-10-13  | [docs/bread/pretzels.md:13](https://github.com/KyleKing/recipes/blame/d5a88aa3d80486c6c9b1362019669555740e3326/docs/bread/pretzels.md#L10)                                                               |
 | TODO   | Capture image -->                                                                     | 2023-07-06  | [docs/breakfast/chia_seed_pudding.md:13](https://github.com/KyleKing/recipes/blame/f213c39fb2cb16cab5c91601e9ff1ff3a8314423/docs/breakfast/chia_seed_pudding.md#L13)                                     |
 | TODO   | Capture image -->                                                                     | 2021-05-15  | [docs/breakfast/hash.md:13](https://github.com/KyleKing/recipes/blame/1d45449107e86f3843a3051a6e3a4d43b060cea4/docs/breakfast/hash.md#L14)                                                               |
+| TODO   | Capture image -->                                                                     | 2024-01-22  | [docs/breakfast/lox_sandwich.md:13](https://github.com/KyleKing/recipes/blame/e9ccc5f0b286e07ad99b6178dca3e0a6ed6c928c/docs/breakfast/lox_sandwich.md#L13)                                               |
 | TODO   | Capture image -->                                                                     | 2023-08-30  | [docs/breakfast/oatmeal.md:11](https://github.com/KyleKing/recipes/blame/59829f32368df14b9635fc72925fd56c6add0c03/docs/breakfast/oatmeal.md#L11)                                                         |
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/dessert/baked_apples.md:13](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/dessert/baked_apples.md#L16)                                                   |
 | FIXME  | Need to implement admonitions: https://github.com/executablebooks/mdformat/issues/309 | 2022-02-27  | [docs/dessert/chocolatines.md:36](https://github.com/KyleKing/recipes/blame/c17d66310b9f5d71e35530942f124df79c8fa500/docs/dessert/chocolatines.md#L36)                                                   |
@@ -53,6 +54,6 @@
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/veggie/karens_roasted_veggie_bowls.md:11](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/veggie/karens_roasted_veggie_bowls.md#L14)                       |
 | TODO   | Capture image -->'                                                                    | 2023-09-13  | [recipes/formatter.py:83](https://github.com/KyleKing/recipes/blame/2317785c860e44cafe43bab5bc11f3d1ad5984b8/recipes/formatter.py#L87)                                                                   |
 
-Found code tags for FIXME (2), TODO (48)
+Found code tags for FIXME (2), TODO (49)
 
 <!-- calcipy_skip_tags -->

@@ -2,7 +2,7 @@
 
 | Link                                                                                            |   Rating | Image                                                                                                                               |
 |:------------------------------------------------------------------------------------------------|---------:|:------------------------------------------------------------------------------------------------------------------------------------|
-| [Broccoli Cheddar Chicken And Rice Casserole](./broccoli_cheddar_chicken_and_rice_casserole.md) |        3 | ![broccoli_cheddar_chicken_and_rice_casserole.jpeg](./broccoli_cheddar_chicken_and_rice_casserole.jpeg){: .image-toc loading=lazy } |
+| [Broccoli Cheddar Chicken And Rice Casserole](./broccoli_cheddar_chicken_and_rice_casserole.md) |        5 | ![broccoli_cheddar_chicken_and_rice_casserole.jpeg](./broccoli_cheddar_chicken_and_rice_casserole.jpeg){: .image-toc loading=lazy } |
 | [Burgers](./burgers.md)                                                                         |        2 | ![burgers.jpeg](./burgers.jpeg){: .image-toc loading=lazy }                                                                         |
 | [Burrito](./burrito.md)                                                                         |        5 | <!-- TODO: Capture image -->                                                                                                        |
 | [Green Pepper And Feta](./green_pepper_and_feta.md)                                             |        5 | ![green_pepper_and_feta.jpeg](./green_pepper_and_feta.jpeg){: .image-toc loading=lazy }                                             |
