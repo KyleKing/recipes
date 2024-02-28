@@ -18,24 +18,27 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 - [ ] 14 ounces sausage
 - [ ] 1/2 medium yellow onion, chopped
-- [ ] 1 can corn
-- [ ] 1 can diced tomatoes
+- [ ] 1/4 tsp salt
+- [ ] 1/2 tsp garlic powder
+- [ ] 1 can corn, drained
+- [ ] 1 can diced tomatoes, with liquid
 - [ ] 1 cup dry orzo
 - [ ] 3 cups low sodium chicken broth
-- [ ] 3 cups packed baby spinach
-- [ ] 1/4 cup freshly grated parmesan
+- [ ] frozen peas
+- [ ] 1/4 cup freshly grated Parmesan
 - [ ] black pepper
-- [ ] Optionally add Garlic, Thyme, Italian, etc.
+- [ ] Optionally add Zucchini or other vegetables with the peas
+- [ ] Optionally add Thyme, Italian seasoning, etc.
 
 ## Recipe
 
-- Remove the sausage from the casing and cook in a Dutch oven for 5 minutes on medium-high heat
-- Add the onion, corn, and tomatoes and saute for 10 minutes
-- Add the orzo and chicken broth, stir to combine then bring to a boil
+- Remove the sausage from the casing, break up, and cook in a Dutch oven for 5 minutes on medium-high heat
+- Add the onion, salt, and garlic powder and saute until golden (~5 min)
+- Add the corn and tomatoes and cook until reduced (~10 min)
+- Add the orzo, chicken broth, frozen peas, and any additional seasonings (such as 1 tsp Italian) stir to combine then bring to a boil
 - Reduce heat to medium-low and simmer 10 minutes; stir and scrape the bottom a few times to keep orzo from sticking
-- Remove from the heat, add the spinach, stir and cover for a couple minutes, until the spinach has wilted
-- Top with freshly grated parmesan and black pepper
+- Top with freshly grated Parmesan and black pepper
 
 ## Notes
 
-- Related to the [Broccoli Cheddar Chicken and Rice Casserole](../meals/broccoli_cheddar_chicken_and_rice_casserole.md)
+Related to the [Broccoli Cheddar Chicken and Rice Casserole](../meals/broccoli_cheddar_chicken_and_rice_casserole.md) and the [ZUcchini Pasta](../pasta/pasta_with_corn_zucchini_and_tomatoes.md)
