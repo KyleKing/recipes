@@ -7,7 +7,7 @@ from beartype import beartype
 from calcipy.file_search import find_project_files_by_suffix
 from calcipy.invoke_helpers import get_doc_subdir, get_project_path
 from calcipy.md_writer import write_autoformatted_md_sections
-from calcipy.md_writer._writer import _parse_var_comment
+from calcipy.md_writer._writer import _parse_var_comment  # noqa: PLC2701
 from corallium.log import logger
 from pydantic import BaseModel, Field
 

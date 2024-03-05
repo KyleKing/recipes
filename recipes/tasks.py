@@ -5,7 +5,7 @@ from pathlib import Path
 from beartype import beartype
 from calcipy.cli import task
 from calcipy.invoke_helpers import run
-from calcipy.tasks.all_tasks import _MAIN_TASKS, ns, with_progress
+from calcipy.tasks.all_tasks import _MAIN_TASKS, ns, with_progress  # noqa: PLC2701
 from corallium.log import logger
 from invoke.context import Context
 from PIL import Image
