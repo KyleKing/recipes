@@ -42,7 +42,7 @@ repos:
       - id: trailing-whitespace
         exclude: __snapshots__/.*\.ambr
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v3.13.0
+    rev: v3.16.0
     hooks:
       - id: commitizen
         additional_dependencies: ["cz-legacy"]
@@ -50,7 +50,9 @@ repos:
     rev: 0.7.17
     hooks:
       - id: mdformat
-        additional_dependencies: ["mdformat-mkdocs[recommended]>=1.1.1"]
+        additional_dependencies:
+          - "mdformat-mkdocs[recommended]>=1.1.1"
+          - "mdformat-wikilink"
         args: [--wrap=no]
         exclude: _.+\.md|CHANGELOG\.md|CODE_TAG_SUMMARY\.md
   - repo: https://github.com/shellcheck-py/shellcheck-py
@@ -69,7 +71,7 @@ repos:
         exclude: \.copier-answers\.yml|tests/.*/cassettes/.*\.yaml
         types_or: [html, javascript, json, shell, yaml]
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.33.0
+    rev: v1.35.1
     hooks:
       - id: yamllint
         exclude: tests/.*/cassettes/.*\.yaml
@@ -77,13 +79,6 @@ repos:
     rev: v0.23.1
     hooks:
       - id: toml-sort-fix
-        args:
-          [
-            --in-place,
-            --all,
-            --trailing-comma-inline-array,
-            --sort-first=python,
-          ]
         exclude: poetry\.lock
   - repo: https://github.com/MarcoGorelli/absolufy-imports
     rev: v0.3.1
@@ -92,7 +87,7 @@ repos:
         args: [--never]
         files: recipes/.*\.py
   - repo: https://github.com/KyleKing/calcipy
-    rev: 2.0.3
+    rev: 2.0.4
     hooks:
       - id: copier-forbidden-files
       - id: lint-fix
