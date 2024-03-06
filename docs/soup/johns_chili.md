@@ -35,7 +35,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 1 tsp garlic powder
 - [ ] 1 tsp onion powder
 - [ ] 1 tsp paprika
-- [ ] 1 tsp ground tumeric
+- [ ] 1 tsp ground turmeric
 - [ ] 1 tsp salt
 - [ ] 1 tsp white sugar
 

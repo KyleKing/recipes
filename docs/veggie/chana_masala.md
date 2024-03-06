@@ -36,9 +36,9 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 - [ ] 1 tsp coriander
 - [ ] ~1/3 tbsp ground cumin
 - [ ] 1/4 tsp cayenne pepper
-- [ ] 1/4 tsp ground tumeric
+- [ ] 1/4 tsp ground turmeric
 - [ ] ~1/3 tbsp sweet paprika
-- [ ] ~1/3 tbsp garam masala ([../sides/spices_garam_masala.md]([../sides/spices_garam_masala.md]))
+- [ ] ~1/3 tbsp garam masala ([../sides/spices_garam_masala.md](../sides/spices_garam_masala.md))
 - [ ] 1 small (15oz) can whole tomatoes and liquid
 - [ ] 1/3 cup water
 

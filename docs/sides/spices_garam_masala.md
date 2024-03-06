@@ -20,7 +20,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 1 tsp ground cardamom
 - [ ] 1 tsp ground coriander
 - [ ] 3/4 tsp ground black pepper
-- [ ] 3/4 tsp tumeric
+- [ ] 3/4 tsp turmeric
 - [ ] 1/2 tsp ground cinnamon
 - [ ] 1/4 tsp ground cloves
 - [ ] 1/4 tsp ground nutmeg
