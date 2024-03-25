@@ -4,7 +4,6 @@
 |:------------------------------------------------------------------------------|---------:|:------------------------------------------------------------------------------------------------------------------|
 | [Chicken Cacciatore](./chicken_cacciatore.md)                                 |        5 | ![chicken_cacciatore.jpg](./chicken_cacciatore.jpg){: .image-toc loading=lazy }                                   |
 | [Chicken Salad Sandwich](./chicken_salad_sandwich.md)                         |        0 | <!-- TODO: Capture image -->                                                                                      |
-| [Chicken Shawarma](./chicken_shawarma.md)                                     |        0 | <!-- TODO: Capture image -->                                                                                      |
 | [Chicken Tacos](./chicken_tacos.md)                                           |        4 | ![chicken_tacos.jpg](./chicken_tacos.jpg){: .image-toc loading=lazy }                                             |
 | [Enchiladas](./enchiladas.md)                                                 |        5 | ![enchiladas.jpg](./enchiladas.jpg){: .image-toc loading=lazy }                                                   |
 | [Fajitas](./fajitas.md)                                                       |        1 | ![fajitas.jpg](./fajitas.jpg){: .image-toc loading=lazy }                                                         |
