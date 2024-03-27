@@ -13,8 +13,8 @@ development_branch: main
 doc_dir: docs-code
 extends_calcipy: true
 install_extras: ''
-minimum_python: 3.11.2
-minimum_python_short: '3.11'
+minimum_python: 3.12.0
+minimum_python_short: '3.12'
 package_name_py: recipes
 project_description: Kyle and Alex's Personal Recipes
 project_name: recipes

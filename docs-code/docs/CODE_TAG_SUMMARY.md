@@ -29,7 +29,6 @@
 | TODO   | Capture image -->                                                                     | 2023-07-06  | [docs/meals/smoked_turkey_reuben.md:13](https://github.com/KyleKing/recipes/blame/f213c39fb2cb16cab5c91601e9ff1ff3a8314423/docs/meals/smoked_turkey_reuben.md#L13)                             |
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/pasta/classic_pasta_and_mushrooms.md:13](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/pasta/classic_pasta_and_mushrooms.md#L16)               |
 | TODO   | Capture image -->                                                                     | 2023-07-16  | [docs/poultry/chicken_salad_sandwich.md:11](https://github.com/KyleKing/recipes/blame/74e7077a29a0d9b0b44a97479e210a25a2422c30/docs/poultry/chicken_salad_sandwich.md#L11)                     |
-| TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/poultry/chicken_shawarma.md:13](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/poultry/chicken_shawarma.md#L16)                                 |
 | TODO   | Capture image -->                                                                     | 2023-11-13  | [docs/poultry/poached_chicken.md:13](https://github.com/KyleKing/recipes/blame/da0c43ec2e47f0405f3f75b2f3f9aadf89d1aab5/docs/poultry/poached_chicken.md#L13)                                   |
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/seafood/oven_baked_fish_with_tomatoes.md:13](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/seafood/oven_baked_fish_with_tomatoes.md#L16)       |
 | TODO   | Capture image -->                                                                     | 2023-12-08  | [docs/sides/garlic_rice.md:13](https://github.com/KyleKing/recipes/blame/8844e251c145bd748f99e3cb7f074478859eaa80/docs/sides/garlic_rice.md#L13)                                               |
@@ -51,6 +50,6 @@
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/veggie/karens_roasted_veggie_bowls.md:11](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/veggie/karens_roasted_veggie_bowls.md#L14)             |
 | TODO   | Capture image -->'                                                                    | 2023-09-13  | [recipes/formatter.py:83](https://github.com/KyleKing/recipes/blame/2317785c860e44cafe43bab5bc11f3d1ad5984b8/recipes/formatter.py#L87)                                                         |
 
-Found code tags for FIXME (2), TODO (46)
+Found code tags for FIXME (2), TODO (45)
 
 <!-- calcipy_skip_tags -->

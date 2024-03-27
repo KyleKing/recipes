@@ -14,6 +14,8 @@
 
 ### Fix
 
+- correct links to Garam Masala recipe
+- ignore linting warning
 - use the new ignore_patterns configuration
 - upgrade with copier
 - update cz-legacy for breaking changes
@@ -26,6 +28,7 @@
 
 ### Refactor
 
+- remove Chicken Shawarma
 - apply rating deflation
 - remove BUMP_RATING
 - rename the burrito recipe

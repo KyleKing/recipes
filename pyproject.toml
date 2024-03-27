@@ -28,7 +28,7 @@ classifiers = [
   "Development Status :: 5 - Production/Stable",
   "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
-  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
 ] # https://pypi.org/classifiers/
 description = "Kyle and Alex's Personal Recipes"
 documentation = "https://recipes.kyleking.me"
@@ -42,7 +42,7 @@ repository = "https://github.com/kyleking/recipes"
 version = "0.4.0"
 
 [tool.poetry.dependencies]
-python = "^3.11.2"
+python = "^3.12.0"
 corallium = ">=0.3.3"
 cz-legacy = ">=1.0.0"
 mkdocs-live-edit-plugin = ">=0.1.2"
@@ -60,7 +60,7 @@ recipes = "recipes.scripts:start"
 
 [tool.pyright]
 include = ["recipes"]
-pythonVersion = "3.11"
+pythonVersion = "3.12"
 
 [tool.tomlsort]
 all = true
