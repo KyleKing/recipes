@@ -8,9 +8,9 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cte} -->
 
-<!-- {cts} name_image=None; (User can specify image name) -->
+<!-- {cts} name_image=chickpea_tikka_masala.jpeg; (User can specify image name) -->
 
-<!-- TODO: Capture image -->
+![chickpea_tikka_masala.jpeg](./chickpea_tikka_masala.jpeg){: .image-recipe loading=lazy }
 
 <!-- {cte} -->
 
