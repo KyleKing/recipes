@@ -41,7 +41,6 @@
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/sushi/shrimp_and_avocado.md:13](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/sushi/shrimp_and_avocado.md#L16)                                 |
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/sushi/smoked_salmon_nigiri.md:13](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/sushi/smoked_salmon_nigiri.md#L16)                             |
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/sushi/vegetable_rolls.md:11](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/sushi/vegetable_rolls.md#L14)                                       |
-| TODO   | Capture image -->                                                                     | 2022-05-30  | [docs/veggie/cauliflower_and_chickpea_masala.md:13](https://github.com/KyleKing/recipes/blame/023b712e93140089dc39e26d1b885a83d2016281/docs/veggie/cauliflower_and_chickpea_masala.md#L13)     |
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/veggie/crispy_baked_sweet_potato_fries.md:13](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/veggie/crispy_baked_sweet_potato_fries.md#L16)     |
 | TODO   | Capture image -->                                                                     | 2023-07-06  | [docs/veggie/crispy_tofu_and_zucchini_stir_fry.md:13](https://github.com/KyleKing/recipes/blame/f213c39fb2cb16cab5c91601e9ff1ff3a8314423/docs/veggie/crispy_tofu_and_zucchini_stir_fry.md#L13) |
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/veggie/green_chile_mac.md:13](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/veggie/green_chile_mac.md#L16)                                     |
@@ -50,6 +49,6 @@
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/veggie/karens_roasted_veggie_bowls.md:11](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/veggie/karens_roasted_veggie_bowls.md#L14)             |
 | TODO   | Capture image -->'                                                                    | 2023-09-13  | [recipes/formatter.py:83](https://github.com/KyleKing/recipes/blame/2317785c860e44cafe43bab5bc11f3d1ad5984b8/recipes/formatter.py#L87)                                                         |
 
-Found code tags for FIXME (2), TODO (45)
+Found code tags for FIXME (2), TODO (44)
 
 <!-- calcipy_skip_tags -->
