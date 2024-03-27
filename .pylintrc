@@ -2,7 +2,7 @@
 enable-all-extensions=yes
 fail-under=8
 ignore=tests
-py-version=3.11
+py-version=3.12
 suggestion-mode=yes
 
 load-plugins=
