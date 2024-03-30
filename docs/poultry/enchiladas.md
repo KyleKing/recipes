@@ -17,12 +17,13 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ### Core
 
 - [ ] Rotisserie chicken
-- [ ] Tortillas
+- [ ] Burrito size Tortillas
 - [ ] 1-2 cans of enchilada sauce (~20 oz)
 - [ ] 1 or 2 cans of black beans, strained
 - [ ] Can of diced green chilies
-- [ ] Shredded cheese
+- [ ] 1/2 lb. Shredded Mexican cheese
 - [ ] Optional diced onions, diced tomatoes (drained), spinach, or other vegetables
+- [ ] Sour cream, for serving
 
 ### Vegetarian
 
