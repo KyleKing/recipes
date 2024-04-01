@@ -22,7 +22,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 1 medium yellow onion, diced
 - [ ] 1/2 tsp ground ginger
 - [ ] 3 cloves garlic, minced
-- [ ] 1 tbsp garam masala ([../sides/spices_garam_masala.md](../sides/spices_garam_masala.md))
+- [ ] 1 tbsp garam masala ([../sides/spices_garam_masala.md](../meals/spices_garam_masala.md))
 - [ ] 1/4 tsp ground cayenne pepper
 - [ ] 2x 15 oz can chickpeas, rinsed and drained
 - [ ] 1 28oz can of crushed tomatoes

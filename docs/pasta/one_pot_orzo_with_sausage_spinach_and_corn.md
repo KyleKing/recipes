@@ -41,4 +41,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Notes
 
-Related to the [Broccoli Cheddar Chicken and Rice Casserole](../meals/broccoli_cheddar_chicken_and_rice_casserole.md) and the [ZUcchini Pasta](../pasta/pasta_with_corn_zucchini_and_tomatoes.md)
+Related to the [Broccoli Cheddar Chicken and Rice Casserole](../poultry/broccoli_cheddar_chicken_and_rice_casserole.md) and the [Zucchini Pasta](../pasta/pasta_with_corn_zucchini_and_tomatoes.md)
