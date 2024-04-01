@@ -28,6 +28,10 @@
 
 ### Refactor
 
+- move poultry/seafood recipes appropriately
+- merge sides into meals
+- merge veggies into meals
+- merge rice into meals
 - remove Chicken Shawarma
 - apply rating deflation
 - remove BUMP_RATING
