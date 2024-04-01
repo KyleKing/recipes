@@ -11,3 +11,4 @@
 | [Shrimp Scampi](./shrimp_scampi.md)                                     |        3 | ![shrimp_scampi.jpeg](./shrimp_scampi.jpeg){: .image-toc loading=lazy }                                     |
 | [Shrimp Tacos](./shrimp_tacos.md)                                       |        4 | ![shrimp_tacos.jpg](./shrimp_tacos.jpg){: .image-toc loading=lazy }                                         |
 | [Spicy Salmon Roll Bowls](./spicy_salmon_roll_bowls.md)                 |        4 | ![spicy_salmon_roll_bowls.jpeg](./spicy_salmon_roll_bowls.jpeg){: .image-toc loading=lazy }                 |
+| [Tuna Melts](./tuna_melts.md)                                           |        1 | ![tuna_melts.jpg](./tuna_melts.jpg){: .image-toc loading=lazy }                                             |
