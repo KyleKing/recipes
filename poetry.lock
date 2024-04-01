@@ -474,14 +474,14 @@ files = [
 toml = ["tomli"]
 
 [[package]]
-name = "cz-legacy"
-version = "1.0.0"
+name = "cz_legacy"
+version = "1.0.1"
 description = "Extends Conventional Commits Change Types with User-Defined Legacy Types for Commitizen"
 optional = false
-python-versions = ">=3.7,<4.0"
+python-versions = "<4.0,>=3.7"
 files = [
-    {file = "cz_legacy-1.0.0-py3-none-any.whl", hash = "sha256:058462800c5920f58917d39b0bac31011a076447de13fde9b4b69c235cce8566"},
-    {file = "cz_legacy-1.0.0.tar.gz", hash = "sha256:7a381f34419f7612d0b047141ad1bdf6809ed242bcf757ad524cc494954c193d"},
+    {file = "cz_legacy-1.0.1-py3-none-any.whl", hash = "sha256:79c617c6c4485c464d8ec7a2a6a600bacd8f0373c893cc75412fa7b567b21199"},
+    {file = "cz_legacy-1.0.1.tar.gz", hash = "sha256:d7b9db3f4cae98687070a29d5dad7d4527eaa2d86f8c94153b0b6537db028c19"},
 ]
 
 [package.dependencies]
@@ -2437,4 +2437,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12.0"
-content-hash = "10afafaa9c2a5a4c270fad4134932264ee55f9eaddf8b72eceed42c53eb96745"
+content-hash = "32b25961639f8c375582fbebd514c6dcafe93445c2f70a83dbc354910ee2ad07"
