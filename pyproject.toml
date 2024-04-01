@@ -43,13 +43,22 @@ version = "0.4.0"
 
 [tool.poetry.dependencies]
 python = "^3.12.0"
+commitizen = "3.21.2" # HACK: until <https://github.com/commitizen-tools/commitizen/issues/1046>
 corallium = ">=0.3.3"
 cz-legacy = ">=1.0.0"
 mkdocs-live-edit-plugin = ">=0.1.2"
 optimize-images = ">=1.5.1"
 
 [tool.poetry.group.dev.dependencies]
-calcipy = {extras = ["doc", "lint", "nox", "stale", "tags", "test", "types"], version = ">=2.0.1"}
+calcipy = {extras = [
+  "doc",
+  "lint",
+  "nox",
+  "stale",
+  "tags",
+  "test",
+  "types",
+], version = ">=2.0.1"}
 
 [tool.poetry.scripts]
 recipes = "recipes.scripts:start"
