@@ -16,15 +16,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-### Poached Chicken
-
-- [ ] 4 boneless, skinless chicken thighs (1.5 - 2 lbs)
-- [ ] Salt to taste
-- [ ] 2 bay leaves
-
-### Pot Pie
-
-- [ ] Shredded Chicken, cooked (See [./poached_chicken.md](./poached_chicken.md))
+- [ ] Shredded Chicken, cooked (Follow [./poached_chicken.md](./poached_chicken.md) or use a Rotisserie Chicken)
 - [ ] Bag of frozen peas
 - [ ] 4-medium carrots, coined
 - [ ] 1 10.5 oz can of *condensed* cream of chicken soup
