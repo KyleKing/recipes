@@ -401,11 +401,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://recipes.kyleking.me/meals/emily_english_roasted_potatoes/</loc>
-         <lastmod>2024-04-17</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://recipes.kyleking.me/meals/falafel_pitas_with_cilantro_cashew_sauce/</loc>
          <lastmod>2024-04-17</lastmod>
          <changefreq>daily</changefreq>
@@ -507,6 +502,11 @@
     </url>
     <url>
          <loc>https://recipes.kyleking.me/meals/quesadillas/</loc>
+         <lastmod>2024-04-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://recipes.kyleking.me/meals/roasted_potatoes/</loc>
          <lastmod>2024-04-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
