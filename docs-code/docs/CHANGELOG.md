@@ -2,6 +2,7 @@
 
 ### Feat
 
+- add Chicken Pot Pie
 - add grinder_salad_sandwich
 - add garlic rice and new links
 - simplify the pizza recipe
