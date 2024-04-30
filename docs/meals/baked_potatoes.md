@@ -17,7 +17,6 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Ingredients
 
 - [ ] 2-4 Russet Potatoes, scrubbed clean
-- [ ] olive oil
 - [ ] 1 tsp salt
 - [ ] Grated cheese, black pepper, sour cream, chives, parsley, etc. for serving
 
@@ -28,8 +27,8 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - Preheat the oven to 450F
 - Scrub, wash, and dry the potatoes
 - Poke each with a fork to allow steam to escape
-- Rub oil and salt over the potatoes
-- Bake on a baking sheet for 1.5-2 hours or until tender inside (45 minutes for smaller potatoes)
+- Add a small amount of salt
+- Bake on a baking sheet for 1.5 hours or until tender inside (45 minutes for smaller potatoes)
 - Top with cheese, black pepper, and sour cream
 
 ### Instant Pot
