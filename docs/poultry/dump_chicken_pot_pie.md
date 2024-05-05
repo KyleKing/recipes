@@ -18,7 +18,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 - [ ] Shredded Chicken, cooked (Follow [./poached_chicken.md](./poached_chicken.md) or use a Rotisserie Chicken)
 - [ ] Bag of frozen peas
-- [ ] 4-medium carrots, coined
+- [ ] 4-medium carrots, coined and halved
 - [ ] 1 10.5 oz can of *condensed* cream of chicken soup
 - [ ] 1 10.5 oz can of *condensed* cream of mushroom soup
 - [ ] 1x 8" tube of Crescent Roll Dough
@@ -31,4 +31,3 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - Carefully unroll 1 tube of crescent roll dough and lay over the filling (note: the dough doesn't need to reach the edges of the dish). Rub the reserved cream soup over the dough
 - Bake until golden-brown and bubbling, about 30 min
     - If the dough has browned, but the filling isn't warmed, tent with aluminum foil
-- Let cool for 5 to 10 minutes before serving
