@@ -37,7 +37,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - Radishes
 - Sliced Pickled Beets
 
-## Notes
+### Notes
 
 - Typically, cut tomatoes into orange-sized slices
 - Dressings: Ken's Steak House LITE Northern Italian or LITE Zesty Italian
@@ -48,3 +48,18 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
     - Mix in grains such as Quinoa, couscous, brown rice, farro, etc.
     - Make sure to add spinach, mustard greens, and kale
     - Add melons, pears, etc.
+
+## More
+
+From the [Washington Post](https://www.washingtonpost.com/food/interactive/2022/build-salad-tool-ingredients-dressings/?itid=mc_magnet-salad_inline_collection_2), this is the ideal ratio:
+
+- [ ] 6 to 8 cups greens (romaine, spinach, arugula/radicchio, kale/cabbage, etc.)
+- [ ] 1 to 2 cups proteins (grilled chicken or tofu, hard boiled eggs, salmon, shrimp, cooked beans or lentils)
+- [ ] 1/4 to 1/2 cup crunch (croutons; pumpkin or sunflower seeds; chopped walnuts, pecans, or almonds; chopped cucumber, carrots, or snow peas; crispy bacon, chickpeas, etc.)
+- [ ] 1/2 to 1 cup acidity (pickled onions, pepperoncini, chopped tomatoes, dried cranberries or cherries, feta or aged cheese, pomegranate seeds)
+- [ ] 1/2 cup richness (avocado, brie, burrata, hummus, cooked baby potatoes, thinly sliced prosciutto or ham)
+- [ ] 1/4 to 1/2 cup dressing (from vinaigrette to tahini)
+
+Some [examples for Spring](https://www.washingtonpost.com/food/2024/04/29/salad-recipes-spring-dinner-hearty)
+
+For a broader framework, see [https://newsletter.ethanchlebowski.com/p/satisfying-salad-blueprint](https://newsletter.ethanchlebowski.com/p/satisfying-salad-blueprint)
