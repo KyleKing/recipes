@@ -1,5 +1,7 @@
 # Enchiladas
 
+> Based on multiple recipes, like this one: [https://12tomatoes.com/spinach-and-cheese-enchiladas](https://12tomatoes.com/spinach-and-cheese-enchiladas)
+
 <!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
@@ -22,7 +24,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 1 or 2 cans of black beans, strained
 - [ ] Can of diced green chilies
 - [ ] 1/2 lb. Shredded Mexican cheese
-- [ ] Optional diced onions, diced tomatoes (drained), spinach, or other vegetables
+- [ ] (optional) diced onions, diced tomatoes (drained), spinach, or other vegetables
 - [ ] Sour cream, for serving
 
 ### Vegetarian
@@ -42,7 +44,7 @@ The chicken can be substituted with all veggies based on [https://cookieandkate.
 
 - Bake the chicken (if not already cooked)
 - Preheat the oven to 375F
-- Roll the cooked chicken, cheese, beans, and other vegetables with the flap side down, then pour enchilada sauce over top
+- Roll the cooked chicken, cheese, beans, and other vegetables into burritos. Place flap side down and then pour enchilada sauce over top
 - Bake for 25 minutes
 
 ### Vegetarian
@@ -52,7 +54,3 @@ The chicken can be substituted with all veggies based on [https://cookieandkate.
 - Add the cumin and cinnamon
 - Add the spinach in handfuls and heat until all wilted
 - Spoon into each enchilada in place of the chicken
-
-## Notes
-
-- See Enchilada recipe variation with sour cream
