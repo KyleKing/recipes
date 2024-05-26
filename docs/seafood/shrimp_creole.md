@@ -1,8 +1,10 @@
 # Shrimp Creole
 
-<!-- {cts} rating=3; (User can specify rating on scale of 1-5) -->
+> Alex's grandfather's recipe
 
-Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
+<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
+
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
 <!-- {cte} -->
 
@@ -15,29 +17,37 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Ingredients
 
 - [ ] 1 (32 oz) can of tomato sauce
-- [ ] 1/2 stick butter
+- [ ] 4 tbsp butter (1/2 stick)
 - [ ] 1.5 onions, diced
-- [ ] 1.5 stalks celery, half rings
+- [ ] 1.5 stalks celery, half rings (*or 1 carrot, diced*)
 - [ ] 1.5 garlic cloves
 - [ ] 1 (15 oz) can whole tomatoes, cut into quarters (with scissors)
-- [ ] 1 bay leaf
-- [ ] 1/2 tsp Tabasco sauce
-- [ ] 1/2 tbsp fresh thyme
-- [ ] 1/4 bunch parsley, chopped (about 1-2 tsp)
+- [ ] Baked Spices
+    - [ ] 1 bay leaf
+    - [ ] 1/2 tsp Tabasco sauce
+    - [ ] 1/2 tbsp fresh thyme (1.5 tsp dry)
+- [ ] (Added after baking) 1/4 bunch parsley, chopped (1.5 tsp dry)
 - [ ] 1 lbs raw shrimp, peeled and deveined
-- [ ] pinch of saffron and white rice OR side baguette
+- [ ] 2 cups white rice and saffron *OR* a baguette, toasted in the oven
 
 ## Recipe
 
-- Reduce tomato sauce by 3/4 (bake uncovered in 350 oven - ~90 minutes). Add water back to original volume
-- In butter, saute the onion, celery, and garlic
-- Add sauted ingredients, sliced tomatoes, and spices to the pot with tomato sauce from the oven
-- Bake covered for 30 min; uncover and bake for 30 additional minutes
+- (\*Before starting, ensure the shrimp is peeled and ready and defrost if needed)
+- Pour the can of tomato sauce into an enameled dutch oven. Bake uncovered for 90 min at 350 degrees
+- While reducing, dice the onion and carrot. Set aside
+- With 20m remaining, melt the butter in a large pan and toast the garlic until aromatic (1 min)
+    - Add the onion and carrot and saute until softened
+- Once the sauce is done, restore 3/4 of the volume with water (e.g. 28 oz water for 32 oz sauce)
+    - Add the spices, chopped tomatoes, and sauteed vegetables to the pot
+    - Cover the pot and return to the oven for 30 min
+    - Uncover and bake for 30 additional minutes
 - (\*Can stop here to store overnight in the fridge)
-- (Optional) Prep white rice. Add the pinch of saffron before starting the rice cooker and stir. Once done, the rice should be bright yellow
-- Bring to a boil. Add parsley and shrimp then cook for 5 more minutes. Serve over warm saffron rice or with a baguette
+- For the saffron rice, mix rice, water, and the pinches of saffron in a rice cooker
+- On the stove top, bring the pot to a boil. Add the parsley and shrimp and cook for at most 5 min or until the shrimp reach 145 degrees
+- Serve over warm saffron rice or with a side baguette
 
 ## Notes
 
-- Alex's family recipe
-- This recipe has been cut in half to serve 3-4 people
+- Total cook time is around 3 hours
+- This recipe has been cut in half to serve 3-4 people instead of 8
+- We typically buy frozen shrimp that need to be peeled. If so, defrost overnight in the fridge so that they can be peeled before cooking
