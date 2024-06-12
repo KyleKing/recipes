@@ -43,13 +43,13 @@ version = "0.4.0"
 
 [tool.poetry.dependencies]
 python = "^3.12.0"
-corallium = ">=1.0.0"
+corallium = ">=2.0.0"
 cz-legacy = ">=1.0.1"
 mkdocs-live-edit-plugin = ">=0.1.2"
 optimize-images = ">=1.5.1"
 
 [tool.poetry.group.dev.dependencies]
-calcipy = {extras = ["doc", "lint", "nox", "stale", "tags", "test", "types"], version = ">=2.0.1"}
+calcipy = {extras = ["doc", "lint", "nox", "stale", "tags", "test", "types"], version = ">=3.0.0"}
 
 [tool.poetry.scripts]
 recipes = "recipes.scripts:start"

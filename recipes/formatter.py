@@ -8,7 +8,7 @@ from calcipy.file_search import find_project_files_by_suffix
 from calcipy.invoke_helpers import get_doc_subdir, get_project_path
 from calcipy.md_writer import write_autoformatted_md_sections
 from calcipy.md_writer._writer import _parse_var_comment  # noqa: PLC2701
-from corallium.log import logger
+from corallium.log import LOGGER
 from pydantic import BaseModel, Field
 
 # =====================================================================================
@@ -79,7 +79,7 @@ def _format_image_md(name_image: str | None, attrs: str) -> str:
     """
     if name_image and name_image.lower() != 'none':
         return f'![{name_image}](./{name_image}){{: {attrs} loading=lazy }}'
-    logger.debug('WARN: No image specified', name_image=name_image)
+    LOGGER.debug('WARN: No image specified', name_image=name_image)
     return '<!-- TODO: Capture image -->'
 
 
@@ -289,7 +289,7 @@ def format_recipes() -> None:
 
     # Create a TOC for each directory
     for sub_dir in filtered_dir:
-        logger.info('Creating TOC', sub_dir=sub_dir)
+        LOGGER.info('Creating TOC', sub_dir=sub_dir)
         toc_recipes = _TOCRecipes(sub_dir=sub_dir)
         recipe_lookup = {
             'rating=': toc_recipes.handle_star,

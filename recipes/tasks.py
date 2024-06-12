@@ -6,7 +6,7 @@ from beartype import beartype
 from calcipy.cli import task
 from calcipy.invoke_helpers import run
 from calcipy.tasks.all_tasks import _MAIN_TASKS, ns, with_progress  # noqa: PLC2701
-from corallium.log import logger
+from corallium.log import LOGGER
 from invoke.context import Context
 from PIL import Image
 
@@ -25,7 +25,7 @@ def _convert_png_to_jpg(dir_md: Path) -> None:
     """Convert any remaining PNG files to jpg."""
     for path_png in dir_md.glob('*/*.png'):
         if path_png.parent.name != '_icons':
-            logger.warning('Convert to jpg and deleting original', path_png=path_png)
+            LOGGER.warning('Convert to jpg and deleting original', path_png=path_png)
             Image.open(path_png).save(path_png.parent / f'{path_png.stem}.jpg')
             path_png.unlink()
 
