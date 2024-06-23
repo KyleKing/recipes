@@ -36,7 +36,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Recipe
 
-- In a large pot, heat the oil over medium heat. Add onion and cook ~8 min until tender. Add garlic and cook 1 additional minute
+- In a large ceramic dutch oven, heat the oil over medium heat. Add onion and cook ~8 min until tender. Add garlic and cook 1 additional minute
 - Add the carrots and celery and cook ~4 min until slightly softened
 - Add the broth, the three canned ingredients, and spices. Bring to a boil then reduce to a simmer and cook for 20 min until thickened
 - Add the pasta and cook until tender for another ~10 min
