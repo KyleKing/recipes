@@ -70,6 +70,7 @@ optimize-images = ">=1.5.1"
 
 [tool.poetry.group.dev.dependencies]
 calcipy = {extras = ["doc", "lint", "nox", "stale", "tags", "test", "types"], version = ">=3.0.2"}
+pandas-stubs = ">=2.2.2.240603"
 
 [tool.poetry.scripts]
 recipes = "recipes.scripts:start"
