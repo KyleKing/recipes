@@ -31,7 +31,6 @@
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/meals/green_chile_mac.md:13](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/veggie/green_chile_mac.md#L16)                                            |
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/meals/guacamole.md:13](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/veggie/guacamole.md#L16)                                                        |
 | FIXME  | The indented bullets don't appear correctly. May need to change spacing -->           | 2022-09-15  | [docs/meals/hummus.md:19](https://github.com/KyleKing/recipes/blame/4033ab8e31206f15637e08d7fe642b5e937b0e9b/docs/sides/hummus.md#L19)                                                               |
-| TODO   | Capture image -->                                                                     | 2022-04-14  | [docs/meals/instant_pot_vegetarian_chili.md:13](https://github.com/KyleKing/recipes/blame/ac05846f420851ce02a60d56852742469c1aae70/docs/veggie/instant_pot_vegetarian_chili.md#L13)                  |
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/meals/karens_roasted_veggie_bowls.md:11](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/veggie/karens_roasted_veggie_bowls.md#L14)                    |
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/meals/oven-baked_sausage.md:13](https://github.com/KyleKing/recipes/blame/37e530b8bd978ab3d5f92326044dc04a13586ce8/docs/meals/oven-baked_sausage.md#L16)                                       |
 | TODO   | Capture image -->                                                                     | 2023-07-06  | [docs/meals/smoked_turkey_reuben.md:13](https://github.com/KyleKing/recipes/blame/f213c39fb2cb16cab5c91601e9ff1ff3a8314423/docs/meals/smoked_turkey_reuben.md#L13)                                   |
@@ -49,6 +48,6 @@
 | TODO   | Capture image -->                                                                     | 2020-12-06  | [docs/sushi/vegetable_rolls.md:11](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/sushi/vegetable_rolls.md#L14)                                             |
 | TODO   | Capture image -->'                                                                    | 2023-09-13  | [recipes/formatter.py:83](https://github.com/KyleKing/recipes/blame/2317785c860e44cafe43bab5bc11f3d1ad5984b8/recipes/formatter.py#L87)                                                               |
 
-Found code tags for FIXME (2), TODO (44)
+Found code tags for FIXME (2), TODO (43)
 
 <!-- calcipy_skip_tags -->
