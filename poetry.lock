@@ -134,13 +134,13 @@ files = [
 
 [[package]]
 name = "calcipy"
-version = "3.0.0"
+version = "3.0.2"
 description = "Python package to simplify development"
 optional = false
 python-versions = "<4.0.0,>=3.9.13"
 files = [
-    {file = "calcipy-3.0.0-py3-none-any.whl", hash = "sha256:d5ecbc0ce316e427faa793d485eb9bb40f508b1fe6b4b958ee9d55b61a99cf68"},
-    {file = "calcipy-3.0.0.tar.gz", hash = "sha256:dd659742707261e21be367047a53bf7e62d9b88949eb2e8fb4448a078e829ed8"},
+    {file = "calcipy-3.0.2-py3-none-any.whl", hash = "sha256:e8d743b199c5afac6870f54c3321f0c20c914bbeaa577b38b8945ffdb81213f2"},
+    {file = "calcipy-3.0.2.tar.gz", hash = "sha256:0fba3cd6999261df770382e27569c2881f563cf88aafb999dabbbfdda91c9e22"},
 ]
 
 [package.dependencies]
@@ -149,7 +149,7 @@ basedpyright = {version = ">=1.6.0", optional = true, markers = "extra == \"type
 beartype = ">=0.18.2"
 bidict = {version = ">=0.22.1", optional = true, markers = "extra == \"stale\""}
 commitizen = {version = ">=3.22.0", optional = true, markers = "extra == \"doc\""}
-corallium = ">=1.0.3"
+corallium = ">=2.0.0"
 httpx = {version = ">=0.24.1", optional = true, markers = "extra == \"stale\""}
 invoke = ">=2.2.0"
 mkdocs = {version = ">=1.5.3", optional = true, markers = "extra == \"doc\""}
@@ -2341,4 +2341,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12.0"
-content-hash = "c2f43bb20e2a93a13f628b0b4fbf0be4f2ddf0b62ecd4fff1f2f917bbf0818d2"
+content-hash = "06ea70e19b8cbb8de3bce5100b6a1fec7e9ad5b0014c31f0d4d00d96f9a4ab10"
