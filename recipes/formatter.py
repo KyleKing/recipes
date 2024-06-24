@@ -8,7 +8,7 @@ from calcipy.file_search import find_project_files_by_suffix
 from calcipy.invoke_helpers import get_doc_subdir, get_project_path
 from calcipy.md_writer import write_autoformatted_md_sections
 from calcipy.md_writer._writer import _parse_var_comment  # noqa: PLC2701
-from corallium.log import logger
+from corallium.log import LOGGER
 from pydantic import BaseModel, Field
 
 # =====================================================================================
@@ -40,9 +40,11 @@ def _format_titlecase(raw_title: str | None) -> str:
     """Format string in titlecase replacing underscores with spaces.
 
     Args:
+    ----
         raw_title: original string title. Typically the filename stem
 
     Returns:
+    -------
         str: formatted string
 
     """
@@ -54,9 +56,11 @@ def _format_stars(rating: int) -> str:
     """Format the star icons.
 
     Args:
+    ----
         rating: integer user rating
 
     Returns:
+    -------
         str: formatted string icons
 
     """
@@ -70,16 +74,18 @@ def _format_image_md(name_image: str | None, attrs: str) -> str:
     """Format the image as markdown.
 
     Args:
+    ----
         name_image: string image name or None
         attrs: string space-separated attributes to add
 
     Returns:
+    -------
         str: formatted image markdown string
 
     """
     if name_image and name_image.lower() != 'none':
         return f'![{name_image}](./{name_image}){{: {attrs} loading=lazy }}'
-    logger.debug('WARN: No image specified', name_image=name_image)
+    LOGGER.debug('WARN: No image specified', name_image=name_image)
     return '<!-- TODO: Capture image -->'
 
 
@@ -92,10 +98,12 @@ def _handle_star_section(line: str, path_md: Path) -> list[str]:  # noqa: ARG001
     """Format the star rating as markdown.
 
     Args:
+    ----
         line: first line of the section
         path_md: Path to the markdown file
 
     Returns:
+    -------
         List[str]: updated recipe string markdown
 
     """
@@ -113,14 +121,17 @@ def _parse_rel_file(line: str, path_md: Path, key: str) -> Path:
     """Parse the filename from the file.
 
     Args:
+    ----
         line: first line of the section
         path_md: Path to the markdown file
         key: string key to use in `_parse_var_comment`
 
     Returns:
+    -------
         Path: absolute path
 
     Raises:
+    ------
         FileNotFoundError: if the file at the specified path does not exist
 
     """
@@ -136,10 +147,12 @@ def _handle_image_section(line: str, path_md: Path) -> list[str]:
     """Format the string section with the specified image name.
 
     Args:
+    ----
         line: first line of the section
         path_md: Path to the markdown file
 
     Returns:
+    -------
         List[str]: updated recipe string markdown
 
     """
@@ -164,9 +177,11 @@ def _format_toc_table(toc_records: list[TOCRecordT]) -> list[str]:
     """Format TOC data as a markdown table.
 
     Args:
+    ----
         toc_records: list of records
 
     Returns:
+    -------
         List[str]: the datatable as a list of lines
 
     """
@@ -184,11 +199,13 @@ def _create_toc_record(
     """Create the dictionary summarizing data for the table of contents.
 
     Args:
+    ----
         path_recipe: Path to the recipe
         path_img: Path to the recipe image
         rating: recipe user-rating
 
     Returns:
+    -------
         TOCRecordT: single records
 
     """
@@ -219,10 +236,12 @@ class _TOCRecipes(BaseModel):
         """Store the star rating and write.
 
         Args:
+        ----
             line: first line of the section
             path_md: Path to the markdown file
 
         Returns:
+        -------
             List[str]: empty list
 
         """
@@ -241,10 +260,12 @@ class _TOCRecipes(BaseModel):
         """Store image name and write.
 
         Args:
+        ----
             line: first line of the section
             path_md: Path to the markdown file
 
         Returns:
+        -------
             List[str]: empty list
 
         """
@@ -289,12 +310,12 @@ def format_recipes() -> None:
 
     # Create a TOC for each directory
     for sub_dir in filtered_dir:
-        logger.info('Creating TOC', sub_dir=sub_dir)
+        LOGGER.info('Creating TOC', sub_dir=sub_dir)
         toc_recipes = _TOCRecipes(sub_dir=sub_dir)
         recipe_lookup = {
             'rating=': toc_recipes.handle_star,
             'name_image=': toc_recipes.handle_image,
         }
         sub_dir_paths = [pth for pth in paths_md if pth.is_relative_to(sub_dir)]
-        write_autoformatted_md_sections(handler_lookup=recipe_lookup, paths_md=sub_dir_paths)
+        write_autoformatted_md_sections(handler_lookup=recipe_lookup, paths_md=sub_dir_paths)  # type: ignore[arg-type]
         toc_recipes.write_toc()

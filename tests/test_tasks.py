@@ -1,7 +1,7 @@
 from pathlib import Path
 from unittest.mock import call
 
-from calcipy.cli import GlobalTaskOptions
+from calcipy.collection import GlobalTaskOptions
 
 from recipes.tasks import compress, format_recipes
 

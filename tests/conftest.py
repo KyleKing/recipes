@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 from beartype import beartype
-from invoke import MockContext
+from invoke.context import MockContext
 
 from .configuration import TEST_TMP_CACHE, clear_test_cache
 
@@ -14,7 +14,8 @@ from .configuration import TEST_TMP_CACHE, clear_test_cache
 def fix_test_cache() -> Path:
     """Fixture to clear and return the test cache directory for use.
 
-    Returns:
+    Returns
+    -------
         Path: Path to the test cache directory
 
     """
@@ -33,5 +34,5 @@ def ctx() -> MockContext:
     Documentation: https://docs.pyinvoke.org/en/stable/concepts/testing.html
 
     """
-    MockContext.run_command = property(lambda self: self.run.call_args[0][0])
+    MockContext.run_command = property(lambda self: self.run.call_args[0][0])  # type: ignore[attr-defined]
     return MockContext(run=True)
