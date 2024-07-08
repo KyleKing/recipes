@@ -1,21 +1,18 @@
-"""PyTest configuration."""
+"""Pytest configuration."""
 
 from pathlib import Path
 
 import pytest
-from beartype import beartype
 from invoke.context import MockContext
 
 from .configuration import TEST_TMP_CACHE, clear_test_cache
 
 
-@pytest.fixture()
-@beartype
+@pytest.fixture
 def fix_test_cache() -> Path:
     """Fixture to clear and return the test cache directory for use.
 
-    Returns
-    -------
+    Returns:
         Path: Path to the test cache directory
 
     """
@@ -23,7 +20,7 @@ def fix_test_cache() -> Path:
     return TEST_TMP_CACHE
 
 
-@pytest.fixture()
+@pytest.fixture
 def ctx() -> MockContext:
     """Mock Invoke Context.
 

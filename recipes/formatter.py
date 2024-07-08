@@ -6,7 +6,7 @@ import pandas as pd
 from beartype import beartype
 from calcipy.file_search import find_project_files_by_suffix
 from calcipy.invoke_helpers import get_doc_subdir, get_project_path
-from calcipy.md_writer import write_autoformatted_md_sections
+from calcipy.md_writer import write_template_formatted_md_sections
 from calcipy.md_writer._writer import _parse_var_comment  # noqa: PLC2701
 from corallium.log import LOGGER
 from pydantic import BaseModel, Field
@@ -194,7 +194,9 @@ def _format_toc_table(toc_records: list[TOCRecordT]) -> list[str]:
 
 @beartype
 def _create_toc_record(
-    path_recipe: Path, path_img: Path, rating: str | int,
+    path_recipe: Path,
+    path_img: Path,
+    rating: str | int,
 ) -> TOCRecordT:
     """Create the dictionary summarizing data for the table of contents.
 
@@ -317,5 +319,5 @@ def format_recipes() -> None:
             'name_image=': toc_recipes.handle_image,
         }
         sub_dir_paths = [pth for pth in paths_md if pth.is_relative_to(sub_dir)]
-        write_autoformatted_md_sections(handler_lookup=recipe_lookup, paths_md=sub_dir_paths)  # type: ignore[arg-type]
+        write_template_formatted_md_sections(handler_lookup=recipe_lookup, paths_md=sub_dir_paths)  # type: ignore[arg-type]
         toc_recipes.write_toc()

@@ -36,7 +36,6 @@ classifiers = [
 ] # https://pypi.org/classifiers/
 description = "Kyle and Alex's Personal Recipes"
 documentation = "https://recipes.kyleking.me"
-include = ["LICENSE"]
 keywords = ["calcipy_template"]
 license = "MIT"
 maintainers = []
@@ -47,12 +46,15 @@ version = "0.4.0"
 
 [tool.poetry.dependencies]
 python = "^3.12.0"
-corallium = ">=2.0.0"
-mkdocs-live-edit-plugin = ">=0.1.2"
+corallium = ">=2.0.1"
+mkdocs-git-revision-date-localized-plugin = ">=1.2.6"
+mkdocs-live-edit-plugin = ">=0.2.0"
 optimize-images = ">=1.5.1"
+pandas = ">=2.2.2" # PLANNED: Replace with utility functions from Calcipy (or Corallium?)
+tabulate = ">=0.9.0" # Required for pandas to markdown table
 
 [tool.poetry.group.dev.dependencies]
-calcipy = {extras = ["doc", "lint", "nox", "stale", "tags", "test", "types"], version = ">=3.0.2"}
+calcipy = {extras = ["doc", "lint", "nox", "stale", "tags", "test", "types"], version = ">=4.0.0"}
 pandas-stubs = ">=2.2.2.240603"
 
 [tool.poetry.scripts]
@@ -136,12 +138,16 @@ known-first-party = ['recipes']
   'ANN001', # Missing type annotation for function argument
   'ANN201', # Missing return type annotation for public function
   'ANN202', # Missing return type annotation for private function `test_make_diffable`
+  'ARG001', # Unused function argument: `line`
   'D100', # Missing docstring in public module
   'D103', # Missing docstring in public function
   'PLC2701', # Private name import `_<>` from external module
   'PT004', # flake8-pytest-style: fixture does not return
   'S101', # Use of `assert` detected
 ]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
 
 [tool.tomlsort]
 all = true

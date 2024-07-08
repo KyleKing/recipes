@@ -26,15 +26,6 @@ watch:
   - recipes
 
 plugins:
-  - build_plantuml:
-      render: server # or "local"
-      bin_path: /usr/local/bin/plantuml # ignored when render: server
-      server: http://www.plantuml.com/plantuml # official plantuml server
-      output_format: svg
-      diagram_root: docs/diagrams
-      output_folder: out
-      input_folder: src
-      input_extensions: puml
   # # Don't generate code documentation
   # - gen-files:
   #     scripts:
@@ -45,8 +36,6 @@ plugins:
       strict: false
       type: date
   # # Don't generate code documentation
-  # - literate-nav:
-  #     nav_file: SUMMARY.md
   # - mkdocstrings:
   #     handlers:
   #       python:
@@ -56,8 +45,6 @@ plugins:
   #           separate_signature: true
   #           show_category_heading: true
   - search
-  - section-index
-  - live-edit
 
 markdown_extensions:
   - abbr

@@ -2,6 +2,6 @@
 
 from pprint import pprint
 
-from recipes import replace_me
+from recipes.scripts import run
 
 pprint(locals())  # noqa: T203
