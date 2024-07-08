@@ -3,24 +3,8 @@ build-backend = "poetry.core.masonry.api"
 requires = ["poetry-core"]
 
 [tool.commitizen]
-change_type_order = [
-  "BREAKING CHANGE",
-  "Change (Old)",
-  "Feat",
-  "Fix (Old)",
-  "Fix",
-  "New (Old)",
-  "Perf",
-  "Refactor",
-]
-name = "cz_legacy"
 version = "0.4.0"
 version_files = ["pyproject.toml:^version", "recipes/__init__.py:^__version"]
-
-[tool.commitizen.cz_legacy_map]
-Chg = "Change (Old)"
-Fix = "Fix (Old)"
-New = "New (Old)"
 
 [tool.mypy]
 check_untyped_defs = true
@@ -64,7 +48,6 @@ version = "0.4.0"
 [tool.poetry.dependencies]
 python = "^3.12.0"
 corallium = ">=2.0.0"
-cz-legacy = ">=1.0.1"
 mkdocs-live-edit-plugin = ">=0.1.2"
 optimize-images = ">=1.5.1"
 
