@@ -24,14 +24,17 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 1 (15 oz) can black beans, rinsed
 - [ ] 1 (15 oz) can corn, rinsed
 
-### Spices
+### Chili Powder Spices
 
-- [ ] 1 tbsp chili powder
-- [ ] 1/2 tsp cumin
-- [ ] 1/2 tsp garlic powder
-- [ ] 1/2 tsp onion powder
+> Previously included 1 tbsp chili powder and 1/2 tsp of the rest, but I calculated an approximate substitute based on: <https://www.spendwithpennies.com/homemade-chili-powder>
+
+- [ ] 1 tsp smoked paprika
+- [ ] 1 tsp garlic powder
+- [ ] 1 tsp onion powder
+- [ ] 3/4 tsp cumin
 - [ ] 1/2 tsp cayenne pepper
 - [ ] 1/2 tsp salt
+- [ ] 1/4 tsp dried oregano
 
 ### Toppings
 

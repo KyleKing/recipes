@@ -16,12 +16,12 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-- [ ] Shredded Chicken, cooked (Follow [./poached_chicken.md](./poached_chicken.md) or use a Rotisserie Chicken)
+- [ ] 1.5 lbs Shredded Chicken, cooked (Follow [./poached_chicken.md](./poached_chicken.md) or use a Rotisserie Chicken)
 - [ ] Bag of frozen peas
-- [ ] 4-medium carrots, coined and halved
-- [ ] 1 10.5 oz can of *condensed* cream of chicken soup
-- [ ] 1 10.5 oz can of *condensed* cream of mushroom soup
-- [ ] 1x 8" tube of Crescent Roll Dough
+- [ ] 4 carrots, coined and halved
+- [ ] 10.5 oz can of *condensed* cream of chicken soup
+- [ ] 10.5 oz can of *condensed* cream of mushroom soup
+- [ ] 8" tube of Crescent Roll Dough
 
 ## Recipe
 
