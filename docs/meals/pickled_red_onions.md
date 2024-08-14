@@ -2,9 +2,9 @@
 
 > Based on [https://newsletter.ethanchlebowski.com/p/pickle-anything-framework-729d](https://newsletter.ethanchlebowski.com/p/pickle-anything-framework-729d)
 
-<!-- {cts} rating=0; (User can specify rating on scale of 1-5) -->
+<!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
 
-Personal rating: *Not yet rated*
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 
 <!-- {cte} -->
 
