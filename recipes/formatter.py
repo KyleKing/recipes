@@ -3,7 +3,6 @@
 from pathlib import Path
 
 import pandas as pd
-from beartype import beartype
 from calcipy.file_search import find_project_files_by_suffix
 from calcipy.invoke_helpers import get_doc_subdir, get_project_path
 from calcipy.md_writer import write_template_formatted_md_sections
@@ -15,9 +14,13 @@ from pydantic import BaseModel, Field
 # Shared Functionality
 
 
-@beartype
 def get_recipes_doc_dir() -> Path:
-    """Markdown directory (~2-levels up of `get_doc_subdir()`)."""
+    """Markdown directory (~2-levels up of `get_doc_subdir()`).
+
+    Returns:
+        Path: recipe document directory
+
+    """
     project_path: Path = get_project_path()
     return project_path / 'docs'
 
@@ -35,7 +38,6 @@ _ICON_FA_STAR_OUT = ':fontawesome-regular-star:'
 # > _ICON_O_STAR_OUT = ':octicons-star-24:{: .yellow }'
 
 
-@beartype
 def _format_titlecase(raw_title: str | None) -> str:
     """Format string in titlecase replacing underscores with spaces.
 
@@ -51,7 +53,6 @@ def _format_titlecase(raw_title: str | None) -> str:
     return raw_title.replace('_', ' ').strip().title() if raw_title else ''
 
 
-@beartype
 def _format_stars(rating: int) -> str:
     """Format the star icons.
 
@@ -69,7 +70,6 @@ def _format_stars(rating: int) -> str:
     return ' '.join([_ICON_FA_STAR] * rating + [_ICON_FA_STAR_OUT] * (5 - rating))
 
 
-@beartype
 def _format_image_md(name_image: str | None, attrs: str) -> str:
     """Format the image as markdown.
 
@@ -93,7 +93,6 @@ def _format_image_md(name_image: str | None, attrs: str) -> str:
 # Utilities for updating Markdown
 
 
-@beartype
 def _handle_star_section(line: str, path_md: Path) -> list[str]:  # noqa: ARG001
     """Format the star rating as markdown.
 
@@ -116,7 +115,6 @@ def _handle_star_section(line: str, path_md: Path) -> list[str]:  # noqa: ARG001
     ]
 
 
-@beartype
 def _parse_rel_file(line: str, path_md: Path, key: str) -> Path:
     """Parse the filename from the file.
 
@@ -142,7 +140,6 @@ def _parse_rel_file(line: str, path_md: Path, key: str) -> Path:
     return path_file
 
 
-@beartype
 def _handle_image_section(line: str, path_md: Path) -> list[str]:
     """Format the string section with the specified image name.
 
@@ -172,7 +169,6 @@ TOCRecordT = dict[str, str | int]
 """TOC Record."""
 
 
-@beartype
 def _format_toc_table(toc_records: list[TOCRecordT]) -> list[str]:
     """Format TOC data as a markdown table.
 
@@ -192,7 +188,6 @@ def _format_toc_table(toc_records: list[TOCRecordT]) -> list[str]:
     return [*content.split('\n')]  # for mypy
 
 
-@beartype
 def _create_toc_record(
     path_recipe: Path,
     path_img: Path,
@@ -233,7 +228,6 @@ class _TOCRecipes(BaseModel):
     sub_dir: Path
     recipes: dict[str, Recipe] = Field(default_factory=dict)
 
-    @beartype
     def handle_star(self, line: str, path_md: Path) -> list[str]:
         """Store the star rating and write.
 
@@ -246,6 +240,9 @@ class _TOCRecipes(BaseModel):
         -------
             List[str]: empty list
 
+        Raises:
+            ValueError: if rating isn't specified
+
         """
         key = path_md.as_posix()
         recipe = self.recipes.get(key) or Recipe()
@@ -253,11 +250,10 @@ class _TOCRecipes(BaseModel):
             recipe.rating = _parse_var_comment(line)['rating']
         except KeyError as exc:
             msg = f"'rating' not found in '{line}' from {path_md}"
-            raise RuntimeError(msg) from exc
+            raise ValueError(msg) from exc
         self.recipes[key] = recipe
         return _handle_star_section(line, path_md)
 
-    @beartype
     def handle_image(self, line: str, path_md: Path) -> list[str]:
         """Store image name and write.
 
@@ -270,6 +266,9 @@ class _TOCRecipes(BaseModel):
         -------
             List[str]: empty list
 
+        Raises:
+            ValueError: if image_name isn't specified
+
         """
         key = path_md.as_posix()
         recipe = self.recipes.get(key) or Recipe()
@@ -277,11 +276,10 @@ class _TOCRecipes(BaseModel):
             recipe.path_image = _parse_rel_file(line, path_md, 'name_image')
         except KeyError as exc:
             msg = f"'name_image' not found in '{line}' from {path_md}"
-            raise RuntimeError(msg) from exc
+            raise ValueError(msg) from exc
         self.recipes[key] = recipe
         return _handle_image_section(line, path_md)
 
-    @beartype
     def write_toc(self) -> None:
         """Write the table of contents."""
         if self.recipes:
@@ -298,7 +296,6 @@ class _TOCRecipes(BaseModel):
 # Main Task
 
 
-@beartype
 def format_recipes() -> None:
     """Format the Recipes."""
     # Get all sub-directories
