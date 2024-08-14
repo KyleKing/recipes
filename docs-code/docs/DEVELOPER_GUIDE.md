@@ -54,5 +54,5 @@ poetry config pypi-token.pypi ...
 | `recipes/tasks.py`                     | 39         | 4       | 0        | 78.9%    |
 | **Totals**                             | 171        | 16      | 28       | 85.3%    |
 
-Generated on: 2024-07-08
+Generated on: 2024-08-13
 <!-- {cte} -->

@@ -55,7 +55,7 @@ tabulate = ">=0.9.0" # Required for pandas to markdown table
 
 [tool.poetry.group.dev.dependencies]
 calcipy = {extras = ["doc", "lint", "nox", "stale", "tags", "test", "types"], version = ">=4.0.0"}
-pandas-stubs = ">=2.2.2.240603"
+pandas-stubs = ">=2.2.2.240807"
 
 [tool.poetry.scripts]
 recipes = "recipes.scripts:start"
