@@ -42,11 +42,9 @@ def _format_titlecase(raw_title: str | None) -> str:
     """Format string in titlecase replacing underscores with spaces.
 
     Args:
-    ----
         raw_title: original string title. Typically the filename stem
 
     Returns:
-    -------
         str: formatted string
 
     """
@@ -57,11 +55,9 @@ def _format_stars(rating: int) -> str:
     """Format the star icons.
 
     Args:
-    ----
         rating: integer user rating
 
     Returns:
-    -------
         str: formatted string icons
 
     """
@@ -74,12 +70,10 @@ def _format_image_md(name_image: str | None, attrs: str) -> str:
     """Format the image as markdown.
 
     Args:
-    ----
         name_image: string image name or None
         attrs: string space-separated attributes to add
 
     Returns:
-    -------
         str: formatted image markdown string
 
     """
@@ -97,12 +91,10 @@ def _handle_star_section(line: str, path_md: Path) -> list[str]:  # noqa: ARG001
     """Format the star rating as markdown.
 
     Args:
-    ----
         line: first line of the section
         path_md: Path to the markdown file
 
     Returns:
-    -------
         List[str]: updated recipe string markdown
 
     """
@@ -119,17 +111,14 @@ def _parse_rel_file(line: str, path_md: Path, key: str) -> Path:
     """Parse the filename from the file.
 
     Args:
-    ----
         line: first line of the section
         path_md: Path to the markdown file
         key: string key to use in `_parse_var_comment`
 
     Returns:
-    -------
         Path: absolute path
 
     Raises:
-    ------
         FileNotFoundError: if the file at the specified path does not exist
 
     """
@@ -144,12 +133,10 @@ def _handle_image_section(line: str, path_md: Path) -> list[str]:
     """Format the string section with the specified image name.
 
     Args:
-    ----
         line: first line of the section
         path_md: Path to the markdown file
 
     Returns:
-    -------
         List[str]: updated recipe string markdown
 
     """
@@ -173,11 +160,9 @@ def _format_toc_table(toc_records: list[TOCRecordT]) -> list[str]:
     """Format TOC data as a markdown table.
 
     Args:
-    ----
         toc_records: list of records
 
     Returns:
-    -------
         List[str]: the datatable as a list of lines
 
     """
@@ -196,13 +181,11 @@ def _create_toc_record(
     """Create the dictionary summarizing data for the table of contents.
 
     Args:
-    ----
         path_recipe: Path to the recipe
         path_img: Path to the recipe image
         rating: recipe user-rating
 
     Returns:
-    -------
         TOCRecordT: single records
 
     """
@@ -232,12 +215,10 @@ class _TOCRecipes(BaseModel):
         """Store the star rating and write.
 
         Args:
-        ----
             line: first line of the section
             path_md: Path to the markdown file
 
         Returns:
-        -------
             List[str]: empty list
 
         Raises:
@@ -258,12 +239,10 @@ class _TOCRecipes(BaseModel):
         """Store image name and write.
 
         Args:
-        ----
             line: first line of the section
             path_md: Path to the markdown file
 
         Returns:
-        -------
             List[str]: empty list
 
         Raises:

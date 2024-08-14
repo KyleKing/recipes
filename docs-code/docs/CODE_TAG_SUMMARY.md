@@ -47,7 +47,7 @@
 | TODO    | Capture image -->                                                                     | 2020-12-06 | [docs/sushi/smoked_salmon_nigiri.md:13](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/sushi/smoked_salmon_nigiri.md#L16)                                   |
 | TODO    | Capture image -->                                                                     | 2020-12-06 | [docs/sushi/vegetable_rolls.md:11](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/sushi/vegetable_rolls.md#L14)                                             |
 | PLANNED | Replace with utility functions from Calcipy (or Corallium?)                           | 2024-07-08 | [pyproject.toml:53](https://github.com/KyleKing/recipes/blame/b3fcf8136af77ccf1bd3ee1fb4297b79dd7e86ea/pyproject.toml#L53)                                                                           |
-| TODO    | Capture image -->'                                                                    | 2023-09-13 | [recipes/formatter.py:89](https://github.com/KyleKing/recipes/blame/2317785c860e44cafe43bab5bc11f3d1ad5984b8/recipes/formatter.py#L87)                                                               |
+| TODO    | Capture image -->'                                                                    | 2023-09-13 | [recipes/formatter.py:83](https://github.com/KyleKing/recipes/blame/2317785c860e44cafe43bab5bc11f3d1ad5984b8/recipes/formatter.py#L87)                                                               |
 
 Found code tags for FIXME (2), TODO (43), PLANNED (1)
 
