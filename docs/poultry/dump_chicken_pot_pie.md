@@ -25,9 +25,10 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Recipe
 
-- Arrange a rack in the middle of the oven and heat the oven to 375F
-- In a 9x13 baking dish, add the shredded chicken, peas, carrots, and both cans of soup (reserve 1 tbsp of either)
-- Gently stir to combine and spread into an even layer
-- Carefully unroll 1 tube of crescent roll dough and lay over the filling (note: the dough doesn't need to reach the edges of the dish). Rub the reserved cream soup over the dough
-- Bake until golden-brown and bubbling, about 30 min
+- Saute the carrots to soften them
+    - Tip: if poaching the chicken in an Instant Pot, you can saute the carrots in the Instant Pot before making the chicken
+- In a 9x13 baking dish, add the shredded chicken, peas, and both cans of soup (reserve 1 tbsp of either)
+    - Gently stir to combine and spread into an even layer
+    - Carefully unroll 1 tube of crescent roll dough and lay over the filling (note: the dough doesn't need to reach the edges of the dish). Rub the reserved cream soup over the dough
+- Bake at 375F until golden-brown and bubbling (about 30-40 min)
     - If the dough has browned, but the filling isn't warmed, tent with aluminum foil
