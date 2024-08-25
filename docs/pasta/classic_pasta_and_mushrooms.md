@@ -24,7 +24,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 2 tsp chopped fresh rosemary leaves
 - [ ] 1/3 tsp crushed red pepper flakes
 - [ ] 1 cup no-salt-added vegetable broth (or water)
-- [ ] 12 oz dried egg pappardelle or fettucine
+- [ ] 1 lb penne or 12 oz egg noodles
 - [ ] 1/4 cup chopped fresh flat-leaf parsley
 - [ ] 1/2 cup freshly grated Parmesan cheese, plus more for serving
 - [ ] black pepper, for serving
