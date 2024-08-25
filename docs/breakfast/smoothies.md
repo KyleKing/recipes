@@ -1,6 +1,6 @@
 # Smoothies
 
-> Based on [https://newsletter.ethanchlebowski.com/posts/why-do-homemade-smoothies-suck](https://newsletter.ethanchlebowski.com/posts/why-do-homemade-smoothies-suck)
+> Based on [https://newsletter.ethanchlebowski.com/p/homemade-smoothies-suck](https://newsletter.ethanchlebowski.com/p/homemade-smoothies-suck)
 
 <!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
 

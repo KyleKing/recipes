@@ -1,6 +1,6 @@
 # Rice
 
-> Based on [https://recipes.instantpot.com/recipe/pressure-cooker-sushi-rice/](https://recipes.instantpot.com/recipe/pressure-cooker-sushi-rice/)
+> Based on [https://instantpot.com/blogs/recipes/perfect-sushi-rice](https://instantpot.com/blogs/recipes/perfect-sushi-rice)
 
 <!-- {cts} rating=1; (User can specify rating on scale of 1-5) -->
 

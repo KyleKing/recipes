@@ -1,6 +1,6 @@
 # Shrimp Spicy Rolls
 
-> Based on [http://fromgatetoplate.com/2014/04/14/spicy-shrimp-sushi-rolls/](http://fromgatetoplate.com/2014/04/14/spicy-shrimp-sushi-rolls/)
+> Based on [https://web.archive.org/web/20140814022520/http://fromgatetoplate.com/2014/04/14/spicy-shrimp-sushi-rolls](https://web.archive.org/web/20140814022520/http://fromgatetoplate.com/2014/04/14/spicy-shrimp-sushi-rolls)
 
 <!-- {cts} rating=1; (User can specify rating on scale of 1-5) -->
 
