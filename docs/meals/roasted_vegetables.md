@@ -44,3 +44,16 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
     - While baking, finish chopping the vegetables and set aside.
     - Wait to add the softer ingredients, such as mushrooms, zucchini, etc. until the mid-point
 - Top with Feta crumbles, black pepper, olive oil or other sauce, etc.
+
+## Infant Variant
+
+> Based on [Mom's on Call](https://momsoncall.com)
+
+- [ ] 4 Carrots, diced
+- [ ] 1 Sweet Potato, diced
+- [ ] 1 Beet, diced
+- [ ] 2 Parsnips, diced
+- [ ] Or substitutes vegetables from above
+
+- Toss the vegetables with olive oil, thyme, basil, and oregano
+- At 425F, bake the vegetables for 15 min, flip, then bake for another 10
