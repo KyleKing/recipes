@@ -28,7 +28,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Recipe
 
-- See the [Oven Baked Sausage](../meals/oven-baked-sausage.md). When finished, cut into rounds
+- See the [Oven Baked Sausage](../meals/oven_baked_sausage.md). When finished, cut into rounds
 - In parallel, dice and prep the garlic, onions, and mushrooms
 - Combine half of the diced tomatoes, the sausage, diced items, and the box of penne pasta. Mix in the basil, oregano, and garlic
 - Add the rest of the diced tomatoes and 2.5-3 cups of water, then bring the pot to a rapid boil
