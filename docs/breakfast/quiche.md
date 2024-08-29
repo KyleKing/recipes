@@ -8,24 +8,25 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cte} -->
 
-<!-- {cts} name_image=None; (User can specify image name) -->
+<!-- {cts} name_image=quiche.jpeg; (User can specify image name) -->
 
-<!-- TODO: Capture image -->
+![quiche.jpeg](./quiche.jpeg){: .image-recipe loading=lazy }
 
 <!-- {cte} -->
 
 ## Ingredients
 
-- [ ] 2 tbsp salted butter
+- [ ] 2 tbsp butter
 - [ ] 1/3 cup finely diced white onion
-- [ ] 12 ounces baby bella mushrooms, trimmed and sliced (about 4 cups)
+- [ ] 8 ounces baby bella mushrooms, trimmed and sliced (about 2-3 cups)
 - [ ] 2 cups baby spinach (about 2 ounces)
-- [ ] 6 large eggs
-- [ ] 1 cup heavy cream
+- [ ] 5 large eggs
+- [ ] 2/3 cup heavy cream
 - [ ] 1 tsp garlic powder
 - [ ] 1 tsp kosher salt
 - [ ] 1 tsp freshly ground black pepper
-- [ ] 12 ounces Swiss cheese, grated (about 3 cups)
+- [ ] 8 ounces Swiss cheese, grated (about 2 cups)
+- [ ] (Optional) peas
 - [ ] 9-inch Pie Crust, unbaked
 
 ## Recipe
@@ -33,7 +34,8 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - Preheat the oven to 350F
 - In a large sauté pan, heat the butter over medium heat until melted.
     - Add the onion and sauté until tender, about 6 minutes
-    - Add the mushrooms and sauté until they have given up their liquid and it has mostly evaporated, 5 to 6 minutes
-    - Add the spinach and sauté until wilted, 1 to 2 minutes. Remove from the heat and set aside
+    - Add the mushrooms and sauté until they have given up their liquid and it has mostly evaporated, 5-10 minutes
+    - Add the spinach and sauté until wilted, 1-2 minutes. Remove from the heat and set aside
 - In a large bowl, whisk together the eggs, cream, garlic powder, salt, and pepper. Stir in the spinach/mushroom mixture and the Swiss cheese then pour the mixture into the unbaked pie shell
-- Bake until the quiche is lightly golden and set in the center when the pan is gently pushed, about 45 minutes. If the crust is browning too quickly, cover it with foil to prevent it from burning
+- Bake until the quiche is lightly golden and set in the center when the pan is gently pushed, about 45 minutes
+    - If the crust is browning too quickly, cover it with foil to prevent it from burning
