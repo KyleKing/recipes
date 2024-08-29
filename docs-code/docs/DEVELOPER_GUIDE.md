@@ -48,11 +48,11 @@ poetry config pypi-token.pypi ...
 | File                                   | Statements | Missing | Excluded | Coverage |
 |----------------------------------------|------------|---------|----------|----------|
 | `recipes/__init__.py`                  | 4          | 0       | 0        | 100.0%   |
-| `recipes/_runtime_type_check_setup.py` | 13         | 0       | 28       | 100.0%   |
-| `recipes/formatter.py`                 | 110        | 7       | 0        | 89.0%    |
+| `recipes/_runtime_type_check_setup.py` | 13         | 0       | 33       | 100.0%   |
+| `recipes/formatter.py`                 | 96         | 7       | 0        | 91.5%    |
 | `recipes/scripts.py`                   | 5          | 5       | 0        | 0.0%     |
 | `recipes/tasks.py`                     | 39         | 4       | 0        | 78.9%    |
-| **Totals**                             | 171        | 16      | 28       | 85.3%    |
+| **Totals**                             | 157        | 16      | 33       | 85.9%    |
 
 Generated on: 2024-08-13
 <!-- {cte} -->
