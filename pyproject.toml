@@ -47,7 +47,7 @@ version = "0.4.0"
 [tool.poetry.dependencies]
 python = "^3.12.0"
 corallium = ">=2.0.1"
-mkdocs-git-revision-date-localized-plugin = ">=1.2.6"
+mkdocs-git-revision-date-localized-plugin = ">=1.2.7"
 mkdocs-live-edit-plugin = ">=0.2.0"
 optimize-images = ">=1.5.1"
 pandas = ">=2.2.2" # PLANNED: Replace with utility functions from Calcipy (or Corallium?)
