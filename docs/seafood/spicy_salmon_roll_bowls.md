@@ -16,8 +16,9 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-### Blackening Spice
+### Salmon and Blackening Spice
 
+- [ ] 12 oz salmon, cubed and seasoned
 - [ ] 1 tsp oregano
 - [ ] 1/2 tsp garlic powder
 - [ ] 1/2 tsp onion powder
@@ -26,26 +27,28 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 1/4 tsp cayenne pepper
 - [ ] 1/4 tsp paprika
 
-### Salmon Bowls
-
-- [ ] 12 oz salmon, cubed and seasoned
-- [ ] 1 cup white rice uncooked
-- [ ] 2 carrots, thin-sliced
-- [ ] 1/4 cup cucumber, thin-sliced
-- [ ] 1/2 avocado, thin-sliced
-- [ ] 1/4 cup peanuts
-- [ ] 1 tbsp jalapeno, thin-sliced
-- [ ] 2 tbsp cilantro, chopped
-- [ ] and/or green onions,, broccoli (chopped), peas, or other vegetables
-- [ ] toasted sesame seeds or 2 tsp furikake, split between the bowls
-- [ ] 1 large lime, quartered
-
 ### Spicy Sauce
 
 - [ ] 1/4 cup mayonnaise
 - [ ] 1 tbsp sriracha
 - [ ] 2 tbsp soy sauce, low sodium
 - [ ] 1 *tsp* brown sugar
+
+### Salmon Bowls
+
+- [ ] 1 cup white rice uncooked
+- [ ] 2 carrots, thin-sliced
+- [ ] cucumber, thin-sliced
+- [ ] 1/2 avocado, sliced
+- [ ] 1/4 cup peanuts
+- [ ] 1 tbsp jalapeno, thin-sliced
+- [ ] and/or green onions, broccoli, peas, etc.
+
+### Serving
+
+- [ ] 2 tbsp cilantro, chopped
+- [ ] 1 large lime, quartered
+- [ ] toasted sesame seeds or 2 tsp furikake, split between the bowls
 
 ## Recipe
 
