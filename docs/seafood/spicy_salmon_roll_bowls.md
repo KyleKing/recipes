@@ -33,10 +33,10 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 2 carrots, thin-sliced
 - [ ] 1/4 cup cucumber, thin-sliced
 - [ ] 1/2 avocado, thin-sliced
-- [ ] 1/4 cup green onions, chopped
+- [ ] 1/4 cup peanuts
 - [ ] 1 tbsp jalapeno, thin-sliced
 - [ ] 2 tbsp cilantro, chopped
-- [ ] and/or peanuts, broccoli (chopped), peas, or other vegetables
+- [ ] and/or green onions,, broccoli (chopped), peas, or other vegetables
 - [ ] toasted sesame seeds or 2 tsp furikake, split between the bowls
 - [ ] 1 large lime, quartered
 
@@ -45,15 +45,16 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 1/4 cup mayonnaise
 - [ ] 1 tbsp sriracha
 - [ ] 2 tbsp soy sauce, low sodium
-- [ ] 1 tsp brown sugar or 2 tsp syrup
+- [ ] 1 *tsp* brown sugar
 
 ## Recipe
 
 - Cook the rice
-- Prep in bowls:
+- In small prep bowls:
     - Combine the blackening spice
-    - Combine the mayonnaise, sriracha, soy sauce, and maple syrup. Whisk until well combined
+    - Combine the mayonnaise, sriracha, soy sauce, and sugar. Whisk until well combined
 - Chop and prep the rest of the vegetables
+    - Saute until softened
 - Remove salmon skin, then cube into bite-sized pieces
     - Toss with the blackening spice
     - In a skillet, pan fry the salmon for 3-4 minutes in olive oil on medium-high heat
