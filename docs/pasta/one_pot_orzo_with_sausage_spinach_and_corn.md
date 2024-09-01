@@ -2,9 +2,9 @@
 
 > Based on [https://www.skinnytaste.com/one-pot-orzo-with-sausage-spinach-and-corn/#recipe](https://www.skinnytaste.com/one-pot-orzo-with-sausage-spinach-and-corn/#recipe)
 
-<!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
+<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
 
-Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
 <!-- {cte} -->
 
@@ -16,27 +16,33 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-- [ ] 14 ounces sausage
-- [ ] 1/2 medium yellow onion, chopped
+### Pot
+
+- [ ] 12-16 ounces sausage
+- [ ] 2/3 medium yellow onion, chopped
 - [ ] 1/4 tsp salt
-- [ ] 1/2 tsp garlic powder
+- [ ] 1 tsp garlic powder
 - [ ] 1 can corn, drained
 - [ ] 1 can diced tomatoes, with liquid
+- [ ] 1 tsp Italian or similar seasoning
 - [ ] 1 cup dry orzo
 - [ ] 3 cups low sodium chicken broth
 - [ ] frozen peas
+- [ ] (optional) toss in up to a few handfuls of spinach to wilt in the last few minutes
+
+### Serving
+
 - [ ] 1/4 cup freshly grated Parmesan
 - [ ] black pepper
 - [ ] Optionally add Zucchini or other vegetables with the peas
-- [ ] Optionally add Thyme, Italian seasoning, etc.
 
 ## Recipe
 
 - Remove the sausage from the casing, break up, and cook in a Dutch oven for 5 minutes on medium-high heat
 - Add the onion, salt, and garlic powder and saute until golden (~5 min)
 - Add the corn and tomatoes and cook until reduced (~10 min)
-- Add the orzo, chicken broth, frozen peas, and any additional seasonings (such as 1 tsp Italian) stir to combine then bring to a boil
-- Reduce heat to medium-low and simmer 10 minutes; stir and scrape the bottom a few times to keep orzo from sticking
+- Add the orzo, chicken broth, frozen peas, and any additional seasonings, stir to combine then bring to a boil. Stir and scrape the bottom to keep orzo from sticking
+- Reduce heat to medium-low and simmer 10 minutes
 - Top with freshly grated Parmesan and black pepper
 
 ## Notes

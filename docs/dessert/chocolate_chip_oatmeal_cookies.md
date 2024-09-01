@@ -2,9 +2,9 @@
 
 > Based on [A Nestle Recipe](https://www.nestleprofessional.us/recipe/choc-oat-chip-cookies)
 
-<!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
+<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
 
-Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
 <!-- {cte} -->
 
@@ -16,21 +16,25 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-- [ ] 1 - In a medium bowl, whisk:
-    - [ ] 1.75 cups all-purpose flour
-    - [ ] 1 tsp baking soda
-    - [ ] 1/2 tsp salt
-- [ ] 2 - In a large bowl, combine:
-    - [ ] 1 cup (2 sticks) butter, softened
-    - [ ] 1/2 cup granulated sugar
-    - [ ] 1.25 cup brown sugar, packed
-- [ ] 3 - Then:
-    - [ ] 2 tsp vanilla extract
-    - [ ] 2 tbsp milk
-    - [ ] 2 large eggs
-    - [ ] 2.5 cup quick or old-fashioned oats
-    - [ ] 2 cups (12 oz) chocolate chips
-    - [ ] 1 cup coarsely chopped peanuts, optional
+### (1) In a medium bowl, whisk
+
+- [ ] 1.75 cups all-purpose flour
+- [ ] 1 tsp baking soda
+- [ ] 1/2 tsp salt
+
+### (2) In a large bowl, combine
+
+- [ ] 1 cup (2 sticks) butter, softened
+- [ ] 1/2 cup granulated sugar
+- [ ] 1.25 cup brown sugar, packed
+
+### (3) Then
+
+- [ ] 2 tsp vanilla extract
+- [ ] 2 tbsp milk
+- [ ] 2 large eggs
+- [ ] 2.5 cup quick or old-fashioned oats
+- [ ] 2 cups (12 oz) chocolate chips
 
 ## Recipe
 

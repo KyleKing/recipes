@@ -1,10 +1,10 @@
 # Spicy Salmon Roll Bowls
 
-> Based on [https://healthyishfoods.com/spicy-salmon-roll-bowls/](https://healthyishfoods.com/spicy-salmon-roll-bowls/)
+> Based on [https://healthyishfoods.com/spicy-salmon-roll-bowls](https://healthyishfoods.com/spicy-salmon-roll-bowls)
 
-<!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
+<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
 
-Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
 <!-- {cte} -->
 
@@ -18,7 +18,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ### Salmon and Blackening Spice
 
-- [ ] 12 oz salmon, cubed and seasoned
+- [ ] 12-16 oz salmon, cubed and seasoned
 - [ ] 1 tsp oregano
 - [ ] 1/2 tsp garlic powder
 - [ ] 1/2 tsp onion powder
@@ -36,13 +36,13 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ### Salmon Bowls
 
-- [ ] 1 cup white rice uncooked
+- [ ] 2 cup white rice uncooked
 - [ ] 2 carrots, thin-sliced
 - [ ] cucumber, thin-sliced
 - [ ] 1/2 avocado, sliced
 - [ ] 1/4 cup peanuts
 - [ ] 1 tbsp jalapeno, thin-sliced
-- [ ] and/or green onions, broccoli, peas, etc.
+- [ ] and/or green onions, peas, etc.
 
 ### Serving
 
