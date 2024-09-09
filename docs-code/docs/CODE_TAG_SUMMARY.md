@@ -33,7 +33,6 @@
 | FIXME   | The indented bullets don't appear correctly. May need to change spacing -->           | 2022-09-15 | [docs/meals/hummus.md:19](https://github.com/KyleKing/recipes/blame/4033ab8e31206f15637e08d7fe642b5e937b0e9b/docs/sides/hummus.md#L19)                                                               |
 | TODO    | Capture image -->                                                                     | 2020-12-06 | [docs/meals/karens_roasted_veggie_bowls.md:11](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/veggie/karens_roasted_veggie_bowls.md#L14)                    |
 | TODO    | Capture image -->                                                                     | 2020-12-06 | [docs/meals/oven_baked_sausage.md:13](https://github.com/KyleKing/recipes/blame/37e530b8bd978ab3d5f92326044dc04a13586ce8/docs/meals/oven-baked_sausage.md#L16)                                       |
-| TODO    | Capture image -->                                                                     | 2023-07-06 | [docs/meals/smoked_turkey_reuben.md:13](https://github.com/KyleKing/recipes/blame/f213c39fb2cb16cab5c91601e9ff1ff3a8314423/docs/meals/smoked_turkey_reuben.md#L13)                                   |
 | TODO    | Capture image -->                                                                     | 2023-11-05 | [docs/meals/spices_garam_masala.md:13](https://github.com/KyleKing/recipes/blame/d7752e327326dc51148a1801b4a736be25c76342/docs/sides/spices_garam_masala.md#L13)                                     |
 | TODO    | Capture image -->                                                                     | 2023-07-16 | [docs/poultry/chicken_salad_sandwich.md:11](https://github.com/KyleKing/recipes/blame/74e7077a29a0d9b0b44a97479e210a25a2422c30/docs/poultry/chicken_salad_sandwich.md#L11)                           |
 | TODO    | Capture image -->                                                                     | 2023-11-13 | [docs/poultry/poached_chicken.md:13](https://github.com/KyleKing/recipes/blame/da0c43ec2e47f0405f3f75b2f3f9aadf89d1aab5/docs/poultry/poached_chicken.md#L13)                                         |
@@ -48,6 +47,6 @@
 | PLANNED | Replace with utility functions from Calcipy (or Corallium?)                           | 2024-07-08 | [pyproject.toml:53](https://github.com/KyleKing/recipes/blame/b3fcf8136af77ccf1bd3ee1fb4297b79dd7e86ea/pyproject.toml#L53)                                                                           |
 | TODO    | Capture image -->'                                                                    | 2023-09-13 | [recipes/formatter.py:83](https://github.com/KyleKing/recipes/blame/2317785c860e44cafe43bab5bc11f3d1ad5984b8/recipes/formatter.py#L87)                                                               |
 
-Found code tags for FIXME (2), TODO (42), PLANNED (1)
+Found code tags for FIXME (2), TODO (41), PLANNED (1)
 
 <!-- calcipy_skip_tags -->
