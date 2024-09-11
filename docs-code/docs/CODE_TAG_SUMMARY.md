@@ -27,6 +27,7 @@
 | TODO    | Capture image -->                                                                     | 2023-09-11 | [docs/meals/burrito.md:13](https://github.com/KyleKing/recipes/blame/a1b3e5da53616d700dc4839f85c40a81d7003b9f/docs/veggie/refried_bean_burritos.md#L13)                                              |
 | TODO    | Capture image -->                                                                     | 2020-12-06 | [docs/meals/crispy_baked_sweet_potato_fries.md:13](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/veggie/crispy_baked_sweet_potato_fries.md#L16)            |
 | TODO    | Capture image -->                                                                     | 2023-07-06 | [docs/meals/crispy_tofu_and_zucchini_stir_fry.md:13](https://github.com/KyleKing/recipes/blame/f213c39fb2cb16cab5c91601e9ff1ff3a8314423/docs/veggie/crispy_tofu_and_zucchini_stir_fry.md#L13)        |
+| TODO    | Capture image -->                                                                     | 2024-09-11 | [docs/meals/crunchwrap_supreme_at_home.md:13](https://github.com/KyleKing/recipes/blame/08464df98faa4ab53d643c59292b41daa797fb60/docs/meals/crunchwrap_supreme_at_home.md#L13)                       |
 | TODO    | Capture image -->                                                                     | 2023-12-08 | [docs/meals/garlic_rice.md:13](https://github.com/KyleKing/recipes/blame/8844e251c145bd748f99e3cb7f074478859eaa80/docs/sides/garlic_rice.md#L13)                                                     |
 | TODO    | Capture image -->                                                                     | 2020-12-06 | [docs/meals/green_chile_mac.md:13](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/veggie/green_chile_mac.md#L16)                                            |
 | TODO    | Capture image -->                                                                     | 2020-12-06 | [docs/meals/guacamole.md:13](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/veggie/guacamole.md#L16)                                                        |
@@ -47,6 +48,6 @@
 | PLANNED | Replace with utility functions from Calcipy (or Corallium?)                           | 2024-07-08 | [pyproject.toml:53](https://github.com/KyleKing/recipes/blame/b3fcf8136af77ccf1bd3ee1fb4297b79dd7e86ea/pyproject.toml#L53)                                                                           |
 | TODO    | Capture image -->'                                                                    | 2023-09-13 | [recipes/formatter.py:83](https://github.com/KyleKing/recipes/blame/2317785c860e44cafe43bab5bc11f3d1ad5984b8/recipes/formatter.py#L87)                                                               |
 
-Found code tags for FIXME (2), TODO (41), PLANNED (1)
+Found code tags for FIXME (2), TODO (42), PLANNED (1)
 
 <!-- calcipy_skip_tags -->
