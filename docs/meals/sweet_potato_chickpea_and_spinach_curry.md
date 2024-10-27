@@ -25,7 +25,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 400ml can of chopped tomatoes
 - [ ] 400ml can of light coconut milk
 - [ ] Bag of spinach
-- [ ] 1 cup uncooked rice
+- [ ] 2 cups uncooked rice, Naan, or other base
 
 ## Recipe
 
@@ -36,7 +36,6 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
     - Reduce the heat to a simmer, then cover and cook for 10-15 min
 - Remove the lid, then cook for a further 15-20 min, stirring occasionally, or until the sweet potato is cooked through and the sauce thickened
 - Stir in the coconut milk and cook for a couple of minutes, then stir in the spinach and cook until wilted
-- Serve on rice
 
 ## Notes
 

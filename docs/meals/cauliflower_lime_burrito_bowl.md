@@ -19,7 +19,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ### Bowl
 
 - [ ] 1 head cauliflower
-- [ ] 1 cup basmati rice
+- [ ] 1 cup basmati rice, quinoa, etc.
 - [ ] 1 yellow onion, diced
 - [ ] 1 (15 oz) can black beans, rinsed
 - [ ] 1 (15 oz) can corn, rinsed
@@ -44,11 +44,12 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 2 limes, diced
 - [ ] 2 tomatoes, diced
 - [ ] 1 small bunch cilantro, remove and mince the leaves
+- [ ] (optional) salsa
 
 ## Recipe
 
 - Pour 1 cup of water and place the trivet in the Instant Pot
-    - Remove the leaves from the Cauliflower
+    - Remove *most of* the leaves from the Cauliflower
     - Cook for "0" min at high pressure (if longer, will be too soft)
     - Once at pressure, quick release
     - Remove the cauliflower to cool
@@ -60,7 +61,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
     - Quick release
     - Add juice of 1 lime per cup of rice and fluff
 - Add the beans and corn to the pan
-- Once cool enough, chop the cauliflower into bite size pieces and add to the pan
+- Once cool enough, remove the remaining leaves, chop the cauliflower into bite size pieces, and add to the pan
     - Coat with remaining spices
 - Serve in bowls with diced toppings
 

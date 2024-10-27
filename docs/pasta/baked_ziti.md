@@ -14,7 +14,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-- [ ] ziti noodles
+- [ ] Ziti noodles
 - [ ] 6 oz spinach
 - [ ] 1 jar (1 pound 9 ounces) pasta sauce
 - [ ] 1 cup ricotta cheese
@@ -33,4 +33,5 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Notes
 
-- Alex's family recipe. Good for groups
+- If put in the fridge, extend cook time by 10-15 min!
+- Alex's family recipe and great for groups
