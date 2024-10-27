@@ -3,8 +3,8 @@
 | Link                                                                    |   Rating | Image                                                                                                       |
 |:------------------------------------------------------------------------|---------:|:------------------------------------------------------------------------------------------------------------|
 | [Baked-Fish-And-Asparagus](./baked-fish-and-asparagus.md)               |        5 | ![baked-fish-and-asparagus.jpeg](./baked-fish-and-asparagus.jpeg){: .image-toc loading=lazy }               |
-| [Baked-Fish](./baked-fish.md)                                           |        4 | ![baked-fish.jpeg](./baked-fish.jpeg){: .image-toc loading=lazy }                                           |
 | [Chef Johns Salmon](./chef_johns_salmon.md)                             |        0 | ![chef_johns_salmon.jpeg](./chef_johns_salmon.jpeg){: .image-toc loading=lazy }                             |
+| [Fish](./fish.md)                                                       |        4 | ![fish.jpeg](./fish.jpeg){: .image-toc loading=lazy }                                                       |
 | [Garlic Lime Shrimp Rice Noodles](./garlic_lime_shrimp_rice_noodles.md) |        2 | ![garlic_lime_shrimp_rice_noodles.jpeg](./garlic_lime_shrimp_rice_noodles.jpeg){: .image-toc loading=lazy } |
 | [Oven Baked Fish With Tomatoes](./oven_baked_fish_with_tomatoes.md)     |        0 | <!-- TODO: Capture image -->                                                                                |
 | [Shrimp Creole](./shrimp_creole.md)                                     |        5 | ![shrimp_creole.jpeg](./shrimp_creole.jpeg){: .image-toc loading=lazy }                                     |
