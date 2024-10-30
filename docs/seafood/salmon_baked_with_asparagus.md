@@ -1,4 +1,4 @@
-# Baked Fish and Asparagus
+# Salmon Baked with Asparagus
 
 <!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
 
@@ -6,9 +6,9 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cte} -->
 
-<!-- {cts} name_image=baked-fish-and-asparagus.jpeg; (User can specify image name) -->
+<!-- {cts} name_image=salmon_baked_with_asparagus.jpeg; (User can specify image name) -->
 
-![baked-fish-and-asparagus.jpeg](./baked-fish-and-asparagus.jpeg){: .image-recipe loading=lazy }
+![salmon_baked_with_asparagus.jpeg](./salmon_baked_with_asparagus.jpeg){: .image-recipe loading=lazy }
 
 <!-- {cte} -->
 
@@ -20,6 +20,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
     - [ ] 1/8 tsp cayenne pepper
     - [ ] 2/3 tbsp lemon juice
     - [ ] pinch of salt
+
 - [ ] Salmon filet
 - [ ] Tomato, thinly sliced
 - [ ] (Optional) Asparagus

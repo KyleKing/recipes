@@ -16,10 +16,10 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 ## Ingredients
 
+- [ ] Instant Pot
 - [ ] 1 cup sushi rice, rinsed
 - [ ] 1.5 cups water
 - [ ] 3 tbsp rice vinegar (or 1 tbsp cider vinegar)
-- [ ] Instant Pot
 
 ## Recipe
 
