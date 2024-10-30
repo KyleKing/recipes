@@ -1,4 +1,4 @@
-# Pan Seared Salmon with Lemon Garlic Butter Sauce
+# Salmon with Lemon Garlic Butter Sauce
 
 > Based on [https://cafedelites.com/crispy-seared-lemon-garlic-herb-salmon/#recipe](https://cafedelites.com/crispy-seared-lemon-garlic-herb-salmon/#recipe)
 
