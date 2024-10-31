@@ -1,14 +1,14 @@
 """Format Markdown Files for MKDocs."""
 
+from dataclasses import dataclass, field
 from pathlib import Path
 
-import pandas as pd
 from calcipy.file_search import find_project_files_by_suffix
 from calcipy.invoke_helpers import get_doc_subdir, get_project_path
+from calcipy.markdown_table import format_table
 from calcipy.md_writer import write_template_formatted_md_sections
 from calcipy.md_writer._writer import _parse_var_comment  # noqa: PLC2701
 from corallium.log import LOGGER
-from pydantic import BaseModel, Field
 
 # =====================================================================================
 # Shared Functionality
@@ -152,63 +152,21 @@ def _handle_image_section(line: str, path_md: Path) -> list[str]:
 # =====================================================================================
 # Utilities for TOC
 
-TOCRecordT = dict[str, str | int]
-"""TOC Record."""
 
-
-def _format_toc_table(toc_records: list[TOCRecordT]) -> list[str]:
-    """Format TOC data as a markdown table.
-
-    Args:
-        toc_records: list of records
-
-    Returns:
-        List[str]: the datatable as a list of lines
-
-    """
-    df_toc = pd.DataFrame(toc_records)
-    content = df_toc.to_markdown(index=False)
-    assert content is not None  # noqa: S101 for pyright
-    return [*content.split('\n')]  # for mypy
-
-
-def _create_toc_record(
-    path_recipe: Path,
-    path_img: Path,
-    rating: str | int,
-) -> TOCRecordT:
-    """Create the dictionary summarizing data for the table of contents.
-
-    Args:
-        path_recipe: Path to the recipe
-        path_img: Path to the recipe image
-        rating: recipe user-rating
-
-    Returns:
-        TOCRecordT: single records
-
-    """
-    link = f'[{_format_titlecase(path_recipe.stem)}](./{path_recipe.name})'
-    img_md = _format_image_md(path_img.name, attrs='.image-toc')
-    return {
-        'Link': link,
-        'Rating': int(rating),
-        'Image': img_md,
-    }
-
-
-class Recipe(BaseModel):
+@dataclass
+class Recipe:
     """Recipe Model."""
 
     rating: str = ''
-    path_image: Path = Path()
+    path_image: Path = field(default_factory=Path)
 
 
-class _TOCRecipes(BaseModel):
+@dataclass
+class _TOCRecipes:
     """Store recipe metadata for TOC."""
 
     sub_dir: Path
-    recipes: dict[str, Recipe] = Field(default_factory=dict)
+    recipes: dict[str, Recipe] = field(default_factory=dict)
 
     def handle_star(self, line: str, path_md: Path) -> list[str]:
         """Store the star rating and write.
@@ -262,12 +220,16 @@ class _TOCRecipes(BaseModel):
         """Write the table of contents."""
         if self.recipes:
             records = [
-                _create_toc_record(Path(path_md), info.path_image, info.rating)
-                for path_md, info in self.recipes.items()
+                {
+                    'Link': f'[{_format_titlecase(path_recipe.stem)}](./{path_recipe.name})',
+                    'Rating': int(info.rating),
+                    'Image': _format_image_md(info.path_image.name, attrs='.image-toc'),
+                }
+                for path_recipe, info in [(Path(key), value) for key, value in self.recipes.items()]
             ]
-            toc_table = _format_toc_table(records)
-            header = [f'# Table of Contents ({_format_titlecase(self.sub_dir.name)})']
-            (self.sub_dir / '__TOC.md').write_text('\n'.join([*header, '', *toc_table, '']))
+            toc_table = format_table(headers=[*records[0]], records=records, delimiters=[':-', '-:', ':-'])
+            text = f'# Table of Contents ({_format_titlecase(self.sub_dir.name)})\n\n{toc_table}\n'
+            (self.sub_dir / '__TOC.md').write_text(text)
 
 
 # =====================================================================================

@@ -45,10 +45,8 @@
 | TODO  | Capture image -->                                                                     | 2020-12-06 | [docs/sushi/shrimp_and_avocado.md:13](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/sushi/shrimp_and_avocado.md#L16)                                                      |
 | TODO  | Capture image -->                                                                     | 2020-12-06 | [docs/sushi/smoked_salmon_nigiri.md:13](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/sushi/smoked_salmon_nigiri.md#L16)                                                  |
 | TODO  | Capture image -->                                                                     | 2020-12-06 | [docs/sushi/vegetable_rolls.md:11](https://github.com/KyleKing/recipes/blame/e948debd7fe852fd10eb0575278728252d027bad/docs/sushi/vegetable_rolls.md#L14)                                                            |
-| TODO  | Replace with calcipy._md_helpers                                                      | 2024-10-31 | [pyproject.toml:53](https://github.com/KyleKing/recipes/blame/main
-/pyproject.toml#L53)                                                                                                                             |
 | TODO  | Capture image -->'                                                                    | 2023-09-13 | [recipes/formatter.py:83](https://github.com/KyleKing/recipes/blame/2317785c860e44cafe43bab5bc11f3d1ad5984b8/recipes/formatter.py#L87)                                                                              |
 
-Found code tags for FIXME (2), TODO (43)
+Found code tags for FIXME (2), TODO (42)
 
 <!-- calcipy_skip_tags -->
