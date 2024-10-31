@@ -51,8 +51,8 @@ poetry config pypi-token.pypi ...
 | `recipes/_runtime_type_check_setup.py` | 13         | 0       | 33       | 100.0%   |
 | `recipes/formatter.py`                 | 96         | 7       | 0        | 91.5%    |
 | `recipes/scripts.py`                   | 5          | 5       | 0        | 0.0%     |
-| `recipes/tasks.py`                     | 39         | 4       | 0        | 78.9%    |
-| **Totals**                             | 157        | 16      | 33       | 85.9%    |
+| `recipes/tasks.py`                     | 39         | 4       | 0        | 80.0%    |
+| **Totals**                             | 157        | 16      | 33       | 86.7%    |
 
-Generated on: 2024-08-28
+Generated on: 2024-10-30
 <!-- {cte} -->

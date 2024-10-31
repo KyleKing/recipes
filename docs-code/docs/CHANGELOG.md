@@ -16,6 +16,7 @@
 
 ### Fix
 
+- restore extra.css
 - correct links to Garam Masala recipe
 - ignore linting warning
 - use the new ignore_patterns configuration
@@ -30,6 +31,7 @@
 
 ### Refactor
 
+- rename baked fish
 - move poultry/seafood recipes appropriately
 - merge sides into meals
 - merge veggies into meals

@@ -166,7 +166,6 @@ def _format_toc_table(toc_records: list[TOCRecordT]) -> list[str]:
         List[str]: the datatable as a list of lines
 
     """
-    # Format table for Github Markdown
     df_toc = pd.DataFrame(toc_records)
     content = df_toc.to_markdown(index=False)
     assert content is not None  # noqa: S101 for pyright
