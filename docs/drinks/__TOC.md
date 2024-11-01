@@ -1,7 +1,7 @@
 # Table of Contents (Drinks)
 
 | Link                                                          | Rating | Image                                                                                       |
-|:--------------------------------------------------------------|-------:|:--------------------------------------------------------------------------------------------|
+|:--------------------------------------------------------------|-------:|:-------------------------------------------------------------------------------------------:|
 | [Between The Sheets](./between_the_sheets.md)                 | 0      | <!-- TODO: Capture image -->                                                                |
 | [Chilly Chile Paloma](./chilly_chile_paloma.md)               | 0      | <!-- TODO: Capture image -->                                                                |
 | [Coffee](./coffee.md)                                         | 4      | ![coffee.jpeg](./coffee.jpeg){: .image-toc loading=lazy }                                   |

@@ -1,7 +1,7 @@
 # Table of Contents (Sushi)
 
 | Link                                                  | Rating | Image                                                                                   |
-|:------------------------------------------------------|-------:|:----------------------------------------------------------------------------------------|
+|:------------------------------------------------------|-------:|:---------------------------------------------------------------------------------------:|
 | [Rice](./_rice.md)                                    | 1      | ![_rice.jpg](./_rice.jpg){: .image-toc loading=lazy }                                   |
 | [Rolling](./_rolling.md)                              | 4      | ![_rolling.jpg](./_rolling.jpg){: .image-toc loading=lazy }                             |
 | [California Rolls](./california_rolls.md)             | 1      | ![california_rolls.jpeg](./california_rolls.jpeg){: .image-toc loading=lazy }           |

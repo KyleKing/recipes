@@ -1,7 +1,7 @@
 # Table of Contents (Meals)
 
 | Link                                                                                                          | Rating | Image                                                                                                                                             |
-|:--------------------------------------------------------------------------------------------------------------|-------:|:--------------------------------------------------------------------------------------------------------------------------------------------------|
+|:--------------------------------------------------------------------------------------------------------------|-------:|:-------------------------------------------------------------------------------------------------------------------------------------------------:|
 | [Baked Potatoes](./baked_potatoes.md)                                                                         | 5      | ![baked_potatoes.jpeg](./baked_potatoes.jpeg){: .image-toc loading=lazy }                                                                         |
 | [Baked Tofu With Peanut Sauce And Coconut Lime Rice](./baked_tofu_with_peanut_sauce_and_coconut_lime_rice.md) | 4      | ![baked_tofu_with_peanut_sauce_and_coconut_lime_rice.jpeg](./baked_tofu_with_peanut_sauce_and_coconut_lime_rice.jpeg){: .image-toc loading=lazy } |
 | [Basmati Rice](./basmati_rice.md)                                                                             | 1      | ![basmati_rice.jpg](./basmati_rice.jpg){: .image-toc loading=lazy }                                                                               |

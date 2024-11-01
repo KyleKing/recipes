@@ -1,7 +1,7 @@
 # Table of Contents (Poultry)
 
 | Link                                                                                            | Rating | Image                                                                                                                               |
-|:------------------------------------------------------------------------------------------------|-------:|:------------------------------------------------------------------------------------------------------------------------------------|
+|:------------------------------------------------------------------------------------------------|-------:|:-----------------------------------------------------------------------------------------------------------------------------------:|
 | [Aunt Laura'S Spicy Chicken Dip](./aunt_laura's_spicy_chicken_dip.md)                           | 1      | ![aunt_laura's_spicy_chicken_dip.jpeg](./aunt_laura's_spicy_chicken_dip.jpeg){: .image-toc loading=lazy }                           |
 | [Broccoli Cheddar Chicken And Rice Casserole](./broccoli_cheddar_chicken_and_rice_casserole.md) | 5      | ![broccoli_cheddar_chicken_and_rice_casserole.jpeg](./broccoli_cheddar_chicken_and_rice_casserole.jpeg){: .image-toc loading=lazy } |
 | [Chicken Cacciatore](./chicken_cacciatore.md)                                                   | 5      | ![chicken_cacciatore.jpg](./chicken_cacciatore.jpg){: .image-toc loading=lazy }                                                     |

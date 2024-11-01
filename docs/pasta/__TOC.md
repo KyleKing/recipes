@@ -1,7 +1,7 @@
 # Table of Contents (Pasta)
 
 | Link                                                                                                        | Rating | Image                                                                                                                                           |
-|:------------------------------------------------------------------------------------------------------------|-------:|:------------------------------------------------------------------------------------------------------------------------------------------------|
+|:------------------------------------------------------------------------------------------------------------|-------:|:-----------------------------------------------------------------------------------------------------------------------------------------------:|
 | [Asparagus Pasta](./asparagus_pasta.md)                                                                     | 4      | ![asparagus_pasta.jpeg](./asparagus_pasta.jpeg){: .image-toc loading=lazy }                                                                     |
 | [Baked Ziti](./baked_ziti.md)                                                                               | 4      | ![baked_ziti.jpeg](./baked_ziti.jpeg){: .image-toc loading=lazy }                                                                               |
 | [Classic Pasta And Mushrooms](./classic_pasta_and_mushrooms.md)                                             | 5      | ![classic_pasta_and_mushrooms.jpeg](./classic_pasta_and_mushrooms.jpeg){: .image-toc loading=lazy }                                             |

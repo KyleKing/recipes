@@ -227,7 +227,7 @@ class _TOCRecipes:
                 }
                 for path_recipe, info in [(Path(key), value) for key, value in self.recipes.items()]
             ]
-            toc_table = format_table(headers=[*records[0]], records=records, delimiters=[':-', '-:', ':-'])
+            toc_table = format_table(headers=[*records[0]], records=records, delimiters=[':-', '-:', ':-:'])
             text = f'# Table of Contents ({_format_titlecase(self.sub_dir.name)})\n\n{toc_table}\n'
             (self.sub_dir / '__TOC.md').write_text(text)
 

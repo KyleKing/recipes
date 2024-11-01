@@ -1,7 +1,7 @@
 # Table of Contents (Dessert)
 
 | Link                                                                                                | Rating | Image                                                                                                                                   |
-|:----------------------------------------------------------------------------------------------------|-------:|:----------------------------------------------------------------------------------------------------------------------------------------|
+|:----------------------------------------------------------------------------------------------------|-------:|:---------------------------------------------------------------------------------------------------------------------------------------:|
 | [Apple Crisp](./apple_crisp.md)                                                                     | 3      | ![apple_crisp.jpg](./apple_crisp.jpg){: .image-toc loading=lazy }                                                                       |
 | [Baked Apples](./baked_apples.md)                                                                   | 2      | <!-- TODO: Capture image -->                                                                                                            |
 | [Baltimore Berger Cookies](./baltimore_berger_cookies.md)                                           | 4      | ![baltimore_berger_cookies.jpeg](./baltimore_berger_cookies.jpeg){: .image-toc loading=lazy }                                           |

@@ -1,7 +1,7 @@
 # Table of Contents (Seafood)
 
 | Link                                                                                | Rating | Image                                                                                                       |
-|:------------------------------------------------------------------------------------|-------:|:------------------------------------------------------------------------------------------------------------|
+|:------------------------------------------------------------------------------------|-------:|:-----------------------------------------------------------------------------------------------------------:|
 | [Garlic Lime Shrimp Rice Noodles](./garlic_lime_shrimp_rice_noodles.md)             | 2      | ![garlic_lime_shrimp_rice_noodles.jpeg](./garlic_lime_shrimp_rice_noodles.jpeg){: .image-toc loading=lazy } |
 | [Salmon Baked With Asparagus](./salmon_baked_with_asparagus.md)                     | 5      | ![salmon_baked_with_asparagus.jpeg](./salmon_baked_with_asparagus.jpeg){: .image-toc loading=lazy }         |
 | [Salmon With Blackened Seasoning](./salmon_with_blackened_seasoning.md)             | 5      | ![salmon_with_blackened_seasoning.jpeg](./salmon_with_blackened_seasoning.jpeg){: .image-toc loading=lazy } |
