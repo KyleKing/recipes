@@ -19,7 +19,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 1/2 tsp garlic powder
 - [ ] 1/2 tsp onion powder
 - [ ] 1/2 tsp dried thyme
-- [ ] 1/2 tsp Kosher Salt
+- [ ] 1/4 tsp Kosher Salt
 - [ ] Neutral oil or butter for blackening
 
 ## Recipe
