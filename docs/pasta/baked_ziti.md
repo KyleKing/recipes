@@ -29,7 +29,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - Add spinach during the last minute of cook time, then drain the pasta and spinach. Place back in the pot
 - Stir the pasta sauce, ricotta, Parmesan, garlic, black pepper, and 1⁄2 cup mozzarella
 - Spoon pasta mixture into 9x13 inch pan and sprinkle the remaining 1/2 cup of mozzarella on top
-- Back at 350 degrees for 30 min
+- Bake at 350 degrees for 30 min
 
 ## Notes
 

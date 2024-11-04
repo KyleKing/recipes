@@ -34,5 +34,5 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ### Instant Pot
 
 - Pour in the broth and secure the Instant Pot lid
-- Cook at manual or pressure cook for 12 minutes
+- Cook at manual or pressure cook for 12 minutes (maybe ~14min from frozen)
 - Quick release
