@@ -26,7 +26,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ### Chili Powder Spices
 
-> Previously included 1 tbsp chili powder and 1/2 tsp of the rest, but I calculated an approximate substitute based on: <https://www.spendwithpennies.com/homemade-chili-powder>
+> Previously included 1 Tbsp chili powder and 1/2 tsp of the rest, but I calculated an approximate substitute based on: <https://www.spendwithpennies.com/homemade-chili-powder>
 
 - [ ] 1 tsp smoked paprika
 - [ ] 1 tsp garlic powder

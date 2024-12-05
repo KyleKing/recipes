@@ -16,7 +16,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-- [ ] 4 tbsp butter
+- [ ] 4 Tbsp butter
 - [ ] 3 cloves garlic, minced
 - [ ] 2 cup halved cherry tomatoes
 - [ ] 1 tsp dried oregano

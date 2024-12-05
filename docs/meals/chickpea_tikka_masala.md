@@ -17,12 +17,12 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Ingredients
 
 - [ ] 1 Cauliflower
-- [ ] 1 tbsp extra-virgin olive oil
+- [ ] 1 Tbsp extra-virgin olive oil
 - [ ] 1/2 tsp fine sea salt
 - [ ] 1 medium yellow onion, diced
 - [ ] 1/2 tsp ground ginger
 - [ ] 3 cloves garlic, minced
-- [ ] 1 tbsp garam masala ([../sides/spices_garam_masala.md](../meals/spices_garam_masala.md))
+- [ ] 1 Tbsp garam masala ([../sides/spices_garam_masala.md](../meals/spices_garam_masala.md))
 - [ ] 1/4 tsp ground cayenne pepper
 - [ ] 2x 15 oz can chickpeas, rinsed and drained
 - [ ] 1 28oz can of crushed tomatoes
@@ -33,7 +33,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Recipe
 
-- In an Instant Pot, pour in 1 cup of water and place the cauliflower on a trivet. Set cook time to zero and seal the vent. When at pressure, quick release to avoid overcooking. Alternatively, place the florets in a microwave safe bowl with 1-2 tbsp of water and microwave for four minutes
+- In an Instant Pot, pour in 1 cup of water and place the cauliflower on a trivet. Set cook time to zero and seal the vent. When at pressure, quick release to avoid overcooking. Alternatively, place the florets in a microwave safe bowl with 1-2 Tbsp of water and microwave for four minutes
 - Carefully trim florets from the Cauliflower into bite-size pieces and set the leaves aside
 - Rinse the chickpeas, mince the garlic, and, if using, start cooking the rice or prepare to warm the Naan in a cast iron pan or toaster
 - Heat the oil in a large, nonreactive skillet medium heat. Add the cauliflower florets, onion, and salt. Cook, stirring occasionally, until the onions are soft and translucent and the cauliflower is slightly charred (~7 min)

@@ -19,7 +19,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ### Broccoli
 
 - [ ] 1/4 cup vegetable oil
-- [ ] 1 tbsp sesame oil
+- [ ] 1 Tbsp sesame oil
 - [ ] 1/4 tsp cayenne pepper
 - [ ] 2 lbs broccoli (2 smaller heads)
 - [ ] salt and pepper
@@ -27,12 +27,12 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ### Kung Pao Sauce
 
 - [ ] 1/4 cup Thai sweet chili sauce
-- [ ] 2 tbsp oyster sauce
-- [ ] 2 tbsp sesame oil
-- [ ] 2 tbsp vegetable oil
-- [ ] 1.5 tbsp Sriracha
-- [ ] 1 tbsp soy sauce
-- [ ] 1 tbsp unseasoned rice vinegar
+- [ ] 2 Tbsp oyster sauce
+- [ ] 2 Tbsp sesame oil
+- [ ] 2 Tbsp vegetable oil
+- [ ] 1.5 Tbsp Sriracha
+- [ ] 1 Tbsp soy sauce
+- [ ] 1 Tbsp unseasoned rice vinegar
 - [ ] 2 cloves garlic, finely minced
 
 ### Garnish

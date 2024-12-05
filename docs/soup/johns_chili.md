@@ -21,14 +21,14 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 1 lb ground turkey
 - [ ] 1 medium onion, chopped
 - [ ] 1 cup mushrooms, chopped
-- [ ] 2 tbsp (Lawry's) seasoning salt (see substitute below)
-- [ ] 3 tbsp chili powder
+- [ ] 2 Tbsp (Lawry's) seasoning salt (see substitute below)
+- [ ] 3 Tbsp chili powder
 - [ ] 1 tsp cayenne pepper
 - [ ] 3 cloves garlic, minced
 - [ ] 2 cups water
 - [ ] 2 (15 oz) cans tomato sauce
 - [ ] 2 (15 oz) cans kidney beans, drained
-- [ ] 2 tbsp light brown sugar
+- [ ] 2 Tbsp light brown sugar
 
 ### Lawry's Seasoning Salt Substitute
 

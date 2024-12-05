@@ -20,16 +20,16 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 - [ ] 1 lb large shrimps peeled, de-veined
 - [ ] Generous pinch of salt
-- [ ] 1 tbsp lime juice
+- [ ] 1 Tbsp lime juice
 
 ### Garlic Lime Sauce (Nuoc Cham Sauce)
 
 - [ ] 8 garlic cloves
-- [ ] 6 tbsp lime juice
-- [ ] 5 tbsp brown sugar
+- [ ] 6 Tbsp lime juice
+- [ ] 5 Tbsp brown sugar
 - [ ] 2/3 cup water
-- [ ] 2 tbsp fish sauce
-- [ ] 4 tsp cornstarch and 2 *tbsp* water
+- [ ] 2 Tbsp fish sauce
+- [ ] 4 tsp cornstarch and 2 *Tbsp* water
 - [ ] 2-3 Thai red chili peppers, sliced deseeded OR 1 tsp sambal oelek OR see below
 
 ### Noodle Salad
@@ -50,7 +50,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
     - Toss the cooked shrimp with the fresh lime juice in a bowl and set aside
 - Boil water and cook the noodles according to the package directions
 - Garlic Lime Sauce
-    - Mix the 1 tbsp water with the cornstarch. Mix it into a slurry and set aside
+    - Mix the 1 Tbsp water with the cornstarch. Mix it into a slurry and set aside
     - In the same saucepan, bring *most of* the sauce ingredients to a boil on medium heat (garlic, lime juice, brown sugar, water, fish sauce) until the sugar is dissolved
     - Whisk in the cornstarch slurry and the chili peppers
     - Cook for another 2 more minutes until a thick, sauce-like consistency. Season with extra salt or fish sauce if needed

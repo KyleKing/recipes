@@ -16,7 +16,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-- [ ] 3 tbsp olive oil
+- [ ] 3 Tbsp olive oil
 - [ ] 1 large yellow onion, cut into 1/2" dice
 - [ ] 6 cloves garlic (3 tsp), diced
 - [ ] 4 medium carrots, halved and coined

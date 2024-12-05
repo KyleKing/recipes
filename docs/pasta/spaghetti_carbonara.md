@@ -26,7 +26,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ### Pasta
 
-- [ ] 1 tbsp olive oil
+- [ ] 1 Tbsp olive oil
 - [ ] 3.5 ounces Pancetta, sliced into small pieces
 - [ ] 12 ounces spaghetti (about 3/4 box)
 

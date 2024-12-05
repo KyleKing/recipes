@@ -21,8 +21,8 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 2 oz cream cheese
 - [ ] 2 oz fresh goat cheese
 - [ ] 1.5 cloves garlic
-- [ ] 1/2 tbsp fresh thyme, finely chopped
-- [ ] 1/2 tbsp fresh oregano, finely chopped
+- [ ] 1/2 Tbsp fresh thyme, finely chopped
+- [ ] 1/2 Tbsp fresh oregano, finely chopped
 - [ ] salt and pepper
 
 ### Wrapped Chicken
@@ -31,7 +31,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 2 chicken breasts (1/2 lb each), boneless and skinless, flattened
 - [ ] salt and pepper
 - [ ] 6 slices proscuitto (2 oz)
-- [ ] 2 tbsp olive oil
+- [ ] 2 Tbsp olive oil
 - [ ] q cup cherry tomatoes
 - [ ] fresh thyme and oregano sprigs (if you have them)
 

@@ -25,8 +25,8 @@ Combine:
     - or fresh Onion, carrots, and mushrooms cut in small diced
 - [ ] 1/2 bag frozen peas
 - [ ] 3 eggs
-- [ ] 1 tbsp soy sauce
-- [ ] 1 tbsp Sriracha
+- [ ] 1 Tbsp soy sauce
+- [ ] 1 Tbsp Sriracha
 - [ ] 1 tsp sesame oil
 - [ ] 1/2 tsp sugar
 - [ ] (optional) 3g MSG or chicken bouillon powder

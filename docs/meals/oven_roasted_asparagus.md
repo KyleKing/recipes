@@ -17,12 +17,12 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Ingredients
 
 - [ ] 1 bunch Asparagus
-- [ ] 3 tbsp olive oil
-- [ ] 1.5 tbsp grated Parmesan cheese
+- [ ] 3 Tbsp olive oil
+- [ ] 1.5 Tbsp grated Parmesan cheese
 - [ ] 1 clove garlic, minced
 - [ ] 1/2 tsp salt
 - [ ] 1/2 tsp ground black pepper
-- [ ] 1 tbsp lemon juice
+- [ ] 1 Tbsp lemon juice
 
 ## Recipe
 

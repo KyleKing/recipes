@@ -27,7 +27,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] Peanut Butter Filling
     - [ ] 1 cup creamy peanut butter
     - [ ] 1/3 cup powdered sugar
-    - [ ] 4 tbsp butter melted
+    - [ ] 4 Tbsp butter melted
     - [ ] 1 tsp vanilla extract
     - [ ] 1/8 tsp salt
 - [ ] Glaze

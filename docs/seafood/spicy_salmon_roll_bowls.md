@@ -30,8 +30,8 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ### Spicy Sauce
 
 - [ ] 1/4 cup mayonnaise
-- [ ] 1 tbsp sriracha
-- [ ] 2 tbsp soy sauce, low sodium
+- [ ] 1 Tbsp sriracha
+- [ ] 2 Tbsp soy sauce, low sodium
 - [ ] 1 *tsp* brown sugar
 
 ### Salmon Bowls
@@ -41,12 +41,12 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] cucumber, thin-sliced
 - [ ] 1/2 avocado, sliced
 - [ ] 1/4 cup peanuts
-- [ ] 1 tbsp jalapeno, thin-sliced
+- [ ] 1 Tbsp jalapeno, thin-sliced
 - [ ] and/or green onions, peas, etc.
 
 ### Serving
 
-- [ ] 2 tbsp cilantro, chopped
+- [ ] 2 Tbsp cilantro, chopped
 - [ ] 1 large lime, quartered
 - [ ] toasted sesame seeds or 2 tsp furikake, split between the bowls
 

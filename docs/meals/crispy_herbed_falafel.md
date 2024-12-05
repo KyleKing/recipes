@@ -19,7 +19,7 @@ Personal rating: *Not yet rated*
 - [ ] 2 cups *dried* chickpeas
 - [ ] 1 yellow onion, coarsely chopped
 - [ ] 3 cloves garlic, coarsely chopped
-- [ ] 1 tbsp coriander seed, lightly crushed
+- [ ] 1 Tbsp coriander seed, lightly crushed
 - [ ] 1.5 tsp salt
 - [ ] 1/2 tsp ground cumin
 - [ ] 1/2 tsp black pepper

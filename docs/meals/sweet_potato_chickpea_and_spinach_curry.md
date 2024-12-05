@@ -17,9 +17,9 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Ingredients
 
 - [ ] 2 red onions, finely diced
-- [ ] 3 tbsp Patak Rogan Josh Curry Paste (or comparable Curry Paste)
+- [ ] 3 Tbsp Patak Rogan Josh Curry Paste (or comparable Curry Paste)
 - [ ] 1 tsp ground ginger (3cm grated if fresh) (maybe down to 1/4 or 1/2 tsp?)
-- [ ] 1 tsp of ground coriander (maybe up to 1 tbsp?)
+- [ ] 1 tsp of ground coriander (maybe up to 1 Tbsp?)
 - [ ] 2 sweet potatoes, 2cm cubes
 - [ ] 400ml can of chickpeas, drained
 - [ ] 400ml can of chopped tomatoes
@@ -30,7 +30,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Recipe
 
 - Prep the onions and sweet potatoes. Start the rice
-- Heat 2 tbsps of oil in a large pot over medium heat
+- Heat 2 Tbsps of oil in a large pot over medium heat
 - Saute the onions with the curry paste. Cook for 10m until soft and golden
 - Add the ginger, coriander, sweet potato, chickpeas, tomatoes, and 200 ml water to the pan. Bring to a boil
     - Reduce the heat to a simmer, then cover and cook for 10-15 min

@@ -16,10 +16,10 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-- [ ] 1 tbsp canola oil
+- [ ] 1 Tbsp canola oil
 - [ ] 1 1/2 lbs cubed beef stew meat
 - [ ] 1 onion, finely chopped
-- [ ] 3 tbsp curry powder
+- [ ] 3 Tbsp curry powder
 - [ ] 1/4 tsp cayenne powder (optional)
 - [ ] 2 1/2 cups reduced-sodium beef broth
 - [ ] 4 small red potatoes, scrubbed and quartered

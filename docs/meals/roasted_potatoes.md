@@ -17,12 +17,12 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Ingredients
 
 - [ ] 3 pounds red or yellow potatoes, halved or quartered until evenly sized (such as Yukon)
-- [ ] 2 tbsp olive oil
+- [ ] 2 Tbsp olive oil
 - [ ] 1 lemon, juice and zest
 - [ ] 3 cloves garlic, minced
 - [ ] 1 tsp dried rosemary
 - [ ] Kosher salt and freshly ground black pepper, to taste
-- [ ] (Optional) 2 tbsp chopped parsley leaves
+- [ ] (Optional) 2 Tbsp chopped parsley leaves
 - [ ] (Optional) 2 sprigs fresh rosemary
 
 ## Recipe

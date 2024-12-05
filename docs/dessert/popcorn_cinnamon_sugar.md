@@ -15,7 +15,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Ingredients
 
 - [ ] 1/4 cup kernels
-- [ ] ~1 tbsp butter
+- [ ] ~1 Tbsp butter
 - [ ] ~1 tsp cinnamon
 - [ ] ~2 tsp sugar
 

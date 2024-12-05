@@ -18,7 +18,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 - [ ] 1 lb Salmon Filet with skin
 - [ ] 1 clove garlic, sliced
-- [ ] 1.5 tbsp mayonnaise
+- [ ] 1.5 Tbsp mayonnaise
 - [ ] 1/4 tsp Dijon mustard
 - [ ] 1/2 tsp fresh lemon juice
 - [ ] 1/2 tsp vegetable oil

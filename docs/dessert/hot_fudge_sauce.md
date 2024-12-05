@@ -17,10 +17,10 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Ingredients
 
 - [ ] 2 oz unsweetened chocolate
-- [ ] 2 tbsp butter
+- [ ] 2 Tbsp butter
 - [ ] 1/3 cup boiling water
 - [ ] 1 cup sugar
-- [ ] 2 tbsp corn syrup
+- [ ] 2 Tbsp corn syrup
 - [ ] 1 tsp vanilla
 
 ## Recipe
@@ -32,4 +32,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Notes
 
-- If using Cocoa powder, for every 1 oz chocolate, use 3 tbsp cocoa powder + 1 tbsp butter
+- If using Cocoa powder, for every 1 oz chocolate, use 3 Tbsp cocoa powder + 1 Tbsp butter

@@ -19,8 +19,8 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 1/2 medium sweet onion, thinly sliced
 - [ ] 1 large red bell pepper, seeded and thinly sliced
 - [ ] 1/2 small cauliflower head, cut into florets (2 cups)
-- [ ] ~2 tbsp pure sesame oil
-- [ ] 3 tbsp mild red curry paste
+- [ ] ~2 Tbsp pure sesame oil
+- [ ] 3 Tbsp mild red curry paste
 - [ ] 1 tsp ginger (or 1-inch piece peeled fresh ginger root, grated)
 - [ ] 8 oz (2 cups) frozen cubed butternut squash (or frozen cubed sweet potatoes)
 - [ ] 1 cup full-fat coconut milk (see Note)

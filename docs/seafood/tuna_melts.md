@@ -14,7 +14,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 ## Ingredients
 
-- [ ] 1 tbsp Mayonnaise
+- [ ] 1 Tbsp Mayonnaise
 - [ ] 2 cans of Tuna
 - [ ] 4-5 English Muffins
 - [ ] 1 pickle

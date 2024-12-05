@@ -19,7 +19,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 - [ ] cooked shrimp
 - [ ] cucumber
 - [ ] 1/5 avocado, peeled and mashed
-- [ ] 1 tbsps fresh cilantro, finely chopped
+- [ ] 1 Tbsps fresh cilantro, finely chopped
 - [ ] chives
 - [ ] sushi rice
 - [ ] wasabi

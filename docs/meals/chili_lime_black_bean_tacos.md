@@ -20,7 +20,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 1 red onion, thinly sliced
 - [ ] 1/2 cup lime juice (from 2 or 3 limes)
 - [ ] 1/4 tsp Kosher salt
-- [ ] ~4 tbsp extra-virgin olive oil
+- [ ] ~4 Tbsp extra-virgin olive oil
 - [ ] 2x 15.5-ounce can no-salt-added black beans, with the liquid
 - [ ] 2 tsp chili powder
 - [ ] 2 tsp ground cumin

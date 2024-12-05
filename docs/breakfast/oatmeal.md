@@ -37,11 +37,11 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - 1/2 cup oats
 - 1/2 cup regular or almond milk
 - 1/4 cup yogurt
-- 1 tbsp seeds
-- 1 tbsp syrup or honey
+- 1 Tbsp seeds
+- 1 Tbsp syrup or honey
 - Can add:
     - 1/4 cup banana puree, 1/2 tsp vanilla extract, and cinnamon
     - 1/4 cup raspberry, additional maple syrup, and 1/2 tsp vanilla extract and puree
-    - 1/4 cup pineapple chunks and 1 tbsp coconut flakes
+    - 1/4 cup pineapple chunks and 1 Tbsp coconut flakes
     - Chopped walnuts, coconut flakes, and crushed chocolate
-    - 1/4 cup blueberries, 2 tbsp lemon juice, lemon zest, and 1/2 tsp vanilla extract
+    - 1/4 cup blueberries, 2 Tbsp lemon juice, lemon zest, and 1/2 tsp vanilla extract

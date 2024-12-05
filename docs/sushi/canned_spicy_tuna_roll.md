@@ -16,7 +16,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 ## Ingredients
 
-- [ ] 1 tbsp mayo
+- [ ] 1 Tbsp mayo
 - [ ] 1 tsp Chili sauce (Sriracha)
 - [ ] 1 tsp toasted sesame oil
 - [ ] 1/2 tsp lemon juice (optional)

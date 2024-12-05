@@ -30,11 +30,11 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ### For The Falafel
 
 - [ ] Can of chickpeas, mashed with potato masher
-    - [ ] Note that 1-2 tbsp of flour can be added if needed to help the falafel hold their shape
+    - [ ] Note that 1-2 Tbsp of flour can be added if needed to help the falafel hold their shape
 - [ ] 2 medium cloves garlic
 - [ ] 1/4 medium red onion, finely chopped (about 1/4 cup)
 - [ ] 1/2 small carrot, scrubbed well and finely chopped (about 1/4 cup)
-- [ ] 1 tbsp cilantro stems, finely chopped
+- [ ] 1 Tbsp cilantro stems, finely chopped
 - [ ] 1/3 cup loosely packed parsley leaves
 - [ ] 1.5 tsp ground cumin
 - [ ] 1 tsp kosher salt
@@ -59,8 +59,8 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - For the falafel
     - In a new container, drain the chickpeas and mash with a potato masher and fork (or use a food processor if available)
     - Add the finely chopped garlic, red onion, carrot, cilantro stems, and parsley. Add the cumin and salt
-    - Taking a tbsp of dough and flatten into a 2" round
-        - You should now have a crumbly dough, but if two wet, add 1-2 tbsp of flour to help the dough stick together
+    - Taking a Tbsp of dough and flatten into a 2" round
+        - You should now have a crumbly dough, but if two wet, add 1-2 Tbsp of flour to help the dough stick together
     - Prep about 24 disks on a plate
 - Cut up the vegetables for serving
 - Heat up a thin layer of oil on the skillet under medium-high heat

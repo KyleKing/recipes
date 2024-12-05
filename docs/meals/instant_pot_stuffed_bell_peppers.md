@@ -19,7 +19,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 4 large bell peppers (any color)
 - [ ] (Optional) 1/2 lb ground turkey, ground chicken, or lean ground beef
 - [ ] 1 can (15 oz) black beans (or Navy/Great Northern), rinsed
-- [ ] 1 tbsp ground chili powder
+- [ ] 1 Tbsp ground chili powder
 - [ ] 1 tsp ground cumin
 - [ ] 1 tsp garlic powder
 - [ ] 1 tsp onion powder

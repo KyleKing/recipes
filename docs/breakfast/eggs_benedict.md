@@ -20,9 +20,9 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 - [ ] 4 english muffins, split
 - [ ] 8 slices Canadian bacon or thick-cut ham
-- [ ] 2 tbsp unsalted butter
+- [ ] 2 Tbsp unsalted butter
 - [ ] 1/4 cup chopped chives
-- [ ] 2 tbsp parsley
+- [ ] 2 Tbsp parsley
 - [ ] flaky sea salt
 - [ ] pepper
 
@@ -37,7 +37,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ### Poached Eggs
 
-- [ ] 1 tbsp white distilled vinegar
+- [ ] 1 Tbsp white distilled vinegar
 - [ ] salt, kosher
 - [ ] 8 large eggs
 - [ ] egg poaching cups, metal or silicone
@@ -60,7 +60,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - *In parallel to the Hollandaise step...*
 - Cook Canadian bacon or ham (or bacon) in a medium skillet over medium–high heat until golden brown and just crisp at the edges, about 6 minutes.
 - Poach the eggs:
-    - Bring a large pot of water to a boil, then reduce to low. Add 1 tbsp of vinegar
+    - Bring a large pot of water to a boil, then reduce to low. Add 1 Tbsp of vinegar
     - Over a small bowl, crack the egg in a fine mesh sieve to let the liquidy part drain, then transfer the remaining yolk and white to a small bowl and pour into the pot
     - Cook for 3 minutes and remove with a slotted spoon
 - Thoroughly toast the English muffins until crisp and golden brown--they will need to be sturdy

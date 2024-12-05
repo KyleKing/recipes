@@ -16,13 +16,13 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-- [ ] 2 tbsp extra virgin olive oil
+- [ ] 2 Tbsp extra virgin olive oil
 - [ ] 1 medium onion, chopped
 - [ ] 5 medium carrots, coined
 - [ ] 6 celery stalks, cut into half moons
-- [ ] 2 tbsp garlic, minced
+- [ ] 2 Tbsp garlic, minced
 - [ ] 1 tsp thyme, chopped
-- [ ] 1 tbsp salt
+- [ ] 1 Tbsp salt
 - [ ] 1 tsp pepper
 - [ ] 1 bay leaf,
 - [ ] 10 cups chicken broth

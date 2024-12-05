@@ -33,7 +33,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - Prep non-frozen vegetables and set aside. Cut the green onions into 1 inch pieces and set aside. In a small bowl, mix the sauce of brown sugar, soy sauce, and spicy sauce.
 - For the choice of protein:
     - For tofu, cut into 1/2-inch cubes. Heat oil in a skillet until shimmering and cook the tofu in batches until golden brown. Turn once for about 3 min per side. Store the tofu on a plate.
-    - For the pork, brown in a skillet. Remove excess grease leaving at most 1 tbsp.
+    - For the pork, brown in a skillet. Remove excess grease leaving at most 1 Tbsp.
 - For the frozen vegetables, microwave them first, drain the water, and then add to the skillet. Brown with the non-frozen vegetables
     - For the tofu, add a little bit of butter or oil to brown the vegetables. And add the tofu last
     - For the pork, don't remove the pork before adding the vegetables and add peanuts

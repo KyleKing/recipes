@@ -33,7 +33,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 1 tsp vanilla extract
 - [ ] 2 large eggs
 - [ ] 2 cups (12 oz) chocolate chips
-- [ ] 1 cup chopped nuts or additional 1-2 tbsp flour
+- [ ] 1 cup chopped nuts or additional 1-2 Tbsp flour
 
 ## Recipe
 
@@ -45,7 +45,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
     - Add eggs one at a time beating well
     - Beat in flour gradually
     - Stir in oats and morsels
-- Measure out rounded tbsp of dough on a light colored ungreased baking sheet
+- Measure out rounded Tbsp of dough on a light colored ungreased baking sheet
 - Bake 9-11 minutes until golden brown. Cool on a wire rack
 
 ## Notes

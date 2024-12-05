@@ -21,12 +21,12 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] Process (1 Minute)
     - [ ] 3/4 cup tahini (shake to mix)
     - [ ] 1/2 cup water
-    - [ ] 3 tbsp lemon juice
+    - [ ] 3 Tbsp lemon juice
     - [ ] 1/2 tsp cumin
     - [ ] 1/2 tsp salt
     - [ ] 2 garlic cloves
-    - [ ] 1 tbsp extra virgin olive oil
-    - [ ] (Optional) 2-3 tbsp Harissa, additional for topping
+    - [ ] 1 Tbsp extra virgin olive oil
+    - [ ] (Optional) 2-3 Tbsp Harissa, additional for topping
     - [ ] Optional Additional Seasonings
         - Cumin, Coriander, Caraway, Cayenne Pepper, Smoked Paprika, Chopped Mint
 - [ ] Process (3 Minutes)

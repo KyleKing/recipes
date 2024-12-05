@@ -22,8 +22,8 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 1 medium yellow onion, diced
 - [ ] 1 jalapeno, minced
 - [ ] 4 cloves garlic, minced
-- [ ] 1.5 tbsp chili powder
-- [ ] 3/4 tbsp smoked paprika
+- [ ] 1.5 Tbsp chili powder
+- [ ] 3/4 Tbsp smoked paprika
 - [ ] 1 tsp ground cumin
 - [ ] 1 tsp salt
 - [ ] 2.5 cups low-sodium vegetable broth

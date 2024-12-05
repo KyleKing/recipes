@@ -18,8 +18,8 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ### Dressing
 
-- [ ] 1 tbsp mayo
-- [ ] 1 tbsp red wine vinegar
+- [ ] 1 Tbsp mayo
+- [ ] 1 Tbsp red wine vinegar
 - [ ] 1 tsp extra virgin olive oil
 - [ ] 1 tsp oregano
 - [ ] 1/2 tsp minced garlic or 1/4 tsp garlic powder

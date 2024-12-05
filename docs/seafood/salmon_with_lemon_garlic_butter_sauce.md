@@ -32,6 +32,6 @@ Personal rating: *Not yet rated*
 - Prepare pan sauce and set aside
 - Heat the olive in a large pan over medium-high heat until hot
 - Place salmon filets flesh side down and sear for 3-4 min. Then flip and sear the skin side for 2 min
-- Add in the butter, garlic, 3 tbsp of parsley, remaining lemon juice, and lemon slices. Stir the butter and garlic around each filet
+- Add in the butter, garlic, 3 Tbsp of parsley, remaining lemon juice, and lemon slices. Stir the butter and garlic around each filet
     - Cook the salmon for a further 1-2 min or until done
 - Garnish with the remaining parsley and serve by drizzling the butter over each filet

@@ -22,12 +22,12 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 1/2 cup heavy cream
 - [ ] 1 tsp salt
 - [ ] 1/4 tsp pepper
-- [ ] 3 tbsp olive oil
-- [ ] 3 tbsp butter
+- [ ] 3 Tbsp olive oil
+- [ ] 3 Tbsp butter
 
 ### Tomatoes
 
-- [ ] 2 tbsp olive oil
+- [ ] 2 Tbsp olive oil
 - [ ] 3 cups cherry tomatoes (~1 lb)
 - [ ] 1/2 tsp salt
 - [ ] 1/4 tsp pepper
@@ -45,6 +45,6 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Notes
 
-- For every 4 eggs, 2.5 tbsp cream, 1 tbsp butter, 1 tbsp olive oil
+- For every 4 eggs, 2.5 Tbsp cream, 1 Tbsp butter, 1 Tbsp olive oil
 
 [chrissy teigen cravings]: https://www.penguinrandomhouse.com/books/252973/cravings-by-chrissy-teigen-with-adeena-sussman/

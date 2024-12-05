@@ -58,7 +58,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ### (Optional) Creamy Avocado Sauce Recipe
 
-- [ ] Lime, juiced (2 tbsp)
+- [ ] Lime, juiced (2 Tbsp)
 - [ ] Avocado, pitted and peeled
 - [ ] 1/3 cup sour cream or plain Greek yogurt
 - [ ] 1/2 tsp kosher salt

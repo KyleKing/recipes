@@ -18,7 +18,7 @@ Personal rating: *Not yet rated*
 
 > Use what you have on hand. Great for leftover ingredients
 
-- [ ] 1/2 stick unsalted butter or 1 tbsp olive or vegetable oil
+- [ ] 1/2 stick unsalted butter or 1 Tbsp olive or vegetable oil
 - [ ] (optional) 1.5 cups fingerling or yukon gold potatoes, steamed until tender then cut into 1/2" dice (or cubed then microwaved for 4-6 min)
     - [ ] sweet, white, or yellow potatoes or winter squash
     - [ ] couscous and rice also work

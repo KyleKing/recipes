@@ -30,7 +30,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Recipe
 
-- Put a pot of water on to boil. In a large skillet over medium-high heat, cook the onions in 3 tbsp olive oil until softened (5-8 min). Reduce heat to keep onions from browning
+- Put a pot of water on to boil. In a large skillet over medium-high heat, cook the onions in 3 Tbsp olive oil until softened (5-8 min). Reduce heat to keep onions from browning
 - Add zucchini, season generously with salt and pepper, and continue cooking, stirring occasionally until rather soft (about 10 min). Turn off heat
 - Meanwhile, use a mortar and pestle to pound garlic, basil and a little salt into a rough paste (or use a mini food processor). Stir in 3 tablespoons olive oil
 - Boil pasta per package instructions with the minimum cook time for al dente. Drain, reserving 1 cup of pasta-water

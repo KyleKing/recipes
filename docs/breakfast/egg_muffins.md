@@ -32,7 +32,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 - Preheat oven to 375F and grease a 12-count muffin tray with butter or spray
 - In a medium bowl, preferably one with a pour spout, whisk together the eggs, milk, salt, pepper, onion powder, and garlic powder just until combined. Try not to over-mix, or too much air will be incorporated. You will have about 2 cups
-- Spoon the chopped bell pepper, spinach, and/or other add-ins into each greased muffin cup—about 2 tbsp in each. Spoon 1 tbsp of cheese on top of each
+- Spoon the chopped bell pepper, spinach, and/or other add-ins into each greased muffin cup—about 2 Tbsp in each. Spoon 1 Tbsp of cheese on top of each
 - Pour the egg mixture into each muffin cup, filling about 3/4 full (just over the top of the add-ins and cheese)
 - Bake for 18–20 minutes or until puffy and golden brown around the edges
 - Remove from the oven and cool in the pan for 5 minutes. The muffins deflate as they cool

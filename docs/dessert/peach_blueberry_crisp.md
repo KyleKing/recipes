@@ -20,9 +20,9 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 - [ ] 4 cups peaches, peeled and sliced
 - [ ] 1 cup blueberries
-- [ ] 1 tbsp lemon juice
+- [ ] 1 Tbsp lemon juice
 - [ ] 1/2 tsp Pure Vanilla Extract
-- [ ] 3 tbsp cornstarch
+- [ ] 3 Tbsp cornstarch
 - [ ] 2 tsp Cinnamon, Ground
 
 ### Streusel Topping
@@ -31,7 +31,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 1/2 cup quick-cooking oats
 - [ ] 1/2 cup firmly packed light brown sugar
 - [ ] 1 tsp Cinnamon, Ground
-- [ ] 6 tbsp cold butter, cut into chunks
+- [ ] 6 Tbsp cold butter, cut into chunks
 
 ## Recipe
 

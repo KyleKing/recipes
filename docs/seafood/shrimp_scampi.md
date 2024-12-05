@@ -16,8 +16,8 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-- [ ] 3 tbsp butter
-- [ ] 4 tbsp extra-virgin olive oil
+- [ ] 3 Tbsp butter
+- [ ] 4 Tbsp extra-virgin olive oil
 - [ ] 6 garlic cloves, minced
 - [ ] 1/2 cup dry white wine
 - [ ] 3/4 tsp kosher salt

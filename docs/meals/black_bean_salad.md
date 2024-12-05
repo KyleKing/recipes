@@ -23,8 +23,8 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] Large bell pepper, diced
 - [ ] Jalapeno, diced
 - [ ] Tomato, diced or cherry tomatoes, halved
-- [ ] 1 tbsp olive oil
-- [ ] 2 tbsp lime juice
+- [ ] 1 Tbsp olive oil
+- [ ] 2 Tbsp lime juice
 - [ ] 2 tsp garlic powder
 - [ ] 2 tsp cumin
 - [ ] 2 tsp chili powder

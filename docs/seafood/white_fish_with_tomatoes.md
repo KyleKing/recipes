@@ -18,11 +18,11 @@ Personal rating: *Not yet rated*
 
 - [ ] 1 (15 oz) can fire roasted diced tomatoes
 - [ ] 2 cloves garlic, minced
-- [ ] 2 tbsp olive oil
+- [ ] 2 Tbsp olive oil
 - [ ] 1/2 tsp dried oregano
 - [ ] 1/4 tsp salt
 - [ ] freshly cracked pepper
-- [ ] 1/2 tbsp lemon juice
+- [ ] 1/2 Tbsp lemon juice
 - [ ] 1 lb. white fish (four 4 oz fillets)
 - [ ] chopped fresh parsley for garnish (optional)
 

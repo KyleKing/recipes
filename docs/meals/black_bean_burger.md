@@ -18,12 +18,12 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 - [ ] 2x 15-oz cans of black beans, drained and rinsed
 - [ ] Generous 1 cup chickpea flour
-- [ ] 3 tbsp tomato paste
-- [ ] 2 tbsp plain, unsweetened applesauce
+- [ ] 3 Tbsp tomato paste
+- [ ] 2 Tbsp plain, unsweetened applesauce
 - [ ] 1 tsp chili powder
 - [ ] 2 tsp tamari
 - [ ] 2 tsp apple cider vinegar
-- [ ] 2 tbsp fresh lime juice
+- [ ] 2 Tbsp fresh lime juice
 - [ ] 1/2 tsp salt
 - [ ] 1/2 tsp black pepper
 - [ ] Vegetable oil, for shallow frying

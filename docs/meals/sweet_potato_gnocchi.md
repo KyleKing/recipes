@@ -35,7 +35,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 - Scrub the sweet potato, then cook in an Instant Pot on high pressure and low temperature for 15 min. Quick release after at least 5 min
 - Peel and mash the soft potato in a medium bowl
-- Mix with the ricotta cheese, 3/4 cup flour, salt and pepper. Gently mix until a dough like texture. If sticking to the sides, add additional flour, 1 tbsp at a time
+- Mix with the ricotta cheese, 3/4 cup flour, salt and pepper. Gently mix until a dough like texture. If sticking to the sides, add additional flour, 1 Tbsp at a time
 - Bring a gallon of water to boil over high heat
 - Lightly flour a large cutting board. Gently knead the dough by flattening with your palms than folding the dough in the perpendicular direction rotating 90 degrees each time
 - Divide the dough into three equal pieces; gently roll each into a ball then into a log roughly 12 in x 1 in diameter

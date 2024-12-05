@@ -23,7 +23,7 @@ Personal rating: *Not yet rated*
     - [ ] 1/2 tsp vanilla
 - [ ] Combine-Cookie Topping
     - [ ] 1 cup chocolate chips
-    - [ ] 2 tbsp butter
+    - [ ] 2 Tbsp butter
 
 ## Recipe
 

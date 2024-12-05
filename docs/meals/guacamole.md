@@ -17,9 +17,9 @@ Personal rating: *Not yet rated*
 ## Ingredients
 
 - [ ] 2 ripe avocados
-- [ ] 1 tbsp lemon juice
+- [ ] 1 Tbsp lemon juice
 - [ ] 1/8 cup of minced red onion
-- [ ] 2 tbsp cilantro, finely chopped
+- [ ] 2 Tbsp cilantro, finely chopped
 - [ ] 1/2 tsp Kosher salt
 - [ ] 1/2 tsp black pepper
 - [ ] some tomato, chopped

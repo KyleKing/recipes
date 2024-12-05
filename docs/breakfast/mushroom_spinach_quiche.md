@@ -16,7 +16,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-- [ ] 2 tbsp butter
+- [ ] 2 Tbsp butter
 - [ ] 1/3 cup finely diced white onion
 - [ ] 8 ounces baby bella mushrooms, trimmed and sliced (about 2-3 cups)
 - [ ] 2 cups baby spinach (about 2 ounces)

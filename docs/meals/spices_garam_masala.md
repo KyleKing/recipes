@@ -27,4 +27,4 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Notes
 
-- Makes 2 tbsp
+- Makes 2 Tbsp

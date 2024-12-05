@@ -20,7 +20,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 3 carrots, chopped
 - [ ] 1.5 cups basmati or jasmine rice
 - [ ] 1/2 cup dry orzo pasta
-- [ ] 3 tbsp salted butter
+- [ ] 3 Tbsp salted butter
 - [ ] 2 tsp dried thyme
 - [ ] 1 lb boneless chicken breasts, cut into cubes
 - [ ] 4 cups low sodium chicken broth
@@ -28,7 +28,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 2 bay leaves
 - [ ] 1/2 tsp garlic powder
 - [ ] 1/2 tsp cayenne pepper, more or less to taste
-- [ ] 2.5 tbsp lemon juice
+- [ ] 2.5 Tbsp lemon juice
 - [ ] 1/2 cup milk
 - [ ] 1.5 cups shredded sharp cheddar cheese, divided (about 200g)
 

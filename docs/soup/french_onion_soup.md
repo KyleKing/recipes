@@ -18,15 +18,15 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 *Note*: this recipe has been cut in half
 
-- [ ] 1.5 tbsp olive oil
-- [ ] 3.5 tbsp butter
+- [ ] 1.5 Tbsp olive oil
+- [ ] 3.5 Tbsp butter
 - [ ] 5 cups *yellow* onions (~1.5 lbs), thinly sliced
 - [ ] 3 thyme sprigs, bound with Chef's twine
 - [ ] 4 cloves garlic
-- [ ] 1 tbsp flour
-- [ ] 1/2 cup dry red wine or 2 tbsp red wine vinegar
+- [ ] 1 Tbsp flour
+- [ ] 1/2 cup dry red wine or 2 Tbsp red wine vinegar
 - [ ] 3 cups beef broth
-- [ ] 3/4 tbsp Worcestershire or Soy sauce
+- [ ] 3/4 Tbsp Worcestershire or Soy sauce
 - [ ] 1/2 tsp kosher salt
 - [ ] baguette, cut into bite-size cubes
 - [ ] 6 oz Gruyere or swiss cheese, grated

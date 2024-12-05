@@ -20,7 +20,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 - [ ] 1 lb shrimp, peeled
 - [ ] 1/4 cup olive oil
-- [ ] 2.5 tbsp honey
+- [ ] 2.5 Tbsp honey
 - [ ] 1 lime, juiced
 - [ ] 3 cloves garlic
 - [ ] (optional) small slice of a jalapeño or pinch of red pepper flakes

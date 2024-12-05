@@ -27,10 +27,10 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 - [ ] 1 cup plain yogurt
 - [ ] 1/2 cucumber peeled, seeded, and finely diced
-- [ ] 1 tbsp olive oil
-- [ ] 1 tbsp dill, chopped
-- [ ] 1 tbsp mint, chopped
-- [ ] 1 tbsp fresh lemon juice
+- [ ] 1 Tbsp olive oil
+- [ ] 1 Tbsp dill, chopped
+- [ ] 1 Tbsp mint, chopped
+- [ ] 1 Tbsp fresh lemon juice
 - [ ] 1 garlic clove, minced
 - [ ] 1/2 tsp salt
 

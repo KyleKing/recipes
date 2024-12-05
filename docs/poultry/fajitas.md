@@ -27,10 +27,10 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 ### Seasonings
 
-- [ ] 1 tbsp chili powder
-- [ ] 2 tbsp vegetable oil
+- [ ] 1 Tbsp chili powder
+- [ ] 2 Tbsp vegetable oil
 - [ ] 1/4 tsp garlic powder
-- [ ] 1/2 tbsp corn starch
+- [ ] 1/2 Tbsp corn starch
 
 ### With
 

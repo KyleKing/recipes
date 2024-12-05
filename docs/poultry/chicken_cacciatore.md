@@ -19,15 +19,15 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 6 Qt. Instant Pot
 - [ ] 2-3 lbs of boneless chicken
 - [ ] salt & pepper
-- [ ] 1 tbsp olive oil
+- [ ] 1 Tbsp olive oil
 - [ ] 2 bell peppers, sliced lengthwise into strips (red and yellow)
 - [ ] 1 yellow onion, rough chopped
 - [ ] 3 cloves of garlic, chopped
 - [ ] can diced tomatoes + liquid
 - [ ] 1/2 cup red wine, like Cabernet Sauvignon
 - [ ] 1/4 cup water
-- [ ] 2 tbsp tomato paste
-- [ ] 1.5 tbsp Italian seasoning
+- [ ] 2 Tbsp tomato paste
+- [ ] 1.5 Tbsp Italian seasoning
 - [ ] 1/4 tsp red pepper flakes
 - [ ] 1 bay leaf
 - [ ] great with egg noodles or a baguette

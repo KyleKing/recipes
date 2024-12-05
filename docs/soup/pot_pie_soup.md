@@ -19,7 +19,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 6 cups low sodium chicken broth
 - [ ] 2 cups whole milk
 - [ ] 2 sticks unsalted butter, cut into chunks
-- [ ] 2 tbsp minced garlic (3 cloves)
+- [ ] 2 Tbsp minced garlic (3 cloves)
 - [ ] 1 cup flour
 - [ ] 2 tsp salt
 - [ ] 1.5 tsp ground pepper

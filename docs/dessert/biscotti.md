@@ -16,7 +16,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-- [ ] 6 tbsp butter
+- [ ] 6 Tbsp butter
 - [ ] 2/3 cup sugar
 - [ ] 1/4 tsp salt
 - [ ] 2 tsp vanilla extract
@@ -24,7 +24,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 2 eggs
 - [ ] 2 cups flour
 - [ ] 1.5 cups chocolate chips, cranberries
-- [ ] (Optional) 1 tbsp cocoa powder
+- [ ] (Optional) 1 Tbsp cocoa powder
 
 ## Recipe
 

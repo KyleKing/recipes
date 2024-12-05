@@ -16,7 +16,7 @@ Personal rating: *Not yet rated*
 
 - [ ] 1 can of chicken or 1 cooked chicken breast, diced
 - [ ] 1/4 cup chopped celery or cucumber
-- [ ] 2 tbsp mayo
+- [ ] 2 Tbsp mayo
 - [ ] black pepper
 - [ ] Optionally add parsely
 

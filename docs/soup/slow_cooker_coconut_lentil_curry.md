@@ -19,7 +19,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 1 medium yellow onion, finely chopped
 - [ ] 3 cloves garlic, minced
 - [ ] Spice
-    - [ ] 2 tbsp garam masala ([../sides/spices_garam_masala.md](../meals/spices_garam_masala.md))
+    - [ ] 2 Tbsp garam masala ([../sides/spices_garam_masala.md](../meals/spices_garam_masala.md))
     - [ ] 2 tsp ground turmeric
     - [ ] 1 tsp cumin powder
     - [ ] 1/2 tsp coriander powder

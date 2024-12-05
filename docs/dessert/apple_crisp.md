@@ -23,7 +23,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 1/2 cup butter, softened
 - [ ] 4 cups chopped peeled apples
 - [ ] 1 cup sugar
-- [ ] 2 tbsp cornstarch
+- [ ] 2 Tbsp cornstarch
 - [ ] 1 cup water
 - [ ] 1 tsp vanilla extract
 - [ ] Vanilla ice cream (optional)

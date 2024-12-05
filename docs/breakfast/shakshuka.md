@@ -16,7 +16,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-- [ ] 3 tbsp extra-virgin olive oil
+- [ ] 3 Tbsp extra-virgin olive oil
 - [ ] 1 large onion, halved and thinly sliced
 - [ ] 1 large red bell pepper, seeded and thinly sliced
 - [ ] 3 garlic cloves, thinly sliced

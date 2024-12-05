@@ -18,7 +18,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 - [ ] 1/4 cup extra-virgin olive oil, plus more for drizzling
 - [ ] 1.5 lb mixed fresh mushrooms (shiitake, oyster and/or cremini); rinsed, trimmed, and sliced
-- [ ] 2 tbsp unsalted butter
+- [ ] 2 Tbsp unsalted butter
 - [ ] 1/2 tsp kosher salt, plus more as needed
 - [ ] 3 cloves garlic, minced
 - [ ] 2 tsp chopped fresh rosemary leaves

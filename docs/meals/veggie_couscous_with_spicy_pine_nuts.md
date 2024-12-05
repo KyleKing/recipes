@@ -18,7 +18,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ### For the Vegetables
 
-- [ ] 3 tbsp olive oil (plus more for drizzling)
+- [ ] 3 Tbsp olive oil (plus more for drizzling)
 - [ ] 1 large onion, chopped
 - [ ] 1.5 tsp kosher salt
 - [ ] 1/2 tsp ground cinnamon

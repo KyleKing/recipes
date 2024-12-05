@@ -17,11 +17,11 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Ingredients
 
 - [ ] ~2-4 Garlic Cloves, grated or very finely diced to a paste
-- [ ] ~2-4 tbsp butter
-- [ ] ~2 tbsp Extra-virgin Olive Oil
+- [ ] ~2-4 Tbsp butter
+- [ ] ~2 Tbsp Extra-virgin Olive Oil
 - [ ] 1/2 tsp kosher salt
 - [ ] Bread Loaf
-- [ ] ~3 tbsp Cheese, grated
+- [ ] ~3 Tbsp Cheese, grated
 
 ## Recipe
 

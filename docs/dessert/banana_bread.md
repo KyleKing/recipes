@@ -25,7 +25,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ### Wet
 
 - [ ] 2/3 cup sugar
-- [ ] 6 tbsp butter, softened
+- [ ] 6 Tbsp butter, softened
 
 ### Beat-In
 

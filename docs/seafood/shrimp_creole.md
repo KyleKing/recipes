@@ -17,7 +17,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ## Ingredients
 
 - [ ] 1 (32 oz) can of tomato sauce
-- [ ] 4 tbsp butter (1/2 stick)
+- [ ] 4 Tbsp butter (1/2 stick)
 - [ ] 1.5 onions, diced
 - [ ] 1.5 stalks celery, half rings (*or 1 carrot, diced*)
 - [ ] 1.5 garlic cloves
@@ -25,7 +25,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] Baked Spices
     - [ ] 1 bay leaf
     - [ ] 1/2 tsp Tabasco sauce
-    - [ ] 1/2 tbsp fresh thyme (1.5 tsp dry)
+    - [ ] 1/2 Tbsp fresh thyme (1.5 tsp dry)
 - [ ] (Added after baking) 1/4 bunch parsley, chopped (1.5 tsp dry)
 - [ ] 1 lbs raw shrimp, peeled and deveined
 - [ ] 2 cups white rice and saffron *OR* a baguette, toasted in the oven

@@ -16,7 +16,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-- [ ] 2-3 tbsp butter
+- [ ] 2-3 Tbsp butter
 - [ ] 1/2 cup onion, chopped and
 - [ ] 1/2 garlic (bulb?), chopped
 - [ ] 1-2 lbs 80% lean ground beef

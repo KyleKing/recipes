@@ -20,7 +20,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 - [ ] 1/2 cup chocolate chips (mini or normal)
 - [ ] 1/4 cup peanut butter
 - [ ] 1/4 cup maple syrup (or honey)
-- [ ] 2 tbsp cocoa powder (optional)
+- [ ] 2 Tbsp cocoa powder (optional)
 
 ## Recipe
 

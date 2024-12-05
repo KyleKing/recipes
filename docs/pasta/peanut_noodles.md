@@ -27,10 +27,10 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
     - [ ] chopped shallots (a.k.a. white base of green onion)
     - [ ] *other vegetables: peppers, broccoli, zucchini, snow peas*
 - [ ] Sauce
-    - [ ] 6 tbsp pb
-    - [ ] 1.5 tbsp hot chili oil
-    - [ ] 2 tbsp sesame oil
-    - [ ] 7 tbsp soy sauce
+    - [ ] 6 Tbsp pb
+    - [ ] 1.5 Tbsp hot chili oil
+    - [ ] 2 Tbsp sesame oil
+    - [ ] 7 Tbsp soy sauce
     - [ ] 2 tsp cider vinegar (or white wine/rice vinegar)
     - [ ] 1 inch fresh ginger (or 1.5 tsp cinnamon, nutmeg, or sugar)
 

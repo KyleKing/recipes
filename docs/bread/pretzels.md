@@ -16,12 +16,12 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-- [ ] 1 tbsp yeast
-- [ ] 1 tbsp white sugar
+- [ ] 1 Tbsp yeast
+- [ ] 1 Tbsp white sugar
 - [ ] 2 cups warm water (microwaved for 30 seconds)
 - [ ] 4 cups flour
-- [ ] 1 cup flour, mixed with 1 tbsp. salt
-- [ ] ~1/2 tbsp Olive Oil for bowl when proofing
+- [ ] 1 cup flour, mixed with 1 Tbsp. salt
+- [ ] ~1/2 Tbsp Olive Oil for bowl when proofing
 - [ ] 6 cups water + 1/3 cup baking soda
 - [ ] Toppings: extra coarse salt / cinnamon and brown sugar
 
@@ -30,7 +30,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - In large bowl, stir yeast, sugar and warm water. Let rest until yeast is dissolved and is a little foamy
 - With a wood spoon, stir in flour one cup at a time. Then add the salt and flour mixture
 - Prepare a floured cutting board and knead until smooth (3-4 minutes)
-- Add ~1/2 tbsp oil to the original bowl and roll around until coated
+- Add ~1/2 Tbsp oil to the original bowl and roll around until coated
 - Cover the bowl and proof until doubled in size (about ~60 minutes depending on temp)
 - Remove and briefly knead. Cut into 8 pieces, roll each piece into 30-36" long ropes
     - Carefully stretch and roll to avoid tearing

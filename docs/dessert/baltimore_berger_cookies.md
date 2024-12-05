@@ -18,7 +18,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ### Cookies
 
-- [ ] 5 1/3 tbsp (74g) unsalted butter, softened
+- [ ] 5 1/3 Tbsp (74g) unsalted butter, softened
 - [ ] 1/2 tsp salt
 - [ ] 1 tsp vanilla extract
 - [ ] 1 tsp baking powder
@@ -30,7 +30,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ### Icing
 
 - [ ] 2 cups (340g) semisweet chocolate chips
-- [ ] 1.5 tbsp (28g) light corn syrup
+- [ ] 1.5 Tbsp (28g) light corn syrup
 - [ ] 1 tsp vanilla extract
 - [ ] 3/4 cup (170g) heavy cream
 - [ ] 1.5 cups (170g) confectioners' sugar, sifted

@@ -19,7 +19,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 - [ ] Scaled to 1 cup of dry Basmati rice
 - [ ] 1/2 tsp salt
 - [ ] 1/2 tsp (or 1 tsp) Thyme, Basil, Parsely, etc.
-- [ ] 1 tbsp butter
+- [ ] 1 Tbsp butter
 - [ ] 1 tsp lemon juice
 
 ## Recipe
@@ -29,7 +29,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 - Per 1 cup of dry rice, add 1/2 tsp salt, 1/2 tsp Thyme, and/or other herbs
     - Add rice and return to boil
 - Lower the temperature to simmer. Cover for 30-40 minutes until soft and all water has been absorbed
-- On medium-low, add 1 tbsp of butter per cup of rice. Stir until fully melted and coated
+- On medium-low, add 1 Tbsp of butter per cup of rice. Stir until fully melted and coated
 - Add 1 tsp of lemon juice, fluff with a fork or wooden spoon, and serve
 
 ## Notes

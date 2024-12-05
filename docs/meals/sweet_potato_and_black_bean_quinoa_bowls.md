@@ -41,7 +41,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 1 tsp cumin
 - [ ] 1/2 tsp garlic powder
 - [ ] Juice of half a lime
-- [ ] 3 tbsp cilantro, chopped
+- [ ] 3 Tbsp cilantro, chopped
 
 ### Other Ingredients:
 

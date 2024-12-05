@@ -18,7 +18,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
     - [ ] Olive Oil (~1/4 cup)
     - [ ] 1/8 tsp of paprika
     - [ ] 1/8 tsp cayenne pepper
-    - [ ] 2/3 tbsp lemon juice
+    - [ ] 2/3 Tbsp lemon juice
     - [ ] pinch of salt
 
 - [ ] Salmon filet

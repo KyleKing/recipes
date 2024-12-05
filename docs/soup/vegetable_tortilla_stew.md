@@ -18,13 +18,13 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ### Stew
 
-- [ ] 2 tbsp vegetable oil
+- [ ] 2 Tbsp vegetable oil
 - [ ] 1 onion, diced
 - [ ] 1 green bell pepper, diced
 - [ ] 1 jalapeño pepper, finely diced (include seeds)
 - [ ] 4 cloves garlic, minced
 - [ ] 2 tsp chili powder
-- [ ] 1 tbsp ground cumin
+- [ ] 1 Tbsp ground cumin
 - [ ] 1/2 tsp cayenne pepper
 - [ ] 2 tsp salt
 - [ ] 1/2 tsp pepper

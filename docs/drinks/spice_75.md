@@ -19,9 +19,9 @@ Personal rating: *Not yet rated*
 > Note: serves 6
 
 - [ ] 2 oz syrup (60 mL)
-    - [ ] 4 tbsp sugar (60 mL)
-    - [ ] 2 tbsp water (30 mL)
-    - [ ] 1 tbsp allspice
+    - [ ] 4 Tbsp sugar (60 mL)
+    - [ ] 2 Tbsp water (30 mL)
+    - [ ] 1 Tbsp allspice
 - [ ] 6 3/4 oz rum (200 mL)
 - [ ] 3 oz lime juice (90 mL)
 - [ ] 20 oz Champagne (600 mL)

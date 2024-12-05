@@ -19,12 +19,12 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 2 medium-sized ramekins
 - [ ] Cocoa powder
 - [ ] 0.5 tablespoon unsalted butter, melted
-- [ ] 3.5 tbsp unsalted butter, cut into cubes
+- [ ] 3.5 Tbsp unsalted butter, cut into cubes
 - [ ] 50g 70% dark chocolate bar
 - [ ] 1 egg, room temperature
 - [ ] 1 egg yolk
 - [ ] 1/4 cup sugar
-- [ ] 1/3 cup & 1 tbsp flour
+- [ ] 1/3 cup & 1 Tbsp flour
 - [ ] pinch salt
 - [ ] Powdered sugar, for dusting
 - [ ] Vanilla Ice Cream

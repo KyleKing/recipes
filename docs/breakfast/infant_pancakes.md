@@ -22,7 +22,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 1 eggs
 - [ ] 1/2 cup whole milk (or skim milk + small sliver of butter)
 - [ ] 1/2 cup whole milk vanilla yogurt
-- [ ] 1 tbsp of pureed fruit
+- [ ] 1 Tbsp of pureed fruit
 - [ ] Pureed fruit, for serving (optional)
 
 ## Recipe

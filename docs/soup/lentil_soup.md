@@ -25,7 +25,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 1.5 cups dried green or brown lentils, *rinsed*
 - [ ] 7 cups vegetable broth
 - [ ] 8 oz tomato sauce
-- [ ] 1 tbsp ground cumin
+- [ ] 1 Tbsp ground cumin
 - [ ] 1.5 tsp ground coriander
 - [ ] 1/2 tsp ground turmeric
 - [ ] 1 bay leaf

@@ -19,11 +19,11 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 - [ ] 1 cup light brown sugar
 - [ ] 1 cup light molasses
 - [ ] 1 cup vegetable shortening
-- [ ] 1 tbsp baking soda
+- [ ] 1 Tbsp baking soda
 - [ ] 1 egg, lightly beaten
 - [ ] 1⁄4 tsp salt
 - [ ] 2 tsp baking powder
-- [ ] 1 tbsp ground ginger
+- [ ] 1 Tbsp ground ginger
 - [ ] 1⁄2 tsp ground cinnamon
 - [ ] 1⁄2 tsp ground cloves
 - [ ] 4 cups all-purpose flour, more for rolling dough

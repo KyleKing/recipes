@@ -18,7 +18,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 - [ ] 1 lb Cavatappi, Rigatoni, Fettuccine
 - [ ] 2-3 tomatoes, halved horizontally (really need ripe and flavorful tomatoes)
-- [ ] 4 tbsp butter, cold
+- [ ] 4 Tbsp butter, cold
 - [ ] 1 large garlic clove, peeled
 - [ ] Salt and Pepper
 - [ ] 1/4 tsp red pepper flakes, plus more for serving

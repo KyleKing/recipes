@@ -25,13 +25,13 @@ Personal rating: *Not yet rated*
 
 ### For the sauce
 
-- [ ] 2 tbsp cold water
+- [ ] 2 Tbsp cold water
 - [ ] 1 tsp cornstarch or potato starch
 - [ ] 3 cloves garlic, minced or finely grated
 - [ ] 1 (2-inch) piece fresh ginger, minced or finely grated
-- [ ] 2 tbsp low-sodium soy sauce
-- [ ] 2 tbsp rice vinegar
-- [ ] 2 tbsp doubanjiang (Sichuan chili bean paste, see headnote), chili-garlic sauce, oyster sauce or additional low-sodium soy sauce
+- [ ] 2 Tbsp low-sodium soy sauce
+- [ ] 2 Tbsp rice vinegar
+- [ ] 2 Tbsp doubanjiang (Sichuan chili bean paste, see headnote), chili-garlic sauce, oyster sauce or additional low-sodium soy sauce
 
 ### For Serving
 

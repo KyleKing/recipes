@@ -16,7 +16,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ## Ingredients
 
-- [ ] 6 tbsp Olive Oil
+- [ ] 6 Tbsp Olive Oil
 - [ ] 2 medium onion, rough dice
 - [ ] 8 cloves garlic, chopped
 - [ ] 2 (28 oz) can whole peeled tomatoes in juice

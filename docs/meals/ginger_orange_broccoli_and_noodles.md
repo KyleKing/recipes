@@ -22,7 +22,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ### Stir Fry
 
-- [ ] 1 tbsp refined sesame oil, grape, or canola
+- [ ] 1 Tbsp refined sesame oil, grape, or canola
 - [ ] 1/2 large sweet onion, thinly sliced
 - [ ] 2 large broccoli crowns (1.5 pounds total), cut into bite-size florets
 - [ ] 1/2 large red bell pepper, seeded and thinly sliced
@@ -31,9 +31,9 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 ### Sauce
 
-- [ ] 5 tbsp low-sodium soy sauce
+- [ ] 5 Tbsp low-sodium soy sauce
 - [ ] 1/2 cup fresh orange juice (from 2 large oranges)
-- [ ] 1 tbsp cornstarch
+- [ ] 1 Tbsp cornstarch
 - [ ] 1 tsp Sriracha
 
 ### Finishing

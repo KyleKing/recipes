@@ -16,7 +16,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 - [ ] 1 pkg cake mix
 - [ ] 2 eggs
-- [ ] 5 tbsp melted butter
+- [ ] 5 Tbsp melted butter
 - [ ] 1 bag chocolate chips
 
 ## Recipe

@@ -20,10 +20,10 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 1 large onion, diced
 - [ ] 2 (14-ounce) cans cannellini beans, drained and rinsed
 - [ ] 8 oz spicy fresh sausage, casings removed, crumbled
-- [ ] 1 tbsp extra virgin olive oil
+- [ ] 1 Tbsp extra virgin olive oil
 - [ ] 8 cloves garlic, minced
 - [ ] 1/4 tsp red pepper flakes
-- [ ] 2 tbsp all-purpose flour
+- [ ] 2 Tbsp all-purpose flour
 - [ ] 6-8 cups low sodium chicken broth
 - [ ] 1 tsp kosher salt, plus more for seasoning
 - [ ] 1/2 tsp freshly ground black pepper
@@ -34,7 +34,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - Quarter the onion and lightly pulse in a food processor until diced, but not pulverized; set aside
 - Drain and rinse the beans, then lightly pulse to mash up around half of the beans while keeping around half mostly whole.
 - Slice the sausage length wise, remove the casing, then break apart into small pieces
-- Heat 1 tbsp of the oil in a large (at least 5-quart) pot over medium heat
+- Heat 1 Tbsp of the oil in a large (at least 5-quart) pot over medium heat
     - Add the sausage and cook, stirring, until browned and no longer pink (5-6 min)
     - Add the onions and cook, stirring, until lightly golden (~8 min)
     - Add the garlic and red pepper flakes, stir, and cook for one more minute
@@ -46,7 +46,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 ### Parmesan Toasts
 
 - [ ] 1 small baguette, cut into 1/4-inch thick slices
-- [ ] 1 tbsp olive oil
+- [ ] 1 Tbsp olive oil
 - [ ] Kosher salt and freshly ground black pepper to taste
 - [ ] 1/3 cup finely grated Parmigiano Reggiano
 
