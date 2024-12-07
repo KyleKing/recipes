@@ -29,7 +29,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - Place over medium-low heat and add salt and bay leaves, while cool taste test for sufficient salt
 - Bring the water to 160-180 F, just below a simmer
 - Add the chicken thighs and cook until the internal temp is 165 F (155 F if using breasts), about 15 min.
-- Let cool and shred. Can be stored in the fridge for 5 days and used in a variety of meals, such as the [./dump_chicken_pot_pie.md](./dump_chicken_pot_pie.md)
+- Let cool and shred. Can be stored in the fridge for 5 days and used in a variety of meals, such as the [dump_chicken_pot_pie](./dump_chicken_pot_pie.md)
 
 ### Instant Pot
 
