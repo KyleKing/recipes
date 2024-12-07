@@ -2,6 +2,7 @@
 
 ### Feat
 
+- remove pandas dependency
 - one-pot Shrimp Scampi pasta
 - add Chicken Pot Pie
 - add grinder_salad_sandwich
@@ -31,6 +32,10 @@
 
 ### Refactor
 
+- convert tbsp to Tbsp
+- update brownie crinkles and add snowballs
+- larger images on mobile
+- adjust image size and alignment
 - rename baked fish
 - move poultry/seafood recipes appropriately
 - merge sides into meals
