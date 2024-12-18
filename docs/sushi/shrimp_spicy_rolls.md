@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 <!-- {cts} name_image=shrimp_spicy_rolls.jpeg; (User can specify image name) -->
 
-![shrimp_spicy_rolls.jpeg](./shrimp_spicy_rolls.jpeg){: .image-recipe loading=lazy }
+![shrimp_spicy_rolls.jpeg](./shrimp_spicy_rolls.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

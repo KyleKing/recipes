@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=morning_glory_muffins.jpeg; (User can specify image name) -->
 
-![morning_glory_muffins.jpeg](./morning_glory_muffins.jpeg){: .image-recipe loading=lazy }
+![morning_glory_muffins.jpeg](./morning_glory_muffins.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

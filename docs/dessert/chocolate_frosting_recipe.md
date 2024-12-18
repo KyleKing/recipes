@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=chocolate_frosting_recipe.jpg; (User can specify image name) -->
 
-![chocolate_frosting_recipe.jpg](./chocolate_frosting_recipe.jpg){: .image-recipe loading=lazy }
+![chocolate_frosting_recipe.jpg](./chocolate_frosting_recipe.jpg){.image-recipe}
 
 <!-- {cte} -->
 

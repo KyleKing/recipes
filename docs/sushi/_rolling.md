@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=_rolling.jpg; (User can specify image name) -->
 
-![_rolling.jpg](./_rolling.jpg){: .image-recipe loading=lazy }
+![_rolling.jpg](./_rolling.jpg){.image-recipe}
 
 <!-- {cte} -->
 

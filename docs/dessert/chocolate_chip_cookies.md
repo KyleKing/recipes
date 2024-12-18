@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=chocolate_chip_cookies.jpeg; (User can specify image name) -->
 
-![chocolate_chip_cookies.jpeg](./chocolate_chip_cookies.jpeg){: .image-recipe loading=lazy }
+![chocolate_chip_cookies.jpeg](./chocolate_chip_cookies.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

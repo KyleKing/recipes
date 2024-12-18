@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=ginger_orange_broccoli_and_noodles.jpeg; (User can specify image name) -->
 
-![ginger_orange_broccoli_and_noodles.jpeg](./ginger_orange_broccoli_and_noodles.jpeg){: .image-recipe loading=lazy }
+![ginger_orange_broccoli_and_noodles.jpeg](./ginger_orange_broccoli_and_noodles.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

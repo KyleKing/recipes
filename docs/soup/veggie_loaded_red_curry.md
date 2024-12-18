@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=veggie_loaded_red_curry.jpeg; (User can specify image name) -->
 
-![veggie_loaded_red_curry.jpeg](./veggie_loaded_red_curry.jpeg){: .image-recipe loading=lazy }
+![veggie_loaded_red_curry.jpeg](./veggie_loaded_red_curry.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

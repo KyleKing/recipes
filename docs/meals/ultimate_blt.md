@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=ultimate_blt.jpeg; (User can specify image name) -->
 
-![ultimate_blt.jpeg](./ultimate_blt.jpeg){: .image-recipe loading=lazy }
+![ultimate_blt.jpeg](./ultimate_blt.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

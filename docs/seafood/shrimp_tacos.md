@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=shrimp_tacos.jpg; (User can specify image name) -->
 
-![shrimp_tacos.jpg](./shrimp_tacos.jpg){: .image-recipe loading=lazy }
+![shrimp_tacos.jpg](./shrimp_tacos.jpg){.image-recipe}
 
 <!-- {cte} -->
 

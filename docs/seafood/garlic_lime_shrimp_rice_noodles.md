@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=garlic_lime_shrimp_rice_noodles.jpeg; (User can specify image name) -->
 
-![garlic_lime_shrimp_rice_noodles.jpeg](./garlic_lime_shrimp_rice_noodles.jpeg){: .image-recipe loading=lazy }
+![garlic_lime_shrimp_rice_noodles.jpeg](./garlic_lime_shrimp_rice_noodles.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

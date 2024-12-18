@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=caramel_rice_krispies.jpeg; (User can specify image name) -->
 
-![caramel_rice_krispies.jpeg](./caramel_rice_krispies.jpeg){: .image-recipe loading=lazy }
+![caramel_rice_krispies.jpeg](./caramel_rice_krispies.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

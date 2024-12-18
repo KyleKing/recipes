@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=grinder_salad_sandwich.jpeg; (User can specify image name) -->
 
-![grinder_salad_sandwich.jpeg](./grinder_salad_sandwich.jpeg){: .image-recipe loading=lazy }
+![grinder_salad_sandwich.jpeg](./grinder_salad_sandwich.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

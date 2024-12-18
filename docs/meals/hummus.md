@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=hummus.jpeg; (User can specify image name) -->
 
-![hummus.jpeg](./hummus.jpeg){: .image-recipe loading=lazy }
+![hummus.jpeg](./hummus.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

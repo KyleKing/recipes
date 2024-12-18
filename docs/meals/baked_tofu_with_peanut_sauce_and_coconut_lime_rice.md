@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=baked_tofu_with_peanut_sauce_and_coconut_lime_rice.jpeg; (User can specify image name) -->
 
-![baked_tofu_with_peanut_sauce_and_coconut_lime_rice.jpeg](./baked_tofu_with_peanut_sauce_and_coconut_lime_rice.jpeg){: .image-recipe loading=lazy }
+![baked_tofu_with_peanut_sauce_and_coconut_lime_rice.jpeg](./baked_tofu_with_peanut_sauce_and_coconut_lime_rice.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

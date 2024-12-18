@@ -10,7 +10,7 @@ Personal rating: *Not yet rated*
 
 <!-- {cts} name_image=creamy-orzo-chicken-skillet.jpeg; (User can specify image name) -->
 
-![creamy-orzo-chicken-skillet.jpeg](./creamy-orzo-chicken-skillet.jpeg){: .image-recipe loading=lazy }
+![creamy-orzo-chicken-skillet.jpeg](./creamy-orzo-chicken-skillet.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

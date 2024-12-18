@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=infant_pancakes.jpeg; (User can specify image name) -->
 
-![infant_pancakes.jpeg](./infant_pancakes.jpeg){: .image-recipe loading=lazy }
+![infant_pancakes.jpeg](./infant_pancakes.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

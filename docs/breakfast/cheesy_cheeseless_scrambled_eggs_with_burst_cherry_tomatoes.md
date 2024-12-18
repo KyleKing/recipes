@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=cheesy_cheeseless_scrambled_eggs_with_burst_cherry_tomatoes.jpeg; (User can specify image name) -->
 
-![cheesy_cheeseless_scrambled_eggs_with_burst_cherry_tomatoes.jpeg](./cheesy_cheeseless_scrambled_eggs_with_burst_cherry_tomatoes.jpeg){: .image-recipe loading=lazy }
+![cheesy_cheeseless_scrambled_eggs_with_burst_cherry_tomatoes.jpeg](./cheesy_cheeseless_scrambled_eggs_with_burst_cherry_tomatoes.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

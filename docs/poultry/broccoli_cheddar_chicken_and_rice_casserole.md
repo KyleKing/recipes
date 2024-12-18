@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=broccoli_cheddar_chicken_and_rice_casserole.jpeg; (User can specify image name) -->
 
-![broccoli_cheddar_chicken_and_rice_casserole.jpeg](./broccoli_cheddar_chicken_and_rice_casserole.jpeg){: .image-recipe loading=lazy }
+![broccoli_cheddar_chicken_and_rice_casserole.jpeg](./broccoli_cheddar_chicken_and_rice_casserole.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

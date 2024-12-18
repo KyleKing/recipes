@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=spicy_salmon_roll_bowls.jpeg; (User can specify image name) -->
 
-![spicy_salmon_roll_bowls.jpeg](./spicy_salmon_roll_bowls.jpeg){: .image-recipe loading=lazy }
+![spicy_salmon_roll_bowls.jpeg](./spicy_salmon_roll_bowls.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

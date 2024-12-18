@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=cauliflower_lime_burrito_bowl.jpeg; (User can specify image name) -->
 
-![cauliflower_lime_burrito_bowl.jpeg](./cauliflower_lime_burrito_bowl.jpeg){: .image-recipe loading=lazy }
+![cauliflower_lime_burrito_bowl.jpeg](./cauliflower_lime_burrito_bowl.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

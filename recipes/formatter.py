@@ -66,21 +66,18 @@ def _format_stars(rating: int) -> str:
     return ' '.join([_ICON_FA_STAR] * rating + [_ICON_FA_STAR_OUT] * (5 - rating))
 
 
-def _format_image_md(name_image: str | None, attrs: str) -> str:
-    """Format the image as markdown.
+def _format_image_md(name_image: str | None, class_: str) -> str:
+    """Return formatted markdown to display an image from the same directory.
 
     Args:
-        name_image: string image name or None
-        attrs: string space-separated attributes to add
-
-    Returns:
-        str: formatted image markdown string
+        name_image: optional image name
+        class_: CSS class name to assign
 
     """
     if name_image and name_image.lower() != 'none':
-        return f'![{name_image}](./{name_image}){{: {attrs} loading=lazy }}'
+        return f'![{name_image}](./{name_image}){{.{class_}}}'
     LOGGER.debug('WARN: No image specified', name_image=name_image)
-    return '<!-- TODO: Capture image -->'
+    return '{% TODO: Capture image %}'
 
 
 # =====================================================================================
@@ -144,7 +141,7 @@ def _handle_image_section(line: str, path_md: Path) -> list[str]:
     name_image = path_image.name
     return [
         f'<!-- {{cts}} name_image={name_image}; (User can specify image name) -->\n',
-        _format_image_md(name_image, attrs='.image-recipe'),
+        _format_image_md(name_image, class_='image-recipe'),
         '\n<!-- {cte} -->',
     ]
 
@@ -223,7 +220,7 @@ class _TOCRecipes:
                 {
                     'Link': f'[{_format_titlecase(path_recipe.stem)}](./{path_recipe.name})',
                     'Rating': int(info.rating),
-                    'Image': _format_image_md(info.path_image.name, attrs='.image-toc'),
+                    'Image': _format_image_md(info.path_image.name, class_='image-toc'),
                 }
                 for path_recipe, info in [(Path(key), value) for key, value in self.recipes.items()]
             ]

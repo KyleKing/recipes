@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=hot_fudge_sauce.jpeg; (User can specify image name) -->
 
-![hot_fudge_sauce.jpeg](./hot_fudge_sauce.jpeg){: .image-recipe loading=lazy }
+![hot_fudge_sauce.jpeg](./hot_fudge_sauce.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

@@ -8,7 +8,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 <!-- {cts} name_image=tuna_melts.jpg; (User can specify image name) -->
 
-![tuna_melts.jpg](./tuna_melts.jpg){: .image-recipe loading=lazy }
+![tuna_melts.jpg](./tuna_melts.jpg){.image-recipe}
 
 <!-- {cte} -->
 

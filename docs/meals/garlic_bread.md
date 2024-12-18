@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=garlic_bread.jpeg; (User can specify image name) -->
 
-![garlic_bread.jpeg](./garlic_bread.jpeg){: .image-recipe loading=lazy }
+![garlic_bread.jpeg](./garlic_bread.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

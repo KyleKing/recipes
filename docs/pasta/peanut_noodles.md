@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 <!-- {cts} name_image=peanut_noodles.jpg; (User can specify image name) -->
 
-![peanut_noodles.jpg](./peanut_noodles.jpg){: .image-recipe loading=lazy }
+![peanut_noodles.jpg](./peanut_noodles.jpg){.image-recipe}
 
 <!-- {cte} -->
 

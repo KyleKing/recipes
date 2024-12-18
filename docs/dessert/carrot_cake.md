@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=carrot_cake.jpeg; (User can specify image name) -->
 
-![carrot_cake.jpeg](./carrot_cake.jpeg){: .image-recipe loading=lazy }
+![carrot_cake.jpeg](./carrot_cake.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

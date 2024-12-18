@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 <!-- {cts} name_image=fajitas.jpg; (User can specify image name) -->
 
-![fajitas.jpg](./fajitas.jpg){: .image-recipe loading=lazy }
+![fajitas.jpg](./fajitas.jpg){.image-recipe}
 
 <!-- {cte} -->
 

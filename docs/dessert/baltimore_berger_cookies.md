@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=baltimore_berger_cookies.jpeg; (User can specify image name) -->
 
-![baltimore_berger_cookies.jpeg](./baltimore_berger_cookies.jpeg){: .image-recipe loading=lazy }
+![baltimore_berger_cookies.jpeg](./baltimore_berger_cookies.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

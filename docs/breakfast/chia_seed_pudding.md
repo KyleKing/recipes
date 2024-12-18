@@ -10,7 +10,7 @@ Personal rating: *Not yet rated*
 
 <!-- {cts} name_image=None; (User can specify image name) -->
 
-<!-- TODO: Capture image -->
+{% TODO: Capture image %}
 
 <!-- {cte} -->
 

@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=green_pepper_and_feta.jpeg; (User can specify image name) -->
 
-![green_pepper_and_feta.jpeg](./green_pepper_and_feta.jpeg){: .image-recipe loading=lazy }
+![green_pepper_and_feta.jpeg](./green_pepper_and_feta.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

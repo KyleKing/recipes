@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=oven_roasted_asparagus.jpeg; (User can specify image name) -->
 
-![oven_roasted_asparagus.jpeg](./oven_roasted_asparagus.jpeg){: .image-recipe loading=lazy }
+![oven_roasted_asparagus.jpeg](./oven_roasted_asparagus.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 <!-- {cts} name_image=canned_spicy_tuna_roll.jpg; (User can specify image name) -->
 
-![canned_spicy_tuna_roll.jpg](./canned_spicy_tuna_roll.jpg){: .image-recipe loading=lazy }
+![canned_spicy_tuna_roll.jpg](./canned_spicy_tuna_roll.jpg){.image-recipe}
 
 <!-- {cte} -->
 

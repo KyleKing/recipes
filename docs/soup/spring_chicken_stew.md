@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=spring_chicken_stew.jpeg; (User can specify image name) -->
 
-![spring_chicken_stew.jpeg](./spring_chicken_stew.jpeg){: .image-recipe loading=lazy }
+![spring_chicken_stew.jpeg](./spring_chicken_stew.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

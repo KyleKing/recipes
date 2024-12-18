@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 <!-- {cts} name_image=onigiri.jpg; (User can specify image name) -->
 
-![onigiri.jpg](./onigiri.jpg){: .image-recipe loading=lazy }
+![onigiri.jpg](./onigiri.jpg){.image-recipe}
 
 <!-- {cte} -->
 

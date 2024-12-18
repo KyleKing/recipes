@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=peach_blueberry_crisp.jpeg; (User can specify image name) -->
 
-![peach_blueberry_crisp.jpeg](./peach_blueberry_crisp.jpeg){: .image-recipe loading=lazy }
+![peach_blueberry_crisp.jpeg](./peach_blueberry_crisp.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=cherry_dump_cake.jpeg; (User can specify image name) -->
 
-![cherry_dump_cake.jpeg](./cherry_dump_cake.jpeg){: .image-recipe loading=lazy }
+![cherry_dump_cake.jpeg](./cherry_dump_cake.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

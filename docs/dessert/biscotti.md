@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=biscotti.jpg; (User can specify image name) -->
 
-![biscotti.jpg](./biscotti.jpg){: .image-recipe loading=lazy }
+![biscotti.jpg](./biscotti.jpg){.image-recipe}
 
 <!-- {cte} -->
 

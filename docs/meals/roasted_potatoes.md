@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=roasted_potatoes.jpeg; (User can specify image name) -->
 
-![roasted_potatoes.jpeg](./roasted_potatoes.jpeg){: .image-recipe loading=lazy }
+![roasted_potatoes.jpeg](./roasted_potatoes.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

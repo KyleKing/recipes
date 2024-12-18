@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=chicken_cacciatore.jpg; (User can specify image name) -->
 
-![chicken_cacciatore.jpg](./chicken_cacciatore.jpg){: .image-recipe loading=lazy }
+![chicken_cacciatore.jpg](./chicken_cacciatore.jpg){.image-recipe}
 
 <!-- {cte} -->
 

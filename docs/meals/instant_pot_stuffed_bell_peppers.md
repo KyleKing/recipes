@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=instant_pot_stuffed_bell_peppers.jpeg; (User can specify image name) -->
 
-![instant_pot_stuffed_bell_peppers.jpeg](./instant_pot_stuffed_bell_peppers.jpeg){: .image-recipe loading=lazy }
+![instant_pot_stuffed_bell_peppers.jpeg](./instant_pot_stuffed_bell_peppers.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

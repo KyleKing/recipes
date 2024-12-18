@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=pot_pie_soup.jpeg; (User can specify image name) -->
 
-![pot_pie_soup.jpeg](./pot_pie_soup.jpeg){: .image-recipe loading=lazy }
+![pot_pie_soup.jpeg](./pot_pie_soup.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

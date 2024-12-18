@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=molten_chocolate_cake.jpeg; (User can specify image name) -->
 
-![molten_chocolate_cake.jpeg](./molten_chocolate_cake.jpeg){: .image-recipe loading=lazy }
+![molten_chocolate_cake.jpeg](./molten_chocolate_cake.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

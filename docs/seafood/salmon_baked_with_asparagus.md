@@ -8,7 +8,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=salmon_baked_with_asparagus.jpeg; (User can specify image name) -->
 
-![salmon_baked_with_asparagus.jpeg](./salmon_baked_with_asparagus.jpeg){: .image-recipe loading=lazy }
+![salmon_baked_with_asparagus.jpeg](./salmon_baked_with_asparagus.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

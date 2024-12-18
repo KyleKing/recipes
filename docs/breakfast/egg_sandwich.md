@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=egg_sandwich.jpeg; (User can specify image name) -->
 
-![egg_sandwich.jpeg](./egg_sandwich.jpeg){: .image-recipe loading=lazy }
+![egg_sandwich.jpeg](./egg_sandwich.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

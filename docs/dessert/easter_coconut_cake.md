@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=easter_coconut_cake.jpeg; (User can specify image name) -->
 
-![easter_coconut_cake.jpeg](./easter_coconut_cake.jpeg){: .image-recipe loading=lazy }
+![easter_coconut_cake.jpeg](./easter_coconut_cake.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

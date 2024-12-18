@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=slow_cooker_coconut_lentil_curry.jpeg; (User can specify image name) -->
 
-![slow_cooker_coconut_lentil_curry.jpeg](./slow_cooker_coconut_lentil_curry.jpeg){: .image-recipe loading=lazy }
+![slow_cooker_coconut_lentil_curry.jpeg](./slow_cooker_coconut_lentil_curry.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

@@ -8,7 +8,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=cookie_bars.jpeg; (User can specify image name) -->
 
-![cookie_bars.jpeg](./cookie_bars.jpeg){: .image-recipe loading=lazy }
+![cookie_bars.jpeg](./cookie_bars.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

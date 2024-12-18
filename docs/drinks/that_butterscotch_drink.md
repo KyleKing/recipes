@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=that_butterscotch_drink.jpeg; (User can specify image name) -->
 
-![that_butterscotch_drink.jpeg](./that_butterscotch_drink.jpeg){: .image-recipe loading=lazy }
+![that_butterscotch_drink.jpeg](./that_butterscotch_drink.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

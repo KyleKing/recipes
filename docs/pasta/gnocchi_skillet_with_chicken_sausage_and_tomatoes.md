@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=gnocchi_skillet_with_chicken_sausage_and_tomatoes.jpeg; (User can specify image name) -->
 
-![gnocchi_skillet_with_chicken_sausage_and_tomatoes.jpeg](./gnocchi_skillet_with_chicken_sausage_and_tomatoes.jpeg){: .image-recipe loading=lazy }
+![gnocchi_skillet_with_chicken_sausage_and_tomatoes.jpeg](./gnocchi_skillet_with_chicken_sausage_and_tomatoes.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

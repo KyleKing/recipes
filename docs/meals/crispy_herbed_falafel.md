@@ -10,7 +10,7 @@ Personal rating: *Not yet rated*
 
 <!-- {cts} name_image=crispy_herbed_falafel.jpg; (User can specify image name) -->
 
-![crispy_herbed_falafel.jpg](./crispy_herbed_falafel.jpg){: .image-recipe loading=lazy }
+![crispy_herbed_falafel.jpg](./crispy_herbed_falafel.jpg){.image-recipe}
 
 <!-- {cte} -->
 

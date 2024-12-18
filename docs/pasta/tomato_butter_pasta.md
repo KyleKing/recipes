@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=tomato_butter_pasta.jpeg; (User can specify image name) -->
 
-![tomato_butter_pasta.jpeg](./tomato_butter_pasta.jpeg){: .image-recipe loading=lazy }
+![tomato_butter_pasta.jpeg](./tomato_butter_pasta.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

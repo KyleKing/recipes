@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 <!-- {cts} name_image=gingerbread_cookies.jpeg; (User can specify image name) -->
 
-![gingerbread_cookies.jpeg](./gingerbread_cookies.jpeg){: .image-recipe loading=lazy }
+![gingerbread_cookies.jpeg](./gingerbread_cookies.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

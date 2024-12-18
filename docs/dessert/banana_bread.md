@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=banana_bread.jpeg; (User can specify image name) -->
 
-![banana_bread.jpeg](./banana_bread.jpeg){: .image-recipe loading=lazy }
+![banana_bread.jpeg](./banana_bread.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=spicy_margarita.jpg; (User can specify image name) -->
 
-![spicy_margarita.jpg](./spicy_margarita.jpg){: .image-recipe loading=lazy }
+![spicy_margarita.jpg](./spicy_margarita.jpg){.image-recipe}
 
 <!-- {cte} -->
 

@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=microwave_cacio_e_pepe.jpeg; (User can specify image name) -->
 
-![microwave_cacio_e_pepe.jpeg](./microwave_cacio_e_pepe.jpeg){: .image-recipe loading=lazy }
+![microwave_cacio_e_pepe.jpeg](./microwave_cacio_e_pepe.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

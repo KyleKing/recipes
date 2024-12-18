@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 <!-- {cts} name_image=basmati_rice.jpg; (User can specify image name) -->
 
-![basmati_rice.jpg](./basmati_rice.jpg){: .image-recipe loading=lazy }
+![basmati_rice.jpg](./basmati_rice.jpg){.image-recipe}
 
 <!-- {cte} -->
 

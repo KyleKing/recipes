@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=jambon_beurre.jpg; (User can specify image name) -->
 
-![jambon_beurre.jpg](./jambon_beurre.jpg){: .image-recipe loading=lazy }
+![jambon_beurre.jpg](./jambon_beurre.jpg){.image-recipe}
 
 <!-- {cte} -->
 

@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=chili_con_carne.jpeg; (User can specify image name) -->
 
-![chili_con_carne.jpeg](./chili_con_carne.jpeg){: .image-recipe loading=lazy }
+![chili_con_carne.jpeg](./chili_con_carne.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

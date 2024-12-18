@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=johns_chili.jpeg; (User can specify image name) -->
 
-![johns_chili.jpeg](./johns_chili.jpeg){: .image-recipe loading=lazy }
+![johns_chili.jpeg](./johns_chili.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

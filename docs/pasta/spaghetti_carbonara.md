@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=spaghetti_carbonara.jpeg; (User can specify image name) -->
 
-![spaghetti_carbonara.jpeg](./spaghetti_carbonara.jpeg){: .image-recipe loading=lazy }
+![spaghetti_carbonara.jpeg](./spaghetti_carbonara.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

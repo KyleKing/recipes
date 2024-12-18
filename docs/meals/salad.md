@@ -8,7 +8,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=salad.jpg; (User can specify image name) -->
 
-![salad.jpg](./salad.jpg){: .image-recipe loading=lazy }
+![salad.jpg](./salad.jpg){.image-recipe}
 
 <!-- {cte} -->
 

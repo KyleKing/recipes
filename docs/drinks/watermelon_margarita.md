@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=watermelon_margarita.jpg; (User can specify image name) -->
 
-![watermelon_margarita.jpg](./watermelon_margarita.jpg){: .image-recipe loading=lazy }
+![watermelon_margarita.jpg](./watermelon_margarita.jpg){.image-recipe}
 
 <!-- {cte} -->
 

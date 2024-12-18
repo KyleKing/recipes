@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=sausage_and_mushroom_penne_pasta.jpg; (User can specify image name) -->
 
-![sausage_and_mushroom_penne_pasta.jpg](./sausage_and_mushroom_penne_pasta.jpg){: .image-recipe loading=lazy }
+![sausage_and_mushroom_penne_pasta.jpg](./sausage_and_mushroom_penne_pasta.jpg){.image-recipe}
 
 <!-- {cte} -->
 

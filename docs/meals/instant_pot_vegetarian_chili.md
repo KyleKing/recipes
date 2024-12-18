@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=instant_pot_vegetarian_quinoa_chili.jpeg; (User can specify image name) -->
 
-![instant_pot_vegetarian_quinoa_chili.jpeg](./instant_pot_vegetarian_quinoa_chili.jpeg){: .image-recipe loading=lazy }
+![instant_pot_vegetarian_quinoa_chili.jpeg](./instant_pot_vegetarian_quinoa_chili.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

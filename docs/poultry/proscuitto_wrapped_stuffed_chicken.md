@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=proscuitto_wrapped_stuffed_chicken.jpeg; (User can specify image name) -->
 
-![proscuitto_wrapped_stuffed_chicken.jpeg](./proscuitto_wrapped_stuffed_chicken.jpeg){: .image-recipe loading=lazy }
+![proscuitto_wrapped_stuffed_chicken.jpeg](./proscuitto_wrapped_stuffed_chicken.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

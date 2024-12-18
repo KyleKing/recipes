@@ -12,7 +12,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=None; (User can specify image name) -->
 
-<!-- TODO: Capture image -->
+{% TODO: Capture image %}
 
 <!-- {cte} -->
 

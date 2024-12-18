@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=lasagna.jpeg; (User can specify image name) -->
 
-![lasagna.jpeg](./lasagna.jpeg){: .image-recipe loading=lazy }
+![lasagna.jpeg](./lasagna.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=creamy_tomato_soup.jpeg; (User can specify image name) -->
 
-![creamy_tomato_soup.jpeg](./creamy_tomato_soup.jpeg){: .image-recipe loading=lazy }
+![creamy_tomato_soup.jpeg](./creamy_tomato_soup.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=black_bean_burger.jpeg; (User can specify image name) -->
 
-![black_bean_burger.jpeg](./black_bean_burger.jpeg){: .image-recipe loading=lazy }
+![black_bean_burger.jpeg](./black_bean_burger.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

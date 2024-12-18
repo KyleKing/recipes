@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=shrimp_creole.jpeg; (User can specify image name) -->
 
-![shrimp_creole.jpeg](./shrimp_creole.jpeg){: .image-recipe loading=lazy }
+![shrimp_creole.jpeg](./shrimp_creole.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

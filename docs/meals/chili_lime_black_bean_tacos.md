@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=chili_lime_black_bean_tacos.jpeg; (User can specify image name) -->
 
-![chili_lime_black_bean_tacos.jpeg](./chili_lime_black_bean_tacos.jpeg){: .image-recipe loading=lazy }
+![chili_lime_black_bean_tacos.jpeg](./chili_lime_black_bean_tacos.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

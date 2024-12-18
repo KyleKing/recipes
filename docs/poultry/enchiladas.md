@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=enchiladas.jpg; (User can specify image name) -->
 
-![enchiladas.jpg](./enchiladas.jpg){: .image-recipe loading=lazy }
+![enchiladas.jpg](./enchiladas.jpg){.image-recipe}
 
 <!-- {cte} -->
 

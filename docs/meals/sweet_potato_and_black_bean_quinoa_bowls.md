@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=sweet_potato_and_black_bean_quinoa_bowls.jpeg; (User can specify image name) -->
 
-![sweet_potato_and_black_bean_quinoa_bowls.jpeg](./sweet_potato_and_black_bean_quinoa_bowls.jpeg){: .image-recipe loading=lazy }
+![sweet_potato_and_black_bean_quinoa_bowls.jpeg](./sweet_potato_and_black_bean_quinoa_bowls.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

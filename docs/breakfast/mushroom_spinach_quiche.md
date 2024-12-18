@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=mushroom_spinach_quiche.jpeg; (User can specify image name) -->
 
-![mushroom_spinach_quiche.jpeg](./mushroom_spinach_quiche.jpeg){: .image-recipe loading=lazy }
+![mushroom_spinach_quiche.jpeg](./mushroom_spinach_quiche.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

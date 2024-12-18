@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=peanut_butter_cookies.jpeg; (User can specify image name) -->
 
-![peanut_butter_cookies.jpeg](./peanut_butter_cookies.jpeg){: .image-recipe loading=lazy }
+![peanut_butter_cookies.jpeg](./peanut_butter_cookies.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

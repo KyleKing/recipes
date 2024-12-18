@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=kung_pao_roasted_broccoli.jpeg; (User can specify image name) -->
 
-![kung_pao_roasted_broccoli.jpeg](./kung_pao_roasted_broccoli.jpeg){: .image-recipe loading=lazy }
+![kung_pao_roasted_broccoli.jpeg](./kung_pao_roasted_broccoli.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=double_layer_pumpkin_pie.jpeg; (User can specify image name) -->
 
-![double_layer_pumpkin_pie.jpeg](./double_layer_pumpkin_pie.jpeg){: .image-recipe loading=lazy }
+![double_layer_pumpkin_pie.jpeg](./double_layer_pumpkin_pie.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

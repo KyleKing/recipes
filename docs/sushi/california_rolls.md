@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 <!-- {cts} name_image=california_rolls.jpeg; (User can specify image name) -->
 
-![california_rolls.jpeg](./california_rolls.jpeg){: .image-recipe loading=lazy }
+![california_rolls.jpeg](./california_rolls.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

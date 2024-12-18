@@ -8,7 +8,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=baked_ziti.jpeg; (User can specify image name) -->
 
-![baked_ziti.jpeg](./baked_ziti.jpeg){: .image-recipe loading=lazy }
+![baked_ziti.jpeg](./baked_ziti.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

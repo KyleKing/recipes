@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 <!-- {cts} name_image=_rice.jpg; (User can specify image name) -->
 
-![_rice.jpg](./_rice.jpg){: .image-recipe loading=lazy }
+![_rice.jpg](./_rice.jpg){.image-recipe}
 
 <!-- {cte} -->
 

@@ -8,7 +8,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=pancetta_crisps_on_baguette.jpeg; (User can specify image name) -->
 
-![pancetta_crisps_on_baguette.jpeg](./pancetta_crisps_on_baguette.jpeg){: .image-recipe loading=lazy }
+![pancetta_crisps_on_baguette.jpeg](./pancetta_crisps_on_baguette.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

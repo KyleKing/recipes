@@ -8,7 +8,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=quesadillas.jpeg; (User can specify image name) -->
 
-![quesadillas.jpeg](./quesadillas.jpeg){: .image-recipe loading=lazy }
+![quesadillas.jpeg](./quesadillas.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

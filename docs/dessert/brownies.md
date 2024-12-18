@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=brownies.jpeg; (User can specify image name) -->
 
-![brownies.jpeg](./brownies.jpeg){: .image-recipe loading=lazy }
+![brownies.jpeg](./brownies.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

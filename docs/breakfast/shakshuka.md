@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=shakshuka.jpeg; (User can specify image name) -->
 
-![shakshuka.jpeg](./shakshuka.jpeg){: .image-recipe loading=lazy }
+![shakshuka.jpeg](./shakshuka.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=spaghetti_cacio_e_cepe.jpg; (User can specify image name) -->
 
-![spaghetti_cacio_e_cepe.jpg](./spaghetti_cacio_e_cepe.jpg){: .image-recipe loading=lazy }
+![spaghetti_cacio_e_cepe.jpg](./spaghetti_cacio_e_cepe.jpg){.image-recipe}
 
 <!-- {cte} -->
 

@@ -8,7 +8,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 <!-- {cts} name_image=gyros.jpg; (User can specify image name) -->
 
-![gyros.jpg](./gyros.jpg){: .image-recipe loading=lazy }
+![gyros.jpg](./gyros.jpg){.image-recipe}
 
 <!-- {cte} -->
 

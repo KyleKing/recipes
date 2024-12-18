@@ -8,7 +8,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 <!-- {cts} name_image=aunt_laura's_spicy_chicken_dip.jpeg; (User can specify image name) -->
 
-![aunt_laura's_spicy_chicken_dip.jpeg](./aunt_laura's_spicy_chicken_dip.jpeg){: .image-recipe loading=lazy }
+![aunt_laura's_spicy_chicken_dip.jpeg](./aunt_laura's_spicy_chicken_dip.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

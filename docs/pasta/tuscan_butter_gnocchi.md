@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=tuscan_butter_gnocchi.jpg; (User can specify image name) -->
 
-![tuscan_butter_gnocchi.jpg](./tuscan_butter_gnocchi.jpg){: .image-recipe loading=lazy }
+![tuscan_butter_gnocchi.jpg](./tuscan_butter_gnocchi.jpg){.image-recipe}
 
 <!-- {cte} -->
 

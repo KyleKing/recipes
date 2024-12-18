@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=lentil_soup.jpeg; (User can specify image name) -->
 
-![lentil_soup.jpeg](./lentil_soup.jpeg){: .image-recipe loading=lazy }
+![lentil_soup.jpeg](./lentil_soup.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

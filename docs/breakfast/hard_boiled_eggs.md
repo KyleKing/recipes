@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=hard_boiled_eggs.jpeg; (User can specify image name) -->
 
-![hard_boiled_eggs.jpeg](./hard_boiled_eggs.jpeg){: .image-recipe loading=lazy }
+![hard_boiled_eggs.jpeg](./hard_boiled_eggs.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

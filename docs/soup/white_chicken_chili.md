@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=white_chicken_chili.jpeg; (User can specify image name) -->
 
-![white_chicken_chili.jpeg](./white_chicken_chili.jpeg){: .image-recipe loading=lazy }
+![white_chicken_chili.jpeg](./white_chicken_chili.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

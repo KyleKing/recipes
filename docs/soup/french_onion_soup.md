@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=french_onion_soup.jpeg; (User can specify image name) -->
 
-![french_onion_soup.jpeg](./french_onion_soup.jpeg){: .image-recipe loading=lazy }
+![french_onion_soup.jpeg](./french_onion_soup.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

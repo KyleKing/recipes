@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 <!-- {cts} name_image=skillet_peanut_butter_chocolate_chip_blondies.jpeg; (User can specify image name) -->
 
-![skillet_peanut_butter_chocolate_chip_blondies.jpeg](./skillet_peanut_butter_chocolate_chip_blondies.jpeg){: .image-recipe loading=lazy }
+![skillet_peanut_butter_chocolate_chip_blondies.jpeg](./skillet_peanut_butter_chocolate_chip_blondies.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

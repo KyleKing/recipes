@@ -10,7 +10,7 @@ Personal rating: *Not yet rated*
 
 <!-- {cts} name_image=lentils_and_sausage_instant_pot_soup.jpeg; (User can specify image name) -->
 
-![lentils_and_sausage_instant_pot_soup.jpeg](./lentils_and_sausage_instant_pot_soup.jpeg){: .image-recipe loading=lazy }
+![lentils_and_sausage_instant_pot_soup.jpeg](./lentils_and_sausage_instant_pot_soup.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

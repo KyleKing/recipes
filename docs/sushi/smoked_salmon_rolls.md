@@ -8,7 +8,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 <!-- {cts} name_image=smoked_salmon_rolls.jpg; (User can specify image name) -->
 
-![smoked_salmon_rolls.jpg](./smoked_salmon_rolls.jpg){: .image-recipe loading=lazy }
+![smoked_salmon_rolls.jpg](./smoked_salmon_rolls.jpg){.image-recipe}
 
 <!-- {cte} -->
 

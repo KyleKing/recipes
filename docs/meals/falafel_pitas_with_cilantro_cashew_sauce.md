@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=falafel_pitas_with_cilantro_cashew_sauce.jpeg; (User can specify image name) -->
 
-![falafel_pitas_with_cilantro_cashew_sauce.jpeg](./falafel_pitas_with_cilantro_cashew_sauce.jpeg){: .image-recipe loading=lazy }
+![falafel_pitas_with_cilantro_cashew_sauce.jpeg](./falafel_pitas_with_cilantro_cashew_sauce.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

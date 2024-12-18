@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=veggie_couscous_with_spicy_pine_nuts.jpeg; (User can specify image name) -->
 
-![veggie_couscous_with_spicy_pine_nuts.jpeg](./veggie_couscous_with_spicy_pine_nuts.jpeg){: .image-recipe loading=lazy }
+![veggie_couscous_with_spicy_pine_nuts.jpeg](./veggie_couscous_with_spicy_pine_nuts.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

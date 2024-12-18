@@ -8,7 +8,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=popcorn_cinnamon_sugar.jpeg; (User can specify image name) -->
 
-![popcorn_cinnamon_sugar.jpeg](./popcorn_cinnamon_sugar.jpeg){: .image-recipe loading=lazy }
+![popcorn_cinnamon_sugar.jpeg](./popcorn_cinnamon_sugar.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

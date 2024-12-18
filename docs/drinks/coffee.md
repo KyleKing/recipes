@@ -8,7 +8,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=coffee.jpeg; (User can specify image name) -->
 
-![coffee.jpeg](./coffee.jpeg){: .image-recipe loading=lazy }
+![coffee.jpeg](./coffee.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

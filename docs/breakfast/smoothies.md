@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=smoothies-table.jpg; (User can specify image name) -->
 
-![smoothies-table.jpg](./smoothies-table.jpg){: .image-recipe loading=lazy }
+![smoothies-table.jpg](./smoothies-table.jpg){.image-recipe}
 
 <!-- {cte} -->
 

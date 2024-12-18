@@ -8,7 +8,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=spaghetti_sauce.jpg; (User can specify image name) -->
 
-![spaghetti_sauce.jpg](./spaghetti_sauce.jpg){: .image-recipe loading=lazy }
+![spaghetti_sauce.jpg](./spaghetti_sauce.jpg){.image-recipe}
 
 <!-- {cte} -->
 

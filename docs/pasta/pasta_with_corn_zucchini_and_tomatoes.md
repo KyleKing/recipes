@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=pasta_with_corn_zucchini_and_tomatoes.jpeg; (User can specify image name) -->
 
-![pasta_with_corn_zucchini_and_tomatoes.jpeg](./pasta_with_corn_zucchini_and_tomatoes.jpeg){: .image-recipe loading=lazy }
+![pasta_with_corn_zucchini_and_tomatoes.jpeg](./pasta_with_corn_zucchini_and_tomatoes.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

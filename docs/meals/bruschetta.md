@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=bruschetta_toast.jpeg; (User can specify image name) -->
 
-![bruschetta_toast.jpeg](./bruschetta_toast.jpeg){: .image-recipe loading=lazy }
+![bruschetta_toast.jpeg](./bruschetta_toast.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

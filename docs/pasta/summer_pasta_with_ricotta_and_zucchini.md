@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=summer_pasta_with_ricotta_and_zucchini.jpeg; (User can specify image name) -->
 
-![summer_pasta_with_ricotta_and_zucchini.jpeg](./summer_pasta_with_ricotta_and_zucchini.jpeg){: .image-recipe loading=lazy }
+![summer_pasta_with_ricotta_and_zucchini.jpeg](./summer_pasta_with_ricotta_and_zucchini.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

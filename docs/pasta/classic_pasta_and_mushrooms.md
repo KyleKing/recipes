@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=classic_pasta_and_mushrooms.jpeg; (User can specify image name) -->
 
-![classic_pasta_and_mushrooms.jpeg](./classic_pasta_and_mushrooms.jpeg){: .image-recipe loading=lazy }
+![classic_pasta_and_mushrooms.jpeg](./classic_pasta_and_mushrooms.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

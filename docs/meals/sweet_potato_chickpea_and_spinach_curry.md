@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=sweet_potato_chickpea_and_spinach_curry.jpeg; (User can specify image name) -->
 
-![sweet_potato_chickpea_and_spinach_curry.jpeg](./sweet_potato_chickpea_and_spinach_curry.jpeg){: .image-recipe loading=lazy }
+![sweet_potato_chickpea_and_spinach_curry.jpeg](./sweet_potato_chickpea_and_spinach_curry.jpeg){.image-recipe}
 
 <!-- {cte} -->
 

@@ -10,7 +10,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 <!-- {cts} name_image=shrimp_nigiri.jpeg; (User can specify image name) -->
 
-![shrimp_nigiri.jpeg](./shrimp_nigiri.jpeg){: .image-recipe loading=lazy }
+![shrimp_nigiri.jpeg](./shrimp_nigiri.jpeg){.image-recipe}
 
 <!-- {cte} -->
 
