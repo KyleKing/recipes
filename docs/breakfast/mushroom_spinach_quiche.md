@@ -2,17 +2,17 @@
 
 > Based on [Magnolia Table Cookbook](https://magnolia.com/shop/product/365289078788/magnolia-table-cookbook)
 
-<!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=4; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=mushroom_spinach_quiche.jpeg; (User can specify image name) -->
+{% {cts} name_image=mushroom_spinach_quiche.jpeg; (User can specify image name) %}
 
 ![mushroom_spinach_quiche.jpeg](./mushroom_spinach_quiche.jpeg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

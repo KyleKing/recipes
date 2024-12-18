@@ -2,17 +2,17 @@
 
 > Based on [https://newsletter.ethanchlebowski.com/p/homemade-smoothies-suck](https://newsletter.ethanchlebowski.com/p/homemade-smoothies-suck)
 
-<!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=4; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=smoothies-table.jpg; (User can specify image name) -->
+{% {cts} name_image=smoothies-table.jpg; (User can specify image name) %}
 
 ![smoothies-table.jpg](./smoothies-table.jpg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

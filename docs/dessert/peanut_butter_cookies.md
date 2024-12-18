@@ -2,17 +2,17 @@
 
 > Based on [https://www.simplyrecipes.com/recipes/peanut_butter_cookies/](https://www.simplyrecipes.com/recipes/peanut_butter_cookies/)
 
-<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=5; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=peanut_butter_cookies.jpeg; (User can specify image name) -->
+{% {cts} name_image=peanut_butter_cookies.jpeg; (User can specify image name) %}
 
 ![peanut_butter_cookies.jpeg](./peanut_butter_cookies.jpeg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

@@ -2,17 +2,17 @@
 
 > Based on [https://healthyishfoods.com/spicy-salmon-roll-bowls](https://healthyishfoods.com/spicy-salmon-roll-bowls)
 
-<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=5; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=spicy_salmon_roll_bowls.jpeg; (User can specify image name) -->
+{% {cts} name_image=spicy_salmon_roll_bowls.jpeg; (User can specify image name) %}
 
 ![spicy_salmon_roll_bowls.jpeg](./spicy_salmon_roll_bowls.jpeg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

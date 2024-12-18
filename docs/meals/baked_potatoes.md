@@ -2,17 +2,17 @@
 
 > Based on this [Oven-Baked Recipe](https://www.tastesoflizzyt.com/oven-baked-potatoes) and this [Instant Pot one](https://amindfullmom.com/instant-pot-baked-potatoes)
 
-<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=5; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=baked_potatoes.jpeg; (User can specify image name) -->
+{% {cts} name_image=baked_potatoes.jpeg; (User can specify image name) %}
 
 ![baked_potatoes.jpeg](./baked_potatoes.jpeg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

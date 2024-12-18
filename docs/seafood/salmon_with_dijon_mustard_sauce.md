@@ -2,17 +2,17 @@
 
 > Based on [https://www.allrecipes.com/recipe/219911/chef-johns-salmon](https://www.allrecipes.com/recipe/219911/chef-johns-salmon)
 
-<!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=4; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=salmon_with_dijon_mustard_sauce.jpeg; (User can specify image name) -->
+{% {cts} name_image=salmon_with_dijon_mustard_sauce.jpeg; (User can specify image name) %}
 
 ![salmon_with_dijon_mustard_sauce.jpeg](./salmon_with_dijon_mustard_sauce.jpeg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

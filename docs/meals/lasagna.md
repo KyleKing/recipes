@@ -2,17 +2,17 @@
 
 > Based on [https://www.delish.com/cooking/recipe-ideas/recipes/a51337/classic-lasagna-recipe/](https://www.delish.com/cooking/recipe-ideas/recipes/a51337/classic-lasagna-recipe/)
 
-<!-- {cts} rating=3; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=3; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=lasagna.jpeg; (User can specify image name) -->
+{% {cts} name_image=lasagna.jpeg; (User can specify image name) %}
 
 ![lasagna.jpeg](./lasagna.jpeg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

@@ -2,17 +2,17 @@
 
 > Based on [https://cooking.nytimes.com/recipes/1015523-carrot-cake](https://cooking.nytimes.com/recipes/1015523-carrot-cake)
 
-<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=5; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=carrot_cake.jpeg; (User can specify image name) -->
+{% {cts} name_image=carrot_cake.jpeg; (User can specify image name) %}
 
 ![carrot_cake.jpeg](./carrot_cake.jpeg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

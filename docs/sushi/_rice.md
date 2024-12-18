@@ -2,17 +2,17 @@
 
 > Based on [https://instantpot.com/blogs/recipes/perfect-sushi-rice](https://instantpot.com/blogs/recipes/perfect-sushi-rice)
 
-<!-- {cts} rating=1; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=1; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=_rice.jpg; (User can specify image name) -->
+{% {cts} name_image=_rice.jpg; (User can specify image name) %}
 
 ![_rice.jpg](./_rice.jpg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

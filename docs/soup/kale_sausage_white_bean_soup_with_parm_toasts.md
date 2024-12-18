@@ -2,17 +2,17 @@
 
 > Based on [https://cravingsbychrissyteigen.com/blogs/recipes/kale-sausage-white-bean-soup-with-parm-toasts/](https://cravingsbychrissyteigen.com/blogs/recipes/kale-sausage-white-bean-soup-with-parm-toasts/)
 
-<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=5; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=kale_sausage_white_bean_soup_with_parm_toasts.jpeg; (User can specify image name) -->
+{% {cts} name_image=kale_sausage_white_bean_soup_with_parm_toasts.jpeg; (User can specify image name) %}
 
 ![kale_sausage_white_bean_soup_with_parm_toasts.jpeg](./kale_sausage_white_bean_soup_with_parm_toasts.jpeg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

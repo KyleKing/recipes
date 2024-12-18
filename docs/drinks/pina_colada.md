@@ -2,17 +2,17 @@
 
 > Based on [https://www.washingtonpost.com/recipes/pina-colada/10696/](https://www.washingtonpost.com/recipes/pina-colada/10696/) and [https://www.thecocktaildb.com/drink.php?c=17207](https://www.thecocktaildb.com/drink.php?c=17207)
 
-<!-- {cts} rating=0; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=0; (User can specify rating on scale of 1-5) %}
 
 Personal rating: *Not yet rated*
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=None; (User can specify image name) -->
+{% {cts} name_image=None; (User can specify image name) %}
 
 {% TODO: Capture image %}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

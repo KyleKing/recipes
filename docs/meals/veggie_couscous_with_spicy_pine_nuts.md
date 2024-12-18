@@ -2,17 +2,17 @@
 
 > Based on [Chrissy Teigen Cravings], pg. 193
 
-<!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=4; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=veggie_couscous_with_spicy_pine_nuts.jpeg; (User can specify image name) -->
+{% {cts} name_image=veggie_couscous_with_spicy_pine_nuts.jpeg; (User can specify image name) %}
 
 ![veggie_couscous_with_spicy_pine_nuts.jpeg](./veggie_couscous_with_spicy_pine_nuts.jpeg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

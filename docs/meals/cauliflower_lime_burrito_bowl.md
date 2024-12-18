@@ -2,17 +2,17 @@
 
 > Based on [https://www.mealime.com/recipes/roasted-cauliflower-black-bean-burrito-bow>425F with an olive oil and spice l-cilantro-lime-rice/7720](https://www.mealime.com/recipes/roasted-cauliflower-black-bean-burrito-bowl-cilantro-lime-rice/7720). Cauliflower in Instant Pot inspired by [https://www.pressurecookrecipes.com/instant-pot-cauliflower/](https://www.pressurecookrecipes.com/instant-pot-cauliflower/)
 
-<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=5; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=cauliflower_lime_burrito_bowl.jpeg; (User can specify image name) -->
+{% {cts} name_image=cauliflower_lime_burrito_bowl.jpeg; (User can specify image name) %}
 
 ![cauliflower_lime_burrito_bowl.jpeg](./cauliflower_lime_burrito_bowl.jpeg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

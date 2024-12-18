@@ -2,17 +2,17 @@
 
 > Based on Alex's Aunt's recipe
 
-<!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=4; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=chili_con_carne.jpeg; (User can specify image name) -->
+{% {cts} name_image=chili_con_carne.jpeg; (User can specify image name) %}
 
 ![chili_con_carne.jpeg](./chili_con_carne.jpeg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

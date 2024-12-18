@@ -2,17 +2,17 @@
 
 > Based on [Chrissy Teigen Cravings], pg. 232
 
-<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=5; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=proscuitto_wrapped_stuffed_chicken.jpeg; (User can specify image name) -->
+{% {cts} name_image=proscuitto_wrapped_stuffed_chicken.jpeg; (User can specify image name) %}
 
 ![proscuitto_wrapped_stuffed_chicken.jpeg](./proscuitto_wrapped_stuffed_chicken.jpeg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

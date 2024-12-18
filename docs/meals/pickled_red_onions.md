@@ -2,17 +2,17 @@
 
 > Based on [https://newsletter.ethanchlebowski.com/p/pickle-anything-framework-729d](https://newsletter.ethanchlebowski.com/p/pickle-anything-framework-729d)
 
-<!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=4; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=pickled_red_onions.jpeg; (User can specify image name) -->
+{% {cts} name_image=pickled_red_onions.jpeg; (User can specify image name) %}
 
 ![pickled_red_onions.jpeg](./pickled_red_onions.jpeg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

@@ -2,17 +2,17 @@
 
 > Based on [https://www.wellplated.com/instant-pot-stuffed-peppers/](https://www.wellplated.com/instant-pot-stuffed-peppers/) and [ingredients from this Washington Post Recipe](https://www.washingtonpost.com/recipes/harissa-stuffed-bell-peppers/17096/)
 
-<!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=4; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=instant_pot_stuffed_bell_peppers.jpeg; (User can specify image name) -->
+{% {cts} name_image=instant_pot_stuffed_bell_peppers.jpeg; (User can specify image name) %}
 
 ![instant_pot_stuffed_bell_peppers.jpeg](./instant_pot_stuffed_bell_peppers.jpeg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

@@ -2,17 +2,17 @@
 
 > Based on [https://www.lovefromtheoven.com/chocolate-peanut-butter-bundt-cake/](https://www.lovefromtheoven.com/chocolate-peanut-butter-bundt-cake/)
 
-<!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=2; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=chocolate_peanut_butter_bundt_cake.jpg; (User can specify image name) -->
+{% {cts} name_image=chocolate_peanut_butter_bundt_cake.jpg; (User can specify image name) %}
 
 ![chocolate_peanut_butter_bundt_cake.jpg](./chocolate_peanut_butter_bundt_cake.jpg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

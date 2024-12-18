@@ -2,17 +2,17 @@
 
 > Based on multiple recipes, like this one: [https://12tomatoes.com/spinach-and-cheese-enchiladas](https://12tomatoes.com/spinach-and-cheese-enchiladas)
 
-<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=5; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=enchiladas.jpg; (User can specify image name) -->
+{% {cts} name_image=enchiladas.jpg; (User can specify image name) %}
 
 ![enchiladas.jpg](./enchiladas.jpg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

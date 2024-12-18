@@ -2,17 +2,17 @@
 
 > Based on [a Voraciously article in the Washington Post](https://www.washingtonpost.com/news/voraciously/wp/2019/03/13/this-crispy-herbed-falafel-makes-frying-at-home-worth-it/)
 
-<!-- {cts} rating=0; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=0; (User can specify rating on scale of 1-5) %}
 
 Personal rating: *Not yet rated*
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=crispy_herbed_falafel.jpg; (User can specify image name) -->
+{% {cts} name_image=crispy_herbed_falafel.jpg; (User can specify image name) %}
 
 ![crispy_herbed_falafel.jpg](./crispy_herbed_falafel.jpg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

@@ -2,17 +2,17 @@
 
 > Loosely adapted from [https://www.allrecipes.com/recipe/142967/easy-garam-masala](https://www.allrecipes.com/recipe/142967/easy-garam-masala)
 
-<!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=4; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=None; (User can specify image name) -->
+{% {cts} name_image=None; (User can specify image name) %}
 
 {% TODO: Capture image %}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

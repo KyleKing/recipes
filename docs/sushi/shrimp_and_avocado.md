@@ -2,17 +2,17 @@
 
 > Based on [https://www.geniuskitchen.com/recipe/avocado-and-shrimp-sushi-331300](https://www.geniuskitchen.com/recipe/avocado-and-shrimp-sushi-331300)
 
-<!-- {cts} rating=1; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=1; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=None; (User can specify image name) -->
+{% {cts} name_image=None; (User can specify image name) %}
 
 {% TODO: Capture image %}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

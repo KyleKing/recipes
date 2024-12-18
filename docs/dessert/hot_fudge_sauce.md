@@ -2,17 +2,17 @@
 
 > Alex's Family recipe
 
-<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=5; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=hot_fudge_sauce.jpeg; (User can specify image name) -->
+{% {cts} name_image=hot_fudge_sauce.jpeg; (User can specify image name) %}
 
 ![hot_fudge_sauce.jpeg](./hot_fudge_sauce.jpeg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

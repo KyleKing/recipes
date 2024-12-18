@@ -2,17 +2,17 @@
 
 > Based on [Chrissy Teigen Cravings], pg. 176
 
-<!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=2; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=sweet_potato_gnocchi.jpeg; (User can specify image name) -->
+{% {cts} name_image=sweet_potato_gnocchi.jpeg; (User can specify image name) %}
 
 ![sweet_potato_gnocchi.jpeg](./sweet_potato_gnocchi.jpeg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

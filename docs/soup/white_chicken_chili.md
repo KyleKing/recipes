@@ -2,17 +2,17 @@
 
 > Based on [https://cooking.nytimes.com/recipes/1024345-white-chicken-chili](https://cooking.nytimes.com/recipes/1024345-white-chicken-chili)
 
-<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=5; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=white_chicken_chili.jpeg; (User can specify image name) -->
+{% {cts} name_image=white_chicken_chili.jpeg; (User can specify image name) %}
 
 ![white_chicken_chili.jpeg](./white_chicken_chili.jpeg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

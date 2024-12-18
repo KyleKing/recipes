@@ -2,17 +2,17 @@
 
 > Based on [Chrissy Teigen Cravings], pg. 148
 
-<!-- {cts} rating=2; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=2; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=johns_chili.jpeg; (User can specify image name) -->
+{% {cts} name_image=johns_chili.jpeg; (User can specify image name) %}
 
 ![johns_chili.jpeg](./johns_chili.jpeg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

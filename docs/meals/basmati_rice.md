@@ -2,17 +2,17 @@
 
 > Inspired by [https://www.allrecipes.com/recipe/259325/baked-salmon-with-lemony-orzo-and-basil-bacon-peas/](https://www.allrecipes.com/recipe/259325/baked-salmon-with-lemony-orzo-and-basil-bacon-peas/)
 
-<!-- {cts} rating=1; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=1; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=basmati_rice.jpg; (User can specify image name) -->
+{% {cts} name_image=basmati_rice.jpg; (User can specify image name) %}
 
 ![basmati_rice.jpg](./basmati_rice.jpg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

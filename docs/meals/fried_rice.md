@@ -2,17 +2,17 @@
 
 > Based on [http://www.geniuskitchen.com/recipe/chinese-fried-rice-38748](http://www.geniuskitchen.com/recipe/chinese-fried-rice-38748), [https://www.loveonaplate.net/hoisin-fried-rice/#wprm-recipe-container-5520](https://www.loveonaplate.net/hoisin-fried-rice/#wprm-recipe-container-5520), and [https://www.cookwell.com/recipe/restaurant-style-chicken-fried-rice](https://www.cookwell.com/recipe/restaurant-style-chicken-fried-rice)
 
-<!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=4; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=fried_rice_hoisin.jpeg; (User can specify image name) -->
+{% {cts} name_image=fried_rice_hoisin.jpeg; (User can specify image name) %}
 
 ![fried_rice_hoisin.jpeg](./fried_rice_hoisin.jpeg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

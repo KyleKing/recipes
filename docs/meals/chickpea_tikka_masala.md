@@ -2,17 +2,17 @@
 
 > Based on [https://www.washingtonpost.com/lifestyle/food/chickpea-tikka-masala-its-not-traditional-but-it-sure-tastes-great/2017/07/24/d6727f58-6e37-11e7-96ab-5f38140b38cc_story.html](https://www.washingtonpost.com/lifestyle/food/chickpea-tikka-masala-its-not-traditional-but-it-sure-tastes-great/2017/07/24/d6727f58-6e37-11e7-96ab-5f38140b38cc_story.html)
 
-<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=5; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=chickpea_tikka_masala.jpeg; (User can specify image name) -->
+{% {cts} name_image=chickpea_tikka_masala.jpeg; (User can specify image name) %}
 
 ![chickpea_tikka_masala.jpeg](./chickpea_tikka_masala.jpeg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

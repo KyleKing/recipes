@@ -1,16 +1,16 @@
 # Salmon Baked with Asparagus
 
-<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=5; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=salmon_baked_with_asparagus.jpeg; (User can specify image name) -->
+{% {cts} name_image=salmon_baked_with_asparagus.jpeg; (User can specify image name) %}
 
 ![salmon_baked_with_asparagus.jpeg](./salmon_baked_with_asparagus.jpeg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 

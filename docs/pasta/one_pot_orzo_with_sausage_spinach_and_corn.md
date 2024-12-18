@@ -2,17 +2,17 @@
 
 > Based on [https://www.skinnytaste.com/one-pot-orzo-with-sausage-spinach-and-corn/#recipe](https://www.skinnytaste.com/one-pot-orzo-with-sausage-spinach-and-corn/#recipe)
 
-<!-- {cts} rating=5; (User can specify rating on scale of 1-5) -->
+{% {cts} rating=5; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
-<!-- {cte} -->
+{{% {cte} %}}
 
-<!-- {cts} name_image=one_pot_orzo_with_sausage_spinach_and_corn.jpeg; (User can specify image name) -->
+{% {cts} name_image=one_pot_orzo_with_sausage_spinach_and_corn.jpeg; (User can specify image name) %}
 
 ![one_pot_orzo_with_sausage_spinach_and_corn.jpeg](./one_pot_orzo_with_sausage_spinach_and_corn.jpeg){.image-recipe}
 
-<!-- {cte} -->
+{{% {cte} %}}
 
 ## Ingredients
 
