@@ -2,11 +2,11 @@
 
 ## Archived Code
 
-Recursive programming snippet for generating markdown lists from dictionaries or lists
+Recursive programming snippet for generating djot lists from dictionaries or lists
 
 ```py
 def format_md_list(iterator: Union[dict, Iterable], list_prefix: str = '*') -> List[str]:
-    """Recursively format a markdown list interpreting a dictionary as a multi-level list."""
+    """Recursively format a djot list interpreting a dictionary as a multi-level list."""
     out = []
     logger.debug('({type_iter}) iterator={iterator}', iterator=iterator, type_iter=type(iterator))
     if isinstance(iterator, dict):

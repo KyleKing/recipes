@@ -1,4 +1,4 @@
-"""Format Markdown Files for MKDocs."""
+"""Format Recipes."""
 
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -15,7 +15,7 @@ from corallium.log import LOGGER
 
 
 def get_recipes_doc_dir() -> Path:
-    """Markdown directory (~2-levels up of `get_doc_subdir()`).
+    """Recipes directory (~2-levels up of `get_doc_subdir()`).
 
     Returns:
         Path: recipe document directory
@@ -67,7 +67,7 @@ def _format_stars(rating: int) -> str:
 
 
 def _format_image_md(name_image: str | None, class_: str) -> str:
-    """Return formatted markdown to display an image from the same directory.
+    """Return formatted markup to display an image from the same directory.
 
     Args:
         name_image: optional image name
@@ -81,18 +81,18 @@ def _format_image_md(name_image: str | None, class_: str) -> str:
 
 
 # =====================================================================================
-# Utilities for updating Markdown
+# Utilities for updating djot
 
 
-def _handle_star_section(line: str, path_md: Path) -> list[str]:  # noqa: ARG001
-    """Format the star rating as markdown.
+def _handle_star_section(line: str, path_dj: Path) -> list[str]:  # noqa: ARG001
+    """Format the star rating as djot.
 
     Args:
         line: first line of the section
-        path_md: Path to the markdown file
+        path_dj: Path to the djot file
 
     Returns:
-        List[str]: updated recipe string markdown
+        List[str]: updated recipe markup
 
     """
     rating = int(_parse_var_comment(line)['rating'])
@@ -104,12 +104,12 @@ def _handle_star_section(line: str, path_md: Path) -> list[str]:  # noqa: ARG001
     ]
 
 
-def _parse_rel_file(line: str, path_md: Path, key: str) -> Path:
+def _parse_rel_file(line: str, path_dj: Path, key: str) -> Path:
     """Parse the filename from the file.
 
     Args:
         line: first line of the section
-        path_md: Path to the markdown file
+        path_dj: Path to the djot file
         key: string key to use in `_parse_var_comment`
 
     Returns:
@@ -120,24 +120,24 @@ def _parse_rel_file(line: str, path_md: Path, key: str) -> Path:
 
     """
     filename = _parse_var_comment(line)[key]
-    path_file: Path = path_md.parent / filename
+    path_file: Path = path_dj.parent / filename
     if filename.lower() != 'none' and not path_file.is_file():
-        raise FileNotFoundError(f'Could not locate {path_file} from {path_md}')  # noqa: EM102
+        raise FileNotFoundError(f'Could not locate {path_file} from {path_dj}')  # noqa: EM102
     return path_file
 
 
-def _handle_image_section(line: str, path_md: Path) -> list[str]:
+def _handle_image_section(line: str, path_dj: Path) -> list[str]:
     """Format the string section with the specified image name.
 
     Args:
         line: first line of the section
-        path_md: Path to the markdown file
+        path_dj: Path to the djot file
 
     Returns:
-        List[str]: updated recipe string markdown
+        List[str]: updated recipe markup
 
     """
-    path_image = _parse_rel_file(line, path_md, 'name_image')
+    path_image = _parse_rel_file(line, path_dj, 'name_image')
     name_image = path_image.name
     return [
         f'{{% {{cts}} name_image={name_image}; (User can specify image name) %}}\n',
@@ -165,12 +165,12 @@ class _TOCRecipes:
     sub_dir: Path
     recipes: dict[str, Recipe] = field(default_factory=dict)
 
-    def handle_star(self, line: str, path_md: Path) -> list[str]:
+    def handle_star(self, line: str, path_dj: Path) -> list[str]:
         """Store the star rating and write.
 
         Args:
             line: first line of the section
-            path_md: Path to the markdown file
+            path_dj: Path to the djot file
 
         Returns:
             List[str]: empty list
@@ -179,22 +179,22 @@ class _TOCRecipes:
             ValueError: if rating isn't specified
 
         """
-        key = path_md.as_posix()
+        key = path_dj.as_posix()
         recipe = self.recipes.get(key) or Recipe()
         try:
             recipe.rating = _parse_var_comment(line)['rating']
         except KeyError as exc:
-            msg = f"'rating' not found in '{line}' from {path_md}"
+            msg = f"'rating' not found in '{line}' from {path_dj}"
             raise ValueError(msg) from exc
         self.recipes[key] = recipe
-        return _handle_star_section(line, path_md)
+        return _handle_star_section(line, path_dj)
 
-    def handle_image(self, line: str, path_md: Path) -> list[str]:
+    def handle_image(self, line: str, path_dj: Path) -> list[str]:
         """Store image name and write.
 
         Args:
             line: first line of the section
-            path_md: Path to the markdown file
+            path_dj: Path to the djot file
 
         Returns:
             List[str]: empty list
@@ -203,15 +203,15 @@ class _TOCRecipes:
             ValueError: if image_name isn't specified
 
         """
-        key = path_md.as_posix()
+        key = path_dj.as_posix()
         recipe = self.recipes.get(key) or Recipe()
         try:
-            recipe.path_image = _parse_rel_file(line, path_md, 'name_image')
+            recipe.path_image = _parse_rel_file(line, path_dj, 'name_image')
         except KeyError as exc:
-            msg = f"'name_image' not found in '{line}' from {path_md}"
+            msg = f"'name_image' not found in '{line}' from {path_dj}"
             raise ValueError(msg) from exc
         self.recipes[key] = recipe
-        return _handle_image_section(line, path_md)
+        return _handle_image_section(line, path_dj)
 
     def write_toc(self) -> None:
         """Write the table of contents."""
@@ -237,7 +237,7 @@ def format_recipes() -> None:
     """Format the Recipes."""
     # Get all sub-directories
     paths_md = find_project_files_by_suffix(get_project_path()).get('md') or []
-    md_dirs = {path_md.parent for path_md in paths_md}
+    md_dirs = {path_dj.parent for path_dj in paths_md}
 
     # Filter out any directories from calcipy
     dir_md = get_recipes_doc_dir()
