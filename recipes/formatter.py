@@ -5,10 +5,11 @@ from pathlib import Path
 
 from calcipy.file_search import find_project_files_by_suffix
 from calcipy.invoke_helpers import get_doc_subdir, get_project_path
-from calcipy.markdown_table import format_table
-from calcipy.md_writer import write_template_formatted_md_sections
-from calcipy.md_writer._writer import _parse_var_comment  # noqa: PLC2701
 from corallium.log import LOGGER
+
+from ._calcipy_djot.markup_table import format_table
+from ._calcipy_djot.markup_writer import write_template_formatted_md_sections
+from ._calcipy_djot.markup_writer._writer import _parse_var_comment
 
 # =====================================================================================
 # Shared Functionality
