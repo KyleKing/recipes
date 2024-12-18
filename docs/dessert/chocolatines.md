@@ -33,7 +33,6 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - Add any additional toppings, then freeze for at least 1 hour
 - Break into bite size chunks! Can be stored in the fridge or on the counter
 
-<!-- FIXME: Need to implement admonitions: https://github.com/executablebooks/mdformat/issues/309
-!!! warning
-    FYI, choose a baking sheet that will fit in your freezer
- -->
+## Notes
+
+- Make sure to choose a baking sheet that will fit in your freezer

@@ -8,7 +8,7 @@ from calcipy.invoke_helpers import get_doc_subdir, get_project_path
 from corallium.log import LOGGER
 
 from ._calcipy_djot.markup_table import format_table
-from ._calcipy_djot.markup_writer import write_template_formatted_md_sections
+from ._calcipy_djot.markup_writer import write_template_formatted_dj_sections
 from ._calcipy_djot.markup_writer._writer import _parse_var_comment
 
 # =====================================================================================
@@ -67,7 +67,7 @@ def _format_stars(rating: int) -> str:
     return ' '.join([_ICON_FA_STAR] * rating + [_ICON_FA_STAR_OUT] * (5 - rating))
 
 
-def _format_image_md(name_image: str | None, class_: str) -> str:
+def _format_image_dj(name_image: str | None, class_: str) -> str:
     """Return formatted markup to display an image from the same directory.
 
     Args:
@@ -142,7 +142,7 @@ def _handle_image_section(line: str, path_dj: Path) -> list[str]:
     name_image = path_image.name
     return [
         f'{{% {{cts}} name_image={name_image}; (User can specify image name) %}}\n',
-        _format_image_md(name_image, class_='image-recipe'),
+        _format_image_dj(name_image, class_='image-recipe'),
         '\n{{% {cte} %}}',
     ]
 
@@ -221,7 +221,7 @@ class _TOCRecipes:
                 {
                     'Link': f'[{_format_titlecase(path_recipe.stem)}](./{path_recipe.name})',
                     'Rating': int(info.rating),
-                    'Image': _format_image_md(info.path_image.name, class_='image-toc'),
+                    'Image': _format_image_dj(info.path_image.name, class_='image-toc'),
                 }
                 for path_recipe, info in [(Path(key), value) for key, value in self.recipes.items()]
             ]
@@ -237,13 +237,13 @@ class _TOCRecipes:
 def format_recipes() -> None:
     """Format the Recipes."""
     # Get all sub-directories
-    paths_md = find_project_files_by_suffix(get_project_path()).get('md') or []
-    md_dirs = {path_dj.parent for path_dj in paths_md}
+    paths_dj = find_project_files_by_suffix(get_project_path()).get('md') or []
+    dj_dirs = {path_dj.parent for path_dj in paths_dj}
 
     # Filter out any directories from calcipy
-    dir_md = get_recipes_doc_dir()
+    dir_dj = get_recipes_doc_dir()
     doc_dir = get_doc_subdir(get_project_path())
-    filtered_dir = [pth for pth in md_dirs if pth.parent == dir_md and pth.name != doc_dir.name]
+    filtered_dir = [pth for pth in dj_dirs if pth.parent == dir_dj and pth.name != doc_dir.name]
 
     # Create a TOC for each directory
     for sub_dir in filtered_dir:
@@ -253,6 +253,6 @@ def format_recipes() -> None:
             'rating=': toc_recipes.handle_star,
             'name_image=': toc_recipes.handle_image,
         }
-        sub_dir_paths = [pth for pth in paths_md if pth.is_relative_to(sub_dir)]
-        write_template_formatted_md_sections(handler_lookup=recipe_lookup, paths_md=sub_dir_paths)  # type: ignore[arg-type]
+        sub_dir_paths = [pth for pth in paths_dj if pth.is_relative_to(sub_dir)]
+        write_template_formatted_dj_sections(handler_lookup=recipe_lookup, paths_dj=sub_dir_paths)  # type: ignore[arg-type]
         toc_recipes.write_toc()
