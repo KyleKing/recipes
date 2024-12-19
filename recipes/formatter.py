@@ -207,7 +207,7 @@ class _TOCRecipes:
         if self.recipes:
             records = [
                 {
-                    'Link': f'[{_format_titlecase(path_recipe.stem)}](./{path_recipe.name})',
+                    'Link': f'[{_format_titlecase(path_recipe.stem)}](./{path_recipe.with_suffix(".html").name})',
                     'Rating': int(info.rating),
                     'Image': _format_image_dj(info.path_image.name, class_='image-toc'),
                 }

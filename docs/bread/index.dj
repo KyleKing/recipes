@@ -1,7 +1,7 @@
 # Table of Contents (Bread)
 
-| Link                                                                  | Rating | Image                                                             |
-|:----------------------------------------------------------------------|-------:|:-----------------------------------------------------------------:|
-| [Base Recipe For No Knead Bread](./base_recipe_for_no_knead_bread.dj) | 5      | {% TODO: Capture image %}                                         |
-| [No Knead Focaccia](./no_knead_focaccia.dj)                           | 5      | ![no\_knead\_focaccia.jpeg](./no_knead_focaccia.jpeg){.image-toc} |
-| [Pretzels](./pretzels.dj)                                             | 4      | {% TODO: Capture image %}                                         |
+| Link                                                                    | Rating | Image                                                             |
+|:------------------------------------------------------------------------|-------:|:-----------------------------------------------------------------:|
+| [Base Recipe For No Knead Bread](./base_recipe_for_no_knead_bread.html) | 5      | {% TODO: Capture image %}                                         |
+| [No Knead Focaccia](./no_knead_focaccia.html)                           | 5      | ![no\_knead\_focaccia.jpeg](./no_knead_focaccia.jpeg){.image-toc} |
+| [Pretzels](./pretzels.html)                                             | 4      | {% TODO: Capture image %}                                         |
