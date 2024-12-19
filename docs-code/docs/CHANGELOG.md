@@ -2,6 +2,13 @@
 
 ### Feat
 
+- add wip index
+- use godjot for better performance
+- generate website HTML
+- convert all files to .dj
+- begin removing mkdocs-specific files and deps
+- convert dynamic sections to djot comments
+- convert image classes to djot-style
 - remove pandas dependency
 - one-pot Shrimp Scampi pasta
 - add Chicken Pot Pie
@@ -17,6 +24,13 @@
 
 ### Fix
 
+- use .html for TOC links
+- extend custom styles and cleaner public directory
+- convert {cts} to [cts]
+- switch cts/cte to square brackets
+- remove underscore escapes from comments
+- remove quote from filename
+- adapt code to support djot
 - restore extra.css
 - correct links to Garam Masala recipe
 - ignore linting warning
@@ -32,6 +46,9 @@
 
 ### Refactor
 
+- make TOC pages more readable
+- additional removals
+- copy the calcipy markdown code to start modifying
 - convert tbsp to Tbsp
 - update brownie crinkles and add snowballs
 - larger images on mobile

@@ -33,6 +33,6 @@ jobs:
       - name: Build and deploy documentation
         run: |-
           ./build.sh
-          git add public
+          git add -f public
           git commit --message="build"
           git push origin `git subtree split --prefix public main`:gh-pages --force
