@@ -7,7 +7,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=salmon\_with\_blackened\_seasoning.jpeg; (User can specify image name) %}
+{% {cts} name_image=salmon_with_blackened_seasoning.jpeg; (User can specify image name) %}
 
 ![salmon\_with\_blackened\_seasoning.jpeg](./salmon_with_blackened_seasoning.jpeg){.image-recipe}
 

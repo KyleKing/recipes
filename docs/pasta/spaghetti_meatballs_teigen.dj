@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=spaghetti\_meatballs\_teigen.jpeg; (User can specify image name) %}
+{% {cts} name_image=spaghetti_meatballs_teigen.jpeg; (User can specify image name) %}
 
 ![spaghetti\_meatballs\_teigen.jpeg](./spaghetti_meatballs_teigen.jpeg){.image-recipe}
 

@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=spaghetti\_carbonara.jpeg; (User can specify image name) %}
+{% {cts} name_image=spaghetti_carbonara.jpeg; (User can specify image name) %}
 
 ![spaghetti\_carbonara.jpeg](./spaghetti_carbonara.jpeg){.image-recipe}
 

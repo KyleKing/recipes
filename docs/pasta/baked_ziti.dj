@@ -7,7 +7,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=baked\_ziti.jpeg; (User can specify image name) %}
+{% {cts} name_image=baked_ziti.jpeg; (User can specify image name) %}
 
 ![baked\_ziti.jpeg](./baked_ziti.jpeg){.image-recipe}
 

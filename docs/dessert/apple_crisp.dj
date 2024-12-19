@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=apple\_crisp.jpg; (User can specify image name) %}
+{% {cts} name_image=apple_crisp.jpg; (User can specify image name) %}
 
 ![apple\_crisp.jpg](./apple_crisp.jpg){.image-recipe}
 

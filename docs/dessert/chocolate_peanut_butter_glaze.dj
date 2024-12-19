@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=chocolate\_peanut\_butter\_glaze.jpeg; (User can specify image name) %}
+{% {cts} name_image=chocolate_peanut_butter_glaze.jpeg; (User can specify image name) %}
 
 ![chocolate\_peanut\_butter\_glaze.jpeg](./chocolate_peanut_butter_glaze.jpeg){.image-recipe}
 

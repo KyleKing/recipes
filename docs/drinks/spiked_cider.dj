@@ -7,7 +7,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=spiked\_cider.jpeg; (User can specify image name) %}
+{% {cts} name_image=spiked_cider.jpeg; (User can specify image name) %}
 
 ![spiked\_cider.jpeg](./spiked_cider.jpeg){.image-recipe}
 

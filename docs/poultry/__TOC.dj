@@ -1,17 +1,16 @@
-{#table-of-contents-poultry}
 # Table of Contents (Poultry)
 
-|Link|Rating|Image|
-|:--|--:|:-:|
-|[Aunt Laura\'S Spicy Chicken Dip](./aunt_laura's_spicy_chicken_dip.md)|1|![aunt\_laura\'s\_spicy\_chicken\_dip.jpeg](./aunt_laura's_spicy_chicken_dip.jpeg){.image-toc}|
-|[Broccoli Cheddar Chicken And Rice Casserole](./broccoli_cheddar_chicken_and_rice_casserole.md)|5|![broccoli\_cheddar\_chicken\_and\_rice\_casserole.jpeg](./broccoli_cheddar_chicken_and_rice_casserole.jpeg){.image-toc}|
-|[Chicken Cacciatore](./chicken_cacciatore.md)|5|![chicken\_cacciatore.jpg](./chicken_cacciatore.jpg){.image-toc}|
-|[Chicken Salad Sandwich](./chicken_salad_sandwich.md)|0|{% TODO: Capture image %}|
-|[Chicken Tacos](./chicken_tacos.md)|4|![chicken\_tacos.jpg](./chicken_tacos.jpg){.image-toc}|
-|[Dump Chicken Pot Pie](./dump_chicken_pot_pie.md)|5|![dump\_chicken\_pot\_pie.jpeg](./dump_chicken_pot_pie.jpeg){.image-toc}|
-|[Enchiladas](./enchiladas.md)|5|![enchiladas.jpg](./enchiladas.jpg){.image-toc}|
-|[Fajitas](./fajitas.md)|1|![fajitas.jpg](./fajitas.jpg){.image-toc}|
-|[Poached Chicken](./poached_chicken.md)|4|{% TODO: Capture image %}|
-|[Proscuitto Wrapped Stuffed Chicken](./proscuitto_wrapped_stuffed_chicken.md)|5|![proscuitto\_wrapped\_stuffed\_chicken.jpeg](./proscuitto_wrapped_stuffed_chicken.jpeg){.image-toc}|
-|[Street Cart Chicken And Yellow Rice](./street_cart_chicken_and_yellow_rice.md)|0|{% TODO: Capture image %}|
-|[Teryaki Chicken](./teryaki_chicken.md)|2|![teryaki\_chicken.jpeg](./teryaki_chicken.jpeg){.image-toc}|
+| Link                                                                                            | Rating | Image                                                                                                                    |
+|:------------------------------------------------------------------------------------------------|-------:|:------------------------------------------------------------------------------------------------------------------------:|
+| [Aunt Lauras Spicy Chicken Dip](./aunt_lauras_spicy_chicken_dip.dj)                             | 1      | ![aunt\_lauras\_spicy\_chicken\_dip.jpeg](./aunt_lauras_spicy_chicken_dip.jpeg){.image-toc}                              |
+| [Broccoli Cheddar Chicken And Rice Casserole](./broccoli_cheddar_chicken_and_rice_casserole.dj) | 5      | ![broccoli\_cheddar\_chicken\_and\_rice\_casserole.jpeg](./broccoli_cheddar_chicken_and_rice_casserole.jpeg){.image-toc} |
+| [Chicken Cacciatore](./chicken_cacciatore.dj)                                                   | 5      | ![chicken\_cacciatore.jpg](./chicken_cacciatore.jpg){.image-toc}                                                         |
+| [Chicken Salad Sandwich](./chicken_salad_sandwich.dj)                                           | 0      | {% TODO: Capture image %}                                                                                                |
+| [Chicken Tacos](./chicken_tacos.dj)                                                             | 4      | ![chicken\_tacos.jpg](./chicken_tacos.jpg){.image-toc}                                                                   |
+| [Dump Chicken Pot Pie](./dump_chicken_pot_pie.dj)                                               | 5      | ![dump\_chicken\_pot\_pie.jpeg](./dump_chicken_pot_pie.jpeg){.image-toc}                                                 |
+| [Enchiladas](./enchiladas.dj)                                                                   | 5      | ![enchiladas.jpg](./enchiladas.jpg){.image-toc}                                                                          |
+| [Fajitas](./fajitas.dj)                                                                         | 1      | ![fajitas.jpg](./fajitas.jpg){.image-toc}                                                                                |
+| [Poached Chicken](./poached_chicken.dj)                                                         | 4      | {% TODO: Capture image %}                                                                                                |
+| [Proscuitto Wrapped Stuffed Chicken](./proscuitto_wrapped_stuffed_chicken.dj)                   | 5      | ![proscuitto\_wrapped\_stuffed\_chicken.jpeg](./proscuitto_wrapped_stuffed_chicken.jpeg){.image-toc}                     |
+| [Street Cart Chicken And Yellow Rice](./street_cart_chicken_and_yellow_rice.dj)                 | 0      | {% TODO: Capture image %}                                                                                                |
+| [Teryaki Chicken](./teryaki_chicken.dj)                                                         | 2      | ![teryaki\_chicken.jpeg](./teryaki_chicken.jpeg){.image-toc}                                                             |

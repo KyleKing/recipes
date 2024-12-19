@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=pickled\_red\_onions.jpeg; (User can specify image name) %}
+{% {cts} name_image=pickled_red_onions.jpeg; (User can specify image name) %}
 
 ![pickled\_red\_onions.jpeg](./pickled_red_onions.jpeg){.image-recipe}
 

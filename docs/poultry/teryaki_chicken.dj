@@ -7,7 +7,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=teryaki\_chicken.jpeg; (User can specify image name) %}
+{% {cts} name_image=teryaki_chicken.jpeg; (User can specify image name) %}
 
 ![teryaki\_chicken.jpeg](./teryaki_chicken.jpeg){.image-recipe}
 

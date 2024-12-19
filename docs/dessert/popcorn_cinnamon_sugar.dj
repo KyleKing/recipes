@@ -7,7 +7,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=popcorn\_cinnamon\_sugar.jpeg; (User can specify image name) %}
+{% {cts} name_image=popcorn_cinnamon_sugar.jpeg; (User can specify image name) %}
 
 ![popcorn\_cinnamon\_sugar.jpeg](./popcorn_cinnamon_sugar.jpeg){.image-recipe}
 

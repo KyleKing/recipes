@@ -7,7 +7,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=roasted\_vegetables.jpg; (User can specify image name) %}
+{% {cts} name_image=roasted_vegetables.jpg; (User can specify image name) %}
 
 ![roasted\_vegetables.jpg](./roasted_vegetables.jpg){.image-recipe}
 

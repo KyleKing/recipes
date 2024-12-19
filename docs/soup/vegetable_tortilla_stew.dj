@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=vegetable\_tortilla\_stew.jpg; (User can specify image name) %}
+{% {cts} name_image=vegetable_tortilla_stew.jpg; (User can specify image name) %}
 
 ![vegetable\_tortilla\_stew.jpg](./vegetable_tortilla_stew.jpg){.image-recipe}
 

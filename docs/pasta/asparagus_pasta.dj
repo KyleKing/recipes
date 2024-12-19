@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=asparagus\_pasta.jpeg; (User can specify image name) %}
+{% {cts} name_image=asparagus_pasta.jpeg; (User can specify image name) %}
 
 ![asparagus\_pasta.jpeg](./asparagus_pasta.jpeg){.image-recipe}
 

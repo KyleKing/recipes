@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=eggs\_benedict.jpg; (User can specify image name) %}
+{% {cts} name_image=eggs_benedict.jpg; (User can specify image name) %}
 
 ![eggs\_benedict.jpg](./eggs_benedict.jpg){.image-recipe}
 

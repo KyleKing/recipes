@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=fried\_rice\_hoisin.jpeg; (User can specify image name) %}
+{% {cts} name_image=fried_rice_hoisin.jpeg; (User can specify image name) %}
 
 ![fried\_rice\_hoisin.jpeg](./fried_rice_hoisin.jpeg){.image-recipe}
 

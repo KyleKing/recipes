@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=morning\_glory\_muffins.jpeg; (User can specify image name) %}
+{% {cts} name_image=morning_glory_muffins.jpeg; (User can specify image name) %}
 
 ![morning\_glory\_muffins.jpeg](./morning_glory_muffins.jpeg){.image-recipe}
 

@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=egg\_muffins.jpeg; (User can specify image name) %}
+{% {cts} name_image=egg_muffins.jpeg; (User can specify image name) %}
 
 ![egg\_muffins.jpeg](./egg_muffins.jpeg){.image-recipe}
 

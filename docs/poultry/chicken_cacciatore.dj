@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=chicken\_cacciatore.jpg; (User can specify image name) %}
+{% {cts} name_image=chicken_cacciatore.jpg; (User can specify image name) %}
 
 ![chicken\_cacciatore.jpg](./chicken_cacciatore.jpg){.image-recipe}
 

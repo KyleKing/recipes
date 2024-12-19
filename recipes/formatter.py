@@ -63,7 +63,7 @@ def _format_stars(rating: int) -> str:
 
     """
     if not rating:
-        return '*Not yet rated*'
+        return '_Not yet rated_'
     return ' '.join([_ICON_FA_STAR] * rating + [_ICON_FA_STAR_OUT] * (5 - rating))
 
 
@@ -76,7 +76,8 @@ def _format_image_dj(name_image: str | None, class_: str) -> str:
 
     """
     if name_image and name_image.lower() != 'none':
-        return f'![{name_image}](./{name_image}){{.{class_}}}'
+        escaped = name_image.replace('_', '\\_')
+        return f'![{escaped}](./{name_image}){{.{class_}}}'
     LOGGER.debug('WARN: No image specified', name_image=name_image)
     return '{% TODO: Capture image %}'
 
@@ -227,7 +228,7 @@ class _TOCRecipes:
             ]
             toc_table = format_table(headers=[*records[0]], records=records, delimiters=[':-', '-:', ':-:'])
             text = f'# Table of Contents ({_format_titlecase(self.sub_dir.name)})\n\n{toc_table}\n'
-            (self.sub_dir / '__TOC.md').write_text(text)
+            (self.sub_dir / '__TOC.dj').write_text(text)
 
 
 # =====================================================================================
@@ -237,7 +238,7 @@ class _TOCRecipes:
 def format_recipes() -> None:
     """Format the Recipes."""
     # Get all sub-directories
-    paths_dj = find_project_files_by_suffix(get_project_path()).get('md') or []
+    paths_dj = find_project_files_by_suffix(get_project_path()).get('dj') or []
     dj_dirs = {path_dj.parent for path_dj in paths_dj}
 
     # Filter out any directories from calcipy

@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=black\_bean\_burger.jpeg; (User can specify image name) %}
+{% {cts} name_image=black_bean_burger.jpeg; (User can specify image name) %}
 
 ![black\_bean\_burger.jpeg](./black_bean_burger.jpeg){.image-recipe}
 

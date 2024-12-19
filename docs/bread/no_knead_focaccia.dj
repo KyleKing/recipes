@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=no\_knead\_focaccia.jpeg; (User can specify image name) %}
+{% {cts} name_image=no_knead_focaccia.jpeg; (User can specify image name) %}
 
 ![no\_knead\_focaccia.jpeg](./no_knead_focaccia.jpeg){.image-recipe}
 

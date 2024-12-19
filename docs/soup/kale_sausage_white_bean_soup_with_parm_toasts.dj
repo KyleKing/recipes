@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=kale\_sausage\_white\_bean\_soup\_with\_parm\_toasts.jpeg; (User can specify image name) %}
+{% {cts} name_image=kale_sausage_white_bean_soup_with_parm_toasts.jpeg; (User can specify image name) %}
 
 ![kale\_sausage\_white\_bean\_soup\_with\_parm\_toasts.jpeg](./kale_sausage_white_bean_soup_with_parm_toasts.jpeg){.image-recipe}
 

@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=dump\_chicken\_pot\_pie.jpeg; (User can specify image name) %}
+{% {cts} name_image=dump_chicken_pot_pie.jpeg; (User can specify image name) %}
 
 ![dump\_chicken\_pot\_pie.jpeg](./dump_chicken_pot_pie.jpeg){.image-recipe}
 

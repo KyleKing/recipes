@@ -17,3 +17,9 @@ brew install rename
 trash docs/**/*.md
 fd . docs/ --extension=dj | rename 's/\.md\.dj$/.dj/'
 ```
+
+Separately, had to remove escaped underscores from only comments. Could have likely found a more programmatic way, but ran:
+
+```sh
+fd --type=file | sad --exact --commit '\_' '_'
+```

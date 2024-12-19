@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=cherry\_dump\_cake.jpeg; (User can specify image name) %}
+{% {cts} name_image=cherry_dump_cake.jpeg; (User can specify image name) %}
 
 ![cherry\_dump\_cake.jpeg](./cherry_dump_cake.jpeg){.image-recipe}
 

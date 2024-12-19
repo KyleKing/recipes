@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesom
 
 {{% {cte} %}}
 
-{% {cts} name_image=oatmeal\_balls.jpg; (User can specify image name) %}
+{% {cts} name_image=oatmeal_balls.jpg; (User can specify image name) %}
 
 ![oatmeal\_balls.jpg](./oatmeal_balls.jpg){.image-recipe}
 

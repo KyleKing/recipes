@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=banana\_bread.jpeg; (User can specify image name) %}
+{% {cts} name_image=banana_bread.jpeg; (User can specify image name) %}
 
 ![banana\_bread.jpeg](./banana_bread.jpeg){.image-recipe}
 

@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=lentil\_soup.jpeg; (User can specify image name) %}
+{% {cts} name_image=lentil_soup.jpeg; (User can specify image name) %}
 
 ![lentil\_soup.jpeg](./lentil_soup.jpeg){.image-recipe}
 

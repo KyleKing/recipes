@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=infant\_pancakes.jpeg; (User can specify image name) %}
+{% {cts} name_image=infant_pancakes.jpeg; (User can specify image name) %}
 
 ![infant\_pancakes.jpeg](./infant_pancakes.jpeg){.image-recipe}
 

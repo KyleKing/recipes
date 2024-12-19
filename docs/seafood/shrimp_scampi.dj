@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=shrimp\_scampi\_peas.jpeg; (User can specify image name) %}
+{% {cts} name_image=shrimp_scampi_peas.jpeg; (User can specify image name) %}
 
 ![shrimp\_scampi\_peas.jpeg](./shrimp_scampi_peas.jpeg){.image-recipe}
 

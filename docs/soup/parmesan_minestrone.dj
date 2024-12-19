@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=parmesan\_minestrone.jpeg; (User can specify image name) %}
+{% {cts} name_image=parmesan_minestrone.jpeg; (User can specify image name) %}
 
 ![parmesan\_minestrone.jpeg](./parmesan_minestrone.jpeg){.image-recipe}
 

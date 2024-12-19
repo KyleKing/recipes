@@ -9,7 +9,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 
 {{% {cte} %}}
 
-{% {cts} name_image=double\_chocolate\_crinkle\_cookies.jpeg; (User can specify image name) %}
+{% {cts} name_image=double_chocolate_crinkle_cookies.jpeg; (User can specify image name) %}
 
 ![double\_chocolate\_crinkle\_cookies.jpeg](./double_chocolate_crinkle_cookies.jpeg){.image-recipe}
 
