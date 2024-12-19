@@ -35,10 +35,15 @@ jobs:
 
       - name: Deploy
         run: |-
+          # Create a clean history
           git checkout --orphan gh-pages
           git reset .
-          cp -r public .
+          git clean --force -d
+          # Move files to top-level
+          cd public && cp -r public . && cd ..
+          rm -rf public/
           git add .
           git status
+          # Push to gh-pages branch
           git commit --message="build"
           git push -u origin gh-pages --force
