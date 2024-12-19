@@ -1,0 +1,30 @@
+{#jambon-beurre-the-essential-french-ham-sandwich}
+# Jambon Beurre: The essential French ham sandwich
+
+> Based on [[https://www.youtube.com/watch?v=ge49xawecJk](https://www.youtube.com/watch?v=ge49xawecJk)](https://www.youtube.com/watch?v=ge49xawecJk)
+
+{% {cts} rating=3; (User can specify rating on scale of 1-5) %}
+
+Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
+
+{{% {cte} %}}
+
+{% {cts} name_image=jambon\_beurre.jpg; (User can specify image name) %}
+
+![jambon\_beurre.jpg](./jambon_beurre.jpg){.image-recipe}
+
+{{% {cte} %}}
+
+{#ingredients}
+## Ingredients
+
+- [ ] baguette
+- [ ] ham
+- [ ] Gruyère cheese
+- [ ] butter
+
+{#recipe}
+## Recipe
+
+- Don\'t skimp on the butter
+- Needs something _more_ for more flavor

@@ -1,0 +1,16 @@
+{#table-of-contents-sushi}
+# Table of Contents (Sushi)
+
+|Link|Rating|Image|
+|:--|--:|:-:|
+|[Rice](./_rice.md)|1|![\_rice.jpg](./_rice.jpg){.image-toc}|
+|[Rolling](./_rolling.md)|4|![\_rolling.jpg](./_rolling.jpg){.image-toc}|
+|[California Rolls](./california_rolls.md)|1|![california\_rolls.jpeg](./california_rolls.jpeg){.image-toc}|
+|[Canned Spicy Tuna Roll](./canned_spicy_tuna_roll.md)|1|![canned\_spicy\_tuna\_roll.jpg](./canned_spicy_tuna_roll.jpg){.image-toc}|
+|[Onigiri](./onigiri.md)|1|![onigiri.jpg](./onigiri.jpg){.image-toc}|
+|[Shrimp And Avocado](./shrimp_and_avocado.md)|1|{% TODO: Capture image %}|
+|[Shrimp Nigiri](./shrimp_nigiri.md)|2|![shrimp\_nigiri.jpeg](./shrimp_nigiri.jpeg){.image-toc}|
+|[Shrimp Spicy Rolls](./shrimp_spicy_rolls.md)|1|![shrimp\_spicy\_rolls.jpeg](./shrimp_spicy_rolls.jpeg){.image-toc}|
+|[Smoked Salmon Nigiri](./smoked_salmon_nigiri.md)|1|{% TODO: Capture image %}|
+|[Smoked Salmon Rolls](./smoked_salmon_rolls.md)|1|![smoked\_salmon\_rolls.jpg](./smoked_salmon_rolls.jpg){.image-toc}|
+|[Vegetable Rolls](./vegetable_rolls.md)|1|{% TODO: Capture image %}|

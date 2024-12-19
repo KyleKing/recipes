@@ -1,0 +1,50 @@
+{#table-of-contents-meals}
+# Table of Contents (Meals)
+
+|Link|Rating|Image|
+|:--|--:|:-:|
+|[Baked Potatoes](./baked_potatoes.md)|5|![baked\_potatoes.jpeg](./baked_potatoes.jpeg){.image-toc}|
+|[Baked Tofu With Peanut Sauce And Coconut Lime Rice](./baked_tofu_with_peanut_sauce_and_coconut_lime_rice.md)|4|![baked\_tofu\_with\_peanut\_sauce\_and\_coconut\_lime\_rice.jpeg](./baked_tofu_with_peanut_sauce_and_coconut_lime_rice.jpeg){.image-toc}|
+|[Basmati Rice](./basmati_rice.md)|1|![basmati\_rice.jpg](./basmati_rice.jpg){.image-toc}|
+|[Black Bean Burger](./black_bean_burger.md)|5|![black\_bean\_burger.jpeg](./black_bean_burger.jpeg){.image-toc}|
+|[Black Bean Salad](./black_bean_salad.md)|5|![black\_bean\_salad.jpeg](./black_bean_salad.jpeg){.image-toc}|
+|[Bruschetta](./bruschetta.md)|3|![bruschetta\_toast.jpeg](./bruschetta_toast.jpeg){.image-toc}|
+|[Burgers](./burgers.md)|2|![burgers.jpeg](./burgers.jpeg){.image-toc}|
+|[Burrito](./burrito.md)|5|{% TODO: Capture image %}|
+|[Cauliflower Lime Burrito Bowl](./cauliflower_lime_burrito_bowl.md)|5|![cauliflower\_lime\_burrito\_bowl.jpeg](./cauliflower_lime_burrito_bowl.jpeg){.image-toc}|
+|[Chickpea Tikka Masala](./chickpea_tikka_masala.md)|5|![chickpea\_tikka\_masala.jpeg](./chickpea_tikka_masala.jpeg){.image-toc}|
+|[Chili Lime Black Bean Tacos](./chili_lime_black_bean_tacos.md)|4|![chili\_lime\_black\_bean\_tacos.jpeg](./chili_lime_black_bean_tacos.jpeg){.image-toc}|
+|[Crispy Baked Sweet Potato Fries](./crispy_baked_sweet_potato_fries.md)|0|{% TODO: Capture image %}|
+|[Crispy Herbed Falafel](./crispy_herbed_falafel.md)|0|![crispy\_herbed\_falafel.jpg](./crispy_herbed_falafel.jpg){.image-toc}|
+|[Falafel Pitas With Cilantro Cashew Sauce](./falafel_pitas_with_cilantro_cashew_sauce.md)|3|![falafel\_pitas\_with\_cilantro\_cashew\_sauce.jpeg](./falafel_pitas_with_cilantro_cashew_sauce.jpeg){.image-toc}|
+|[Fried Rice](./fried_rice.md)|4|![fried\_rice\_hoisin.jpeg](./fried_rice_hoisin.jpeg){.image-toc}|
+|[Garlic Bread](./garlic_bread.md)|4|![garlic\_bread.jpeg](./garlic_bread.jpeg){.image-toc}|
+|[Garlic Rice](./garlic_rice.md)|0|{% TODO: Capture image %}|
+|[Ginger Orange Broccoli And Noodles](./ginger_orange_broccoli_and_noodles.md)|3|![ginger\_orange\_broccoli\_and\_noodles.jpeg](./ginger_orange_broccoli_and_noodles.jpeg){.image-toc}|
+|[Green Chile Mac](./green_chile_mac.md)|0|{% TODO: Capture image %}|
+|[Green Pepper And Feta](./green_pepper_and_feta.md)|5|![green\_pepper\_and\_feta.jpeg](./green_pepper_and_feta.jpeg){.image-toc}|
+|[Grinder Salad Sandwich](./grinder_salad_sandwich.md)|4|![grinder\_salad\_sandwich.jpeg](./grinder_salad_sandwich.jpeg){.image-toc}|
+|[Guacamole](./guacamole.md)|0|{% TODO: Capture image %}|
+|[Gyros](./gyros.md)|1|![gyros.jpg](./gyros.jpg){.image-toc}|
+|[Hummus](./hummus.md)|5|![hummus.jpeg](./hummus.jpeg){.image-toc}|
+|[Instant Pot Stuffed Bell Peppers](./instant_pot_stuffed_bell_peppers.md)|4|![instant\_pot\_stuffed\_bell\_peppers.jpeg](./instant_pot_stuffed_bell_peppers.jpeg){.image-toc}|
+|[Instant Pot Vegetarian Chili](./instant_pot_vegetarian_chili.md)|4|![instant\_pot\_vegetarian\_quinoa\_chili.jpeg](./instant_pot_vegetarian_quinoa_chili.jpeg){.image-toc}|
+|[Jambon Beurre](./jambon_beurre.md)|3|![jambon\_beurre.jpg](./jambon_beurre.jpg){.image-toc}|
+|[Karens Roasted Veggie Bowls](./karens_roasted_veggie_bowls.md)|2|{% TODO: Capture image %}|
+|[Kung Pao Roasted Broccoli](./kung_pao_roasted_broccoli.md)|5|![kung\_pao\_roasted\_broccoli.jpeg](./kung_pao_roasted_broccoli.jpeg){.image-toc}|
+|[Lasagna](./lasagna.md)|3|![lasagna.jpeg](./lasagna.jpeg){.image-toc}|
+|[Oven Baked Sausage](./oven_baked_sausage.md)|5|{% TODO: Capture image %}|
+|[Oven Roasted Asparagus](./oven_roasted_asparagus.md)|5|![oven\_roasted\_asparagus.jpeg](./oven_roasted_asparagus.jpeg){.image-toc}|
+|[Pancetta Crisps On Baguette](./pancetta_crisps_on_baguette.md)|2|![pancetta\_crisps\_on\_baguette.jpeg](./pancetta_crisps_on_baguette.jpeg){.image-toc}|
+|[Pickled Red Onions](./pickled_red_onions.md)|4|![pickled\_red\_onions.jpeg](./pickled_red_onions.jpeg){.image-toc}|
+|[Quesadillas](./quesadillas.md)|2|![quesadillas.jpeg](./quesadillas.jpeg){.image-toc}|
+|[Roasted Potatoes](./roasted_potatoes.md)|5|![roasted\_potatoes.jpeg](./roasted_potatoes.jpeg){.image-toc}|
+|[Roasted Vegetables](./roasted_vegetables.md)|5|![roasted\_vegetables.jpg](./roasted_vegetables.jpg){.image-toc}|
+|[Salad](./salad.md)|3|![salad.jpg](./salad.jpg){.image-toc}|
+|[Spices Garam Masala](./spices_garam_masala.md)|4|{% TODO: Capture image %}|
+|[Sweet Potato And Black Bean Quinoa Bowls](./sweet_potato_and_black_bean_quinoa_bowls.md)|4|![sweet\_potato\_and\_black\_bean\_quinoa\_bowls.jpeg](./sweet_potato_and_black_bean_quinoa_bowls.jpeg){.image-toc}|
+|[Sweet Potato Chickpea And Spinach Curry](./sweet_potato_chickpea_and_spinach_curry.md)|4|![sweet\_potato\_chickpea\_and\_spinach\_curry.jpeg](./sweet_potato_chickpea_and_spinach_curry.jpeg){.image-toc}|
+|[Sweet Potato Gnocchi](./sweet_potato_gnocchi.md)|2|![sweet\_potato\_gnocchi.jpeg](./sweet_potato_gnocchi.jpeg){.image-toc}|
+|[Tomato Mozzarella Caprese](./tomato_mozzarella_caprese.md)|1|![tomato\_mozzarella\_caprese.jpg](./tomato_mozzarella_caprese.jpg){.image-toc}|
+|[Ultimate Blt](./ultimate_blt.md)|5|![ultimate\_blt.jpeg](./ultimate_blt.jpeg){.image-toc}|
+|[Veggie Couscous With Spicy Pine Nuts](./veggie_couscous_with_spicy_pine_nuts.md)|4|![veggie\_couscous\_with\_spicy\_pine\_nuts.jpeg](./veggie_couscous_with_spicy_pine_nuts.jpeg){.image-toc}|

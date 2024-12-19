@@ -6,4 +6,14 @@ Documentation can be found on [GitHub (./docs)](./docs), [PyPi](https://pypi.org
 
 ## Experimental migration to djot
 
-`(pandoc docs/meals/__TOC.md -f gfm -t json | npx @djot/djot -f pandoc -t djot) > toc.dj`
+```sh
+fd . docs/ --extension=md | xargs -I {} bash -c "(pandoc {} -f gfm -t json | npx @djot/djot -f pandoc -t djot --width 0) > {}.dj" {/}
+
+fd --type=file | sad --exact --commit '\{' '{'
+fd --type=file | sad --exact --commit '\}' '}'
+fd --type=file | sad --exact --commit 'name\_image' 'name_image'
+
+brew install rename
+trash docs/**/*.md
+fd . docs/ --extension=dj | rename 's/\.md\.dj$/.dj/'
+```
