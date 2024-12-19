@@ -207,13 +207,13 @@ class _TOCRecipes:
         if self.recipes:
             records = [
                 {
-                    'Link': f'[{_format_titlecase(path_recipe.stem)}](./{path_recipe.with_suffix(".html").name})',
-                    'Rating': int(info.rating),
                     'Image': _format_image_dj(info.path_image.name, class_='image-toc'),
+                    'Rating': int(info.rating),
+                    'Link': f'[{_format_titlecase(path_recipe.stem)}](./{path_recipe.with_suffix(".html").name})',
                 }
                 for path_recipe, info in [(Path(key), value) for key, value in self.recipes.items()]
             ]
-            toc_table = format_table(headers=[*records[0]], records=records, delimiters=[':-', '-:', ':-:'])
+            toc_table = format_table(headers=[*records[0]], records=records, delimiters=[':-:', ':-:', ':-'])
             text = f'# Table of Contents ({_format_titlecase(self.sub_dir.name)})\n\n{toc_table}\n'
             (self.sub_dir / 'index.dj').write_text(text)
 
