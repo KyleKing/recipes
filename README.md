@@ -23,4 +23,5 @@ Separately, had to remove escaped underscores from only comments. Could have lik
 ```sh
 fd --type=file | sad --exact --commit '\_' '_'
 fd --type=file | sad --exact --commit '{{% {cte} %}}' '{% [cte] %}'
+fd --type=file | sad --exact --commit '{cts}' '[cts]'
 ```

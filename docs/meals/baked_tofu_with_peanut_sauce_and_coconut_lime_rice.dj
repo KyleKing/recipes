@@ -3,13 +3,13 @@
 
 > Based on [[https://cooking.nytimes.com/recipes/1020530-baked-tofu-with-peanut-sauce-and-coconut-lime-rice](https://cooking.nytimes.com/recipes/1020530-baked-tofu-with-peanut-sauce-and-coconut-lime-rice)](https://cooking.nytimes.com/recipes/1020530-baked-tofu-with-peanut-sauce-and-coconut-lime-rice)
 
-{% {cts} rating=4; (User can specify rating on scale of 1-5) %}
+{% [cts] rating=4; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 
 {% [cte] %}
 
-{% {cts} name_image=baked_tofu_with_peanut_sauce_and_coconut_lime_rice.jpeg; (User can specify image name) %}
+{% [cts] name_image=baked_tofu_with_peanut_sauce_and_coconut_lime_rice.jpeg; (User can specify image name) %}
 
 ![baked\_tofu\_with\_peanut\_sauce\_and\_coconut\_lime\_rice.jpeg](./baked_tofu_with_peanut_sauce_and_coconut_lime_rice.jpeg){.image-recipe}
 

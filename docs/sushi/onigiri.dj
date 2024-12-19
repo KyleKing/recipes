@@ -3,13 +3,13 @@
 
 > [Ingredient ideas](http://wildgreensandsardines.com/2015/06/smoked-salmon-onigiri.html)
 
-{% {cts} rating=1; (User can specify rating on scale of 1-5) %}
+{% [cts] rating=1; (User can specify rating on scale of 1-5) %}
 
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
 {% [cte] %}
 
-{% {cts} name_image=onigiri.jpg; (User can specify image name) %}
+{% [cts] name_image=onigiri.jpg; (User can specify image name) %}
 
 ![onigiri.jpg](./onigiri.jpg){.image-recipe}
 
