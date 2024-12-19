@@ -26,19 +26,6 @@ def get_recipes_doc_dir() -> Path:
     return project_path / 'docs'
 
 
-_ICON_FA_STAR = ':fontawesome-solid-star:'
-"""Font Awesome Star Icon."""
-
-_ICON_FA_STAR_OUT = ':fontawesome-regular-star:'
-"""Font Awesome *Outlined* Star Icon."""
-
-# Alternatives to the Font-Awesome star icons
-# > _ICON_M_STAR = ':material-star:'
-# > _ICON_M_STAR_OUT = ':material-star-outline:'
-# > _ICON_O_STAR = ':octicons-star-fill-24:{: .yellow }'
-# > _ICON_O_STAR_OUT = ':octicons-star-24:{: .yellow }'
-
-
 def _format_titlecase(raw_title: str | None) -> str:
     """Format string in titlecase replacing underscores with spaces.
 
@@ -64,7 +51,7 @@ def _format_stars(rating: int) -> str:
     """
     if not rating:
         return '_Not yet rated_'
-    return ' '.join([_ICON_FA_STAR] * rating + [_ICON_FA_STAR_OUT] * (5 - rating))
+    return f'{rating} / 5'
 
 
 def _format_image_dj(name_image: str | None, class_: str) -> str:
@@ -228,7 +215,7 @@ class _TOCRecipes:
             ]
             toc_table = format_table(headers=[*records[0]], records=records, delimiters=[':-', '-:', ':-:'])
             text = f'# Table of Contents ({_format_titlecase(self.sub_dir.name)})\n\n{toc_table}\n'
-            (self.sub_dir / '__TOC.dj').write_text(text)
+            (self.sub_dir / 'index.dj').write_text(text)
 
 
 # =====================================================================================
