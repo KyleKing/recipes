@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from calcipy.file_search import find_project_files_by_suffix
-from calcipy.invoke_helpers import get_doc_subdir, get_project_path
+from calcipy.invoke_helpers import get_project_path
 from corallium.log import LOGGER
 
 from ._calcipy_djot.markup_table import format_table
@@ -24,19 +24,6 @@ def get_recipes_doc_dir() -> Path:
     """
     project_path: Path = get_project_path()
     return project_path / 'docs'
-
-
-_ICON_FA_STAR = ':fontawesome-solid-star:'
-"""Font Awesome Star Icon."""
-
-_ICON_FA_STAR_OUT = ':fontawesome-regular-star:'
-"""Font Awesome *Outlined* Star Icon."""
-
-# Alternatives to the Font-Awesome star icons
-# > _ICON_M_STAR = ':material-star:'
-# > _ICON_M_STAR_OUT = ':material-star-outline:'
-# > _ICON_O_STAR = ':octicons-star-fill-24:{: .yellow }'
-# > _ICON_O_STAR_OUT = ':octicons-star-24:{: .yellow }'
 
 
 def _format_titlecase(raw_title: str | None) -> str:
@@ -64,7 +51,7 @@ def _format_stars(rating: int) -> str:
     """
     if not rating:
         return '_Not yet rated_'
-    return ' '.join([_ICON_FA_STAR] * rating + [_ICON_FA_STAR_OUT] * (5 - rating))
+    return f'{rating} / 5'
 
 
 def _format_image_dj(name_image: str | None, class_: str) -> str:
@@ -149,6 +136,34 @@ def _handle_image_section(line: str, path_dj: Path) -> list[str]:
 
 
 # =====================================================================================
+
+
+def _handle_toc(_line: str, path_dj: Path) -> list[str]:
+    """Format a toc table.
+
+    Args:
+        line: first line of the section
+        path_dj: Path to the djot file
+
+    Returns:
+        List[str]: updated recipe markup
+
+    """
+    records = [
+        {
+            'Section': f'[{_format_titlecase(dir_.name)}](./{dir_.name})',
+        }
+        for dir_ in (pth for pth in path_dj.parent.glob('*') if pth.is_dir())
+    ]
+    toc_table = format_table(headers=[*records[0]], records=records, delimiters=[':-:'])
+    return [
+        f'{{% [cts] depth={1}; (create high-level TOC) %}}\n',
+        *toc_table.split('\n'),
+        '\n{% [cte] %}',
+    ]
+
+
+# =====================================================================================
 # Utilities for TOC
 
 
@@ -220,15 +235,15 @@ class _TOCRecipes:
         if self.recipes:
             records = [
                 {
-                    'Link': f'[{_format_titlecase(path_recipe.stem)}](./{path_recipe.name})',
-                    'Rating': int(info.rating),
                     'Image': _format_image_dj(info.path_image.name, class_='image-toc'),
+                    'Rating': int(info.rating),
+                    'Link': f'[{_format_titlecase(path_recipe.stem)}](./{path_recipe.with_suffix(".html").name})',
                 }
                 for path_recipe, info in [(Path(key), value) for key, value in self.recipes.items()]
             ]
-            toc_table = format_table(headers=[*records[0]], records=records, delimiters=[':-', '-:', ':-:'])
+            toc_table = format_table(headers=[*records[0]], records=records, delimiters=[':-:', ':-:', ':-'])
             text = f'# Table of Contents ({_format_titlecase(self.sub_dir.name)})\n\n{toc_table}\n'
-            (self.sub_dir / '__TOC.dj').write_text(text)
+            (self.sub_dir / 'index.dj').write_text(text)
 
 
 # =====================================================================================
@@ -243,12 +258,11 @@ def format_recipes() -> None:
 
     # Filter out any directories from calcipy
     dir_dj = get_recipes_doc_dir()
-    doc_dir = get_doc_subdir(get_project_path())
-    filtered_dir = [pth for pth in dj_dirs if pth.parent == dir_dj and pth.name != doc_dir.name]
+    filtered_dir = {pth for pth in dj_dirs if pth.is_relative_to(dir_dj)} - {dir_dj}
 
-    # Create a TOC for each directory
+    # Format templated sections and create a TOC for each directory
     for sub_dir in filtered_dir:
-        LOGGER.info('Creating TOC', sub_dir=sub_dir)
+        LOGGER.info('Formatting recipes', sub_dir=sub_dir)
         toc_recipes = _TOCRecipes(sub_dir=sub_dir)
         recipe_lookup = {
             'rating=': toc_recipes.handle_star,
@@ -257,3 +271,6 @@ def format_recipes() -> None:
         sub_dir_paths = [pth for pth in paths_dj if pth.is_relative_to(sub_dir)]
         write_template_formatted_dj_sections(handler_lookup=recipe_lookup, paths_dj=sub_dir_paths)  # type: ignore[arg-type]
         toc_recipes.write_toc()
+
+    # Create the main index
+    write_template_formatted_dj_sections(handler_lookup={'depth=': _handle_toc}, paths_dj=dir_dj.glob('*.dj'))  # type: ignore[arg-type]
