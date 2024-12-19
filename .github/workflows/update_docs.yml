@@ -40,7 +40,7 @@ jobs:
           git reset .
           git clean --force -d
           # Move files to top-level
-          cd public && cp -r public . && cd ..
+          cd public && cp -r . .. && cd ..
           rm -rf public/
           git add .
           git status
