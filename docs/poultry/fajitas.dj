@@ -1,0 +1,55 @@
+{#fajitas}
+# Fajitas
+
+> Based on [[http://www.budgetbytes.com/2013/02/oven-fajitas/](http://www.budgetbytes.com/2013/02/oven-fajitas/)](http://www.budgetbytes.com/2013/02/oven-fajitas/)
+
+{% [cts] rating=1; (User can specify rating on scale of 1-5) %}
+
+Personal rating: 1 / 5
+
+{% [cte] %}
+
+{% [cts] name_image=fajitas.jpg; (User can specify image name) %}
+
+![fajitas.jpg](./fajitas.jpg){.image-recipe}
+
+{% [cte] %}
+
+{#ingredients}
+## Ingredients
+
+{#main}
+### Main
+
+- [ ] 3 peppers
+- [ ] 3 tomatoes
+- [ ] 1 lg. onion
+- [ ] 1 can corn
+- [ ] 1 can black beans
+- [ ] 1 lb. chicken (\~two breasts)
+
+{#seasonings}
+### Seasonings
+
+- [ ] 1 Tbsp chili powder
+- [ ] 2 Tbsp vegetable oil
+- [ ] 1/4 tsp garlic powder
+- [ ] 1/2 Tbsp corn starch
+
+{#with}
+### With
+
+- [ ] 10 6-inch tortillas
+- [ ] 2 cups of rice
+- [ ] 1/3 bag of spinach
+- [ ] 1/2 jar of salsa
+- [ ] 1 fresh lime
+- [ ] cilantro
+
+{#recipe}
+## Recipe
+
+- Defrost the chicken and preheat the oven to 400 degrees
+- Cut the peppers, onions, tomatoes, and chicken into 1/4 inch strips and fill a 9 x 13 inch casserole dish. Add the beans and corn, then cover with the seasonings and olive oil. Mix by hand
+- Bake for 30 minutes and start the rice
+- Crisp the tortillas in the pan so everything can be served hot!
