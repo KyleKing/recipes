@@ -7,13 +7,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=chocolate_frosting_recipe.jpg; (User can specify image name) %}
 
 ![chocolate\_frosting\_recipe.jpg](./chocolate_frosting_recipe.jpg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

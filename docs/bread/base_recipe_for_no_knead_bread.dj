@@ -9,13 +9,13 @@ The recipe includes a series of steps shared with other recipes, such as Focacci
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=None; (User can specify image name) %}
 
 {% TODO: Capture image %}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

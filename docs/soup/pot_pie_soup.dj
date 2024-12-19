@@ -7,13 +7,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=pot_pie_soup.jpeg; (User can specify image name) %}
 
 ![pot\_pie\_soup.jpeg](./pot_pie_soup.jpeg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

@@ -7,13 +7,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=dragon_noodles.jpg; (User can specify image name) %}
 
 ![dragon\_noodles.jpg](./dragon_noodles.jpg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

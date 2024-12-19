@@ -5,13 +5,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=tuna_melts.jpg; (User can specify image name) %}
 
 ![tuna\_melts.jpg](./tuna_melts.jpg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

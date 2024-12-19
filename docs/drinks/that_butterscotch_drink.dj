@@ -7,13 +7,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=that_butterscotch_drink.jpeg; (User can specify image name) %}
 
 ![that\_butterscotch\_drink.jpeg](./that_butterscotch_drink.jpeg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#recipe}
 ## Recipe

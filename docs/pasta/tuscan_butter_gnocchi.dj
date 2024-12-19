@@ -7,13 +7,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=tuscan_butter_gnocchi.jpg; (User can specify image name) %}
 
 ![tuscan\_butter\_gnocchi.jpg](./tuscan_butter_gnocchi.jpg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

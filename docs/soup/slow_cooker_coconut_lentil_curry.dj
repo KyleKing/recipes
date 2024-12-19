@@ -7,13 +7,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=slow_cooker_coconut_lentil_curry.jpeg; (User can specify image name) %}
 
 ![slow\_cooker\_coconut\_lentil\_curry.jpeg](./slow_cooker_coconut_lentil_curry.jpeg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

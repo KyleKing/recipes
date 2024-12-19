@@ -7,13 +7,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=pasta_with_corn_zucchini_and_tomatoes.jpeg; (User can specify image name) %}
 
 ![pasta\_with\_corn\_zucchini\_and\_tomatoes.jpeg](./pasta_with_corn_zucchini_and_tomatoes.jpeg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

@@ -7,13 +7,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=baked_potatoes.jpeg; (User can specify image name) %}
 
 ![baked\_potatoes.jpeg](./baked_potatoes.jpeg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

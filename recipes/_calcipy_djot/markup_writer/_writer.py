@@ -25,7 +25,7 @@ class _ParseSkipError(RuntimeError):
 class _ReplacementMachine:
     """State machine to replace content with user-specified handlers.
 
-    Uses `{cts}` and `{cte}` to demarcate sections (short for 'calcipy-template-start' or '...-end')
+    Uses `[cts]` and `[cte]` to demarcate sections (short for 'calcipy-template-start' or '...-end')
 
     Previously built with `transitions`: https://pypi.org/project/transitions
 
@@ -87,9 +87,9 @@ class _ReplacementMachine:
 
         """
         lines: List[str] = []
-        if '{cte}' in line and self.state == self.state_template:  # end
+        if '[cte]' in line and self.state == self.state_template:  # end
             self.change_end()
-        elif '{cts}' in line:  # start
+        elif '[cts]' in line:  # start
             self.change_template()
             matches = [text_match for text_match in handler_lookup if text_match in line]
             if len(matches) == 1:
@@ -109,7 +109,7 @@ class _ReplacementMachine:
         return lines
 
 
-_COMMENT_VARS = r'[<\-{%]+ {cts} (?P<key>[^=]+)=(?P<value>[^;]+);'
+_COMMENT_VARS = r'[<\-{%]+ \[cts\] (?P<key>[^=]+)=(?P<value>[^;]+);'
 """Regex for extracting the variable from a markup comment."""
 
 
@@ -149,8 +149,8 @@ def _handle_source_file(line: str, path_file: Path) -> List[str]:
     if not path_source.is_file():
         LOGGER.warning('Could not locate source file', path_source=path_source)
 
-    line_start = f'{{% {{cts}} {key}={path_rel}; %}}'
-    line_end = '{% {cte} %}'
+    line_start = f'{{% [cts] {key}={path_rel}; %}}'
+    line_end = '{% [cte] %}'
     return [line_start, *lines_source, line_end]
 
 
@@ -213,7 +213,7 @@ def _handle_coverage(line: str, _path_file: Path, path_coverage: Optional[Path] 
         raise _ParseSkipError(msg)
     coverage_data = json.loads(path_coverage.read_text())
     lines_cov = _format_cov_table(coverage_data)
-    line_end = '{% {cte} %}'
+    line_end = '{% [cte] %}'
     return [line, *lines_cov, line_end]
 
 

@@ -7,13 +7,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=hard_boiled_eggs.jpeg; (User can specify image name) %}
 
 ![hard\_boiled\_eggs.jpeg](./hard_boiled_eggs.jpeg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#recipe}
 ## Recipe

@@ -7,13 +7,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=morning_glory_muffins.jpeg; (User can specify image name) %}
 
 ![morning\_glory\_muffins.jpeg](./morning_glory_muffins.jpeg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

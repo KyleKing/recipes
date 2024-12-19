@@ -7,13 +7,13 @@
 
 Personal rating: _Not yet rated_
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=lentils_and_sausage_instant_pot_soup.jpeg; (User can specify image name) %}
 
 ![lentils\_and\_sausage\_instant\_pot\_soup.jpeg](./lentils_and_sausage_instant_pot_soup.jpeg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

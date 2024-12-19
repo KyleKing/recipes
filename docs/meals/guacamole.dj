@@ -7,13 +7,13 @@
 
 Personal rating: _Not yet rated_
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=None; (User can specify image name) %}
 
 {% TODO: Capture image %}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

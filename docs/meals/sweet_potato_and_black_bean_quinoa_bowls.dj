@@ -7,13 +7,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=sweet_potato_and_black_bean_quinoa_bowls.jpeg; (User can specify image name) %}
 
 ![sweet\_potato\_and\_black\_bean\_quinoa\_bowls.jpeg](./sweet_potato_and_black_bean_quinoa_bowls.jpeg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

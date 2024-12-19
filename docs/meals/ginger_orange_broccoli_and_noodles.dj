@@ -7,13 +7,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=ginger_orange_broccoli_and_noodles.jpeg; (User can specify image name) %}
 
 ![ginger\_orange\_broccoli\_and\_noodles.jpeg](./ginger_orange_broccoli_and_noodles.jpeg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

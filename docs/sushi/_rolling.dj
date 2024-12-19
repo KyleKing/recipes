@@ -7,13 +7,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=_rolling.jpg; (User can specify image name) %}
 
 ![\_rolling.jpg](./_rolling.jpg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#recipe}
 ## Recipe

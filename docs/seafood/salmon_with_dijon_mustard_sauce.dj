@@ -7,13 +7,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=salmon_with_dijon_mustard_sauce.jpeg; (User can specify image name) %}
 
 ![salmon\_with\_dijon\_mustard\_sauce.jpeg](./salmon_with_dijon_mustard_sauce.jpeg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

@@ -7,13 +7,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=broccoli_cheddar_chicken_and_rice_casserole.jpeg; (User can specify image name) %}
 
 ![broccoli\_cheddar\_chicken\_and\_rice\_casserole.jpeg](./broccoli_cheddar_chicken_and_rice_casserole.jpeg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

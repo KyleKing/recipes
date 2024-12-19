@@ -7,13 +7,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=proscuitto_wrapped_stuffed_chicken.jpeg; (User can specify image name) %}
 
 ![proscuitto\_wrapped\_stuffed\_chicken.jpeg](./proscuitto_wrapped_stuffed_chicken.jpeg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

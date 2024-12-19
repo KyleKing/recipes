@@ -5,13 +5,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=salmon_baked_with_asparagus.jpeg; (User can specify image name) %}
 
 ![salmon\_baked\_with\_asparagus.jpeg](./salmon_baked_with_asparagus.jpeg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

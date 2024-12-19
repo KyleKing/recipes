@@ -100,9 +100,9 @@ def _handle_star_section(line: str, path_dj: Path) -> list[str]:  # noqa: ARG001
     rating = int(_parse_var_comment(line)['rating'])
     stars = _format_stars(rating)
     return [
-        f'{{% {{cts}} rating={rating}; (User can specify rating on scale of 1-5) %}}\n',
+        f'{{% [cts] rating={rating}; (User can specify rating on scale of 1-5) %}}\n',
         'Personal rating: ' + stars,
-        '\n{{% {cte} %}}',
+        '\n{% [cte] %}',
     ]
 
 
@@ -142,9 +142,9 @@ def _handle_image_section(line: str, path_dj: Path) -> list[str]:
     path_image = _parse_rel_file(line, path_dj, 'name_image')
     name_image = path_image.name
     return [
-        f'{{% {{cts}} name_image={name_image}; (User can specify image name) %}}\n',
+        f'{{% [cts] name_image={name_image}; (User can specify image name) %}}\n',
         _format_image_dj(name_image, class_='image-recipe'),
-        '\n{{% {cte} %}}',
+        '\n{% [cte] %}',
     ]
 
 

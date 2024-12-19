@@ -7,13 +7,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=instant_pot_stuffed_bell_peppers.jpeg; (User can specify image name) %}
 
 ![instant\_pot\_stuffed\_bell\_peppers.jpeg](./instant_pot_stuffed_bell_peppers.jpeg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

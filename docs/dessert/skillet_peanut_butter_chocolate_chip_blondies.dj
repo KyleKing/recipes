@@ -7,13 +7,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=skillet_peanut_butter_chocolate_chip_blondies.jpeg; (User can specify image name) %}
 
 ![skillet\_peanut\_butter\_chocolate\_chip\_blondies.jpeg](./skillet_peanut_butter_chocolate_chip_blondies.jpeg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

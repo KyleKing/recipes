@@ -7,13 +7,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star: :fontawesome-regular-star: :fontawesome-regular-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=chocolate_peanut_butter_bundt_cake.jpg; (User can specify image name) %}
 
 ![chocolate\_peanut\_butter\_bundt\_cake.jpg](./chocolate_peanut_butter_bundt_cake.jpg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

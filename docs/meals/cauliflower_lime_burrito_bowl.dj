@@ -7,13 +7,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=cauliflower_lime_burrito_bowl.jpeg; (User can specify image name) %}
 
 ![cauliflower\_lime\_burrito\_bowl.jpeg](./cauliflower_lime_burrito_bowl.jpeg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

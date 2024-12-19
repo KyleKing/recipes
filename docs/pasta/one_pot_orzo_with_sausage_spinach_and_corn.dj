@@ -7,13 +7,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=one_pot_orzo_with_sausage_spinach_and_corn.jpeg; (User can specify image name) %}
 
 ![one\_pot\_orzo\_with\_sausage\_spinach\_and\_corn.jpeg](./one_pot_orzo_with_sausage_spinach_and_corn.jpeg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

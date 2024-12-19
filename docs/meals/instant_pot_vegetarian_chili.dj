@@ -7,13 +7,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-regular-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=instant_pot_vegetarian_quinoa_chili.jpeg; (User can specify image name) %}
 
 ![instant\_pot\_vegetarian\_quinoa\_chili.jpeg](./instant_pot_vegetarian_quinoa_chili.jpeg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients

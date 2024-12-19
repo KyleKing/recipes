@@ -5,13 +5,13 @@
 
 Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-solid-star:
 
-{{% {cte} %}}
+{% [cte] %}
 
 {% {cts} name_image=slow_cooker_chicken_tortilla_soup.jpg; (User can specify image name) %}
 
 ![slow\_cooker\_chicken\_tortilla\_soup.jpg](./slow_cooker_chicken_tortilla_soup.jpg){.image-recipe}
 
-{{% {cte} %}}
+{% [cte] %}
 
 {#ingredients}
 ## Ingredients
