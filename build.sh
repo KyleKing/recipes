@@ -11,4 +11,7 @@ for file in $files; do
     cat templates/footer.html >> "$html_path"
 done
 
+rm public/_icons/*.sketch
+rm public/index.dj
 rm public/**/*.dj
+cp CNAME public/CNAME

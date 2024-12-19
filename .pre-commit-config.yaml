@@ -58,7 +58,7 @@ repos:
           - "prettier@4.0.0-alpha.8"
           - "prettier-plugin-sh"
         exclude: \.copier-answers\.yml|tests/.*/cassettes/.*\.yaml|__snapshots__/.*\.json|templates/.+\.html
-        types_or: [html, javascript, json, shell, yaml]
+        types_or: [css, html, javascript, json, shell, yaml]
         stages: ["pre-commit"]
   - repo: https://github.com/pappasam/toml-sort
     rev: v0.24.2
