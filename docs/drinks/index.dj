@@ -1,0 +1,21 @@
+# Table of Contents (Drinks)
+
+| Image                                                                         | Rating | Link                                                            |
+|:-----------------------------------------------------------------------------:|:------:|:----------------------------------------------------------------|
+| {% TODO: Capture image %}                                                     | 0      | [Between The Sheets](./between_the_sheets.html)                 |
+| {% TODO: Capture image %}                                                     | 0      | [Chilly Chile Paloma](./chilly_chile_paloma.html)               |
+| ![coffee.jpeg](./coffee.jpeg){.image-toc}                                     | 4      | [Coffee](./coffee.html)                                         |
+| {% TODO: Capture image %}                                                     | 0      | [Eggnog](./eggnog.html)                                         |
+| ![margarita.jpg](./margarita.jpg){.image-toc}                                 | 3      | [Margarita](./margarita.html)                                   |
+| {% TODO: Capture image %}                                                     | 0      | [Mock-A-Rita](./mock-a-rita.html)                               |
+| {% TODO: Capture image %}                                                     | 0      | [Pina Colada](./pina_colada.html)                               |
+| {% TODO: Capture image %}                                                     | 0      | [Sidecar](./sidecar.html)                                       |
+| {% TODO: Capture image %}                                                     | 0      | [Simple Syrup](./simple_syrup.html)                             |
+| {% TODO: Capture image %}                                                     | 0      | [Spice 75](./spice_75.html)                                     |
+| ![spicy\_margarita.jpg](./spicy_margarita.jpg){.image-toc}                    | 3      | [Spicy Margarita](./spicy_margarita.html)                       |
+| {% TODO: Capture image %}                                                     | 0      | [Spicy Watermelon Margarita](./spicy_watermelon_margarita.html) |
+| ![spiked\_cider.jpeg](./spiked_cider.jpeg){.image-toc}                        | 3      | [Spiked Cider](./spiked_cider.html)                             |
+| {% TODO: Capture image %}                                                     | 0      | [Strawberry Whiskey Smash](./strawberry_whiskey_smash.html)     |
+| ![that\_butterscotch\_drink.jpeg](./that_butterscotch_drink.jpeg){.image-toc} | 4      | [That Butterscotch Drink](./that_butterscotch_drink.html)       |
+| ![watermelon\_margarita.jpg](./watermelon_margarita.jpg){.image-toc}          | 3      | [Watermelon Margarita](./watermelon_margarita.html)             |
+| {% TODO: Capture image %}                                                     | 5      | [Winter Whiskey Sour](./winter_whiskey_sour.html)               |

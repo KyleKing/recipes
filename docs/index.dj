@@ -1,0 +1,22 @@
+{#welcome}
+# Welcome
+
+This is my personal recipe site to aggregate recipes Kyle and Alexandra have found online and adapted
+
+{% [cts] depth=1; (create high-level TOC) %}
+
+| Section                  |
+|:------------------------:|
+| [Drinks](./drinks)       |
+| [Dessert](./dessert)     |
+| [Seafood](./seafood)     |
+| [Pasta](./pasta)         |
+| [Meals](./meals)         |
+| [Sushi](./sushi)         |
+| [Bread](./bread)         |
+| [Icons](./_icons)        |
+| [Soup](./soup)           |
+| [Breakfast](./breakfast) |
+| [Poultry](./poultry)     |
+
+{% [cte] %}
