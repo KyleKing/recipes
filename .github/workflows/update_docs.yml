@@ -37,7 +37,7 @@ jobs:
         run: |-
           git checkout --orphan gh-pages
           git reset .
-          cp -r . public
+          cp -r public .
           git add .
           git status
           git commit --message="build"
