@@ -30,9 +30,15 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
 
-      - name: Build and deploy documentation
+      - name: Build Site
+        run: ./build.sh
+
+      - name: Deploy
         run: |-
-          ./build.sh
-          git add -f public
+          git checkout --orphan gh-pages
+          git reset .
+          cp -r . public
+          git add .
+          git status
           git commit --message="build"
-          git push origin `git subtree split --prefix public main`:gh-pages --force
+          git push -u origin gh-pages --force
