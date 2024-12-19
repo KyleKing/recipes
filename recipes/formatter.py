@@ -273,4 +273,4 @@ def format_recipes() -> None:
         toc_recipes.write_toc()
 
     # Create the main index
-    write_template_formatted_dj_sections(handler_lookup={'depth=': _handle_toc}, paths_dj=dir_dj.glob('*.dj'))  # type: ignore[arg-type]
+    write_template_formatted_dj_sections(handler_lookup={'depth=': _handle_toc}, paths_dj=[*dir_dj.glob('*.dj')])

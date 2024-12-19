@@ -2,6 +2,7 @@
 
 ### Feat
 
+- use git orphan for pushing
 - add wip index
 - use godjot for better performance
 - generate website HTML
@@ -24,6 +25,7 @@
 
 ### Fix
 
+- correct order of cp
 - use .html for TOC links
 - extend custom styles and cleaner public directory
 - convert {cts} to [cts]

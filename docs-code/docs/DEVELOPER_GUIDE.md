@@ -49,14 +49,14 @@ poetry config pypi-token.pypi ...
 |---------------------------------------------------|-----------:|--------:|---------:|---------:|
 | `recipes/__init__.py`                             | 4          | 0       | 0        | 100.0%   |
 | `recipes/_calcipy_djot/__init__.py`               | 0          | 0       | 0        | 100.0%   |
-| `recipes/_calcipy_djot/markup_table.py`           | 29         | 3       | 0        | 82.9%    |
+| `recipes/_calcipy_djot/markup_table.py`           | 29         | 3       | 0        | 80.5%    |
 | `recipes/_calcipy_djot/markup_writer/__init__.py` | 5          | 2       | 0        | 60.0%    |
 | `recipes/_calcipy_djot/markup_writer/_writer.py`  | 93         | 30      | 0        | 66.7%    |
 | `recipes/_runtime_type_check_setup.py`            | 13         | 0       | 37       | 100.0%   |
-| `recipes/formatter.py`                            | 87         | 7       | 0        | 90.7%    |
+| `recipes/formatter.py`                            | 88         | 7       | 0        | 90.8%    |
 | `recipes/scripts.py`                              | 5          | 5       | 0        | 0.0%     |
 | `recipes/tasks.py`                                | 39         | 4       | 0        | 80.0%    |
-| **Totals**                                        | 275        | 51      | 37       | 78.3%    |
+| **Totals**                                        | 276        | 51      | 37       | 78.0%    |
 
-Generated on: 2024-12-18
+Generated on: 2024-12-19
 <!-- {cte} -->
