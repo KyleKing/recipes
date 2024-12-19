@@ -43,16 +43,6 @@ repos:
     rev: v4.1.0
     hooks:
       - id: commitizen
-  - repo: https://github.com/executablebooks/mdformat
-    rev: 0.7.19
-    hooks:
-      - id: mdformat
-        additional_dependencies:
-          - "mdformat-mkdocs[recommended]>=3.0.0"
-          - "mdformat-gfm-alerts>=1.0.1"
-        args: [--wrap=no]
-        exclude: _.+\.md|CHANGELOG\.md|CODE_TAG_SUMMARY\.md
-        stages: ["pre-commit"]
   - repo: https://github.com/shellcheck-py/shellcheck-py
     rev: v0.10.0.1
     hooks:
@@ -67,8 +57,8 @@ repos:
           # Note: this version must be the same as the hook revision
           - "prettier@4.0.0-alpha.8"
           - "prettier-plugin-sh"
-        exclude: \.copier-answers\.yml|tests/.*/cassettes/.*\.yaml|__snapshots__/.*\.json
-        types_or: [html, javascript, json, shell, yaml]
+        exclude: \.copier-answers\.yml|tests/.*/cassettes/.*\.yaml|__snapshots__/.*\.json|templates/.+\.html
+        types_or: [css, html, javascript, json, shell, yaml]
         stages: ["pre-commit"]
   - repo: https://github.com/pappasam/toml-sort
     rev: v0.24.2

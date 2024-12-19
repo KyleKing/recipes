@@ -21,9 +21,9 @@ def format_recipes(_ctx: Context) -> None:
 
 
 @beartype
-def _convert_png_to_jpg(dir_md: Path) -> None:
+def _convert_png_to_jpg(dir_dj: Path) -> None:
     """Convert any remaining PNG files to jpg."""
-    for path_png in dir_md.glob('*/*.png'):
+    for path_png in dir_dj.glob('*/*.png'):
         if path_png.parent.name != '_icons':
             LOGGER.warning('Convert to jpg and deleting original', path_png=path_png)
             Image.open(path_png).save(path_png.parent / f'{path_png.stem}.jpg')
@@ -37,7 +37,7 @@ _OPTIMIZE_CMD = 'poetry run optimize-images -mh 900 --convert-all --force-delete
 @task()
 def convert_png_to_jpg(_ctx: Context) -> None:
     """Convert PNG images to JPG."""
-    _convert_png_to_jpg(dir_md=get_recipes_doc_dir())
+    _convert_png_to_jpg(dir_dj=get_recipes_doc_dir())
 
 
 @task(
