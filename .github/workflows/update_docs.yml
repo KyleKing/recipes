@@ -21,8 +21,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Go
-        uses: actions/setup-go@v5
+      # - uses: actions/setup-go@v5
+      - uses: actions/setup-node@v4
 
       # https://github.com/mkdocs/mkdocs/discussions/2369#discussioncomment-625475
       - name: Configure git user
