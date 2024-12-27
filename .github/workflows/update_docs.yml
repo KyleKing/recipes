@@ -21,8 +21,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # - uses: actions/setup-go@v5
       - uses: actions/setup-node@v4
+      - run: npm ci
 
       # https://github.com/mkdocs/mkdocs/discussions/2369#discussioncomment-625475
       - name: Configure git user
@@ -34,16 +34,4 @@ jobs:
         run: ./build.sh
 
       - name: Deploy
-        run: |-
-          # Create a clean history
-          git checkout --orphan gh-pages
-          git reset .
-          git clean --force -d
-          # Move files to top-level
-          cd public && cp -r . .. && cd ..
-          rm -rf public/
-          git add .
-          git status
-          # Push to gh-pages branch
-          git commit --message="build"
-          git push -u origin gh-pages --force
+        run: ./push-gh-pages.sh
