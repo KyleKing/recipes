@@ -3,13 +3,26 @@ const path = require("path");
 
 const djot = require("@djot/djot");
 
-async function writeDjotToHtml(filePath) {
-  if (!filePath.endsWith(".dj")) return;
+class FileCache {
+  constructor() {
+    this.cache = {};
+  }
 
-  const text = await fs.readFile(filePath, "utf8");
-  const html = djot.renderHTML(djot.parse(text));
-  await fs.writeFile(filePath.replace(".dj", ".html"), html);
-  await fs.unlink(filePath);
+  async readFile(filePath) {
+    const cachedFile = this.cache[filePath];
+    if (cachedFile) {
+      return cachedFile;
+    }
+
+    try {
+      const data = await fs.readFile(filePath, "utf8");
+      this.cache[filePath] = data;
+      return data;
+    } catch (error) {
+      console.error(`Error reading file ${filePath}: ${error.message}`);
+      throw error;
+    }
+  }
 }
 
 async function traverseDirectory(opts) {
@@ -29,13 +42,35 @@ async function traverseDirectory(opts) {
   }
 }
 
-const DIR = "public";
+const fileCache = new FileCache();
+async function writeDjotToHtml(filePath) {
+  if (!filePath.endsWith(".dj")) return;
 
-try {
-  traverseDirectory({
-    directory: `${process.cwd()}/${DIR}`,
-    fileCb: writeDjotToHtml,
-  });
-} catch (error) {
-  console.error("Error traversing directory:", error);
+  const header = await fileCache.readFile("templates/header.html");
+  const footer = await fileCache.readFile("templates/footer.html");
+
+  try {
+    const text = await fs.readFile(filePath, "utf8");
+    const section = djot.renderHTML(djot.parse(text));
+    const html = `${header}\n${section}\n${footer}`;
+    await fs.writeFile(filePath.replace(".dj", ".html"), html);
+  } catch (error) {
+    console.error(`Error converting to HTML ${filePath}: ${error.message}`);
+    throw error;
+  }
+
+  await fs.unlink(filePath);
 }
+
+async function renDir() {
+  try {
+    await traverseDirectory({
+      directory: `${process.cwd()}/public`,
+      fileCb: writeDjotToHtml,
+    });
+  } catch (error) {
+    console.error("Error traversing directory:", error);
+  }
+}
+
+renDir();
