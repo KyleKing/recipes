@@ -1,10 +1,7 @@
-import fs from "node:fs/promises";
-import path from "path";
+const fs = require("node:fs/promises");
+const path = require("path");
 
-import djot from "@djot/djot";
-import { config, string } from "@tdewolff/minify";
-
-config({});
+const djot = require("@djot/djot");
 
 class FileCache {
   constructor() {
@@ -56,8 +53,7 @@ async function writeDjotToHtml(filePath) {
     const text = await fs.readFile(filePath, "utf8");
     const section = djot.renderHTML(djot.parse(text));
     const html = `${header}\n${section}\n${footer}`;
-    const minified = string("text/html", html);
-    await fs.writeFile(filePath.replace(".dj", ".html"), minified);
+    await fs.writeFile(filePath.replace(".dj", ".html"), html);
   } catch (error) {
     console.error(`Error converting to HTML ${filePath}: ${error.message}`);
     throw error;

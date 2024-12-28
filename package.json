@@ -1,7 +1,7 @@
 {
     "name": "recipes",
+    "version": "1.0.0",
     "description": "Kyle and Alex's Personal Recipes",
-    "type": "module",
     "main": "build.js",
     "directories": {
         "doc": "docs",
@@ -10,8 +10,9 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
+    "author": "",
+    "license": "MIST",
     "dependencies": {
-        "@djot/djot": "^0.3.2",
-        "@tdewolff/minify": "^2.21.2"
+        "@djot/djot": "^0.3.2"
     }
 }
