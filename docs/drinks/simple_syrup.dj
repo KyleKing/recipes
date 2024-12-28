@@ -1,4 +1,3 @@
-{#simple-syrup}
 # Simple Syrup
 
 > Based on the Cocktail Codex
@@ -15,13 +14,11 @@ Personal rating: _Not yet rated_
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
 - [ ] 125g white sugar
 - [ ] 125g filtered water
 
-{#recipe}
 ## Recipe
 
 - Whisk until dissolved. Transfer to a storage container and refrigerate up to 2 weeks

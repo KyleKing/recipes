@@ -1,4 +1,3 @@
-{#lox-sandwich}
 # Lox Sandwich
 
 > Based on [https://newsletter.ethanchlebowski.com/p/...](https://newsletter.ethanchlebowski.com/p/dont-overpay-foods-restaurant)
@@ -15,7 +14,6 @@ Personal rating: 5 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
 - [ ] Toasted bagel
@@ -25,7 +23,6 @@ Personal rating: 5 / 5
 - [ ] Salty & acidic capers
 - [ ] Optionally add herbs or cucumber slices
 
-{#recipe}
 ## Recipe
 
 - Cut a bagel in half and toast the slices to warm them through. Add layers of your desired fillings.

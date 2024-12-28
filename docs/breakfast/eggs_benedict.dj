@@ -1,4 +1,3 @@
-{#eggs-benedict}
 # Eggs Benedict
 
 > Based on [https://cooking.nytimes.com/recipes/...](https://cooking.nytimes.com/recipes/1018626-eggs-benedict)
@@ -15,10 +14,8 @@ Personal rating: 4 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
-{#benedict-and-assembly}
 ### Benedict and Assembly
 
 - [ ] 4 english muffins, split
@@ -29,7 +26,6 @@ Personal rating: 4 / 5
 - [ ] flaky sea salt
 - [ ] pepper
 
-{#hollandaise}
 ### Hollandaise
 
 - [ ] 1/2 cup (1 stick) unsalted butter
@@ -39,7 +35,6 @@ Personal rating: 4 / 5
 - [ ] salt, kosher
 - [ ] pepper
 
-{#poached-eggs}
 ### Poached Eggs
 
 - [ ] 1 Tbsp white distilled vinegar
@@ -47,23 +42,19 @@ Personal rating: 4 / 5
 - [ ] 8 large eggs
 - [ ] egg poaching cups, metal or silicone
 
-{#recipe}
 ## Recipe
 
-{#prep}
 ### Prep
 
 - Melt butter, pour in glass juicer, prep lemon and cayenne in cup then check blender speed. Let cool slightly if using a plastic blender
 - Cut up fruit for side dish and prep table
 
-{#hollandaise-1}
 ### Hollandaise
 
 - Melt butter in a small pot over medium heat until it’s foamy but not yet beginning to brown, 3 to 4 minutes
 - Place egg yolks and 2-3 tsp water in a blender. Start blending and very slowly add the hot, melted butter until incorporated then add the lemon juice, cayenne, salt, and pepper
 - Transfer the hollandaise to a small bowl, and place plastic wrap directly on the surface so it doesn’t form a skin. Set aside at room temperature
 
-{#toppings}
 ### Toppings
 
 - _In parallel to the Hollandaise step\.\.._
@@ -75,12 +66,10 @@ Personal rating: 4 / 5
   - Cook for 3 minutes and remove with a slotted spoon
 - Thoroughly toast the English muffins until crisp and golden brown\--they will need to be sturdy
 
-{#assemble}
 ### Assemble
 
 - Butter the eight halves of English muffin on a plate and butter them generously. Top each with a slice of selected meat, poached egg, then spoon hollandaise sauce. Sprinkle with chives, parsley, flaky sea salt, and black pepper.
 
-{#notes}
 ## Notes
 
 - The tricky part of this recipe is to get everything hot and served at the same time

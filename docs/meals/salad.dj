@@ -1,4 +1,3 @@
-{#salad}
 # Salad
 
 {% [cts] rating=3; (User can specify rating on scale of 1-5) %}
@@ -13,10 +12,8 @@ Personal rating: 3 / 5
 
 {% [cte] %}
 
-{#recipes}
 ## Recipes
 
-{#salad-ideas}
 ## Salad Ideas
 
 - Feta: arugula/spinach, red onion, tomato, cucumber, feta, dressing (olive oil + lime)
@@ -26,7 +23,6 @@ Personal rating: 3 / 5
 - Caesar: lettuce, Parmesan, chicken, croutons
 - Rotisserie: lettuce, tomato, cucumber, pepper, etc, rotisserie chicken
 
-{#general-toppings}
 ### General Toppings
 
 - Sliced almonds
@@ -41,7 +37,6 @@ Personal rating: 3 / 5
 - Radishes
 - Sliced Pickled Beets
 
-{#notes}
 ### Notes
 
 - Typically, cut tomatoes into orange-sized slices
@@ -55,7 +50,6 @@ Personal rating: 3 / 5
   - Make sure to add spinach, mustard greens, and kale
   - Add melons, pears, etc.
 
-{#more}
 ## More
 
 From the [Washington Post](https://www.washingtonpost.com/food/interactive/2022/build-salad-tool-ingredients-dressings/?itid=mc_magnet-salad_inline_collection_2), this is the ideal ratio:

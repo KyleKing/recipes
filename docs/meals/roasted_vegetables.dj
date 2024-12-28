@@ -1,4 +1,3 @@
-{#roasted-vegetables}
 # Roasted Vegetables
 
 {% [cts] rating=5; (User can specify rating on scale of 1-5) %}
@@ -13,17 +12,14 @@ Personal rating: 5 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
-{#seasonings}
 ### Seasonings
 
 - [ ] Olive Oil
 - [ ] (Standard) Thyme, Rosemary, Garlic, Onion, and Salt and pepper
 - [ ] (Alternative) Paprika, Thyme, Garlic, and Onion
 
-{#60-min-vegetables}
 ### 60 min Vegetables
 
 - [ ] Potatoes
@@ -33,14 +29,12 @@ Personal rating: 5 / 5
 - [ ] Red or Yellow Onions
 - [ ] Butternut or Yellow Squash
 
-{#30-min-vegetables}
 ### 30 min Vegetables
 
 - [ ] Broccoli
 - [ ] Mushrooms (note: put in a separate pan to account for liquid)
 - [ ] Zucchini
 
-{#recipe}
 ## Recipe
 
 - Set the oven to 425 (no need to wait for pre-heat)
@@ -52,7 +46,6 @@ Personal rating: 5 / 5
   - Wait to add the softer ingredients, such as mushrooms, zucchini, etc. until the mid-point
 - Top with Feta crumbles, black pepper, olive oil or other sauce, etc.
 
-{#infant-variant}
 ## Infant Variant
 
 > Based on [Mom\'s on Call](https://momsoncall.com)

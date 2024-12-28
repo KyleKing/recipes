@@ -1,4 +1,3 @@
-{#oatmeal}
 # Oatmeal
 
 {% [cts] rating=3; (User can specify rating on scale of 1-5) %}
@@ -13,7 +12,6 @@ Personal rating: 3 / 5
 
 {% [cte] %}
 
-{#topping-notes}
 ## Topping Notes
 
 - Saute diced apple pieces in butter and cinnamon with a dash of salt and nutmeg. Goes well with chopped pecans
@@ -35,7 +33,6 @@ Personal rating: 3 / 5
   - *Savory Mushroom:* Add sauteed mushrooms, a [poached](https://downshiftology.com/recipes/poached-eggs/) or fried egg, a dash of [tamari soy sauce](https://downshiftology.com/tamari-vs-soy-sauce-vs-coconut-aminos/), and chopped green onions.
   - *Butternut Squash and Peppers:* Add [roasted butternut squash](https://downshiftology.com/recipes/roasted-butternut-squash-cubes-and-halves/), diced and sauteed bell peppers with garlic and onions, and a sprinkle of goat cheese.
 
-{#overnight-oats}
 ## Overnight Oats
 
 > [https://www.youtube.com/watch?v=mI\--h\_Ey6C/...](https://www.youtube.com/watch?v=mI--h_Ey6Ck)

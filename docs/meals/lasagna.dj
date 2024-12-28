@@ -1,4 +1,3 @@
-{#lasagna}
 # Lasagna
 
 > Based on [https://www.delish.com/cooking/...](https://www.delish.com/cooking/recipe-ideas/recipes/a51337/classic-lasagna-recipe/)
@@ -15,7 +14,6 @@ Personal rating: 3 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
 - [ ] Standalone
@@ -42,7 +40,6 @@ Personal rating: 3 / 5
       - [ ] 1/4 cup freshly grated Parmesan
       - [ ] 1/4 cup chopped parsley
 
-{#recipe}
 ## Recipe
 
 - On med-high heat, cook the meat (ground beef or spinach), breaking into small pieces with a wooden spoon until no longer pink
@@ -55,7 +52,6 @@ Personal rating: 3 / 5
 - Cover with foil and bake for 15 minutes. Increase to 400 and bake uncovered for 20 min - \*see notes for aluminum pans
 - Garnish with parsley and basil
 
-{#notes}
 ## Notes
 
 - In a dark aluminum pan, i needed to extend the cook time from 15 covered/20 uncovered min to 25/35 min to soften the noodles, which came pre-cooked

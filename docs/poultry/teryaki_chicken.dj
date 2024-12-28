@@ -1,4 +1,3 @@
-{#teryaki-chicken}
 # Teryaki Chicken
 
 {% [cts] rating=2; (User can specify rating on scale of 1-5) %}
@@ -13,7 +12,6 @@ Personal rating: 2 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
 - [ ] 2-3 large chicken breasts
@@ -23,7 +21,6 @@ Personal rating: 2 / 5
 - [ ] 3/4 cup Teriyaki sauce
 - [ ] Sesame seeds
 
-{#recipe}
 ## Recipe
 
 - Start the rice and heat a pan with refined Sesame or Sunflower oil (high heat)
@@ -32,7 +29,6 @@ Personal rating: 2 / 5
 - Finish cooking the chicken in the sauce
 - Prep the broccoli and serve
 
-{#notes}
 ## Notes
 
 - Teriyaki sauce is roughly 1:1 mirin to soy sauce and optionally ginger

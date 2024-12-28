@@ -1,4 +1,3 @@
-{#apple-crisp}
 # Apple Crisp
 
 > Based on [https://www.tasteofhome.com/recipes/...](https://www.tasteofhome.com/recipes/winning-apple-crisp/)
@@ -15,7 +14,6 @@ Personal rating: 3 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
 - [ ] 1 cup all-purpose flour
@@ -30,7 +28,6 @@ Personal rating: 3 / 5
 - [ ] 1 tsp vanilla extract
 - [ ] Vanilla ice cream (optional)
 
-{#recipe}
 ## Recipe
 
 - Preheat oven to 350

@@ -1,4 +1,3 @@
-{#biscotti}
 # Biscotti
 
 > Based on [https://www.kingarthurflour.com/recipes/...](https://www.kingarthurflour.com/recipes/vanilla-biscotti-recipe)
@@ -15,7 +14,6 @@ Personal rating: 5 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
 - [ ] 6 Tbsp butter
@@ -28,7 +26,6 @@ Personal rating: 5 / 5
 - [ ] 1.5 cups chocolate chips, cranberries
 - [ ] (Optional) 1 Tbsp cocoa powder
 
-{#recipe}
 ## Recipe
 
 - In the large glass or metal bowl, beat the butter, sugar, salt, vanilla, and baking powder until the mixture is smooth and creamy
@@ -48,7 +45,6 @@ Personal rating: 5 / 5
   - Return the biscotti to the oven and bake for 25-30 minutes, until they feel very dry and are beginning to turn golden
 - Transfer to a rack to cool
 
-{#notes}
 ## Notes
 
 - The King Arthur website has a number of tasty recipes like chocolate dipped biscotti

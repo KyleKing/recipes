@@ -1,4 +1,3 @@
-{#shrimp-tacos}
 # Shrimp Tacos
 
 > Based on [http://www.yummly.co/recipe/...](http://www.yummly.co/recipe/Honey-Lime-Shrimp-Tacos-1576139)
@@ -15,10 +14,8 @@ Personal rating: 4 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
-{#shrimp}
 ### Shrimp
 
 - [ ] 1 lb shrimp, peeled
@@ -29,7 +26,6 @@ Personal rating: 4 / 5
 - [ ] (optional) small slice of a jalapeño or pinch of red pepper flakes
 - [ ] 1/2 tsp each of salt & pepper
 
-{#tacos}
 ### Tacos
 
 - [ ] Hard corn or soft flour tacos, toasted
@@ -40,7 +36,6 @@ Personal rating: 4 / 5
 - [ ] Rice
 - [ ] Diced onion, tomato, etc.
 
-{#recipe}
 ## Recipe
 
 - Whisk together the olive oil, honey, lime juice, garlic, salt, and pepper

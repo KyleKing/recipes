@@ -1,4 +1,3 @@
-{#between-the-sheets}
 # Between The Sheets
 
 {% [cts] rating=0; (User can specify rating on scale of 1-5) %}
@@ -13,10 +12,8 @@ Personal rating: _Not yet rated_
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
-{#classic}
 ### Classic
 
 - [ ] 3/4 oz Cognac
@@ -24,7 +21,6 @@ Personal rating: _Not yet rated_
 - [ ] 3/4 oz Cointreau
 - [ ] 3/4 oz fresh lemon juice
 
-{#ideal}
 ### Ideal
 
 - [ ] 1 oz Paul Beau VS Cognac
@@ -33,12 +29,10 @@ Personal rating: _Not yet rated_
 - [ ] 3/4 oz fresh lemon juice
 - [ ] 1 tsp Demerara Gum Syrup (Note: instructions in Cocktail Codex require an immersion circulator - need to find an alternative or try with Cointreau as mentioned in the below note)
 
-{#recipe}
 ## Recipe
 
 - Shake all ingredients with ice, then strain into a chilled coupe
 
-{#notes}
 ## Notes
 
 - Source: Cocktail Codex - SideCar Variant

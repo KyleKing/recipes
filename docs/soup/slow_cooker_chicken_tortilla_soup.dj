@@ -1,4 +1,3 @@
-{#slow-cooker-chicken-tortilla-soup}
 # Slow Cooker Chicken Tortilla Soup
 
 {% [cts] rating=5; (User can specify rating on scale of 1-5) %}
@@ -13,17 +12,14 @@ Personal rating: 5 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
-{#toppings}
 ### Toppings
 
 - [ ] Tortilla chips
 - [ ] 2 cups grated cheese
 - [ ] Sour cream
 
-{#soup}
 ### soup
 
 - [ ] 2 large chicken breast, halved
@@ -33,13 +29,11 @@ Personal rating: 5 / 5
 - [ ] 4 oz green chilies, chopped
 - [ ] 14.5 oz can tomato sauce
 
-{#recipe}
 ## Recipe
 
 - Halve the chicken breasts, then combine all the ingredients (undrained) into a crock pot (\*makes exactly 3 Qt). Cover and cook on low for 8 hours
 - Just before serving, slice the chicken breasts into bite size pieces and return to soup
 
-{#notes}
 ## Notes
 
 - (Source: Becky Harder - Monument, CO)

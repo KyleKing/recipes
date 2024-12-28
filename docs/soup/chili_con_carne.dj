@@ -1,4 +1,3 @@
-{#chili-con-carne}
 # Chili Con Carne
 
 > Based on Alex\'s Aunt\'s recipe
@@ -15,7 +14,6 @@ Personal rating: 4 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
 - [ ] 2-3 Tbsp butter
@@ -29,7 +27,6 @@ Personal rating: 4 / 5
 - [ ] 1 can Hormel chili (with or without beans)
 - [ ] Add spices from 2 Alarm Chili Mix (or any boxed chili mix)
 
-{#recipe}
 ## Recipe
 
 - In a large pot, melt 2-3 tablespoons butter then saute the chopped onion and garlic

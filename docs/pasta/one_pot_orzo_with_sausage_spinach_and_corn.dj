@@ -1,4 +1,3 @@
-{#one-pot-orzo-with-sausage-spinach-and-corn}
 # One-Pot Orzo with Sausage, Spinach, and Corn
 
 > Based on [https://www.skinnytaste.com/one-pot-orzo-with-sausage-spinach-and-corn/...](https://www.skinnytaste.com/one-pot-orzo-with-sausage-spinach-and-corn/#recipe)
@@ -15,10 +14,8 @@ Personal rating: 5 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
-{#pot}
 ### Pot
 
 - [ ] 12-16 ounces sausage
@@ -33,14 +30,12 @@ Personal rating: 5 / 5
 - [ ] frozen peas
 - [ ] (optional) toss in up to a few handfuls of spinach to wilt in the last few minutes
 
-{#serving}
 ### Serving
 
 - [ ] 1/4 cup freshly grated Parmesan
 - [ ] black pepper
 - [ ] Optionally add Zucchini or other vegetables with the peas
 
-{#recipe}
 ## Recipe
 
 - Remove the sausage from the casing, break up, and cook in a Dutch oven for 5 minutes on medium-high heat
@@ -50,7 +45,6 @@ Personal rating: 5 / 5
 - Reduce heat to medium-low and simmer 10 minutes
 - Top with freshly grated Parmesan and black pepper
 
-{#notes}
 ## Notes
 
 Related to the [Broccoli Cheddar Chicken and Rice Casserole](../poultry/broccoli_cheddar_chicken_and_rice_casserole.md) and the [Zucchini Pasta](../pasta/pasta_with_corn_zucchini_and_tomatoes.md)

@@ -1,4 +1,3 @@
-{#spices-garam-masala}
 # Spices: Garam Masala
 
 > Loosely adapted from [https://www.allrecipes.com/recipe/...](https://www.allrecipes.com/recipe/142967/easy-garam-masala)
@@ -15,7 +14,6 @@ Personal rating: 4 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
 - [ ] 1.5 tsp ground cumin
@@ -27,7 +25,6 @@ Personal rating: 4 / 5
 - [ ] 1/4 tsp ground cloves
 - [ ] 1/4 tsp ground nutmeg
 
-{#notes}
 ## Notes
 
 - Makes 2 Tbsp

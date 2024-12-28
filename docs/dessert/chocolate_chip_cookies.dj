@@ -1,4 +1,3 @@
-{#chocolate-chip-cookies}
 # Chocolate Chip Cookies
 
 > Based on [https://www.verybestbaking.com/toll-house/...](https://www.verybestbaking.com/toll-house/recipes/original-nestle-toll-house-chocolate-chip-cookies)
@@ -15,24 +14,20 @@ Personal rating: 4 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
-{#1-in-a-medium-bowl-whisk}
 ### 1: In a medium bowl, whisk
 
 - [ ] 2.25 cups all-purpose flour
 - [ ] 1 tsp baking soda
 - [ ] 1 tsp salt
 
-{#2-in-a-large-bowl-combine}
 ### 2: In a large bowl, combine
 
 - [ ] 1 cup (2 sticks) butter, softened
 - [ ] 3/4 cup granulated sugar
 - [ ] 3/4 cup brown sugar, packed
 
-{#3-then}
 ### 3: Then
 
 - [ ] 1 tsp vanilla extract
@@ -40,7 +35,6 @@ Personal rating: 4 / 5
 - [ ] 2 cups (12 oz) chocolate chips
 - [ ] 1 cup chopped nuts or additional 1-2 Tbsp flour
 
-{#recipe}
 ## Recipe
 
 - Soften butter at room temperature
@@ -55,7 +49,6 @@ Personal rating: 4 / 5
 - Measure out rounded Tbsp of dough on a light colored ungreased baking sheet
 - Bake 9-11 minutes until golden brown. Cool on a wire rack
 
-{#notes}
 ## Notes
 
 - Also see the alternative [Chocolate Chip Oatmeal Cookies](./chocolate_chip_oatmeal_cookies.md)

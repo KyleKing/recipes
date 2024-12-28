@@ -1,4 +1,3 @@
-{#gyros}
 # Gyros
 
 {% [cts] rating=1; (User can specify rating on scale of 1-5) %}
@@ -13,10 +12,8 @@ Personal rating: 1 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
-{#chicken}
 ### Chicken
 
 - [ ] 1-2 chicken breast (should be lamb)
@@ -26,7 +23,6 @@ Personal rating: 1 / 5
 - [ ] fries
 - [ ] lettuce
 
-{#tzatziki-sauce}
 ### Tzatziki Sauce
 
 - [ ] 1 cup plain yogurt
@@ -38,13 +34,11 @@ Personal rating: 1 / 5
 - [ ] 1 garlic clove, minced
 - [ ] 1/2 tsp salt
 
-{#recipe}
 ## Recipe
 
 - Bake the chicken with olive oil, salt, pepper, and garlic
 - Lay everything out on the Naan and cover in Tzatziki
 
-{#notes}
 ## Notes
 
 - From the Joy of Cooking page 567

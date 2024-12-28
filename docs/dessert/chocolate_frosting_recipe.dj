@@ -1,4 +1,3 @@
-{#chocolate-frosting-recipe}
 # Chocolate Frosting Recipe
 
 > Based on [https://www.kingarthurflour.com/recipes/...](https://www.kingarthurflour.com/recipes/super-simple-chocolate-frosting-recipe)
@@ -15,7 +14,6 @@ Personal rating: 4 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
 - [ ] 1.75 cups unsweetened cocoa powder, sifted
@@ -29,7 +27,6 @@ Personal rating: 4 / 5
 - [ ] (Optional) Betty Crocker Double Fudge Boxed Cake Mix
 - [ ] (Optional) Raspberry Jelly
 
-{#recipe}
 ## Recipe
 
 1. (Optional) Make a cake with 2-3 round layers
@@ -47,7 +44,6 @@ Personal rating: 4 / 5
   1. Then mix in the vanilla and slowly add the cocoa mixture until all incorporated
 1. Evenly spread the icing with a spatula; rotate the cake to help evenly ice
 
-{#notes}
 ## Notes
 
 - Yield: 4.5 cups, enough to frost 2 dozen cupcakes, or fill/frost an 8-9 in layer cake

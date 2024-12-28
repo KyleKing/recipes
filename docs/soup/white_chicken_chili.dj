@@ -1,4 +1,3 @@
-{#white-chicken-chili}
 # White Chicken Chili
 
 > Based on [https://cooking.nytimes.com/recipes/...](https://cooking.nytimes.com/recipes/1024345-white-chicken-chili)
@@ -15,10 +14,8 @@ Personal rating: 5 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
-{#soup}
 ### Soup
 
 - [ ] 1 large yellow onion, chopped
@@ -36,7 +33,6 @@ Personal rating: 5 / 5
 - [ ] 1 cup fresh or frozen corn kernels
 - [ ] Half a lime, plus lime wedges for serving
 
-{#for-serving-optional}
 ### For Serving (optional)
 
 - [ ] Shredded Cheddar or Monterey Jack cheese
@@ -46,7 +42,6 @@ Personal rating: 5 / 5
 - [ ] Chopped fresh cilantro
 - [ ] Crushed tortilla chips
 
-{#recipe}
 ## Recipe
 
 - In a large Dutch oven, heat the olive oil over medium heat

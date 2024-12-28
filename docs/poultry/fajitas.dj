@@ -1,4 +1,3 @@
-{#fajitas}
 # Fajitas
 
 > Based on [http://www.budgetbytes.com/2013/...](http://www.budgetbytes.com/2013/02/oven-fajitas/)
@@ -15,10 +14,8 @@ Personal rating: 1 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
-{#main}
 ### Main
 
 - [ ] 3 peppers
@@ -28,7 +25,6 @@ Personal rating: 1 / 5
 - [ ] 1 can black beans
 - [ ] 1 lb. chicken (\~two breasts)
 
-{#seasonings}
 ### Seasonings
 
 - [ ] 1 Tbsp chili powder
@@ -36,7 +32,6 @@ Personal rating: 1 / 5
 - [ ] 1/4 tsp garlic powder
 - [ ] 1/2 Tbsp corn starch
 
-{#with}
 ### With
 
 - [ ] 10 6-inch tortillas
@@ -46,7 +41,6 @@ Personal rating: 1 / 5
 - [ ] 1 fresh lime
 - [ ] cilantro
 
-{#recipe}
 ## Recipe
 
 - Defrost the chicken and preheat the oven to 400 degrees

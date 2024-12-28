@@ -1,4 +1,3 @@
-{#poached-chicken}
 # Poached Chicken
 
 > Based on [https://www.ethanchlebowski.com/cooking-techniques-recipes/...](https://www.ethanchlebowski.com/cooking-techniques-recipes/poached-amp-sous-vide-chicken-recipes)
@@ -15,7 +14,6 @@ Personal rating: 4 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
 - [ ] boneless, skinless chicken (thighs or any cut)
@@ -23,10 +21,8 @@ Personal rating: 4 / 5
 - [ ] 2x 4-finger pinches of salt
 - [ ] (Optional) leftover stock, other spices, etc.
 
-{#recipe}
 ## Recipe
 
-{#stove-top}
 ### Stove top
 
 - Fill a pot with water
@@ -35,7 +31,6 @@ Personal rating: 4 / 5
 - Add the chicken thighs and cook until the internal temp is 165 F (155 F if using breasts), about 15 min.
 - Let cool and shred. Can be stored in the fridge for 5 days and used in a variety of meals, such as the [dump\_chicken\_pot\_pie](./dump_chicken_pot_pie.md)
 
-{#instant-pot}
 ### Instant Pot
 
 - Pour in the broth and secure the Instant Pot lid

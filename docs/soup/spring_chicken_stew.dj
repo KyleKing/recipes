@@ -1,4 +1,3 @@
-{#spring-chicken-stew}
 # Spring Chicken Stew
 
 > Based on a Giant Grocery Catalog recipe, then merged with several others
@@ -15,7 +14,6 @@ Personal rating: 3 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
 - [ ] 1 tsp olive oil
@@ -33,7 +31,6 @@ Personal rating: 3 / 5
 - [ ] 1.5 lb boneless skinless chicken thighs
 - [ ] bag of frozen peas
 
-{#recipe}
 ## Recipe
 
 - Prep the onion and carrots and quarter the potatoes
@@ -45,7 +42,6 @@ Personal rating: 3 / 5
 - Open the pot and while on keep warm, remove the chicken, and add the frozen peas
 - Shred and replace the chicken. Add salt and pepper to taste. Serve once the peas have heated
 
-{#notes}
 ## Notes
 
 - For frozen boneless, skinless chicken thighs, put in without thawing. Keep potatoes whole and increase cook time to 20-25 min

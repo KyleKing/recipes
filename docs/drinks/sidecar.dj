@@ -1,4 +1,3 @@
-{#the-sidecar}
 # The Sidecar
 
 > From the Bartender
@@ -15,21 +14,18 @@ Personal rating: _Not yet rated_
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
 - [ ] 2 oz (60 ml) Brandy
 - [ ] 10oz (30 ml) Cointreau
 - [ ] 1/2 oz (5 ml) lemon juice
 
-{#recipe}
 ## Recipe
 
 - Combine in a shaker over ice
 - Shake until well mixed
 - Strain and serve in a cocktail glass
 
-{#notes}
 ## Notes
 
 - Also see the variant from the Cocktail Codex

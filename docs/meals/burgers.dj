@@ -1,4 +1,3 @@
-{#burgers}
 # Burgers
 
 > Based on [https://www.youtube.com/watch?v=ERUugjLmwu/...](https://www.youtube.com/watch?v=ERUugjLmwuY)
@@ -15,7 +14,6 @@ Personal rating: 2 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
 - [ ] Meat: Ground Beef, Ground Chuck (80/20), or Ground Beef Short Ribs
@@ -24,14 +22,12 @@ Personal rating: 2 / 5
 - [ ] Kaiser Roll / Potato Roll, plain toasted
 - [ ] Lettuce/Tomato/Ketchup/Dill Pickles
 
-{#recipe}
 ## Recipe
 
 - See notes section. Brief instructions below
 - Work the meat into a patty until it sticks to your hand and won\'t fall off. Work to the diameter of the bun, but to a thickness of your thumb. Form into a volcano shape
 - Season with salt. Set on pan and cook until browned. Add onion on top and flip. Cook until firm (medium-well). Add a slice of Munster and let partially melt. The cheese will continue to melt when removed
 
-{#notes}
 ## Notes
 
 - Volcano Shape: dimple an outer-circle so that the middle and outer edge are highest (this shape is best to allow the burger to expand while cooking)

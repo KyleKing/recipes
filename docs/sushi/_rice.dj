@@ -1,4 +1,3 @@
-{#rice}
 # Rice
 
 > Based on [https://instantpot.com/blogs/...](https://instantpot.com/blogs/recipes/perfect-sushi-rice)
@@ -15,7 +14,6 @@ Personal rating: 1 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
 - [ ] Instant Pot
@@ -23,7 +21,6 @@ Personal rating: 1 / 5
 - [ ] 1.5 cups water
 - [ ] 3 Tbsp rice vinegar (or 1 Tbsp cider vinegar)
 
-{#recipe}
 ## Recipe
 
 - Rinse the rice in a strainer for \~2 min. Shake dry

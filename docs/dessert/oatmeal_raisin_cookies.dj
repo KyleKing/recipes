@@ -1,4 +1,3 @@
-{#oatmeal-raisin-cookies}
 # Oatmeal Raisin Cookies
 
 > Based on the Joy of Cooking, page 767-768
@@ -15,10 +14,8 @@ Personal rating: 2 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
-{#in-a-medium-bowl-whisk}
 ### In a medium bowl, whisk:
 
 - [ ] 1.75 cups flour
@@ -28,7 +25,6 @@ Personal rating: 2 / 5
 - [ ] 1/2 tsp ground cinnamon
 - [ ] 1/2 tsp nutmeg
 
-{#in-a-large-bowl-combine}
 ### In a large bowl, combine:
 
 - [ ] 2 sticks butter, room temperature
@@ -37,20 +33,17 @@ Personal rating: 2 / 5
 - [ ] 2 eggs
 - [ ] 2.5 tsp vanilla
 
-{#combine-both-bowls-then-add}
 ### (Combine both bowls) then add:
 
 - [ ] 3.5 cups oatmeal
 - [ ] 1 cup raisins
 
-{#recipe}
 ## Recipe
 
 - Preheat oven to 350F
 - Whisk part 1. With a wooden spoon combine part 2. Then in the large bowl, combine 1 and 2 then 3
 - Bake for 12 minutes (or 14 from frozen) on a light colored cooking sheet. When done, let sit for a few minutes then place on a cooling rack
 
-{#notes}
 ## Notes
 
 - I typically bake half (1 cookie sheet of 16-24 cookies) then freeze the rest of the dough to make at a later date

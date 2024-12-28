@@ -1,4 +1,3 @@
-{#smoked-salmon-nigiri}
 # Smoked Salmon Nigiri
 
 > Based on [https://makemysushi.com/Recipes/...](https://makemysushi.com/Recipes/make-smoked-salmon-nigiri)
@@ -15,14 +14,12 @@ Personal rating: 1 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
 - [ ] smoked salmon
 - [ ] sushi rice
 - [ ] nori
 
-{#recipe}
 ## Recipe
 
 - Slice salmon into pieces to cover the sushi rice. Will look best with the fat lines running diagonally when wrapped
@@ -30,7 +27,6 @@ Personal rating: 1 / 5
 - Optionally add a bit of wasabi underneath the salmon
 - Using your second hand\'s thumb and index finger, wrap the salmon over the rice
 
-{#notes}
 ## Notes
 
 - Look for smoked salmon with the most visible white fat lines

@@ -1,4 +1,3 @@
-{#shrimp-creole}
 # Shrimp Creole
 
 > Alex\'s grandfather\'s recipe
@@ -15,7 +14,6 @@ Personal rating: 5 / 5
 
 {% [cte] %}
 
-{#ingredients}
 ## Ingredients
 
 - [ ] 1 (32 oz) can of tomato sauce
@@ -33,7 +31,6 @@ Personal rating: 5 / 5
 - [ ] 1 lbs raw shrimp, peeled and deveined
 - [ ] 2 cups white rice and saffron _OR_ a baguette, toasted in the oven
 
-{#recipe}
 ## Recipe
 
 - (\*Before starting, ensure the shrimp is peeled and ready and defrost if needed)
@@ -52,7 +49,6 @@ Personal rating: 5 / 5
 - On the stove top, bring the pot to a boil. Add the parsley and shrimp and cook for at most 5 min or until the shrimp reach 145 degrees
 - Serve over warm saffron rice or with a side baguette
 
-{#notes}
 ## Notes
 
 - Total cook time is around 3 hours
