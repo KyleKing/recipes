@@ -30,15 +30,12 @@ repos:
       - id: debug-statements
       - id: destroyed-symlinks
       - id: detect-private-key
-      - id: double-quote-string-fixer
       - id: end-of-file-fixer
-        exclude: \.copier-answers\.yml|__snapshots__/.*\.ambr
       - id: fix-byte-order-marker
       - id: forbid-new-submodules
       - id: mixed-line-ending
         args: [--fix=auto]
       - id: trailing-whitespace
-        exclude: __snapshots__/.*\.ambr
   - repo: https://github.com/commitizen-tools/commitizen
     rev: v4.1.0
     hooks:
@@ -57,28 +54,6 @@ repos:
           # Note: this version must be the same as the hook revision
           - "prettier@4.0.0-alpha.8"
           - "prettier-plugin-sh"
-        exclude: \.copier-answers\.yml|tests/.*/cassettes/.*\.yaml|__snapshots__/.*\.json|templates/.+\.html
+        exclude: templates/.+\.html
         types_or: [css, html, javascript, json, shell, yaml]
         stages: ["pre-commit"]
-  - repo: https://github.com/pappasam/toml-sort
-    rev: v0.24.2
-    hooks:
-      - id: toml-sort-fix
-        exclude: poetry\.lock
-        stages: ["pre-commit"]
-  - repo: https://github.com/KyleKing/calcipy
-    rev: 5.0.0
-    hooks:
-      - id: copier-forbidden-files
-      - id: lint-fix
-        stages: ["pre-commit"]
-      - id: tags
-        stages: ["pre-push"]
-  - repo: local
-    hooks:
-      - id: format-recipes
-        name: format recipes
-        language: system
-        entry: ./run format-recipes
-        files: docs/.+.md
-        pass_filenames: false
