@@ -9,9 +9,7 @@ Personal rating: _Not yet rated_
 
 {% [cts] name_image=None; (User can specify image name) %}
 
-{% TODO: Capture image %}
-
-![no image](/_icons/placeholder.webp){.image-recipe}
+![no image](/_icons/placeholder.webp){.image-recipe} {% TODO: Capture image %}
 
 {% [cte] %}
 

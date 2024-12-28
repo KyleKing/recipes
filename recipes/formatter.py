@@ -68,7 +68,7 @@ def _format_image_dj(name_image: str | None, class_: str) -> str:
     LOGGER.debug('WARN: No image specified', name_image=name_image)
     comment = '{% TODO: Capture image %}'
     placeholder = f'![no image](/_icons/placeholder.webp){{.{class_}}}'
-    return f'{comment}\n\n{placeholder}'
+    return f'{placeholder} {comment}'
 
 
 # =====================================================================================
@@ -151,12 +151,8 @@ def _handle_toc(_line: str, path_dj: Path) -> list[str]:
         List[str]: updated recipe markup
 
     """
-    records = [
-        {
-            'Section': f'[{_format_titlecase(dir_.name)}](./{dir_.name})',
-        }
-        for dir_ in (pth for pth in path_dj.parent.glob('*') if pth.is_dir())
-    ]
+    directories = (pth for pth in path_dj.parent.glob('*') if pth.is_dir() and not pth.name.startswith('_'))
+    records = [{'Section': f'[{_format_titlecase(dir_.name)}](./{dir_.name})'} for dir_ in sorted(directories)]
     toc_table = format_table(headers=[*records[0]], records=records, delimiters=[':-:'])
     return [
         f'{{% [cts] depth={1}; (create high-level TOC) %}}\n',

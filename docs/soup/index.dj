@@ -2,18 +2,12 @@
 
 | Image                                                                                                                          | Rating | Link                                                                                                  |
 |:------------------------------------------------------------------------------------------------------------------------------:|:------:|:------------------------------------------------------------------------------------------------------|
-| {% TODO: Capture image %}
-
-![no image](/_icons/placeholder.webp){.image-toc}                                                   | 4      | [Cashew Curry Beef With Rice Noodles](./cashew_curry_beef_with_rice_noodles.html)                     |
-| {% TODO: Capture image %}
-
-![no image](/_icons/placeholder.webp){.image-toc}                                                   | 2      | [Chicken Noodle Soup](./chicken_noodle_soup.html)                                                     |
+| ![no image](/_icons/placeholder.webp){.image-toc} {% TODO: Capture image %}                                                    | 4      | [Cashew Curry Beef With Rice Noodles](./cashew_curry_beef_with_rice_noodles.html)                     |
+| ![no image](/_icons/placeholder.webp){.image-toc} {% TODO: Capture image %}                                                    | 2      | [Chicken Noodle Soup](./chicken_noodle_soup.html)                                                     |
 | ![chili\_con\_carne.jpeg](./chili_con_carne.jpeg){.image-toc}                                                                  | 4      | [Chili Con Carne](./chili_con_carne.html)                                                             |
 | ![creamy\_tomato\_soup.jpeg](./creamy_tomato_soup.jpeg){.image-toc}                                                            | 5      | [Creamy Tomato Soup](./creamy_tomato_soup.html)                                                       |
 | ![french\_onion\_soup.jpeg](./french_onion_soup.jpeg){.image-toc}                                                              | 5      | [French Onion Soup](./french_onion_soup.html)                                                         |
-| {% TODO: Capture image %}
-
-![no image](/_icons/placeholder.webp){.image-toc}                                                   | 3      | [Instant Pot Beef Stew](./instant_pot_beef_stew.html)                                                 |
+| ![no image](/_icons/placeholder.webp){.image-toc} {% TODO: Capture image %}                                                    | 3      | [Instant Pot Beef Stew](./instant_pot_beef_stew.html)                                                 |
 | ![johns\_chili.jpeg](./johns_chili.jpeg){.image-toc}                                                                           | 2      | [Johns Chili](./johns_chili.html)                                                                     |
 | ![kale\_sausage\_white\_bean\_soup\_with\_parm\_toasts.jpeg](./kale_sausage_white_bean_soup_with_parm_toasts.jpeg){.image-toc} | 5      | [Kale Sausage White Bean Soup With Parm Toasts](./kale_sausage_white_bean_soup_with_parm_toasts.html) |
 | ![lentil\_soup.jpeg](./lentil_soup.jpeg){.image-toc}                                                                           | 4      | [Lentil Soup](./lentil_soup.html)                                                                     |
