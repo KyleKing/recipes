@@ -7,9 +7,7 @@ name: Update Docs
     paths:
       - .github/workflows/update_docs.yml
       - docs/**
-      # # Ignore the code documentation
-      # - docs-code/**
-      - mkdocs.yml
+      - build.sh
   workflow_dispatch: null # For manual runs
 
 # Docs: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#permissions
@@ -17,26 +15,33 @@ permissions:
   # Repository contents, commits, branches, downloads, releases, and merges.
   contents: write
 
+# From: https://steveasleep.com/djockey/guides/deploying.html
+#   Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+#   However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   docs:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        python-version: ["3.12"]
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # For git-revision-date-localized-plugin
-      - uses: ./.github/actions/setup
-        with:
-          os: ${{ matrix.os }}
-          python-version: ${{ matrix.python-version }}
 
-        # https://github.com/mkdocs/mkdocs/discussions/2369#discussioncomment-625475
+      - uses: actions/setup-go@v5
+      - run: go install github.com/tdewolff/minify/v2/cmd/minify@latest
+
+      - uses: actions/setup-node@v4
+      - run: npm ci
+
+      # https://github.com/mkdocs/mkdocs/discussions/2369#discussioncomment-625475
       - name: Configure git user
         run: |-
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-      - name: Build and deploy documentation
-        run: poetry run calcipy-docs cl.write doc.build doc.deploy
+
+      - name: Build Site
+        run: ./build.sh
+
+      - name: Deploy
+        run: ./push-gh-pages.sh
