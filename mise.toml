@@ -1,3 +1,10 @@
+[tasks.build]
+description = "Build website"
+run = "./run format-recipes && ./build.sh"
+
 [tasks.serve]
 description = "Serve the built documentation"
 run = "cd ./public && python -m http.server"
+
+[tools]
+"go:github.com/tdewolff/minify/v2/cmd/minify" = "latest"

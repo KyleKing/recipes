@@ -21,6 +21,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-go@v5
+      - run: go install github.com/tdewolff/minify/v2/cmd/minify@latest
+
       - uses: actions/setup-node@v4
       - run: npm ci
 
