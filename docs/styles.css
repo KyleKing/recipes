@@ -75,10 +75,31 @@ ul.task-list {
 }
 img.image-recipe {
     max-height: 400px;
+    /* Need to prevent overflow on individual recipe pages */
     max-width: 100%;
 }
 img.image-toc {
     max-height: 150px;
     max-width: 100%;
     min-width: 100px;
+}
+
+/* Experimenting with square images, but might require a container */
+/* td {
+  position: relative;
+    min-width: 100px;
+    max-height: 150px;
+}
+img.image-toc {
+    max-height: 150px;
+    max-width: 100%;
+  object-fit: contain;
+} */
+.square-shape {
+    position: relative;
+}
+.square-shape img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
