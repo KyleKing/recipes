@@ -1,5 +1,7 @@
 # Sweet Potato and Black Bean Quinoa Bowls
 
+<!-- TODO: Easier sauce? -->
+
 > Based on [https://www.spoonfulofflavor.com/sweet-potato-black-bean-quinoa-bowls/](https://www.spoonfulofflavor.com/sweet-potato-black-bean-quinoa-bowls/)
 
 <!-- {cts} rating=4; (User can specify rating on scale of 1-5) -->
