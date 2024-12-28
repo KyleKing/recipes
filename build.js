@@ -24,6 +24,7 @@ class FileCache {
     }
   }
 }
+const fileCache = new FileCache();
 
 async function traverseDirectory(opts) {
   const directory = opts.directory;
@@ -42,17 +43,35 @@ async function traverseDirectory(opts) {
   }
 }
 
-const fileCache = new FileCache();
+function getBasename(path) {
+  return path.split("/").pop().split(".").shift();
+}
+
+function toTitleCase(str) {
+  return str
+    .split("_")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(" ");
+}
+
 async function writeDjotToHtml(filePath) {
   if (!filePath.endsWith(".dj")) return;
 
-  const header = await fileCache.readFile("templates/header.html");
+  var header = await fileCache.readFile("templates/header.html");
+  header = header.replace(
+    "{TITLE}",
+    `Recipe: ${toTitleCase(getBasename(filePath))}`,
+  );
   const footer = await fileCache.readFile("templates/footer.html");
 
   try {
     const text = await fs.readFile(filePath, "utf8");
-    const section = djot.renderHTML(djot.parse(text));
+    var section = djot.renderHTML(djot.parse(text));
+    if (!filePath.endsWith("index.dj")) {
+      section = `<main data-pagefind-body>${section}</main>`;
+    }
     const html = `${header}\n${section}\n${footer}`;
+
     await fs.writeFile(filePath.replace(".dj", ".html"), html);
   } catch (error) {
     console.error(`Error converting to HTML ${filePath}: ${error.message}`);
