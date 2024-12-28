@@ -2,13 +2,15 @@
 
 rm -rf public/
 cp -R docs/ public/
+rm public/_icons/*.sketch
 
 node build.js
 
 # Using: github.com/tdewolff/minify/v2/cmd/minify
 minify --recursive --output ./ ./public
 
-rm public/_icons/*.sketch
+# Initialize search index
+npm run pagefind
 
 cp CNAME public/CNAME
 
