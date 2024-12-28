@@ -1,0 +1,3 @@
+[tasks.serve]
+description = "Serve the built documentation"
+run = "cd ./public && python -m http.server"
