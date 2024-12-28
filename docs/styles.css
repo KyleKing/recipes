@@ -2,24 +2,24 @@
  https://github.com/setetres/evenbettermotherfuckingwebsite/blob/master/LICENSE */
 
 :root {
-    --color-bg: #f2f2f2;
-    --color-fg: #444444;
+    color-scheme: light dark;
+    --color-back: light-dark(#f2f2f2, #444444);
+    --color-fore: light-dark(#444444, #f2f2f2);
+    /* --color-link: light-dark(#4A6DAA, ##618FE0); */
+    /* --color-link-visited: light-dark(darken(var(--color-link), 20%), lighten(var(--color-link), 20%)); */
 }
 nav {
-    background-color: var(--color-fg);
+    background-color: var(--color-fore);
     left: 0;
     margin: 0;
-    padding: 5px 10px;
+    padding: 5px 0 5px 5%;
     position: absolute;
     top: 0;
-    width: 100%;
-}
-nav a {
-    color: var(--color-bg);
+    right: 0;
 }
 body {
-    background: var(--color-bg);
-    color: var(--color-fg);
+    background: var(--color-back);
+    color: var(--color-fore);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
         Helvetica, Arial, sans-serif;
     font-size: 16px;
@@ -28,19 +28,27 @@ body {
     max-width: 72%;
 }
 a {
-    border-bottom: 1px solid var(--color-fg);
+    /* color: var(--color-link); */
+    border-bottom: 1px solid var(--color-fore);
     text-decoration: none;
 }
 a:hover {
     border-bottom: 0;
 }
+/* a:visited { */
+/*     color: var(--color-link-visited); */
+/* } */
+nav > a {
+    /* color: var(--color-back); */
+    font-weight: bold;
+}
 blockquote {
-    border-left: 5px solid var(--color-fg);
+    border-left: 5px solid var(--color-fore);
     margin: 0;
     padding: 0 5px 0 5px;
 }
 th {
-    border-bottom: 1px solid var(--color-fg);
+    border-bottom: 1px solid var(--color-fore);
     padding-top: 10px;
 }
 ul {
@@ -57,11 +65,11 @@ ol:nth-child(odd) {
 ul.task-list {
     list-style: none;
 }
-.image-recipe {
+img.image-recipe {
     max-height: 400px;
     max-width: 100%;
 }
-.image-toc {
+img.image-toc {
     max-height: 150px;
     max-width: 100%;
     min-width: 100px;
