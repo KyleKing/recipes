@@ -60,3 +60,5 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
     - Over-mixing when adding the dry ingredients can form gluten
     - Chill the dough for at least an hour or overnight to solidify the fats and minimize spreading when baking
     - Bake at a slightly higher 375F for a shorter time to have a quick rise that can avoid flat and dense cookies
+- Avoid over mixing (and warming) the butter. From the fridge, slice into ~6 pieces and mix
+    - Maybe add a tsp of lemon juice?

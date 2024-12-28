@@ -27,9 +27,7 @@ Personal rating: :fontawesome-solid-star: :fontawesome-solid-star: :fontawesome-
 - [ ] 2.5 cups water and/or stock
 - [ ] 1/2 lb spaghetti
 - [ ] Frozen peas
-<!--TODO: Find a Parsely substitute
-- [ ] 1/3 cup chopped parsley
--->
+- [ ] 1/3 cup chopped (dried parsely + basil + oregano??)
 - [ ] Lemon juice, half of a lemon
 - [ ] Parmesan cheese, 1 cup
 
