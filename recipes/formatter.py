@@ -152,7 +152,7 @@ def _handle_toc(_line: str, path_dj: Path) -> list[str]:
 
     """
     directories = (pth for pth in path_dj.parent.glob('*') if pth.is_dir() and not pth.name.startswith('_'))
-    records = [{'Section': f'[{_format_titlecase(dir_.name)}](./{dir_.name})'} for dir_ in sorted(directories)]
+    records = [{'Sections': f'[{_format_titlecase(dir_.name)}](./{dir_.name})'} for dir_ in sorted(directories)]
     toc_table = format_table(headers=[*records[0]], records=records, delimiters=[':-:'])
     return [
         f'{{% [cts] depth={1}; (create high-level TOC) %}}\n',

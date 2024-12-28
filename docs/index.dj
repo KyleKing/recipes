@@ -5,7 +5,7 @@ This is our personal collection of recipes.
 
 {% [cts] depth=1; (create high-level TOC) %}
 
-| Section                  |
+| Sections                 |
 |:------------------------:|
 | [Bread](./bread)         |
 | [Breakfast](./breakfast) |
