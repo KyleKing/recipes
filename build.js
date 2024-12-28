@@ -57,11 +57,14 @@ function toTitleCase(str) {
 async function writeDjotToHtml(filePath) {
   if (!filePath.endsWith(".dj")) return;
 
+  const baseName = getBasename(filePath);
+  if (baseName.startsWith("_")) {
+    console.debug(`Skipping '_' prefixed page: ${filePath}`);
+    return;
+  }
+
   var header = await fileCache.readFile("templates/header.html");
-  header = header.replace(
-    "{TITLE}",
-    `Recipe: ${toTitleCase(getBasename(filePath))}`,
-  );
+  header = header.replace("{TITLE}", `Recipe: ${toTitleCase(baseName)}`);
   const footer = await fileCache.readFile("templates/footer.html");
 
   try {

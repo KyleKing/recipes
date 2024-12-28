@@ -238,6 +238,7 @@ class _TOCRecipes:
                     'Link': f'[{_format_titlecase(path_recipe.stem)}](./{path_recipe.with_suffix(".html").name})',
                 }
                 for path_recipe, info in [(Path(key), value) for key, value in self.recipes.items()]
+                if not path_recipe.name.startswith('_')
             ]
             toc_table = format_table(headers=[*records[0]], records=records, delimiters=[':-:', ':-:', ':-'])
             text = f'# Table of Contents ({_format_titlecase(self.sub_dir.name)})\n\n{toc_table}\n'
