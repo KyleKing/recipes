@@ -11,6 +11,8 @@ Personal rating: _Not yet rated_
 
 {% TODO: Capture image %}
 
+![no image](/_icons/placeholder.webp){.image-recipe}
+
 {% [cte] %}
 
 {#ingredients}

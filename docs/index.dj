@@ -1,7 +1,7 @@
 {#welcome}
 # Welcome
 
-This is my personal recipe site to aggregate recipes Kyle and Alexandra have found online and adapted
+This is our personal collection of recipes.
 
 {% [cts] depth=1; (create high-level TOC) %}
 

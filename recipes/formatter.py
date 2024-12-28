@@ -66,7 +66,9 @@ def _format_image_dj(name_image: str | None, class_: str) -> str:
         escaped = name_image.replace('_', '\\_')
         return f'![{escaped}](./{name_image}){{.{class_}}}'
     LOGGER.debug('WARN: No image specified', name_image=name_image)
-    return '{% TODO: Capture image %}'
+    comment = '{% TODO: Capture image %}'
+    placeholder = f'![no image](/_icons/placeholder.webp){{.{class_}}}'
+    return f'{comment}\n\n{placeholder}'
 
 
 # =====================================================================================
