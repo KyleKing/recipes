@@ -8,3 +8,5 @@ run = "cd ./public && python -m http.server"
 
 [tools]
 "go:github.com/tdewolff/minify/v2/cmd/minify" = "latest"
+node = "latest"
+python = "latest"
