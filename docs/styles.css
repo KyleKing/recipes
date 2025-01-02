@@ -4,6 +4,11 @@
 /* Ordered and follows best practices from:
  https://github.com/frontaid/natural-selection/blob/b2007b4e1b9391a3a2b18892e96bebf238048fa0/boilerplate.css */
 
+/* Consider tips on selection:
+ https://css-tricks.com/where-has-a-cool-specificity-trick-too
+ https://css-tricks.com/strategies-keeping-css-specificity-low */
+
+
 :root {
     color-scheme: light dark;
     --color-back: light-dark(#f2f2f2, #444444);
