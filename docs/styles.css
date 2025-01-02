@@ -17,12 +17,8 @@
 }
 nav {
     background-color: var(--color-fore);
-    left: 0;
-    margin: 0;
-    padding: 5px 0 5px 5%;
-    position: static;
-    top: 0;
-    right: 0;
+    width: 100%;
+    padding: 10px 0;
 }
 body {
     background: var(--color-back);
@@ -31,15 +27,18 @@ body {
     line-height: 24px;
     margin-bottom: 48px;
 }
+nav div,
 main {
     margin: auto;
 }
 @media (min-width: 800px) {
+    nav div,
     main {
         max-width: 800px;
     }
 }
 @media (max-width: 800px) {
+    nav div,
     main {
         max-width: 95%;
     }
