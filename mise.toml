@@ -6,11 +6,20 @@ run = "./build.sh"
 description = "Format code"
 run = "go fmt && templ fmt templates.templ"
 
+[tasks.lint]
+description = "Run linters"
+run = "testifylint --enable-all build_test.go"
+
 [tasks.serve]
 description = "Serve the built documentation"
 run = "cd ./public && python -m http.server"
 
+[tasks.test]
+description = "Run test"
+run = "go test"
+
 [tools]
+"go:github.com/Antonboom/testifylint" = "latest"
 "go:github.com/a-h/templ/cmd/templ" = "latest"
 "go:github.com/tdewolff/minify/v2/cmd/minify" = "latest"
 node = "latest"
