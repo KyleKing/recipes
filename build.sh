@@ -1,10 +1,16 @@
 #!/bin/bash -e
 
+if [ -n "$GITHUB_ACTIONS" ]; then
+    echo "'templ generate' is expected to be up to date when run in GitHub Actions"
+else
+    templ generate
+fi
+
 rm -rf public/
 cp -R docs/ public/
 rm public/_icons/*.sketch
 
-go run . # FYI: node build.js
+go run .
 
 # Using: github.com/tdewolff/minify/v2/cmd/minify
 minify --recursive --output ./ ./public

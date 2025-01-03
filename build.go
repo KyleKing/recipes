@@ -53,21 +53,19 @@ func ToTitleCase(str string) string {
 }
 
 // Convert 'li' nodes to either tasks or unstyled
+// Note: adapted without 'disable' and without \n from: https://github.com/sivukhin/godjot/pull/12
 func ListItemConversion(s djot_parser.ConversionState, n func(c djot_parser.Children)) {
 	class := s.Node.Attributes.Get(djot_tokenizer.DjotAttributeClassKey)
 	if class == djot_parser.CheckedTaskItemClass || class == djot_parser.UncheckedTaskItemClass {
 		s.Writer.InTag("li")(func() {
-			s.Writer.WriteString("\n")
-			// Adapted without 'disable' (https://github.com/sivukhin/godjot/pull/12)
 			s.Writer.WriteString("<input type=\"checkbox\"")
 			if class == djot_parser.CheckedTaskItemClass {
 				s.Writer.WriteString(" checked=\"\"")
 			}
-			s.Writer.WriteString("/>").WriteString("\n")
+			s.Writer.WriteString("/>")
 			if len(s.Node.Children) > 1 {
 				n(s.Node.Children[:1])
 			}
-			s.Writer.WriteString("\n")
 		}).WriteString("\n")
 	} else {
 		s.BlockNodeConverter("li", n)
@@ -113,7 +111,7 @@ func WriteDjotToHtml(pth string) error {
 	if err := component.Render(context.Background(), html); err != nil {
 		return err
 	}
-	newPth := strings.TrimSuffix(pth, filepath.Ext(pth)) + "html"
+	newPth := strings.TrimSuffix(pth, filepath.Ext(pth)) + ".html"
 	// file mode (permissions), set to 0644 for read/write permissions for the owner and read permissions for others
 	if err := os.WriteFile(newPth, html.Bytes(), 0644); err != nil {
 		return err
@@ -131,6 +129,7 @@ func main() {
 		fmt.Println(err)
 		os.Exit(1)
 	}
+
 	if err := TraverseDirectory(filepath.Join(path, "public"), WriteDjotToHtml); err != nil {
 		fmt.Println(err)
 		os.Exit(1)

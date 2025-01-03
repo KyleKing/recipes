@@ -1,6 +1,9 @@
 package main
 
+// TODO: generate 404 and Search pages reusing the below template
+
 templ page(title string, usePagefind bool, content string) {
+	<!-- Generally useful: https://www.a11yproject.com/checklist -->
 	<!DOCTYPE html>
 	<html lang="en">
 		<head>
@@ -22,9 +25,13 @@ templ page(title string, usePagefind bool, content string) {
 				</div>
 			</nav>
 			if usePagefind {
-				<main data-pagefind-body>{ content }</main>
+				<main data-pagefind-body>
+					@templ.Raw(content)
+				</main>
 			} else {
-				<main>{ content }</main>
+				<main>
+					@templ.Raw(content)
+				</main>
 			}
 		</body>
 	</html>
