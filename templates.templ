@@ -23,15 +23,9 @@ templ page(title string, usePagefind bool, content string) {
 					<a href="/search.html"><i>Search</i></a>
 				</div>
 			</nav>
-			if usePagefind {
-				<main data-pagefind-body>
-					@templ.Raw(content)
-				</main>
-			} else {
-				<main>
-					@templ.Raw(content)
-				</main>
-			}
+			<main data-pagefind-body?={ usePagefind }>
+				@templ.Raw(content)
+			</main>
 		</body>
 	</html>
 }
