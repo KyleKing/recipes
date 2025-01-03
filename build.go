@@ -86,19 +86,20 @@ func RenderDjot(text []byte) string {
 }
 
 // Merges rendered HTML with overall template
-func BuildHtml(pth string) (string error) {
+func BuildHtml(pth string) (*bytes.Buffer, error) {
+	html := new(bytes.Buffer)
+
 	text, err := os.ReadFile(pth)
 	if err != nil {
-		return nil, err
+		return html, err
 	}
 
 	basename, _, _ := strings.Cut(filepath.Base(pth), ".")
 	usePagefind := !(strings.HasSuffix(pth, "index.dj"))
 	section := RenderDjot(text)
 	component := page(ToTitleCase(basename)+" : Recipe", usePagefind, section)
-	html := new(bytes.Buffer)
 	if err := component.Render(context.Background(), html); err != nil {
-		return nil, err
+		return html, err
 	}
 
 	return html, nil
@@ -137,7 +138,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	if err := TraverseDirectory(filepath.Join(path, "public"), WriteDjotToHtml); err != nil {
+	if err := TraverseDirectory(filepath.Join(path, "public"), ReplaceDbWithHtml); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
