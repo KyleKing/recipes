@@ -1,6 +1,8 @@
 package main
 
 import (
+    "os"
+
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -15,5 +17,16 @@ func TestToTitleCase(t *testing.T) {
 func TestBuildHtml(t *testing.T) {
 	html, err := BuildHtml("_recipe_template.dj")
 	require.NoError(t, err)
-	assert.Contains(t, string(html.Bytes()), "<div rating=\"0\" name-image=\"None\">")
+
+    // DEBUG: write out the formatted HTML for manual review
+    pthTmp := "_recipe_template.dj.html"
+	err = os.WriteFile(pthTmp, html.Bytes(), 0644)
+	require.NoError(t, err)
+
+    out := string(html.Bytes())
+	assert.Contains(t, out, "<title>Recipe Template : Recipe</title>")
+	assert.Contains(t, out, "<p>Personal rating: 0 / 5</p>")
+
+    err = os.Remove(pthTmp)
+    require.NoError(t, err)
 }

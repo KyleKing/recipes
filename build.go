@@ -72,6 +72,24 @@ func ListItemConversion(s djot_parser.ConversionState, n func(c djot_parser.Chil
 	}
 }
 
+// Conditionally convert a div based on attached attributes
+func FormattedDivConversion(s djot_parser.ConversionState, n func(c djot_parser.Children)) {
+	rating := s.Node.Attributes.Get("rating")
+	if rating != "" {
+		s.Writer.WriteString("<p>Personal rating: " + rating + " / 5</p>").WriteString("\n")
+	}
+
+	nameImage := s.Node.Attributes.Get("name-image")
+	if nameImage != "" {
+	    pthImage := "/placeholder"
+	    s.Writer.WriteString("<img class=\"image-recipe\" alt=\"" + nameImage + "\" src=\"" + pthImage + "\">").WriteString("\n")
+	}
+
+    if rating == "" && nameImage == "" {
+		s.BlockNodeConverter("div", n)
+	}
+}
+
 // Converts djot string to rendered HTML
 func RenderDjot(text []byte) string {
 	ast := djot_parser.BuildDjotAst(text)
@@ -79,6 +97,7 @@ func RenderDjot(text []byte) string {
 		"html",
 		djot_parser.DefaultConversionRegistry,
 		map[djot_parser.DjotNode]djot_parser.Conversion{
+			djot_parser.DivNode:      FormattedDivConversion,
 			djot_parser.ListItemNode: ListItemConversion,
 		},
 	).ConvertDjotToHtml(&html_writer.HtmlWriter{}, ast...)
