@@ -60,6 +60,7 @@ async function writeDjotToHtml(filePath) {
   const baseName = getBasename(filePath);
   if (baseName.startsWith("_")) {
     console.debug(`Skipping '_' prefixed page: ${filePath}`);
+    await fs.unlink(filePath);
     return;
   }
 

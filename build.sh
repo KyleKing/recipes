@@ -4,7 +4,7 @@ rm -rf public/
 cp -R docs/ public/
 rm public/_icons/*.sketch
 
-node build.js
+go run build.go # FYI: node build.js
 
 # Using: github.com/tdewolff/minify/v2/cmd/minify
 minify --recursive --output ./ ./public
