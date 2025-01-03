@@ -103,9 +103,9 @@ func WriteDjotToHtml(pth string) error {
 		return err
 	}
 
-	section := RenderDjot(text)
-	usePagefind := !(strings.HasSuffix(pth, "index.dj"))
 	basename, _, _ := strings.Cut(filepath.Base(pth), ".")
+	usePagefind := !(strings.HasSuffix(pth, "index.dj"))
+	section := RenderDjot(text)
 	component := page(ToTitleCase(basename)+" : Recipe", usePagefind, section)
 	html := new(bytes.Buffer)
 	if err := component.Render(context.Background(), html); err != nil {

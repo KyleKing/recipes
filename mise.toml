@@ -1,6 +1,10 @@
 [tasks.build]
 description = "Build website"
-run = "./run format-recipes && ./build.sh"
+run = "./build.sh"
+
+[tasks.format]
+description = "Format code"
+run = "go fmt && templ fmt templates.templ"
 
 [tasks.serve]
 description = "Serve the built documentation"
