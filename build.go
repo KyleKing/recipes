@@ -85,22 +85,11 @@ func RenderDjot(text []byte) string {
 	return section
 }
 
-// Replaces .dj file with templated .html one
-func WriteDjotToHtml(pth string) error {
-	if filepath.Ext(pth) != ".dj" {
-		return nil
-	}
-	if filepath.Base(pth)[0] == '_' {
-		defer fmt.Println(fmt.Sprintf("Skipping '_' prefixed page: %s", pth))
-		if err := os.Remove(pth); err != nil {
-			return err
-		}
-		return nil
-	}
-
+// Merges rendered HTML with overall template
+func BuildHtml(pth string) (string error) {
 	text, err := os.ReadFile(pth)
 	if err != nil {
-		return err
+		return nil, err
 	}
 
 	basename, _, _ := strings.Cut(filepath.Base(pth), ".")
@@ -109,12 +98,30 @@ func WriteDjotToHtml(pth string) error {
 	component := page(ToTitleCase(basename)+" : Recipe", usePagefind, section)
 	html := new(bytes.Buffer)
 	if err := component.Render(context.Background(), html); err != nil {
-		return err
+		return nil, err
 	}
-	newPth := strings.TrimSuffix(pth, filepath.Ext(pth)) + ".html"
-	// file mode (permissions), set to 0644 for read/write permissions for the owner and read permissions for others
-	if err := os.WriteFile(newPth, html.Bytes(), 0644); err != nil {
-		return err
+
+	return html, nil
+}
+
+// Replaces .dj file with templated .html one
+func ReplaceDbWithHtml(pth string) error {
+	if filepath.Ext(pth) != ".dj" {
+		return nil
+	}
+
+	if filepath.Base(pth)[0] == '_' {
+		defer fmt.Println(fmt.Sprintf("Skipping '_' prefixed page: %s", pth))
+	} else {
+		html, err := BuildHtml(pth)
+		if err != nil {
+			return err
+		}
+		newPth := strings.TrimSuffix(pth, filepath.Ext(pth)) + ".html"
+		// file mode (permissions), set to 0644 for read/write permissions for the owner and read permissions for others
+		if err := os.WriteFile(newPth, html.Bytes(), 0644); err != nil {
+			return err
+		}
 	}
 
 	if err := os.Remove(pth); err != nil {
