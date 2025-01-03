@@ -9,6 +9,7 @@ import (
 	"strings"
 
 	"github.com/sivukhin/godjot/djot_parser"
+	"github.com/sivukhin/godjot/djot_tokenizer"
 	"github.com/sivukhin/godjot/html_writer"
 )
 
@@ -51,6 +52,25 @@ func ToTitleCase(str string) string {
 	return strings.Join(words, " ")
 }
 
+// Convert 'li' nodes to either tasks or unstyled
+func ListItemConversion(s djot_parser.ConversionState, n func(c djot_parser.Children)) {
+	class := s.Node.Attributes.Get(djot_tokenizer.DjotAttributeClassKey)
+	if class == djot_parser.CheckedTaskItemClass || class == djot_parser.UncheckedTaskItemClass {
+		s.Writer.InTag("li")(func() {
+			s.Writer.WriteString("\n")
+			// Adapted without 'disable' (https://github.com/sivukhin/godjot/pull/12)
+			s.Writer.WriteString("<input type=\"checkbox\"")
+			if class == djot_parser.CheckedTaskItemClass {
+				s.Writer.WriteString(" checked=\"\"")
+			}
+			s.Writer.WriteString("/>").WriteString("\n")
+			if len(s.Node.Children) > 1 {
+				n(s.Node.Children[:1])
+			}
+			s.Writer.WriteString("\n")
+		}).WriteString("\n")
+	} else {
+		s.BlockNodeConverter("li", n)
 	}
 }
 
@@ -61,18 +81,7 @@ func RenderDjot(text []byte) string {
 		"html",
 		djot_parser.DefaultConversionRegistry,
 		map[djot_parser.DjotNode]djot_parser.Conversion{
-			/*
-				   You can overwrite default conversion rules with custom map
-				   djot_parser.ImageNode: func(state djot_parser.ConversionState, next func(c djot_parser.Children)) {
-					   state.Writer.
-					       OpenTag("figure").
-					       OpenTag("img", state.Node.Attributes.Entries()...).
-					       OpenTag("figcaption").
-					       WriteString(state.Node.Attributes.Get(djot_parser.ImgAltKey)).
-					       CloseTag("figcaption").
-					       CloseTag("figure")
-				   }
-			*/
+			djot_parser.ListItemNode: ListItemConversion,
 		},
 	).ConvertDjotToHtml(&html_writer.HtmlWriter{}, ast...)
 	return section
