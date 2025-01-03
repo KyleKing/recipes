@@ -1,6 +1,8 @@
 package main
 
 import (
+	"bytes"
+	"context"
 	"fmt"
 	"log"
 	"os"
@@ -10,26 +12,6 @@ import (
 	"github.com/sivukhin/godjot/djot_parser"
 	"github.com/sivukhin/godjot/html_writer"
 )
-
-// type FileCache struct {
-// 	cache map[string][]byte
-// }
-//
-// func (fc *FileCache) ReadFile(pth string) ([]byte, error) {
-// 	cachedFile, ok := fc.cache[pth]
-// 	if ok {
-// 		return cachedFile, nil
-// 	}
-//
-// 	data, err := os.ReadFile(pth)
-// 	if err != nil {
-// 		log.Printf("Error reading file %s: %v", pth, err)
-// 		return nil, err
-// 	}
-// 	fc.cache[pth] = data
-// 	return data, nil
-// }
-// fc := FileCache{cache: make(map[string][]byte)}
 
 func TraverseDirectory(directory string, cb func(string) error) error {
 	paths, err := filepath.Glob(directory + "/*")
@@ -102,19 +84,6 @@ func WriteDjotToHtml(pth string) error {
 		return nil
 	}
 
-	header, err := os.ReadFile("templates/header.html")
-	if err != nil {
-		log.Printf("Error reading file %s: %v", "templates/header.html", err)
-		return err
-	}
-	// header = strings.ReplaceAll(header, "{TITLE}", `Recipe: ${ToTitleCase(baseName)}`)
-
-	footer, err := os.ReadFile("templates/footer.html")
-	if err != nil {
-		log.Printf("Error reading file %s: %v", "templates/footer.html", err)
-		return err
-	}
-
 	text, err := os.ReadFile(pth)
 	if err != nil {
 		return err
@@ -138,10 +107,16 @@ func WriteDjotToHtml(pth string) error {
 			*/
 		},
 	).ConvertDjotToHtml(&html_writer.HtmlWriter{}, ast...)
-	html := fmt.Sprintf("%s\n%s\n%s", header, section, footer)
 
-	newPth := strings.TrimSuffix(pth, filepath.Ext(pth)) + ".html"
-	if err := os.WriteFile(newPth, []byte(html), 0644); err != nil {
+	component := page(ToTitleCase(baseName)+" : Recipe", true, section)
+	html := new(bytes.Buffer)
+	if err := component.Render(context.Background(), html); err != nil {
+		return err
+	}
+
+	newPth := strings.TrimSuffix(pth, filepath.Ext(pth)) + "html"
+	// FYI: file mode (permissions), set to 0644 for read/write permissions for the owner and read permissions for others
+	if err := os.WriteFile(newPth, html.Bytes(), 0644); err != nil {
 		return err
 	}
 

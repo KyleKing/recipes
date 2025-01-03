@@ -7,6 +7,7 @@ description = "Serve the built documentation"
 run = "cd ./public && python -m http.server"
 
 [tools]
+"go:github.com/a-h/templ/cmd/templ" = "latest"
 "go:github.com/tdewolff/minify/v2/cmd/minify" = "latest"
 node = "latest"
 python = "latest"
