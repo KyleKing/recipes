@@ -8,7 +8,7 @@ run = "go fmt && templ fmt templates.templ"
 
 [tasks.lint]
 description = "Run linters"
-run = "testifylint --enable-all build_test.go"
+run = "testifylint --enable-all ."
 
 [tasks.serve]
 description = "Serve the built documentation"
