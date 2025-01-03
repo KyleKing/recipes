@@ -8,6 +8,8 @@
  https://css-tricks.com/where-has-a-cool-specificity-trick-too
  https://css-tricks.com/strategies-keeping-css-specificity-low */
 
+/* Content sectioning */
+
 :root {
     color-scheme: light dark;
     --color-back: light-dark(#f2f2f2, #444444);
@@ -15,11 +17,7 @@
     --color-link: light-dark(#4a6daa, #c0d4f1);
     --color-link-visited: light-dark(#92a3c9, #779ad9);
 }
-nav {
-    background-color: var(--color-fore);
-    width: 100%;
-    padding: 10px 0;
-}
+
 body {
     background: var(--color-back);
     color: var(--color-fore);
@@ -27,22 +25,46 @@ body {
     line-height: 24px;
     margin-bottom: 48px;
 }
-nav div,
-main {
-    margin: auto;
+
+nav {
+    background-color: var(--color-fore);
+    width: 100%;
+    padding: 10px 0;
 }
-@media (min-width: 800px) {
-    nav div,
-    main {
-        max-width: 800px;
-    }
+
+/* Text block content */
+
+ul {
+    padding-left: 0;
 }
-@media (max-width: 800px) {
-    nav div,
-    main {
-        max-width: 95%;
-    }
+ul ul,
+ul ol,
+ul li {
+    margin-left: 10px;
 }
+ol:nth-child(odd) {
+    list-style: lower-alpha;
+}
+ul.task-list {
+    list-style: none;
+}
+
+blockquote {
+    border-left: 5px solid var(--color-fore);
+    margin: 0;
+    padding: 0 5px 0 5px;
+}
+pre {
+    background: light-dark(white, black);
+    padding: 5px;
+}
+pre code {
+    max-width: 100%;
+    white-space: pre-wrap;
+}
+
+/* Inline text semantics */
+
 a {
     border-bottom: 1px solid var(--color-fore);
     color: var(--color-link);
@@ -58,37 +80,9 @@ nav a {
     color: var(--color-back) !important;
     font-weight: bold;
 }
-th {
-    border-bottom: 1px solid var(--color-fore);
-    padding-top: 10px;
-}
-blockquote {
-    border-left: 5px solid var(--color-fore);
-    margin: 0;
-    padding: 0 5px 0 5px;
-}
-pre {
-    background: light-dark(white, black);
-    padding: 5px;
-}
-code {
-    max-width: 100%;
-    white-space: pre-wrap;
-}
-ul {
-    padding-left: 0;
-}
-ul ul,
-ul ol,
-ul li {
-    margin-left: 10px;
-}
-ol:nth-child(odd) {
-    list-style: lower-alpha;
-}
-ul.task-list {
-    list-style: none;
-}
+
+/* Embedded content */
+
 img.image-recipe {
     max-height: 400px;
     max-width: 100%;
@@ -97,4 +91,36 @@ img.image-toc {
     max-height: 150px;
     max-width: 100%;
     min-width: 100px;
+}
+
+/* Table content */
+
+th {
+    border-bottom: 1px solid var(--color-fore);
+    padding-top: 10px;
+}
+
+/* Forms */
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Media queries */
+
+nav div,
+main {
+    margin: auto;
+}
+@media (min-width: 800px) {
+    nav div,
+    main {
+        max-width: 800px;
+    }
+}
+@media (max-width: 800px) {
+    nav div,
+    main {
+        max-width: 95%;
+    }
 }
