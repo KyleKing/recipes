@@ -1,16 +1,8 @@
 # Salmon Baked with Asparagus
 
-{% [cts] rating=5; (User can specify rating on scale of 1-5) %}
-
-Personal rating: 5 / 5
-
-{% [cte] %}
-
-{% [cts] name_image=salmon_baked_with_asparagus.jpeg; (User can specify image name) %}
-
-![salmon\_baked\_with\_asparagus.jpeg](./salmon_baked_with_asparagus.jpeg){.image-recipe}
-
-{% [cte] %}
+{ rating=5 image="salmon_baked_with_asparagus.jpeg" }
+:::
+:::
 
 ## Ingredients
 

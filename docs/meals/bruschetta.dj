@@ -2,17 +2,9 @@
 
 > Loosely based on [https://www.geniuskitchen.com/recipe/...](https://www.geniuskitchen.com/recipe/best-ever-bruschetta-443987)
 
-{% [cts] rating=3; (User can specify rating on scale of 1-5) %}
-
-Personal rating: 3 / 5
-
-{% [cte] %}
-
-{% [cts] name_image=bruschetta_toast.jpeg; (User can specify image name) %}
-
-![bruschetta\_toast.jpeg](./bruschetta_toast.jpeg){.image-recipe}
-
-{% [cte] %}
+{ rating=3 image="bruschetta_toast.jpeg" }
+:::
+:::
 
 ## Ingredients
 

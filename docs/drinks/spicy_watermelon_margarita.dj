@@ -1,16 +1,8 @@
 # Spicy Watermelon Margarita
 
-{% [cts] rating=0; (User can specify rating on scale of 1-5) %}
-
-Personal rating: _Not yet rated_
-
-{% [cte] %}
-
-{% [cts] name_image=None; (User can specify image name) %}
-
-![no image](/_icons/placeholder.webp){.image-recipe} {% TODO: Capture image %}
-
-{% [cte] %}
+{ rating=0 image="None" }
+:::
+:::
 
 ## Ingredients
 

@@ -2,17 +2,9 @@
 
 > Based on [https://cooking.nytimes.com/recipes/...](https://cooking.nytimes.com/recipes/1018626-eggs-benedict)
 
-{% [cts] rating=4; (User can specify rating on scale of 1-5) %}
-
-Personal rating: 4 / 5
-
-{% [cte] %}
-
-{% [cts] name_image=eggs_benedict.jpg; (User can specify image name) %}
-
-![eggs\_benedict.jpg](./eggs_benedict.jpg){.image-recipe}
-
-{% [cte] %}
+{ rating=4 image="eggs_benedict.jpg" }
+:::
+:::
 
 ## Ingredients
 

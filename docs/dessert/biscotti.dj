@@ -2,17 +2,9 @@
 
 > Based on [https://www.kingarthurflour.com/recipes/...](https://www.kingarthurflour.com/recipes/vanilla-biscotti-recipe)
 
-{% [cts] rating=5; (User can specify rating on scale of 1-5) %}
-
-Personal rating: 5 / 5
-
-{% [cte] %}
-
-{% [cts] name_image=biscotti.jpg; (User can specify image name) %}
-
-![biscotti.jpg](./biscotti.jpg){.image-recipe}
-
-{% [cte] %}
+{ rating=5 image="biscotti.jpg" }
+:::
+:::
 
 ## Ingredients
 

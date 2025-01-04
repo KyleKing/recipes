@@ -2,17 +2,9 @@
 
 > Based on [https://www.theflavorbender.com/garlic-lime-shrimp-rice-noodles/...](https://www.theflavorbender.com/garlic-lime-shrimp-rice-noodles/#recipe)
 
-{% [cts] rating=2; (User can specify rating on scale of 1-5) %}
-
-Personal rating: 2 / 5
-
-{% [cte] %}
-
-{% [cts] name_image=garlic_lime_shrimp_rice_noodles.jpeg; (User can specify image name) %}
-
-![garlic\_lime\_shrimp\_rice\_noodles.jpeg](./garlic_lime_shrimp_rice_noodles.jpeg){.image-recipe}
-
-{% [cte] %}
+{ rating=2 image="garlic_lime_shrimp_rice_noodles.jpeg" }
+:::
+:::
 
 ## Ingredients
 

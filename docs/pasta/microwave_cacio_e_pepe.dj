@@ -2,17 +2,9 @@
 
 > Based on [Vegetables Unleashed Jose Andreas](https://www.amazon.com/Vegetables-Unleashed-Cookbook-Jose-Andres/dp/0062668382), pg. 102
 
-{% [cts] rating=3; (User can specify rating on scale of 1-5) %}
-
-Personal rating: 3 / 5
-
-{% [cte] %}
-
-{% [cts] name_image=microwave_cacio_e_pepe.jpeg; (User can specify image name) %}
-
-![microwave\_cacio\_e\_pepe.jpeg](./microwave_cacio_e_pepe.jpeg){.image-recipe}
-
-{% [cte] %}
+{ rating=3 image="microwave_cacio_e_pepe.jpeg" }
+:::
+:::
 
 ## Ingredients
 

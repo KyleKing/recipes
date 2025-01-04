@@ -2,17 +2,9 @@
 
 > Alex's Family recipe
 
-{% [cts] rating=5; (User can specify rating on scale of 1-5) %}
-
-Personal rating: 5 / 5
-
-{% [cte] %}
-
-{% [cts] name_image=hot_fudge_sauce.jpeg; (User can specify image name) %}
-
-![hot\_fudge\_sauce.jpeg](./hot_fudge_sauce.jpeg){.image-recipe}
-
-{% [cte] %}
+{ rating=5 image="hot_fudge_sauce.jpeg" }
+:::
+:::
 
 ## Ingredients
 

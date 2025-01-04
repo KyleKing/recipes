@@ -2,17 +2,9 @@
 
 > Based on [https://www.tasteofhome.com/recipes/...](https://www.tasteofhome.com/recipes/winning-apple-crisp/)
 
-{% [cts] rating=3; (User can specify rating on scale of 1-5) %}
-
-Personal rating: 3 / 5
-
-{% [cte] %}
-
-{% [cts] name_image=apple_crisp.jpg; (User can specify image name) %}
-
-![apple\_crisp.jpg](./apple_crisp.jpg){.image-recipe}
-
-{% [cte] %}
+{ rating=3 image="apple_crisp.jpg" }
+:::
+:::
 
 ## Ingredients
 

@@ -2,17 +2,9 @@
 
 > Based on [https://www.chowhound.com/recipes/...](https://www.chowhound.com/recipes/salmon-avocado-maki-31555)
 
-{% [cts] rating=4; (User can specify rating on scale of 1-5) %}
-
-Personal rating: 4 / 5
-
-{% [cte] %}
-
-{% [cts] name_image=_rolling.jpg; (User can specify image name) %}
-
-![\_rolling.jpg](./_rolling.jpg){.image-recipe}
-
-{% [cte] %}
+{ rating=4 image="_rolling.jpg" }
+:::
+:::
 
 ## Recipe
 
