@@ -28,8 +28,8 @@ func TestBuildHtml(t *testing.T) {
 	assert.Contains(t, out, "<p>Personal rating: Not yet rated</p>")
 	assert.Contains(t, out, "<img class=\"image-recipe\" alt=\"Image is missing\" src=\"/_icons/placeholder.webp\">")
 
-    if !t.Failed() {
-	    err = os.Remove(pthTmp)
-	    require.NoError(t, err)
-    }
+	if !t.Failed() {
+		err = os.Remove(pthTmp)
+		require.NoError(t, err)
+	}
 }

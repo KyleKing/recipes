@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"strconv"
 	"strings"
 
 	"github.com/sivukhin/godjot/djot_parser"
@@ -80,9 +81,19 @@ func FormattedDivPartial(pth string) func(djot_parser.ConversionState, func(djot
 	return func(s djot_parser.ConversionState, n func(c djot_parser.Children)) {
 		rating := s.Node.Attributes.Get("rating")
 		if rating != "" {
-			displayedRating := rating + " / 5"
-			if rating == "0" {
-				displayedRating = "Not yet rated"
+			displayedRating := "..."
+			ratingInt, err := strconv.Atoi(rating)
+			if err != nil {
+				fmt.Println(fmt.Sprintf("Error in rating '%s' of '%s'", rating, pth))
+				displayedRating = fmt.Sprintf("%s in rating (%s)", err, rating)
+			} else {
+				if 1 <= ratingInt && ratingInt <= 5 {
+					displayedRating = fmt.Sprintf("%d / 5", ratingInt)
+				} else if ratingInt == 0 {
+					displayedRating = "Not yet rated"
+				} else {
+					displayedRating = fmt.Sprintf("Rating is not within [0,5] (%d)", ratingInt)
+				}
 			}
 			s.Writer.WriteString("<p>Personal rating: " + displayedRating + "</p>").WriteString("\n")
 		}
