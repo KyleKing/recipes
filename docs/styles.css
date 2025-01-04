@@ -122,6 +122,6 @@ main {
 @media (max-width: 800px) {
     nav div,
     main {
-        max-width: 95%;
+        max-width: 90%;
     }
 }
