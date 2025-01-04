@@ -13,6 +13,9 @@ import (
 	"github.com/sivukhin/godjot/html_writer"
 )
 
+const BUILD_DIR = "public"
+const IMAGE_PLACEHOLDER = "/_icons/placeholder.webp"
+
 // Apply 'callback' to all regular files within the directory
 func TraverseDirectory(directory string, cb func(string) error) error {
 	paths, err := filepath.Glob(directory + "/*")
@@ -72,32 +75,47 @@ func ListItemConversion(s djot_parser.ConversionState, n func(c djot_parser.Chil
 	}
 }
 
-// Conditionally convert a div based on attached attributes
-func FormattedDivConversion(s djot_parser.ConversionState, n func(c djot_parser.Children)) {
-	rating := s.Node.Attributes.Get("rating")
-	if rating != "" {
-		s.Writer.WriteString("<p>Personal rating: " + rating + " / 5</p>").WriteString("\n")
-	}
+// Outer partial returns an inner converter that conditionally converts a div based on attached attributes
+func FormattedDivPartial(pth string) func(djot_parser.ConversionState, func(djot_parser.Children)) {
+	return func(s djot_parser.ConversionState, n func(c djot_parser.Children)) {
+		rating := s.Node.Attributes.Get("rating")
+		if rating != "" {
+			displayedRating := rating + " / 5"
+			if rating == "0" {
+				displayedRating = "Not yet rated"
+			}
+			s.Writer.WriteString("<p>Personal rating: " + displayedRating + "</p>").WriteString("\n")
+		}
 
-	nameImage := s.Node.Attributes.Get("name-image")
-	if nameImage != "" {
-	    pthImage := "/placeholder"
-	    s.Writer.WriteString("<img class=\"image-recipe\" alt=\"" + nameImage + "\" src=\"" + pthImage + "\">").WriteString("\n")
-	}
+		imageName := s.Node.Attributes.Get("image")
+		if imageName != "" {
+			if strings.Contains(imageName, ".") {
+				_, absPath, found := strings.Cut(filepath.Dir(pth), "/"+BUILD_DIR+"/")
+				if !found {
+					defer fmt.Println(fmt.Sprintf("Warn: failed to locate '/%s/' in '%s'", BUILD_DIR, pth))
+				}
+				pthImage := "/" + filepath.Join(absPath, imageName)
+				s.Writer.WriteString("<img class=\"image-recipe\" alt=\"" + imageName + "\" src=\"" + pthImage + "\">")
+			} else {
+				s.Writer.WriteString("<img class=\"image-recipe\" alt=\"Image is missing\" src=\"" + IMAGE_PLACEHOLDER + "\">")
+			}
+			s.Writer.WriteString("\n")
+		}
 
-    if rating == "" && nameImage == "" {
-		s.BlockNodeConverter("div", n)
+		if rating == "" && imageName == "" {
+			s.BlockNodeConverter("div", n)
+		}
 	}
 }
 
 // Converts djot string to rendered HTML
-func RenderDjot(text []byte) string {
+func RenderDjot(text []byte, pth string) string {
 	ast := djot_parser.BuildDjotAst(text)
 	section := djot_parser.NewConversionContext(
 		"html",
 		djot_parser.DefaultConversionRegistry,
 		map[djot_parser.DjotNode]djot_parser.Conversion{
-			djot_parser.DivNode:      FormattedDivConversion,
+			djot_parser.DivNode:      FormattedDivPartial(pth),
 			djot_parser.ListItemNode: ListItemConversion,
 		},
 	).ConvertDjotToHtml(&html_writer.HtmlWriter{}, ast...)
@@ -115,7 +133,7 @@ func BuildHtml(pth string) (*bytes.Buffer, error) {
 
 	basename, _, _ := strings.Cut(filepath.Base(pth), ".")
 	usePagefind := !(strings.HasSuffix(pth, "index.dj"))
-	section := RenderDjot(text)
+	section := RenderDjot(text, pth)
 	component := page(ToTitleCase(basename)+" : Recipe", usePagefind, section)
 	if err := component.Render(context.Background(), html); err != nil {
 		return html, err
@@ -125,7 +143,7 @@ func BuildHtml(pth string) (*bytes.Buffer, error) {
 }
 
 // Replaces .dj file with templated .html one
-func ReplaceDbWithHtml(pth string) error {
+func ReplaceDjWithHtml(pth string) error {
 	if filepath.Ext(pth) != ".dj" {
 		return nil
 	}
@@ -157,7 +175,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	if err := TraverseDirectory(filepath.Join(path, "public"), ReplaceDbWithHtml); err != nil {
+	if err := TraverseDirectory(filepath.Join(path, BUILD_DIR), ReplaceDjWithHtml); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}

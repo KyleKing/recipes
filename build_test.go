@@ -1,7 +1,7 @@
 package main
 
 import (
-    "os"
+	"os"
 
 	"testing"
 
@@ -18,15 +18,18 @@ func TestBuildHtml(t *testing.T) {
 	html, err := BuildHtml("_recipe_template.dj")
 	require.NoError(t, err)
 
-    // DEBUG: write out the formatted HTML for manual review
-    pthTmp := "_recipe_template.dj.html"
+	// For debugging, write out the formatted HTML for manual review
+	pthTmp := "_recipe_template.dj.html"
 	err = os.WriteFile(pthTmp, html.Bytes(), 0644)
 	require.NoError(t, err)
 
-    out := string(html.Bytes())
+	out := string(html.Bytes())
 	assert.Contains(t, out, "<title>Recipe Template : Recipe</title>")
-	assert.Contains(t, out, "<p>Personal rating: 0 / 5</p>")
+	assert.Contains(t, out, "<p>Personal rating: Not yet rated</p>")
+	assert.Contains(t, out, "<img class=\"image-recipe\" alt=\"Image is missing\" src=\"/_icons/placeholder.webp\">")
 
-    err = os.Remove(pthTmp)
-    require.NoError(t, err)
+    if !t.Failed() {
+	    err = os.Remove(pthTmp)
+	    require.NoError(t, err)
+    }
 }
