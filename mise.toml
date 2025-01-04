@@ -5,10 +5,12 @@ run = "./build.sh"
 [tasks.format]
 description = "Format code"
 run = "go fmt && templ fmt templates.templ"
+sources = ['**/*.go']
 
 [tasks.lint]
 description = "Run linters"
 run = "testifylint --enable-all ."
+sources = ['**/*_test.go']
 
 [tasks.serve]
 description = "Serve the built documentation"
@@ -17,9 +19,10 @@ run = "go run ./serve/main.go --port=8000 --directory=./public"
 [tasks.test]
 description = "Run test"
 run = "go test"
+sources = ['**/*.go']
 
 [tools]
-"go:github.com/Antonboom/testifylint" = "latest"
-"go:github.com/a-h/templ/cmd/templ" = "latest"
-"go:github.com/tdewolff/minify/v2/cmd/minify" = "latest"
-node = "latest"
+"go:github.com/Antonboom/testifylint" = "1.5.2"
+"go:github.com/a-h/templ/cmd/templ" = "0.3.819"
+"go:github.com/tdewolff/minify/v2/cmd/minify" = "2.21.2"
+"npm:pagefind" = "1.3.0"
