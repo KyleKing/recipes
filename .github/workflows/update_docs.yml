@@ -28,6 +28,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: jdx/mise-action@v2
+        with:
+          experimental: true # required for go backend
 
       # https://github.com/mkdocs/mkdocs/discussions/2369#discussioncomment-625475
       - name: Configure git user

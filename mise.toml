@@ -4,7 +4,7 @@ run = "./build.sh"
 
 [tasks.format]
 description = "Format code"
-run = "go fmt && templ fmt templates.templ"
+run = ["go fmt", "templ fmt templates.templ"]
 sources = ['**/*.go']
 
 [tasks.lint]
