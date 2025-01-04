@@ -11,11 +11,12 @@
 /* Content sectioning */
 
 :root {
-    color-scheme: light dark;
-    --color-back: light-dark(#f2f2f2, #444444);
-    --color-fore: light-dark(#444444, #f2f2f2);
-    --color-link: light-dark(#4a6daa, #c0d4f1);
-    --color-link-visited: light-dark(#92a3c9, #779ad9);
+    /* Inspired by the colors of Puebla, Mexico:
+       https://globalphile.com/colors-puebla-mexico/ */
+    --color-back: #fceed5;
+    --color-fore: #ae5d5c;
+    --color-link: #5c70ae;
+    --color-link-visited: #52639a;
 }
 
 body {
@@ -55,7 +56,7 @@ blockquote {
     padding: 0 5px 0 5px;
 }
 pre {
-    background: light-dark(white, black);
+    background: white;
     padding: 5px;
 }
 pre code {
