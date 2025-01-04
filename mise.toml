@@ -12,7 +12,7 @@ run = "testifylint --enable-all ."
 
 [tasks.serve]
 description = "Serve the built documentation"
-run = "cd ./public && python -m http.server"
+run = "go run ./serve/main.go --port=8000 --directory=./public"
 
 [tasks.test]
 description = "Run test"
@@ -23,4 +23,3 @@ run = "go test"
 "go:github.com/a-h/templ/cmd/templ" = "latest"
 "go:github.com/tdewolff/minify/v2/cmd/minify" = "latest"
 node = "latest"
-python = "latest"
