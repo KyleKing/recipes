@@ -1,4 +1,5 @@
 [tasks.build]
+depends = ['format', 'lint']
 description = "Build website"
 run = "./build.sh"
 

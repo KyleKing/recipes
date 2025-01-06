@@ -4,31 +4,64 @@
 /* Ordered and follows best practices from:
  https://github.com/frontaid/natural-selection/blob/b2007b4e1b9391a3a2b18892e96bebf238048fa0/boilerplate.css */
 
+/* Fonts and styles based on guidance in:
+ https://practicaltypography.com
+ https://practicaltypography.com/free-fonts.html
+ https://practicaltypography.com/system-fonts.html */
+
 /* Consider tips on selection:
  https://css-tricks.com/where-has-a-cool-specificity-trick-too
  https://css-tricks.com/strategies-keeping-css-specificity-low */
 
-/* Content sectioning */
+/* Minimal normalize; adapted from:
+ https://github.com/sindresorhus/modern-normalize */
+
+html {
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+}
+
+body {
+    margin: 0;
+}
+/* b, */
+/* strong { */
+/*     font-weight: bolder; */
+/* } */
+
+/* Root */
 
 :root {
     /* Inspired by the colors of Puebla, Mexico:
        https://globalphile.com/colors-puebla-mexico/ */
     --color-back: #fceed5;
-    --color-fore: #ae5d5c;
+    --color-text: #ae5d5c;
     --color-link: #5c70ae;
     --color-link-visited: #52639a;
 }
 
 body {
     background: var(--color-back);
-    color: var(--color-fore);
+    color: var(--color-text);
+    font-family: Palatino, serif;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.4;
     margin-bottom: 48px;
 }
 
+/* Content sectioning */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Optima, sans-serif;
+}
+
 nav {
-    background-color: var(--color-fore);
+    background-color: var(--color-text);
     width: 100%;
     padding: 10px 0;
 }
@@ -51,15 +84,16 @@ ul.task-list {
 }
 
 blockquote {
-    border-left: 5px solid var(--color-fore);
+    border-left: 5px solid var(--color-text);
     margin: 0;
     padding: 0 5px 0 5px;
 }
 pre {
-    background: white;
+    background: rgba(180, 180, 180, 0.1);
     padding: 5px;
 }
 pre code {
+    /* font-family: monospace; */
     max-width: 100%;
     white-space: pre-wrap;
 }
@@ -67,7 +101,7 @@ pre code {
 /* Inline text semantics */
 
 a {
-    border-bottom: 1px solid var(--color-fore);
+    border-bottom: 1px solid var(--color-text);
     color: var(--color-link);
     text-decoration: none;
 }
@@ -97,14 +131,14 @@ img.image-toc {
 /* Table content */
 
 th {
-    border-bottom: 1px solid var(--color-fore);
+    border-bottom: 1px solid var(--color-text);
     padding-top: 10px;
 }
 
 /* Forms */
 
-input[type="checkbox"] {
-    margin-right: 5px;
+input {
+    background: rgba(255, 255, 255, 0.7) !important;
 }
 
 /* Media queries */
@@ -122,6 +156,6 @@ main {
 @media (max-width: 800px) {
     nav div,
     main {
-        max-width: 90%;
+        max-width: 85%;
     }
 }
