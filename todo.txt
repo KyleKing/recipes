@@ -1,5 +1,0 @@
-TODO: convert to .ico
-https://stackoverflow.com/a/49823738/3219667
-convert -background transparent "favicon.png" -define icon:auto-resize=16,24,32,48,64,72,96,128,256 "favicon.ico"
-
-Or: https://github.com/audreyfeldroy/favicon-cheat-sheet

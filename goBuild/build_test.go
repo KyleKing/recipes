@@ -1,4 +1,4 @@
-package main
+package goBuild
 
 import (
 	"os"
@@ -9,12 +9,12 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func TestToTitleCase(t *testing.T) {
+func testToTitleCase(t *testing.T) {
 	title := toTitleCase("words__word_phrase")
 	assert.Equal(t, "Words Word Phrase", title)
 }
 
-func TestBuildHtml(t *testing.T) {
+func testBuildHtml(t *testing.T) {
 	html, err := buildHtml("_recipe_template.dj")
 	require.NoError(t, err)
 

@@ -1,4 +1,4 @@
-package main
+package goBuild
 
 import (
 	"bytes"
@@ -194,7 +194,7 @@ func writeStatic(writePath string, template func() templ.Component) error {
 	return nil
 }
 
-func main() {
+func Build() {
 	pth, err := os.Getwd()
 	if err != nil {
 		fmt.Println(err)
@@ -204,8 +204,8 @@ func main() {
 	buildDir := filepath.Join(pth, BUILD_DIR)
 
 	staticPages := map[string]func() templ.Component{
-		"search.html": searchPage,
 		"404.html":    notFoundPage,
+		"search.html": searchPage,
 	}
 	for relPath, template := range staticPages {
 		if err := writeStatic(filepath.Join(buildDir, relPath), template); err != nil {
