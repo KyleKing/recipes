@@ -43,7 +43,7 @@ func page(title string, usePagefind bool, content string) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, "</title><meta name=\"description\" content=\"Kyle and Alex&#39;s Personal Recipes\"></head><body><nav><div><a href=\"/\"><i>Home</i></a> &nbsp; <a href=\"/search.html\"><i>Search</i></a></div></nav><main")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, "</title><meta name=\"description\" content=\"Kyle and Alex&#39;s Personal Recipes\"></head><body><nav><div><a href=\"/\"><i><strong>Home</strong></i></a> &nbsp; <a href=\"/search.html\"><i><strong>Search</strong></i></a></div></nav><main")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

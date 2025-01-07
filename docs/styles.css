@@ -1,5 +1,7 @@
 /* Initially adapted from Copyright (C) 2021  Guilherme Pangnotta code License:
- https://github.com/setetres/evenbettermotherfuckingwebsite/blob/master/LICENSE */
+ https://github.com/setetres/evenbettermotherfuckingwebsite/blob/master/LICENSE
+ and http://bettermotherfuckingwebsite.com
+ and https://thebestmotherfucking.website */
 
 /* Ordered and follows best practices from:
  https://github.com/frontaid/natural-selection/blob/b2007b4e1b9391a3a2b18892e96bebf238048fa0/boilerplate.css */
@@ -32,21 +34,19 @@ body {
 /* Root */
 
 :root {
-    /* Inspired by the colors of Puebla, Mexico:
-       https://globalphile.com/colors-puebla-mexico/ */
-    --color-back: #fceed5;
-    --color-text: #ae5d5c;
-    --color-link: #5c70ae;
-    --color-link-visited: #52639a;
+    --color-back: #eaeaea;
+    --color-text: #454545;
+    --color-link: #07a;
+    --color-link-visited: #941352;
 }
 
 body {
     background: var(--color-back);
     color: var(--color-text);
     font-family: Palatino, serif;
-    font-size: 16px;
-    line-height: 1.4;
-    margin-bottom: 48px;
+    font-size: 18px;
+    line-height: 1.45;
+    margin-bottom: 40%;
 }
 
 /* Content sectioning */
@@ -58,42 +58,28 @@ h4,
 h5,
 h6 {
     font-family: Optima, sans-serif;
+    line-height: 0.9;
 }
 
 nav {
-    background-color: var(--color-text);
-    width: 100%;
     padding: 10px 0;
 }
 
 /* Text block content */
 
-ul {
-    padding-left: 0;
-}
-ul ul,
-ul ol,
-ul li {
-    margin-left: 10px;
-}
 ol:nth-child(odd) {
     list-style: lower-alpha;
 }
 ul.task-list {
     list-style: none;
-}
-
-blockquote {
-    border-left: 5px solid var(--color-text);
-    margin: 0;
-    padding: 0 5px 0 5px;
+    padding-left: 20px;
 }
 pre {
     background: rgba(180, 180, 180, 0.1);
+    font-family: monospace;
     padding: 5px;
 }
 pre code {
-    /* font-family: monospace; */
     max-width: 100%;
     white-space: pre-wrap;
 }
@@ -101,19 +87,12 @@ pre code {
 /* Inline text semantics */
 
 a {
-    border-bottom: 1px solid var(--color-text);
+    /* border-bottom: 1px solid var(--color-link); */
     color: var(--color-link);
     text-decoration: none;
 }
-a:hover {
-    border-bottom: 0;
-}
 a:visited {
     color: var(--color-link-visited);
-}
-nav a {
-    color: var(--color-back) !important;
-    font-weight: bold;
 }
 
 /* Embedded content */
@@ -130,16 +109,12 @@ img.image-toc {
 
 /* Table content */
 
-th {
-    border-bottom: 1px solid var(--color-text);
-    padding-top: 10px;
-}
+/* PLANNED: Consider restoring some table styles */
 
-/* Forms */
-
-input {
-    background: rgba(255, 255, 255, 0.7) !important;
-}
+/* th { */
+/*     border-bottom: 1px solid var(--color-text); */
+/*     padding-top: 10px; */
+/* } */
 
 /* Media queries */
 
@@ -147,13 +122,13 @@ nav div,
 main {
     margin: auto;
 }
-@media (min-width: 800px) {
+@media (min-width: 760px) {
     nav div,
     main {
-        max-width: 800px;
+        max-width: 650px;
     }
 }
-@media (max-width: 800px) {
+@media (max-width: 760px) {
     nav div,
     main {
         max-width: 85%;
