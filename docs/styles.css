@@ -63,10 +63,23 @@ nav {
 ol:nth-child(odd) {
     list-style: lower-alpha;
 }
+
 ul.task-list {
     list-style: none;
     padding-left: 20px;
 }
+
+ul.flat-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul.flat-list li {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+}
+
 pre {
     background: rgba(180, 180, 180, 0.1);
     font-family: monospace;
@@ -114,7 +127,7 @@ main {
         max-width: 650px;
     }
 }
-@media (max-width: 760px) {
+@media (max-width: 759px) {
     nav div,
     main {
         max-width: 85%;

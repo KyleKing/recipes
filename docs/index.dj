@@ -18,3 +18,18 @@ This is our personal collection of recipes. See the source code on [GitHub](http
 | [Sushi](./sushi)         |
 
 {% [cte] %}
+
+{% TODO: there doesn't appear to be a way to generate ul.class='...' in djot %}
+{class="flat-list"}
+:::
+- [Bread](./bread)
+- [Breakfast](./breakfast)
+- [Dessert](./dessert)
+- [Drinks](./drinks)
+- [Meals](./meals)
+- [Pasta](./pasta)
+- [Poultry](./poultry)
+- [Seafood](./seafood)
+- [Soup](./soup)
+- [Sushi](./sushi)
+:::
