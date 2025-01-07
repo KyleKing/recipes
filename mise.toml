@@ -1,11 +1,11 @@
 [tasks.build]
-depends = ['format', 'lint']
+depends = ["format", "lint"]
 description = "Build website"
 run = "./build.sh"
 
 [tasks.format]
 description = "Format code"
-run = ["go fmt", "templ fmt templates.templ"]
+run = ["templ generate", "templ fmt templates.templ", "go fmt"]
 sources = ['**/*.go']
 
 [tasks.lint]

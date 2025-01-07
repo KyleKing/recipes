@@ -1,7 +1,6 @@
 package main
 
-// TODO: generate 404 and Search pages reusing the below template
-templ page(title string, usePagefind bool, content string) {
+templ page(title string, showSearchBar bool, contents templ.Component) {
 	<!-- Generally useful: https://www.a11yproject.com/checklist -->
 	<!DOCTYPE html>
 	<html lang="en">
@@ -11,6 +10,10 @@ templ page(title string, usePagefind bool, content string) {
 			<link rel="stylesheet" href="/styles.css"/>
 			<title>{ title }</title>
 			<meta name="description" content="Kyle and Alex's Personal Recipes"/>
+			if showSearchBar {
+				<link href="/pagefind/pagefind-ui.css" rel="stylesheet"/>
+				<script src="/pagefind/pagefind-ui.js"></script>
+			}
 		</head>
 		<body>
 			<nav>
@@ -20,9 +23,43 @@ templ page(title string, usePagefind bool, content string) {
 					<a href="/search.html"><i><strong>Search</strong></i></a>
 				</div>
 			</nav>
-			<main data-pagefind-body?={ usePagefind }>
-				@templ.Raw(content)
+			<main data-pagefind-body?={ !showSearchBar }>
+				@contents
 			</main>
+			if showSearchBar {
+				<script>
+                window.addEventListener("DOMContentLoaded", (event) => {
+                  new PagefindUI({
+                    element: "#search",
+                    highlightParam: "highlight",
+                    showSubResults: true,
+                  });
+                });
+              </script>
+			}
 		</body>
 	</html>
+}
+
+templ recipePage(title string, content string) {
+	@page(title, false, templ.Raw(content))
+}
+
+templ searchContents() {
+	<div style="margin-top: 10px" id="search"></div>
+}
+
+templ searchPage() {
+	@page("Search Recipes", true, searchContents())
+	)
+}
+
+templ notFoundContents() {
+	<h1>URL Not Found</h1>
+	<p>Sorry, the requested page could not be located. You can either return home or search in the links above.</p>
+	<p>Please <a href="https://github.com/KyleKing/recipes/issues/new/choose">open an issue on GitHub</a> { "if" } you think this is an error.</p>
+}
+
+templ notFoundPage() {
+	@page("Page Not Found", false, notFoundContents())
 }

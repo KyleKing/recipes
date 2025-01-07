@@ -10,12 +10,12 @@ import (
 )
 
 func TestToTitleCase(t *testing.T) {
-	title := ToTitleCase("words__word_phrase")
+	title := toTitleCase("words__word_phrase")
 	assert.Equal(t, "Words Word Phrase", title)
 }
 
 func TestBuildHtml(t *testing.T) {
-	html, err := BuildHtml("_recipe_template.dj")
+	html, err := buildHtml("_recipe_template.dj")
 	require.NoError(t, err)
 
 	// For debugging, write out the formatted HTML for manual review
