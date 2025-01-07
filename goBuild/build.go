@@ -68,9 +68,7 @@ func listItemConversion(s djot_parser.ConversionState, n func(c djot_parser.Chil
 				s.Writer.WriteString(" checked=\"\"")
 			}
 			s.Writer.WriteString("/>")
-			if len(s.Node.Children) > 1 {
-				n(s.Node.Children[:1])
-			}
+			n(s.Node.Children)
 		}).WriteString("\n")
 	} else {
 		s.BlockNodeConverter("li", n)
