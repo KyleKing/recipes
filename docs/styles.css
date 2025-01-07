@@ -9,7 +9,8 @@
 /* Fonts and styles based on guidance in:
  https://practicaltypography.com
  https://practicaltypography.com/free-fonts.html
- https://practicaltypography.com/system-fonts.html */
+ https://practicaltypography.com/system-fonts.html
+ and implementation; https://github.com/arp242/hello-css/blob/59ff066baca3d7c00dd9e5e67226bb360d3f64a2/base.css */
 
 /* Consider tips on selection:
  https://css-tricks.com/where-has-a-cool-specificity-trick-too
@@ -18,18 +19,10 @@
 /* Minimal normalize; adapted from:
  https://github.com/sindresorhus/modern-normalize */
 
-html {
-    text-size-adjust: none;
-    -webkit-text-size-adjust: none;
-}
-
+html,
 body {
     margin: 0;
 }
-/* b, */
-/* strong { */
-/*     font-weight: bolder; */
-/* } */
 
 /* Root */
 
@@ -87,9 +80,11 @@ pre code {
 /* Inline text semantics */
 
 a {
-    /* border-bottom: 1px solid var(--color-link); */
     color: var(--color-link);
     text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
 }
 a:visited {
     color: var(--color-link-visited);
@@ -106,15 +101,6 @@ img.image-toc {
     max-width: 100%;
     min-width: 100px;
 }
-
-/* Table content */
-
-/* PLANNED: Consider restoring some table styles */
-
-/* th { */
-/*     border-bottom: 1px solid var(--color-text); */
-/*     padding-top: 10px; */
-/* } */
 
 /* Media queries */
 
