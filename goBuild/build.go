@@ -75,6 +75,24 @@ func listItemConversion(s djot_parser.ConversionState, n func(c djot_parser.Chil
 	}
 }
 
+type Recipe struct {
+    pth  string
+    imagePth string
+}
+
+type RecipeTOC struct {
+    recipes []Recipe
+}
+
+// Initializes empty RecipeTOC
+func NewRecipeTOC() *RecipeTOC {
+    return &RecipeTOC{
+        recipes: make([]Recipe, 0),
+    }
+}
+
+var TOC *RecipeTOC = NewRecipeTOC()
+
 // Outer partial returns an inner converter that conditionally converts a div based on attached attributes
 func formattedDivPartial(pth string) func(djot_parser.ConversionState, func(djot_parser.Children)) {
 	return func(s djot_parser.ConversionState, n func(c djot_parser.Children)) {
@@ -112,6 +130,10 @@ func formattedDivPartial(pth string) func(djot_parser.ConversionState, func(djot
 				s.Writer.WriteString("<img class=\"image-recipe\" alt=\"Image is missing\" src=\"" + imagePth + "\">")
 			}
 			s.Writer.WriteString("\n")
+		}
+
+		if len(imagePth) >0{
+			TOC.recipes = append(TOC.recipes, Recipe{pth:pth, imagePth:imagePth})
 		}
 
 		if rating == "" && imageName == "" {
@@ -218,4 +240,5 @@ func Build() {
 		fmt.Println(err)
 		os.Exit(1)
 	}
+	fmt.Println(TOC.recipes)
 }
