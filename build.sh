@@ -2,7 +2,7 @@
 
 # Prepare public directory
 rm -rf public/
-cp -R docs/ public/
+cp -R content/ public/
 rm public/_icons/*.sketch
 cp CNAME public/CNAME
 
