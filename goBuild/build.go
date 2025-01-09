@@ -97,6 +97,7 @@ func formattedDivPartial(pth string) func(djot_parser.ConversionState, func(djot
 			s.Writer.WriteString("<p>Personal rating: " + displayedRating + "</p>").WriteString("\n")
 		}
 
+		imagePth := ""
 		imageName := s.Node.Attributes.Get("image")
 		if imageName != "" {
 			if strings.Contains(imageName, ".") {
@@ -104,10 +105,11 @@ func formattedDivPartial(pth string) func(djot_parser.ConversionState, func(djot
 				if !found {
 					defer fmt.Println(fmt.Sprintf("Warn: failed to locate '/%s/' in '%s'", BUILD_DIR, pth))
 				}
-				pthImage := "/" + filepath.Join(absPath, imageName)
-				s.Writer.WriteString("<img class=\"image-recipe\" alt=\"" + imageName + "\" src=\"" + pthImage + "\">")
+				imagePth = "/" + filepath.Join(absPath, imageName)
+				s.Writer.WriteString("<img class=\"image-recipe\" alt=\"" + imageName + "\" src=\"" + imagePth + "\">")
 			} else {
-				s.Writer.WriteString("<img class=\"image-recipe\" alt=\"Image is missing\" src=\"" + IMAGE_PLACEHOLDER + "\">")
+		        imagePth = IMAGE_PLACEHOLDER
+				s.Writer.WriteString("<img class=\"image-recipe\" alt=\"Image is missing\" src=\"" + imagePth + "\">")
 			}
 			s.Writer.WriteString("\n")
 		}

@@ -19,8 +19,14 @@ run = "go run ./goServe/main.go --port=8000 --directory=./public"
 
 [tasks.test]
 description = "Run test"
-run = "go test"
+# https://stackoverflow.com/a/21725603/3219667
+run = "go test -coverprofile=coverage.out -coverpkg=./... ./..."
 sources = ['**/*.go']
+
+[tasks.coverage]
+description = "View test coverage"
+# https://go.dev/blog/cover#heat-maps
+run = "go tool cover -html=coverage.out"
 
 [tools]
 "go:github.com/Antonboom/testifylint" = "1.5.2"

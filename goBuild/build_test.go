@@ -9,12 +9,12 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-func testToTitleCase(t *testing.T) {
+func TestToTitleCase(t *testing.T) {
 	title := toTitleCase("words__word_phrase")
 	assert.Equal(t, "Words Word Phrase", title)
 }
 
-func testBuildHtml(t *testing.T) {
+func TestBuildHtml(t *testing.T) {
 	html, err := buildHtml("_recipe_template.dj")
 	require.NoError(t, err)
 
