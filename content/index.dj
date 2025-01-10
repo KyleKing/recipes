@@ -19,7 +19,7 @@ This is our personal collection of recipes. See the source code on [GitHub](http
 
 {% [cte] %}
 
-{% TODO: there doesn't appear to be a way to generate ul.class='...' in djot %}
+{% TODO: there doesn't appear to be a way to generate ul.class='...' in djot
 {class="flat-list"}
 :::
 - [Bread](./bread)
@@ -33,3 +33,4 @@ This is our personal collection of recipes. See the source code on [GitHub](http
 - [Soup](./soup)
 - [Sushi](./sushi)
 :::
+%}

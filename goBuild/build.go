@@ -18,6 +18,8 @@ import (
 const BUILD_DIR = "public"
 const IMAGE_PLACEHOLDER = "/_icons/placeholder.webp"
 
+
+// TODO: see pathlib.Walk and WalkFunc instead of custom
 // Apply 'callback' to all regular files within the directory
 func traverseDirectory(directory string, cb func(string) error) error {
 	paths, err := filepath.Glob(directory + "/*")
@@ -76,21 +78,22 @@ func listItemConversion(s djot_parser.ConversionState, n func(c djot_parser.Chil
 }
 
 type Recipe struct {
-    pth  string
-    imagePth string
+	pth      string
+	imagePth string
 }
 
 type RecipeTOC struct {
-    recipes []Recipe
+	recipes []Recipe
 }
 
 // Initializes empty RecipeTOC
 func NewRecipeTOC() *RecipeTOC {
-    return &RecipeTOC{
-        recipes: make([]Recipe, 0),
-    }
+	return &RecipeTOC{
+		recipes: make([]Recipe, 0),
+	}
 }
 
+// TODO: flatten call depth to pass this as a parameter rather than global
 var TOC *RecipeTOC = NewRecipeTOC()
 
 // Outer partial returns an inner converter that conditionally converts a div based on attached attributes
@@ -126,14 +129,14 @@ func formattedDivPartial(pth string) func(djot_parser.ConversionState, func(djot
 				imagePth = "/" + filepath.Join(absPath, imageName)
 				s.Writer.WriteString("<img class=\"image-recipe\" alt=\"" + imageName + "\" src=\"" + imagePth + "\">")
 			} else {
-		        imagePth = IMAGE_PLACEHOLDER
+				imagePth = IMAGE_PLACEHOLDER
 				s.Writer.WriteString("<img class=\"image-recipe\" alt=\"Image is missing\" src=\"" + imagePth + "\">")
 			}
 			s.Writer.WriteString("\n")
 		}
 
-		if len(imagePth) >0{
-			TOC.recipes = append(TOC.recipes, Recipe{pth:pth, imagePth:imagePth})
+		if len(imagePth) > 0 {
+			TOC.recipes = append(TOC.recipes, Recipe{pth: pth, imagePth: imagePth})
 		}
 
 		if rating == "" && imageName == "" {
@@ -216,6 +219,22 @@ func writeStatic(writePath string, template func() templ.Component) error {
 	return nil
 }
 
+// Create the TOC pages
+func writeTOC(buildDir string) error {
+	html := new(bytes.Buffer)
+
+	component := tocPage(TOC)
+	if err := component.Render(context.Background(), html); err != nil {
+		return err
+	}
+	writePath := filepath.Join(buildDir, "toc.html")
+	if err := os.WriteFile(writePath, html.Bytes(), 0644); err != nil {
+		return err
+	}
+
+	return nil
+}
+
 func Build() {
 	pth, err := os.Getwd()
 	if err != nil {
@@ -240,5 +259,10 @@ func Build() {
 		fmt.Println(err)
 		os.Exit(1)
 	}
-	fmt.Println(TOC.recipes)
+
+	// TODO: Write per-directory TOC
+	if err := writeTOC(buildDir); err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
 }

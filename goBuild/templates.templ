@@ -1,5 +1,8 @@
 package goBuild
 
+// import {
+// 	"path/filepath"
+// }
 templ page(title string, showSearchBar bool, contents templ.Component) {
 	<!-- Generally useful: https://www.a11yproject.com/checklist -->
 	<!DOCTYPE html>
@@ -62,4 +65,24 @@ templ notFoundContents() {
 
 templ notFoundPage() {
 	@page("Page Not Found", false, notFoundContents())
+}
+
+templ tocContent(toc *RecipeTOC) {
+	<div class="toc-images-container">
+		for _, recipe := range toc.recipes {
+			<!-- TODO: use SafeURL https://templ.guide/syntax-and-usage/attributes/#url-attributes -->
+			<!-- <a href={ recipe.pth }> -->
+			<article>
+				<img src={ recipe.imagePth } alt={ recipe.imagePth }/>
+				<!-- TODO: show the (short) titlecase name -->
+				<!-- <figcaption>{ filepath.Base(recipe.pth) }</figcaption> -->
+				<figcaption>{ recipe.pth }</figcaption>
+			</article>
+			<!-- </a> -->
+		}
+	</div>
+}
+
+templ tocPage(toc *RecipeTOC) {
+	@page("Recipes", false, tocContent(toc))
 }

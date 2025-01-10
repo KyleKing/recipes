@@ -7,24 +7,24 @@
 package main
 
 import (
-    "flag"
-    "fmt"
-    "log"
-    "net/http"
+	"flag"
+	"fmt"
+	"log"
+	"net/http"
 )
 
 func main() {
-    var port string
-    var dir string
+	var port string
+	var dir string
 	flag.StringVar(&port, "port", "8000", "bind to this port (default: 8000)")
 	flag.StringVar(&dir, "directory", ".", "serve this directory (default: current directory)")
 	flag.Parse()
 
-    fmt.Println(fmt.Sprintf("Serving files in the current directory on port %s", port))
+	fmt.Println(fmt.Sprintf("Serving files in the current directory on port %s", port))
 
-    http.Handle("/", http.FileServer(http.Dir(dir)))
-    err := http.ListenAndServe(":"+port, nil)
-    if err != nil {
-        log.Fatal("ListenAndServe: ", err)
-    }
+	http.Handle("/", http.FileServer(http.Dir(dir)))
+	err := http.ListenAndServe(":"+port, nil)
+	if err != nil {
+		log.Fatal("ListenAndServe: ", err)
+	}
 }
