@@ -7,18 +7,8 @@ type Subdir struct {
 	name string
 }
 
-func NewSubdir(key string) *Subdir {
-	return &Subdir{url: key, name: toTitleCase(key)}
-}
-
-type Subdirectories struct {
-	each []Subdir
-}
-
-func NewSubdirectories() *Subdirectories {
-	return &Subdirectories{
-		each: make([]Subdir, 0),
-	}
+func NewSubdir(key string) Subdir {
+	return Subdir{url: key, name: toTitleCase(key)}
 }
 
 // Recipes

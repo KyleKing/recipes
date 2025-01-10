@@ -366,7 +366,7 @@ func tocPage(toc *RecipeTOC) templ.Component {
 	})
 }
 
-func homeContent(subdirectories *Subdirectories) templ.Component {
+func homeContent(subdirectories []Subdir) templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -391,7 +391,7 @@ func homeContent(subdirectories *Subdirectories) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		for _, dir := range subdirectories.each {
+		for _, dir := range subdirectories {
 			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 22, "<li><a href=\"")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
@@ -427,7 +427,7 @@ func homeContent(subdirectories *Subdirectories) templ.Component {
 	})
 }
 
-func homePage(subdirectories *Subdirectories) templ.Component {
+func homePage(subdirectories []Subdir) templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {

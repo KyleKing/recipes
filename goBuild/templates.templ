@@ -83,16 +83,16 @@ templ tocPage(toc *RecipeTOC) {
 	@page("Recipes", tocContent(toc), false)
 }
 
-templ homeContent(subdirectories *Subdirectories) {
+templ homeContent(subdirectories []Subdir) {
 	<h1>Welcome</h1>
 	<p>This is our personal collection of recipes. See the source code on <a href="https://github.com/KyleKing/recipes">GitHub</a></p>
 	<ul class="flat-list">
-		for _, dir := range subdirectories.each {
+		for _, dir := range subdirectories {
 			<li><a href={ templ.URL(dir.url) }>{ dir.name }</a></li>
 		}
 	</ul>
 }
 
-templ homePage(subdirectories *Subdirectories) {
+templ homePage(subdirectories []Subdir) {
 	@page("Recipes", homeContent(subdirectories), false)
 }

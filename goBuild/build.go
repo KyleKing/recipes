@@ -203,7 +203,7 @@ func writeTOC(subDir string, subTOC *RecipeTOC) error {
 }
 
 // Create the home index.html
-func writeHome(buildDir string, subdirectories *Subdirectories) error {
+func writeHome(buildDir string, subdirectories []Subdir) error {
 	html := new(bytes.Buffer)
 
 	component := homePage(subdirectories)
@@ -234,7 +234,7 @@ func writeTOCs(buildDir string) error {
 		}
 	}
 
-	subdirectories := NewSubdirectories()
+	var subdirectories []Subdir
 
 	keys := make([]string, 0, len(tocMap))
 	for k := range tocMap {
@@ -247,7 +247,7 @@ func writeTOCs(buildDir string) error {
 		if err := writeTOC(filepath.Join(buildDir, key), subTOC); err != nil {
 			return err
 		}
-		subdirectories.each = append(subdirectories.each, NewSubdir(key))
+		subdirectories = append(subdirectories, NewSubdir(key))
 	}
 
 	if err := writeHome(buildDir, subdirectories); err != nil {
