@@ -1,7 +1,7 @@
 package goBuild
 
 import (
-	"fmt"
+	"log"
 	"os"
 	"path/filepath"
 	"strings"
@@ -25,7 +25,7 @@ func toTitleName(path string) string {
 
 func exitOnError(err error) {
 	if err != nil {
-		fmt.Println(err)
+		log.Fatal(err)
 		os.Exit(1)
 	}
 }

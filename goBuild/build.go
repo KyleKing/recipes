@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"context"
 	"fmt"
+	"log"
 	"os"
 	"path/filepath"
 	"slices"
@@ -46,24 +47,21 @@ func formattedDivPartial(path string) func(djot_parser.ConversionState, func(djo
 		// TODO: use filepath.relative instead
 		_, parentUrl, found := strings.Cut(filepath.Dir(path), "/public/")
 		if !found {
-			defer fmt.Println(fmt.Sprintf("Warn: failed to locate '/%s/' in '%s'", "/public/", path))
+			defer log.Println(fmt.Sprintf("Warn: failed to locate '/%s/' in '%s'", "/public/", path))
 		}
 
 		rating := s.Node.Attributes.Get("rating")
 		if rating != "" {
-			displayedRating := "..."
 			ratingInt, err := strconv.Atoi(rating)
-			if err != nil {
-				fmt.Println(fmt.Sprintf("Error in rating '%s' of '%s'", rating, path))
-				displayedRating = fmt.Sprintf("%s in rating (%s)", err, rating)
+			exitOnError(err)
+
+			displayedRating := "..."
+			if 1 <= ratingInt && ratingInt <= 5 {
+				displayedRating = fmt.Sprintf("%d / 5", ratingInt)
+			} else if ratingInt == 0 {
+				displayedRating = "Not yet rated"
 			} else {
-				if 1 <= ratingInt && ratingInt <= 5 {
-					displayedRating = fmt.Sprintf("%d / 5", ratingInt)
-				} else if ratingInt == 0 {
-					displayedRating = "Not yet rated"
-				} else {
-					displayedRating = fmt.Sprintf("Rating is not within [0,5] (%d)", ratingInt)
-				}
+				displayedRating = fmt.Sprintf("Rating is not within [0,5] (%d)", ratingInt)
 			}
 			s.Writer.WriteString("<p>Personal rating: " + displayedRating + "</p>").WriteString("\n")
 		}
@@ -130,7 +128,7 @@ func replaceDjWithHtml(path string, fileInfo os.FileInfo, inpErr error) error {
 	}
 
 	if filepath.Base(path)[0] == '_' {
-		defer fmt.Println(fmt.Sprintf("Skipping '_' prefixed page: %s", path))
+		defer log.Println(fmt.Sprintf("Skipping '_' prefixed page: %s", path))
 	} else {
 		html, err := buildHtml(path)
 		if err != nil {
@@ -212,7 +210,7 @@ func writeTOCs(publicDir string) error {
 	slices.Sort(keys)
 	for _, key := range keys {
 		subTOC := tocMap[key]
-		fmt.Println(fmt.Sprintf("Writing index for '%s' with %d recipes", key, len(subTOC.recipes)))
+		log.Println(fmt.Sprintf("Writing index for '%s' with %d recipes", key, len(subTOC.recipes)))
 		if err := writeTOC(filepath.Join(publicDir, key), subTOC); err != nil {
 			return err
 		}

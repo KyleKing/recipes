@@ -20,7 +20,7 @@ func main() {
 	flag.StringVar(&dir, "directory", ".", "serve this directory (default: current directory)")
 	flag.Parse()
 
-	fmt.Println(fmt.Sprintf("Serving files in the current directory on port %s", port))
+	log.Println(fmt.Sprintf("Serving files in the current directory on port %s", port))
 
 	http.Handle("/", http.FileServer(http.Dir(dir)))
 	err := http.ListenAndServe(":"+port, nil)
