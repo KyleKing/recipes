@@ -1,9 +1,6 @@
 package goBuild
 
-// import {
-// 	"path/filepath"
-// }
-templ page(title string, showSearchBar bool, contents templ.Component) {
+templ page(title string, contents templ.Component, showSearchBar bool) {
 	<!-- Generally useful: https://www.a11yproject.com/checklist -->
 	<!DOCTYPE html>
 	<html lang="en">
@@ -45,7 +42,7 @@ templ page(title string, showSearchBar bool, contents templ.Component) {
 }
 
 templ recipePage(title string, content string) {
-	@page(title, false, templ.Raw(content))
+	@page(title, templ.Raw(content), false)
 }
 
 templ searchContents() {
@@ -53,7 +50,7 @@ templ searchContents() {
 }
 
 templ searchPage() {
-	@page("Search Recipes", true, searchContents())
+	@page("Search Recipes", searchContents(), true)
 	)
 }
 
@@ -64,7 +61,7 @@ templ notFoundContents() {
 }
 
 templ notFoundPage() {
-	@page("Page Not Found", false, notFoundContents())
+	@page("Page Not Found", notFoundContents(), false)
 }
 
 templ tocContent(toc *RecipeTOC) {
@@ -83,7 +80,7 @@ templ tocContent(toc *RecipeTOC) {
 }
 
 templ tocPage(toc *RecipeTOC) {
-	@page("Recipes", false, tocContent(toc))
+	@page("Recipes", tocContent(toc), false)
 }
 
 templ homeContent(subdirectories *Subdirectories) {
@@ -97,5 +94,5 @@ templ homeContent(subdirectories *Subdirectories) {
 }
 
 templ homePage(subdirectories *Subdirectories) {
-	@page("Recipes", false, homeContent(subdirectories))
+	@page("Recipes", homeContent(subdirectories), false)
 }

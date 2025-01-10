@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
+	"slices"
 	"strconv"
 	"strings"
 
@@ -274,10 +275,10 @@ func writeHome(buildDir string, subdirectories *Subdirectories) error {
 
 func writeTOCs(buildDir string) error {
 	tocMap := make(map[string]*RecipeTOC)
-
+	keys := make([]string, 0)
 	for _, recipe := range TOC.recipes {
-		fmt.Println(recipe)
 		key := recipe.parentUrl
+		keys = append(keys, key)
 
 		switch subTOC := tocMap[key]; {
 		case subTOC == nil:
@@ -289,18 +290,19 @@ func writeTOCs(buildDir string) error {
 			tocMap[key] = subTOC
 		}
 	}
-	fmt.Println(tocMap)
+	fmt.Println(keys)
 
 	subdirectories := NewSubdirectories()
-	for parentUrl, subTOC := range tocMap {
-		fmt.Println(fmt.Sprintf("Writing index for '%s' with %d recipes", parentUrl, len(subTOC.recipes)))
-		subdirectories.each = append(subdirectories.each, Subdir{url: parentUrl, name: toTitleCase(filepath.Base(parentUrl))})
-		if err := writeTOC(filepath.Join(buildDir, parentUrl), subTOC); err != nil {
+	slices.Sort(keys)
+	for _, key := range slices.Compact(keys) {
+		subTOC := tocMap[key]
+		fmt.Println(fmt.Sprintf("Writing index for '%s' with %d recipes", key, len(subTOC.recipes)))
+		if err := writeTOC(filepath.Join(buildDir, key), subTOC); err != nil {
 			return err
 		}
+		subdirectories.each = append(subdirectories.each, Subdir{url: key, name: toTitleCase(filepath.Base(key))})
 	}
 
-	// TODO: consider sorting. See: https://stackoverflow.com/q/2038508/3219667
 	if err := writeHome(buildDir, subdirectories); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
