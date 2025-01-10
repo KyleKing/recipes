@@ -22,31 +22,17 @@ const IMAGE_PLACEHOLDER = "/_icons/placeholder.webp"
 
 // TODO: see pathlib.Walk and WalkFunc instead of custom
 // Apply 'callback' to all regular files within the directory
+// func traverseDirectory(directory string, walkFunc filepath.WalkFunc) error {
 func traverseDirectory(directory string, cb func(string) error) error {
-	paths, err := filepath.Glob(directory + "/*")
-	if err != nil {
-		return err
-	}
-
-	for _, pth := range paths {
-		stat, err := os.Stat(pth)
-		if err != nil {
-			return err
-		}
-		switch mode := stat.Mode(); {
-		case mode.IsDir():
-			if err := traverseDirectory(pth, cb); err != nil {
-				return err
-			}
-		case mode.IsRegular():
-			if filepath.Ext(pth) == ".dj" {
-				if err := cb(pth); err != nil {
-					return err
-				}
+	var inner = func(path string, fileInfo os.FileInfo, inpErr error) (err error) {
+		if filepath.Ext(path) == ".dj" {
+			if err := cb(path); err != nil {
+				return nil
 			}
 		}
+		return nil
 	}
-	return nil
+	return filepath.Walk(directory, inner)
 }
 
 func toTitleCase(str string) string {
