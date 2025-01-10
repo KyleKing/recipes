@@ -1,6 +1,8 @@
 package goBuild
 
 import (
+	"fmt"
+	"os"
 	"path/filepath"
 	"strings"
 )
@@ -16,7 +18,14 @@ func toTitleCase(str string) string {
 	return strings.Join(words, " ")
 }
 
-func toName(path string) string {
+func toTitleName(path string) string {
 	basename, _, _ := strings.Cut(filepath.Base(path), ".")
 	return toTitleCase(basename)
+}
+
+func exitOnError(err error) {
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
 }

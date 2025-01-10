@@ -82,7 +82,7 @@ func formattedDivPartial(path string) func(djot_parser.ConversionState, func(djo
 		}
 
 		if len(imagePath) > 0 {
-			TOC.recipes = append(TOC.recipes, Recipe{parentUrl: parentUrl, imagePath: imagePath, name: toName(path)})
+			TOC.recipes = append(TOC.recipes, Recipe{parentUrl: parentUrl, imagePath: imagePath, name: toTitleName(path)})
 		}
 
 		if rating == "" && imageName == "" {
@@ -115,7 +115,7 @@ func buildHtml(path string) (*bytes.Buffer, error) {
 	}
 
 	section := RenderDjot(text, path)
-	component := recipePage(toName(path)+" : Recipe", section)
+	component := recipePage(toTitleName(path)+" : Recipe", section)
 	if err := component.Render(context.Background(), html); err != nil {
 		return nil, err
 	}
@@ -186,6 +186,7 @@ func writeHome(publicDir string, subdirectories []Subdir) error {
 	return writeTemplate(filepath.Join(publicDir, "index.html"), template)
 }
 
+// Write all `/**/index.html` files
 func writeTOCs(publicDir string) error {
 	tocMap := make(map[string]*RecipeTOC)
 	for _, recipe := range TOC.recipes {
@@ -218,19 +219,15 @@ func writeTOCs(publicDir string) error {
 		subdirectories = append(subdirectories, NewSubdir(key))
 	}
 
-	if err := writeHome(publicDir, subdirectories); err != nil {
-		fmt.Println(err)
-		os.Exit(1)
-	}
+	err := writeHome(publicDir, subdirectories)
+	exitOnError(err)
 	return nil
 }
 
 func Build() {
 	path, err := os.Getwd()
-	if err != nil {
-		fmt.Println(err)
-		os.Exit(1)
-	}
+	exitOnError(err)
+
 	publicDir := filepath.Join(path, "public")
 
 	staticPages := map[string]func() templ.Component{
@@ -238,19 +235,13 @@ func Build() {
 		"search.html": searchPage,
 	}
 	for relPath, template := range staticPages {
-		if err := writeTemplate(filepath.Join(publicDir, relPath), template); err != nil {
-			fmt.Println(err)
-			os.Exit(1)
-		}
-	}
-	if err := filepath.Walk(publicDir, replaceDjWithHtml); err != nil {
-		fmt.Println(err)
-		os.Exit(1)
+		err = writeTemplate(filepath.Join(publicDir, relPath), template)
+		exitOnError(err)
 	}
 
-	// Create Generated Content
-	if err := writeTOCs(publicDir); err != nil {
-		fmt.Println(err)
-		os.Exit(1)
-	}
+	err = filepath.Walk(publicDir, replaceDjWithHtml)
+	exitOnError(err)
+
+	err = writeTOCs(publicDir)
+	exitOnError(err)
 }
