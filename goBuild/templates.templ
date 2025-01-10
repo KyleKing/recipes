@@ -68,21 +68,34 @@ templ notFoundPage() {
 }
 
 templ tocContent(toc *RecipeTOC) {
+	<!-- TODO: include name of directory! -->
+	<h1>Recipes</h1>
 	<div class="toc-images-container">
 		for _, recipe := range toc.recipes {
-			<!-- TODO: use SafeURL https://templ.guide/syntax-and-usage/attributes/#url-attributes -->
-			<!-- <a href={ recipe.pth }> -->
-			<article>
-				<img src={ recipe.imagePth } alt={ recipe.imagePth }/>
-				<!-- TODO: show the (short) titlecase name -->
-				<!-- <figcaption>{ filepath.Base(recipe.pth) }</figcaption> -->
-				<figcaption>{ recipe.pth }</figcaption>
-			</article>
-			<!-- </a> -->
+			<a href={ templ.URL(recipe.parentUrl) }>
+				<article>
+					<img src={ recipe.imagePth } alt={ recipe.name + " Image" }/>
+					<figcaption>{ recipe.name }</figcaption>
+				</article>
+			</a>
 		}
 	</div>
 }
 
 templ tocPage(toc *RecipeTOC) {
 	@page("Recipes", false, tocContent(toc))
+}
+
+templ homeContent(subdirectories *Subdirectories) {
+	<h1>Welcome</h1>
+	<p>This is our personal collection of recipes. See the source code on <a href="https://github.com/KyleKing/recipes">GitHub</a></p>
+	<ul class="flat-list">
+		for _, dir := range subdirectories.each {
+			<li><a href={ templ.URL(dir.url) }>{ dir.name }</a></li>
+		}
+	</ul>
+}
+
+templ homePage(subdirectories *Subdirectories) {
+	@page("Recipes", false, homeContent(subdirectories))
 }

@@ -18,7 +18,6 @@ import (
 const BUILD_DIR = "public"
 const IMAGE_PLACEHOLDER = "/_icons/placeholder.webp"
 
-
 // TODO: see pathlib.Walk and WalkFunc instead of custom
 // Apply 'callback' to all regular files within the directory
 func traverseDirectory(directory string, cb func(string) error) error {
@@ -59,6 +58,11 @@ func toTitleCase(str string) string {
 	return strings.Join(words, " ")
 }
 
+func toName(pth string) string {
+	basename, _, _ := strings.Cut(filepath.Base(pth), ".")
+	return toTitleCase(basename)
+}
+
 // Convert 'li' nodes to either tasks or unstyled
 // Note: adapted without 'disable' and without \n from: https://github.com/sivukhin/godjot/pull/12
 func listItemConversion(s djot_parser.ConversionState, n func(c djot_parser.Children)) {
@@ -78,8 +82,9 @@ func listItemConversion(s djot_parser.ConversionState, n func(c djot_parser.Chil
 }
 
 type Recipe struct {
-	pth      string
-	imagePth string
+	parentUrl string
+	imagePth  string
+	name      string
 }
 
 type RecipeTOC struct {
@@ -93,12 +98,33 @@ func NewRecipeTOC() *RecipeTOC {
 	}
 }
 
+type Subdir struct {
+	url  string
+	name string
+}
+
+type Subdirectories struct {
+	each []Subdir
+}
+
+// Initializes empty Subdirectories
+func NewSubdirectories() *Subdirectories {
+	return &Subdirectories{
+		each: make([]Subdir, 0),
+	}
+}
+
 // TODO: flatten call depth to pass this as a parameter rather than global
 var TOC *RecipeTOC = NewRecipeTOC()
 
 // Outer partial returns an inner converter that conditionally converts a div based on attached attributes
 func formattedDivPartial(pth string) func(djot_parser.ConversionState, func(djot_parser.Children)) {
 	return func(s djot_parser.ConversionState, n func(c djot_parser.Children)) {
+		_, parentUrl, found := strings.Cut(filepath.Dir(pth), "/"+BUILD_DIR+"/")
+		if !found {
+			defer fmt.Println(fmt.Sprintf("Warn: failed to locate '/%s/' in '%s'", BUILD_DIR, pth))
+		}
+
 		rating := s.Node.Attributes.Get("rating")
 		if rating != "" {
 			displayedRating := "..."
@@ -122,11 +148,7 @@ func formattedDivPartial(pth string) func(djot_parser.ConversionState, func(djot
 		imageName := s.Node.Attributes.Get("image")
 		if imageName != "" {
 			if strings.Contains(imageName, ".") {
-				_, absPath, found := strings.Cut(filepath.Dir(pth), "/"+BUILD_DIR+"/")
-				if !found {
-					defer fmt.Println(fmt.Sprintf("Warn: failed to locate '/%s/' in '%s'", BUILD_DIR, pth))
-				}
-				imagePth = "/" + filepath.Join(absPath, imageName)
+				imagePth = "/" + filepath.Join(parentUrl, imageName)
 				s.Writer.WriteString("<img class=\"image-recipe\" alt=\"" + imageName + "\" src=\"" + imagePth + "\">")
 			} else {
 				imagePth = IMAGE_PLACEHOLDER
@@ -136,7 +158,7 @@ func formattedDivPartial(pth string) func(djot_parser.ConversionState, func(djot
 		}
 
 		if len(imagePth) > 0 {
-			TOC.recipes = append(TOC.recipes, Recipe{pth: pth, imagePth: imagePth})
+			TOC.recipes = append(TOC.recipes, Recipe{parentUrl: parentUrl, imagePth: imagePth, name: toName(pth)})
 		}
 
 		if rating == "" && imageName == "" {
@@ -168,9 +190,8 @@ func buildHtml(pth string) (*bytes.Buffer, error) {
 		return html, err
 	}
 
-	basename, _, _ := strings.Cut(filepath.Base(pth), ".")
 	section := RenderDjot(text, pth)
-	component := recipePage(toTitleCase(basename)+" : Recipe", section)
+	component := recipePage(toName(pth)+" : Recipe", section)
 	if err := component.Render(context.Background(), html); err != nil {
 		return nil, err
 	}
@@ -220,18 +241,70 @@ func writeStatic(writePath string, template func() templ.Component) error {
 }
 
 // Create the TOC pages
-func writeTOC(buildDir string) error {
+func writeTOC(subDir string, subTOC *RecipeTOC) error {
 	html := new(bytes.Buffer)
 
-	component := tocPage(TOC)
+	component := tocPage(subTOC)
 	if err := component.Render(context.Background(), html); err != nil {
 		return err
 	}
-	writePath := filepath.Join(buildDir, "toc.html")
+	writePath := filepath.Join(subDir, "index.html")
 	if err := os.WriteFile(writePath, html.Bytes(), 0644); err != nil {
 		return err
 	}
 
+	return nil
+}
+
+// Create the home index.html
+func writeHome(buildDir string, subdirectories *Subdirectories) error {
+	html := new(bytes.Buffer)
+
+	component := homePage(subdirectories)
+	if err := component.Render(context.Background(), html); err != nil {
+		return err
+	}
+	writePath := filepath.Join(buildDir, "index.html")
+	if err := os.WriteFile(writePath, html.Bytes(), 0644); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func writeTOCs(buildDir string) error {
+	tocMap := make(map[string]*RecipeTOC)
+
+	for _, recipe := range TOC.recipes {
+		fmt.Println(recipe)
+		key := recipe.parentUrl
+
+		switch subTOC := tocMap[key]; {
+		case subTOC == nil:
+			newTOC := NewRecipeTOC()
+			newTOC.recipes = append(newTOC.recipes, recipe)
+			tocMap[key] = newTOC
+		default:
+			subTOC.recipes = append(subTOC.recipes, recipe)
+			tocMap[key] = subTOC
+		}
+	}
+	fmt.Println(tocMap)
+
+	subdirectories := NewSubdirectories()
+	for parentUrl, subTOC := range tocMap {
+		fmt.Println(fmt.Sprintf("Writing index for '%s' with %d recipes", parentUrl, len(subTOC.recipes)))
+		subdirectories.each = append(subdirectories.each, Subdir{url: parentUrl, name: toTitleCase(filepath.Base(parentUrl))})
+		if err := writeTOC(filepath.Join(buildDir, parentUrl), subTOC); err != nil {
+			return err
+		}
+	}
+
+	// TODO: consider sorting. See: https://stackoverflow.com/q/2038508/3219667
+	if err := writeHome(buildDir, subdirectories); err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
 	return nil
 }
 
@@ -260,8 +333,7 @@ func Build() {
 		os.Exit(1)
 	}
 
-	// TODO: Write per-directory TOC
-	if err := writeTOC(buildDir); err != nil {
+	if err := writeTOCs(buildDir); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
