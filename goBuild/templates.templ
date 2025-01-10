@@ -63,11 +63,11 @@ templ notFoundPage() {
 	@page("Page Not Found", notFoundContents(), false)
 }
 
-templ tocContent(toc *RecipeTOC) {
-	<h1>Recipes</h1> <!-- TODO: include name of directory! -->
+templ dirIndexContent(title string, recipes []Recipe) {
+	<h1>{ title }</h1>
 	<div class="toc-images-container">
-		for _, recipe := range toc.recipes {
-			<a href={ templ.URL(recipe.parentUrl) }>
+		for _, recipe := range recipes {
+			<a href={ templ.URL(recipe.url) }>
 				<article>
 					<img src={ recipe.imagePath } alt={ recipe.name + " Image" }/>
 					<figcaption>{ recipe.name }</figcaption>
@@ -77,8 +77,8 @@ templ tocContent(toc *RecipeTOC) {
 	</div>
 }
 
-templ tocPage(toc *RecipeTOC) {
-	@page("Recipes", tocContent(toc), false)
+templ dirIndexPage(title string, recipes []Recipe) {
+	@page(title, dirIndexContent(title, recipes), false)
 }
 
 templ homeContent(subdirectories []Subdir) {

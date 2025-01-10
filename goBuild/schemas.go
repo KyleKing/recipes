@@ -17,24 +17,18 @@ type Recipe struct {
 	parentUrl string
 	imagePath string
 	name      string
+	url       string
 }
 
-func NewRecipe(parentUrl string, imagePath string, name string) *Recipe {
+func NewRecipe(parentUrl string, imagePath string, name string, url string) *Recipe {
 	return &Recipe{
 		parentUrl: parentUrl,
 		imagePath: imagePath,
 		name:      name,
+		url:       url,
 	}
 }
 
-type RecipeTOC struct {
-	recipes []Recipe
-}
-
-func NewRecipeTOC() *RecipeTOC {
-	return &RecipeTOC{
-		recipes: make([]Recipe, 0),
-	}
-}
+type RecipeMap map[string]Recipe
 
 // Maybe `type ContentContext`? With pathFile, publicDir, etc.

@@ -38,13 +38,10 @@ func listItemConversion(s djot_parser.ConversionState, n func(c djot_parser.Chil
 	}
 }
 
-// TODO: flatten call depth to pass this as a parameter rather than global
-var TOC *RecipeTOC = NewRecipeTOC()
-
 // Curry conditionally converting `<div>` based on attached attributes
-func formattedDivPartial(path string) func(djot_parser.ConversionState, func(djot_parser.Children)) {
+func formattedDivPartial(path string, rMap RecipeMap) func(djot_parser.ConversionState, func(djot_parser.Children)) {
 	return func(s djot_parser.ConversionState, n func(c djot_parser.Children)) {
-		// TODO: use filepath.relative instead
+		// TODO: use `filepath.relative` instead and replace `/public/` by passing in `publicDir`
 		_, parentUrl, found := strings.Cut(filepath.Dir(path), "/public/")
 		if !found {
 			defer log.Println(fmt.Sprintf("Warn: failed to locate '/%s/' in '%s'", "/public/", path))
@@ -80,7 +77,7 @@ func formattedDivPartial(path string) func(djot_parser.ConversionState, func(djo
 		}
 
 		if len(imagePath) > 0 {
-			TOC.recipes = append(TOC.recipes, Recipe{parentUrl: parentUrl, imagePath: imagePath, name: toTitleName(path)})
+			rMap[path] = Recipe{parentUrl: parentUrl, imagePath: imagePath, name: toTitleName(path), url: path}
 		}
 
 		if rating == "" && imageName == "" {
@@ -90,61 +87,47 @@ func formattedDivPartial(path string) func(djot_parser.ConversionState, func(djo
 }
 
 // Converts djot string to rendered HTML
-func RenderDjot(text []byte, path string) string {
+func RenderDjot(text []byte, path string, rMap RecipeMap) string {
 	ast := djot_parser.BuildDjotAst(text)
 	section := djot_parser.NewConversionContext(
 		"html",
 		djot_parser.DefaultConversionRegistry,
 		map[djot_parser.DjotNode]djot_parser.Conversion{
-			djot_parser.DivNode:      formattedDivPartial(path),
+			djot_parser.DivNode:      formattedDivPartial(path, rMap),
 			djot_parser.ListItemNode: listItemConversion,
 		},
 	).ConvertDjotToHtml(&html_writer.HtmlWriter{}, ast...)
 	return section
 }
 
-// Merges rendered HTML with overall template
-func buildHtml(path string) (*bytes.Buffer, error) {
-	html := new(bytes.Buffer)
-
-	text, err := os.ReadFile(path)
-	if err != nil {
-		return html, err
-	}
-
-	section := RenderDjot(text, path)
-	component := recipePage(toTitleName(path)+" : Recipe", section)
-	if err := component.Render(context.Background(), html); err != nil {
-		return nil, err
-	}
-
-	return html, nil
-}
-
 // Replaces .dj file with templated .html one
-func replaceDjWithHtml(path string, fileInfo os.FileInfo, inpErr error) error {
-	if filepath.Ext(path) != ".dj" {
+func replaceDjWithHtml(rMap RecipeMap) filepath.WalkFunc {
+	return func(path string, fileInfo os.FileInfo, inpErr error) error {
+		if filepath.Ext(path) != ".dj" {
+			return nil
+		}
+
+		if filepath.Base(path)[0] == '_' {
+			defer log.Println(fmt.Sprintf("Skipping '_' prefixed page: %s", path))
+		} else {
+			text, err := os.ReadFile(path)
+			if err != nil {
+				return err
+			}
+
+			section := RenderDjot(text, path, rMap)
+			template := func() templ.Component {
+				return recipePage(toTitleName(path)+" : Recipe", section)
+			}
+			newPath := strings.TrimSuffix(path, filepath.Ext(path)) + ".html"
+			writeTemplate(newPath, template)
+		}
+
+		if err := os.Remove(path); err != nil {
+			return err
+		}
 		return nil
 	}
-
-	if filepath.Base(path)[0] == '_' {
-		defer log.Println(fmt.Sprintf("Skipping '_' prefixed page: %s", path))
-	} else {
-		html, err := buildHtml(path)
-		if err != nil {
-			return err
-		}
-		newPath := strings.TrimSuffix(path, filepath.Ext(path)) + ".html"
-		// file mode (permissions), set to 0644 for read/write permissions for the owner and read permissions for others
-		if err := os.WriteFile(newPath, html.Bytes(), 0644); err != nil {
-			return err
-		}
-	}
-
-	if err := os.Remove(path); err != nil {
-		return err
-	}
-	return nil
 }
 
 // Create the HTML page based on a specified template function
@@ -153,6 +136,7 @@ func writeTemplate(writePath string, template func() templ.Component) error {
 	if err := template().Render(context.Background(), html); err != nil {
 		return err
 	}
+	// file mode (permissions), set to 0644 for read/write permissions for the owner and read permissions for others
 	if err := os.WriteFile(writePath, html.Bytes(), 0644); err != nil {
 		return err
 	}
@@ -160,15 +144,15 @@ func writeTemplate(writePath string, template func() templ.Component) error {
 }
 
 // Create the nested `/*/index.html` files
-func writeTOC(subDir string, subTOC *RecipeTOC) error {
+func writeDirIndex(subDir string, recipes []Recipe) error {
 
-	var template = func() templ.Component {
+	template := func() templ.Component {
 		// Order recipes alphabetically
-		sort.Slice(subTOC.recipes, func(i int, j int) bool {
-			r := subTOC.recipes
+		sort.Slice(recipes, func(i int, j int) bool {
+			r := recipes
 			return sort.StringsAreSorted([]string{r[i].name, r[j].name})
 		})
-		return tocPage(subTOC)
+		return dirIndexPage(toTitleName(subDir), recipes)
 	}
 
 	return writeTemplate(filepath.Join(subDir, "index.html"), template)
@@ -177,7 +161,7 @@ func writeTOC(subDir string, subTOC *RecipeTOC) error {
 // Create `/index.html`
 func writeHome(publicDir string, subdirectories []Subdir) error {
 
-	var template = func() templ.Component {
+	template := func() templ.Component {
 		return homePage(subdirectories)
 	}
 
@@ -185,33 +169,27 @@ func writeHome(publicDir string, subdirectories []Subdir) error {
 }
 
 // Write all `/**/index.html` files
-func writeTOCs(publicDir string) error {
-	tocMap := make(map[string]*RecipeTOC)
-	for _, recipe := range TOC.recipes {
+func writeIndexes(publicDir string, rMap RecipeMap) error {
+	dirMap := make(map[string][]Recipe)
+	for _, recipe := range rMap {
 		key := recipe.parentUrl
-
-		switch subTOC := tocMap[key]; {
-		case subTOC == nil:
-			newTOC := NewRecipeTOC()
-			newTOC.recipes = append(newTOC.recipes, recipe)
-			tocMap[key] = newTOC
-		default:
-			subTOC.recipes = append(subTOC.recipes, recipe)
-			tocMap[key] = subTOC
-		}
+		dirMap[key] = append(dirMap[key], recipe)
 	}
 
 	var subdirectories []Subdir
 
-	keys := make([]string, 0, len(tocMap))
-	for k := range tocMap {
+	// Prepare the alphabetize directory keys
+	keys := make([]string, 0, len(dirMap))
+	for k := range dirMap {
 		keys = append(keys, k)
 	}
 	slices.Sort(keys)
+
 	for _, key := range keys {
-		subTOC := tocMap[key]
-		log.Println(fmt.Sprintf("Writing index for '%s' with %d recipes", key, len(subTOC.recipes)))
-		if err := writeTOC(filepath.Join(publicDir, key), subTOC); err != nil {
+		recipes := dirMap[key]
+		msg := fmt.Sprintf("Writing index for '%s' with %d recipes", key, len(recipes))
+		log.Println(msg)
+		if err := writeDirIndex(filepath.Join(publicDir, key), recipes); err != nil {
 			return err
 		}
 		subdirectories = append(subdirectories, NewSubdir(key))
@@ -219,6 +197,7 @@ func writeTOCs(publicDir string) error {
 
 	err := writeHome(publicDir, subdirectories)
 	exitOnError(err)
+
 	return nil
 }
 
@@ -237,9 +216,10 @@ func Build() {
 		exitOnError(err)
 	}
 
-	err = filepath.Walk(publicDir, replaceDjWithHtml)
+	rMap := make(map[string]Recipe)
+	err = filepath.Walk(publicDir, replaceDjWithHtml(rMap))
 	exitOnError(err)
 
-	err = writeTOCs(publicDir)
+	err = writeIndexes(publicDir, rMap)
 	exitOnError(err)
 }
