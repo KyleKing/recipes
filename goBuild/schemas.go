@@ -36,3 +36,5 @@ func NewRecipeTOC() *RecipeTOC {
 		recipes: make([]Recipe, 0),
 	}
 }
+
+// Maybe `type ContentContext`? With pathFile, publicDir, etc.

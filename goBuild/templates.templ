@@ -65,8 +65,7 @@ templ notFoundPage() {
 }
 
 templ tocContent(toc *RecipeTOC) {
-	<!-- TODO: include name of directory! -->
-	<h1>Recipes</h1>
+	<h1>Recipes</h1> <!-- TODO: include name of directory! -->
 	<div class="toc-images-container">
 		for _, recipe := range toc.recipes {
 			<a href={ templ.URL(recipe.parentUrl) }>

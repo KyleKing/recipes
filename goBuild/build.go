@@ -17,24 +17,7 @@ import (
 	"github.com/sivukhin/godjot/html_writer"
 )
 
-const BUILD_DIR = "public"
 const IMAGE_PLACEHOLDER = "/_icons/placeholder.webp"
-
-func toTitleCase(str string) string {
-	words := []string{}
-	for _, part := range strings.Split(str, "_") {
-		if len(part) > 0 {
-			word := strings.Title(part)
-			words = append(words, word)
-		}
-	}
-	return strings.Join(words, " ")
-}
-
-func toName(path string) string {
-	basename, _, _ := strings.Cut(filepath.Base(path), ".")
-	return toTitleCase(basename)
-}
 
 // Convert 'li' nodes to either tasks or unstyled
 // Note: adapted without 'disable' and without \n from: https://github.com/sivukhin/godjot/pull/12
@@ -57,12 +40,13 @@ func listItemConversion(s djot_parser.ConversionState, n func(c djot_parser.Chil
 // TODO: flatten call depth to pass this as a parameter rather than global
 var TOC *RecipeTOC = NewRecipeTOC()
 
-// Outer partial returns an inner converter that conditionally converts a div based on attached attributes
+// Curry conditionally converting `<div>` based on attached attributes
 func formattedDivPartial(path string) func(djot_parser.ConversionState, func(djot_parser.Children)) {
 	return func(s djot_parser.ConversionState, n func(c djot_parser.Children)) {
-		_, parentUrl, found := strings.Cut(filepath.Dir(path), "/"+BUILD_DIR+"/")
+		// TODO: use filepath.relative instead
+		_, parentUrl, found := strings.Cut(filepath.Dir(path), "/public/")
 		if !found {
-			defer fmt.Println(fmt.Sprintf("Warn: failed to locate '/%s/' in '%s'", BUILD_DIR, path))
+			defer fmt.Println(fmt.Sprintf("Warn: failed to locate '/%s/' in '%s'", "/public/", path))
 		}
 
 		rating := s.Node.Attributes.Get("rating")
@@ -165,60 +149,44 @@ func replaceDjWithHtml(path string, fileInfo os.FileInfo, inpErr error) error {
 	return nil
 }
 
-// Create the static HTML page based on specified template
-func writeStatic(writePath string, template func() templ.Component) error {
+// Create the HTML page based on a specified template function
+func writeTemplate(writePath string, template func() templ.Component) error {
 	html := new(bytes.Buffer)
-
-	component := template()
-	if err := component.Render(context.Background(), html); err != nil {
+	if err := template().Render(context.Background(), html); err != nil {
 		return err
 	}
 	if err := os.WriteFile(writePath, html.Bytes(), 0644); err != nil {
 		return err
 	}
-
 	return nil
 }
 
-// Create the TOC pages
+// Create the nested `/*/index.html` files
 func writeTOC(subDir string, subTOC *RecipeTOC) error {
-	html := new(bytes.Buffer)
 
-	// Order recipes alphabetically
-	sort.Slice(subTOC.recipes, func(i int, j int) bool {
-		r := subTOC.recipes
-		return sort.StringsAreSorted([]string{r[i].name, r[j].name})
-	})
-
-	component := tocPage(subTOC)
-	if err := component.Render(context.Background(), html); err != nil {
-		return err
-	}
-	writePath := filepath.Join(subDir, "index.html")
-	if err := os.WriteFile(writePath, html.Bytes(), 0644); err != nil {
-		return err
+	var template = func() templ.Component {
+		// Order recipes alphabetically
+		sort.Slice(subTOC.recipes, func(i int, j int) bool {
+			r := subTOC.recipes
+			return sort.StringsAreSorted([]string{r[i].name, r[j].name})
+		})
+		return tocPage(subTOC)
 	}
 
-	return nil
+	return writeTemplate(filepath.Join(subDir, "index.html"), template)
 }
 
-// Create the home index.html
-func writeHome(buildDir string, subdirectories []Subdir) error {
-	html := new(bytes.Buffer)
+// Create `/index.html`
+func writeHome(publicDir string, subdirectories []Subdir) error {
 
-	component := homePage(subdirectories)
-	if err := component.Render(context.Background(), html); err != nil {
-		return err
-	}
-	writePath := filepath.Join(buildDir, "index.html")
-	if err := os.WriteFile(writePath, html.Bytes(), 0644); err != nil {
-		return err
+	var template = func() templ.Component {
+		return homePage(subdirectories)
 	}
 
-	return nil
+	return writeTemplate(filepath.Join(publicDir, "index.html"), template)
 }
 
-func writeTOCs(buildDir string) error {
+func writeTOCs(publicDir string) error {
 	tocMap := make(map[string]*RecipeTOC)
 	for _, recipe := range TOC.recipes {
 		key := recipe.parentUrl
@@ -244,13 +212,13 @@ func writeTOCs(buildDir string) error {
 	for _, key := range keys {
 		subTOC := tocMap[key]
 		fmt.Println(fmt.Sprintf("Writing index for '%s' with %d recipes", key, len(subTOC.recipes)))
-		if err := writeTOC(filepath.Join(buildDir, key), subTOC); err != nil {
+		if err := writeTOC(filepath.Join(publicDir, key), subTOC); err != nil {
 			return err
 		}
 		subdirectories = append(subdirectories, NewSubdir(key))
 	}
 
-	if err := writeHome(buildDir, subdirectories); err != nil {
+	if err := writeHome(publicDir, subdirectories); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
@@ -263,26 +231,25 @@ func Build() {
 		fmt.Println(err)
 		os.Exit(1)
 	}
-
-	buildDir := filepath.Join(path, BUILD_DIR)
+	publicDir := filepath.Join(path, "public")
 
 	staticPages := map[string]func() templ.Component{
 		"404.html":    notFoundPage,
 		"search.html": searchPage,
 	}
 	for relPath, template := range staticPages {
-		if err := writeStatic(filepath.Join(buildDir, relPath), template); err != nil {
+		if err := writeTemplate(filepath.Join(publicDir, relPath), template); err != nil {
 			fmt.Println(err)
 			os.Exit(1)
 		}
 	}
-
-	if err := filepath.Walk(buildDir, replaceDjWithHtml); err != nil {
+	if err := filepath.Walk(publicDir, replaceDjWithHtml); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
 
-	if err := writeTOCs(buildDir); err != nil {
+	// Create Generated Content
+	if err := writeTOCs(publicDir); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
