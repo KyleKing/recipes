@@ -71,7 +71,7 @@ templ tocContent(toc *RecipeTOC) {
 		for _, recipe := range toc.recipes {
 			<a href={ templ.URL(recipe.parentUrl) }>
 				<article>
-					<img src={ recipe.imagePth } alt={ recipe.name + " Image" }/>
+					<img src={ recipe.imagePath } alt={ recipe.name + " Image" }/>
 					<figcaption>{ recipe.name }</figcaption>
 				</article>
 			</a>

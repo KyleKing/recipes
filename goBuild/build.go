@@ -20,21 +20,6 @@ import (
 const BUILD_DIR = "public"
 const IMAGE_PLACEHOLDER = "/_icons/placeholder.webp"
 
-// TODO: see pathlib.Walk and WalkFunc instead of custom
-// Apply 'callback' to all regular files within the directory
-// func traverseDirectory(directory string, walkFunc filepath.WalkFunc) error {
-func traverseDirectory(directory string, cb func(string) error) error {
-	var inner = func(path string, fileInfo os.FileInfo, inpErr error) (err error) {
-		if filepath.Ext(path) == ".dj" {
-			if err := cb(path); err != nil {
-				return nil
-			}
-		}
-		return nil
-	}
-	return filepath.Walk(directory, inner)
-}
-
 func toTitleCase(str string) string {
 	words := []string{}
 	for _, part := range strings.Split(str, "_") {
@@ -46,8 +31,8 @@ func toTitleCase(str string) string {
 	return strings.Join(words, " ")
 }
 
-func toName(pth string) string {
-	basename, _, _ := strings.Cut(filepath.Base(pth), ".")
+func toName(path string) string {
+	basename, _, _ := strings.Cut(filepath.Base(path), ".")
 	return toTitleCase(basename)
 }
 
@@ -69,48 +54,15 @@ func listItemConversion(s djot_parser.ConversionState, n func(c djot_parser.Chil
 	}
 }
 
-type Recipe struct {
-	parentUrl string
-	imagePth  string
-	name      string
-}
-
-type RecipeTOC struct {
-	recipes []Recipe
-}
-
-// Initializes empty RecipeTOC
-func NewRecipeTOC() *RecipeTOC {
-	return &RecipeTOC{
-		recipes: make([]Recipe, 0),
-	}
-}
-
-type Subdir struct {
-	url  string
-	name string
-}
-
-type Subdirectories struct {
-	each []Subdir
-}
-
-// Initializes empty Subdirectories
-func NewSubdirectories() *Subdirectories {
-	return &Subdirectories{
-		each: make([]Subdir, 0),
-	}
-}
-
 // TODO: flatten call depth to pass this as a parameter rather than global
 var TOC *RecipeTOC = NewRecipeTOC()
 
 // Outer partial returns an inner converter that conditionally converts a div based on attached attributes
-func formattedDivPartial(pth string) func(djot_parser.ConversionState, func(djot_parser.Children)) {
+func formattedDivPartial(path string) func(djot_parser.ConversionState, func(djot_parser.Children)) {
 	return func(s djot_parser.ConversionState, n func(c djot_parser.Children)) {
-		_, parentUrl, found := strings.Cut(filepath.Dir(pth), "/"+BUILD_DIR+"/")
+		_, parentUrl, found := strings.Cut(filepath.Dir(path), "/"+BUILD_DIR+"/")
 		if !found {
-			defer fmt.Println(fmt.Sprintf("Warn: failed to locate '/%s/' in '%s'", BUILD_DIR, pth))
+			defer fmt.Println(fmt.Sprintf("Warn: failed to locate '/%s/' in '%s'", BUILD_DIR, path))
 		}
 
 		rating := s.Node.Attributes.Get("rating")
@@ -118,7 +70,7 @@ func formattedDivPartial(pth string) func(djot_parser.ConversionState, func(djot
 			displayedRating := "..."
 			ratingInt, err := strconv.Atoi(rating)
 			if err != nil {
-				fmt.Println(fmt.Sprintf("Error in rating '%s' of '%s'", rating, pth))
+				fmt.Println(fmt.Sprintf("Error in rating '%s' of '%s'", rating, path))
 				displayedRating = fmt.Sprintf("%s in rating (%s)", err, rating)
 			} else {
 				if 1 <= ratingInt && ratingInt <= 5 {
@@ -132,21 +84,21 @@ func formattedDivPartial(pth string) func(djot_parser.ConversionState, func(djot
 			s.Writer.WriteString("<p>Personal rating: " + displayedRating + "</p>").WriteString("\n")
 		}
 
-		imagePth := ""
+		imagePath := ""
 		imageName := s.Node.Attributes.Get("image")
 		if imageName != "" {
 			if strings.Contains(imageName, ".") {
-				imagePth = "/" + filepath.Join(parentUrl, imageName)
-				s.Writer.WriteString("<img class=\"image-recipe\" alt=\"" + imageName + "\" src=\"" + imagePth + "\">")
+				imagePath = "/" + filepath.Join(parentUrl, imageName)
+				s.Writer.WriteString("<img class=\"image-recipe\" alt=\"" + imageName + "\" src=\"" + imagePath + "\">")
 			} else {
-				imagePth = IMAGE_PLACEHOLDER
-				s.Writer.WriteString("<img class=\"image-recipe\" alt=\"Image is missing\" src=\"" + imagePth + "\">")
+				imagePath = IMAGE_PLACEHOLDER
+				s.Writer.WriteString("<img class=\"image-recipe\" alt=\"Image is missing\" src=\"" + imagePath + "\">")
 			}
 			s.Writer.WriteString("\n")
 		}
 
-		if len(imagePth) > 0 {
-			TOC.recipes = append(TOC.recipes, Recipe{parentUrl: parentUrl, imagePth: imagePth, name: toName(pth)})
+		if len(imagePath) > 0 {
+			TOC.recipes = append(TOC.recipes, Recipe{parentUrl: parentUrl, imagePath: imagePath, name: toName(path)})
 		}
 
 		if rating == "" && imageName == "" {
@@ -156,13 +108,13 @@ func formattedDivPartial(pth string) func(djot_parser.ConversionState, func(djot
 }
 
 // Converts djot string to rendered HTML
-func RenderDjot(text []byte, pth string) string {
+func RenderDjot(text []byte, path string) string {
 	ast := djot_parser.BuildDjotAst(text)
 	section := djot_parser.NewConversionContext(
 		"html",
 		djot_parser.DefaultConversionRegistry,
 		map[djot_parser.DjotNode]djot_parser.Conversion{
-			djot_parser.DivNode:      formattedDivPartial(pth),
+			djot_parser.DivNode:      formattedDivPartial(path),
 			djot_parser.ListItemNode: listItemConversion,
 		},
 	).ConvertDjotToHtml(&html_writer.HtmlWriter{}, ast...)
@@ -170,16 +122,16 @@ func RenderDjot(text []byte, pth string) string {
 }
 
 // Merges rendered HTML with overall template
-func buildHtml(pth string) (*bytes.Buffer, error) {
+func buildHtml(path string) (*bytes.Buffer, error) {
 	html := new(bytes.Buffer)
 
-	text, err := os.ReadFile(pth)
+	text, err := os.ReadFile(path)
 	if err != nil {
 		return html, err
 	}
 
-	section := RenderDjot(text, pth)
-	component := recipePage(toName(pth)+" : Recipe", section)
+	section := RenderDjot(text, path)
+	component := recipePage(toName(path)+" : Recipe", section)
 	if err := component.Render(context.Background(), html); err != nil {
 		return nil, err
 	}
@@ -188,26 +140,26 @@ func buildHtml(pth string) (*bytes.Buffer, error) {
 }
 
 // Replaces .dj file with templated .html one
-func replaceDjWithHtml(pth string) error {
-	if filepath.Ext(pth) != ".dj" {
+func replaceDjWithHtml(path string, fileInfo os.FileInfo, inpErr error) error {
+	if filepath.Ext(path) != ".dj" {
 		return nil
 	}
 
-	if filepath.Base(pth)[0] == '_' {
-		defer fmt.Println(fmt.Sprintf("Skipping '_' prefixed page: %s", pth))
+	if filepath.Base(path)[0] == '_' {
+		defer fmt.Println(fmt.Sprintf("Skipping '_' prefixed page: %s", path))
 	} else {
-		html, err := buildHtml(pth)
+		html, err := buildHtml(path)
 		if err != nil {
 			return err
 		}
-		newPth := strings.TrimSuffix(pth, filepath.Ext(pth)) + ".html"
+		newPath := strings.TrimSuffix(path, filepath.Ext(path)) + ".html"
 		// file mode (permissions), set to 0644 for read/write permissions for the owner and read permissions for others
-		if err := os.WriteFile(newPth, html.Bytes(), 0644); err != nil {
+		if err := os.WriteFile(newPath, html.Bytes(), 0644); err != nil {
 			return err
 		}
 	}
 
-	if err := os.Remove(pth); err != nil {
+	if err := os.Remove(path); err != nil {
 		return err
 	}
 	return nil
@@ -295,7 +247,7 @@ func writeTOCs(buildDir string) error {
 		if err := writeTOC(filepath.Join(buildDir, key), subTOC); err != nil {
 			return err
 		}
-		subdirectories.each = append(subdirectories.each, Subdir{url: key, name: toTitleCase(key)})
+		subdirectories.each = append(subdirectories.each, NewSubdir(key))
 	}
 
 	if err := writeHome(buildDir, subdirectories); err != nil {
@@ -306,13 +258,13 @@ func writeTOCs(buildDir string) error {
 }
 
 func Build() {
-	pth, err := os.Getwd()
+	path, err := os.Getwd()
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
 
-	buildDir := filepath.Join(pth, BUILD_DIR)
+	buildDir := filepath.Join(path, BUILD_DIR)
 
 	staticPages := map[string]func() templ.Component{
 		"404.html":    notFoundPage,
@@ -325,7 +277,7 @@ func Build() {
 		}
 	}
 
-	if err := traverseDirectory(buildDir, replaceDjWithHtml); err != nil {
+	if err := filepath.Walk(buildDir, replaceDjWithHtml); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
