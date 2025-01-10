@@ -7,6 +7,7 @@ import (
 	"os"
 	"path/filepath"
 	"slices"
+	"sort"
 	"strconv"
 	"strings"
 
@@ -244,6 +245,12 @@ func writeStatic(writePath string, template func() templ.Component) error {
 // Create the TOC pages
 func writeTOC(subDir string, subTOC *RecipeTOC) error {
 	html := new(bytes.Buffer)
+
+	// Order recipes alphabetically
+	sort.Slice(subTOC.recipes, func(i int, j int) bool {
+		r := subTOC.recipes
+		return sort.StringsAreSorted([]string{r[i].name, r[j].name})
+	})
 
 	component := tocPage(subTOC)
 	if err := component.Render(context.Background(), html); err != nil {
