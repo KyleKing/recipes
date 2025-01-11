@@ -105,8 +105,8 @@ a:visited {
 
 /* Embedded content */
 
-img.image-recipe {
-    max-height: 400px;
+img.fullsize {
+    max-height: 300px;
     max-width: 100%;
 }
 
@@ -137,6 +137,7 @@ img.square-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border: #959595 0.5px solid;
 }
 
 /* Media queries */

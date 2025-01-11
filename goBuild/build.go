@@ -18,7 +18,7 @@ import (
 	"github.com/sivukhin/godjot/html_writer"
 )
 
-const IMAGE_PLACEHOLDER = "/_icons/placeholder.webp"
+const IMAGE_PLACEHOLDER = "/_static/placeholder.png"
 
 // Convert 'li' nodes to either tasks or unstyled
 // Note: adapted without 'disable' and without \n from: https://github.com/sivukhin/godjot/pull/12
@@ -66,10 +66,10 @@ func formattedDivPartial(publicDir string, path string, rMap RecipeMap) func(djo
 		if imageName != "" {
 			if strings.Contains(imageName, ".") {
 				imagePath = "/" + filepath.Join(dirUrl, imageName)
-				s.Writer.WriteString("<img class=\"image-recipe\" alt=\"" + imageName + "\" src=\"" + imagePath + "\">")
+				s.Writer.WriteString("<img class=\"fullsize\" alt=\"" + imageName + "\" src=\"" + imagePath + "\">")
 			} else {
 				imagePath = IMAGE_PLACEHOLDER
-				s.Writer.WriteString("<img class=\"image-recipe\" alt=\"Image is missing\" src=\"" + imagePath + "\">")
+				s.Writer.WriteString("<p><i>No image yet</i></p>")
 			}
 		}
 
