@@ -28,13 +28,11 @@ func initTestDir() (string, error) {
 
 	os.RemoveAll(publicTestDir)
 
-	fmt.Println("cp", "-R", contentTestDir, publicTestDir)
 	cmd := exec.Command("cp", "-R", contentTestDir, publicTestDir)
-	stdout, err := cmd.Output()
+	_, err = cmd.Output()
 	if err != nil {
 		return "", err
 	}
-	fmt.Println(string(stdout))
 
 	return publicTestDir, nil
 }
@@ -57,8 +55,8 @@ func TestReplaceDjWithHtml(t *testing.T) {
 		rel, err := filepath.Rel(publicTestDir, path)
 		require.NoError(t, err)
 		expectedPath := filepath.Join(expectDir, rel)
+		// Verify content matches expected
 		same, err := testUtils.FileCmp(path, expectedPath, 0)
-		fmt.Println(rel)
 		assert.Equal(t, err, nil, fmt.Sprintf("Error comparing files %s", rel))
 		assert.Equal(t, same, true, fmt.Sprintf("Error: use git to diff %s", rel))
 		return nil

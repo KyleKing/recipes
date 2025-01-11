@@ -64,7 +64,7 @@ templ notFoundPage() {
 
 templ dirIndexContent(title string, recipes []Recipe) {
 	<h1>{ title }</h1>
-	<div class="toc-images-container">
+	<div class="wrapped-images-container">
 		for _, recipe := range recipes {
 			<a href={ templ.URL(recipe.url) }>
 				<article>

@@ -2,7 +2,7 @@
 
 Based on [https://github.com/KyleKing/recipes](https://github.com/KyleKing/recipes)
 
-{ rating=5 image=test.image }
+{ rating=5 image="test.image" }
 :::
 :::
 
