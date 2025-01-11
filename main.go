@@ -1,7 +1,15 @@
 package main
 
-import "github.com/KyleKing/recipes/goBuild"
+import (
+	"os"
+	"path/filepath"
+
+	"github.com/KyleKing/recipes/goBuild"
+)
 
 func main() {
-	goBuild.Build()
+	cwd, err := os.Getwd()
+	goBuild.ExitOnError(err)
+
+	goBuild.Build(filepath.Join(cwd, "public"))
 }

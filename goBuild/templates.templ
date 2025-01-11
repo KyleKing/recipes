@@ -1,7 +1,6 @@
 package goBuild
 
 templ page(title string, contents templ.Component, showSearchBar bool) {
-	<!-- Generally useful: https://www.a11yproject.com/checklist -->
 	<!DOCTYPE html>
 	<html lang="en">
 		<head>
@@ -69,7 +68,7 @@ templ dirIndexContent(title string, recipes []Recipe) {
 		for _, recipe := range recipes {
 			<a href={ templ.URL(recipe.url) }>
 				<article>
-					<img src={ recipe.imagePath } alt={ recipe.name + " Image" }/>
+					<img src={ recipe.imagePath } alt={ "Image of " + recipe.name }/>
 					<figcaption>{ recipe.name }</figcaption>
 				</article>
 			</a>

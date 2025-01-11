@@ -23,7 +23,7 @@ func toTitleName(path string) string {
 	return toTitleCase(basename)
 }
 
-func exitOnError(err error) {
+func ExitOnError(err error) {
 	if err != nil {
 		log.Fatal(err)
 		os.Exit(1)

@@ -1,6 +1,6 @@
 package goBuild
 
-// Subdirectory
+import "path/filepath"
 
 type Subdir struct {
 	url  string
@@ -8,27 +8,23 @@ type Subdir struct {
 }
 
 func NewSubdir(key string) Subdir {
-	return Subdir{url: key, name: toTitleCase(key)}
+	return Subdir{url: key, name: toTitleName(key)}
 }
 
-// Recipes
-
 type Recipe struct {
-	parentUrl string
+	dirUrl    string
 	imagePath string
 	name      string
 	url       string
 }
 
-func NewRecipe(parentUrl string, imagePath string, name string, url string) *Recipe {
-	return &Recipe{
-		parentUrl: parentUrl,
+func NewRecipe(dirUrl string, path string, imagePath string) Recipe {
+	return Recipe{
+		dirUrl:    dirUrl,
 		imagePath: imagePath,
-		name:      name,
-		url:       url,
+		name:      toTitleName(path),
+		url:       filepath.Join(dirUrl, filepath.Base(path)),
 	}
 }
 
 type RecipeMap map[string]Recipe
-
-// Maybe `type ContentContext`? With pathFile, publicDir, etc.
