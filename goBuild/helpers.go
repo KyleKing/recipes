@@ -23,6 +23,10 @@ func toTitleName(path string) string {
 	return toTitleCase(basename)
 }
 
+func withHtmlExt(path string) string {
+	return strings.TrimSuffix(path, filepath.Ext(path)) + ".html"
+}
+
 func ExitOnError(err error) {
 	if err != nil {
 		log.Fatal(err)

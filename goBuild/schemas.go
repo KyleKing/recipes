@@ -23,7 +23,7 @@ func NewRecipe(dirUrl string, path string, imagePath string) Recipe {
 		dirUrl:    dirUrl,
 		imagePath: imagePath,
 		name:      toTitleName(path),
-		url:       filepath.Join(dirUrl, filepath.Base(path)),
+		url:       "/" + filepath.Join(dirUrl, withHtmlExt(filepath.Base(path))),
 	}
 }
 

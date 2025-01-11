@@ -116,8 +116,7 @@ func replaceDjWithHtml(publicDir string, rMap RecipeMap) filepath.WalkFunc {
 			template := func() templ.Component {
 				return recipePage(toTitleName(path)+" : Recipe", section)
 			}
-			newPath := strings.TrimSuffix(path, filepath.Ext(path)) + ".html"
-			writeTemplate(newPath, template)
+			writeTemplate(withHtmlExt(path), template)
 		}
 
 		if err := os.Remove(path); err != nil {

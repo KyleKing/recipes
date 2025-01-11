@@ -28,7 +28,7 @@ func initTestDir() (string, error) {
 
 	os.RemoveAll(publicTestDir)
 
-	cmd := exec.Command("cp", "-R", contentTestDir, publicTestDir)
+	cmd := exec.Command("cp", "-R", contentTestDir+"/", publicTestDir+"/")
 	_, err = cmd.Output()
 	if err != nil {
 		return "", err
