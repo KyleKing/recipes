@@ -8,7 +8,13 @@ package goBuild
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-func page(title string, contents templ.Component, showSearchBar bool) templ.Component {
+const (
+	GENERATED_PAGE = "gen"
+	CONTENT_PAGE   = "content"
+	SEARCH_PAGE    = "search"
+)
+
+func page(title string, contents templ.Component, pageType string) templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -36,7 +42,7 @@ func page(title string, contents templ.Component, showSearchBar bool) templ.Comp
 		var templ_7745c5c3_Var2 string
 		templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs(title)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 10, Col: 17}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 16, Col: 17}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
 		if templ_7745c5c3_Err != nil {
@@ -46,7 +52,7 @@ func page(title string, contents templ.Component, showSearchBar bool) templ.Comp
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		if showSearchBar {
+		if pageType == SEARCH_PAGE {
 			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "<link href=\"/pagefind/pagefind-ui.css\" rel=\"stylesheet\"><script src=\"/pagefind/pagefind-ui.js\"></script>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
@@ -56,7 +62,7 @@ func page(title string, contents templ.Component, showSearchBar bool) templ.Comp
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		if !showSearchBar {
+		if pageType == CONTENT_PAGE {
 			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, " data-pagefind-body")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
@@ -74,7 +80,7 @@ func page(title string, contents templ.Component, showSearchBar bool) templ.Comp
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		if showSearchBar {
+		if pageType == SEARCH_PAGE {
 			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 8, "<script>\n                window.addEventListener(\"DOMContentLoaded\", (event) => {\n                  new PagefindUI({\n                    element: \"#search\",\n                    highlightParam: \"highlight\",\n                    showSubResults: true,\n                  });\n                });\n              </script>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
@@ -109,7 +115,7 @@ func recipePage(title string, content string) templ.Component {
 			templ_7745c5c3_Var3 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = page(title, templ.Raw(content), false).Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = page(title, templ.Raw(content), CONTENT_PAGE).Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -167,7 +173,7 @@ func searchPage() templ.Component {
 			templ_7745c5c3_Var5 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = page("Search Recipes", searchContents(), true).Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = page("Search Recipes", searchContents(), SEARCH_PAGE).Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -203,7 +209,7 @@ func notFoundContents() templ.Component {
 		var templ_7745c5c3_Var7 string
 		templ_7745c5c3_Var7, templ_7745c5c3_Err = templ.JoinStringErrs("if")
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 58, Col: 109}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 64, Col: 109}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var7))
 		if templ_7745c5c3_Err != nil {
@@ -238,7 +244,7 @@ func notFoundPage() templ.Component {
 			templ_7745c5c3_Var8 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = page("Page Not Found", notFoundContents(), false).Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = page("Page Not Found", notFoundContents(), GENERATED_PAGE).Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -274,7 +280,7 @@ func dirIndexContent(title string, recipes []Recipe) templ.Component {
 		var templ_7745c5c3_Var10 string
 		templ_7745c5c3_Var10, templ_7745c5c3_Err = templ.JoinStringErrs(title)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 66, Col: 12}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 72, Col: 12}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var10))
 		if templ_7745c5c3_Err != nil {
@@ -301,7 +307,7 @@ func dirIndexContent(title string, recipes []Recipe) templ.Component {
 			var templ_7745c5c3_Var12 string
 			templ_7745c5c3_Var12, templ_7745c5c3_Err = templ.JoinStringErrs(recipe.imagePath)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 72, Col: 52}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 78, Col: 52}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var12))
 			if templ_7745c5c3_Err != nil {
@@ -314,7 +320,7 @@ func dirIndexContent(title string, recipes []Recipe) templ.Component {
 			var templ_7745c5c3_Var13 string
 			templ_7745c5c3_Var13, templ_7745c5c3_Err = templ.JoinStringErrs("Image of " + recipe.name)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 72, Col: 86}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 78, Col: 86}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var13))
 			if templ_7745c5c3_Err != nil {
@@ -327,7 +333,7 @@ func dirIndexContent(title string, recipes []Recipe) templ.Component {
 			var templ_7745c5c3_Var14 string
 			templ_7745c5c3_Var14, templ_7745c5c3_Err = templ.JoinStringErrs(recipe.name)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 74, Col: 30}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 80, Col: 30}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var14))
 			if templ_7745c5c3_Err != nil {
@@ -367,7 +373,7 @@ func dirIndexPage(title string, recipes []Recipe) templ.Component {
 			templ_7745c5c3_Var15 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = page(title, dirIndexContent(title, recipes), false).Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = page(title, dirIndexContent(title, recipes), GENERATED_PAGE).Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -417,7 +423,7 @@ func homeContent(subdirectories []Subdir) templ.Component {
 			var templ_7745c5c3_Var18 string
 			templ_7745c5c3_Var18, templ_7745c5c3_Err = templ.JoinStringErrs(dir.name)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 90, Col: 48}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 96, Col: 48}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var18))
 			if templ_7745c5c3_Err != nil {
@@ -457,7 +463,7 @@ func homePage(subdirectories []Subdir) templ.Component {
 			templ_7745c5c3_Var19 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = page("Recipes", homeContent(subdirectories), false).Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = page("Recipes", homeContent(subdirectories), GENERATED_PAGE).Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

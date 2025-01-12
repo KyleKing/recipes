@@ -1,6 +1,12 @@
 package goBuild
 
-templ page(title string, contents templ.Component, showSearchBar bool) {
+const (
+	GENERATED_PAGE = "gen"
+	CONTENT_PAGE   = "content"
+	SEARCH_PAGE    = "search"
+)
+
+templ page(title string, contents templ.Component, pageType string) {
 	<!DOCTYPE html>
 	<html lang="en">
 		<head>
@@ -9,7 +15,7 @@ templ page(title string, contents templ.Component, showSearchBar bool) {
 			<link rel="stylesheet" href="/styles.css"/>
 			<title>{ title }</title>
 			<meta name="description" content="Kyle and Alex's Personal Recipes"/>
-			if showSearchBar {
+			if pageType == SEARCH_PAGE {
 				<link href="/pagefind/pagefind-ui.css" rel="stylesheet"/>
 				<script src="/pagefind/pagefind-ui.js"></script>
 			}
@@ -22,10 +28,10 @@ templ page(title string, contents templ.Component, showSearchBar bool) {
 					<a href="/search.html"><i><strong>Search</strong></i></a>
 				</div>
 			</nav>
-			<main data-pagefind-body?={ !showSearchBar }>
+			<main data-pagefind-body?={ pageType == CONTENT_PAGE }>
 				@contents
 			</main>
-			if showSearchBar {
+			if pageType == SEARCH_PAGE {
 				<script>
                 window.addEventListener("DOMContentLoaded", (event) => {
                   new PagefindUI({
@@ -41,7 +47,7 @@ templ page(title string, contents templ.Component, showSearchBar bool) {
 }
 
 templ recipePage(title string, content string) {
-	@page(title, templ.Raw(content), false)
+	@page(title, templ.Raw(content), CONTENT_PAGE)
 }
 
 templ searchContents() {
@@ -49,7 +55,7 @@ templ searchContents() {
 }
 
 templ searchPage() {
-	@page("Search Recipes", searchContents(), true)
+	@page("Search Recipes", searchContents(), SEARCH_PAGE)
 }
 
 templ notFoundContents() {
@@ -59,7 +65,7 @@ templ notFoundContents() {
 }
 
 templ notFoundPage() {
-	@page("Page Not Found", notFoundContents(), false)
+	@page("Page Not Found", notFoundContents(), GENERATED_PAGE)
 }
 
 templ dirIndexContent(title string, recipes []Recipe) {
@@ -79,7 +85,7 @@ templ dirIndexContent(title string, recipes []Recipe) {
 }
 
 templ dirIndexPage(title string, recipes []Recipe) {
-	@page(title, dirIndexContent(title, recipes), false)
+	@page(title, dirIndexContent(title, recipes), GENERATED_PAGE)
 }
 
 templ homeContent(subdirectories []Subdir) {
@@ -93,5 +99,5 @@ templ homeContent(subdirectories []Subdir) {
 }
 
 templ homePage(subdirectories []Subdir) {
-	@page("Recipes", homeContent(subdirectories), false)
+	@page("Recipes", homeContent(subdirectories), GENERATED_PAGE)
 }
