@@ -2,7 +2,6 @@ package goBuild
 
 import (
 	"log"
-	"os"
 	"path/filepath"
 	"strings"
 )
@@ -29,7 +28,6 @@ func withHtmlExt(path string) string {
 
 func ExitOnError(err error) {
 	if err != nil {
-		log.Fatal(err)
-		os.Exit(1)
+		log.Fatal(err) // Which also calls `os.Exit(1)`
 	}
 }

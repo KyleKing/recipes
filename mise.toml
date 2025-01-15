@@ -1,3 +1,8 @@
+[tasks.compress]
+# Previously run in: https://github.com/KyleKing/recipes/blob/ba1eae685fd8a75458a80bec0d4377a3b0a24195/recipes/tasks.py#L55
+description = "Compress image for performance. Requires a path"
+run = "optimize-images -mh 900 --convert-all --force-delete"
+
 [tasks.build]
 depends = ["format", "lint"]
 description = "Build website"
@@ -9,6 +14,7 @@ run = ["templ generate", "templ fmt ./goBuild/", "go fmt ./..."]
 sources = ['**/*.go']
 
 [tasks.lint]
+depends = ["format"]
 description = "Run linters"
 run = "testifylint --enable-all ."
 sources = ['**/*_test.go']
@@ -24,7 +30,7 @@ run = "go test -coverprofile=coverage.out -coverpkg=./... ./..."
 sources = ['**/*.go']
 
 [tasks.coverage]
-description = "View test coverage"
+description = "View test coverage of most recent test run"
 # https://go.dev/blog/cover#heat-maps
 run = "go tool cover -html=coverage.out"
 
@@ -33,3 +39,4 @@ run = "go tool cover -html=coverage.out"
 "go:github.com/a-h/templ/cmd/templ" = "0.3.819"
 "go:github.com/tdewolff/minify/v2/cmd/minify" = "2.21.2"
 "npm:pagefind" = "1.3.0"
+"pipx:optimize-images" = "latest"

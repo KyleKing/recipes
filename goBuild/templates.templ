@@ -1,5 +1,9 @@
 package goBuild
 
+// Note: discriminated unions and Enums don't exist natively in Go
+// https://www.reddit.com/r/golang/comments/13hjevf/idiomatic_way_in_go_to_represent_a_tagged_union
+// https://www.reddit.com/r/golang/comments/uvpygm/why_are_enums_not_a_thing_in_go
+// Packages: https://github.com/avelino/awesome-go?tab=readme-ov-file#sets (likely use golang-set)
 const (
 	GENERATED_PAGE = "gen"
 	CONTENT_PAGE   = "content"

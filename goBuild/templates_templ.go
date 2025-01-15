@@ -8,6 +8,10 @@ package goBuild
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
+// Note: discriminated unions and Enums don't exist natively in Go
+// https://www.reddit.com/r/golang/comments/13hjevf/idiomatic_way_in_go_to_represent_a_tagged_union
+// https://www.reddit.com/r/golang/comments/uvpygm/why_are_enums_not_a_thing_in_go
+// Packages: https://github.com/avelino/awesome-go?tab=readme-ov-file#sets (likely use golang-set)
 const (
 	GENERATED_PAGE = "gen"
 	CONTENT_PAGE   = "content"
@@ -42,7 +46,7 @@ func page(title string, contents templ.Component, pageType string) templ.Compone
 		var templ_7745c5c3_Var2 string
 		templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs(title)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 16, Col: 17}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 20, Col: 17}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
 		if templ_7745c5c3_Err != nil {
@@ -209,7 +213,7 @@ func notFoundContents() templ.Component {
 		var templ_7745c5c3_Var7 string
 		templ_7745c5c3_Var7, templ_7745c5c3_Err = templ.JoinStringErrs("if")
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 64, Col: 109}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 68, Col: 109}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var7))
 		if templ_7745c5c3_Err != nil {
@@ -280,7 +284,7 @@ func dirIndexContent(title string, recipes []Recipe) templ.Component {
 		var templ_7745c5c3_Var10 string
 		templ_7745c5c3_Var10, templ_7745c5c3_Err = templ.JoinStringErrs(title)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 72, Col: 12}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 76, Col: 12}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var10))
 		if templ_7745c5c3_Err != nil {
@@ -307,7 +311,7 @@ func dirIndexContent(title string, recipes []Recipe) templ.Component {
 			var templ_7745c5c3_Var12 string
 			templ_7745c5c3_Var12, templ_7745c5c3_Err = templ.JoinStringErrs(recipe.imagePath)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 78, Col: 52}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 82, Col: 52}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var12))
 			if templ_7745c5c3_Err != nil {
@@ -320,7 +324,7 @@ func dirIndexContent(title string, recipes []Recipe) templ.Component {
 			var templ_7745c5c3_Var13 string
 			templ_7745c5c3_Var13, templ_7745c5c3_Err = templ.JoinStringErrs("Image of " + recipe.name)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 78, Col: 86}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 82, Col: 86}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var13))
 			if templ_7745c5c3_Err != nil {
@@ -333,7 +337,7 @@ func dirIndexContent(title string, recipes []Recipe) templ.Component {
 			var templ_7745c5c3_Var14 string
 			templ_7745c5c3_Var14, templ_7745c5c3_Err = templ.JoinStringErrs(recipe.name)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 80, Col: 30}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 84, Col: 30}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var14))
 			if templ_7745c5c3_Err != nil {
@@ -423,7 +427,7 @@ func homeContent(subdirectories []Subdir) templ.Component {
 			var templ_7745c5c3_Var18 string
 			templ_7745c5c3_Var18, templ_7745c5c3_Err = templ.JoinStringErrs(dir.name)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 96, Col: 48}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `goBuild/templates.templ`, Line: 100, Col: 48}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var18))
 			if templ_7745c5c3_Err != nil {
