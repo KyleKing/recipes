@@ -37,6 +37,9 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
 
+      - name: Run unit tests
+        run: mise run test
+
       - name: Build Site
         run: ./build.sh
 
