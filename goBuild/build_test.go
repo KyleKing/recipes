@@ -36,7 +36,23 @@ func initTestDir() (string, error) {
 	return publicTestDir, nil
 }
 
-func TestReplaceDjWithHtml(t *testing.T) {
+// Replace expected directory with output from test for comparison in git
+func gitDiffChanges(expectDir, publicTestDir string) {
+	cmd := exec.Command("mv", expectDir+"/", expectDir+"-backup/")
+	out, err := cmd.Output()
+	if err != nil {
+		fmt.Println("Error running:", cmd, out, err)
+	}
+
+	cmd = exec.Command("cp", "-R", publicTestDir+"/", expectDir+"/")
+	out, err = cmd.Output()
+	if err != nil {
+		fmt.Println("Error running:", cmd, out, err)
+	}
+	fmt.Println("See git diff for changes")
+}
+
+func TestBuild(t *testing.T) {
 	publicTestDir, errInit := initTestDir()
 	require.NoError(t, errInit)
 	expectDir := filepath.Join(filepath.Dir(publicTestDir), "test_expected")
@@ -45,24 +61,10 @@ func TestReplaceDjWithHtml(t *testing.T) {
 
 	// Verify content matches expected using diff (https://stackoverflow.com/a/1644641/3219667)
 	cmd := exec.Command("diff", "-arq", expectDir+"/", publicTestDir+"/")
-	outDiff, errDiff := cmd.Output()
-	assert.Equal(t, "", string(outDiff))
-	if errDiff != nil {
-		fmt.Println("Error running:", cmd, outDiff, errDiff)
-
-		// Replace expected directory with output from test for comparison in git
-		cmd = exec.Command("mv", expectDir+"/", expectDir+"-backup/")
-		out, err := cmd.Output()
-		if err != nil {
-			fmt.Println("Error running:", cmd, out, err)
-		}
-
-		cmd = exec.Command("cp", "-R", publicTestDir+"/", expectDir+"/")
-		out, err = cmd.Output()
-		if err != nil {
-			fmt.Println("Error running:", cmd, out, err)
-		}
-		fmt.Println("See git diff for changes")
+	out, err := cmd.Output()
+	if err != nil {
+		gitDiffChanges(expectDir, publicTestDir)
 	}
-	require.NoError(t, errDiff)
+	assert.Equal(t, "", string(out))
+	require.NoError(t, err)
 }
