@@ -41,7 +41,7 @@ jobs:
         run: mise run test
 
       - name: Build Site
-        run: ./build.sh
+        run: mise run build
 
       - name: Deploy
         run: ./push-gh-pages.sh

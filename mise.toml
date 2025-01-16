@@ -4,12 +4,12 @@ description = "Compress image for performance. Requires a path"
 run = "optimize-images -mh 900 --convert-all --force-delete"
 
 [tasks.build]
-depends = ["format", "lint"]
+depends = ["format"]
 description = "Build website"
 run = "./build.sh"
 
 [tasks.format]
-description = "Format code"
+description = "Format (and generate) code"
 run = ["templ generate", "templ fmt ./goBuild/", "go fmt ./..."]
 sources = ['**/*.go']
 
@@ -24,6 +24,7 @@ description = "Serve the built documentation"
 run = "go run ./goServe/main.go --port=8000 --directory=./public"
 
 [tasks.test]
+depends = ["format", "lint"]
 description = "Run test"
 # https://stackoverflow.com/a/21725603/3219667
 run = "go test -coverprofile=coverage.out -coverpkg=./... ./..."

@@ -64,3 +64,6 @@ Temporary Items
 
 # Generated HTML
 /public
+
+# Generated go
+*_templ.go
