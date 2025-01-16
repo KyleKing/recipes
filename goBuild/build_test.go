@@ -8,7 +8,6 @@ import (
 
 	"testing"
 
-	"github.com/KyleKing/recipes/goBuild/testUtils"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -38,29 +37,32 @@ func initTestDir() (string, error) {
 }
 
 func TestReplaceDjWithHtml(t *testing.T) {
-	publicTestDir, err := initTestDir()
-	require.NoError(t, err)
+	publicTestDir, errInit := initTestDir()
+	require.NoError(t, errInit)
 	expectDir := filepath.Join(filepath.Dir(publicTestDir), "test_expected")
 
 	Build(publicTestDir)
 
-	validateFiles := func(path string, fileInfo os.FileInfo, inpErr error) error {
-		// Only compare files
-		stat, err := os.Stat(path)
-		require.NoError(t, err)
-		if !(stat.Mode().IsRegular()) {
-			return nil
+	// Verify content matches expected using diff (https://stackoverflow.com/a/1644641/3219667)
+	cmd := exec.Command("diff", "-arq", expectDir+"/", publicTestDir+"/")
+	outDiff, errDiff := cmd.Output()
+	assert.Equal(t, "", string(outDiff))
+	if errDiff != nil {
+		fmt.Println("Error running:", cmd, outDiff, errDiff)
+
+		// Replace expected directory with output from test for comparison in git
+		cmd = exec.Command("mv", expectDir+"/", expectDir+"-backup/")
+		out, err := cmd.Output()
+		if err != nil {
+			fmt.Println("Error running:", cmd, out, err)
 		}
 
-		rel, err := filepath.Rel(publicTestDir, path)
-		require.NoError(t, err)
-		expectedPath := filepath.Join(expectDir, rel)
-		// Verify content matches expected
-		same, err := testUtils.FileCmp(path, expectedPath, 0)
-		assert.Equal(t, err, nil, fmt.Sprintf("Error comparing files %s", rel))
-		assert.Equal(t, same, true, fmt.Sprintf("Error: use git to diff %s", rel))
-		return nil
+		cmd = exec.Command("cp", "-R", publicTestDir+"/", expectDir+"/")
+		out, err = cmd.Output()
+		if err != nil {
+			fmt.Println("Error running:", cmd, out, err)
+		}
+		fmt.Println("See git diff for changes")
 	}
-	err = filepath.Walk(publicTestDir, validateFiles)
-	require.NoError(t, err)
+	require.NoError(t, errDiff)
 }
