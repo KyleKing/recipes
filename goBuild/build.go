@@ -133,7 +133,7 @@ func writeTemplate(writePath string, template func() templ.Component) error {
 		return err
 	}
 	// file mode (permissions), set to 0644 for read/write permissions for the owner and read permissions for others
-	if err := os.WriteFile(writePath, html.Bytes(), 0644); err != nil {
+	if err := os.WriteFile(writePath, html.Bytes(), 0o644); err != nil {
 		return err
 	}
 	return nil
@@ -141,7 +141,6 @@ func writeTemplate(writePath string, template func() templ.Component) error {
 
 // Create the nested `/*/index.html` files
 func writeDirIndex(subDir string, recipes []Recipe) error {
-
 	template := func() templ.Component {
 		// Order recipes alphabetically
 		sort.Slice(recipes, func(i, j int) bool {
@@ -156,7 +155,6 @@ func writeDirIndex(subDir string, recipes []Recipe) error {
 
 // Create `/index.html`
 func writeHomeIndex(publicDir string, subdirectories []Subdir) error {
-
 	template := func() templ.Component {
 		return homePage(subdirectories)
 	}

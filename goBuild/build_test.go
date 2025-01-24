@@ -5,7 +5,6 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
-
 	"testing"
 
 	"github.com/stretchr/testify/assert"
