@@ -35,6 +35,10 @@ description = "View test coverage of most recent test run"
 # https://go.dev/blog/cover#heat-maps
 run = "go tool cover -html=coverage.out"
 
+[tasks.update]
+description = "Update dependencies"
+run = ["go get -u ./...", "go mod tidy"]
+
 [tools]
 "go:github.com/Antonboom/testifylint" = "1.5.2"
 "go:github.com/a-h/templ/cmd/templ" = "0.3.819"
