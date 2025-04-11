@@ -33,10 +33,41 @@ body {
     --color-link-visited: #07a;
 }
 
+/* Minimum set of used fonts from Atkinson Hyperlegible fonts
+   https://www.brailleinstitute.org/freefont */
+@font-face {
+    font-family: "Atkinson Hyperlegible Mono";
+    src: url("./resources/AtkinsonHyperlegibleMono-Regular.woff2")
+        format("woff2");
+}
+@font-face {
+    font-family: "Atkinson Hyperlegible Next";
+    src: url("./resources/AtkinsonHyperlegibleNext-BoldItalic.woff2")
+        format("woff2");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Atkinson Hyperlegible Next";
+    src: url("./resources/AtkinsonHyperlegibleNext-Bold.woff2") format("woff2");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Atkinson Hyperlegible Next";
+    src: url("./resources/AtkinsonHyperlegibleNext-RegularItalic.woff2")
+        format("woff2");
+    font-style: italic;
+}
+@font-face {
+    font-family: "Atkinson Hyperlegible Next";
+    src: url("./resources/AtkinsonHyperlegibleNext-Regular.woff2")
+        format("woff2");
+}
+
 body {
     background: var(--color-back);
     color: var(--color-text);
-    font-family: Palatino, serif;
+    font-family: "Atkinson Hyperlegible Next"; /* Palatino, serif; */
     font-size: 18px;
     line-height: 1.45;
     margin-bottom: 40%;
@@ -50,7 +81,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Optima, sans-serif;
+    font-family: "Atkinson Hyperlegible Next"; /* Optima, sans-serif; */
     line-height: 0.9;
 }
 
@@ -82,7 +113,7 @@ ul.flat-list li {
 
 pre {
     background: rgba(180, 180, 180, 0.1);
-    font-family: monospace;
+    font-family: "Atkinson Hyperlegible Mono"; /* monospace; */
     padding: 5px;
 }
 pre code {
