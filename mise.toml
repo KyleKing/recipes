@@ -40,8 +40,8 @@ description = "Update dependencies"
 run = ["go get -u ./...", "go mod tidy"]
 
 [tools]
-"go:github.com/Antonboom/testifylint" = "1.5.2"
-"go:github.com/a-h/templ/cmd/templ" = "0.3.819"
-"go:github.com/tdewolff/minify/v2/cmd/minify" = "2.21.2"
-"npm:pagefind" = "1.3.0"
+"go:github.com/Antonboom/testifylint" = "1.6.4"
+"go:github.com/a-h/templ/cmd/templ" = "0.3.943"
+"go:github.com/tdewolff/minify/v2/cmd/minify" = "2.24.3"
+"npm:pagefind" = "1.4.0"
 "pipx:optimize-images" = "latest"
