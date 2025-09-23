@@ -39,7 +39,8 @@ templ page(title string, contents templ.Component, pageType string) {
 				<script>
                 window.addEventListener("DOMContentLoaded", (event) => {
                   new PagefindUI({
-                    element: "#search",
+                    autofocus: true,
+                    element: "#pagefind-search",
                     highlightParam: "highlight",
                     showSubResults: true,
                   });
@@ -55,7 +56,7 @@ templ recipePage(title string, content string) {
 }
 
 templ searchContents() {
-	<div style="margin-top: 10px" id="search"></div>
+	<div style="margin-top: 10px" id="pagefind-search"></div>
 }
 
 templ searchPage() {
