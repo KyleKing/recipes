@@ -1,0 +1,19 @@
+[[tools."go:github.com/Antonboom/testifylint"]]
+version = "1.5.2"
+backend = "go:github.com/Antonboom/testifylint"
+
+[[tools."go:github.com/a-h/templ/cmd/templ"]]
+version = "0.3.819"
+backend = "go:github.com/a-h/templ/cmd/templ"
+
+[[tools."go:github.com/tdewolff/minify/v2/cmd/minify"]]
+version = "2.21.2"
+backend = "go:github.com/tdewolff/minify/v2/cmd/minify"
+
+[[tools."npm:pagefind"]]
+version = "1.3.0"
+backend = "npm:pagefind"
+
+[[tools."pipx:optimize-images"]]
+version = "1.5.1"
+backend = "pipx:optimize-images"

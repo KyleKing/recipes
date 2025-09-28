@@ -37,15 +37,15 @@ templ page(title string, contents templ.Component, pageType string) {
 			</main>
 			if pageType == SEARCH_PAGE {
 				<script>
-                window.addEventListener("DOMContentLoaded", (event) => {
-                  new PagefindUI({
-                    autofocus: true,
-                    element: "#pagefind-search",
-                    highlightParam: "highlight",
-                    showSubResults: true,
-                  });
-                });
-              </script>
+					window.addEventListener("DOMContentLoaded", (event) => {
+						new PagefindUI({
+							autofocus: true,
+							element: "#pagefind-search",
+							highlightParam: "highlight",
+							showSubResults: true,
+						});
+					});
+				</script>
 			}
 		</body>
 	</html>
