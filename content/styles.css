@@ -189,3 +189,133 @@ main {
         max-width: 85%;
     }
 }
+
+/* E-ink Display Optimizations for TRMNL (800x480 landscape) */
+/* Trigger with ?trmnl=1 query parameter or use .trmnl-mode class */
+
+body.trmnl-mode {
+    font-size: 14px;
+    line-height: 1.25;
+    margin: 0;
+    padding: 8px;
+    background: white;
+    color: black;
+    margin-bottom: 0;
+}
+
+/* Hide navigation and images for cleaner e-ink display */
+body.trmnl-mode nav,
+body.trmnl-mode img,
+body.trmnl-mode img.fullsize,
+body.trmnl-mode .wrapped-images-container,
+body.trmnl-mode .square-img-container {
+    display: none;
+}
+
+/* Compact headings for limited vertical space */
+body.trmnl-mode h1 {
+    font-size: 22px;
+    margin: 4px 0;
+    line-height: 1.1;
+}
+
+body.trmnl-mode h2 {
+    font-size: 17px;
+    margin: 6px 0 3px 0;
+    line-height: 1.1;
+}
+
+body.trmnl-mode h3 {
+    font-size: 15px;
+    margin: 5px 0 2px 0;
+    line-height: 1.1;
+}
+
+body.trmnl-mode h4,
+body.trmnl-mode h5,
+body.trmnl-mode h6 {
+    font-size: 14px;
+    margin: 4px 0 2px 0;
+}
+
+/* Compact lists for ingredient and recipe steps */
+body.trmnl-mode ul,
+body.trmnl-mode ol {
+    margin: 3px 0;
+    padding-left: 18px;
+}
+
+body.trmnl-mode li {
+    margin: 1px 0;
+    line-height: 1.2;
+}
+
+/* Hide checkboxes and show as regular list */
+body.trmnl-mode .task-list input[type="checkbox"] {
+    display: none;
+}
+
+body.trmnl-mode .task-list {
+    list-style: disc;
+    padding-left: 15px;
+}
+
+/* Ensure main content uses full width */
+body.trmnl-mode main {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Compact sections */
+body.trmnl-mode section {
+    margin-bottom: 8px;
+}
+
+/* Reduce paragraph spacing */
+body.trmnl-mode p {
+    margin: 3px 0;
+}
+
+/* Make links readable on e-ink (no colors, just underline) */
+body.trmnl-mode a {
+    color: black;
+    text-decoration: underline;
+}
+
+body.trmnl-mode a:visited {
+    color: black;
+}
+
+body.trmnl-mode a:hover {
+    text-decoration: underline;
+}
+
+/* Compact code blocks if present */
+body.trmnl-mode pre {
+    font-size: 12px;
+    padding: 3px;
+    margin: 3px 0;
+}
+
+body.trmnl-mode code {
+    font-size: 13px;
+}
+
+/* Hide navigation flat list */
+body.trmnl-mode ul.flat-list {
+    display: none;
+}
+
+/* Optimize nested lists in recipes */
+body.trmnl-mode ol ol,
+body.trmnl-mode ul ul {
+    margin: 2px 0;
+    padding-left: 15px;
+}
+
+/* Ensure proper rendering on grayscale e-ink */
+body.trmnl-mode {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

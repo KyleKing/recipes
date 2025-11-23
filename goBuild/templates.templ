@@ -23,6 +23,14 @@ templ page(title string, contents templ.Component, pageType string) {
 				<link href="/pagefind/pagefind-ui.css" rel="stylesheet"/>
 				<script src="/pagefind/pagefind-ui.js"></script>
 			}
+			<script>
+				// Detect ?trmnl=1 query parameter and enable e-ink mode
+				if (window.location.search.includes('trmnl=1')) {
+					document.addEventListener('DOMContentLoaded', function() {
+						document.body.classList.add('trmnl-mode');
+					});
+				}
+			</script>
 		</head>
 		<body>
 			<nav>
