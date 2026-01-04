@@ -11,13 +11,13 @@ run = "./build.sh"
 [tasks.format]
 description = "Format (and generate) code"
 run = ["templ generate", "templ fmt ./goBuild/", "go fmt ./..."]
-sources = ['**/*.go']
+sources = ['**/*.go', 'go.sum']
 
 [tasks.lint]
 depends = ["format"]
 description = "Run linters"
 run = "testifylint --enable-all ."
-sources = ['**/*_test.go']
+sources = ['**/*_test.go', 'go.sum']
 
 [tasks.serve]
 description = "Serve the built documentation"
@@ -28,7 +28,7 @@ depends = ["format", "lint"]
 description = "Run test"
 # https://stackoverflow.com/a/21725603/3219667
 run = "go test -coverprofile=coverage.out -coverpkg=./... ./..."
-sources = ['**/*.go']
+sources = ['**/*.go', 'go.sum']
 
 [tasks.coverage]
 description = "View test coverage of most recent test run"
@@ -37,11 +37,11 @@ run = "go tool cover -html=coverage.out"
 
 [tasks.update]
 description = "Update dependencies"
-run = ["mise upgrade --bump", "go get -u ./...", "go mod tidy"]
+run = ["mise upgrade --bump", "go get -u .", "go mod tidy"]
 
 [tools]
 "go:github.com/Antonboom/testifylint" = "1.6.4"
-"go:github.com/a-h/templ/cmd/templ" = "0.3.943"
-"go:github.com/tdewolff/minify/v2/cmd/minify" = "2.24.3"
+"go:github.com/a-h/templ/cmd/templ" = "0.3.977"
+"go:github.com/tdewolff/minify/v2/cmd/minify" = "2.24.8"
 "npm:pagefind" = "1.4.0"
 "pipx:optimize-images" = "latest"
