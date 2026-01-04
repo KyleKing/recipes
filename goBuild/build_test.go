@@ -120,8 +120,31 @@ func TestBuild(t *testing.T) {
 	cmd := exec.Command("diff", "-arq", expectDir+"/", publicTestDir+"/")
 	out, err := cmd.Output()
 	if err != nil {
+		// Show detailed diff for each file that differs
+		detailedDiff := getDetailedDiff(expectDir, publicTestDir)
 		gitDiffChanges(expectDir, publicTestDir)
+		t.Errorf("Build output differs from expected:\n%s\nDetailed differences:\n%s", string(out), detailedDiff)
 	}
-	assert.Equal(t, "", string(out))
-	require.NoError(t, err)
+	assert.Equal(t, "", string(out), "Build output should match expected (run 'git diff' to see changes)")
+	require.NoError(t, err, "Build verification failed - see detailed diff above")
+}
+
+// getDetailedDiff runs unified diff on directories to show actual differences
+func getDetailedDiff(expectDir, publicTestDir string) string {
+	// Run unified diff to show actual content differences
+	cmd := exec.Command("diff", "-ur", expectDir+"/", publicTestDir+"/")
+	out, _ := cmd.Output()
+
+	if len(out) == 0 {
+		return "No detailed differences found"
+	}
+
+	// Limit output to first 5000 characters to avoid overwhelming test output
+	maxLen := 5000
+	result := string(out)
+	if len(result) > maxLen {
+		result = result[:maxLen] + fmt.Sprintf("\n... (truncated, %d more characters)", len(result)-maxLen)
+	}
+
+	return result
 }
