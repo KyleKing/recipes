@@ -10,7 +10,23 @@ allowed-tools: WebFetch, Read, Write, Glob, Grep, Bash, AskUserQuestion
 
 When creating a recipe from a URL, follow these steps:
 
-### 1. Fetch and Parse Recipe Content
+### 1. Check for Existing Similar Recipes
+
+Before creating a new recipe, verify that a similar recipe doesn't already exist:
+
+1. **Extract recipe name**: Determine the likely recipe name from the URL or use WebFetch to get the title
+2. **Search for similar recipes**:
+   - Use Glob to list existing recipe files in relevant category directories
+   - Use Grep to search for similar recipe names/titles across all recipe files
+   - Check for recipes with similar ingredients or titles
+3. **Handle duplicates**:
+   - If a similar recipe exists, ask the user whether to:
+     - Update/enhance the existing recipe
+     - Create a new variant (e.g., "instant_pot_beef_stew" vs "slow_cooker_beef_stew")
+     - Skip creation entirely
+   - Only proceed with creating a new recipe if confirmed by user or clearly distinct
+
+### 2. Fetch and Parse Recipe Content
 
 1. Use WebFetch to retrieve the recipe from the provided URL
 2. Extract the following information:
@@ -19,7 +35,7 @@ When creating a recipe from a URL, follow these steps:
    - Recipe steps/instructions (preserve exact details)
    - Any additional notes, tips, or variations
 
-### 2. Determine Category
+### 3. Determine Category
 
 Analyze the recipe type and select the appropriate category directory:
 
@@ -38,7 +54,7 @@ Analyze the recipe type and select the appropriate category directory:
 
 If unsure between categories, use AskUserQuestion to confirm.
 
-### 3. Generate Filename
+### 4. Generate Filename
 
 1. Convert recipe title to snake_case
 2. Remove special characters, keep only letters, numbers, underscores
@@ -47,7 +63,7 @@ If unsure between categories, use AskUserQuestion to confirm.
    - "Chocolate Chip Cookies" → `chocolate_chip_cookies.dj`
    - "Baked Tofu With Peanut Sauce" → `baked_tofu_with_peanut_sauce.dj`
 
-### 4. Format Recipe Content
+### 5. Format Recipe Content
 
 Use this template structure:
 
@@ -62,8 +78,21 @@ Based on [URL](URL)
 
 ## Ingredients
 
-- [ ] [ingredient with measurement]
-- [ ] [ingredient with measurement]
+- [ ] [first ingredient used - in preparation order]
+- [ ] [second ingredient used]
+- [ ] [third ingredient used]
+
+(or with grouping for distinct components:)
+
+### [Component 1]
+
+- [ ] [ingredient]
+- [ ] [ingredient]
+
+### [Component 2]
+
+- [ ] [ingredient]
+- [ ] [ingredient]
 
 ## Recipe
 
@@ -82,10 +111,19 @@ Based on [URL](URL)
 - **Metadata**: Always start with `rating=0` and `image="None.jpeg"` for new recipes
 - **Ingredients**:
   - Use checkbox format: `- [ ]`
+  - **Order ingredients in preparation order** (order they are used in recipe steps)
   - Preserve exact measurements and quantities from source
-  - Can group with `### [Label]` subsections if recipe has distinct preparation steps
-  - Use nested lists for grouped ingredients
   - Keep original ingredient names and details
+  - **Group when appropriate** if recipe has distinct components:
+    - Use `### [Label]` subheaders for clear sections (e.g., `### Chicken`, `### White sauce`, `### For serving`)
+    - OR use nested lists with one level of indentation (indent with 2 spaces) with descriptive parent item:
+      ```
+      - In a small bowl, whisk together
+        - [ ] ingredient 1
+        - [ ] ingredient 2
+      ```
+  - Use grouping sparingly - only when components are clearly distinct
+  - Avoid deep nesting beyond one level
 - **Recipe Steps**:
   - Use numbered lists: `1.`
   - Preserve step details and order from source
@@ -96,7 +134,7 @@ Based on [URL](URL)
   - Can reference related recipes using markdown links
   - Use numbered or bulleted lists as appropriate
 
-### 5. Writing Style
+### 6. Writing Style
 
 Follow Kyle's style:
 - Direct and concise
@@ -106,7 +144,7 @@ Follow Kyle's style:
 - Preserve technical precision from original recipe
 - Only adapt formatting to match template, not content
 
-### 6. Save File
+### 7. Save File
 
 1. Write file to: `content/[category]/[filename].dj`
 2. Confirm file creation with user
@@ -136,13 +174,19 @@ Follow Kyle's style:
 1. WebFetch the URL
 2. Determine category: `main`
 3. Generate filename: `baked_tofu_with_peanut_sauce_and_coconut_lime_rice.dj`
-4. Format with all ingredients in single list (or grouped if source has clear sections)
+4. **Order ingredients in preparation order** and group if recipe has distinct components:
+   - If source clearly separates components (e.g., marinade, sauce, rice), use `###` subheaders
+   - If ingredients are used together in a step, consider nested list grouping
+   - If recipe is linear without distinct sections, use single ordered list
 5. Write to `content/main/baked_tofu_with_peanut_sauce_and_coconut_lime_rice.dj`
 
 ## Important Reminders
 
+- **Check for duplicates first**: Always search for existing similar recipes before creating a new one
 - **Do not hallucinate**: Only use information from the source URL
 - **Preserve measurements**: Keep exact quantities and units
+- **Order ingredients in preparation order**: List ingredients in the order they are used in recipe steps
+- **Group appropriately**: Use subheaders or nested lists only when recipe has clearly distinct components
 - **Minimal adaptation**: Only change formatting to match template, not content
 - **No emojis**: Never add emojis to recipe files
 - **Check category**: If unsure, ask user to confirm category

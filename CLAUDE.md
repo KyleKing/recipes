@@ -91,7 +91,13 @@ Based on [URL](URL)
 
 ## Ingredients
 
-- [ ] Ingredient with measurement
+- [ ] Ingredient with measurement (ordered in preparation order)
+- [ ] Next ingredient
+
+### Optional Grouping (if recipe has distinct components)
+
+- [ ] Grouped ingredient 1
+- [ ] Grouped ingredient 2
 
 ## Recipe
 
@@ -106,16 +112,27 @@ Based on [URL](URL)
 - `rating`: Integer 0-5 (0 = "Not yet rated", 1-5 = "X / 5")
 - `image`: Filename (with extension) or `"None"` / `"None.jpeg"` for placeholder
 
+**Ingredient ordering**:
+- List ingredients in preparation order (order they are used in recipe steps)
+- Group related ingredients when recipe has distinct components using either:
+  - Subheaders: `### Component Name` (e.g., `### Chicken`, `### White sauce`)
+  - Nested lists: One level of indentation with descriptive parent item (e.g., `- In a small bowl, whisk together`)
+- Use grouping sparingly - only when components are clearly distinct
+
 **Categories**: Subdirectories in `content/`:
 - `main/`, `dessert/`, `pasta/`, `soup/`, `drinks/`, `breakfast/`, `poultry/`, `sushi/`, `seafood/`, `bread/`, `sides/`, `reference/`
 
 ### Common Patterns
 
 **Adding a new recipe**:
-1. Create `content/<category>/<recipe_name>.dj` following template
-2. Use `snake_case` for filenames
-3. Optionally add matching image (same basename, `.jpeg`/`.jpg`/`.png`)
-4. Run `mise run build` to generate HTML
+1. **Check for duplicates**: Search for existing similar recipes first
+   - Use Glob to list files in relevant category directories
+   - Use Grep to search for similar recipe names/titles in existing files
+   - If a similar recipe exists, either update the existing one or confirm with user that a new variant is warranted
+2. Create `content/<category>/<recipe_name>.dj` following template
+3. Use `snake_case` for filenames
+4. Optionally add matching image (same basename, `.jpeg`/`.jpg`/`.png`)
+5. Run `mise run build` to generate HTML
 
 **Modifying build logic**:
 1. Edit `.templ` files for HTML structure changes
