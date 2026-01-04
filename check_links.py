@@ -2,7 +2,7 @@
 # /// script
 # requires-python = ">=3.13"
 # dependencies = [
-#     "requests>=2.31.0",
+#     "httpx>=0.27.0",
 #     "rich>=13.7.0",
 # ]
 # ///
@@ -26,13 +26,13 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import asyncio
 import re
-import time
 from dataclasses import dataclass
 from pathlib import Path
 from typing import TYPE_CHECKING
 
-import requests
+import httpx
 from rich.console import Console
 from rich.progress import Progress, SpinnerColumn, TextColumn
 from rich.table import Table
@@ -44,7 +44,11 @@ console = Console()
 
 USER_AGENT = "Mozilla/5.0 (compatible; LinkChecker/1.0; +https://recipes.kyleking.me)"
 TIMEOUT = 10
-RATE_LIMIT_DELAY = 1.0
+RATE_LIMIT_DELAY = 0.5
+WAYBACK_DELAY = 2.0
+
+_url_cache: dict[str, bool] = {}
+_archive_cache: dict[str, str | None] = {}
 
 
 @dataclass(frozen=True)
@@ -66,96 +70,135 @@ class LinkReplacement:
     status: LinkStatus
 
 
-def _extract_links(content: str) -> Iterator[tuple[str, str, str]]:
+def _normalize_url(url: str) -> str:
+    """Normalize URL by trimming trailing slashes."""
+    return url.rstrip('/')
+
+
+def _extract_links(content: str) -> Iterator[tuple[str, str, str, str | None]]:
     """Extract markdown links from content.
 
-    Returns tuples of (full_match, display_text, url).
+    Returns tuples of (full_match, display_text, url, existing_archive_link).
     """
-    pattern = r'\[([^\]]+)\]\(([^\)]+)\)'
+    pattern = r'\[([^\]]+)\]\(([^\)]+)\)(?:\s+\(\[archive\]\(([^\)]+)\)\))?'
     for match in re.finditer(pattern, content):
-        full_match = match.group(0)
+        link_text = match.group(0)
         display_text = match.group(1)
         url = match.group(2)
+        existing_archive = match.group(3)
+
         if url.startswith(('http://', 'https://')):
-            yield full_match, display_text, url
+            full_match = link_text
+            yield full_match, display_text, url, existing_archive
 
 
-def _check_url_availability(url: str) -> bool:
+async def _check_url_availability(client: httpx.AsyncClient, url: str) -> bool:
     """Check if URL is available and returns valid content."""
+    normalized_url = _normalize_url(url)
+
+    if normalized_url in _url_cache:
+        return _url_cache[normalized_url]
+
     try:
-        response = requests.head(
-            url,
+        await asyncio.sleep(RATE_LIMIT_DELAY)
+        response = await client.head(
+            normalized_url,
             headers={'User-Agent': USER_AGENT},
             timeout=TIMEOUT,
-            allow_redirects=True,
+            follow_redirects=True,
         )
         if response.status_code == 405:
-            response = requests.get(
-                url,
+            response = await client.get(
+                normalized_url,
                 headers={'User-Agent': USER_AGENT},
                 timeout=TIMEOUT,
-                allow_redirects=True,
+                follow_redirects=True,
             )
-        return response.status_code < 400
-    except (requests.RequestException, Exception) as exc:
-        console.print(f"[yellow]Error checking {url}: {exc!s}[/yellow]")
+        is_available = response.status_code < 400
+        _url_cache[normalized_url] = is_available
+        return is_available
+    except (httpx.HTTPError, Exception) as exc:
+        console.print(f"[yellow]Error checking {normalized_url}: {exc!s}[/yellow]")
+        _url_cache[normalized_url] = False
         return False
 
 
-def _get_wayback_archive(url: str) -> str | None:
+async def _get_wayback_archive(client: httpx.AsyncClient, url: str) -> str | None:
     """Get most recent Wayback Machine archive URL."""
-    api_url = f"https://archive.org/wayback/available?url={url}"
+    normalized_url = _normalize_url(url)
+
+    if normalized_url in _archive_cache:
+        return _archive_cache[normalized_url]
+
+    api_url = f"https://archive.org/wayback/available?url={normalized_url}"
     try:
-        time.sleep(RATE_LIMIT_DELAY)
-        response = requests.get(
+        await asyncio.sleep(WAYBACK_DELAY)
+        response = await client.get(
             api_url,
             headers={'User-Agent': USER_AGENT},
             timeout=TIMEOUT,
         )
         data = response.json()
 
+        archive_url = None
         if archived := data.get('archived_snapshots', {}).get('closest'):
             if archived.get('available'):
-                return archived['url']
-    except (requests.RequestException, Exception) as exc:
-        console.print(f"[yellow]Error checking Wayback for {url}: {exc!s}[/yellow]")
+                archive_url = archived['url']
 
-    return None
+        _archive_cache[normalized_url] = archive_url
+        return archive_url
+    except (httpx.HTTPError, Exception) as exc:
+        console.print(f"[yellow]Error checking Wayback for {normalized_url}: {exc!s}[/yellow]")
+        _archive_cache[normalized_url] = None
+        return None
 
 
-def _check_link(url: str) -> LinkStatus:
+async def _check_link(client: httpx.AsyncClient, url: str) -> LinkStatus:
     """Check link status and find archive if needed."""
-    console.print(f"Checking: {url}")
+    normalized_url = _normalize_url(url)
+    console.print(f"Checking: {normalized_url}")
 
-    if 'web.archive.org' in url:
+    if 'web.archive.org' in normalized_url:
         return LinkStatus(
-            original_url=url,
+            original_url=normalized_url,
             is_live=True,
-            archive_url=url,
+            archive_url=normalized_url,
         )
 
-    is_live = _check_url_availability(url)
-    archive_url = _get_wayback_archive(url)
+    is_live = await _check_url_availability(client, normalized_url)
+    archive_url = await _get_wayback_archive(client, normalized_url)
 
     return LinkStatus(
-        original_url=url,
+        original_url=normalized_url,
         is_live=is_live,
         archive_url=archive_url,
     )
 
 
-def _create_replacement(full_match: str, display_text: str, status: LinkStatus) -> LinkReplacement | None:
+def _create_replacement(
+    full_match: str,
+    display_text: str,
+    status: LinkStatus,
+    existing_archive: str | None,
+) -> LinkReplacement | None:
     """Create replacement text based on link status.
 
     Returns None if no replacement needed.
     """
+    base_link = f"[{display_text}]({status.original_url})"
+
     if status.is_live and status.archive_url:
-        new_text = f"{full_match} ([archive]({status.archive_url}))"
+        new_text = f"{base_link} ([archive]({status.archive_url}))"
+        if existing_archive and _normalize_url(existing_archive) == _normalize_url(status.archive_url):
+            return None
     elif not status.is_live and status.archive_url:
         new_text = f"[{display_text}]({status.archive_url})"
     elif not status.is_live and not status.archive_url:
-        new_text = f"{full_match} (link unavailable)"
+        new_text = f"{base_link} (link unavailable)"
     else:
+        return None
+
+    if new_text == full_match:
         return None
 
     return LinkReplacement(
@@ -165,14 +208,14 @@ def _create_replacement(full_match: str, display_text: str, status: LinkStatus) 
     )
 
 
-def _process_file(file_path: Path) -> list[LinkReplacement]:
+async def _process_file(client: httpx.AsyncClient, file_path: Path) -> list[LinkReplacement]:
     """Process a single file and return replacements."""
     content = file_path.read_text()
     replacements = []
 
-    for full_match, display_text, url in _extract_links(content):
-        status = _check_link(url)
-        replacement = _create_replacement(full_match, display_text, status)
+    for full_match, display_text, url, existing_archive in _extract_links(content):
+        status = await _check_link(client, url)
+        replacement = _create_replacement(full_match, display_text, status, existing_archive)
 
         if replacement:
             replacements.append(replacement)
@@ -209,7 +252,7 @@ def _find_dj_files(content_dir: Path) -> list[Path]:
     return sorted(content_dir.rglob("*.dj"))
 
 
-def main() -> None:
+async def main() -> None:
     """Check and fix links in recipe markdown files."""
     parser = argparse.ArgumentParser(description="Check and fix links in recipe files")
     parser.add_argument(
@@ -244,22 +287,23 @@ def main() -> None:
 
     all_replacements: dict[Path, list[LinkReplacement]] = {}
 
-    with Progress(
-        SpinnerColumn(),
-        TextColumn("[progress.description]{task.description}"),
-        console=console,
-    ) as progress:
-        task = progress.add_task("Processing files...", total=len(files))
+    async with httpx.AsyncClient() as client:
+        with Progress(
+            SpinnerColumn(),
+            TextColumn("[progress.description]{task.description}"),
+            console=console,
+        ) as progress:
+            task = progress.add_task("Processing files...", total=len(files))
 
-        for file_path in files:
-            progress.update(task, description=f"Processing {file_path.name}")
+            for file_path in files:
+                progress.update(task, description=f"Processing {file_path.name}")
 
-            replacements = _process_file(file_path)
-            if replacements:
-                all_replacements[file_path] = replacements
-                _apply_replacements(file_path, replacements, dry_run=args.dry_run)
+                replacements = await _process_file(client, file_path)
+                if replacements:
+                    all_replacements[file_path] = replacements
+                    _apply_replacements(file_path, replacements, dry_run=args.dry_run)
 
-            progress.advance(task)
+                progress.advance(task)
 
     _print_summary(all_replacements, dry_run=args.dry_run)
 
@@ -273,21 +317,30 @@ def _print_summary(all_replacements: dict[Path, list[LinkReplacement]], *, dry_r
     table = Table(title=f"\nSummary ({'Dry Run' if dry_run else 'Applied Changes'})")
     table.add_column("File", style="cyan")
     table.add_column("Changes", justify="right", style="magenta")
-    table.add_column("Status", style="green")
+    table.add_column("Live", justify="right", style="green")
+    table.add_column("Archived", justify="right", style="yellow")
+    table.add_column("Dead", justify="right", style="red")
 
     total_changes = 0
+    total_live = 0
+    total_archived = 0
+    total_dead = 0
+
     for file_path, replacements in all_replacements.items():
         total_changes += len(replacements)
-        status_counts = {
-            "live": sum(1 for r in replacements if r.status.is_live),
-            "archived": sum(1 for r in replacements if not r.status.is_live and r.status.archive_url),
-            "dead": sum(1 for r in replacements if not r.status.is_live and not r.status.archive_url),
-        }
-        status = f"✓{status_counts['live']} 📦{status_counts['archived']} ✗{status_counts['dead']}"
-        table.add_row(file_path.name, str(len(replacements)), status)
+        live = sum(1 for r in replacements if r.status.is_live)
+        archived = sum(1 for r in replacements if not r.status.is_live and r.status.archive_url)
+        dead = sum(1 for r in replacements if not r.status.is_live and not r.status.archive_url)
+
+        total_live += live
+        total_archived += archived
+        total_dead += dead
+
+        table.add_row(file_path.name, str(len(replacements)), str(live), str(archived), str(dead))
 
     console.print(table)
     console.print(f"\n[bold]Total: {total_changes} link{'s' if total_changes != 1 else ''} in {len(all_replacements)} file{'s' if len(all_replacements) != 1 else ''}[/bold]")
+    console.print(f"[bold]Live: {total_live}, Archived: {total_archived}, Dead: {total_dead}[/bold]")
 
     if dry_run:
         console.print("\n[yellow]Run without --dry-run to apply changes[/yellow]")
@@ -296,4 +349,4 @@ def _print_summary(all_replacements: dict[Path, list[LinkReplacement]], *, dry_r
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())

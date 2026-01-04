@@ -62,6 +62,9 @@ Temporary Items
 # ------------------------------------------------------------------------------
 # Custom Rules
 
+# Python
+__pycache__
+
 # Generated HTML
 /public
 
