@@ -7,6 +7,7 @@ import (
 	"path/filepath"
 	"testing"
 
+	"github.com/sivukhin/godjot/djot_parser"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -49,6 +50,63 @@ func gitDiffChanges(expectDir, publicTestDir string) {
 		fmt.Println("Error running:", cmd, out, err)
 	}
 	fmt.Println("See git diff for changes")
+}
+
+func TestValidateNoDuplicateHeaders(t *testing.T) {
+	t.Run("valid file with unique headers", func(t *testing.T) {
+		content := []byte(`# Main Title
+
+## Section 1
+
+Content here
+
+## Section 2
+
+More content
+`)
+		ast := djot_parser.BuildDjotAst(content)
+		err := validateNoDuplicateHeaders(ast, "test.dj")
+		assert.NoError(t, err)
+	})
+
+	t.Run("duplicate headers detected", func(t *testing.T) {
+		content := []byte(`# Main Title
+
+## Ingredients
+
+- Item 1
+
+## Recipe
+
+- Step 1
+
+## Ingredients
+
+- Item 2
+`)
+		ast := djot_parser.BuildDjotAst(content)
+		err := validateNoDuplicateHeaders(ast, "test.dj")
+		assert.Error(t, err)
+		assert.Contains(t, err.Error(), "duplicate header found")
+		assert.Contains(t, err.Error(), "Ingredients")
+	})
+
+	t.Run("nested headers with same text", func(t *testing.T) {
+		content := []byte(`# Main Title
+
+## Section
+
+### Details
+
+## Section
+
+More content
+`)
+		ast := djot_parser.BuildDjotAst(content)
+		err := validateNoDuplicateHeaders(ast, "test.dj")
+		assert.Error(t, err)
+		assert.Contains(t, err.Error(), "Section")
+	})
 }
 
 func TestBuild(t *testing.T) {

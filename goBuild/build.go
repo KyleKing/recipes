@@ -83,9 +83,42 @@ func formattedDivPartial(publicDir string, path string, rMap RecipeMap) func(djo
 	}
 }
 
+// Validate no duplicate headers exist in the AST
+func validateNoDuplicateHeaders(ast []djot_parser.TreeNode[djot_parser.DjotNode], path string) error {
+	headings := make([]string, 0)
+	seen := make(map[string]bool)
+
+	var collectHeadings func(djot_parser.TreeNode[djot_parser.DjotNode])
+	collectHeadings = func(node djot_parser.TreeNode[djot_parser.DjotNode]) {
+		if node.Type == djot_parser.HeadingNode {
+			headingText := strings.TrimSpace(string(node.FullText()))
+			if headingText != "" {
+				headings = append(headings, headingText)
+			}
+		}
+	}
+
+	for _, node := range ast {
+		node.Traverse(collectHeadings)
+	}
+
+	for _, heading := range headings {
+		if seen[heading] {
+			return fmt.Errorf("duplicate header found in %s: \"%s\"", path, heading)
+		}
+		seen[heading] = true
+	}
+
+	return nil
+}
+
 // Converts djot string to rendered HTML
 func renderDjot(text []byte, publicDir string, path string, rMap RecipeMap) string {
 	ast := djot_parser.BuildDjotAst(text)
+
+	err := validateNoDuplicateHeaders(ast, path)
+	ExitOnError(err)
+
 	section := djot_parser.NewConversionContext(
 		"html",
 		djot_parser.DefaultConversionRegistry,
