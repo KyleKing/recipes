@@ -2,7 +2,7 @@
 
 The recipe includes a series of steps shared with other recipes, such as Focaccia
 
-Based on [Bread Baking for Beginners](https://www.alchemybread.com/book) ([archive](http://web.archive.org/web/20250814021256/http://www.alchemybread.com/book)) ([archive](http://web.archive.org/web/20250814021256/http://www.alchemybread.com/book)) page 28-33
+Based on [Bread Baking for Beginners](https://www.alchemybread.com/book) ([archive](http://web.archive.org/web/20250814021256/http://www.alchemybread.com/book)) page 28-33
 
 { rating=5 image="None" }
 :::
@@ -59,7 +59,7 @@ Based on [Bread Baking for Beginners](https://www.alchemybread.com/book) ([archi
 
 ## Temperature Calculation
 
-Based on [Bread Baking for Beginners](https://www.alchemybread.com/book) ([archive](http://web.archive.org/web/20250814021256/http://www.alchemybread.com/book)) ([archive](http://web.archive.org/web/20250814021256/http://www.alchemybread.com/book)) page 21-22
+Based on [Bread Baking for Beginners](https://www.alchemybread.com/book) ([archive](http://web.archive.org/web/20250814021256/http://www.alchemybread.com/book)) page 21-22
 
 All numbers are in Fahrenheit and assume non-high altitude conditions. See page 21-22 of the book for additional information
 
@@ -80,4 +80,4 @@ t_water = (76 * 3) - (65 + 65 + 5) = 93
 ## Notes
 
 - See the book for a full page of common F&Q's and additional tips throughout the recipe
-- Also see [https://cooking.nytimes.com/recipes/...](https://cooking.nytimes.com/recipes/11376-no-knead-bread) ([archive](http://web.archive.org/web/20251127221249/https://cooking.nytimes.com/recipes/11376-no-knead-bread)) (the NYT most popular recipe) for comparison
+- Also see [https://cooking.nytimes.com/recipes/...](https://cooking.nytimes.com/recipes/11376-no-knead-bread) ([archive](http://web.archive.org/web/20251230110929/https://cooking.nytimes.com/recipes/11376-no-knead-bread)) (the NYT most popular recipe) for comparison

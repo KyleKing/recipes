@@ -75,21 +75,28 @@ def _normalize_url(url: str) -> str:
     return url.rstrip('/')
 
 
-def _extract_links(content: str) -> Iterator[tuple[str, str, str, str | None]]:
+def _extract_links(content: str) -> Iterator[tuple[str, str, str, str | None, bool]]:
     """Extract markdown links from content.
 
-    Returns tuples of (full_match, display_text, url, existing_archive_link).
+    Returns tuples of (full_match, display_text, url, existing_archive_link, has_unavailable_marker).
     """
-    pattern = r'\[([^\]]+)\]\(([^\)]+)\)(?:\s+\(\[archive\]\(([^\)]+)\)\))?'
+    pattern = r'\[([^\]]+)\]\(([^\)]+)\)(?:\s+\(\[archive\]\([^\)]+\)\))*(?:\s+\(link unavailable\))*'
     for match in re.finditer(pattern, content):
-        link_text = match.group(0)
+        full_match = match.group(0)
         display_text = match.group(1)
         url = match.group(2)
-        existing_archive = match.group(3)
 
-        if url.startswith(('http://', 'https://')):
-            full_match = link_text
-            yield full_match, display_text, url, existing_archive
+        if not url.startswith(('http://', 'https://')):
+            continue
+
+        existing_archive = None
+        archive_pattern = r'\(\[archive\]\(([^\)]+)\)\)'
+        if archive_matches := list(re.finditer(archive_pattern, full_match)):
+            existing_archive = archive_matches[0].group(1)
+
+        has_unavailable = '(link unavailable)' in full_match
+
+        yield full_match, display_text, url, existing_archive, has_unavailable
 
 
 async def _check_url_availability(client: httpx.AsyncClient, url: str) -> bool:
@@ -180,6 +187,7 @@ def _create_replacement(
     display_text: str,
     status: LinkStatus,
     existing_archive: str | None,
+    has_unavailable: bool,
 ) -> LinkReplacement | None:
     """Create replacement text based on link status.
 
@@ -189,8 +197,6 @@ def _create_replacement(
 
     if status.is_live and status.archive_url:
         new_text = f"{base_link} ([archive]({status.archive_url}))"
-        if existing_archive and _normalize_url(existing_archive) == _normalize_url(status.archive_url):
-            return None
     elif not status.is_live and status.archive_url:
         new_text = f"[{display_text}]({status.archive_url})"
     elif not status.is_live and not status.archive_url:
@@ -213,9 +219,9 @@ async def _process_file(client: httpx.AsyncClient, file_path: Path) -> list[Link
     content = file_path.read_text()
     replacements = []
 
-    for full_match, display_text, url, existing_archive in _extract_links(content):
+    for full_match, display_text, url, existing_archive, has_unavailable in _extract_links(content):
         status = await _check_link(client, url)
-        replacement = _create_replacement(full_match, display_text, status, existing_archive)
+        replacement = _create_replacement(full_match, display_text, status, existing_archive, has_unavailable)
 
         if replacement:
             replacements.append(replacement)
@@ -318,29 +324,29 @@ def _print_summary(all_replacements: dict[Path, list[LinkReplacement]], *, dry_r
     table.add_column("File", style="cyan")
     table.add_column("Changes", justify="right", style="magenta")
     table.add_column("Live", justify="right", style="green")
-    table.add_column("Archived", justify="right", style="yellow")
+    table.add_column("Wayback", justify="right", style="yellow")
     table.add_column("Dead", justify="right", style="red")
 
     total_changes = 0
     total_live = 0
-    total_archived = 0
+    total_wayback = 0
     total_dead = 0
 
     for file_path, replacements in all_replacements.items():
         total_changes += len(replacements)
         live = sum(1 for r in replacements if r.status.is_live)
-        archived = sum(1 for r in replacements if not r.status.is_live and r.status.archive_url)
+        wayback = sum(1 for r in replacements if not r.status.is_live and r.status.archive_url)
         dead = sum(1 for r in replacements if not r.status.is_live and not r.status.archive_url)
 
         total_live += live
-        total_archived += archived
+        total_wayback += wayback
         total_dead += dead
 
-        table.add_row(file_path.name, str(len(replacements)), str(live), str(archived), str(dead))
+        table.add_row(file_path.name, str(len(replacements)), str(live), str(wayback), str(dead))
 
     console.print(table)
     console.print(f"\n[bold]Total: {total_changes} link{'s' if total_changes != 1 else ''} in {len(all_replacements)} file{'s' if len(all_replacements) != 1 else ''}[/bold]")
-    console.print(f"[bold]Live: {total_live}, Archived: {total_archived}, Dead: {total_dead}[/bold]")
+    console.print(f"[bold]Live: {total_live}, Wayback: {total_wayback}, Dead: {total_dead}[/bold]")
 
     if dry_run:
         console.print("\n[yellow]Run without --dry-run to apply changes[/yellow]")
