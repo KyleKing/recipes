@@ -1,7 +1,10 @@
 [tasks.compress]
-# Previously run in: https://github.com/KyleKing/recipes/blob/ba1eae685fd8a75458a80bec0d4377a3b0a24195/recipes/tasks.py#L55
 description = "Compress image for performance. Requires a path"
 run = "optimize-images -mh 900 --convert-all --force-delete"
+
+[tasks.wayback]
+description = "Update Wayback Machine Links. Optionally specify arguments (see 'mise run wayback --help')"
+run = "./check_links.py"
 
 [tasks.build]
 depends = ["format"]
