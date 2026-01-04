@@ -25,9 +25,9 @@ templ page(title string, contents templ.Component, pageType string) {
 			}
 			<script>
 				// Detect ?trmnl=1 query parameter and enable e-ink mode
-				if (window.location.search.includes('trmnl=1')) {
-					document.addEventListener('DOMContentLoaded', function() {
-						document.body.classList.add('trmnl-mode');
+				if (window.location.search.includes("trmnl=1")) {
+					document.addEventListener("DOMContentLoaded", function () {
+						document.body.classList.add("trmnl-mode");
 					});
 				}
 			</script>
