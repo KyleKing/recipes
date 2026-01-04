@@ -7,6 +7,7 @@ import (
 	"path/filepath"
 	"testing"
 
+	"github.com/sivukhin/godjot/djot_parser"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )
@@ -51,6 +52,63 @@ func gitDiffChanges(expectDir, publicTestDir string) {
 	fmt.Println("See git diff for changes")
 }
 
+func TestValidateNoDuplicateHeaders(t *testing.T) {
+	t.Run("valid file with unique headers", func(t *testing.T) {
+		content := []byte(`# Main Title
+
+## Section 1
+
+Content here
+
+## Section 2
+
+More content
+`)
+		ast := djot_parser.BuildDjotAst(content)
+		err := validateNoDuplicateHeaders(ast, "test.dj")
+		assert.NoError(t, err)
+	})
+
+	t.Run("duplicate headers detected", func(t *testing.T) {
+		content := []byte(`# Main Title
+
+## Ingredients
+
+- Item 1
+
+## Recipe
+
+- Step 1
+
+## Ingredients
+
+- Item 2
+`)
+		ast := djot_parser.BuildDjotAst(content)
+		err := validateNoDuplicateHeaders(ast, "test.dj")
+		assert.Error(t, err)
+		assert.Contains(t, err.Error(), "duplicate header found")
+		assert.Contains(t, err.Error(), "Ingredients")
+	})
+
+	t.Run("nested headers with same text", func(t *testing.T) {
+		content := []byte(`# Main Title
+
+## Section
+
+### Details
+
+## Section
+
+More content
+`)
+		ast := djot_parser.BuildDjotAst(content)
+		err := validateNoDuplicateHeaders(ast, "test.dj")
+		assert.Error(t, err)
+		assert.Contains(t, err.Error(), "Section")
+	})
+}
+
 func TestBuild(t *testing.T) {
 	publicTestDir, errInit := initTestDir()
 	require.NoError(t, errInit)
@@ -62,8 +120,31 @@ func TestBuild(t *testing.T) {
 	cmd := exec.Command("diff", "-arq", expectDir+"/", publicTestDir+"/")
 	out, err := cmd.Output()
 	if err != nil {
+		// Show detailed diff for each file that differs
+		detailedDiff := getDetailedDiff(expectDir, publicTestDir)
 		gitDiffChanges(expectDir, publicTestDir)
+		t.Errorf("Build output differs from expected:\n%s\nDetailed differences:\n%s", string(out), detailedDiff)
 	}
-	assert.Equal(t, "", string(out))
-	require.NoError(t, err)
+	assert.Equal(t, "", string(out), "Build output should match expected (run 'git diff' to see changes)")
+	require.NoError(t, err, "Build verification failed - see detailed diff above")
+}
+
+// getDetailedDiff runs unified diff on directories to show actual differences
+func getDetailedDiff(expectDir, publicTestDir string) string {
+	// Run unified diff to show actual content differences
+	cmd := exec.Command("diff", "-ur", expectDir+"/", publicTestDir+"/")
+	out, _ := cmd.Output()
+
+	if len(out) == 0 {
+		return "No detailed differences found"
+	}
+
+	// Limit output to first 5000 characters to avoid overwhelming test output
+	maxLen := 5000
+	result := string(out)
+	if len(result) > maxLen {
+		result = result[:maxLen] + fmt.Sprintf("\n... (truncated, %d more characters)", len(result)-maxLen)
+	}
+
+	return result
 }

@@ -3,11 +3,11 @@ version = "1.6.4"
 backend = "go:github.com/Antonboom/testifylint"
 
 [[tools."go:github.com/a-h/templ/cmd/templ"]]
-version = "0.3.943"
+version = "0.3.977"
 backend = "go:github.com/a-h/templ/cmd/templ"
 
 [[tools."go:github.com/tdewolff/minify/v2/cmd/minify"]]
-version = "2.24.3"
+version = "2.24.8"
 backend = "go:github.com/tdewolff/minify/v2/cmd/minify"
 
 [[tools."npm:pagefind"]]

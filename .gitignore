@@ -62,8 +62,14 @@ Temporary Items
 # ------------------------------------------------------------------------------
 # Custom Rules
 
+# Python
+__pycache__
+
 # Generated HTML
 /public
 
 # Generated go
 *_templ.go
+
+# Track Claude Configuration
+!.claude/**/*
