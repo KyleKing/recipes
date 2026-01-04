@@ -4,7 +4,7 @@ run = "optimize-images -mh 900 --convert-all --force-delete"
 
 [tasks.wayback]
 description = "Update Wayback Machine Links. Optionally specify arguments (see 'mise run wayback --help')"
-run = "./check_links.py"
+run = "./_update_wayback_links.py"
 
 [tasks.build]
 depends = ["format"]

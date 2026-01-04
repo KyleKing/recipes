@@ -12,15 +12,16 @@
 This script:
 - Finds all .dj files in content directory
 - Checks if links are still available
-- Searches Wayback Machine for available snapshots
+- Searches Wayback Machine for archived versions
 - Updates links based on availability:
-  - Working link: adds Wayback Machine link after original
-  - Only Wayback works: replaces with Wayback link
+  - Working link: adds web archive permalink after original
+  - Only archive works: replaces with archive link
   - Neither works: adds note in parenthesis
+- Implemented in Python because existing Go codebase does not write back to djot
 
 Usage:
-    ./check_links.py              # Apply changes
-    ./check_links.py --dry-run    # Preview changes without modifying files
+    mise run wayback            # Apply changes
+    mise run wayback --dry-run  # Preview changes without modifying files
 """
 
 from __future__ import annotations
@@ -48,7 +49,7 @@ RATE_LIMIT_DELAY = 0.5
 WAYBACK_DELAY = 2.0
 
 _url_cache: dict[str, bool] = {}
-_wayback_cache: dict[str, str | None] = {}
+_archive_cache: dict[str, str | None] = {}
 
 
 @dataclass(frozen=True)
@@ -57,7 +58,7 @@ class LinkStatus:
 
     original_url: str
     is_live: bool
-    wayback_url: str | None
+    archive_url: str | None
     error_message: str | None = None
 
 
@@ -78,10 +79,10 @@ def _normalize_url(url: str) -> str:
 def _extract_links(content: str) -> Iterator[tuple[str, str, str, str | None, bool]]:
     """Extract markdown links from content.
 
-    Returns tuples of (full_match, display_text, url, existing_wayback_link, has_unavailable_marker).
+    Returns tuples of (full_match, display_text, url, existing_archive_link, has_unavailable_marker).
     """
     pattern = re.compile(
-        r"\[([^\]]+)\]\(([^\)]+)\)(?:\s+\(\[(?:wayback|archive)\]\([^\)]+\)\))*(?:\s+\((?:wayback|link) unavailable\))*"
+        r"\[([^\]]+)\]\(([^\)]+)\)(?:\s+\(\[archive\]\([^\)]+\)\))*(?:\s+\(link unavailable\))*"
     )
     for match in re.finditer(pattern, content):
         full_match = match.group(0)
@@ -91,14 +92,14 @@ def _extract_links(content: str) -> Iterator[tuple[str, str, str, str | None, bo
         if not url.startswith(("http://", "https://")):
             continue
 
-        existing_wayback = None
-        wayback_pattern = re.compile(r"\(\[(?:wayback|archive)\]\(([^\)]+)\)\)")
-        if wayback_matches := list(re.finditer(wayback_pattern, full_match)):
-            existing_wayback = wayback_matches[0].group(1)
+        existing_archive = None
+        archive_pattern = re.compile(r"\(\[archive\]\(([^\)]+)\)\)")
+        if archive_matches := list(re.finditer(archive_pattern, full_match)):
+            existing_archive = archive_matches[0].group(1)
 
-        has_unavailable = "(wayback unavailable)" in full_match or "(link unavailable)" in full_match
+        has_unavailable = "(link unavailable)" in full_match
 
-        yield full_match, display_text, url, existing_wayback, has_unavailable
+        yield full_match, display_text, url, existing_archive, has_unavailable
 
 
 async def _check_url_availability(client: httpx.AsyncClient, url: str) -> bool:
@@ -132,12 +133,12 @@ async def _check_url_availability(client: httpx.AsyncClient, url: str) -> bool:
         return False
 
 
-async def _get_wayback_link(client: httpx.AsyncClient, url: str) -> str | None:
-    """Get most recent Wayback Machine link."""
+async def _get_wayback_archive(client: httpx.AsyncClient, url: str) -> str | None:
+    """Get most recent Wayback Machine archive URL."""
     normalized_url = _normalize_url(url)
 
-    if normalized_url in _wayback_cache:
-        return _wayback_cache[normalized_url]
+    if normalized_url in _archive_cache:
+        return _archive_cache[normalized_url]
 
     api_url = f"https://archive.org/wayback/available?url={normalized_url}"
     try:
@@ -149,23 +150,23 @@ async def _get_wayback_link(client: httpx.AsyncClient, url: str) -> str | None:
         )
         data = response.json()
 
-        wayback_url = None
+        archive_url = None
         if archived := data.get("archived_snapshots", {}).get("closest"):
             if archived.get("available"):
-                wayback_url = archived["url"]
+                archive_url = archived["url"]
 
-        _wayback_cache[normalized_url] = wayback_url
-        return wayback_url
+        _archive_cache[normalized_url] = archive_url
+        return archive_url
     except (httpx.HTTPError, Exception) as exc:
         console.print(
             f"[yellow]Error checking Wayback for {normalized_url}: {exc!s}[/yellow]"
         )
-        _wayback_cache[normalized_url] = None
+        _archive_cache[normalized_url] = None
         return None
 
 
 async def _check_link(client: httpx.AsyncClient, url: str) -> LinkStatus:
-    """Check link status and find Wayback link if needed."""
+    """Check link status and find archive if needed."""
     normalized_url = _normalize_url(url)
     console.print(f"Checking: {normalized_url}")
 
@@ -173,16 +174,16 @@ async def _check_link(client: httpx.AsyncClient, url: str) -> LinkStatus:
         return LinkStatus(
             original_url=normalized_url,
             is_live=True,
-            wayback_url=normalized_url,
+            archive_url=normalized_url,
         )
 
     is_live = await _check_url_availability(client, normalized_url)
-    wayback_url = await _get_wayback_link(client, normalized_url)
+    archive_url = await _get_wayback_archive(client, normalized_url)
 
     return LinkStatus(
         original_url=normalized_url,
         is_live=is_live,
-        wayback_url=wayback_url,
+        archive_url=archive_url,
     )
 
 
@@ -190,7 +191,7 @@ def _create_replacement(
     full_match: str,
     display_text: str,
     status: LinkStatus,
-    existing_wayback: str | None,
+    existing_archive: str | None,
     has_unavailable: bool,
 ) -> LinkReplacement | None:
     """Create replacement text based on link status.
@@ -199,12 +200,12 @@ def _create_replacement(
     """
     base_link = f"[{display_text}]({status.original_url})"
 
-    if status.is_live and status.wayback_url:
-        new_text = f"{base_link} ([wayback]({status.wayback_url}))"
-    elif not status.is_live and status.wayback_url:
-        new_text = f"[{display_text}]({status.wayback_url})"
-    elif not status.is_live and not status.wayback_url:
-        new_text = f"{base_link} (wayback unavailable)"
+    if status.is_live and status.archive_url:
+        new_text = f"{base_link} ([archive]({status.archive_url}))"
+    elif not status.is_live and status.archive_url:
+        new_text = f"[{display_text}]({status.archive_url})"
+    elif not status.is_live and not status.archive_url:
+        new_text = f"{base_link} (link unavailable)"
     else:
         return None
 
@@ -229,16 +230,16 @@ async def _process_file(
         full_match,
         display_text,
         url,
-        existing_wayback,
+        existing_archive,
         has_unavailable,
     ) in _extract_links(content):
-        if not force and existing_wayback:
-            console.print(f"Skipping (has wayback link): {_normalize_url(url)}")
+        if not force and existing_archive:
+            console.print(f"Skipping (has archive): {_normalize_url(url)}")
             continue
 
         status = await _check_link(client, url)
         replacement = _create_replacement(
-            full_match, display_text, status, existing_wayback, has_unavailable
+            full_match, display_text, status, existing_archive, has_unavailable
         )
 
         if replacement:
@@ -296,7 +297,7 @@ async def main() -> None:
     parser.add_argument(
         "--force",
         action="store_true",
-        help="Force check all links, even those with existing wayback links",
+        help="Force check all links, even those with existing archive links",
     )
     args = parser.parse_args()
 
@@ -365,10 +366,10 @@ def _print_summary(
         total_changes += len(replacements)
         live = sum(1 for r in replacements if r.status.is_live)
         wayback = sum(
-            1 for r in replacements if not r.status.is_live and r.status.wayback_url
+            1 for r in replacements if not r.status.is_live and r.status.archive_url
         )
         dead = sum(
-            1 for r in replacements if not r.status.is_live and not r.status.wayback_url
+            1 for r in replacements if not r.status.is_live and not r.status.archive_url
         )
 
         total_live += live
