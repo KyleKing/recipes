@@ -72,7 +72,7 @@ class LinkReplacement:
 
 def _normalize_url(url: str) -> str:
     """Normalize URL by trimming trailing slashes."""
-    return url.rstrip('/')
+    return url.rstrip("/")
 
 
 def _extract_links(content: str) -> Iterator[tuple[str, str, str, str | None, bool]]:
@@ -80,21 +80,23 @@ def _extract_links(content: str) -> Iterator[tuple[str, str, str, str | None, bo
 
     Returns tuples of (full_match, display_text, url, existing_archive_link, has_unavailable_marker).
     """
-    pattern = r'\[([^\]]+)\]\(([^\)]+)\)(?:\s+\(\[archive\]\([^\)]+\)\))*(?:\s+\(link unavailable\))*'
+    pattern = re.compile(
+        r"\[([^\]]+)\]\(([^\)]+)\)(?:\s+\(\[archive\]\([^\)]+\)\))*(?:\s+\(link unavailable\))*"
+    )
     for match in re.finditer(pattern, content):
         full_match = match.group(0)
         display_text = match.group(1)
         url = match.group(2)
 
-        if not url.startswith(('http://', 'https://')):
+        if not url.startswith(("http://", "https://")):
             continue
 
         existing_archive = None
-        archive_pattern = r'\(\[archive\]\(([^\)]+)\)\)'
+        archive_pattern = re.compile(r"\(\[archive\]\(([^\)]+)\)\)")
         if archive_matches := list(re.finditer(archive_pattern, full_match)):
             existing_archive = archive_matches[0].group(1)
 
-        has_unavailable = '(link unavailable)' in full_match
+        has_unavailable = "(link unavailable)" in full_match
 
         yield full_match, display_text, url, existing_archive, has_unavailable
 
@@ -110,14 +112,14 @@ async def _check_url_availability(client: httpx.AsyncClient, url: str) -> bool:
         await asyncio.sleep(RATE_LIMIT_DELAY)
         response = await client.head(
             normalized_url,
-            headers={'User-Agent': USER_AGENT},
+            headers={"User-Agent": USER_AGENT},
             timeout=TIMEOUT,
             follow_redirects=True,
         )
         if response.status_code == 405:
             response = await client.get(
                 normalized_url,
-                headers={'User-Agent': USER_AGENT},
+                headers={"User-Agent": USER_AGENT},
                 timeout=TIMEOUT,
                 follow_redirects=True,
             )
@@ -142,20 +144,22 @@ async def _get_wayback_archive(client: httpx.AsyncClient, url: str) -> str | Non
         await asyncio.sleep(WAYBACK_DELAY)
         response = await client.get(
             api_url,
-            headers={'User-Agent': USER_AGENT},
+            headers={"User-Agent": USER_AGENT},
             timeout=TIMEOUT,
         )
         data = response.json()
 
         archive_url = None
-        if archived := data.get('archived_snapshots', {}).get('closest'):
-            if archived.get('available'):
-                archive_url = archived['url']
+        if archived := data.get("archived_snapshots", {}).get("closest"):
+            if archived.get("available"):
+                archive_url = archived["url"]
 
         _archive_cache[normalized_url] = archive_url
         return archive_url
     except (httpx.HTTPError, Exception) as exc:
-        console.print(f"[yellow]Error checking Wayback for {normalized_url}: {exc!s}[/yellow]")
+        console.print(
+            f"[yellow]Error checking Wayback for {normalized_url}: {exc!s}[/yellow]"
+        )
         _archive_cache[normalized_url] = None
         return None
 
@@ -165,7 +169,7 @@ async def _check_link(client: httpx.AsyncClient, url: str) -> LinkStatus:
     normalized_url = _normalize_url(url)
     console.print(f"Checking: {normalized_url}")
 
-    if 'web.archive.org' in normalized_url:
+    if "web.archive.org" in normalized_url:
         return LinkStatus(
             original_url=normalized_url,
             is_live=True,
@@ -214,14 +218,28 @@ def _create_replacement(
     )
 
 
-async def _process_file(client: httpx.AsyncClient, file_path: Path) -> list[LinkReplacement]:
+async def _process_file(
+    client: httpx.AsyncClient, file_path: Path, *, force: bool = False
+) -> list[LinkReplacement]:
     """Process a single file and return replacements."""
     content = file_path.read_text()
     replacements = []
 
-    for full_match, display_text, url, existing_archive, has_unavailable in _extract_links(content):
+    for (
+        full_match,
+        display_text,
+        url,
+        existing_archive,
+        has_unavailable,
+    ) in _extract_links(content):
+        if not force and existing_archive:
+            console.print(f"Skipping (has archive): {_normalize_url(url)}")
+            continue
+
         status = await _check_link(client, url)
-        replacement = _create_replacement(full_match, display_text, status, existing_archive, has_unavailable)
+        replacement = _create_replacement(
+            full_match, display_text, status, existing_archive, has_unavailable
+        )
 
         if replacement:
             replacements.append(replacement)
@@ -229,7 +247,9 @@ async def _process_file(client: httpx.AsyncClient, file_path: Path) -> list[Link
     return replacements
 
 
-def _apply_replacements(file_path: Path, replacements: list[LinkReplacement], *, dry_run: bool) -> None:
+def _apply_replacements(
+    file_path: Path, replacements: list[LinkReplacement], *, dry_run: bool
+) -> None:
     """Apply replacements to file."""
     if not replacements:
         return
@@ -250,7 +270,9 @@ def _apply_replacements(file_path: Path, replacements: list[LinkReplacement], *,
         )
 
     file_path.write_text(content)
-    console.print(f"[green]Updated {file_path.name} with {len(replacements)} changes[/green]")
+    console.print(
+        f"[green]Updated {file_path.name} with {len(replacements)} changes[/green]"
+    )
 
 
 def _find_dj_files(content_dir: Path) -> list[Path]:
@@ -270,6 +292,11 @@ async def main() -> None:
         "--file",
         type=Path,
         help="Process a single file instead of all files",
+    )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Force check all links, even those with existing archive links",
     )
     args = parser.parse_args()
 
@@ -304,7 +331,7 @@ async def main() -> None:
             for file_path in files:
                 progress.update(task, description=f"Processing {file_path.name}")
 
-                replacements = await _process_file(client, file_path)
+                replacements = await _process_file(client, file_path, force=args.force)
                 if replacements:
                     all_replacements[file_path] = replacements
                     _apply_replacements(file_path, replacements, dry_run=args.dry_run)
@@ -314,7 +341,9 @@ async def main() -> None:
     _print_summary(all_replacements, dry_run=args.dry_run)
 
 
-def _print_summary(all_replacements: dict[Path, list[LinkReplacement]], *, dry_run: bool) -> None:
+def _print_summary(
+    all_replacements: dict[Path, list[LinkReplacement]], *, dry_run: bool
+) -> None:
     """Print summary of changes."""
     if not all_replacements:
         console.print("\n[green]No changes needed - all links are valid![/green]")
@@ -335,18 +364,28 @@ def _print_summary(all_replacements: dict[Path, list[LinkReplacement]], *, dry_r
     for file_path, replacements in all_replacements.items():
         total_changes += len(replacements)
         live = sum(1 for r in replacements if r.status.is_live)
-        wayback = sum(1 for r in replacements if not r.status.is_live and r.status.archive_url)
-        dead = sum(1 for r in replacements if not r.status.is_live and not r.status.archive_url)
+        wayback = sum(
+            1 for r in replacements if not r.status.is_live and r.status.archive_url
+        )
+        dead = sum(
+            1 for r in replacements if not r.status.is_live and not r.status.archive_url
+        )
 
         total_live += live
         total_wayback += wayback
         total_dead += dead
 
-        table.add_row(file_path.name, str(len(replacements)), str(live), str(wayback), str(dead))
+        table.add_row(
+            file_path.name, str(len(replacements)), str(live), str(wayback), str(dead)
+        )
 
     console.print(table)
-    console.print(f"\n[bold]Total: {total_changes} link{'s' if total_changes != 1 else ''} in {len(all_replacements)} file{'s' if len(all_replacements) != 1 else ''}[/bold]")
-    console.print(f"[bold]Live: {total_live}, Wayback: {total_wayback}, Dead: {total_dead}[/bold]")
+    console.print(
+        f"\n[bold]Total: {total_changes} link{'s' if total_changes != 1 else ''} in {len(all_replacements)} file{'s' if len(all_replacements) != 1 else ''}[/bold]"
+    )
+    console.print(
+        f"[bold]Live: {total_live}, Wayback: {total_wayback}, Dead: {total_dead}[/bold]"
+    )
 
     if dry_run:
         console.print("\n[yellow]Run without --dry-run to apply changes[/yellow]")
