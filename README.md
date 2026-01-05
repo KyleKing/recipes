@@ -18,5 +18,3 @@ To display a recipe on your TRMNL e-ink device:
 1. Add `?trmnl=1` to any recipe URL (e.g., `https://recipes.kyleking.me/seafood/shrimp_scampi.html?trmnl=1`)
 2. Create a TRMNL Private Plugin with the Polling strategy
 3. Use your recipe URL (with `?trmnl=1`) as the polling URL
-
-For complete setup instructions, see the [TRMNL Setup Guide](docs/TRMNL_SETUP.md).
