@@ -1,4 +1,11 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"><link rel="stylesheet" href="/styles.css"><title>Test : Recipe</title><meta name="description" content="Kyle and Alex's Personal Recipes"></head><body><nav><div><a href="/"><i><strong>Home</strong></i></a> &nbsp; <a href="/search.html"><i><strong>Search</strong></i></a></div></nav><main data-pagefind-body><section id="Test-Recipe">
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"><link rel="stylesheet" href="/styles.css"><title>Test : Recipe</title><meta name="description" content="Kyle and Alex's Personal Recipes"><script>
+				// Detect ?trmnl=1 query parameter and enable e-ink mode
+				if (window.location.search.includes('trmnl=1')) {
+					document.addEventListener('DOMContentLoaded', function() {
+						document.body.classList.add('trmnl-mode');
+					});
+				}
+			</script></head><body><nav><div><a href="/"><i><strong>Home</strong></i></a> &nbsp; <a href="/search.html"><i><strong>Search</strong></i></a></div></nav><main data-pagefind-body><section id="Test-Recipe">
 <h1>Test Recipe</h1>
 <p>Based on <a href="https://github.com/KyleKing/recipes">https://github.com/KyleKing/recipes</a></p>
 <p>Personal rating: 5 / 5</p><img class="fullsize" alt="test.image" src="/test/test.image"></section>
