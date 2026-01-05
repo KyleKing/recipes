@@ -13,10 +13,10 @@ This script:
 - Finds all .dj files in content directory
 - Checks if links are still available
 - Searches Wayback Machine for available snapshots
-- Updates links based on availability:
+- Updates links based on availability (ALWAYS preserves original URL):
   - Working link: adds Wayback Machine link after original
-  - Only Wayback works: replaces with Wayback link
-  - Neither works: adds note in parenthesis
+  - Dead link with Wayback: adds Wayback link after original
+  - Dead link without Wayback: adds "(wayback unavailable)" note
 - Implemented in Python because existing Go codebase does not write back to djot
 
 Usage:
@@ -27,18 +27,15 @@ Usage:
 import argparse
 import asyncio
 import re
+from collections.abc import Iterator
 from dataclasses import dataclass
 from pathlib import Path
-from typing import TYPE_CHECKING
 from urllib.parse import urlparse
 
 import httpx
 from rich.console import Console
 from rich.progress import Progress, SpinnerColumn, TextColumn
 from rich.table import Table
-
-if TYPE_CHECKING:
-    from collections.abc import Iterator
 
 console = Console()
 
