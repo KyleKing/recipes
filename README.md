@@ -7,7 +7,7 @@ Kyle and Alex's Personal Recipes. Hosted at https://recipes.kyleking.me
 - **Search:** Full-text search across all recipes
 - **TRMNL E-ink Display:** Optimized display mode for TRMNL e-ink devices (800x480 landscape)
   - Add `?trmnl=1` to any recipe URL for e-ink optimized view
-  - See [TRMNL Setup Guide](docs/TRMNL_SETUP.md) for detailed instructions
+  - See [TRMNL Setup Guide](_TRMNL_SETUP.md) for detailed instructions
 
 ## Usage
 

@@ -34,7 +34,6 @@ Add `?trmnl=1` to the end of your recipe URL.
    - **Name:** "Active Recipe" (or your preferred name)
    - **Strategy:** Polling
    - **Polling URL:** Your recipe URL with `?trmnl=1` parameter
-   - **Polling Interval:** Choose how often to refresh (e.g., "Every 6 hours" or "Every day")
    - **Polling Verb:** GET
 
 ### Step 4: Configure the Markup
