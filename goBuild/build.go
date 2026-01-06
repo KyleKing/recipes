@@ -3,6 +3,7 @@ package goBuild
 import (
 	"bytes"
 	"context"
+	"encoding/json"
 	"fmt"
 	"log"
 	"os"
@@ -19,6 +20,96 @@ import (
 )
 
 const IMAGE_PLACEHOLDER = "/_static/placeholder.png"
+
+// Convert Djot AST to JSON for TRMNL display
+func renderDjotToJson(ast []djot_parser.TreeNode[djot_parser.DjotNode]) string {
+	title := ""
+	ingredients := []string{}
+	steps := []string{}
+	currentSection := ""
+
+	var extractListItemText func(djot_parser.TreeNode[djot_parser.DjotNode]) string
+	extractListItemText = func(node djot_parser.TreeNode[djot_parser.DjotNode]) string {
+		var textParts []string
+		for _, child := range node.Children {
+			// Only extract text from paragraph and inline nodes, skip nested lists
+			if child.Type != djot_parser.UnorderedListNode && child.Type != djot_parser.TaskListNode && child.Type != djot_parser.OrderedListNode {
+				text := strings.TrimSpace(string(child.FullText()))
+				if text != "" {
+					textParts = append(textParts, text)
+				}
+			}
+		}
+		return strings.Join(textParts, " ")
+	}
+
+	var extractListItems func(djot_parser.TreeNode[djot_parser.DjotNode], int) []string
+	extractListItems = func(node djot_parser.TreeNode[djot_parser.DjotNode], level int) []string {
+		var items []string
+		prefix := strings.Repeat("> ", level)
+		for _, child := range node.Children {
+			if child.Type == djot_parser.ListItemNode {
+				text := extractListItemText(child)
+				if text != "" {
+					items = append(items, prefix+text)
+				}
+				// Recursively extract nested list items with increased level
+				for _, nestedChild := range child.Children {
+					if nestedChild.Type == djot_parser.UnorderedListNode || nestedChild.Type == djot_parser.TaskListNode || nestedChild.Type == djot_parser.OrderedListNode {
+						items = append(items, extractListItems(nestedChild, level+1)...)
+					}
+				}
+			}
+		}
+		return items
+	}
+
+	var traverse func(djot_parser.TreeNode[djot_parser.DjotNode])
+	traverse = func(node djot_parser.TreeNode[djot_parser.DjotNode]) {
+		if node.Type == djot_parser.HeadingNode {
+			levelStr := node.Attributes.Get(djot_parser.HeadingLevelKey)
+			text := strings.TrimSpace(string(node.FullText()))
+
+			if (levelStr == "1" || levelStr == "#") && title == "" {
+				title = text
+			} else if levelStr == "2" || levelStr == "##" {
+				currentSection = text
+			}
+		}
+
+		for _, child := range node.Children {
+			traverse(child)
+		}
+
+		if node.Type == djot_parser.UnorderedListNode || node.Type == djot_parser.TaskListNode {
+			if strings.EqualFold(currentSection, "Ingredients") {
+				ingredients = extractListItems(node, 0)
+			}
+		} else if node.Type == djot_parser.OrderedListNode {
+			if strings.EqualFold(currentSection, "Recipe") {
+				steps = extractListItems(node, 0)
+			}
+		}
+	}
+
+	for _, node := range ast {
+		traverse(node)
+	}
+
+	result := map[string]interface{}{
+		"title":       title,
+		"ingredients": ingredients,
+		"steps":       steps,
+	}
+
+	jsonBytes, err := json.Marshal(result)
+	if err != nil {
+		log.Printf("Error marshaling JSON: %v", err)
+		return "{}"
+	}
+
+	return string(jsonBytes)
+}
 
 // Convert 'li' nodes to either tasks or unstyled
 // Note: adapted without 'disable' and without \n from: https://github.com/sivukhin/godjot/pull/12
@@ -130,7 +221,7 @@ func renderDjot(text []byte, publicDir string, path string, rMap RecipeMap) stri
 	return section
 }
 
-// Replaces .dj file with templated .html one
+// Replaces .dj file with templated .html and .json files
 func replaceDjWithHtml(publicDir string, rMap RecipeMap) filepath.WalkFunc {
 	return func(path string, fileInfo os.FileInfo, inpErr error) error {
 		if filepath.Ext(path) != ".dj" {
@@ -145,11 +236,32 @@ func replaceDjWithHtml(publicDir string, rMap RecipeMap) filepath.WalkFunc {
 				return err
 			}
 
-			section := renderDjot(text, publicDir, path, rMap)
+			// Parse AST once for both HTML and plaintext
+			ast := djot_parser.BuildDjotAst(text)
+			err = validateNoDuplicateHeaders(ast, path)
+			ExitOnError(err)
+
+			// Generate HTML
+			htmlSection := djot_parser.NewConversionContext(
+				"html",
+				djot_parser.DefaultConversionRegistry,
+				map[djot_parser.DjotNode]djot_parser.Conversion{
+					djot_parser.DivNode:      formattedDivPartial(publicDir, path, rMap),
+					djot_parser.ListItemNode: listItemConversion,
+				},
+			).ConvertDjotToHtml(&html_writer.HtmlWriter{}, ast...)
+
 			template := func() templ.Component {
-				return recipePage(toTitleName(path)+" : Recipe", section)
+				return recipePage(toTitleName(path)+" : Recipe", htmlSection)
 			}
 			writeTemplate(withHtmlExt(path), template)
+
+			// Generate JSON for TRMNL
+			jsonContent := renderDjotToJson(ast)
+			jsonPath := strings.TrimSuffix(path, ".dj") + ".json"
+			if err := os.WriteFile(jsonPath, []byte(jsonContent), 0o644); err != nil {
+				return err
+			}
 		}
 
 		if err := os.Remove(path); err != nil {

@@ -4,11 +4,11 @@ This guide explains how to display recipes from this site on your TRMNL e-ink di
 
 ## Overview
 
-The recipe site has been optimized for TRMNL e-ink displays with:
-- Compact typography and spacing for the 800x480 resolution
-- Hidden navigation and images to maximize recipe content
-- Black and white color scheme optimized for grayscale e-ink
-- Query parameter activation (`?trmnl=1`) for easy switching
+The recipe site generates JSON versions of all recipes optimized for TRMNL e-ink displays:
+- Structured JSON format with title, ingredients, and steps
+- Easy to format using Liquid templates in TRMNL
+- No images or navigation to maximize recipe content
+- Perfect for grayscale e-ink rendering
 
 ## Quick Start
 
@@ -16,55 +16,65 @@ The recipe site has been optimized for TRMNL e-ink displays with:
 
 1. Navigate to your deployed recipe site (e.g., `https://recipes.kyleking.me`)
 2. Find the recipe you want to display on TRMNL
-3. Copy the full URL of the recipe page
+3. Copy the full URL and change `.html` to `.json`
 
-**Example:** `https://recipes.kyleking.me/seafood/shrimp_scampi.html`
+**Example:**
+- HTML version: `https://recipes.kyleking.me/seafood/shrimp_scampi.html`
+- JSON version: `https://recipes.kyleking.me/seafood/shrimp_scampi.json`
 
-### Step 2: Add TRMNL Query Parameter
-
-Add `?trmnl=1` to the end of your recipe URL.
-
-**Example:** `https://recipes.kyleking.me/seafood/shrimp_scampi.html?trmnl=1`
-
-### Step 3: Create TRMNL Private Plugin
+### Step 2: Create TRMNL Private Plugin
 
 1. Log into your TRMNL account at [usetrmnl.com](https://usetrmnl.com)
 2. Navigate to: **Plugins → Private Plugin → New**
 3. Configure the plugin:
    - **Name:** "Active Recipe" (or your preferred name)
    - **Strategy:** Polling
-   - **Polling URL:** Your recipe URL with `?trmnl=1` parameter
+   - **Polling URL:** Your recipe `.json` URL
    - **Polling Verb:** GET
 
-### Step 4: Configure the Markup
+**Example configuration:**
+- Polling URL: `https://recipes.kyleking.me/seafood/shrimp_scampi.json`
 
-In the **Markup** section, you can use one of two approaches:
+### Step 3: Configure the Markup
 
-#### Option A: Direct Display (Recommended)
-Leave the markup empty or use:
-```html
-{{ IDX_0 }}
-```
+In the **Markup** section, use this Liquid template to format the JSON data:
 
-This will display the fetched HTML directly with the e-ink optimizations.
-
-#### Option B: TRMNL Framework
-For more control, use TRMNL's official CSS framework:
 ```html
 <!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" href="https://usetrmnl.com/css/latest/plugins.css">
+    <style>
+        body { font-family: sans-serif; font-size: 14px; padding: 20px; }
+        h1 { font-size: 24px; margin-bottom: 15px; border-bottom: 2px solid black; }
+        h2 { font-size: 18px; margin-top: 20px; margin-bottom: 10px; }
+        ul, ol { padding-left: 20px; }
+        li { margin-bottom: 5px; }
+    </style>
 </head>
 <body>
-    <div class="full">
-        {{ IDX_0 }}
-    </div>
+    <h1>{{ IDX_0.title }}</h1>
+
+    <h2>Ingredients</h2>
+    <ul>
+    {% for ingredient in IDX_0.ingredients %}
+        <li>{{ ingredient }}</li>
+    {% endfor %}
+    </ul>
+
+    <h2>Steps</h2>
+    <ol>
+    {% for step in IDX_0.steps %}
+        <li>{{ step }}</li>
+    {% endfor %}
+    </ol>
 </body>
 </html>
 ```
 
-### Step 5: Test and Save
+This template uses Liquid to parse the JSON and format it with proper headings, bullet points, and numbered lists.
+
+### Step 4: Test and Save
 
 1. Use the **Preview** button to test how your recipe looks
 2. Click **Save** to create the plugin
@@ -75,49 +85,60 @@ For more control, use TRMNL's official CSS framework:
 To display a different recipe:
 
 1. Go to **Plugins → Private Plugin → Your Plugin Name**
-2. Update the **Polling URL** with the new recipe URL (don't forget `?trmnl=1`)
+2. Update the **Polling URL** with the new recipe `.json` URL
 3. Click **Save**
 4. Manually trigger a refresh on your TRMNL device, or wait for the next polling interval
 
+**Example:** Change from `shrimp_scampi.json` to `chicken_tacos.json`
+
 ## How It Works
 
-The `?trmnl=1` query parameter triggers special CSS optimizations:
+During the build process, the site generates both HTML and JSON versions of each recipe:
 
-- **Typography:** Smaller font sizes (14px base, compact headings)
-- **Spacing:** Reduced margins and padding to fit more content
-- **Hidden Elements:** Navigation, images, and non-essential UI removed
-- **Checkboxes:** Ingredient checkboxes converted to bullet points
-- **Colors:** Pure black and white for optimal e-ink rendering
-- **Links:** Simplified to black with underlines
+- **HTML version** (`*.html`): Full web page with navigation, images, and styling
+- **JSON version** (`*.json`): Structured data with:
+  - `title`: Recipe name
+  - `ingredients`: Array of ingredient strings (flattened, nested items prefixed with `> ` to indicate indentation level)
+  - `steps`: Array of recipe step strings
+
+The JSON format is automatically generated from the Djot markup source files.
+
+**Ingredient Nesting:** Nested ingredients are indicated by prefix characters:
+- Top-level: `"Flour"`
+- Nested once: `"> Nested ingredient"`
+- Nested twice: `"> > Deeply nested ingredient"`
 
 ## Testing Locally
 
-Before deploying, you can test the e-ink display mode:
+Before deploying, you can test the JSON output:
 
-1. Build the site: `./build.sh`
-2. Serve locally: `go run goServe/main.go -directory public`
-3. Open a recipe with `?trmnl=1` in your browser: `http://localhost:8000/seafood/shrimp_scampi.html?trmnl=1`
-4. Resize your browser window to 800x480 to simulate the TRMNL display
+1. Build the site: `mise run build`
+2. Serve locally: `mise run serve` (or `go run goServe/main.go -directory public`)
+3. View JSON in browser: `http://localhost:8000/seafood/shrimp_scampi.json`
+4. Or view raw file: `cat public/seafood/shrimp_scampi.json`
 
 ## Troubleshooting
 
 ### Recipe doesn't fit on screen
 - Choose recipes with fewer ingredients or simpler steps
 - Some complex recipes may require scrolling on the TRMNL display
-
-### Images still showing
-- Verify the `?trmnl=1` parameter is in the URL
-- Check that JavaScript is enabled (required to detect the parameter)
+- Adjust the font size in the markup CSS (`font-size: 14px` → smaller value)
 
 ### Formatting looks wrong
-- Ensure you've rebuilt the site after making template/CSS changes
-- Clear your browser cache
-- Verify the generated HTML includes the TRMNL detection script
+- Verify you're using the `.json` URL, not `.html`
+- Check that the Liquid template is correctly parsing the JSON structure
+- Ensure the JSON file was generated during build (`mise run build`)
+- Test the JSON structure by viewing it directly in your browser
 
 ### Content not updating
 - Check the polling interval in your TRMNL plugin settings
-- Verify the polling URL is correct and accessible
+- Verify the polling URL is correct and accessible (test in browser)
 - Manually trigger a refresh from your TRMNL device
+
+### JSON file not generated
+- Run `mise run build` to regenerate all files
+- Check for build errors in the console output
+- Verify the `.dj` source file exists in `content/` directory
 
 ## Advanced: Webhook Strategy
 
@@ -143,16 +164,28 @@ Example webhook payload:
 - **Colors:** Black and white, 2-bit grayscale
 - **Refresh Rate:** Configurable (typically 6-12 hours for static content)
 
-## CSS Customization
+## Customization
 
-The e-ink optimizations are in `content/styles.css` under the `body.trmnl-mode` selector. You can customize:
+### JSON Format
 
-- Font sizes
-- Spacing and margins
-- Which elements to hide/show
-- Link styling
+To customize the JSON output format, edit the `renderDjotToJson()` function in `goBuild/build.go`:
 
-After making changes, rebuild the site with `./build.sh` and redeploy.
+- Add/remove fields (currently: title, ingredients, steps)
+- Modify how ingredients are extracted (currently flattened with nested items)
+- Change how steps are extracted
+- Add metadata like rating, source URL, or notes
+
+After making changes, rebuild with `mise run build` and redeploy.
+
+### TRMNL Markup Styling
+
+Customize the visual appearance in your TRMNL plugin's Markup section:
+
+- Adjust `font-size` for readability (default: 14px body, 24px h1, 18px h2)
+- Change `font-family` (sans-serif default, or use monospace)
+- Modify spacing with `padding` and `margin` properties
+- Customize list styling with `padding-left` and `margin-bottom`
+- Add borders or other visual elements to headings
 
 ## Resources
 
