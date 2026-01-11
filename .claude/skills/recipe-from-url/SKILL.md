@@ -12,28 +12,14 @@ When creating a recipe from a URL, follow these steps:
 
 ### 1. Check for Existing Similar Recipes
 
-Before creating a new recipe, verify that a similar recipe doesn't already exist:
-
-1. **Extract recipe name**: Determine the likely recipe name from the URL or use WebFetch to get the title
-2. **Search for similar recipes**:
-   - Use Glob to list existing recipe files in relevant category directories
-   - Use Grep to search for similar recipe names/titles across all recipe files
-   - Check for recipes with similar ingredients or titles
-3. **Handle duplicates**:
-   - If a similar recipe exists, ask the user whether to:
-     - Update/enhance the existing recipe
-     - Create a new variant (e.g., "instant_pot_beef_stew" vs "slow_cooker_beef_stew")
-     - Skip creation entirely
-   - Only proceed with creating a new recipe if confirmed by user or clearly distinct
+Before creating a new recipe:
+1. Use Glob/Grep to search for similar recipe names in relevant categories
+2. If duplicate found, ask user to update existing, create variant, or skip
+3. Only proceed if confirmed or clearly distinct
 
 ### 2. Fetch and Parse Recipe Content
 
-1. Use WebFetch to retrieve the recipe from the provided URL
-2. Extract the following information:
-   - Recipe title
-   - Ingredients list (preserve exact measurements and quantities)
-   - Recipe steps/instructions (preserve exact details)
-   - Any additional notes, tips, or variations
+Use WebFetch to retrieve recipe title, ingredients (exact measurements), steps, and notes from the URL.
 
 ### 3. Determine Category
 
@@ -56,12 +42,7 @@ If unsure between categories, use AskUserQuestion to confirm.
 
 ### 4. Generate Filename
 
-1. Convert recipe title to snake_case
-2. Remove special characters, keep only letters, numbers, underscores
-3. Use lowercase throughout
-4. Examples:
-   - "Chocolate Chip Cookies" → `chocolate_chip_cookies.dj`
-   - "Baked Tofu With Peanut Sauce" → `baked_tofu_with_peanut_sauce.dj`
+Convert title to snake_case (lowercase, no special chars): "Chocolate Chip Cookies" → `chocolate_chip_cookies.dj`
 
 ### 5. Format Recipe Content
 
@@ -104,90 +85,52 @@ Based on [URL](URL)
 - [Optional notes, tips, variations]
 ```
 
-**Formatting Guidelines:**
+**Key Formatting Rules:**
 
-- **Title**: Use the original recipe title, Title Case
-- **URL**: If URL is very long, truncate middle or end with "..." (e.g., `https://cooking.nytimes.com/recipes/...`)
-- **Metadata**: Always start with `rating=0` and `image="None.jpeg"` for new recipes
+- **Title**: Original title in Title Case
+- **URL**: Truncate if very long (`https://cooking.nytimes.com/recipes/...`)
+- **Metadata**: `rating=0 image="None.jpeg"`
 - **Ingredients**:
-  - Use checkbox format: `- [ ]`
-  - **Order ingredients in preparation order** (order they are used in recipe steps)
-  - Preserve exact measurements and quantities from source
-  - Keep original ingredient names and details
-  - **Group when appropriate** if recipe has distinct components:
-    - Use `### [Label]` subheaders for clear sections (e.g., `### Chicken`, `### White sauce`, `### For serving`)
-    - OR use nested lists with one level of indentation (indent with 2 spaces) with descriptive parent item:
-      ```
-      - In a small bowl, whisk together
-        - [ ] ingredient 1
-        - [ ] ingredient 2
-      ```
-  - Use grouping sparingly - only when components are clearly distinct
-  - Avoid deep nesting beyond one level
-- **Recipe Steps**:
-  - Use numbered lists: `1.`
-  - Preserve step details and order from source
-  - Use nested lists (indented) for sub-steps
-  - Minimal rewording—keep original instructions intact
-- **Notes**:
-  - Include tips, variations, or important details from source
-  - Can reference related recipes using markdown links
-  - Use numbered or bulleted lists as appropriate
+  - Checkbox format: `- [ ]`
+  - Order in preparation order (as used in steps)
+  - **Conversions (apply automatically)**:
+    - Fractional characters to plain text: `½` → `1/2`, `¼` → `1/4`, `¾` → `3/4`, `⅓` → `1/3`, `⅔` → `2/3`, `⅛` → `1/8`, `⅜` → `3/8`, `⅝` → `5/8`, `⅞` → `7/8`
+    - Mixed numbers: `1 ½` → `1.5`, `2 ¼` → `2.25`, `1 ⅓` → `1.33`, `2 ⅔` → `2.67`
+    - "teaspoon(s)" → `tsp`
+    - "tablespoon" → `Tbsp`, "tablespoons" → `Tbsps`
+  - **Track quantity changes**: Note any changes to measurements/amounts to report after saving
+  - Group using `### [Label]` subheaders or nested lists (2-space indent) only for distinct components
+- **Recipe Steps**: Numbered lists (`1.`), preserve details, minimal rewording
+- **Notes**: Include tips, variations, or important details
 
 ### 6. Writing Style
 
-Follow Kyle's style:
-- Direct and concise
-- Minimal changes to source material
-- Do not hallucinate or modify measurements, ingredients, or steps
-- Do not add emojis or unnecessary commentary
-- Preserve technical precision from original recipe
-- Only adapt formatting to match template, not content
+Kyle's style: Direct, concise, minimal changes. Preserve measurements and technical precision. Only adapt formatting, not content.
 
-### 7. Save File
+### 7. Save File and Report Changes
 
 1. Write file to: `content/[category]/[filename].dj`
-2. Confirm file creation with user
-3. Mention that they can:
-   - Add an image later (same filename with .jpeg/.jpg/.png extension)
-   - Update the rating after trying the recipe
-   - Edit any details as needed
+2. Confirm file creation
+3. **Report quantity changes only**: If you modified any measurements/amounts from source (e.g., "1 cup butter" → "2 sticks butter", combined duplicate ingredients with adjusted quantities), list these changes. Standard conversions (fractional characters, unit abbreviations) don't need to be reported.
 
 ## Examples
 
-### Example 1: Simple Recipe
+**Simple Recipe:**
+1. WebFetch URL → Extract title, ingredients (apply conversions: "½ cup" → "1/2 cup", "2 teaspoons" → "2 tsp"), steps
+2. Category: `pasta`, Filename: `simple_pasta.dj`
+3. Format and write to `content/pasta/simple_pasta.dj`
+4. Report: "Created simple_pasta.dj" (standard conversions applied, no substantive quantity changes)
 
-**User:** "Add a recipe from https://example.com/simple-pasta"
+**Recipe with Quantity Changes:**
+If source has "4 ounces butter" but you convert to "1 stick butter", report: "Changed '4 ounces butter' to '1 stick butter'"
 
-**Actions:**
-1. WebFetch the URL to extract recipe details
-2. Determine category: `pasta`
-3. Generate filename: `simple_pasta.dj`
-4. Format according to template
-5. Write to `content/pasta/simple_pasta.dj`
+## Critical Rules
 
-### Example 2: Complex Recipe with Grouped Ingredients
-
-**User:** "Create a recipe from https://cooking.nytimes.com/recipes/1020530-baked-tofu"
-
-**Actions:**
-1. WebFetch the URL
-2. Determine category: `main`
-3. Generate filename: `baked_tofu_with_peanut_sauce_and_coconut_lime_rice.dj`
-4. **Order ingredients in preparation order** and group if recipe has distinct components:
-   - If source clearly separates components (e.g., marinade, sauce, rice), use `###` subheaders
-   - If ingredients are used together in a step, consider nested list grouping
-   - If recipe is linear without distinct sections, use single ordered list
-5. Write to `content/main/baked_tofu_with_peanut_sauce_and_coconut_lime_rice.dj`
-
-## Important Reminders
-
-- **Check for duplicates first**: Always search for existing similar recipes before creating a new one
-- **Do not hallucinate**: Only use information from the source URL
-- **Preserve measurements**: Keep exact quantities and units
-- **Order ingredients in preparation order**: List ingredients in the order they are used in recipe steps
-- **Group appropriately**: Use subheaders or nested lists only when recipe has clearly distinct components
-- **Minimal adaptation**: Only change formatting to match template, not content
-- **No emojis**: Never add emojis to recipe files
-- **Check category**: If unsure, ask user to confirm category
-- **Verify filename**: Ensure snake_case and no special characters
+- Check for duplicates first (Glob/Grep existing recipes)
+- Use only source URL information (no hallucination)
+- Apply automatic conversions: fractional characters (½ → 1/2, ⅛ → 1/8), mixed numbers (1 ½ → 1.5), "teaspoon(s)" → "tsp", "tablespoon(s)" → "Tbsp/Tbsps"
+- Order ingredients in preparation order
+- Group only when components are clearly distinct
+- Report only substantive quantity/measurement changes (not standard conversions)
+- No emojis in recipe files
+- snake_case filenames only
