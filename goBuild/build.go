@@ -135,9 +135,10 @@ func formattedDivPartial(publicDir string, path string, rMap RecipeMap) func(djo
 		dirUrl, err := filepath.Rel(publicDir, filepath.Dir(path))
 		ExitOnError(err)
 
+		ratingInt := -1
 		rating := s.Node.Attributes.Get("rating")
 		if rating != "" {
-			ratingInt, err := strconv.Atoi(rating)
+			ratingInt, err = strconv.Atoi(rating)
 			ExitOnError(err)
 
 			displayedRating := "..."
@@ -165,7 +166,9 @@ func formattedDivPartial(publicDir string, path string, rMap RecipeMap) func(djo
 		}
 
 		if len(imagePath) > 0 {
-			rMap[path] = NewRecipe(dirUrl, path, imagePath)
+			recipe := NewRecipe(dirUrl, path, imagePath)
+			recipe.rating = ratingInt
+			rMap[path] = recipe
 		}
 
 		if rating == "" && imageName == "" {
@@ -356,6 +359,14 @@ func Build(publicDir string) {
 
 	rMap := make(map[string]Recipe)
 	err = filepath.Walk(publicDir, replaceDjWithHtml(publicDir, rMap))
+	ExitOnError(err)
+
+	enrichRecipesWithMetadata(rMap, "content")
+	filterData := generateFilterData(rMap)
+
+	err = writeTemplate(filepath.Join(publicDir, "filters.html"), func() templ.Component {
+		return filtersPage(filterData)
+	})
 	ExitOnError(err)
 
 	err = writeIndexes(publicDir, rMap)

@@ -1,5 +1,7 @@
 package goBuild
 
+import "fmt"
+
 // Note: discriminated unions and Enums don't exist natively in Go
 // https://www.reddit.com/r/golang/comments/13hjevf/idiomatic_way_in_go_to_represent_a_tagged_union
 // https://www.reddit.com/r/golang/comments/uvpygm/why_are_enums_not_a_thing_in_go
@@ -39,6 +41,8 @@ templ page(title string, contents templ.Component, pageType string) {
 			<nav>
 				<div>
 					<a href="/"><i><strong>Home</strong></i></a>
+					&nbsp;
+					<a href="/filters.html"><i><strong>Filters</strong></i></a>
 					&nbsp;
 					<a href="/search.html"><i><strong>Search</strong></i></a>
 				</div>
@@ -116,4 +120,68 @@ templ homeContent(subdirectories []Subdir) {
 
 templ homePage(subdirectories []Subdir) {
 	@page("Recipes", homeContent(subdirectories), GENERATED_PAGE)
+}
+
+templ recipeGrid(recipes []Recipe) {
+	<div class="wrapped-images-container">
+		for _, recipe := range recipes {
+			<a href={ templ.URL(recipe.url) }>
+				<article>
+					<div class="square-img-container">
+						<img class="square-img" src={ recipe.imagePath } alt={ "Image of " + recipe.name }/>
+					</div>
+					<figcaption>{ recipe.name }</figcaption>
+				</article>
+			</a>
+		}
+	</div>
+}
+
+templ filtersContent(data FilterData) {
+	<h1>Filters</h1>
+	<div class="tabs-container">
+		<nav class="tab-nav">
+			<a href="#not-yet-made">Not Yet Made</a>
+			<a href="#random">Random Selection</a>
+			<a href="#historical">Historical Views</a>
+		</nav>
+		<div id="not-yet-made" class="tab-content">
+			<h2>Not Yet Made ({ fmt.Sprintf("%d", len(data.NotYetMade)) } recipes)</h2>
+			<p>Recipes without images that haven't been made yet.</p>
+			@recipeGrid(data.NotYetMade)
+		</div>
+		<div id="random" class="tab-content">
+			<h2>Random Selection</h2>
+			<p>A random selection of 3 recipes from each category.</p>
+			for category, recipes := range data.RandomByCategory {
+				<h3>{ category }</h3>
+				@recipeGrid(recipes)
+			}
+		</div>
+		<div id="historical" class="tab-content">
+			<h2>Historical Views</h2>
+			<h3>Recently Added ({ fmt.Sprintf("%d", len(data.RecentlyAdded)) } recipes)</h3>
+			<p>Most recently added recipes.</p>
+			@recipeGrid(data.RecentlyAdded)
+			<h3>Least Recently Updated ({ fmt.Sprintf("%d", len(data.LeastUpdated)) } recipes)</h3>
+			<p>Recipes that haven't been updated in a while.</p>
+			@recipeGrid(data.LeastUpdated)
+			<h3>Highest Rated ({ fmt.Sprintf("%d", len(data.HighestRated)) } recipes)</h3>
+			<p>Top rated recipes (4-5 stars) sorted by least recently updated.</p>
+			@recipeGrid(data.HighestRated)
+			<h3>Lowest Rated ({ fmt.Sprintf("%d", len(data.LowestRated)) } recipes)</h3>
+			<p>Lower rated recipes (0-2 stars) sorted by oldest.</p>
+			@recipeGrid(data.LowestRated)
+		</div>
+	</div>
+	<script>
+		// Default to first tab if no hash
+		if (!window.location.hash) {
+			window.location.hash = "#not-yet-made";
+		}
+	</script>
+}
+
+templ filtersPage(data FilterData) {
+	@page("Filters", filtersContent(data), GENERATED_PAGE)
 }

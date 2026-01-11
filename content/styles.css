@@ -319,3 +319,57 @@ body.trmnl-mode {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+/* Tab UI Styles */
+
+.tabs-container {
+    margin-top: 20px;
+}
+
+.tab-nav {
+    display: flex;
+    gap: 15px;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.tab-nav a {
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    transition: all 0.2s ease;
+}
+
+.tab-nav a:hover {
+    background: rgba(180, 180, 180, 0.1);
+    border-color: #ccc;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content:target {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.tab-content h2 {
+    margin-top: 0;
+}
+
+.tab-content h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
