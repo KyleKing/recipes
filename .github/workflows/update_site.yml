@@ -6,8 +6,9 @@ name: Update Site
     branches: [main]
     paths:
       - .github/workflows/update_site.yml
-      - content/**
       - build.sh
+      - content/**
+      - goBuild/**
   workflow_dispatch: null # For manual runs
 
 # Docs: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#permissions
