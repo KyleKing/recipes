@@ -15,14 +15,15 @@ func NewSubdir(key string) Subdir {
 }
 
 type Recipe struct {
-	dirUrl     string
-	imagePath  string
-	name       string
-	url        string
-	rating     int
-	createdAt  time.Time
-	modifiedAt time.Time
-	category   string
+	dirUrl         string
+	imagePath      string
+	name           string
+	url            string
+	rating         int
+	createdAt      time.Time
+	modifiedAt     time.Time
+	category       string
+	relatedRecipes []RelatedRecipe
 }
 
 func NewRecipe(dirUrl string, path string, imagePath string) Recipe {
@@ -39,6 +40,21 @@ func NewRecipe(dirUrl string, path string, imagePath string) Recipe {
 }
 
 type RecipeMap map[string]Recipe
+
+type RelatedRecipe struct {
+	recipe          Recipe
+	similarityScore float64
+}
+
+type RecipeIngredients struct {
+	filePath    string
+	recipe      Recipe
+	title       string
+	ingredients []string
+	tokens      map[string]bool
+}
+
+type IngredientIndex map[string]RecipeIngredients
 
 type FilterData struct {
 	NotYet           []Recipe

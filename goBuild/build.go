@@ -224,8 +224,8 @@ func renderDjot(text []byte, publicDir string, path string, rMap RecipeMap) stri
 	return section
 }
 
-// Replaces .dj file with templated .html and .json files
-func replaceDjWithHtml(publicDir string, rMap RecipeMap) filepath.WalkFunc {
+// Parse .dj files and populate RecipeMap (pass 1)
+func parseDjotFiles(publicDir string, rMap RecipeMap) filepath.WalkFunc {
 	return func(path string, fileInfo os.FileInfo, inpErr error) error {
 		if filepath.Ext(path) != ".dj" {
 			return nil
@@ -239,13 +239,12 @@ func replaceDjWithHtml(publicDir string, rMap RecipeMap) filepath.WalkFunc {
 				return err
 			}
 
-			// Parse AST once for both HTML and plaintext
 			ast := djot_parser.BuildDjotAst(text)
 			err = validateNoDuplicateHeaders(ast, path)
 			ExitOnError(err)
 
-			// Generate HTML
-			htmlSection := djot_parser.NewConversionContext(
+			// Extract recipe metadata (populates rMap via formattedDivPartial)
+			_ = djot_parser.NewConversionContext(
 				"html",
 				djot_parser.DefaultConversionRegistry,
 				map[djot_parser.DjotNode]djot_parser.Conversion{
@@ -253,11 +252,6 @@ func replaceDjWithHtml(publicDir string, rMap RecipeMap) filepath.WalkFunc {
 					djot_parser.ListItemNode: listItemConversion,
 				},
 			).ConvertDjotToHtml(&html_writer.HtmlWriter{}, ast...)
-
-			template := func() templ.Component {
-				return recipePage(toTitleName(path)+" : Recipe", htmlSection)
-			}
-			writeTemplate(withHtmlExt(path), template)
 
 			// Generate JSON for TRMNL
 			jsonContent := renderDjotToJson(ast)
@@ -272,6 +266,40 @@ func replaceDjWithHtml(publicDir string, rMap RecipeMap) filepath.WalkFunc {
 		}
 		return nil
 	}
+}
+
+// Generate HTML pages from RecipeMap with related recipes (pass 2)
+func generateRecipePages(publicDir string, rMap RecipeMap) error {
+	for path, recipe := range rMap {
+		djPath := strings.Replace(path, ".html", ".dj", 1)
+		djPath = strings.Replace(djPath, "public/", "content/", 1)
+
+		text, err := os.ReadFile(djPath)
+		if err != nil {
+			log.Printf("Warning: Could not read %s for HTML generation: %v", djPath, err)
+			continue
+		}
+
+		ast := djot_parser.BuildDjotAst(text)
+
+		htmlSection := djot_parser.NewConversionContext(
+			"html",
+			djot_parser.DefaultConversionRegistry,
+			map[djot_parser.DjotNode]djot_parser.Conversion{
+				djot_parser.DivNode:      formattedDivPartial(publicDir, path, rMap),
+				djot_parser.ListItemNode: listItemConversion,
+			},
+		).ConvertDjotToHtml(&html_writer.HtmlWriter{}, ast...)
+
+		template := func() templ.Component {
+			return recipePage(toTitleName(path)+" : Recipe", htmlSection, recipe.relatedRecipes)
+		}
+		err = writeTemplate(withHtmlExt(path), template)
+		if err != nil {
+			return err
+		}
+	}
+	return nil
 }
 
 // Create the HTML page based on a specified template function
@@ -357,11 +385,25 @@ func Build(publicDir string) {
 		ExitOnError(err)
 	}
 
+	// PASS 1: Parse all .dj files and populate RecipeMap
 	rMap := make(map[string]Recipe)
-	err = filepath.Walk(publicDir, replaceDjWithHtml(publicDir, rMap))
+	err = filepath.Walk(publicDir, parseDjotFiles(publicDir, rMap))
 	ExitOnError(err)
 
+	// PASS 2: Enrich recipes with metadata and relationships
 	enrichRecipesWithMetadata(rMap, "content")
+
+	log.Println("Building ingredient index for related recipes...")
+	ingredientIndex := buildIngredientIndex(publicDir, rMap)
+	idfWeights := calculateGlobalIDF(ingredientIndex)
+	enrichRecipesWithRelated(rMap, ingredientIndex, idfWeights)
+	log.Printf("Computed related recipes for %d recipes", len(rMap))
+
+	// PASS 3: Generate final HTML with enriched data
+	err = generateRecipePages(publicDir, rMap)
+	ExitOnError(err)
+
+	// Generate other pages
 	filterData := generateFilterData(rMap)
 
 	err = writeTemplate(filepath.Join(publicDir, "filters.html"), func() templ.Component {

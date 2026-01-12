@@ -66,8 +66,34 @@ templ page(title string, contents templ.Component, pageType string) {
 	</html>
 }
 
-templ recipePage(title string, content string) {
-	@page(title, templ.Raw(content), CONTENT_PAGE)
+templ recipePage(title string, content string, relatedRecipes []RelatedRecipe) {
+	@page(title, recipePageContent(content, relatedRecipes), CONTENT_PAGE)
+}
+
+templ recipePageContent(content string, relatedRecipes []RelatedRecipe) {
+	@templ.Raw(content)
+	if len(relatedRecipes) > 0 {
+		@relatedRecipesSection(relatedRecipes)
+	}
+}
+
+templ relatedRecipesSection(relatedRecipes []RelatedRecipe) {
+	<hr style="margin-top: 2rem; margin-bottom: 1rem;"/>
+	<section class="related-recipes">
+		<h2>Related Recipes</h2>
+		<div class="wrapped-images-container">
+			for _, related := range relatedRecipes {
+				<a href={ templ.URL(related.recipe.url) }>
+					<article>
+						<div class="square-img-container">
+							<img class="square-img" src={ related.recipe.imagePath } alt={ "Image of " + related.recipe.name }/>
+						</div>
+						<figcaption>{ related.recipe.name }</figcaption>
+					</article>
+				</a>
+			}
+		</div>
+	</section>
 }
 
 templ searchContents() {
