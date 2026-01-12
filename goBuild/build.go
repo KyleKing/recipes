@@ -292,7 +292,7 @@ func generateRecipePages(publicDir string, rMap RecipeMap) error {
 		).ConvertDjotToHtml(&html_writer.HtmlWriter{}, ast...)
 
 		template := func() templ.Component {
-			return recipePage(toTitleName(path)+" : Recipe", htmlSection, recipe.relatedRecipes)
+			return recipePage(toTitleName(path)+" : Recipe", htmlSection, recipe)
 		}
 		err = writeTemplate(withHtmlExt(path), template)
 		if err != nil {

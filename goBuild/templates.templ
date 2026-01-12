@@ -1,6 +1,9 @@
 package goBuild
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 // Note: discriminated unions and Enums don't exist natively in Go
 // https://www.reddit.com/r/golang/comments/13hjevf/idiomatic_way_in_go_to_represent_a_tagged_union
@@ -66,14 +69,16 @@ templ page(title string, contents templ.Component, pageType string) {
 	</html>
 }
 
-templ recipePage(title string, content string, relatedRecipes []RelatedRecipe) {
-	@page(title, recipePageContent(content, relatedRecipes), CONTENT_PAGE)
+templ recipePage(title string, content string, recipe Recipe) {
+	@page(title, recipePageContent(content, recipe), CONTENT_PAGE)
 }
 
-templ recipePageContent(content string, relatedRecipes []RelatedRecipe) {
+templ recipePageContent(content string, recipe Recipe) {
 	@templ.Raw(content)
-	if len(relatedRecipes) > 0 {
-		@relatedRecipesSection(relatedRecipes)
+	if len(recipe.relatedRecipes) > 0 {
+		@relatedRecipesSection(recipe.relatedRecipes)
+	} else {
+		@noMatchesSection(recipe)
 	}
 }
 
@@ -83,16 +88,57 @@ templ relatedRecipesSection(relatedRecipes []RelatedRecipe) {
 		<h2>Related Recipes</h2>
 		<div class="wrapped-images-container">
 			for _, related := range relatedRecipes {
-				<a href={ templ.URL(related.recipe.url) }>
-					<article>
+				<article>
+					<a href={ templ.URL(related.recipe.url) }>
 						<div class="square-img-container">
 							<img class="square-img" src={ related.recipe.imagePath } alt={ "Image of " + related.recipe.name }/>
 						</div>
-						<figcaption>{ related.recipe.name }</figcaption>
-					</article>
-				</a>
+						<figcaption>
+							{ related.recipe.name }
+						</figcaption>
+					</a>
+					<details class="match-details">
+						<summary>Why this match?</summary>
+						<div class="match-info">
+							<p><strong>Match score:</strong> { fmt.Sprintf("%.2f", related.similarityScore) }</p>
+							if len(related.sharedIngredients) > 0 {
+								<p><strong>Shared ingredients:</strong> { strings.Join(related.sharedIngredients, ", ") }</p>
+							}
+							if len(related.sharedTitleWords) > 0 {
+								<p><strong>Shared title words:</strong> { strings.Join(related.sharedTitleWords, ", ") }</p>
+							}
+							<p class="score-breakdown">
+								<small>
+									Ingredient: { fmt.Sprintf("%.2f", related.ingredientScore) } |
+									Title: { fmt.Sprintf("%.2f", related.titleScore) }
+								</small>
+							</p>
+						</div>
+					</details>
+				</article>
 			}
 		</div>
+	</section>
+}
+
+templ noMatchesSection(recipe Recipe) {
+	<hr style="margin-top: 2rem; margin-bottom: 1rem;"/>
+	<section class="related-recipes">
+		<h2>Related Recipes</h2>
+		<p>No related recipes found (scanned { fmt.Sprintf("%d", recipe.totalRecipeCount) } recipes).</p>
+		if len(recipe.ingredientTokens) > 0 {
+			<details class="no-match-details">
+				<summary>Why no matches?</summary>
+				<div class="no-match-info">
+					<p><strong>This recipe's ingredient tokens:</strong></p>
+					<p class="ingredient-tokens">{ strings.Join(recipe.ingredientTokens, ", ") }</p>
+					<p>
+						This recipe may have a unique combination of ingredients that doesn't strongly match any other recipe in the collection.
+						Try browsing the <a href={ templ.URL("/" + recipe.category) }>{ recipe.category }</a> category.
+					</p>
+				</div>
+			</details>
+		}
 	</section>
 }
 

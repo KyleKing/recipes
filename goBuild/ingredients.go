@@ -147,6 +147,17 @@ func calculateCombinedSimilarity(a, b RecipeIngredients, idf map[string]float64)
 	return 0.7*ingredientSim + 0.3*titleSim
 }
 
+func getSharedTokens(a, b map[string]bool) []string {
+	shared := []string{}
+	for token := range a {
+		if b[token] {
+			shared = append(shared, token)
+		}
+	}
+	sort.Strings(shared)
+	return shared
+}
+
 func findRelatedRecipes(target RecipeIngredients, allRecipes IngredientIndex, idf map[string]float64, maxResults int) []RelatedRecipe {
 	scores := []RelatedRecipe{}
 
@@ -155,12 +166,24 @@ func findRelatedRecipes(target RecipeIngredients, allRecipes IngredientIndex, id
 			continue
 		}
 
-		score := calculateCombinedSimilarity(target, candidate, idf)
+		ingredientScore := calculateIngredientSimilarity(target, candidate, idf)
+		titleScore := calculateTitleSimilarity(target.title, candidate.title)
+		combinedScore := 0.7*ingredientScore + 0.3*titleScore
 
-		if score > 0.15 {
+		if combinedScore > 0.15 {
+			sharedIngredients := getSharedTokens(target.tokens, candidate.tokens)
+			sharedTitleWords := getSharedTokens(
+				extractTitleTokens(target.title),
+				extractTitleTokens(candidate.title),
+			)
+
 			scores = append(scores, RelatedRecipe{
-				recipe:          candidate.recipe,
-				similarityScore: score,
+				recipe:            candidate.recipe,
+				similarityScore:   combinedScore,
+				sharedIngredients: sharedIngredients,
+				sharedTitleWords:  sharedTitleWords,
+				ingredientScore:   ingredientScore,
+				titleScore:        titleScore,
 			})
 		}
 	}

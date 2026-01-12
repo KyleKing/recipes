@@ -373,3 +373,62 @@ body.trmnl-mode {
     margin-top: 30px;
     margin-bottom: 10px;
 }
+
+/* Related Recipes Match Details */
+
+.match-details,
+.no-match-details {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.match-details summary,
+.no-match-details summary {
+    cursor: pointer;
+    color: var(--color-link);
+    font-size: 13px;
+    padding: 4px 0;
+    user-select: none;
+}
+
+.match-details summary:hover,
+.no-match-details summary:hover {
+    text-decoration: underline;
+}
+
+.match-info,
+.no-match-info {
+    margin-top: 8px;
+    padding: 8px;
+    background: rgba(180, 180, 180, 0.1);
+    border-left: 3px solid var(--color-link);
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.match-info p,
+.no-match-info p {
+    margin: 6px 0;
+}
+
+.match-info strong,
+.no-match-info strong {
+    font-weight: bold;
+}
+
+.score-breakdown {
+    color: #666;
+    margin-top: 8px !important;
+}
+
+.ingredient-tokens {
+    font-family: "Atkinson Hyperlegible Mono";
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Hide details for e-ink display */
+body.trmnl-mode .match-details,
+body.trmnl-mode .no-match-details {
+    display: none;
+}

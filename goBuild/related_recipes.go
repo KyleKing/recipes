@@ -3,6 +3,7 @@ package goBuild
 import (
 	"log"
 	"os"
+	"sort"
 	"strings"
 
 	"github.com/sivukhin/godjot/djot_parser"
@@ -109,10 +110,21 @@ func calculateGlobalIDF(index IngredientIndex) map[string]float64 {
 }
 
 func enrichRecipesWithRelated(rMap RecipeMap, index IngredientIndex, idf map[string]float64) {
+	totalCount := len(rMap)
 	for path, recipe := range rMap {
 		if target, exists := index[path]; exists {
 			related := findRelatedRecipes(target, index, idf, 3)
+
+			// Convert token map to sorted slice for display
+			tokens := make([]string, 0, len(target.tokens))
+			for token := range target.tokens {
+				tokens = append(tokens, token)
+			}
+			sort.Strings(tokens)
+
 			recipe.relatedRecipes = related
+			recipe.ingredientTokens = tokens
+			recipe.totalRecipeCount = totalCount
 			rMap[path] = recipe
 		}
 	}
