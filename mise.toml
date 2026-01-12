@@ -38,6 +38,10 @@ description = "View test coverage of most recent test run"
 # https://go.dev/blog/cover#heat-maps
 run = "go tool cover -html=coverage.out"
 
+[tasks.nits]
+description = "Various nit fixes, like correcting `None.jpeg`"
+run = ["fd | sad --exact --commit 'None.jpeg' 'None'"]
+
 [tasks.update]
 description = "Update dependencies"
 run = ["mise upgrade --bump", "go get -u .", "go mod tidy"]
