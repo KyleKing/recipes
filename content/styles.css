@@ -171,6 +171,13 @@ img.square-img {
     border: #959595 0.5px solid;
 }
 
+/* Gradient placeholder for recipes without images */
+img.square-img[src*="placeholder"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    object-fit: contain;
+    opacity: 0.2;
+}
+
 /* Media queries */
 
 nav div,
