@@ -85,7 +85,7 @@ Djot markup with custom metadata:
 
 Based on [URL](URL)
 
-{ rating=0 image="None.jpeg" }
+{ rating=0 image="None" }
 :::
 :::
 
@@ -110,7 +110,7 @@ Based on [URL](URL)
 
 **Metadata extraction** (goBuild/build.go:42-83):
 - `rating`: Integer 0-5 (0 = "Not yet rated", 1-5 = "X / 5")
-- `image`: Filename (with extension) or `"None"` / `"None.jpeg"` for placeholder
+- `image`: Filename (with extension) or `"None"` for placeholder
 
 **Ingredient ordering**:
 - List ingredients in preparation order (order they are used in recipe steps)
