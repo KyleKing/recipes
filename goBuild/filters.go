@@ -51,7 +51,7 @@ func generateFilterData(rMap RecipeMap) FilterData {
 	byCategory := make(map[string][]Recipe)
 
 	for _, recipe := range allRecipes {
-		if recipe.imagePath == IMAGE_PLACEHOLDER {
+		if strings.Contains(recipe.imagePath, "None") {
 			notYetMade = append(notYetMade, recipe)
 		}
 
