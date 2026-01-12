@@ -149,20 +149,15 @@ templ filtersContent(data FilterData) {
 	<h1>Filters</h1>
 	<div class="tabs-container">
 		<nav class="tab-nav">
-			<a href="#not-yet-made">Unmade</a>
-			<a href="#not-yet-rated">Unrated</a>
+			<a href="#not-yet">Not Yet...</a>
 			<a href="#random">Random</a>
-			<a href="#historical">Others</a>
+			<a href="#recency">Recency</a>
+			<a href="#rating">Rating</a>
 		</nav>
-		<div id="not-yet-made" class="tab-content">
-			<h2>Not Yet Made ({ fmt.Sprintf("%d", len(data.NotYetMade)) } recipes)</h2>
-			<p>Recipes without images that haven't been made yet.</p>
-			@recipeList(data.NotYetMade)
-		</div>
-		<div id="not-yet-rated" class="tab-content">
-			<h2>Not Yet Rated ({ fmt.Sprintf("%d", len(data.NotYetRated)) } recipes)</h2>
-			<p>Recipes that haven't been rated yet, sorted by most recently created.</p>
-			@recipeGrid(data.NotYetRated)
+		<div id="not-yet" class="tab-content">
+			<h2>Not Yet... ({ fmt.Sprintf("%d", len(data.NotYet)) } recipes)</h2>
+			<p>Recipes that haven't been rated yet or have been rated but don't have photos yet.</p>
+			@recipeGrid(data.NotYet)
 		</div>
 		<div id="random" class="tab-content">
 			<h2>Random Selection</h2>
@@ -172,14 +167,17 @@ templ filtersContent(data FilterData) {
 				@recipeGrid(data.RandomByCategory[category])
 			}
 		</div>
-		<div id="historical" class="tab-content">
-			<h2>Historical Views</h2>
+		<div id="recency" class="tab-content">
+			<h2>Recency Filters</h2>
 			<h3>Recently Added ({ fmt.Sprintf("%d", len(data.RecentlyAdded)) } recipes)</h3>
 			<p>Most recently added recipes.</p>
 			@recipeGrid(data.RecentlyAdded)
 			<h3>Least Recently Updated ({ fmt.Sprintf("%d", len(data.LeastUpdated)) } recipes)</h3>
 			<p>Recipes that haven't been updated in a while.</p>
 			@recipeGrid(data.LeastUpdated)
+		</div>
+		<div id="rating" class="tab-content">
+			<h2>Rating Filters</h2>
 			<h3>Highest Rated ({ fmt.Sprintf("%d", len(data.HighestRated)) } recipes)</h3>
 			<p>Top rated recipes (4-5 stars) sorted by least recently updated.</p>
 			@recipeGrid(data.HighestRated)
@@ -191,7 +189,7 @@ templ filtersContent(data FilterData) {
 	<script>
 		// Default to first tab if no hash
 		if (!window.location.hash) {
-			window.location.hash = "#not-yet-made";
+			window.location.hash = "#not-yet";
 		}
 	</script>
 }

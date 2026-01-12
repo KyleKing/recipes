@@ -41,8 +41,7 @@ func NewRecipe(dirUrl string, path string, imagePath string) Recipe {
 type RecipeMap map[string]Recipe
 
 type FilterData struct {
-	NotYetMade       []Recipe
-	NotYetRated      []Recipe
+	NotYet           []Recipe
 	RandomByCategory map[string][]Recipe
 	RecentlyAdded    []Recipe
 	LeastUpdated     []Recipe

@@ -9,11 +9,14 @@ import (
 
 const (
 	randomRecipesPerCategory = 3
-	maxRecentlyAdded         = 20
-	maxLeastUpdated          = 20
+	maxRecentlyAdded         = 8
+	maxLeastUpdated          = 8
 	maxHighRated             = 8
 	maxLowRated              = 8
 	secondsPerDay            = 86400
+
+	categoryDrinks    = "drinks"
+	categoryReference = "reference"
 )
 
 func enrichRecipesWithMetadata(rMap RecipeMap, contentDir string) {
@@ -41,124 +44,111 @@ func selectRandomRecipes(recipes []Recipe, count int, seed int64) []Recipe {
 	return selected
 }
 
+func excludesDrinksAndReference(recipe Recipe) bool {
+	categoryLower := strings.ToLower(recipe.category)
+	return categoryLower != categoryDrinks && categoryLower != categoryReference
+}
+
+func filterRecipes(recipes []Recipe, predicate func(Recipe) bool) []Recipe {
+	filtered := make([]Recipe, 0)
+	for _, recipe := range recipes {
+		if predicate(recipe) {
+			filtered = append(filtered, recipe)
+		}
+	}
+	return filtered
+}
+
+func sortByCreatedDesc(recipes []Recipe) {
+	sort.Slice(recipes, func(i, j int) bool {
+		if recipes[i].createdAt.IsZero() && !recipes[j].createdAt.IsZero() {
+			return false
+		}
+		if !recipes[i].createdAt.IsZero() && recipes[j].createdAt.IsZero() {
+			return true
+		}
+		return recipes[i].createdAt.After(recipes[j].createdAt)
+	})
+}
+
+func sortByCreatedAsc(recipes []Recipe) {
+	sort.Slice(recipes, func(i, j int) bool {
+		if recipes[i].createdAt.IsZero() && !recipes[j].createdAt.IsZero() {
+			return false
+		}
+		if !recipes[i].createdAt.IsZero() && recipes[j].createdAt.IsZero() {
+			return true
+		}
+		return recipes[i].createdAt.Before(recipes[j].createdAt)
+	})
+}
+
+func sortByModifiedAsc(recipes []Recipe) {
+	sort.Slice(recipes, func(i, j int) bool {
+		if recipes[i].modifiedAt.IsZero() && !recipes[j].modifiedAt.IsZero() {
+			return false
+		}
+		if !recipes[i].modifiedAt.IsZero() && recipes[j].modifiedAt.IsZero() {
+			return true
+		}
+		return recipes[i].modifiedAt.Before(recipes[j].modifiedAt)
+	})
+}
+
+func limitRecipes(recipes []Recipe, max int) []Recipe {
+	if len(recipes) > max {
+		return recipes[:max]
+	}
+	return recipes
+}
+
 func generateFilterData(rMap RecipeMap) FilterData {
 	allRecipes := make([]Recipe, 0, len(rMap))
 	for _, recipe := range rMap {
 		allRecipes = append(allRecipes, recipe)
 	}
 
-	notYetMade := make([]Recipe, 0)
 	byCategory := make(map[string][]Recipe)
-
 	for _, recipe := range allRecipes {
-		if strings.Contains(recipe.imagePath, "None") {
-			notYetMade = append(notYetMade, recipe)
-		}
-
 		byCategory[recipe.category] = append(byCategory[recipe.category], recipe)
 	}
 
 	randomByCategory := make(map[string][]Recipe)
 	seed := time.Now().Unix() / secondsPerDay
 	for category, recipes := range byCategory {
-		randomByCategory[category] = selectRandomRecipes(recipes, randomRecipesPerCategory, seed)
+		categoryLower := strings.ToLower(category)
+		if categoryLower != categoryDrinks && categoryLower != categoryReference {
+			randomByCategory[category] = selectRandomRecipes(recipes, randomRecipesPerCategory, seed)
+		}
 	}
 
-	recentlyAdded := make([]Recipe, 0)
-	for _, recipe := range allRecipes {
-		if recipe.category != "Drinks" && recipe.category != "Reference" {
-			recentlyAdded = append(recentlyAdded, recipe)
-		}
-	}
-	sort.Slice(recentlyAdded, func(i, j int) bool {
-		if recentlyAdded[i].createdAt.IsZero() && !recentlyAdded[j].createdAt.IsZero() {
-			return false
-		}
-		if !recentlyAdded[i].createdAt.IsZero() && recentlyAdded[j].createdAt.IsZero() {
-			return true
-		}
-		return recentlyAdded[i].createdAt.After(recentlyAdded[j].createdAt)
+	notYet := filterRecipes(allRecipes, func(r Recipe) bool {
+		return (r.imagePath == "None" && r.rating != 0) || (r.rating == 0 && excludesDrinksAndReference(r))
 	})
-	if len(recentlyAdded) > maxRecentlyAdded {
-		recentlyAdded = recentlyAdded[:maxRecentlyAdded]
-	}
+	sortByCreatedDesc(notYet)
 
-	leastUpdated := make([]Recipe, 0)
-	for _, recipe := range allRecipes {
-		if recipe.category != "Drinks" && recipe.category != "Reference" {
-			leastUpdated = append(leastUpdated, recipe)
-		}
-	}
-	sort.Slice(leastUpdated, func(i, j int) bool {
-		if leastUpdated[i].modifiedAt.IsZero() && !leastUpdated[j].modifiedAt.IsZero() {
-			return false
-		}
-		if !leastUpdated[i].modifiedAt.IsZero() && leastUpdated[j].modifiedAt.IsZero() {
-			return true
-		}
-		return leastUpdated[i].modifiedAt.Before(leastUpdated[j].modifiedAt)
-	})
-	if len(leastUpdated) > maxLeastUpdated {
-		leastUpdated = leastUpdated[:maxLeastUpdated]
-	}
+	recentlyAdded := filterRecipes(allRecipes, excludesDrinksAndReference)
+	sortByCreatedDesc(recentlyAdded)
+	recentlyAdded = limitRecipes(recentlyAdded, maxRecentlyAdded)
 
-	highRated := make([]Recipe, 0)
-	for _, recipe := range allRecipes {
-		if recipe.rating >= 4 && recipe.rating <= 5 && recipe.category != "Drinks" && recipe.category != "Reference" {
-			highRated = append(highRated, recipe)
-		}
-	}
-	sort.Slice(highRated, func(i, j int) bool {
-		if highRated[i].modifiedAt.IsZero() && !highRated[j].modifiedAt.IsZero() {
-			return false
-		}
-		if !highRated[i].modifiedAt.IsZero() && highRated[j].modifiedAt.IsZero() {
-			return true
-		}
-		return highRated[i].modifiedAt.Before(highRated[j].modifiedAt)
-	})
-	if len(highRated) > maxHighRated {
-		highRated = highRated[:maxHighRated]
-	}
+	leastUpdated := filterRecipes(allRecipes, excludesDrinksAndReference)
+	sortByModifiedAsc(leastUpdated)
+	leastUpdated = limitRecipes(leastUpdated, maxLeastUpdated)
 
-	lowRated := make([]Recipe, 0)
-	for _, recipe := range allRecipes {
-		if recipe.rating >= 0 && recipe.rating <= 2 && recipe.category != "Drinks" && recipe.category != "Reference" {
-			lowRated = append(lowRated, recipe)
-		}
-	}
-	sort.Slice(lowRated, func(i, j int) bool {
-		if lowRated[i].createdAt.IsZero() && !lowRated[j].createdAt.IsZero() {
-			return false
-		}
-		if !lowRated[i].createdAt.IsZero() && lowRated[j].createdAt.IsZero() {
-			return true
-		}
-		return lowRated[i].createdAt.Before(lowRated[j].createdAt)
+	highRated := filterRecipes(allRecipes, func(r Recipe) bool {
+		return r.rating >= 4 && excludesDrinksAndReference(r)
 	})
-	if len(lowRated) > maxLowRated {
-		lowRated = lowRated[:maxLowRated]
-	}
+	sortByModifiedAsc(highRated)
+	highRated = limitRecipes(highRated, maxHighRated)
 
-	notYetRated := make([]Recipe, 0)
-	for _, recipe := range allRecipes {
-		if recipe.rating == 0 && recipe.category != "Drinks" && recipe.category != "Reference" {
-			notYetRated = append(notYetRated, recipe)
-		}
-	}
-	sort.Slice(notYetRated, func(i, j int) bool {
-		if notYetRated[i].createdAt.IsZero() && !notYetRated[j].createdAt.IsZero() {
-			return false
-		}
-		if !notYetRated[i].createdAt.IsZero() && notYetRated[j].createdAt.IsZero() {
-			return true
-		}
-		return notYetRated[i].createdAt.After(notYetRated[j].createdAt)
+	lowRated := filterRecipes(allRecipes, func(r Recipe) bool {
+		return r.rating <= 2 && excludesDrinksAndReference(r)
 	})
+	sortByCreatedAsc(lowRated)
+	lowRated = limitRecipes(lowRated, maxLowRated)
 
 	return FilterData{
-		NotYetMade:       notYetMade,
-		NotYetRated:      notYetRated,
+		NotYet:           notYet,
 		RandomByCategory: randomByCategory,
 		RecentlyAdded:    recentlyAdded,
 		LeastUpdated:     leastUpdated,
