@@ -3,6 +3,7 @@ package goBuild
 import (
 	"log"
 	"path/filepath"
+	"sort"
 	"strings"
 )
 
@@ -30,4 +31,13 @@ func ExitOnError(err error) {
 	if err != nil {
 		log.Fatal(err) // Which also calls `os.Exit(1)`
 	}
+}
+
+func sortedKeys(m map[string][]Recipe) []string {
+	keys := make([]string, 0, len(m))
+	for k := range m {
+		keys = append(keys, k)
+	}
+	sort.Strings(keys)
+	return keys
 }

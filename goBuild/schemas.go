@@ -42,6 +42,7 @@ type RecipeMap map[string]Recipe
 
 type FilterData struct {
 	NotYetMade       []Recipe
+	NotYetRated      []Recipe
 	RandomByCategory map[string][]Recipe
 	RecentlyAdded    []Recipe
 	LeastUpdated     []Recipe

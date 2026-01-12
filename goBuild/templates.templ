@@ -137,25 +137,39 @@ templ recipeGrid(recipes []Recipe) {
 	</div>
 }
 
+templ recipeList(recipes []Recipe) {
+	<ul>
+		for _, recipe := range recipes {
+			<li><a href={ templ.URL(recipe.url) }>{ recipe.name }</a></li>
+		}
+	</ul>
+}
+
 templ filtersContent(data FilterData) {
 	<h1>Filters</h1>
 	<div class="tabs-container">
 		<nav class="tab-nav">
-			<a href="#not-yet-made">Not Yet Made</a>
-			<a href="#random">Random Selection</a>
-			<a href="#historical">Historical Views</a>
+			<a href="#not-yet-made">Unmade</a>
+			<a href="#not-yet-rated">Unrated</a>
+			<a href="#random">Random</a>
+			<a href="#historical">Others</a>
 		</nav>
 		<div id="not-yet-made" class="tab-content">
 			<h2>Not Yet Made ({ fmt.Sprintf("%d", len(data.NotYetMade)) } recipes)</h2>
 			<p>Recipes without images that haven't been made yet.</p>
-			@recipeGrid(data.NotYetMade)
+			@recipeList(data.NotYetMade)
+		</div>
+		<div id="not-yet-rated" class="tab-content">
+			<h2>Not Yet Rated ({ fmt.Sprintf("%d", len(data.NotYetRated)) } recipes)</h2>
+			<p>Recipes that haven't been rated yet, sorted by most recently created.</p>
+			@recipeGrid(data.NotYetRated)
 		</div>
 		<div id="random" class="tab-content">
 			<h2>Random Selection</h2>
 			<p>A random selection of 3 recipes from each category.</p>
-			for category, recipes := range data.RandomByCategory {
+			for _, category := range sortedKeys(data.RandomByCategory) {
 				<h3>{ category }</h3>
-				@recipeGrid(recipes)
+				@recipeGrid(data.RandomByCategory[category])
 			}
 		</div>
 		<div id="historical" class="tab-content">
