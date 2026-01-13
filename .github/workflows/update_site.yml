@@ -27,9 +27,6 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-      - name: Check disk space
-        run: df -h
-
       - uses: actions/checkout@v4
       - uses: jdx/mise-action@v2
         with:
@@ -58,7 +55,6 @@ jobs:
 
       - name: Build go-spacy C++ wrapper
         run: |
-          df -h
           export CGO_ENABLED=1
           GOSPACY_DIR=$(go list -m -f '{{.Dir}}' github.com/am-sokolov/go-spacy)
           cd "$GOSPACY_DIR"

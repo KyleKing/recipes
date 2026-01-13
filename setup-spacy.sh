@@ -63,7 +63,14 @@ fi
 
 # Copy go-spacy source to temp directory
 echo "Copying go-spacy source..."
+go mod download github.com/am-sokolov/go-spacy
 GOSPACY_PATH=$(go list -m -f '{{.Dir}}' github.com/am-sokolov/go-spacy)
+if [ -z "$GOSPACY_PATH" ] || [ ! -d "$GOSPACY_PATH" ]; then
+    echo "ERROR: Could not find go-spacy module directory"
+    echo "GOSPACY_PATH='$GOSPACY_PATH'"
+    exit 1
+fi
+echo "go-spacy source: $GOSPACY_PATH"
 rm -rf "$BUILD_DIR"
 mkdir -p "$BUILD_DIR"
 cp -rL "$GOSPACY_PATH"/* "$BUILD_DIR/" 2>/dev/null || cp -R "$GOSPACY_PATH"/* "$BUILD_DIR/"
