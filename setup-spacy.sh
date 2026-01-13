@@ -66,7 +66,7 @@ echo "Copying go-spacy source..."
 GOSPACY_PATH=$(go list -m -f '{{.Dir}}' github.com/am-sokolov/go-spacy)
 rm -rf "$BUILD_DIR"
 mkdir -p "$BUILD_DIR"
-cp -r "$GOSPACY_PATH"/* "$BUILD_DIR/"
+cp -rL "$GOSPACY_PATH"/* "$BUILD_DIR/" 2>/dev/null || cp -R "$GOSPACY_PATH"/* "$BUILD_DIR/"
 chmod -R u+w "$BUILD_DIR"
 
 # Build the C++ wrapper

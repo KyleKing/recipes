@@ -27,6 +27,9 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
+      - name: Check disk space
+        run: df -h
+
       - uses: actions/checkout@v4
       - uses: jdx/mise-action@v2
         with:
@@ -49,15 +52,21 @@ jobs:
 
       - name: Install Python dependencies
         run: |
+          pip install --upgrade pip setuptools wheel
           pip install spacy
           python -m spacy download en_core_web_sm
 
       - name: Build go-spacy C++ wrapper
-        run: ./setup-spacy.sh
-
-      - name: Load environment from .env
         run: |
-          cat .env >> $GITHUB_ENV
+          df -h
+          export CGO_ENABLED=1
+          GOSPACY_DIR=$(go list -m -f '{{.Dir}}' github.com/am-sokolov/go-spacy)
+          cd "$GOSPACY_DIR"
+          make clean || true
+          make build
+          PYTHON_LIB_PATH=$(python3-config --prefix)/lib
+          echo "CGO_LDFLAGS=-L$GOSPACY_DIR/lib -L$PYTHON_LIB_PATH -Wl,-rpath,$GOSPACY_DIR/lib -Wl,-rpath,$PYTHON_LIB_PATH" >> $GITHUB_ENV
+          echo "LD_LIBRARY_PATH=$GOSPACY_DIR/lib:$PYTHON_LIB_PATH" >> $GITHUB_ENV
 
       - name: Run unit tests
         run: mise run test
