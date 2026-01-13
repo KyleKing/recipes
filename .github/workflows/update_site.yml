@@ -38,7 +38,9 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
 
-      - uses: astral-sh/setup-uv@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
 
       - name: Install system dependencies for go-spacy
         run: |
@@ -47,14 +49,15 @@ jobs:
 
       - name: Install Python dependencies
         run: |
-          uv sync
-          uv run python -m spacy download en_core_web_sm
+          pip install spacy
+          python -m spacy download en_core_web_sm
 
       - name: Build go-spacy C++ wrapper
+        run: ./setup-spacy.sh
+
+      - name: Load environment from .env
         run: |
-          ./setup-spacy.sh
-          echo "CGO_LDFLAGS=-L$(pwd)/lib -L$(python3-config --prefix)/lib -Wl,-rpath,$(pwd)/lib -Wl,-rpath,$(python3-config --prefix)/lib" >> $GITHUB_ENV
-          echo "LD_LIBRARY_PATH=$(pwd)/lib:$(python3-config --prefix)/lib:$LD_LIBRARY_PATH" >> $GITHUB_ENV
+          cat .env >> $GITHUB_ENV
 
       - name: Run unit tests
         run: mise run test
