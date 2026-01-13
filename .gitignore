@@ -73,3 +73,8 @@ __pycache__
 
 # Track Claude Configuration
 !.claude/**/*
+.go-spacy-build
+/lib/
+
+# Build caches
+.recipe-cache/

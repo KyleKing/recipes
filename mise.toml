@@ -10,11 +10,18 @@ run = "./_update_wayback_links.py"
 depends = ["format"]
 description = "Build website"
 run = "./build.sh"
+env = { CGO_LDFLAGS = "-L{{cwd}}/lib -L/opt/homebrew/Caskroom/miniconda/base/lib -Wl,-rpath,{{cwd}}/lib -Wl,-rpath,/opt/homebrew/Caskroom/miniconda/base/lib", DYLD_LIBRARY_PATH = "{{cwd}}/lib:/opt/homebrew/Caskroom/miniconda/base/lib:$DYLD_LIBRARY_PATH" }
+
+[tasks.setup-spacy]
+description = "Build go-spacy C++ wrapper library"
+run = "./setup-spacy.sh"
 
 [tasks.format]
+depends = ["setup-spacy"]
 description = "Format (and generate) code"
 run = ["templ generate", "templ fmt ./goBuild/", "go fmt ./..."]
 sources = ['**/*.go', '**/*.templ', 'go.sum']
+env = { CGO_LDFLAGS = "-L{{cwd}}/lib -L/opt/homebrew/Caskroom/miniconda/base/lib -Wl,-rpath,{{cwd}}/lib -Wl,-rpath,/opt/homebrew/Caskroom/miniconda/base/lib", DYLD_LIBRARY_PATH = "{{cwd}}/lib:/opt/homebrew/Caskroom/miniconda/base/lib:$DYLD_LIBRARY_PATH" }
 
 [tasks.lint]
 depends = ["format"]
@@ -32,6 +39,7 @@ description = "Run test"
 # https://stackoverflow.com/a/21725603/3219667
 run = "go test -coverprofile=coverage.out -coverpkg=./... ./..."
 sources = ['**/*.go', 'go.sum']
+env = { CGO_LDFLAGS = "-L{{cwd}}/lib -L/opt/homebrew/Caskroom/miniconda/base/lib -Wl,-rpath,{{cwd}}/lib -Wl,-rpath,/opt/homebrew/Caskroom/miniconda/base/lib", DYLD_LIBRARY_PATH = "{{cwd}}/lib:/opt/homebrew/Caskroom/miniconda/base/lib:$DYLD_LIBRARY_PATH" }
 
 [tasks.coverage]
 description = "View test coverage of most recent test run"
@@ -52,3 +60,4 @@ run = ["mise upgrade --bump", "go get -u .", "go mod tidy"]
 "go:github.com/tdewolff/minify/v2/cmd/minify" = "2.24.8"
 "npm:pagefind" = "1.5.0-beta.1"
 "pipx:optimize-images" = "latest"
+python = "latest"

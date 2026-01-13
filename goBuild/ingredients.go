@@ -1,44 +1,177 @@
 package goBuild
 
 import (
+	"log"
 	"math"
 	"sort"
 	"strings"
+	"sync"
+
+	"github.com/am-sokolov/go-spacy"
 )
 
-// Temporarily disabled - go-spacy requires C++ wrapper build
-// TODO: Re-enable NLP extraction once go-spacy is properly configured
-// import "github.com/am-sokolov/go-spacy"
+var (
+	nlp     *spacy.NLP
+	nlpOnce sync.Once
+)
 
-func extractIngredientsWithNLP(rawIngredients []string) map[string]bool {
-	// Using fallback extraction (Spacy NLP disabled for now)
-	return extractIngredientsFallback(rawIngredients)
+func getNLP() *spacy.NLP {
+	nlpOnce.Do(func() {
+		var err error
+		nlp, err = spacy.NewNLP("en_core_web_sm")
+		if err != nil {
+			log.Fatalf("Failed to initialize spaCy NLP: %v", err)
+		}
+	})
+	return nlp
 }
 
-func extractIngredientsFallback(rawIngredients []string) map[string]bool {
-	tokens := make(map[string]bool)
-	stopWords := map[string]bool{
-		"cup": true, "cups": true, "tbsp": true, "tsp": true, "oz": true, "lb": true,
-		"can": true, "cans": true, "clove": true, "cloves": true,
-		"chopped": true, "diced": true, "minced": true, "sliced": true, "grated": true,
-		"large": true, "small": true, "medium": true, "fresh": true, "dried": true,
-		"the": true, "a": true, "an": true, "of": true, "and": true,
-	}
+func extractIngredientsWithNLP(rawIngredients []string) map[string]bool {
+	nlp := getNLP()
+	phrases := make(map[string]bool)
 
 	for _, ingredient := range rawIngredients {
-		lower := strings.ToLower(ingredient)
-		words := strings.FieldsFunc(lower, func(r rune) bool {
-			return r == ' ' || r == ',' || r == '(' || r == ')' || r == '/'
-		})
+		// Preprocess: remove parenthetical content
+		cleaned := removeParenthetical(ingredient)
 
-		for _, word := range words {
-			if !stopWords[word] && len(word) >= 3 && !isNumeric(word) {
-				tokens[word] = true
+		// Extract noun chunks (handles multi-word phrases like "white beans")
+		chunks := nlp.GetNounChunks(cleaned)
+		for _, chunk := range chunks {
+			normalized := normalizePhrase(chunk.Text)
+			if isValidIngredientPhrase(normalized) {
+				phrases[normalized] = true
+			}
+		}
+
+		// Also extract individual nouns for broader matching
+		tokens := nlp.Tokenize(cleaned)
+		for _, token := range tokens {
+			if (token.POS == "NOUN" || token.POS == "PROPN") && !token.IsStop {
+				lemma := strings.ToLower(token.Lemma)
+				if isValidIngredientToken(lemma) {
+					phrases[lemma] = true
+				}
 			}
 		}
 	}
 
-	return tokens
+	return phrases
+}
+
+func removeParenthetical(s string) string {
+	// Remove content within parentheses
+	result := ""
+	parenDepth := 0
+	for _, r := range s {
+		if r == '(' {
+			parenDepth++
+			continue
+		}
+		if r == ')' {
+			parenDepth--
+			continue
+		}
+		if parenDepth == 0 {
+			result += string(r)
+		}
+	}
+	return strings.TrimSpace(result)
+}
+
+func normalizePhrase(phrase string) string {
+	cleaned := strings.TrimSpace(phrase)
+	cleaned = strings.ToLower(cleaned)
+
+	// Split on spaces to process word by word
+	words := strings.Fields(cleaned)
+	if len(words) == 0 {
+		return ""
+	}
+
+	// Remove leading numbers, fractions, and quantity words
+	quantityPrefixes := map[string]bool{
+		"cup": true, "cups": true, "tbsp": true, "tsp": true,
+		"tablespoon": true, "tablespoons": true, "teaspoon": true, "teaspoons": true,
+		"ounce": true, "ounces": true, "oz": true, "pound": true, "pounds": true, "lb": true,
+		"can": true, "cans": true, "jar": true, "jars": true,
+		"clove": true, "cloves": true, "piece": true, "pieces": true,
+		"slice": true, "slices": true, "pinch": true, "dash": true,
+		"large": true, "medium": true, "small": true,
+		"whole": true, "half": true, "halves": true,
+		"chopped": true, "diced": true, "minced": true, "sliced": true,
+		"grated": true, "shredded": true, "fresh": true, "dried": true,
+		"ground": true, "crushed": true, "cooked": true,
+	}
+
+	// Strip leading words that are quantities, measurements, or preparation methods
+	resultWords := []string{}
+	skipLeading := true
+	for _, word := range words {
+		// Remove fractions and numbers
+		if isNumeric(word) || isFraction(word) {
+			continue
+		}
+		// Skip leading quantity/measurement/prep words
+		if skipLeading && quantityPrefixes[word] {
+			continue
+		}
+		skipLeading = false
+		resultWords = append(resultWords, word)
+	}
+
+	return strings.Join(resultWords, " ")
+}
+
+func isFraction(s string) bool {
+	// Check if string is a fraction like "1/2", "1/4", etc.
+	parts := strings.Split(s, "/")
+	if len(parts) != 2 {
+		return false
+	}
+	return isNumeric(parts[0]) && isNumeric(parts[1])
+}
+
+func isValidIngredientPhrase(phrase string) bool {
+	if len(phrase) < 3 {
+		return false
+	}
+
+	// Skip pure measurement units
+	measurementUnits := map[string]bool{
+		"cup": true, "cups": true, "tbsp": true, "tsp": true,
+		"tablespoon": true, "tablespoons": true, "teaspoon": true, "teaspoons": true,
+		"oz": true, "ounce": true, "ounces": true, "lb": true, "pound": true, "pounds": true,
+		"can": true, "cans": true, "jar": true, "jars": true,
+		"piece": true, "pieces": true, "slice": true, "slices": true,
+	}
+
+	return !measurementUnits[phrase] && !isNumeric(phrase)
+}
+
+func isValidIngredientToken(token string) bool {
+	if len(token) < 3 {
+		return false
+	}
+
+	// Skip measurement units, preparation methods, sizes, and common non-ingredient words
+	skipWords := map[string]bool{
+		// Measurements
+		"cup": true, "tbsp": true, "tsp": true, "tablespoon": true, "teaspoon": true,
+		"ounce": true, "pound": true, "can": true, "jar": true, "oz": true, "lb": true,
+		"clove": true, "piece": true, "slice": true, "pinch": true, "dash": true,
+		// Preparation methods
+		"chopped": true, "diced": true, "minced": true, "sliced": true,
+		"grated": true, "shredded": true, "crushed": true,
+		// Sizes and states
+		"large": true, "medium": true, "small": true,
+		"fresh": true, "dried": true, "cooked": true,
+		"whole": true, "half": true,
+		// Generic words
+		"optional": true, "taste": true, "color": true,
+		"each": true, "serving": true,
+	}
+
+	return !skipWords[token] && !isNumeric(token)
 }
 
 func isNumeric(s string) bool {

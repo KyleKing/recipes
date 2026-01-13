@@ -2,7 +2,10 @@ package goBuild
 
 import (
 	"path/filepath"
+	"sync"
 	"time"
+
+	"github.com/sivukhin/godjot/djot_parser"
 )
 
 type Subdir struct {
@@ -69,4 +72,35 @@ type FilterData struct {
 	LeastUpdated     []Recipe
 	HighestRated     []Recipe
 	LowestRated      []Recipe
+}
+
+type CachedRecipe struct {
+	path        string
+	content     []byte
+	ast         []djot_parser.TreeNode[djot_parser.DjotNode]
+	ingredients []string
+}
+
+type RecipeCache struct {
+	mu      sync.RWMutex
+	recipes map[string]*CachedRecipe
+}
+
+func NewRecipeCache() *RecipeCache {
+	return &RecipeCache{
+		recipes: make(map[string]*CachedRecipe),
+	}
+}
+
+func (c *RecipeCache) Get(path string) (*CachedRecipe, bool) {
+	c.mu.RLock()
+	defer c.mu.RUnlock()
+	recipe, exists := c.recipes[path]
+	return recipe, exists
+}
+
+func (c *RecipeCache) Set(path string, recipe *CachedRecipe) {
+	c.mu.Lock()
+	defer c.mu.Unlock()
+	c.recipes[path] = recipe
 }

@@ -5,6 +5,7 @@ import (
 	"os"
 	"sort"
 	"strings"
+	"time"
 
 	"github.com/sivukhin/godjot/djot_parser"
 )
@@ -75,23 +76,61 @@ func extractIngredientsFromDjot(ast []djot_parser.TreeNode[djot_parser.DjotNode]
 	return ingredients
 }
 
-func buildIngredientIndex(publicDir string, rMap RecipeMap) IngredientIndex {
+func buildIngredientIndex(publicDir string, rMap RecipeMap, cache *RecipeCache) IngredientIndex {
 	index := make(IngredientIndex)
+
+	// Load similarity cache
+	simCache := loadSimilarityCache()
+	cacheHits := 0
+	cacheMisses := 0
 
 	for path, recipe := range rMap {
 		djPath := strings.Replace(path, ".html", ".dj", 1)
 		djPath = strings.Replace(djPath, "public/", "content/", 1)
 
-		text, err := os.ReadFile(djPath)
-		if err != nil {
-			log.Printf("Warning: Could not read %s: %v", djPath, err)
-			continue
+		var ingredients []string
+		var tokens map[string]bool
+
+		// Try to get from cache first
+		cached, exists := cache.Get(djPath)
+		if exists {
+			ingredients = cached.ingredients
+		} else {
+			// Fallback: read and parse if not in cache
+			text, err := os.ReadFile(djPath)
+			if err != nil {
+				log.Printf("Warning: Could not read %s: %v", djPath, err)
+				continue
+			}
+
+			ast := djot_parser.BuildDjotAst(text)
+			ingredients = extractIngredientsFromDjot(ast)
 		}
 
-		ast := djot_parser.BuildDjotAst(text)
-		ingredients := extractIngredientsFromDjot(ast)
+		// Check if we have valid cached tokens
+		if cachedTokens, hasCached := simCache.Recipes[djPath]; hasCached && isRecipeCacheValid(cachedTokens, djPath) {
+			tokens = cachedTokens.Tokens
+			cacheHits++
+		} else {
+			// Run NLP and cache result
+			tokens = extractIngredientsWithNLP(ingredients)
+			cacheMisses++
 
-		tokens := extractIngredientsWithNLP(ingredients)
+			// Compute file hash for caching
+			fileHash, err := computeFileHash(djPath)
+			if err != nil {
+				log.Printf("Warning: Could not compute hash for %s: %v", djPath, err)
+				fileHash = ""
+			}
+
+			simCache.Recipes[djPath] = CachedIngredientTokens{
+				FilePath:    djPath,
+				FileHash:    fileHash,
+				Tokens:      tokens,
+				Ingredients: ingredients,
+				CachedAt:    time.Now(),
+			}
+		}
 
 		index[path] = RecipeIngredients{
 			filePath:    path,
@@ -102,6 +141,13 @@ func buildIngredientIndex(publicDir string, rMap RecipeMap) IngredientIndex {
 		}
 	}
 
+	// Save updated cache
+	if err := saveSimilarityCache(simCache); err != nil {
+		log.Printf("Warning: Failed to save similarity cache: %v", err)
+	}
+
+	log.Printf("Similarity cache: %d hits, %d misses", cacheHits, cacheMisses)
+
 	return index
 }
 
@@ -111,9 +157,11 @@ func calculateGlobalIDF(index IngredientIndex) map[string]float64 {
 
 func enrichRecipesWithRelated(rMap RecipeMap, index IngredientIndex, idf map[string]float64) {
 	totalCount := len(rMap)
+	comparisons := 0
 	for path, recipe := range rMap {
 		if target, exists := index[path]; exists {
 			related := findRelatedRecipes(target, index, idf, 3)
+			comparisons += len(index) - 1 // Compare against all other recipes
 
 			// Convert token map to sorted slice for display
 			tokens := make([]string, 0, len(target.tokens))
@@ -128,4 +176,5 @@ func enrichRecipesWithRelated(rMap RecipeMap, index IngredientIndex, idf map[str
 			rMap[path] = recipe
 		}
 	}
+	log.Printf("Total similarity comparisons: %d", comparisons)
 }

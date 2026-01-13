@@ -1,7 +1,6 @@
 package goBuild
 
 import (
-	"fmt"
 	"log"
 	"os/exec"
 	"strings"
@@ -10,8 +9,9 @@ import (
 )
 
 var (
-	gitDateCache  = make(map[string]gitDates)
+	gitDateCache  map[string]gitDates
 	gitCacheMutex sync.RWMutex
+	gitCacheInit  sync.Once
 )
 
 type gitDates struct {
@@ -19,74 +19,115 @@ type gitDates struct {
 	modified time.Time
 }
 
-func getGitCreationDate(filePath string) (time.Time, error) {
-	cmd := exec.Command("git", "log", "--diff-filter=A", "--format=%aI", "--", filePath)
-	output, err := cmd.Output()
-	if err != nil {
-		return time.Time{}, fmt.Errorf("git creation date command failed: %w", err)
-	}
+func initGitCache(contentDir string) {
+	gitCacheInit.Do(func() {
+		gitDateCache = make(map[string]gitDates)
 
-	dateStr := strings.TrimSpace(string(output))
-	if dateStr == "" {
-		return time.Time{}, fmt.Errorf("no creation date found for %s", filePath)
-	}
+		start := time.Now()
 
-	lines := strings.Split(dateStr, "\n")
-	lastLine := lines[len(lines)-1]
+		// Get all modification dates in one call
+		modDates := batchGetModificationDates(contentDir)
 
-	createdAt, err := time.Parse(time.RFC3339, lastLine)
-	if err != nil {
-		return time.Time{}, fmt.Errorf("failed to parse creation date: %w", err)
-	}
+		// Get all creation dates in one call
+		createDates := batchGetCreationDates(contentDir)
 
-	return createdAt, nil
+		// Merge results into cache
+		allFiles := make(map[string]bool)
+		for file := range modDates {
+			allFiles[file] = true
+		}
+		for file := range createDates {
+			allFiles[file] = true
+		}
+
+		for file := range allFiles {
+			gitDateCache[file] = gitDates{
+				created:  createDates[file],
+				modified: modDates[file],
+			}
+		}
+
+		log.Printf("Batch loaded git dates for %d files in %v", len(gitDateCache), time.Since(start))
+	})
 }
 
-func getGitModificationDate(filePath string) (time.Time, error) {
-	cmd := exec.Command("git", "log", "-1", "--format=%aI", "--", filePath)
+func batchGetModificationDates(contentDir string) map[string]time.Time {
+	dates := make(map[string]time.Time)
+
+	// Get last modification date for each file
+	cmd := exec.Command("git", "log", "--name-only", "--pretty=format:%aI", "--", contentDir)
 	output, err := cmd.Output()
 	if err != nil {
-		return time.Time{}, fmt.Errorf("git modification date command failed: %w", err)
+		log.Printf("Warning: git log for modification dates failed: %v", err)
+		return dates
 	}
 
-	dateStr := strings.TrimSpace(string(output))
-	if dateStr == "" {
-		return time.Time{}, fmt.Errorf("no modification date found for %s", filePath)
+	lines := strings.Split(string(output), "\n")
+	var currentDate time.Time
+
+	for _, line := range lines {
+		line = strings.TrimSpace(line)
+		if line == "" {
+			continue
+		}
+
+		// Try to parse as date
+		if parsedDate, err := time.Parse(time.RFC3339, line); err == nil {
+			currentDate = parsedDate
+		} else if strings.HasPrefix(line, contentDir) {
+			// It's a file path - record date if we don't have one yet
+			if _, exists := dates[line]; !exists && !currentDate.IsZero() {
+				dates[line] = currentDate
+			}
+		}
 	}
 
-	modifiedAt, err := time.Parse(time.RFC3339, dateStr)
+	return dates
+}
+
+func batchGetCreationDates(contentDir string) map[string]time.Time {
+	dates := make(map[string]time.Time)
+
+	// Get creation date (first commit) for each file using --reverse
+	cmd := exec.Command("git", "log", "--name-only", "--diff-filter=A", "--pretty=format:%aI", "--reverse", "--", contentDir)
+	output, err := cmd.Output()
 	if err != nil {
-		return time.Time{}, fmt.Errorf("failed to parse modification date: %w", err)
+		log.Printf("Warning: git log for creation dates failed: %v", err)
+		return dates
 	}
 
-	return modifiedAt, nil
+	lines := strings.Split(string(output), "\n")
+	var currentDate time.Time
+
+	for _, line := range lines {
+		line = strings.TrimSpace(line)
+		if line == "" {
+			continue
+		}
+
+		// Try to parse as date
+		if parsedDate, err := time.Parse(time.RFC3339, line); err == nil {
+			currentDate = parsedDate
+		} else if strings.HasPrefix(line, contentDir) {
+			// It's a file path - record date if we don't have one yet (first occurrence)
+			if _, exists := dates[line]; !exists && !currentDate.IsZero() {
+				dates[line] = currentDate
+			}
+		}
+	}
+
+	return dates
 }
 
 func getGitDatesWithCache(filePath string) (time.Time, time.Time) {
 	gitCacheMutex.RLock()
+	defer gitCacheMutex.RUnlock()
+
 	if dates, exists := gitDateCache[filePath]; exists {
-		gitCacheMutex.RUnlock()
 		return dates.created, dates.modified
 	}
-	gitCacheMutex.RUnlock()
 
-	created, createdErr := getGitCreationDate(filePath)
-	if createdErr != nil {
-		log.Printf("Warning: Failed to get git creation date for %s: %v", filePath, createdErr)
-		created = time.Time{}
-	}
-
-	modified, modifiedErr := getGitModificationDate(filePath)
-	if modifiedErr != nil {
-		log.Printf("Warning: Failed to get git modification date for %s: %v", filePath, modifiedErr)
-		modified = time.Time{}
-	}
-
-	gitCacheMutex.Lock()
-	gitDateCache[filePath] = gitDates{created: created, modified: modified}
-	gitCacheMutex.Unlock()
-
-	return created, modified
+	return time.Time{}, time.Time{}
 }
 
 func enrichRecipeWithGitInfo(recipe *Recipe, djFilePath string) {

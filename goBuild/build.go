@@ -12,6 +12,7 @@ import (
 	"sort"
 	"strconv"
 	"strings"
+	"time"
 
 	"github.com/a-h/templ"
 	"github.com/sivukhin/godjot/djot_parser"
@@ -224,8 +225,8 @@ func renderDjot(text []byte, publicDir string, path string, rMap RecipeMap) stri
 	return section
 }
 
-// Parse .dj files and populate RecipeMap (pass 1)
-func parseDjotFiles(publicDir string, rMap RecipeMap) filepath.WalkFunc {
+// Parse .dj files and populate RecipeMap and cache (pass 1)
+func parseDjotFiles(publicDir string, rMap RecipeMap, cache *RecipeCache) filepath.WalkFunc {
 	return func(path string, fileInfo os.FileInfo, inpErr error) error {
 		if filepath.Ext(path) != ".dj" {
 			return nil
@@ -242,6 +243,17 @@ func parseDjotFiles(publicDir string, rMap RecipeMap) filepath.WalkFunc {
 			ast := djot_parser.BuildDjotAst(text)
 			err = validateNoDuplicateHeaders(ast, path)
 			ExitOnError(err)
+
+			// Extract ingredients for caching
+			ingredients := extractIngredientsFromDjot(ast)
+
+			// Cache the parsed AST and ingredients
+			cache.Set(path, &CachedRecipe{
+				path:        path,
+				content:     text,
+				ast:         ast,
+				ingredients: ingredients,
+			})
 
 			// Extract recipe metadata (populates rMap via formattedDivPartial)
 			_ = djot_parser.NewConversionContext(
@@ -269,18 +281,26 @@ func parseDjotFiles(publicDir string, rMap RecipeMap) filepath.WalkFunc {
 }
 
 // Generate HTML pages from RecipeMap with related recipes (pass 2)
-func generateRecipePages(publicDir string, rMap RecipeMap) error {
+func generateRecipePages(publicDir string, rMap RecipeMap, cache *RecipeCache) error {
 	for path, recipe := range rMap {
 		djPath := strings.Replace(path, ".html", ".dj", 1)
 		djPath = strings.Replace(djPath, "public/", "content/", 1)
 
-		text, err := os.ReadFile(djPath)
-		if err != nil {
-			log.Printf("Warning: Could not read %s for HTML generation: %v", djPath, err)
-			continue
-		}
+		// Try to get from cache first
+		cached, exists := cache.Get(djPath)
+		var ast []djot_parser.TreeNode[djot_parser.DjotNode]
 
-		ast := djot_parser.BuildDjotAst(text)
+		if exists {
+			ast = cached.ast
+		} else {
+			// Fallback: read and parse if not in cache
+			text, err := os.ReadFile(djPath)
+			if err != nil {
+				log.Printf("Warning: Could not read %s for HTML generation: %v", djPath, err)
+				continue
+			}
+			ast = djot_parser.BuildDjotAst(text)
+		}
 
 		htmlSection := djot_parser.NewConversionContext(
 			"html",
@@ -294,7 +314,7 @@ func generateRecipePages(publicDir string, rMap RecipeMap) error {
 		template := func() templ.Component {
 			return recipePage(toTitleName(path)+" : Recipe", htmlSection, recipe)
 		}
-		err = writeTemplate(withHtmlExt(path), template)
+		err := writeTemplate(withHtmlExt(path), template)
 		if err != nil {
 			return err
 		}
@@ -374,6 +394,9 @@ func writeIndexes(publicDir string, rMap RecipeMap) error {
 
 // Public entry point
 func Build(publicDir string) {
+	buildStart := time.Now()
+	log.Printf("Starting build for directory: %s", publicDir)
+
 	var err error
 
 	staticPages := map[string]func() templ.Component{
@@ -385,25 +408,44 @@ func Build(publicDir string) {
 		ExitOnError(err)
 	}
 
-	// PASS 1: Parse all .dj files and populate RecipeMap
+	// Initialize cache
+	cache := NewRecipeCache()
+
+	// PASS 1: Parse all .dj files and populate RecipeMap and cache
+	pass1Start := time.Now()
 	rMap := make(map[string]Recipe)
-	err = filepath.Walk(publicDir, parseDjotFiles(publicDir, rMap))
+	err = filepath.Walk(publicDir, parseDjotFiles(publicDir, rMap, cache))
 	ExitOnError(err)
+	log.Printf("[TIMING] Pass 1 (parse & cache): %v (%d recipes)", time.Since(pass1Start), len(rMap))
 
 	// PASS 2: Enrich recipes with metadata and relationships
-	enrichRecipesWithMetadata(rMap, "content")
+	pass2Start := time.Now()
 
+	gitStart := time.Now()
+	initGitCache("content")
+	enrichRecipesWithMetadata(rMap, "content")
+	log.Printf("[TIMING] Pass 2a (git metadata): %v", time.Since(gitStart))
+
+	nlpStart := time.Now()
 	log.Println("Building ingredient index for related recipes...")
-	ingredientIndex := buildIngredientIndex(publicDir, rMap)
+	ingredientIndex := buildIngredientIndex(publicDir, rMap, cache)
+	log.Printf("[TIMING] Pass 2b (NLP processing): %v", time.Since(nlpStart))
+
+	similarityStart := time.Now()
 	idfWeights := calculateGlobalIDF(ingredientIndex)
 	enrichRecipesWithRelated(rMap, ingredientIndex, idfWeights)
-	log.Printf("Computed related recipes for %d recipes", len(rMap))
+	log.Printf("[TIMING] Pass 2c (similarity calculations): %v", time.Since(similarityStart))
+
+	log.Printf("[TIMING] Pass 2 TOTAL (ingredients & related): %v", time.Since(pass2Start))
 
 	// PASS 3: Generate final HTML with enriched data
-	err = generateRecipePages(publicDir, rMap)
+	pass3Start := time.Now()
+	err = generateRecipePages(publicDir, rMap, cache)
 	ExitOnError(err)
+	log.Printf("[TIMING] Pass 3 (generate HTML): %v", time.Since(pass3Start))
 
 	// Generate other pages
+	indexStart := time.Now()
 	filterData := generateFilterData(rMap)
 
 	err = writeTemplate(filepath.Join(publicDir, "filters.html"), func() templ.Component {
@@ -413,4 +455,7 @@ func Build(publicDir string) {
 
 	err = writeIndexes(publicDir, rMap)
 	ExitOnError(err)
+	log.Printf("[TIMING] Index generation: %v", time.Since(indexStart))
+
+	log.Printf("[TIMING] Total build time: %v", time.Since(buildStart))
 }

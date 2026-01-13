@@ -17,3 +17,7 @@ backend = "npm:pagefind"
 [[tools."pipx:optimize-images"]]
 version = "1.5.1"
 backend = "pipx:optimize-images"
+
+[[tools.python]]
+version = "3.14.2"
+backend = "core:python"
