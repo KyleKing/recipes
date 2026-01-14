@@ -67,7 +67,7 @@ jobs:
 
       - name: Load environment from .env
         run: |
-          cat .env >> $GITHUB_ENV
+          grep -v '^#' .env | grep -v '^$' >> $GITHUB_ENV
 
       - name: Run unit tests
         run: mise run test
