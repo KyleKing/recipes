@@ -28,6 +28,16 @@ mise run update           # Update dependencies (mise, go modules)
 ./check_links.py --dry-run --file content/main/recipe.dj  # Preview changes for single file
 ```
 
+### Environment Setup
+
+After running `./setup-spacy.sh` to build the C++ wrapper, source the generated `.env` file:
+
+```bash
+source .env  # Required for local development - sets CGO_LDFLAGS and library paths
+```
+
+This file is auto-generated and contains platform-specific flags needed to link against the spaCy C++ wrapper.
+
 ### Testing
 
 ```bash

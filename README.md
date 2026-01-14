@@ -63,6 +63,9 @@ Required tools:
    ```bash
    # This creates lib/libspacy_wrapper.dylib (macOS) or lib/libspacy_wrapper.so (Linux)
    ./setup-spacy.sh
+
+   # Source the generated .env file to set environment variables for local development
+   source .env
    ```
 
 7. **Run tests to verify setup:**

@@ -19,5 +19,5 @@ version = "1.5.1"
 backend = "pipx:optimize-images"
 
 [[tools.python]]
-version = "3.14.2"
+version = "3.13.11"
 backend = "core:python"
