@@ -29,10 +29,21 @@ echo "spacy version: $(python3 -c 'import spacy; print(spacy.__version__)')"
 
 # Get Python library path and embed flags
 PYTHON_LIB_PATH=$(python3-config --prefix)/lib
-# Get Python embed library name (e.g., python3.13) for linking
-PYTHON_EMBED_LIB=$(python3 -c "import sysconfig; print(sysconfig.get_config_var('LDLIBRARY').replace('lib', '').replace('.so', '').replace('.dylib', '').replace('.a', ''))")
+# Get Python embed library name (e.g., python3.13) for linking - use version info as most reliable source
+PYTHON_EMBED_LIB=$(python3 -c "import sys; print(f'python{sys.version_info.major}.{sys.version_info.minor}')")
 echo "Python library path: $PYTHON_LIB_PATH"
 echo "Python embed library: $PYTHON_EMBED_LIB"
+
+# Verify the Python library exists
+if [ ! -f "$PYTHON_LIB_PATH/lib${PYTHON_EMBED_LIB}.so" ] && [ ! -f "$PYTHON_LIB_PATH/lib${PYTHON_EMBED_LIB}.dylib" ] && [ ! -f "$PYTHON_LIB_PATH/lib${PYTHON_EMBED_LIB}.a" ]; then
+    echo "WARNING: Python library not found at expected path, checking alternative locations..."
+    # Try the config directory path
+    PYTHON_CONFIG_LIB_PATH=$(python3 -c "import sysconfig; print(sysconfig.get_config_var('LIBDIR'))")
+    if [ -n "$PYTHON_CONFIG_LIB_PATH" ] && [ -d "$PYTHON_CONFIG_LIB_PATH" ]; then
+        echo "Using alternative library path: $PYTHON_CONFIG_LIB_PATH"
+        PYTHON_LIB_PATH="$PYTHON_CONFIG_LIB_PATH"
+    fi
+fi
 
 # Detect OS and set extension
 if [[ "$OSTYPE" == "darwin"* ]]; then
