@@ -85,9 +85,27 @@ mkdir -p build lib
 
 # Compile
 echo "Compiling..."
-echo "Python config --cflags: $(python3-config --cflags)"
-echo "Python config --includes: $(python3-config --includes)"
-PYTHON_CFLAGS=$(python3-config --cflags)
+
+# Get Python include path using sysconfig (more reliable than python3-config)
+PYTHON_INCLUDE=$(python3 -c 'import sysconfig; print(sysconfig.get_path("include"))')
+echo "Python include directory: $PYTHON_INCLUDE"
+
+# Verify Python.h exists
+if [ ! -f "$PYTHON_INCLUDE/Python.h" ]; then
+    echo "ERROR: Python.h not found at $PYTHON_INCLUDE/Python.h"
+    echo "Contents of $PYTHON_INCLUDE:"
+    ls -la "$PYTHON_INCLUDE" 2>&1 || echo "Directory does not exist"
+    exit 1
+fi
+
+# Try python3-config first, fall back to manual flags
+if PYTHON_CFLAGS=$(python3-config --cflags 2>/dev/null); then
+    echo "Using python3-config --cflags: $PYTHON_CFLAGS"
+else
+    echo "python3-config not available, using sysconfig"
+    PYTHON_CFLAGS="-I$PYTHON_INCLUDE"
+fi
+
 echo "Full compile command:"
 echo "c++ -Wall -Wextra -fPIC -std=c++17 -Iinclude -O3 -DNDEBUG $PYTHON_CFLAGS -c cpp/spacy_wrapper.cpp -o build/spacy_wrapper.o"
 c++ -Wall -Wextra -fPIC -std=c++17 -Iinclude -O3 -DNDEBUG \

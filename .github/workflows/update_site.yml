@@ -45,7 +45,16 @@ jobs:
       - name: Install system dependencies for go-spacy
         run: |
           sudo apt-get update
-          sudo apt-get install -y python3.13-dev pkg-config build-essential
+          sudo apt-get install -y pkg-config build-essential
+
+      - name: Debug Python paths
+        run: |
+          echo "Python: $(which python3)"
+          echo "Python prefix: $(python3 -c 'import sys; print(sys.prefix)')"
+          echo "Python include: $(python3 -c 'import sysconfig; print(sysconfig.get_path(\"include\"))')"
+          ls -la "$(python3 -c 'import sysconfig; print(sysconfig.get_path(\"include\"))')" | head -5
+          echo "python3-config: $(which python3-config || echo 'not found')"
+          python3-config --cflags 2>&1 || echo "python3-config --cflags failed"
 
       - name: Install Python dependencies
         run: |
