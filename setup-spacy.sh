@@ -122,13 +122,13 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
         -o lib/libspacy_wrapper.$SHARED_EXT \
         build/spacy_wrapper.o \
         -L"$PYTHON_LIB_PATH" \
-        $PYTHON_LDFLAGS
+        "$PYTHON_LDFLAGS"
 else
     c++ -shared -Wl,-soname,libspacy_wrapper.$SHARED_EXT \
         -o lib/libspacy_wrapper.$SHARED_EXT \
         build/spacy_wrapper.o \
         -L"$PYTHON_LIB_PATH" \
-        $PYTHON_LDFLAGS
+        "$PYTHON_LDFLAGS"
 fi
 
 # Copy to project lib directory
