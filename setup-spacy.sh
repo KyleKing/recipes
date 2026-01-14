@@ -85,8 +85,13 @@ mkdir -p build lib
 
 # Compile
 echo "Compiling..."
+echo "Python config --cflags: $(python3-config --cflags)"
+echo "Python config --includes: $(python3-config --includes)"
+PYTHON_CFLAGS=$(python3-config --cflags)
+echo "Full compile command:"
+echo "c++ -Wall -Wextra -fPIC -std=c++17 -Iinclude -O3 -DNDEBUG $PYTHON_CFLAGS -c cpp/spacy_wrapper.cpp -o build/spacy_wrapper.o"
 c++ -Wall -Wextra -fPIC -std=c++17 -Iinclude -O3 -DNDEBUG \
-    "$(python3-config --cflags)" \
+    $PYTHON_CFLAGS \
     -c cpp/spacy_wrapper.cpp -o build/spacy_wrapper.o
 
 # Link
