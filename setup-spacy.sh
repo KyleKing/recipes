@@ -114,18 +114,21 @@ c++ -Wall -Wextra -fPIC -std=c++17 -Iinclude -O3 -DNDEBUG \
 
 # Link
 echo "Linking..."
+PYTHON_LDFLAGS=$(python3-config --ldflags)
+echo "Python ldflags: $PYTHON_LDFLAGS"
+
 if [[ "$OSTYPE" == "darwin"* ]]; then
     c++ -shared -install_name @rpath/libspacy_wrapper.dylib \
         -o lib/libspacy_wrapper.$SHARED_EXT \
         build/spacy_wrapper.o \
         -L"$PYTHON_LIB_PATH" \
-        "$(python3-config --ldflags)"
+        $PYTHON_LDFLAGS
 else
     c++ -shared -Wl,-soname,libspacy_wrapper.$SHARED_EXT \
         -o lib/libspacy_wrapper.$SHARED_EXT \
         build/spacy_wrapper.o \
         -L"$PYTHON_LIB_PATH" \
-        "$(python3-config --ldflags)"
+        $PYTHON_LDFLAGS
 fi
 
 # Copy to project lib directory
