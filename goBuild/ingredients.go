@@ -71,6 +71,12 @@ func extractIngredientsWithNLP(rawIngredients []string) map[string]bool {
 		// 1. RootText identifies the core ingredient noun
 		// 2. Dep=compound tokens are related nouns to also extract
 		// 3. Dep=amod tokens are adjective modifiers (keep in phrase)
+		// 4. Handle orphaned verb modifiers (e.g., "baking" in "baking powder")
+
+		// First, tokenize to find orphaned modifiers
+		allTokens := nlp.Tokenize(cleaned)
+		orphanedModifiers := findOrphanedVerbModifiers(allTokens)
+
 		chunks := nlp.GetNounChunks(cleaned)
 		for _, chunk := range chunks {
 			rootLower := strings.ToLower(chunk.RootText)
@@ -88,6 +94,13 @@ func extractIngredientsWithNLP(rawIngredients []string) map[string]bool {
 			// Build the ingredient phrase from chunk tokens using dependency info
 			chunkTokens := nlp.Tokenize(chunk.Text)
 			ingredientParts := extractIngredientPartsFromTokens(chunkTokens, rootLower)
+
+			// Check if there's an orphaned modifier for this root
+			rootLemma := getLemmaForRoot(chunkTokens, rootLower)
+			if modifier, hasModifier := orphanedModifiers[rootLemma]; hasModifier {
+				// Prepend the orphaned modifier (e.g., "baking" + "powder")
+				ingredientParts = append([]string{modifier}, ingredientParts...)
+			}
 
 			if len(ingredientParts) > 0 {
 				phrase := strings.Join(ingredientParts, " ")
@@ -146,6 +159,36 @@ func getLemmaForRoot(tokens []spacy.Token, rootLower string) string {
 	return rootLower // fallback to original if not found
 }
 
+// findOrphanedVerbModifiers identifies verb modifiers (Dep=acl) that modify nouns but aren't in noun chunks
+// Returns a map of target noun lemma → modifier text (e.g., "powder" → "baking")
+func findOrphanedVerbModifiers(tokens []spacy.Token) map[string]string {
+	modifiers := make(map[string]string)
+
+	// Build a map of token index → token for lookup
+	tokenMap := make(map[int]*spacy.Token)
+	for i := range tokens {
+		tokenMap[i] = &tokens[i]
+	}
+
+	for i, tok := range tokens {
+		// Look for verb modifiers (Dep=acl) that should be part of compound ingredients
+		if tok.Dep == "acl" && tok.POS == "VERB" {
+			// Find the noun this verb modifies by looking at adjacent tokens
+			// In "baking powder", "baking" (index i) modifies "powder" (index i+1)
+			if i+1 < len(tokens) {
+				nextTok := tokens[i+1]
+				if nextTok.POS == "NOUN" || nextTok.POS == "PROPN" {
+					targetLemma := strings.ToLower(nextTok.Lemma)
+					// Use original text for verb modifiers, not lemma (keep "baking" not "bake")
+					modifiers[targetLemma] = strings.ToLower(tok.Text)
+				}
+			}
+		}
+	}
+
+	return modifiers
+}
+
 // extractIngredientPartsFromTokens builds an ingredient phrase from tokens using dependency parsing
 func extractIngredientPartsFromTokens(tokens []spacy.Token, rootLower string) []string {
 	parts := []string{}
@@ -173,6 +216,7 @@ func extractIngredientPartsFromTokens(tokens []spacy.Token, rootLower string) []
 		// - The root noun
 		// - Compound modifiers (Dep=compound)
 		// - Adjective modifiers (Dep=amod) that aren't sizes/prep methods
+		// - Verb modifiers (Dep=acl) that are part of ingredient names (e.g., "baking" in "baking powder")
 		switch tok.Dep {
 		case "ROOT", "nsubj", "dobj", "pobj", "appos", "conj":
 			// Core noun - use lemma for normalization (beans → bean)
@@ -186,6 +230,13 @@ func extractIngredientPartsFromTokens(tokens []spacy.Token, rootLower string) []
 			// Adjective modifier - include if it's a meaningful ingredient qualifier
 			if isIngredientQualifier(tokLower) {
 				parts = append(parts, tokLower)
+			}
+		case "acl":
+			// Adjectival clause (verb acting as modifier)
+			// Include verbs that are part of ingredient names (e.g., "baking" in "baking powder")
+			// These appear within the noun chunk, unlike post-noun preparation methods
+			if tok.POS == "VERB" {
+				parts = append(parts, lemmaLower)
 			}
 		}
 	}
@@ -500,7 +551,7 @@ func calculateIngredientSimilarity(a, b RecipeIngredients, idf map[string]float6
 	return dotProduct / (math.Sqrt(magnitudeA) * math.Sqrt(magnitudeB))
 }
 
-func calculateTitleSimilarity(titleA, titleB string) float64 {
+func calculateTitleSimilarity(titleA, titleB string, idf map[string]float64) float64 {
 	tokensA := extractTitleTokens(titleA)
 	tokensB := extractTitleTokens(titleB)
 
@@ -508,19 +559,44 @@ func calculateTitleSimilarity(titleA, titleB string) float64 {
 		return 0.0
 	}
 
-	intersection := 0
+	// Use TF-IDF weighted cosine similarity (same as ingredient matching)
+	// This automatically gives higher weight to distinctive words like "balls"
+	var dotProduct float64
+	var magnitudeA float64
+	var magnitudeB float64
+
+	for token := range tokensA {
+		weight := idf[token]
+		if weight == 0 {
+			// Token not in ingredient IDF (title-only word), use default weight
+			weight = 1.0
+		}
+		magnitudeA += weight * weight
+	}
+
+	for token := range tokensB {
+		weight := idf[token]
+		if weight == 0 {
+			weight = 1.0
+		}
+		magnitudeB += weight * weight
+	}
+
 	for token := range tokensA {
 		if tokensB[token] {
-			intersection++
+			weight := idf[token]
+			if weight == 0 {
+				weight = 1.0
+			}
+			dotProduct += weight * weight
 		}
 	}
 
-	union := len(tokensA) + len(tokensB) - intersection
-	if union == 0 {
+	if magnitudeA == 0 || magnitudeB == 0 {
 		return 0.0
 	}
 
-	return float64(intersection) / float64(union)
+	return dotProduct / (math.Sqrt(magnitudeA) * math.Sqrt(magnitudeB))
 }
 
 func extractTitleTokens(title string) map[string]bool {
@@ -545,7 +621,7 @@ func extractTitleTokens(title string) map[string]bool {
 
 func calculateCombinedSimilarity(a, b RecipeIngredients, idf map[string]float64) float64 {
 	ingredientSim := calculateIngredientSimilarity(a, b, idf)
-	titleSim := calculateTitleSimilarity(a.title, b.title)
+	titleSim := calculateTitleSimilarity(a.title, b.title, idf)
 
 	return 0.7*ingredientSim + 0.3*titleSim
 }
@@ -570,7 +646,7 @@ func findRelatedRecipes(target RecipeIngredients, allRecipes IngredientIndex, id
 		}
 
 		ingredientScore := calculateIngredientSimilarity(target, candidate, idf)
-		titleScore := calculateTitleSimilarity(target.title, candidate.title)
+		titleScore := calculateTitleSimilarity(target.title, candidate.title, idf)
 		combinedScore := 0.7*ingredientScore + 0.3*titleScore
 
 		sharedIngredients := getSharedTokens(target.tokens, candidate.tokens)

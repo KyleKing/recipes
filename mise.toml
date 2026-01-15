@@ -43,6 +43,14 @@ description = "View test coverage of most recent test run"
 # https://go.dev/blog/cover#heat-maps
 run = "go tool cover -html=coverage.out"
 
+[tasks."debug:inspect"]
+description = "Inspect ingredient extraction for a recipe file"
+run = ["go build -o ./bin/recipe_debug ./cmd/recipe_debug/main.go", "./bin/recipe_debug inspect"]
+
+[tasks."debug:compare"]
+description = "Compare two or more recipes pairwise"
+run = ["go build -o ./bin/recipe_debug ./cmd/recipe_debug/main.go", "./bin/recipe_debug compare"]
+
 [tasks.nits]
 description = "Various nit fixes, like correcting `None.jpeg`"
 run = ["fd | sad --exact --commit 'None.jpeg' 'None'"]
