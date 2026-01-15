@@ -59,13 +59,6 @@ jobs:
           echo "Generated .env:"
           cat .env
 
-      - name: Load environment from .env
-        run: |
-          # Strip 'export ' prefix and quotes from .env file for GITHUB_ENV
-          grep -v '^#' .env | grep -v '^$' | sed 's/^export //' | sed 's/"\(.*\)"$/\1/' >> $GITHUB_ENV
-          echo "Loaded environment variables:"
-          grep -v '^#' .env | grep -v '^$' | sed 's/^export //' | sed 's/"\(.*\)"$/\1/'
-
       - name: Verify library installation
         run: |
           echo "Checking for libspacy_wrapper.so..."
