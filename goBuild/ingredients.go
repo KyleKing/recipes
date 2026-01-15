@@ -26,36 +26,286 @@ func getNLP() *spacy.NLP {
 	return nlp
 }
 
+// knownIngredients are common foods that NLP may misclassify (e.g., "avocado" tagged as VERB)
+var knownIngredients = map[string]bool{
+	"avocado": true, "cilantro": true, "cumin": true, "paprika": true,
+	"turmeric": true, "coriander": true, "quinoa": true, "tofu": true,
+	"tempeh": true, "edamame": true, "sriracha": true, "tahini": true,
+	"hummus": true, "feta": true, "mozzarella": true, "ricotta": true,
+	"mascarpone": true, "prosciutto": true, "pancetta": true, "chorizo": true,
+}
+
+// measurementUnits are words that indicate a quantity rather than an ingredient.
+// These must be hardcoded because POS tagging cannot distinguish "cup" (measurement)
+// from "cup" (ingredient in "cupcake").
+var measurementUnits = map[string]bool{
+	"cup": true, "cups": true, "tbsp": true, "tsp": true,
+	"tablespoon": true, "tablespoons": true, "teaspoon": true, "teaspoons": true,
+	"ounce": true, "ounces": true, "oz": true, "pound": true, "pounds": true, "lb": true, "lbs": true,
+	"can": true, "cans": true, "jar": true, "jars": true, "bottle": true, "bottles": true,
+	"piece": true, "pieces": true, "slice": true, "slices": true, "pinch": true, "dash": true,
+	"clove": true, "cloves": true,
+}
+
+// nonIngredientRoots are noun chunk roots that don't represent actual ingredients
+var nonIngredientRoots = map[string]bool{
+	"taste": true, "room": true, "temperature": true,
+	"paste": true, "mixture": true,
+}
+
+// oilSimilarityThreshold is used for vector-based oil normalization
+const oilSimilarityThreshold = 0.45
+
+// baseOilTypes are the canonical oil types we normalize to
+var baseOilTypes = []string{"olive oil", "sesame oil", "coconut oil", "vegetable oil"}
+
 func extractIngredientsWithNLP(rawIngredients []string) map[string]bool {
 	nlp := getNLP()
 	phrases := make(map[string]bool)
 
 	for _, ingredient := range rawIngredients {
-		// Preprocess: remove parenthetical content
 		cleaned := removeParenthetical(ingredient)
+		foundAnyToken := false
 
-		// Extract noun chunks (handles multi-word phrases like "white beans")
+		// Strategy: Use noun chunks with dependency parsing
+		// 1. RootText identifies the core ingredient noun
+		// 2. Dep=compound tokens are related nouns to also extract
+		// 3. Dep=amod tokens are adjective modifiers (keep in phrase)
 		chunks := nlp.GetNounChunks(cleaned)
 		for _, chunk := range chunks {
-			normalized := normalizePhrase(chunk.Text)
-			if isValidIngredientPhrase(normalized) {
-				phrases[normalized] = true
+			rootLower := strings.ToLower(chunk.RootText)
+
+			// Skip chunks where root is a measurement unit
+			if measurementUnits[rootLower] {
+				continue
+			}
+
+			// Skip non-ingredient roots
+			if nonIngredientRoots[rootLower] {
+				continue
+			}
+
+			// Build the ingredient phrase from chunk tokens using dependency info
+			chunkTokens := nlp.Tokenize(chunk.Text)
+			ingredientParts := extractIngredientPartsFromTokens(chunkTokens, rootLower)
+
+			if len(ingredientParts) > 0 {
+				phrase := strings.Join(ingredientParts, " ")
+
+				// Normalize oil types using vector similarity
+				phrase = normalizeOilWithSimilarity(nlp, phrase)
+
+				if len(phrase) >= 3 {
+					phrases[phrase] = true
+					foundAnyToken = true
+
+					// Extract compound modifiers as separate ingredients
+					// e.g., "chicken thighs" → also add "chicken"
+					// Use lemmatized root for checking meaningful roots
+					rootLemma := getLemmaForRoot(chunkTokens, rootLower)
+					extractCompoundIngredients(chunkTokens, rootLemma, phrases)
+				}
 			}
 		}
 
-		// Also extract individual nouns for broader matching
-		tokens := nlp.Tokenize(cleaned)
-		for _, token := range tokens {
-			if (token.POS == "NOUN" || token.POS == "PROPN") && !token.IsStop {
-				lemma := strings.ToLower(token.Lemma)
-				if isValidIngredientToken(lemma) {
-					phrases[lemma] = true
+		// Fallback for ingredients not captured by noun chunks
+		if !foundAnyToken {
+			tokens := nlp.Tokenize(cleaned)
+			for _, token := range tokens {
+				if isIngredientPOS(token) && !token.IsStop {
+					lemma := strings.ToLower(token.Lemma)
+					if !measurementUnits[lemma] && len(lemma) >= 3 {
+						phrases[lemma] = true
+						foundAnyToken = true
+					}
+				}
+			}
+		}
+
+		// Final fallback: check for known ingredients that NLP misclassifies
+		if !foundAnyToken {
+			lowerCleaned := strings.ToLower(cleaned)
+			for known := range knownIngredients {
+				if strings.Contains(lowerCleaned, known) {
+					phrases[known] = true
 				}
 			}
 		}
 	}
 
 	return phrases
+}
+
+// getLemmaForRoot finds the lemma for the root token
+func getLemmaForRoot(tokens []spacy.Token, rootLower string) string {
+	for _, tok := range tokens {
+		if strings.ToLower(tok.Text) == rootLower {
+			return strings.ToLower(tok.Lemma)
+		}
+	}
+	return rootLower // fallback to original if not found
+}
+
+// extractIngredientPartsFromTokens builds an ingredient phrase from tokens using dependency parsing
+func extractIngredientPartsFromTokens(tokens []spacy.Token, rootLower string) []string {
+	parts := []string{}
+
+	for _, tok := range tokens {
+		tokLower := strings.ToLower(tok.Text)
+		lemmaLower := strings.ToLower(tok.Lemma)
+
+		// Skip based on POS (quantities, punctuation, auxiliaries, prepositions)
+		if isSkippablePOS(tok.POS) {
+			continue
+		}
+
+		// Skip measurement units
+		if measurementUnits[tokLower] || measurementUnits[lemmaLower] {
+			continue
+		}
+
+		// Skip numeric tokens
+		if isNumeric(tokLower) {
+			continue
+		}
+
+		// Include tokens that are:
+		// - The root noun
+		// - Compound modifiers (Dep=compound)
+		// - Adjective modifiers (Dep=amod) that aren't sizes/prep methods
+		switch tok.Dep {
+		case "ROOT", "nsubj", "dobj", "pobj", "appos", "conj":
+			// Core noun - use lemma for normalization (beans → bean)
+			if tok.POS == "NOUN" || tok.POS == "PROPN" {
+				parts = append(parts, lemmaLower)
+			}
+		case "compound":
+			// Compound modifier (e.g., "chicken" in "chicken thighs")
+			parts = append(parts, lemmaLower)
+		case "amod":
+			// Adjective modifier - include if it's a meaningful ingredient qualifier
+			if isIngredientQualifier(tokLower) {
+				parts = append(parts, tokLower)
+			}
+		}
+	}
+
+	return parts
+}
+
+// extractCompoundIngredients adds compound modifiers as separate ingredients
+// e.g., "chicken thighs" → also adds "chicken"
+// Only extracts compounds that are meaningful standalone ingredients
+func extractCompoundIngredients(tokens []spacy.Token, rootLower string, phrases map[string]bool) {
+	// Roots that indicate the compound modifier is meaningful as standalone
+	// e.g., "thighs" in "chicken thighs" → extract "chicken"
+	// but "oil" in "olive oil" → don't extract "olive"
+	meaningfulRoots := map[string]bool{
+		// Protein cuts - the protein name is meaningful
+		"thigh": true, "breast": true, "wing": true, "drumstick": true,
+		"tenderloin": true, "loin": true, "chop": true, "rib": true,
+		"shoulder": true, "belly": true,
+		// Processed forms - the base ingredient is meaningful
+		"powder": true, "flake": true, "puree": true,
+		"extract": true, "zest": true, "juice": true,
+	}
+
+	if !meaningfulRoots[rootLower] {
+		return
+	}
+
+	for _, tok := range tokens {
+		if tok.Dep == "compound" {
+			lemma := strings.ToLower(tok.Lemma)
+			// Only add if it's a noun (not adjective used as compound)
+			if (tok.POS == "NOUN" || tok.POS == "PROPN") && len(lemma) >= 3 {
+				if !measurementUnits[lemma] {
+					phrases[lemma] = true
+				}
+			}
+		}
+	}
+}
+
+// normalizeOilWithSimilarity normalizes oil variations using vector similarity
+// Only normalizes variants of the same base oil (e.g., "extra-virgin olive oil" → "olive oil")
+func normalizeOilWithSimilarity(nlp *spacy.NLP, phrase string) string {
+	// Quick check: does this phrase end with "oil"?
+	if !strings.HasSuffix(phrase, "oil") {
+		return phrase
+	}
+
+	// Check each base oil type
+	for _, baseOil := range baseOilTypes {
+		if phrase == baseOil {
+			return phrase // Already normalized
+		}
+
+		// Extract the oil type word (e.g., "olive" from "olive oil")
+		baseOilWord := strings.TrimSuffix(baseOil, " oil")
+
+		// Only consider normalizing if the phrase contains the same oil type word
+		// This prevents "sesame oil" from matching "olive oil"
+		if !strings.Contains(phrase, baseOilWord) {
+			continue
+		}
+
+		sim := nlp.Similarity(phrase, baseOil)
+		if sim >= oilSimilarityThreshold {
+			return baseOil
+		}
+	}
+
+	return phrase
+}
+
+// isIngredientPOS returns true if the token's POS indicates it could be an ingredient
+func isIngredientPOS(tok spacy.Token) bool {
+	return tok.POS == "NOUN" || tok.POS == "PROPN"
+}
+
+// isSkippablePOS returns true if the POS should be skipped entirely
+func isSkippablePOS(pos string) bool {
+	skip := map[string]bool{
+		"NUM":   true, // Numbers
+		"PUNCT": true, // Punctuation
+		"AUX":   true, // Auxiliary verbs (can, will, etc.)
+		"ADP":   true, // Prepositions (in, on, to)
+		"CCONJ": true, // Coordinating conjunctions (and, or)
+		"SCONJ": true, // Subordinating conjunctions
+		"DET":   true, // Determiners (the, a, an)
+		"PART":  true, // Particles (to in "to taste")
+		"ADV":   true, // Adverbs (very, finely)
+		"X":     true, // Other (often numbers or symbols)
+	}
+	return skip[pos]
+}
+
+// isIngredientQualifier returns true if the adjective is meaningful for ingredients
+// (not a size, prep method, or generic descriptor)
+func isIngredientQualifier(adj string) bool {
+	// Skip sizes
+	sizes := map[string]bool{
+		"large": true, "medium": true, "small": true,
+		"whole": true, "half": true,
+	}
+	if sizes[adj] {
+		return false
+	}
+
+	// Skip preparation methods (past participles used as adjectives)
+	prepMethods := map[string]bool{
+		"chopped": true, "diced": true, "minced": true, "sliced": true,
+		"grated": true, "shredded": true, "crushed": true, "cooked": true,
+		"fresh": true, "dried": true, "ground": true,
+	}
+	if prepMethods[adj] {
+		return false
+	}
+
+	// Include color/type qualifiers that distinguish ingredients
+	// e.g., "white" beans, "black" pepper, "red" pepper
+	return true
 }
 
 func removeParenthetical(s string) string {
@@ -88,35 +338,42 @@ func normalizePhrase(phrase string) string {
 		return ""
 	}
 
-	// Remove leading numbers, fractions, and quantity words
-	quantityPrefixes := map[string]bool{
+	// Words to strip from beginning or end of phrase
+	stripWords := map[string]bool{
+		// Measurements
 		"cup": true, "cups": true, "tbsp": true, "tsp": true,
 		"tablespoon": true, "tablespoons": true, "teaspoon": true, "teaspoons": true,
-		"ounce": true, "ounces": true, "oz": true, "pound": true, "pounds": true, "lb": true,
-		"can": true, "cans": true, "jar": true, "jars": true,
-		"clove": true, "cloves": true, "piece": true, "pieces": true,
+		"ounce": true, "ounces": true, "oz": true, "pound": true, "pounds": true, "lb": true, "lbs": true,
+		"can": true, "cans": true, "jar": true, "jars": true, "bottle": true, "bottles": true,
+		"piece": true, "pieces": true,
 		"slice": true, "slices": true, "pinch": true, "dash": true,
-		"large": true, "medium": true, "small": true,
-		"whole": true, "half": true, "halves": true,
+		// Sizes
+		"large": true, "medium": true, "small": true, "whole": true, "half": true, "halves": true,
+		// Preparation methods
 		"chopped": true, "diced": true, "minced": true, "sliced": true,
 		"grated": true, "shredded": true, "fresh": true, "dried": true,
 		"ground": true, "crushed": true, "cooked": true,
+		// Trailing modifiers that indicate the base ingredient is more important
+		"clove": true, "cloves": true,
 	}
 
-	// Strip leading words that are quantities, measurements, or preparation methods
+	// Strip leading words
 	resultWords := []string{}
 	skipLeading := true
 	for _, word := range words {
-		// Remove fractions and numbers
 		if isNumeric(word) || isFraction(word) {
 			continue
 		}
-		// Skip leading quantity/measurement/prep words
-		if skipLeading && quantityPrefixes[word] {
+		if skipLeading && stripWords[word] {
 			continue
 		}
 		skipLeading = false
 		resultWords = append(resultWords, word)
+	}
+
+	// Strip trailing words
+	for len(resultWords) > 1 && stripWords[resultWords[len(resultWords)-1]] {
+		resultWords = resultWords[:len(resultWords)-1]
 	}
 
 	return strings.Join(resultWords, " ")
@@ -136,16 +393,21 @@ func isValidIngredientPhrase(phrase string) bool {
 		return false
 	}
 
-	// Skip pure measurement units
-	measurementUnits := map[string]bool{
+	// Skip pure measurement units and non-ingredient phrases
+	skipPhrases := map[string]bool{
+		// Measurement units
 		"cup": true, "cups": true, "tbsp": true, "tsp": true,
 		"tablespoon": true, "tablespoons": true, "teaspoon": true, "teaspoons": true,
-		"oz": true, "ounce": true, "ounces": true, "lb": true, "pound": true, "pounds": true,
+		"oz": true, "ounce": true, "ounces": true, "lb": true, "lbs": true, "pound": true, "pounds": true,
 		"can": true, "cans": true, "jar": true, "jars": true,
 		"piece": true, "pieces": true, "slice": true, "slices": true,
+		// Generic cooking terms that aren't ingredients
+		"paste": true, "a paste": true, "mixture": true, "a mixture": true,
+		"bone": true, "boneless": true, "skinless": true, "skin": true,
+		"taste": true, "to taste": true, "room temperature": true,
 	}
 
-	return !measurementUnits[phrase] && !isNumeric(phrase)
+	return !skipPhrases[phrase] && !isNumeric(phrase)
 }
 
 func isValidIngredientToken(token string) bool {
@@ -157,8 +419,8 @@ func isValidIngredientToken(token string) bool {
 	skipWords := map[string]bool{
 		// Measurements
 		"cup": true, "tbsp": true, "tsp": true, "tablespoon": true, "teaspoon": true,
-		"ounce": true, "pound": true, "can": true, "jar": true, "oz": true, "lb": true,
-		"clove": true, "piece": true, "slice": true, "pinch": true, "dash": true,
+		"ounce": true, "pound": true, "can": true, "jar": true, "oz": true, "lb": true, "lbs": true,
+		"clove": true, "cloves": true, "piece": true, "slice": true, "pinch": true, "dash": true,
 		// Preparation methods
 		"chopped": true, "diced": true, "minced": true, "sliced": true,
 		"grated": true, "shredded": true, "crushed": true,
@@ -166,6 +428,9 @@ func isValidIngredientToken(token string) bool {
 		"large": true, "medium": true, "small": true,
 		"fresh": true, "dried": true, "cooked": true,
 		"whole": true, "half": true,
+		// Generic cooking terms that aren't ingredients
+		"bone": true, "boneless": true, "skinless": true, "skin": true,
+		"paste": true, "mixture": true,
 		// Generic words
 		"optional": true, "taste": true, "color": true,
 		"each": true, "serving": true,
@@ -175,12 +440,17 @@ func isValidIngredientToken(token string) bool {
 }
 
 func isNumeric(s string) bool {
-	for _, r := range s {
+	// Strip leading ~ or - for approximate quantities
+	cleaned := strings.TrimLeft(s, "~-")
+	if len(cleaned) == 0 {
+		return false
+	}
+	for _, r := range cleaned {
 		if (r < '0' || r > '9') && r != '.' && r != '-' {
 			return false
 		}
 	}
-	return len(s) > 0
+	return true
 }
 
 func calculateIDF(index IngredientIndex) map[string]float64 {
@@ -303,8 +573,12 @@ func findRelatedRecipes(target RecipeIngredients, allRecipes IngredientIndex, id
 		titleScore := calculateTitleSimilarity(target.title, candidate.title)
 		combinedScore := 0.7*ingredientScore + 0.3*titleScore
 
-		if combinedScore > 0.15 {
-			sharedIngredients := getSharedTokens(target.tokens, candidate.tokens)
+		sharedIngredients := getSharedTokens(target.tokens, candidate.tokens)
+
+		// Require at least one shared ingredient AND either:
+		// - Combined score > 0.10, OR
+		// - At least 2 shared ingredients (even if score is lower due to common ingredients)
+		if len(sharedIngredients) > 0 && (combinedScore > 0.10 || len(sharedIngredients) >= 2) {
 			sharedTitleWords := getSharedTokens(
 				extractTitleTokens(target.title),
 				extractTitleTokens(candidate.title),

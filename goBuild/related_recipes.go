@@ -160,7 +160,7 @@ func enrichRecipesWithRelated(rMap RecipeMap, index IngredientIndex, idf map[str
 	comparisons := 0
 	for path, recipe := range rMap {
 		if target, exists := index[path]; exists {
-			related := findRelatedRecipes(target, index, idf, 3)
+			related := findRelatedRecipes(target, index, idf, 4)
 			comparisons += len(index) - 1 // Compare against all other recipes
 
 			// Convert token map to sorted slice for display
