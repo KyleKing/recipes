@@ -1,0 +1,72 @@
+// Install with `hk install --mise` to ensure local tools are available
+
+amends "package://github.com/jdx/hk/releases/download/v1.29.0/hk@1.29.0#/Config.pkl"
+import "package://github.com/jdx/hk/releases/download/v1.29.0/hk@1.29.0#/Builtins.pkl"
+
+min_hk_version = "1.29.0"
+
+exclude = List("goBuild/test_expected/**/*.*")
+
+local linters = new Mapping<String, Step> {
+    // Builtins
+    ["actionlint"] = Builtins.actionlint
+    ["check-added-large-files"] = Builtins.check_added_large_files
+    ["check-executables-have-shebangs"] = Builtins.check_executables_have_shebangs
+    ["check-merge-conflict"] = Builtins.check_merge_conflict
+    ["check-symlinks"] = Builtins.check_symlinks
+    ["detect-private-key"] = Builtins.detect_private_key
+    ["fix-byte-order-marker"] = Builtins.fix_byte_order_marker
+    ["mixed-line-ending"] = Builtins.mixed_line_ending
+    ["newlines"] = Builtins.newlines
+    ["prettier"] = (Builtins.prettier) {
+        exclude = List("templates/**/*.html")
+    }
+    ["shellcheck"] = (Builtins.shellcheck) {
+        check = "shellcheck --severity=warning {{ files }}"
+    }
+    ["taplo"] = Builtins.taplo
+    ["trailing-whitespace"] = Builtins.trailing_whitespace
+    ["yamllint"] = Builtins.yamllint
+
+    // Image compression check
+    ["check-image-size"] {
+        glob = List("**/*.jpeg", "**/*.jpg", "**/*.png", "**/*.gif", "**/*.webp")
+        check = """
+            for f in {{ files }}; do
+                size=$(stat -f%z "$f" 2>/dev/null || stat -c%s "$f" 2>/dev/null)
+                if [ "$size" -gt 512000 ]; then
+                    echo "ERROR: $f is $(($size / 1024))KB - run: mise run compress $f" >&2
+                    exit 1
+                fi
+            done
+            """
+    }
+}
+
+local commit_msg_checks = new Mapping<String, Step> {
+    ["commitizen"] {
+        check = "cz check --allow-abort --commit-msg-file={{commit_msg_file}}"
+    }
+}
+
+hooks = new {
+    ["pre-commit"] {
+        fix = true
+        stash = "git"
+        steps = linters
+    }
+    ["pre-push"] {
+        steps = linters
+    }
+    ["commit-msg"] {
+        steps = commit_msg_checks
+    }
+
+    ["fix"] {
+        fix = true
+        steps = linters
+    }
+    ["check"] {
+        steps = linters
+    }
+}
