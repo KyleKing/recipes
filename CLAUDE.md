@@ -112,6 +112,20 @@ Based on [URL](URL)
 - Optional tips
 ```
 
+**Djot syntax deviations from Markdown**:
+- **Blank lines required** before all block elements (headings, lists, code blocks, block quotes)
+- **Nested lists** require blank line before indentation:
+  ```
+  - Parent item
+
+    - Nested item (blank line above required)
+  ```
+- **Only fenced code blocks** (` ``` `) supported; indented code blocks not recognized
+- **Headings** use only `#` style (no underline style); must have blank line after
+- **Emphasis**: `_text_` for italic, `*text*` for bold (opposite of Markdown)
+- **Hard line breaks** use backslash: `text\` (not two trailing spaces)
+- **Block quotes** require space after `>` unless followed by newline
+
 **Metadata extraction** (goBuild/build.go:42-83):
 - `rating`: Integer 0-5 (0 = "Not yet rated", 1-5 = "X / 5")
 - `image`: Filename (with extension) or `"None"` for placeholder
