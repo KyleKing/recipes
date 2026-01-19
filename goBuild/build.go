@@ -159,10 +159,11 @@ func formattedDivPartial(publicDir string, path string, rMap RecipeMap) func(djo
 		if imageName != "" {
 			if strings.Contains(imageName, ".") {
 				imagePath = "/" + filepath.Join(dirUrl, imageName)
-				s.Writer.WriteString("<img class=\"fullsize\" alt=\"" + imageName + "\" src=\"" + imagePath + "\">")
+				s.Writer.WriteString("<img class=\"fullsize\" data-pagefind-meta=\"image[src]\" alt=\"" + imageName + "\" src=\"" + imagePath + "\">")
 			} else {
 				imagePath = IMAGE_PLACEHOLDER
 				s.Writer.WriteString("<p><i>No image yet</i></p>")
+				s.Writer.WriteString("<img data-pagefind-meta=\"image[src]\" src=\"" + imagePath + "\" alt=\"Placeholder\" style=\"display: none;\">")
 			}
 		}
 
