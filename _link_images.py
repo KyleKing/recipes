@@ -10,17 +10,10 @@
 
 """Interactive tool to manage recipe images.
 
-This script:
-- Auto-links recipes with image="None" to matching image files
-- Fuzzy-matches orphaned images (like IMG_3492.jpeg) to recipes via interactive prompts
-- Documents intentionally ignored images in .imageignore
-- Optionally compresses newly linked images
-
 Usage:
     mise run link-images              # Interactive mode
     mise run link-images --dry-run    # Preview changes without modifying files
     mise run link-images --auto       # Auto-link exact matches only (no prompts)
-    mise run link-images --category main  # Process specific category only
 """
 
 import argparse
@@ -30,10 +23,8 @@ import os
 import re
 import subprocess
 import sys
-from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Literal
 
 from PIL import Image
 from rapidfuzz import fuzz
@@ -44,387 +35,167 @@ from rich.table import Table
 console = Console()
 
 IMAGE_EXTENSIONS = {".jpeg", ".jpg", ".png"}
-IGNORED_PREFIXES = {"_"}
-
-# Global flag to disable image previews (set via --no-preview)
-_DISABLE_PREVIEWS = False
-
-
-def _supports_inline_images() -> bool:
-    """Check if terminal supports iTerm2 inline images protocol."""
-    if _DISABLE_PREVIEWS:
-        return False
-    term_program = os.getenv("TERM_PROGRAM", "")
-    return term_program in ("WezTerm", "iTerm.app") or sys.stdout.isatty()
-
-
-def _display_image_preview(image_path: Path, *, max_width: int = 800) -> None:
-    """Display image preview in terminal using iTerm2 inline images protocol.
-
-    Args:
-        image_path: Path to image file
-        max_width: Maximum width in pixels (default: 800)
-    """
-    if not _supports_inline_images():
-        return
-
-    try:
-        img = Image.open(image_path)
-
-        # Resize if too wide
-        if img.width > max_width:
-            ratio = max_width / img.width
-            new_height = int(img.height * ratio)
-            img = img.resize((max_width, new_height), Image.Resampling.LANCZOS)
-
-        # Convert to PNG in memory
-        buffer = io.BytesIO()
-        img.save(buffer, format="PNG")
-        img_data = buffer.getvalue()
-
-        # Encode as base64
-        b64_data = base64.b64encode(img_data).decode("ascii")
-
-        # Print iTerm2 inline image escape sequence
-        # Format: ESC ] 1337 ; File=inline=1:<base64_data> BEL
-        print(f"\033]1337;File=inline=1:{b64_data}\007")
-    except Exception as err:
-        console.print(f"[dim]Could not display image preview: {err}[/dim]")
+CONTENT_DIR = Path("content")
 
 
 @dataclass(frozen=True)
-class RecipeMetadata:
-    """Metadata extracted from a recipe .dj file."""
-
+class Recipe:
     path: Path
-    category: str
-    basename: str  # Without extension
-    title: str  # From first H1
-    rating: int
-    image_value: str  # Raw: "None" or "filename.ext"
-    has_image: bool  # True if image_value contains "."
+    basename: str
+    image_filename: str | None
+
+    @property
+    def rel_path(self) -> str:
+        return str(self.path.relative_to(CONTENT_DIR))
+
+    @property
+    def has_image(self) -> bool:
+        return self.image_filename is not None
 
 
 @dataclass(frozen=True)
 class ImageFile:
-    """Image file found in content directory."""
-
     path: Path
-    category: str
     basename: str
-    extension: str  # .jpeg, .jpg, .png
+    extension: str
+
+    @property
+    def rel_path(self) -> str:
+        return str(self.path.relative_to(CONTENT_DIR))
 
 
-@dataclass(frozen=True)
-class LinkOperation:
-    """Operation to link an image to a recipe."""
-
+@dataclass
+class PendingLink:
     image: ImageFile
-    recipe: RecipeMetadata
-    action: Literal["update_metadata", "rename_and_link"]
-    new_image_name: str | None
+    recipe: Recipe | None = None
+    score: float = 0.0
+    action: str = ""
 
 
-def _parse_metadata(content: str) -> tuple[int, str]:
-    """Extract (rating, image) from metadata block.
-
-    Returns:
-        Tuple of (rating, image_value)
-    """
-    pattern = r'\{\s*rating=(\d+)\s+image="([^"]+)"\s*\}'
-    if match := re.search(pattern, content):
-        rating = int(match.group(1))
-        image = match.group(2)
-        return rating, image
-    return 0, "None"
+# --- Scanning ---
 
 
-def _extract_title(content: str) -> str:
-    """Extract first H1 heading as title."""
-    pattern = r'^#\s+(.+)$'
-    if match := re.search(pattern, content, re.MULTILINE):
-        return match.group(1).strip()
-    return "Untitled"
+def _parse_recipe(path: Path) -> Recipe:
+    content = path.read_text()
+    image_filename = None
+    if match := re.search(r'\{\s*rating=\d+\s+image="([^"]+)"\s*\}', content):
+        image_val = match.group(1)
+        if "." in image_val:
+            image_filename = image_val
+    return Recipe(path=path, basename=path.stem, image_filename=image_filename)
 
 
-def _scan_recipes(content_dir: Path, category_filter: str | None = None) -> list[RecipeMetadata]:
-    """Walk content/*/ for .dj files, extract metadata.
-
-    Args:
-        content_dir: Path to content directory
-        category_filter: Optional category name to filter by
-
-    Returns:
-        List of RecipeMetadata
-    """
-    recipes = []
-
-    for dj_file in content_dir.rglob("*.dj"):
-        if dj_file.name.startswith(tuple(IGNORED_PREFIXES)):
+def _scan_content() -> tuple[list[Recipe], list[ImageFile]]:
+    recipes, images = [], []
+    for item in CONTENT_DIR.rglob("*"):
+        if item.name.startswith("_"):
             continue
-
-        category = dj_file.parent.name
-        if category_filter and category != category_filter:
-            continue
-
-        content = dj_file.read_text()
-        rating, image_value = _parse_metadata(content)
-        title = _extract_title(content)
-
-        recipe = RecipeMetadata(
-            path=dj_file,
-            category=category,
-            basename=dj_file.stem,
-            title=title,
-            rating=rating,
-            image_value=image_value,
-            has_image="." in image_value,
-        )
-        recipes.append(recipe)
-
-    return recipes
-
-
-def _scan_images(content_dir: Path, category_filter: str | None = None) -> list[ImageFile]:
-    """Find .jpeg/.jpg/.png files in content/.
-
-    Args:
-        content_dir: Path to content directory
-        category_filter: Optional category name to filter by
-
-    Returns:
-        List of ImageFile
-    """
-    images = []
-
-    for image_path in content_dir.rglob("*"):
-        if image_path.is_file() and image_path.suffix.lower() in IMAGE_EXTENSIONS:
-            if image_path.name.startswith(tuple(IGNORED_PREFIXES)):
-                continue
-
-            category = image_path.parent.name
-            if category_filter and category != category_filter:
-                continue
-
-            image = ImageFile(
-                path=image_path,
-                category=category,
-                basename=image_path.stem,
-                extension=image_path.suffix,
+        if item.suffix == ".dj":
+            recipes.append(_parse_recipe(item))
+        elif item.is_file() and item.suffix.lower() in IMAGE_EXTENSIONS:
+            images.append(
+                ImageFile(path=item, basename=item.stem, extension=item.suffix)
             )
-            images.append(image)
+    return recipes, images
 
-    return images
+
+def _load_ignore_list() -> set[str]:
+    ignore_file = CONTENT_DIR / ".imageignore"
+    if not ignore_file.exists():
+        return set()
+    ignored = set()
+    for line in ignore_file.read_text().splitlines():
+        line = line.strip()
+        if line and not line.startswith("#") and "|" in line:
+            ignored.add(line.split("|", 1)[0].strip())
+    return ignored
+
+
+# --- Matching ---
 
 
 def _find_exact_matches(
-    recipes: list[RecipeMetadata],
-    images: list[ImageFile],
-) -> list[tuple[RecipeMetadata, ImageFile]]:
-    """Find recipes with image="None" that have matching basename.ext in same category.
-
-    Args:
-        recipes: List of all recipes
-        images: List of all images
-
-    Returns:
-        List of (recipe, image) pairs for exact matches
-    """
+    recipes: list[Recipe], images: list[ImageFile]
+) -> list[tuple[Recipe, ImageFile]]:
     matches = []
-    recipes_needing_images = [r for r in recipes if not r.has_image]
-
-    for recipe in recipes_needing_images:
+    for recipe in recipes:
+        if recipe.has_image:
+            continue
         for image in images:
-            if recipe.category == image.category and recipe.basename == image.basename:
+            if (
+                recipe.path.parent == image.path.parent
+                and recipe.basename == image.basename
+            ):
                 matches.append((recipe, image))
                 break
-
     return matches
 
 
 def _find_orphaned_images(
     images: list[ImageFile],
-    recipes: list[RecipeMetadata],
-    ignore_list: dict[str, str],
+    recipes: list[Recipe],
+    exact_matches: list[tuple[Recipe, ImageFile]],
+    ignore_list: set[str],
 ) -> list[ImageFile]:
-    """Find images without matching recipe basename.
+    exact_match_paths = {img.path for _, img in exact_matches}
+    linked_filenames = {r.image_filename for r in recipes if r.image_filename}
 
-    Args:
-        images: List of all images
-        recipes: List of all recipes
-        ignore_list: Dict of {basename: reason} for ignored images
-
-    Returns:
-        List of orphaned images
-    """
-    recipe_image_basenames = {
-        (r.category, r.image_value.rsplit(".", 1)[0])
-        for r in recipes
-        if r.has_image and "." in r.image_value
-    }
-
-    orphaned = []
-    for image in images:
-        if image.path.name in ignore_list:
-            continue
-
-        if (image.category, image.basename) not in recipe_image_basenames:
-            orphaned.append(image)
-
-    return orphaned
+    return [
+        img
+        for img in images
+        if img.path not in exact_match_paths
+        and img.path.name not in linked_filenames
+        and img.path.name not in ignore_list
+    ]
 
 
-def _fuzzy_score(query: str, recipe_path: str, recipe_basename: str) -> float:
-    """Calculate weighted fuzzy match score.
-
-    Args:
-        query: Search query
-        recipe_path: Relative path (category/basename)
-        recipe_basename: Recipe basename only
-
-    Returns:
-        Score 0-100 (weighted: 70% basename, 30% path)
-    """
-    filename_score = fuzz.ratio(query.lower(), recipe_basename.lower())
-    path_score = fuzz.ratio(query.lower(), recipe_path.lower())
-    return (filename_score * 0.7) + (path_score * 0.3)
+def _fuzzy_score(query: str, recipe: Recipe) -> float:
+    return fuzz.ratio(query.lower(), recipe.basename.lower())
 
 
-def _interactive_fuzzy_select(
-    candidates: list[RecipeMetadata],
-    image_basename: str,
-) -> RecipeMetadata | None:
-    """Interactive fuzzy filter using rich + rapidfuzz.
-
-    Args:
-        candidates: List of candidate recipes
-        image_basename: Image basename to use as initial query
-
-    Returns:
-        Selected recipe or None if cancelled
-    """
+def _best_match(
+    image: ImageFile, candidates: list[Recipe]
+) -> tuple[Recipe | None, float]:
     if not candidates:
-        console.print("[yellow]No candidate recipes available[/yellow]")
-        return None
-
-    console.print(f"\nFuzzy matching for: [cyan]{image_basename}[/cyan]")
-    console.print(f"[dim]Found {len(candidates)} recipes without images[/dim]")
-
-    query = image_basename
-
-    while True:
-        query = Prompt.ask(
-            "\nEnter search query",
-            default=query,
-        )
-
-        scored = [
-            (
-                recipe,
-                _fuzzy_score(query, f"{recipe.category}/{recipe.basename}", recipe.basename),
-            )
-            for recipe in candidates
-        ]
-
-        scored.sort(key=lambda x: x[1], reverse=True)
-
-        top_matches = scored[:20]
-
-        if not top_matches:
-            console.print("[yellow]No matches found. Try different search terms.[/yellow]")
-            retry = Confirm.ask("Try again?", default=True)
-            if not retry:
-                return None
-            continue
-
-        table = Table(title="Top Matches")
-        table.add_column("#", style="cyan", width=3)
-        table.add_column("Score", justify="right", style="magenta", width=6)
-        table.add_column("Recipe", style="white")
-
-        for idx, (recipe, score) in enumerate(top_matches, 1):
-            rel_path = f"{recipe.category}/{recipe.basename}"
-            table.add_row(str(idx), f"{score:.0f}%", rel_path)
-
-        console.print(table)
-
-        choice = Prompt.ask(
-            "\nSelect recipe number, 'r' to retry search, or 'c' to cancel",
-            default="c",
-        )
-
-        if choice.lower() == "c":
-            return None
-
-        if choice.lower() == "r":
-            continue
-
-        try:
-            idx = int(choice) - 1
-            if 0 <= idx < len(top_matches):
-                return top_matches[idx][0]
-            console.print("[red]Invalid selection. Please try again.[/red]")
-        except ValueError:
-            console.print("[red]Invalid input. Enter a number, 'r', or 'c'.[/red]")
+        return None, 0.0
+    scored = [(r, _fuzzy_score(image.basename, r)) for r in candidates]
+    return max(scored, key=lambda x: x[1])
 
 
-def _update_recipe_image(recipe_path: Path, new_image: str, *, dry_run: bool) -> None:
-    """Replace image="old" with image="new" in .dj file.
+# --- File Operations ---
 
-    Args:
-        recipe_path: Path to recipe file
-        new_image: New image filename
-        dry_run: If True, only preview changes
-    """
+
+def _add_to_ignore(basename: str, reason: str) -> None:
+    ignore_file = CONTENT_DIR / ".imageignore"
+    with ignore_file.open("a") as f:
+        f.write(f"{basename}|{reason}\n")
+    console.print(f"[green]Added to .imageignore: {basename}[/green]")
+
+
+def _update_recipe_image(recipe_path: Path, new_image: str) -> None:
     content = recipe_path.read_text()
-    pattern = r'(image=")([^"]+)(")'
-
-    def replace_func(match: re.Match) -> str:
-        return f'{match.group(1)}{new_image}{match.group(3)}'
-
-    new_content = re.sub(pattern, replace_func, content)
-
-    if dry_run:
-        console.print(f"[yellow]Would update {recipe_path.name}[/yellow]")
-        return
-
+    new_content = re.sub(r'(image=")[^"]+(")', rf"\g<1>{new_image}\2", content)
     recipe_path.write_text(new_content)
     console.print(f"[green]Updated {recipe_path.name}[/green]")
 
 
-def _rename_image(old_path: Path, new_path: Path, *, dry_run: bool) -> None:
-    """Safely rename image file.
+def _rename_and_link(image: ImageFile, recipe: Recipe) -> Path | None:
+    new_name = f"{recipe.basename}{image.extension}"
+    new_path = recipe.path.parent / new_name
 
-    Args:
-        old_path: Current image path
-        new_path: Target image path
-        dry_run: If True, only preview changes
-    """
     if new_path.exists():
-        console.print(f"[red]Error: {new_path.name} already exists[/red]")
-        return
+        console.print(f"[red]Error: {new_name} already exists[/red]")
+        return None
 
-    if dry_run:
-        console.print(f"[yellow]Would rename: {old_path.name} → {new_path.name}[/yellow]")
-        return
-
-    old_path.rename(new_path)
-    console.print(f"[green]Renamed: {old_path.name} → {new_path.name}[/green]")
+    image.path.rename(new_path)
+    console.print(f"[green]Renamed: {image.path.name} -> {new_name}[/green]")
+    _update_recipe_image(recipe.path, new_name)
+    return new_path
 
 
-def _compress_image(image_path: Path, *, dry_run: bool) -> None:
-    """Compress image using mise compress task.
-
-    Args:
-        image_path: Path to image to compress
-        dry_run: If True, only preview changes
-    """
-    if dry_run:
-        console.print(f"[yellow]Would compress: {image_path.name}[/yellow]")
-        return
-
+def _compress_image(image_path: Path) -> None:
     try:
-        result = subprocess.run(
+        subprocess.run(
             ["mise", "run", "compress", str(image_path)],
             capture_output=True,
             text=True,
@@ -432,75 +203,241 @@ def _compress_image(image_path: Path, *, dry_run: bool) -> None:
         )
         console.print(f"[green]Compressed: {image_path.name}[/green]")
     except subprocess.CalledProcessError as err:
-        console.print(f"[yellow]Warning: compression failed for {image_path.name}[/yellow]")
-        console.print(f"[dim]{err.stderr}[/dim]")
+        console.print(f"[yellow]Compression failed: {image_path.name}[/yellow]")
+        if err.stderr:
+            console.print(f"[dim]{err.stderr}[/dim]")
 
 
-def _load_ignore_list(content_dir: Path) -> dict[str, str]:
-    """Load .imageignore, return {basename: reason}.
+# --- Display ---
 
-    Args:
-        content_dir: Path to content directory
 
-    Returns:
-        Dict mapping image basename to ignore reason
-    """
-    ignore_file = content_dir / ".imageignore"
-    if not ignore_file.exists():
-        return {}
+def _display_image_preview(image_path: Path, *, max_width: int = 800) -> None:
+    term_program = os.getenv("TERM_PROGRAM", "")
+    if term_program not in ("WezTerm", "iTerm.app") and not sys.stdout.isatty():
+        return
+    try:
+        img = Image.open(image_path)
+        if img.width > max_width:
+            ratio = max_width / img.width
+            img = img.resize(
+                (max_width, int(img.height * ratio)), Image.Resampling.LANCZOS
+            )
+        buffer = io.BytesIO()
+        img.save(buffer, format="PNG")
+        b64_data = base64.b64encode(buffer.getvalue()).decode("ascii")
+        print(f"\033]1337;File=inline=1:{b64_data}\007")
+    except Exception as err:
+        console.print(f"[dim]Could not display preview: {err}[/dim]")
 
-    ignore_list = {}
-    for line in ignore_file.read_text().splitlines():
-        line = line.strip()
-        if not line or line.startswith("#"):
+
+def _show_pending_table(pending: list[PendingLink]) -> None:
+    table = Table(title="Orphaned Images")
+    table.add_column("#", style="cyan", width=3)
+    table.add_column("Image", style="white")
+    table.add_column("Best Match", style="green")
+    table.add_column("Score", justify="right", style="magenta", width=6)
+    table.add_column("Action", style="yellow", width=8)
+
+    for idx, p in enumerate(pending, 1):
+        match_str = p.recipe.basename if p.recipe else "[dim]none[/dim]"
+        score_str = f"{p.score:.0f}%" if p.recipe else "-"
+        table.add_row(str(idx), p.image.rel_path, match_str, score_str, p.action)
+
+    console.print(table)
+
+
+def _show_search_results(scored: list[tuple[Recipe, float]], query: str) -> None:
+    table = Table(title=f"Search: {query}")
+    table.add_column("#", style="cyan", width=3)
+    table.add_column("Recipe", style="white")
+    table.add_column("Score", justify="right", style="magenta")
+    for i, (r, s) in enumerate(scored, 1):
+        table.add_row(str(i), r.rel_path, f"{s:.0f}%")
+    console.print(table)
+
+
+def _show_batch_help() -> None:
+    console.print("\n[dim]Commands:[/dim]")
+    console.print("  [cyan]1,3,5[/cyan] or [cyan]1-5[/cyan] - Link these matches")
+    console.print("  [cyan]i2,i4[/cyan] - Ignore these images")
+    console.print("  [cyan]all[/cyan] - Link all matches")
+    console.print("  [cyan]v3[/cyan] - View image #3")
+    console.print("  [cyan]s3 query[/cyan] - Search for image #3")
+    console.print("  [cyan]enter[/cyan] - Execute pending actions")
+
+
+# --- Input Parsing ---
+
+
+def _parse_batch_input(
+    user_input: str, max_idx: int
+) -> tuple[set[int], set[int], str | None]:
+    link, ignore = set(), set()
+
+    if not user_input.strip():
+        return link, ignore, None
+
+    if user_input.strip().lower() == "all":
+        return set(range(1, max_idx + 1)), set(), None
+
+    for part in user_input.replace(" ", ",").split(","):
+        part = part.strip()
+        if not part:
             continue
 
-        if "|" in line:
-            basename, reason = line.split("|", 1)
-            ignore_list[basename.strip()] = reason.strip()
+        is_ignore = part.lower().startswith("i")
+        if is_ignore:
+            part = part[1:]
 
-    return ignore_list
+        try:
+            nums = (
+                list(range(int(part.split("-")[0]), int(part.split("-")[-1]) + 1))
+                if "-" in part
+                else [int(part)]
+            )
+            for n in nums:
+                if n < 1 or n > max_idx:
+                    return set(), set(), f"Invalid index: {n}"
+                (ignore if is_ignore else link).add(n)
+        except ValueError:
+            return set(), set(), f"Invalid input: {part}"
+
+    return link, ignore, None
 
 
-def _add_to_ignore(basename: str, reason: str, content_dir: Path, *, dry_run: bool) -> None:
-    """Append to .imageignore with user-provided reason.
+# --- Batch Processing ---
 
-    Args:
-        basename: Image basename to ignore
-        reason: Reason for ignoring
-        content_dir: Path to content directory
-        dry_run: If True, only preview changes
-    """
-    ignore_file = content_dir / ".imageignore"
 
-    entry = f"{basename}|{reason}\n"
+def _handle_view_command(pending: list[PendingLink], cmd: str) -> bool:
+    try:
+        idx = int(cmd[1:]) - 1
+        if 0 <= idx < len(pending):
+            _display_image_preview(pending[idx].image.path)
+        else:
+            console.print("[red]Invalid index[/red]")
+    except ValueError:
+        console.print("[red]Usage: v3[/red]")
+    return True
 
-    if dry_run:
-        console.print(f"[yellow]Would add to .imageignore: {entry.strip()}[/yellow]")
-        return
 
-    with ignore_file.open("a") as f:
-        f.write(entry)
+def _handle_search_command(
+    pending: list[PendingLink], candidates: list[Recipe], cmd: str
+) -> bool:
+    parts = cmd[1:].split(None, 1)
+    if len(parts) < 2:
+        console.print("[red]Usage: s3 search_query[/red]")
+        return True
 
-    console.print(f"[green]Added to .imageignore: {basename}[/green]")
+    try:
+        idx = int(parts[0]) - 1
+        query = parts[1]
+    except ValueError:
+        console.print("[red]Usage: s3 search_query[/red]")
+        return True
+
+    if not (0 <= idx < len(pending)):
+        console.print("[red]Invalid index[/red]")
+        return True
+
+    scored = sorted(
+        [(r, _fuzzy_score(query, r)) for r in candidates],
+        key=lambda x: x[1],
+        reverse=True,
+    )[:5]
+
+    _show_search_results(scored, query)
+    choice = Prompt.ask("Select 1-5 or enter to cancel", default="")
+
+    if choice:
+        try:
+            sel_idx = int(choice) - 1
+            if 0 <= sel_idx < len(scored):
+                pending[idx].recipe = scored[sel_idx][0]
+                pending[idx].score = scored[sel_idx][1]
+                pending[idx].action = "link"
+                _show_pending_table(pending)
+        except ValueError:
+            pass
+
+    return True
+
+
+def _handle_batch_selection(pending: list[PendingLink], user_input: str) -> bool:
+    link_set, ignore_set, err = _parse_batch_input(user_input, len(pending))
+    if err:
+        console.print(f"[red]{err}[/red]")
+        return True
+
+    for idx in link_set:
+        if pending[idx - 1].recipe:
+            pending[idx - 1].action = "link"
+
+    for idx in ignore_set:
+        pending[idx - 1].action = "ignore"
+
+    _show_pending_table(pending)
+    return True
+
+
+def _execute_pending_actions(pending: list[PendingLink], *, dry_run: bool) -> int:
+    count = 0
+    ignore_reason = None
+
+    for p in pending:
+        if p.action == "link" and p.recipe:
+            if dry_run:
+                console.print(
+                    f"[yellow]Would rename {p.image.rel_path} -> {p.recipe.basename}{p.image.extension}[/yellow]"
+                )
+            else:
+                new_path = _rename_and_link(p.image, p.recipe)
+                if new_path:
+                    _compress_image(new_path)
+            count += 1
+
+        elif p.action == "ignore":
+            if not dry_run and ignore_reason is None:
+                ignore_reason = Prompt.ask(
+                    "Reason for ignored images", default="Not a recipe image"
+                )
+            if dry_run:
+                console.print(
+                    f"[yellow]Would add to .imageignore: {p.image.path.name}[/yellow]"
+                )
+            else:
+                _add_to_ignore(p.image.path.name, ignore_reason)
+            count += 1
+
+    return count
+
+
+def _collect_batch_actions(
+    pending: list[PendingLink], candidates: list[Recipe]
+) -> None:
+    _show_pending_table(pending)
+    _show_batch_help()
+
+    while True:
+        user_input = Prompt.ask("\nAction", default="")
+
+        if not user_input:
+            break
+
+        cmd_lower = user_input.lower()
+        if cmd_lower.startswith("v"):
+            _handle_view_command(pending, user_input)
+        elif cmd_lower.startswith("s"):
+            _handle_search_command(pending, candidates, user_input)
+        else:
+            _handle_batch_selection(pending, user_input)
+
+
+# --- Main Processing ---
 
 
 def _process_exact_matches(
-    matches: list[tuple[RecipeMetadata, ImageFile]],
-    *,
-    dry_run: bool,
-    auto: bool,
+    matches: list[tuple[Recipe, ImageFile]], *, dry_run: bool, auto: bool
 ) -> int:
-    """Process exact matches between recipes and images.
-
-    Args:
-        matches: List of (recipe, image) exact matches
-        dry_run: If True, only preview changes
-        auto: If True, skip prompts
-
-    Returns:
-        Number of processed matches
-    """
     if not matches:
         return 0
 
@@ -510,175 +447,54 @@ def _process_exact_matches(
     table.add_column("#", style="cyan", width=3)
     table.add_column("Recipe", style="white")
     table.add_column("Image", style="green")
-    table.add_column("Size", justify="right", style="yellow")
 
     for idx, (recipe, image) in enumerate(matches, 1):
-        size_mb = image.path.stat().st_size / (1024 * 1024)
-        table.add_row(
-            str(idx),
-            f"{recipe.category}/{recipe.basename}",
-            image.path.name,
-            f"{size_mb:.1f} MB",
-        )
+        table.add_row(str(idx), recipe.rel_path, image.rel_path)
 
     console.print(table)
 
     if not auto and not Confirm.ask("\nLink these automatically?", default=True):
         return 0
 
-    count = 0
     for recipe, image in matches:
-        _update_recipe_image(recipe.path, image.path.name, dry_run=dry_run)
-        count += 1
+        if dry_run:
+            console.print(f"[yellow]Would update {recipe.path.name}[/yellow]")
+        else:
+            _update_recipe_image(recipe.path, image.path.name)
 
-    return count
-
-
-def _process_orphaned_image(
-    image: ImageFile,
-    recipes_without_images: list[RecipeMetadata],
-    content_dir: Path,
-    *,
-    dry_run: bool,
-) -> bool:
-    """Process a single orphaned image interactively.
-
-    Args:
-        image: Orphaned image
-        recipes_without_images: List of recipes without images
-        content_dir: Path to content directory
-        dry_run: If True, only preview changes
-
-    Returns:
-        True if processed, False if skipped
-    """
-    console.print(f"\n[bold cyan]Orphaned: {image.path.name}[/bold cyan]")
-    console.print(f"[dim]Category: {image.category}[/dim]")
-
-    # Show image preview if terminal supports it
-    _display_image_preview(image.path)
-
-    choice = Prompt.ask(
-        "Action",
-        choices=["fuzzy", "ignore", "skip"],
-        default="fuzzy",
-    )
-
-    if choice == "skip":
-        return False
-
-    if choice == "ignore":
-        reason = Prompt.ask("Reason for ignoring")
-        _add_to_ignore(image.path.name, reason, content_dir, dry_run=dry_run)
-        return True
-
-    # Fuzzy search
-    selected_recipe = _interactive_fuzzy_select(recipes_without_images, image.basename)
-
-    if not selected_recipe:
-        return False
-
-    console.print(f"\n[bold]Selected: {selected_recipe.category}/{selected_recipe.basename}[/bold]")
-
-    link_choice = Prompt.ask(
-        "How to link?",
-        choices=["rename", "keep"],
-        default="rename",
-    )
-
-    if link_choice == "rename":
-        new_name = f"{selected_recipe.basename}{image.extension}"
-        new_path = selected_recipe.path.parent / new_name
-
-        _rename_image(image.path, new_path, dry_run=dry_run)
-        _update_recipe_image(selected_recipe.path, new_name, dry_run=dry_run)
-
-        if not dry_run:
-            _compress_image(new_path, dry_run=dry_run)
-    else:
-        _update_recipe_image(selected_recipe.path, image.path.name, dry_run=dry_run)
-
-        if not dry_run:
-            _compress_image(image.path, dry_run=dry_run)
-
-    return True
+    return len(matches)
 
 
-def _process_orphaned_images(
-    orphaned: list[ImageFile],
-    recipes_without_images: list[RecipeMetadata],
-    content_dir: Path,
-    *,
-    dry_run: bool,
+def _process_orphaned_batch(
+    orphaned: list[ImageFile], candidates: list[Recipe], *, dry_run: bool
 ) -> int:
-    """Process all orphaned images interactively.
-
-    Args:
-        orphaned: List of orphaned images
-        recipes_without_images: List of recipes without images
-        content_dir: Path to content directory
-        dry_run: If True, only preview changes
-
-    Returns:
-        Number of processed images
-    """
     if not orphaned:
         return 0
 
-    console.print(f"\n[bold yellow]Found {len(orphaned)} orphaned images[/bold yellow]")
+    pending = [
+        PendingLink(image=img, recipe=recipe, score=score)
+        for img in orphaned
+        for recipe, score in [_best_match(img, candidates)]
+    ]
 
-    count = 0
-    for image in orphaned:
-        if _process_orphaned_image(
-            image,
-            recipes_without_images,
-            content_dir,
-            dry_run=dry_run,
-        ):
-            count += 1
-
-    return count
+    console.print(f"\n[bold yellow]Found {len(pending)} orphaned images[/bold yellow]")
+    _collect_batch_actions(pending, candidates)
+    return _execute_pending_actions(pending, dry_run=dry_run)
 
 
 def main() -> None:
-    """Interactive tool to manage recipe images."""
     parser = argparse.ArgumentParser(
         description="Interactive tool to manage recipe images"
     )
     parser.add_argument(
-        "--dry-run",
-        action="store_true",
-        help="Preview changes without modifying files",
+        "--dry-run", action="store_true", help="Preview changes without modifying files"
     )
     parser.add_argument(
-        "--auto",
-        action="store_true",
-        help="Auto-link exact matches only (no prompts)",
-    )
-    parser.add_argument(
-        "--category",
-        type=str,
-        help="Only process specific category",
-    )
-    parser.add_argument(
-        "--image",
-        type=Path,
-        help="Process single orphaned image",
-    )
-    parser.add_argument(
-        "--no-preview",
-        action="store_true",
-        help="Disable image previews in terminal",
+        "--auto", action="store_true", help="Auto-link exact matches only (no prompts)"
     )
     args = parser.parse_args()
 
-    # Set global preview flag
-    global _DISABLE_PREVIEWS
-    _DISABLE_PREVIEWS = args.no_preview
-
-    content_dir = Path("content")
-
-    if not content_dir.exists():
+    if not CONTENT_DIR.exists():
         console.print("[red]Error: content directory not found[/red]")
         return
 
@@ -687,32 +503,24 @@ def main() -> None:
 
     console.print("\n[bold]Scanning content/ directory...[/bold]")
 
-    recipes = _scan_recipes(content_dir, args.category)
-    images = _scan_images(content_dir, args.category)
-    ignore_list = _load_ignore_list(content_dir)
+    recipes, images = _scan_content()
+    ignore_list = _load_ignore_list()
 
     console.print(f"  {len(recipes)} recipes, {len(images)} images")
 
     exact_matches = _find_exact_matches(recipes, images)
     exact_count = _process_exact_matches(
-        exact_matches,
-        dry_run=args.dry_run,
-        auto=args.auto,
+        exact_matches, dry_run=args.dry_run, auto=args.auto
     )
 
     if args.auto:
         console.print(f"\n[bold green]Auto-linked {exact_count} recipes[/bold green]")
         return
 
-    orphaned = _find_orphaned_images(images, recipes, ignore_list)
-    recipes_without_images = [r for r in recipes if not r.has_image]
+    orphaned = _find_orphaned_images(images, recipes, exact_matches, ignore_list)
+    candidates = [r for r in recipes if not r.has_image]
 
-    orphaned_count = _process_orphaned_images(
-        orphaned,
-        recipes_without_images,
-        content_dir,
-        dry_run=args.dry_run,
-    )
+    orphaned_count = _process_orphaned_batch(orphaned, candidates, dry_run=args.dry_run)
 
     console.print("\n[bold]Summary:[/bold]")
     console.print(f"  Exact matches linked: {exact_count}")
