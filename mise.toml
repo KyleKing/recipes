@@ -9,6 +9,10 @@ run = "optimize-images -mh 900 --convert-all --force-delete"
 description = "Update Wayback Machine Links. Optionally specify arguments (see 'mise run wayback --help')"
 run = "./_update_wayback_links.py"
 
+[tasks.link-images]
+description = "Interactive tool to link recipe images. Optionally specify arguments (see 'mise run link-images --help')"
+run = "./_link_images.py"
+
 [tasks.build]
 depends = ["format"]
 description = "Build website"
