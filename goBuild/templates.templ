@@ -84,7 +84,7 @@ templ recipePageContent(content string, recipe Recipe) {
 
 templ relatedRecipesSection(relatedRecipes []RelatedRecipe) {
 	<hr style="margin-top: 2rem; margin-bottom: 1rem;"/>
-	<section class="related-recipes">
+	<section class="related-recipes" data-pagefind-ignore>
 		<h2>Related Recipes</h2>
 		<div class="wrapped-images-container">
 			for _, related := range relatedRecipes {
@@ -123,7 +123,7 @@ templ relatedRecipesSection(relatedRecipes []RelatedRecipe) {
 
 templ noMatchesSection(recipe Recipe) {
 	<hr style="margin-top: 2rem; margin-bottom: 1rem;"/>
-	<section class="related-recipes">
+	<section class="related-recipes" data-pagefind-ignore>
 		<h2>Related Recipes</h2>
 		<p>No related recipes found (scanned { fmt.Sprintf("%d", recipe.totalRecipeCount) } recipes).</p>
 		if len(recipe.ingredientTokens) > 0 {
