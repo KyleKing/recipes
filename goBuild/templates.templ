@@ -65,6 +65,17 @@ templ page(title string, contents templ.Component, pageType string) {
 					});
 				</script>
 			}
+			if pageType == CONTENT_PAGE {
+				<div id="recipe-toolbar" class="recipe-toolbar">
+					<button id="back-btn" class="toolbar-btn" title="Return to previous position" style="display:none">
+						<span aria-hidden="true">&#8593;</span> Back
+					</button>
+					<button id="reset-btn" class="toolbar-btn" title="Reset all progress">
+						Reset
+					</button>
+				</div>
+				<script src="/_static/recipe.js"></script>
+			}
 		</body>
 	</html>
 }

@@ -432,3 +432,139 @@ body.trmnl-mode .match-details,
 body.trmnl-mode .no-match-details {
     display: none;
 }
+
+/* Recipe Navigation - Floating Toolbar */
+
+.recipe-toolbar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 8px;
+    z-index: 100;
+}
+
+.toolbar-btn {
+    border: 2px solid var(--color-text);
+    background: var(--color-back);
+    color: var(--color-text);
+    padding: 8px 12px;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: opacity 1s ease;
+}
+
+.toolbar-btn:hover {
+    background: rgba(180, 180, 180, 0.3);
+}
+
+.toolbar-btn.fading {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Recipe Step Checkboxes */
+
+.recipe-steps li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.step-checkbox {
+    margin-top: 0.3em;
+    flex-shrink: 0;
+    accent-color: var(--color-link);
+}
+
+/* Completed Items */
+
+.recipe-steps li.completed,
+.task-list li.completed {
+    opacity: 0.6;
+}
+
+/* Section Folding */
+
+section.collapsible > h2,
+section.collapsible > h3 {
+    cursor: pointer;
+    user-select: none;
+}
+
+section.collapsible > h2::before,
+section.collapsible > h3::before {
+    content: "- ";
+    font-family: monospace;
+}
+
+section.collapsible.collapsed > h2::before,
+section.collapsible.collapsed > h3::before {
+    content: "+ ";
+}
+
+section.collapsible.collapsed > *:not(h2):not(h3):not(.section-summary) {
+    display: none;
+}
+
+.section-summary {
+    font-size: 14px;
+    color: #666;
+    font-style: italic;
+    margin-top: -0.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Header Anchors */
+
+section[id] > h2.has-anchor::after,
+section[id] > h3.has-anchor::after {
+    content: " #";
+    opacity: 0;
+    color: var(--color-link);
+    transition: opacity 0.2s ease;
+}
+
+section[id]:hover > h2.has-anchor::after,
+section[id]:hover > h3.has-anchor::after {
+    opacity: 0.5;
+}
+
+section[id] > h2.anchor-copied::after,
+section[id] > h3.anchor-copied::after {
+    content: " (copied)";
+    opacity: 1;
+    font-size: 0.7em;
+}
+
+/* E-ink Mode - Hide Interactive Elements */
+
+body.trmnl-mode .recipe-toolbar,
+body.trmnl-mode .step-checkbox,
+body.trmnl-mode .section-summary {
+    display: none;
+}
+
+body.trmnl-mode section.collapsible > h2::before,
+body.trmnl-mode section.collapsible > h3::before {
+    content: none;
+}
+
+body.trmnl-mode section.collapsible.collapsed > * {
+    display: block;
+}
+
+/* Mobile - Larger Touch Targets */
+
+@media (max-width: 759px) {
+    .toolbar-btn {
+        padding: 10px 14px;
+        font-size: 16px;
+    }
+
+    .step-checkbox {
+        width: 20px;
+        height: 20px;
+    }
+}

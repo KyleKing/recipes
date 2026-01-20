@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Test : Recipe</title>
+    <meta name="description" content="Kyle and Alex's Personal Recipes" />
+    <script>
+      // Detect ?trmnl=1 query parameter and enable e-ink mode
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("trmnl") === "1") {
+        document.addEventListener("DOMContentLoaded", function () {
+          document.body.classList.add("trmnl-mode");
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <a href="/"
+          ><i><strong>Home</strong></i></a
+        >
+        &nbsp;
+        <a href="/filters.html"
+          ><i><strong>Filters</strong></i></a
+        >
+        &nbsp;
+        <a href="/search.html"
+          ><i><strong>Search</strong></i></a
+        >
+      </div>
+    </nav>
+    <main data-pagefind-body>
+      <section id="Test-Recipe">
+        <h1>Test Recipe</h1>
+        <p>
+          Based on
+          <a href="https://github.com/KyleKing/recipes"
+            >https://github.com/KyleKing/recipes</a
+          >
+        </p>
+        <p>Personal rating: 5 / 5</p>
+        <img
+          class="fullsize"
+          data-pagefind-meta="image[src]"
+          alt="test.image"
+          src="/test/test.image"
+        />
+      </section>
+      <section id="Ingredients">
+        <h2>Ingredients</h2>
+        <ul class="task-list">
+          <li>
+            <input type="checkbox" />Ingredients 1
+            <ul class="task-list">
+              <li><input type="checkbox" />Nested Ingredient</li>
+            </ul>
+          </li>
+          <li>
+            <input type="checkbox" />(Optional) Ingredient 2 (<a
+              href="https://github.com/KyleKing/recipes"
+              >https://github.com/KyleKing/recipes</a
+            >)
+          </li>
+        </ul>
+      </section>
+      <section id="Recipe">
+        <h2>Recipe</h2>
+        <ol>
+          <li>Recipe_Steps</li>
+        </ol>
+      </section>
+      <section id="Notes">
+        <h2>Notes</h2>
+        <ul>
+          <li>Optional_Notes</li>
+        </ul>
+      </section>
+      <hr style="margin-top: 2rem; margin-bottom: 1rem" />
+      <section class="related-recipes" data-pagefind-ignore>
+        <h2>Related Recipes</h2>
+        <p>No related recipes found (scanned 1 recipes).</p>
+        <details class="no-match-details">
+          <summary>Why no matches?</summary>
+          <div class="no-match-info">
+            <p><strong>This recipe's ingredient tokens:</strong></p>
+            <p class="ingredient-tokens">ingredient, nested ingredient</p>
+            <p>
+              This recipe may have a unique combination of ingredients that
+              doesn't strongly match any other recipe in the collection. Try
+              browsing the <a href="/Test">Test</a> category.
+            </p>
+          </div>
+        </details>
+      </section>
+    </main>
+  </body>
+</html>
