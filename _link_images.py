@@ -8,10 +8,15 @@
 # ]
 # ///
 
-"""Interactive tool to manage recipe images.
+"""Interactive tool to manage recipe images and ratings.
+
+Features:
+- Link orphaned images to recipes using fuzzy matching
+- Rate recipes that have images but no rating (rating=0)
+- Batch operations with image preview support
 
 Usage:
-    mise run link-images              # Interactive mode
+    mise run link-images              # Interactive mode (link images + rate unrated)
     mise run link-images --dry-run    # Preview changes without modifying files
     mise run link-images --auto       # Auto-link exact matches only (no prompts)
 """
@@ -43,6 +48,7 @@ class Recipe:
     path: Path
     basename: str
     image_filename: str | None
+    rating: int = 0
 
     @property
     def rel_path(self) -> str:
@@ -72,17 +78,28 @@ class PendingLink:
     action: str = ""
 
 
+@dataclass
+class PendingRating:
+    recipe: Recipe
+    rating: int = 0
+    action: str = ""
+
+
 # --- Scanning ---
 
 
 def _parse_recipe(path: Path) -> Recipe:
     content = path.read_text()
     image_filename = None
-    if match := re.search(r'\{\s*rating=\d+\s+image="([^"]+)"\s*\}', content):
-        image_val = match.group(1)
+    rating = 0
+    if match := re.search(r'\{\s*rating=(\d+)\s+image="([^"]+)"\s*\}', content):
+        rating = int(match.group(1))
+        image_val = match.group(2)
         if "." in image_val:
             image_filename = image_val
-    return Recipe(path=path, basename=path.stem, image_filename=image_filename)
+    return Recipe(
+        path=path, basename=path.stem, image_filename=image_filename, rating=rating
+    )
 
 
 def _scan_content() -> tuple[list[Recipe], list[ImageFile]]:
@@ -162,6 +179,10 @@ def _best_match(
     return max(scored, key=lambda x: x[1])
 
 
+def _find_unrated_with_images(recipes: list[Recipe]) -> list[Recipe]:
+    return [r for r in recipes if r.has_image and r.rating == 0]
+
+
 # --- File Operations ---
 
 
@@ -177,6 +198,13 @@ def _update_recipe_image(recipe_path: Path, new_image: str) -> None:
     new_content = re.sub(r'(image=")[^"]+(")', rf"\g<1>{new_image}\2", content)
     recipe_path.write_text(new_content)
     console.print(f"[green]Updated {recipe_path.name}[/green]")
+
+
+def _update_recipe_rating(recipe_path: Path, new_rating: int) -> None:
+    content = recipe_path.read_text()
+    new_content = re.sub(r'(rating=)\d+', rf"\g<1>{new_rating}", content)
+    recipe_path.write_text(new_content)
+    console.print(f"[green]Rated {recipe_path.name}: {new_rating}/5[/green]")
 
 
 def _rename_and_link(image: ImageFile, recipe: Recipe) -> Path | None:
@@ -266,6 +294,29 @@ def _show_batch_help() -> None:
     console.print("  [cyan]enter[/cyan] - Execute pending actions")
 
 
+def _show_rating_table(pending: list[PendingRating]) -> None:
+    table = Table(title="Unrated Recipes with Images")
+    table.add_column("#", style="cyan", width=3)
+    table.add_column("Recipe", style="white")
+    table.add_column("Image", style="green")
+    table.add_column("Rating", style="magenta", width=8)
+
+    for idx, p in enumerate(pending, 1):
+        rating_str = f"{p.rating}/5" if p.rating > 0 else "-"
+        table.add_row(str(idx), p.recipe.rel_path, p.recipe.image_filename or "", rating_str)
+
+    console.print(table)
+
+
+def _show_rating_help() -> None:
+    console.print("\n[dim]Commands:[/dim]")
+    console.print("  [cyan]r1 5[/cyan] or [cyan]r1-3 4[/cyan] - Rate recipe(s)")
+    console.print("  [cyan]r2 v[/cyan] or [cyan]r2 view[/cyan] - View recipe image")
+    console.print("  [cyan]all 4[/cyan] - Rate all recipes with same rating")
+    console.print("  [cyan]v3[/cyan] - View image #3")
+    console.print("  [cyan]enter[/cyan] - Execute pending ratings")
+
+
 # --- Input Parsing ---
 
 
@@ -303,6 +354,69 @@ def _parse_batch_input(
             return set(), set(), f"Invalid input: {part}"
 
     return link, ignore, None
+
+
+def _parse_rating_input(
+    user_input: str, max_idx: int
+) -> tuple[dict[int, int], set[int], str | None]:
+    ratings = {}
+    view_set = set()
+
+    if not user_input.strip():
+        return ratings, view_set, None
+
+    if user_input.strip().lower().startswith("all "):
+        try:
+            rating = int(user_input.split()[1])
+            if rating not in range(1, 6):
+                return {}, set(), f"Rating must be 1-5, got {rating}"
+            return {i: rating for i in range(1, max_idx + 1)}, set(), None
+        except (ValueError, IndexError):
+            return {}, set(), "Invalid format: use 'all <rating>'"
+
+    for part in user_input.split(","):
+        part = part.strip()
+        if not part:
+            continue
+
+        is_rating_cmd = part.lower().startswith("r")
+        if is_rating_cmd:
+            part = part[1:].strip()
+
+        if " " in part:
+            idx_part, action = part.split(None, 1)
+            action = action.lower()
+
+            if action in ("v", "view"):
+                try:
+                    idx = int(idx_part)
+                    if idx < 1 or idx > max_idx:
+                        return {}, set(), f"Invalid index: {idx}"
+                    view_set.add(idx)
+                except ValueError:
+                    return {}, set(), f"Invalid index: {idx_part}"
+            else:
+                try:
+                    rating = int(action)
+                    if rating not in range(1, 6):
+                        return {}, set(), f"Rating must be 1-5, got {rating}"
+
+                    if "-" in idx_part:
+                        start, end = map(int, idx_part.split("-"))
+                        nums = list(range(start, end + 1))
+                    else:
+                        nums = [int(idx_part)]
+
+                    for n in nums:
+                        if n < 1 or n > max_idx:
+                            return {}, set(), f"Invalid index: {n}"
+                        ratings[n] = rating
+                except ValueError:
+                    return {}, set(), f"Invalid format: {part}"
+        elif is_rating_cmd:
+            return {}, set(), f"Missing rating or action: {part}"
+
+    return ratings, view_set, None
 
 
 # --- Batch Processing ---
@@ -432,14 +546,77 @@ def _collect_batch_actions(
             _handle_batch_selection(pending, user_input)
 
 
+def _handle_rating_view(pending: list[PendingRating], idx: int) -> None:
+    if idx < 1 or idx > len(pending):
+        console.print("[red]Invalid index[/red]")
+        return
+
+    recipe = pending[idx - 1].recipe
+    if recipe.has_image:
+        image_path = recipe.path.parent / recipe.image_filename
+        if image_path.exists():
+            _display_image_preview(image_path)
+        else:
+            console.print(f"[yellow]Image not found: {recipe.image_filename}[/yellow]")
+
+
+def _collect_rating_actions(pending: list[PendingRating]) -> None:
+    _show_rating_table(pending)
+    _show_rating_help()
+
+    while True:
+        user_input = Prompt.ask("\nAction", default="")
+
+        if not user_input:
+            break
+
+        cmd_lower = user_input.lower()
+
+        if cmd_lower.startswith("v"):
+            try:
+                idx = int(user_input[1:])
+                _handle_rating_view(pending, idx)
+            except ValueError:
+                console.print("[red]Usage: v3[/red]")
+        else:
+            ratings_dict, view_set, err = _parse_rating_input(user_input, len(pending))
+
+            if err:
+                console.print(f"[red]{err}[/red]")
+                continue
+
+            for idx in view_set:
+                _handle_rating_view(pending, idx)
+
+            for idx, rating in ratings_dict.items():
+                pending[idx - 1].rating = rating
+
+            if ratings_dict:
+                _show_rating_table(pending)
+
+
+def _execute_pending_ratings(pending: list[PendingRating], *, dry_run: bool) -> int:
+    count = 0
+    for p in pending:
+        if p.rating > 0:
+            if dry_run:
+                console.print(
+                    f"[yellow]Would rate {p.recipe.rel_path}: {p.rating}/5[/yellow]"
+                )
+            else:
+                _update_recipe_rating(p.recipe.path, p.rating)
+            count += 1
+    return count
+
+
 # --- Main Processing ---
 
 
 def _process_exact_matches(
     matches: list[tuple[Recipe, ImageFile]], *, dry_run: bool, auto: bool
-) -> int:
+) -> tuple[int, list[tuple[Recipe, ImageFile]]]:
     if not matches:
-        return 0
+        return 0, []
 
     console.print(f"\n[bold]Found {len(matches)} exact matches:[/bold]")
 
@@ -454,7 +631,7 @@ def _process_exact_matches(
     console.print(table)
 
     if not auto and not Confirm.ask("\nLink these automatically?", default=True):
-        return 0
+        return 0, []
 
     for recipe, image in matches:
         if dry_run:
@@ -462,7 +639,7 @@ def _process_exact_matches(
         else:
             _update_recipe_image(recipe.path, image.path.name)
 
-    return len(matches)
+    return len(matches), matches
 
 
 def _process_orphaned_batch(
@@ -480,6 +657,17 @@ def _process_orphaned_batch(
     console.print(f"\n[bold yellow]Found {len(pending)} orphaned images[/bold yellow]")
     _collect_batch_actions(pending, candidates)
     return _execute_pending_actions(pending, dry_run=dry_run)
+
+
+def _process_unrated_batch(unrated: list[Recipe], *, dry_run: bool) -> int:
+    if not unrated:
+        return 0
+
+    pending = [PendingRating(recipe=r) for r in unrated]
+
+    console.print(f"\n[bold yellow]Found {len(pending)} unrated recipes with images[/bold yellow]")
+    _collect_rating_actions(pending)
+    return _execute_pending_ratings(pending, dry_run=dry_run)
 
 
 def main() -> None:
@@ -509,7 +697,7 @@ def main() -> None:
     console.print(f"  {len(recipes)} recipes, {len(images)} images")
 
     exact_matches = _find_exact_matches(recipes, images)
-    exact_count = _process_exact_matches(
+    exact_count, linked_exact_matches = _process_exact_matches(
         exact_matches, dry_run=args.dry_run, auto=args.auto
     )
 
@@ -517,14 +705,20 @@ def main() -> None:
         console.print(f"\n[bold green]Auto-linked {exact_count} recipes[/bold green]")
         return
 
-    orphaned = _find_orphaned_images(images, recipes, exact_matches, ignore_list)
+    orphaned = _find_orphaned_images(images, recipes, linked_exact_matches, ignore_list)
     candidates = [r for r in recipes if not r.has_image]
 
     orphaned_count = _process_orphaned_batch(orphaned, candidates, dry_run=args.dry_run)
 
+    recipes, _ = _scan_content()
+    unrated = _find_unrated_with_images(recipes)
+
+    rating_count = _process_unrated_batch(unrated, dry_run=args.dry_run)
+
     console.print("\n[bold]Summary:[/bold]")
     console.print(f"  Exact matches linked: {exact_count}")
     console.print(f"  Orphaned images processed: {orphaned_count}")
+    console.print(f"  Recipes rated: {rating_count}")
 
     if args.dry_run:
         console.print("\n[yellow]Run without --dry-run to apply changes[/yellow]")
