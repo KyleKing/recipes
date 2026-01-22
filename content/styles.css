@@ -96,8 +96,14 @@ ol:nth-child(odd) {
 }
 
 ul.task-list {
-    list-style: none;
+    list-style: disc;
     padding-left: 20px;
+}
+
+ul.task-list input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
 }
 
 ul.flat-list {
@@ -440,6 +446,7 @@ body.trmnl-mode .no-match-details {
     bottom: 20px;
     right: 20px;
     display: flex;
+    flex-direction: column;
     gap: 8px;
     z-index: 100;
 }
@@ -464,18 +471,10 @@ body.trmnl-mode .no-match-details {
     pointer-events: none;
 }
 
-/* Recipe Step Checkboxes */
+/* Recipe Steps - Click on number to toggle */
 
-.recipe-steps li {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-}
-
-.step-checkbox {
-    margin-top: 0.3em;
-    flex-shrink: 0;
-    accent-color: var(--color-link);
+.recipe-steps li::marker {
+    cursor: pointer;
 }
 
 /* Completed Items */
@@ -483,75 +482,101 @@ body.trmnl-mode .no-match-details {
 .recipe-steps li.completed,
 .task-list li.completed {
     opacity: 0.6;
+    text-decoration: line-through;
+    transition: opacity 0.3s ease;
+}
+
+.task-list li.completed {
+    list-style-type: "✓ ";
+}
+
+/* Hiding animation for collapse */
+
+li.hiding {
+    animation: fadeOutHide 0.4s ease forwards;
+}
+
+@keyframes fadeOutHide {
+    0% {
+        opacity: 0.6;
+        max-height: 100px;
+    }
+    70% {
+        opacity: 0;
+        max-height: 100px;
+    }
+    100% {
+        opacity: 0;
+        max-height: 0;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    }
 }
 
 /* Section Folding */
 
-section.collapsible > h2,
-section.collapsible > h3 {
-    cursor: pointer;
-    user-select: none;
-}
-
-section.collapsible > h2::before,
-section.collapsible > h3::before {
-    content: "- ";
-    font-family: monospace;
-}
-
-section.collapsible.collapsed > h2::before,
-section.collapsible.collapsed > h3::before {
-    content: "+ ";
-}
-
-section.collapsible.collapsed > *:not(h2):not(h3):not(.section-summary) {
+section.collapsible.collapsed > *:not(h2):not(h3):not(ul):not(ol) {
     display: none;
 }
 
+section.collapsible.collapsed li.completed {
+    display: none;
+}
+
+.collapse-toggle {
+    margin-left: 0.5em;
+    font-family: monospace;
+    font-weight: normal;
+    cursor: pointer;
+    color: var(--color-link);
+    user-select: none;
+}
+
+.collapse-toggle:hover {
+    text-decoration: underline;
+}
+
 .section-summary {
-    font-size: 14px;
+    font-size: 0.7em;
+    font-weight: normal;
     color: #666;
     font-style: italic;
-    margin-top: -0.5em;
-    margin-bottom: 0.5em;
 }
 
 /* Header Anchors */
 
-section[id] > h2.has-anchor::after,
-section[id] > h3.has-anchor::after {
-    content: " #";
+.header-anchor {
+    margin-left: 0.3em;
     opacity: 0;
     color: var(--color-link);
+    text-decoration: none;
+    font-weight: normal;
     transition: opacity 0.2s ease;
 }
 
-section[id]:hover > h2.has-anchor::after,
-section[id]:hover > h3.has-anchor::after {
+h2:hover .header-anchor,
+h3:hover .header-anchor,
+.header-anchor:focus {
     opacity: 0.5;
 }
 
-section[id] > h2.anchor-copied::after,
-section[id] > h3.anchor-copied::after {
-    content: " (copied)";
+.header-anchor:hover {
     opacity: 1;
-    font-size: 0.7em;
+    text-decoration: underline;
 }
 
 /* E-ink Mode - Hide Interactive Elements */
 
 body.trmnl-mode .recipe-toolbar,
-body.trmnl-mode .step-checkbox,
-body.trmnl-mode .section-summary {
+body.trmnl-mode .section-summary,
+body.trmnl-mode .collapse-toggle,
+body.trmnl-mode .header-anchor {
     display: none;
 }
 
-body.trmnl-mode section.collapsible > h2::before,
-body.trmnl-mode section.collapsible > h3::before {
-    content: none;
-}
-
-body.trmnl-mode section.collapsible.collapsed > * {
+body.trmnl-mode section.collapsible.collapsed > *,
+body.trmnl-mode section.collapsible.collapsed li.completed {
     display: block;
 }
 
@@ -561,10 +586,5 @@ body.trmnl-mode section.collapsible.collapsed > * {
     .toolbar-btn {
         padding: 10px 14px;
         font-size: 16px;
-    }
-
-    .step-checkbox {
-        width: 20px;
-        height: 20px;
     }
 }

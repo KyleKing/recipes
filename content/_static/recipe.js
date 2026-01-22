@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var SCROLL_PAUSE_MS = 2000;
+  var SCROLL_PAUSE_MS = 800;
   var SCROLL_MIN_DISTANCE = 100;
   var BACK_BUTTON_FADE_MS = 5000;
 
@@ -33,75 +33,89 @@
 
   function setupIngredientCheckboxes() {
     var state = loadState();
-    var checkboxes = document.querySelectorAll(
-      ".task-list input[type='checkbox']",
-    );
-    checkboxes.forEach(function (cb, index) {
-      var key = "ingredient-" + index;
-      if (state[key]) {
-        cb.checked = true;
-        cb.closest("li").classList.add("completed");
-      }
-      cb.addEventListener("change", function () {
-        var currentState = loadState();
-        currentState[key] = cb.checked;
-        saveState(currentState);
-        if (cb.checked) {
-          cb.closest("li").classList.add("completed");
-        } else {
-          cb.closest("li").classList.remove("completed");
+    var taskLists = document.querySelectorAll(".task-list");
+
+    taskLists.forEach(function (list) {
+      var items = list.querySelectorAll(":scope > li");
+      items.forEach(function (li, index) {
+        var cb = li.querySelector("input[type='checkbox']");
+        if (!cb) return;
+
+        var key = "ingredient-" + index;
+        if (state[key]) {
+          cb.checked = true;
+          li.classList.add("completed");
         }
-        updateSectionSummaries();
+
+        li.style.cursor = "pointer";
+        li.addEventListener("click", function (e) {
+          if (e.target.tagName === "A") return;
+          cb.checked = !cb.checked;
+          li.classList.toggle("completed", cb.checked);
+          var currentState = loadState();
+          currentState[key] = cb.checked;
+          saveState(currentState);
+          updateSectionSummaries();
+          updateButtonVisibility();
+        });
       });
     });
   }
 
-  function injectStepCheckboxes() {
+  function setupStepToggles() {
     var state = loadState();
-    var recipeSection = null;
-    var notesSection = null;
-    var sections = document.querySelectorAll("section");
+    var allStepSections = document.querySelectorAll("section");
+    var stepIndex = 0;
+    var stepMap = new Map();
 
-    sections.forEach(function (section) {
-      var h2 = section.querySelector("h2");
-      if (h2) {
-        var text = h2.textContent.trim().toLowerCase();
-        if (text === "recipe") {
-          recipeSection = section;
-        } else if (text === "notes") {
-          notesSection = section;
-        }
-      }
-    });
+    allStepSections.forEach(function (section) {
+      var orderedLists = section.querySelectorAll("ol");
+      orderedLists.forEach(function (ol) {
+        ol.classList.add("recipe-steps");
+        var items = ol.querySelectorAll(":scope > li");
+        items.forEach(function (li) {
+          var key = "step-" + stepIndex;
+          stepIndex++;
+          stepMap.set(li, key);
 
-    if (!recipeSection) return;
-
-    var orderedLists = recipeSection.querySelectorAll("ol");
-    orderedLists.forEach(function (ol) {
-      ol.classList.add("recipe-steps");
-      var items = ol.querySelectorAll(":scope > li");
-      items.forEach(function (li, index) {
-        var key = "step-" + ol.id + "-" + index;
-        var checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
-        checkbox.className = "step-checkbox";
-        checkbox.setAttribute("aria-label", "Mark step complete");
-        if (state[key]) {
-          checkbox.checked = true;
-          li.classList.add("completed");
-        }
-        checkbox.addEventListener("change", function () {
-          var currentState = loadState();
-          currentState[key] = checkbox.checked;
-          saveState(currentState);
-          if (checkbox.checked) {
+          if (state[key]) {
             li.classList.add("completed");
-          } else {
-            li.classList.remove("completed");
           }
-          updateSectionSummaries();
         });
-        li.insertBefore(checkbox, li.firstChild);
+      });
+
+      function toggleLi(li) {
+        li.classList.toggle("completed");
+        var key = stepMap.get(li);
+        var currentState = loadState();
+        currentState[key] = li.classList.contains("completed");
+        saveState(currentState);
+        updateSectionSummaries();
+        updateButtonVisibility();
+      }
+
+      section.addEventListener("click", function (e) {
+        var allItems = section.querySelectorAll("ol.recipe-steps > li");
+        for (var i = 0; i < allItems.length; i++) {
+          var li = allItems[i];
+          var rect = li.getBoundingClientRect();
+          var clickX = e.clientX - rect.left;
+          if (
+            e.clientY >= rect.top &&
+            e.clientY <= rect.bottom &&
+            clickX < 30
+          ) {
+            toggleLi(li);
+            break;
+          }
+        }
+      });
+
+      section.addEventListener("dblclick", function (e) {
+        var li = e.target.closest("ol.recipe-steps > li");
+        if (li && stepMap.has(li)) {
+          toggleLi(li);
+        }
       });
     });
   }
@@ -153,6 +167,12 @@
     }
   }
 
+  function hasCompletableContent(section) {
+    var checkboxes = section.querySelectorAll("input[type='checkbox']");
+    var steps = section.querySelectorAll("ol.recipe-steps li");
+    return checkboxes.length > 0 || steps.length > 0;
+  }
+
   function setupSectionFolding() {
     var state = loadState();
     var sections = document.querySelectorAll("section");
@@ -163,21 +183,51 @@
       var heading = h2 || h3;
       if (!heading) return;
 
+      if (!hasCompletableContent(section)) return;
+
       var sectionId =
         section.id ||
         heading.textContent.trim().toLowerCase().replace(/\s+/g, "-");
       section.classList.add("collapsible");
 
+      var toggle = document.createElement("span");
+      toggle.className = "collapse-toggle";
+      toggle.textContent = "-";
+      toggle.setAttribute("aria-label", "Toggle section");
+      heading.appendChild(toggle);
+
       if (state["collapsed-" + sectionId]) {
         section.classList.add("collapsed");
+        toggle.textContent = "+";
       }
 
-      heading.addEventListener("click", function () {
-        section.classList.toggle("collapsed");
+      toggle.addEventListener("click", function (e) {
+        e.stopPropagation();
+        var isCollapsing = !section.classList.contains("collapsed");
+
+        if (isCollapsing) {
+          var completedItems = section.querySelectorAll("li.completed");
+          completedItems.forEach(function (li) {
+            li.classList.add("hiding");
+          });
+          setTimeout(function () {
+            section.classList.add("collapsed");
+            toggle.textContent = "+";
+            completedItems.forEach(function (li) {
+              li.classList.remove("hiding");
+            });
+            updateSectionSummaries();
+          }, 400);
+        } else {
+          section.classList.remove("collapsed");
+          toggle.textContent = "-";
+          updateSectionSummaries();
+        }
+
         var currentState = loadState();
-        currentState["collapsed-" + sectionId] =
-          section.classList.contains("collapsed");
+        currentState["collapsed-" + sectionId] = isCollapsing;
         saveState(currentState);
+        updateButtonVisibility();
       });
     });
 
@@ -188,25 +238,38 @@
     var sections = document.querySelectorAll("section.collapsible");
 
     sections.forEach(function (section) {
-      var existing = section.querySelector(".section-summary");
+      var heading = section.querySelector("h2, h3");
+      if (!heading) return;
+
+      var existing = heading.querySelector(".section-summary");
       if (existing) {
         existing.remove();
       }
 
-      var checkboxes = section.querySelectorAll("input[type='checkbox']");
-      if (checkboxes.length === 0) return;
+      if (!section.classList.contains("collapsed")) return;
 
-      var completed = Array.from(checkboxes).filter(function (cb) {
+      var checkboxes = section.querySelectorAll("input[type='checkbox']");
+      var steps = section.querySelectorAll("ol.recipe-steps li");
+      var total = checkboxes.length + steps.length;
+      if (total === 0) return;
+
+      var completedCheckboxes = Array.from(checkboxes).filter(function (cb) {
         return cb.checked;
       }).length;
+      var completedSteps = Array.from(steps).filter(function (li) {
+        return li.classList.contains("completed");
+      }).length;
+      var completed = completedCheckboxes + completedSteps;
 
-      var summary = document.createElement("div");
+      var summary = document.createElement("span");
       summary.className = "section-summary";
-      summary.textContent = completed + "/" + checkboxes.length + " complete";
+      summary.textContent = " (" + completed + "/" + total + ")";
 
-      var heading = section.querySelector("h2, h3");
-      if (heading && heading.nextSibling) {
-        heading.parentNode.insertBefore(summary, heading.nextSibling);
+      var toggle = heading.querySelector(".collapse-toggle");
+      if (toggle) {
+        heading.insertBefore(summary, toggle);
+      } else {
+        heading.appendChild(summary);
       }
     });
   }
@@ -218,24 +281,109 @@
       var heading = section.querySelector("h2, h3");
       if (!heading) return;
 
-      heading.classList.add("has-anchor");
-      heading.addEventListener("click", function (e) {
-        if (e.target.tagName === "INPUT") return;
+      var anchor = document.createElement("a");
+      anchor.className = "header-anchor";
+      anchor.href = "#" + section.id;
+      anchor.textContent = "#";
+      anchor.setAttribute("aria-label", "Link to this section");
+      heading.appendChild(anchor);
 
-        var url =
-          window.location.origin + window.location.pathname + "#" + section.id;
-        navigator.clipboard.writeText(url).then(function () {
-          heading.classList.add("anchor-copied");
-          setTimeout(function () {
-            heading.classList.remove("anchor-copied");
-          }, 1500);
-        });
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        history.pushState(null, "", "#" + section.id);
+        section.scrollIntoView({ behavior: "smooth" });
       });
     });
   }
 
+  function updateButtonVisibility() {
+    var expandBtn = document.getElementById("expand-btn");
+    var collapseBtn = document.getElementById("collapse-btn");
+    var resetBtn = document.getElementById("reset-btn");
+
+    var collapsibleSections = document.querySelectorAll("section.collapsible");
+    var collapsedSections = document.querySelectorAll("section.collapsed");
+    var hasCollapsed = collapsedSections.length > 0;
+    var hasExpanded = collapsedSections.length < collapsibleSections.length;
+    var hasCheckedBoxes =
+      document.querySelectorAll("input[type='checkbox']:checked").length > 0;
+    var hasCompletedSteps =
+      document.querySelectorAll("ol.recipe-steps li.completed").length > 0;
+
+    if (expandBtn) {
+      expandBtn.style.display = hasCollapsed ? "inline-block" : "none";
+    }
+    if (collapseBtn) {
+      collapseBtn.style.display = hasExpanded ? "inline-block" : "none";
+    }
+    if (resetBtn) {
+      resetBtn.style.display =
+        hasCheckedBoxes || hasCompletedSteps ? "inline-block" : "none";
+    }
+  }
+
+  function expandAll() {
+    document.querySelectorAll("section.collapsed").forEach(function (section) {
+      section.classList.remove("collapsed");
+      var toggle = section.querySelector(".collapse-toggle");
+      if (toggle) toggle.textContent = "-";
+    });
+
+    var state = loadState();
+    Object.keys(state).forEach(function (key) {
+      if (key.startsWith("collapsed-")) {
+        delete state[key];
+      }
+    });
+    saveState(state);
+
+    updateSectionSummaries();
+    updateButtonVisibility();
+  }
+
+  function collapseAll() {
+    var sections = document.querySelectorAll(
+      "section.collapsible:not(.collapsed)",
+    );
+    var allCompletedItems = [];
+
+    sections.forEach(function (section) {
+      var completedItems = section.querySelectorAll("li.completed");
+      completedItems.forEach(function (li) {
+        li.classList.add("hiding");
+        allCompletedItems.push(li);
+      });
+    });
+
+    setTimeout(function () {
+      var state = loadState();
+      sections.forEach(function (section) {
+        section.classList.add("collapsed");
+        var toggle = section.querySelector(".collapse-toggle");
+        if (toggle) toggle.textContent = "+";
+
+        var sectionId =
+          section.id ||
+          section
+            .querySelector("h2, h3")
+            .textContent.trim()
+            .toLowerCase()
+            .replace(/\s+/g, "-");
+        state["collapsed-" + sectionId] = true;
+      });
+
+      allCompletedItems.forEach(function (li) {
+        li.classList.remove("hiding");
+      });
+
+      saveState(state);
+      updateSectionSummaries();
+      updateButtonVisibility();
+    }, 400);
+  }
+
   function resetProgress() {
-    localStorage.removeItem(getStorageKey());
+    var state = loadState();
 
     document.querySelectorAll("input[type='checkbox']").forEach(function (cb) {
       cb.checked = false;
@@ -243,22 +391,28 @@
       if (li) li.classList.remove("completed");
     });
 
-    document.querySelectorAll("section.collapsed").forEach(function (section) {
-      section.classList.remove("collapsed");
+    document
+      .querySelectorAll("ol.recipe-steps li.completed")
+      .forEach(function (li) {
+        li.classList.remove("completed");
+      });
+
+    Object.keys(state).forEach(function (key) {
+      if (key.startsWith("ingredient-") || key.startsWith("step-")) {
+        delete state[key];
+      }
     });
+    saveState(state);
 
     updateSectionSummaries();
-
-    scrollStack = [];
-    var backBtn = document.getElementById("back-btn");
-    if (backBtn) backBtn.style.display = "none";
+    updateButtonVisibility();
   }
 
   function init() {
     if (document.body.classList.contains("trmnl-mode")) return;
 
     setupIngredientCheckboxes();
-    injectStepCheckboxes();
+    setupStepToggles();
     trackScroll();
     setupSectionFolding();
     setupHeaderAnchors();
@@ -268,11 +422,22 @@
       backBtn.addEventListener("click", goBack);
     }
 
+    var expandBtn = document.getElementById("expand-btn");
+    if (expandBtn) {
+      expandBtn.addEventListener("click", expandAll);
+    }
+
+    var collapseBtn = document.getElementById("collapse-btn");
+    if (collapseBtn) {
+      collapseBtn.addEventListener("click", collapseAll);
+    }
+
     var resetBtn = document.getElementById("reset-btn");
     if (resetBtn) {
       resetBtn.addEventListener("click", resetProgress);
     }
 
+    updateButtonVisibility();
     lastScrollY = window.scrollY;
   }
 
