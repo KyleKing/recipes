@@ -15,7 +15,7 @@ const (
 	SEARCH_PAGE    = "search"
 )
 
-templ page(title string, contents templ.Component, pageType string) {
+templ page(title string, contents templ.Component, pageType string, socialMeta SocialMeta) {
 	<!DOCTYPE html>
 	<html lang="en">
 		<head>
@@ -24,6 +24,17 @@ templ page(title string, contents templ.Component, pageType string) {
 			<link rel="stylesheet" href="/styles.css"/>
 			<title>{ title }</title>
 			<meta name="description" content="Kyle and Alex's Personal Recipes"/>
+			if socialMeta.image != "" {
+				<meta property="og:title" content={ socialMeta.title }/>
+				<meta property="og:description" content={ socialMeta.description }/>
+				<meta property="og:image" content={ socialMeta.image }/>
+				<meta property="og:url" content={ socialMeta.url }/>
+				<meta property="og:type" content="article"/>
+				<meta name="twitter:card" content="summary_large_image"/>
+				<meta name="twitter:title" content={ socialMeta.title }/>
+				<meta name="twitter:description" content={ socialMeta.description }/>
+				<meta name="twitter:image" content={ socialMeta.image }/>
+			}
 			if pageType == SEARCH_PAGE {
 				<link href="/pagefind/pagefind-ui.css" rel="stylesheet"/>
 				<script src="/pagefind/pagefind-ui.js"></script>
@@ -87,7 +98,7 @@ templ page(title string, contents templ.Component, pageType string) {
 }
 
 templ recipePage(title string, content string, recipe Recipe) {
-	@page(title, recipePageContent(content, recipe), CONTENT_PAGE)
+	@page(title, recipePageContent(content, recipe), CONTENT_PAGE, NewSocialMeta(title, "Recipe from Kyle and Alex's Personal Recipes", recipe.imagePath, recipe.url))
 }
 
 templ recipePageContent(content string, recipe Recipe) {
@@ -164,7 +175,7 @@ templ searchContents() {
 }
 
 templ searchPage() {
-	@page("Search Recipes", searchContents(), SEARCH_PAGE)
+	@page("Search Recipes", searchContents(), SEARCH_PAGE, SocialMeta{})
 }
 
 templ notFoundContents() {
@@ -174,7 +185,7 @@ templ notFoundContents() {
 }
 
 templ notFoundPage() {
-	@page("Page Not Found", notFoundContents(), GENERATED_PAGE)
+	@page("Page Not Found", notFoundContents(), GENERATED_PAGE, SocialMeta{})
 }
 
 templ dirIndexContent(title string, recipes []Recipe) {
@@ -194,7 +205,7 @@ templ dirIndexContent(title string, recipes []Recipe) {
 }
 
 templ dirIndexPage(title string, recipes []Recipe) {
-	@page(title, dirIndexContent(title, recipes), GENERATED_PAGE)
+	@page(title, dirIndexContent(title, recipes), GENERATED_PAGE, SocialMeta{})
 }
 
 templ homeContent(subdirectories []Subdir) {
@@ -208,7 +219,7 @@ templ homeContent(subdirectories []Subdir) {
 }
 
 templ homePage(subdirectories []Subdir) {
-	@page("Recipes", homeContent(subdirectories), GENERATED_PAGE)
+	@page("Recipes", homeContent(subdirectories), GENERATED_PAGE, SocialMeta{})
 }
 
 templ recipeGrid(recipes []Recipe) {
@@ -284,5 +295,5 @@ templ filtersContent(data FilterData) {
 }
 
 templ filtersPage(data FilterData) {
-	@page("Filters", filtersContent(data), GENERATED_PAGE)
+	@page("Filters", filtersContent(data), GENERATED_PAGE, SocialMeta{})
 }

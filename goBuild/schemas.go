@@ -17,6 +17,28 @@ func NewSubdir(key string) Subdir {
 	return Subdir{url: key, name: toTitleName(key)}
 }
 
+type SocialMeta struct {
+	title       string
+	description string
+	image       string
+	url         string
+}
+
+func NewSocialMeta(title string, description string, image string, url string) SocialMeta {
+	baseURL := "https://recipes.kyleking.me"
+	fullImage := ""
+	if image != "" && image != "/None.svg" && image != "/_static/placeholder.png" {
+		fullImage = baseURL + image
+	}
+	fullURL := baseURL + url
+	return SocialMeta{
+		title:       title,
+		description: description,
+		image:       fullImage,
+		url:         fullURL,
+	}
+}
+
 type Recipe struct {
 	dirUrl           string
 	imagePath        string
