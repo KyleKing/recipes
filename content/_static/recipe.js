@@ -297,24 +297,27 @@
   }
 
   function updateButtonVisibility() {
-    var expandBtn = document.getElementById("expand-btn");
-    var collapseBtn = document.getElementById("collapse-btn");
+    var toggleCollapseBtn = document.getElementById("toggle-collapse-btn");
     var resetBtn = document.getElementById("reset-btn");
 
     var collapsibleSections = document.querySelectorAll("section.collapsible");
     var collapsedSections = document.querySelectorAll("section.collapsed");
-    var hasCollapsed = collapsedSections.length > 0;
-    var hasExpanded = collapsedSections.length < collapsibleSections.length;
+    var allCollapsed = collapsedSections.length === collapsibleSections.length;
     var hasCheckedBoxes =
       document.querySelectorAll("input[type='checkbox']:checked").length > 0;
     var hasCompletedSteps =
       document.querySelectorAll("ol.recipe-steps li.completed").length > 0;
 
-    if (expandBtn) {
-      expandBtn.style.display = hasCollapsed ? "inline-block" : "none";
-    }
-    if (collapseBtn) {
-      collapseBtn.style.display = hasExpanded ? "inline-block" : "none";
+    if (toggleCollapseBtn && collapsibleSections.length > 0) {
+      toggleCollapseBtn.style.display = "inline-block";
+      // Update button text based on current state
+      if (allCollapsed && collapsedSections.length > 0) {
+        toggleCollapseBtn.textContent = "Expand All";
+        toggleCollapseBtn.title = "Expand all collapsed sections";
+      } else {
+        toggleCollapseBtn.textContent = "Collapse All";
+        toggleCollapseBtn.title = "Collapse all sections";
+      }
     }
     if (resetBtn) {
       resetBtn.style.display =
@@ -346,8 +349,23 @@
       "section.collapsible:not(.collapsed)",
     );
     var allCompletedItems = [];
+    var state = loadState();
 
     sections.forEach(function (section) {
+      // Add collapsed class immediately to fix double-click issue
+      section.classList.add("collapsed");
+      var toggle = section.querySelector(".collapse-toggle");
+      if (toggle) toggle.textContent = "+";
+
+      var sectionId =
+        section.id ||
+        section
+          .querySelector("h2, h3")
+          .textContent.trim()
+          .toLowerCase()
+          .replace(/\s+/g, "-");
+      state["collapsed-" + sectionId] = true;
+
       var completedItems = section.querySelectorAll("li.completed");
       completedItems.forEach(function (li) {
         li.classList.add("hiding");
@@ -355,28 +373,13 @@
       });
     });
 
+    // Save state immediately
+    saveState(state);
+
     setTimeout(function () {
-      var state = loadState();
-      sections.forEach(function (section) {
-        section.classList.add("collapsed");
-        var toggle = section.querySelector(".collapse-toggle");
-        if (toggle) toggle.textContent = "+";
-
-        var sectionId =
-          section.id ||
-          section
-            .querySelector("h2, h3")
-            .textContent.trim()
-            .toLowerCase()
-            .replace(/\s+/g, "-");
-        state["collapsed-" + sectionId] = true;
-      });
-
       allCompletedItems.forEach(function (li) {
         li.classList.remove("hiding");
       });
-
-      saveState(state);
       updateSectionSummaries();
       updateButtonVisibility();
     }, 400);
@@ -408,6 +411,18 @@
     updateButtonVisibility();
   }
 
+  function toggleCollapseAll() {
+    var collapsibleSections = document.querySelectorAll("section.collapsible");
+    var collapsedSections = document.querySelectorAll("section.collapsed");
+    var allCollapsed = collapsedSections.length === collapsibleSections.length;
+
+    if (allCollapsed && collapsedSections.length > 0) {
+      expandAll();
+    } else {
+      collapseAll();
+    }
+  }
+
   function init() {
     if (document.body.classList.contains("trmnl-mode")) return;
 
@@ -422,14 +437,9 @@
       backBtn.addEventListener("click", goBack);
     }
 
-    var expandBtn = document.getElementById("expand-btn");
-    if (expandBtn) {
-      expandBtn.addEventListener("click", expandAll);
-    }
-
-    var collapseBtn = document.getElementById("collapse-btn");
-    if (collapseBtn) {
-      collapseBtn.addEventListener("click", collapseAll);
+    var toggleCollapseBtn = document.getElementById("toggle-collapse-btn");
+    if (toggleCollapseBtn) {
+      toggleCollapseBtn.addEventListener("click", toggleCollapseAll);
     }
 
     var resetBtn = document.getElementById("reset-btn");
