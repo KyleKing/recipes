@@ -311,7 +311,7 @@
     if (toggleCollapseBtn && collapsibleSections.length > 0) {
       toggleCollapseBtn.style.display = "inline-block";
       // Update button text based on current state
-      if (allCollapsed && collapsedSections.length > 0) {
+      if (allCollapsed) {
         toggleCollapseBtn.textContent = "Expand All";
         toggleCollapseBtn.title = "Expand all collapsed sections";
       } else {
@@ -414,9 +414,13 @@
   function toggleCollapseAll() {
     var collapsibleSections = document.querySelectorAll("section.collapsible");
     var collapsedSections = document.querySelectorAll("section.collapsed");
+    
+    // Only proceed if there are collapsible sections
+    if (collapsibleSections.length === 0) return;
+    
     var allCollapsed = collapsedSections.length === collapsibleSections.length;
 
-    if (allCollapsed && collapsedSections.length > 0) {
+    if (allCollapsed) {
       expandAll();
     } else {
       collapseAll();
