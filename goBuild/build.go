@@ -283,11 +283,6 @@ func parseDjotFiles(publicDir string, rMap RecipeMap, cache *RecipeCache) filepa
 
 // Generate HTML pages from RecipeMap with related recipes (pass 2)
 func generateRecipePages(publicDir string, rMap RecipeMap, cache *RecipeCache) error {
-	// Simple div converter that doesn't extract metadata (we already did that in Pass 1)
-	renderDiv := func(s djot_parser.ConversionState, inner func(djot_parser.Children)) {
-		s.BlockNodeConverter("div", inner)
-	}
-
 	for path, recipe := range rMap {
 		djPath := strings.Replace(path, ".html", ".dj", 1)
 		djPath = strings.Replace(djPath, "public/", "content/", 1)
@@ -308,11 +303,12 @@ func generateRecipePages(publicDir string, rMap RecipeMap, cache *RecipeCache) e
 			ast = djot_parser.BuildDjotAst(text)
 		}
 
+		// Use formattedDivPartial to render rating and image HTML
 		htmlSection := djot_parser.NewConversionContext(
 			"html",
 			djot_parser.DefaultConversionRegistry,
 			map[djot_parser.DjotNode]djot_parser.Conversion{
-				djot_parser.DivNode:      renderDiv,
+				djot_parser.DivNode:      formattedDivPartial(publicDir, path, rMap),
 				djot_parser.ListItemNode: listItemConversion,
 			},
 		).ConvertDjotToHtml(&html_writer.HtmlWriter{}, ast...)

@@ -78,9 +78,6 @@ templ page(title string, contents templ.Component, pageType string, socialMeta S
 			}
 			if pageType == CONTENT_PAGE {
 				<div id="recipe-toolbar" class="recipe-toolbar">
-					<button id="toolbar-toggle" class="toolbar-toggle" title="Show/hide toolbar buttons" aria-label="Toggle toolbar">
-						<span class="toggle-icon">‹</span>
-					</button>
 					<div id="toolbar-buttons" class="toolbar-buttons">
 						<button id="back-btn" class="toolbar-btn" title="Return to previous position" style="display:none">
 							<span aria-hidden="true">&#8630;</span> Back
@@ -92,6 +89,9 @@ templ page(title string, contents templ.Component, pageType string, socialMeta S
 							Reset
 						</button>
 					</div>
+					<button id="toolbar-toggle" class="toolbar-toggle" title="Show/hide toolbar buttons" aria-label="Toggle toolbar">
+						<span class="toggle-icon">▼</span>
+					</button>
 				</div>
 				<script src="/_static/recipe.js"></script>
 			}

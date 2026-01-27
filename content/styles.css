@@ -456,12 +456,11 @@ body.trmnl-mode .no-match-details {
     border: 2px solid var(--color-text);
     background: var(--color-back);
     color: var(--color-text);
-    padding: 8px 6px;
-    font-size: 18px;
+    padding: 4px 16px;
+    font-size: 14px;
     font-family: inherit;
     cursor: pointer;
-    transition: transform 0.3s ease;
-    min-width: 32px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -634,8 +633,7 @@ body.trmnl-mode section.collapsible.collapsed li.completed {
     }
 
     .toolbar-toggle {
-        padding: 10px 8px;
-        font-size: 20px;
-        min-width: 36px;
+        padding: 6px 16px;
+        font-size: 16px;
     }
 }
