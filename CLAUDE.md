@@ -34,10 +34,34 @@ Environment variables are automatically loaded by mise from the `.env` file (con
 
 ### Testing
 
+**Unit tests (Go):**
 ```bash
 go test -coverprofile=coverage.out -coverpkg=./... ./...  # Run all tests
 go test ./goBuild -run TestSpecificTest                    # Run single test
+mise run test                                              # Run via mise (includes format, lint)
 ```
+
+**Browser tests (Python + Playwright):**
+```bash
+# One-time setup: install Playwright browsers
+mise run browser-install
+
+# Run browser tests (requires server running on :8000)
+# Terminal 1:
+mise run serve
+
+# Terminal 2:
+mise run test-browser
+
+# Or run specific tests
+uv run pytest test_browser.py::test_ingredient_checkbox_toggle -v
+```
+
+Browser tests verify interactive features:
+- Ingredient checkbox toggling and localStorage persistence
+- Recipe step marking (margin click and double-click)
+- Section collapse/expand with progress summaries
+- Reset progress, collapse all, toolbar toggle
 
 ## Architecture
 
