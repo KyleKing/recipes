@@ -14,7 +14,7 @@ description = "Interactive tool to link recipe images. Optionally specify argume
 run = "./_link_images.py"
 
 [tasks.browser-install]
-description = "Install Playwright browsers (one-time setup for browser testing)"
+description = "Install Playwright browsers (one-time setup)"
 run = "uv run --with playwright playwright install chromium"
 
 [tasks.build]
@@ -51,12 +51,12 @@ sources = ['**/*.go', 'go.sum']
 
 [tasks.test-browser]
 depends = ["build"]
-description = "Run browser tests (requires server running on :8000)"
-run = "uv run pytest test_browser.py -v"
+description = "Run browser tests (requires server on :8000)"
+run = "uv run --with pytest --with pytest-playwright pytest test_browser.py -v"
 
 [tasks.test-browser-auto]
-description = "Run browser tests with automatic server management"
-run = "./run_browser_tests.sh -v"
+description = "Run browser tests with auto server management"
+run = "./run_browser_tests.sh"
 
 [tasks.coverage]
 description = "View test coverage of most recent test run"

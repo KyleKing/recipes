@@ -46,15 +46,14 @@ mise run test                                              # Run via mise (inclu
 # One-time setup: install Playwright browsers
 mise run browser-install
 
-# Run browser tests (requires server running on :8000)
-# Terminal 1:
-mise run serve
+# Run browser tests (auto-manages server)
+./run_browser_tests.sh
 
-# Terminal 2:
+# Or with server already running on :8000
 mise run test-browser
 
-# Or run specific tests
-uv run pytest test_browser.py::test_ingredient_checkbox_toggle -v
+# Run specific test
+uv run --with pytest --with pytest-playwright pytest test_browser.py::test_ingredient_checkbox_toggle -v
 ```
 
 Browser tests verify interactive features:
@@ -62,6 +61,12 @@ Browser tests verify interactive features:
 - Recipe step marking (margin click and double-click)
 - Section collapse/expand with progress summaries
 - Reset progress, collapse all, toolbar toggle
+
+**Pre-commit hooks:**
+Browser tests run automatically via `hk` pre-commit hook when code files are modified:
+- Triggers on: `**/*.go`, `**/*.templ`, `**/*.js`, `**/*.css`, `goBuild/**/*`
+- Skips on: Recipe files (`**/*.dj`) and other content changes
+- Install hooks: `hk install --mise`
 
 ## Architecture
 

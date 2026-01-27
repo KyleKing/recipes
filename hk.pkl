@@ -43,6 +43,15 @@ local linters = new Mapping<String, Step> {
     }
 }
 
+// Browser tests run on code changes (not recipe updates)
+// Verifies interactive features: checkboxes, collapse, localStorage, etc.
+local tests = new Mapping<String, Step> {
+    ["browser-tests"] {
+        glob = List("**/*.go", "**/*.templ", "**/*.js", "**/*.css", "goBuild/**/*")
+        check = "./run_browser_tests.sh"
+    }
+}
+
 local commit_msg_checks = new Mapping<String, Step> {
     ["commitizen"] {
         check = "cz check --allow-abort --commit-msg-file={{commit_msg_file}}"
@@ -53,7 +62,10 @@ hooks = new {
     ["pre-commit"] {
         fix = true
         stash = "git"
-        steps = linters
+        steps = new Mapping {
+            ...linters
+            ...tests
+        }
     }
     ["pre-push"] {
         steps = linters

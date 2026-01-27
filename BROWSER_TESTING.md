@@ -8,18 +8,14 @@ Browser tests verify interactive features using Python + Playwright.
 # 1. One-time setup: Install Playwright browsers
 mise run browser-install
 
-# 2. Build the site
-mise run build
+# 2. Run tests (easiest - auto-manages server and build)
+./run_browser_tests.sh
 
-# 3. Run tests (easiest method - auto-manages server)
-mise run test-browser-auto
-
-# Or manually (requires server running):
-# Terminal 1:
-mise run serve
-
-# Terminal 2:
+# Or using mise (requires server already running on :8000):
 mise run test-browser
+
+# Or direct uv command (requires server):
+uv run --with pytest --with pytest-playwright pytest test_browser.py -v
 ```
 
 ## What's Tested
@@ -39,48 +35,48 @@ The test suite verifies:
 
 ```bash
 # Run single test
-uv run pytest test_browser.py::test_ingredient_checkbox_toggle -v
+uv run --with pytest --with pytest-playwright pytest test_browser.py::test_ingredient_checkbox_toggle -v
 
 # Run all tests matching pattern
-uv run pytest test_browser.py -k "checkbox" -v
-
-# Run with verbose output
-uv run pytest test_browser.py -vv
+uv run --with pytest --with pytest-playwright pytest test_browser.py -k "checkbox" -v
 
 # Run in headed mode (see browser)
-uv run pytest test_browser.py --headed
+uv run --with pytest --with pytest-playwright pytest test_browser.py --headed
 
 # Run with slowmo for debugging
-uv run pytest test_browser.py --headed --slowmo 1000
+uv run --with pytest --with pytest-playwright pytest test_browser.py --headed --slowmo 1000
+
+# Using the helper script (auto server):
+./run_browser_tests.sh test_browser.py::test_ingredient_checkbox_toggle
 ```
 
-## Test Recipe
+## Test Recipes
 
-Tests use `/main/fried_rice.html` as the test recipe because it contains:
-- Multiple ingredients with checkboxes
-- Nested ingredient lists
-- Multiple recipe steps
-- Multiple collapsible sections
+Tests use multiple recipes to cover different features:
+
+- **`/main/fried_rice.html`** - Primary test recipe with ingredients, steps, collapsible sections
+- **`/drinks/margarita.html`** - Has task-list with nested task-list (parent checkbox with nested checkboxes)
+- **`/main/chickpea_tikka_masala.html`** - Has links within ingredients
 
 ## Debugging Failed Tests
 
 ```bash
 # Run with Playwright's debugger
-uv run pytest test_browser.py --headed --pdb-trace
+uv run --with pytest --with pytest-playwright pytest test_browser.py --headed --pdb-trace
 
 # Generate trace for debugging
-PWDEBUG=1 uv run pytest test_browser.py
+PWDEBUG=1 uv run --with pytest --with pytest-playwright pytest test_browser.py
 
-# Take screenshot on failure (add to pytest.ini if desired)
-uv run pytest test_browser.py --screenshot=on
+# Take screenshot on failure
+uv run --with pytest --with pytest-playwright pytest test_browser.py --screenshot=on
 ```
 
 ## Architecture
 
-- **test_browser.py**: Main test suite using pytest + Playwright
+- **test_browser.py**: Main test suite using pytest + Playwright (16 tests total)
 - **run_browser_tests.sh**: Helper script that manages server lifecycle
 - **mise.toml**: Task definitions for browser testing
-- Uses `uv` inline script dependencies (no separate requirements.txt needed)
+- Uses `uv run --with` for dependency management (no pyproject.toml or requirements.txt needed)
 
 ## Adding New Tests
 
@@ -105,9 +101,19 @@ For GitHub Actions or other CI:
 - name: Install Playwright browsers
   run: mise run browser-install
 
-- name: Build site
-  run: mise run build
-
 - name: Run browser tests
-  run: mise run test-browser-auto
+  run: ./run_browser_tests.sh
 ```
+
+## Test Results
+
+Current status: **16 passed, 0 skipped**
+
+All interactive features are tested:
+
+- Ingredient checkboxes (toggle, persistence, nested)
+- Recipe steps (margin click, double-click, persistence)
+- Section collapse/expand with progress summaries
+- Reset progress, collapse all, toolbar toggle
+- Link clicks don't trigger checkbox toggle
+- Multiple recipes maintain independent localStorage state

@@ -19,7 +19,7 @@ trap cleanup EXIT INT TERM
 # Check if port is already in use
 if lsof -Pi :$PORT -sTCP:LISTEN -t >/dev/null 2>&1; then
     echo "Server already running on port $PORT, using existing instance"
-    uv run pytest test_browser.py "$@"
+    uv run --with pytest --with pytest-playwright pytest test_browser.py -v "$@"
     exit $?
 fi
 
@@ -48,7 +48,7 @@ done
 
 # Run tests
 echo "Running browser tests..."
-uv run pytest test_browser.py "$@"
+uv run --with pytest --with pytest-playwright pytest test_browser.py -v "$@"
 TEST_EXIT_CODE=$?
 
 exit $TEST_EXIT_CODE

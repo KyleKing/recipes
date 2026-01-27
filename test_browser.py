@@ -1,6 +1,6 @@
 #!/usr/bin/env -S uv run --quiet --script
 # /// script
-# dependencies = ["pytest", "playwright"]
+# dependencies = ["pytest", "pytest-playwright"]
 # ///
 """Browser tests for recipe site interactive features.
 
@@ -12,19 +12,23 @@ Tests verify:
 - Collapse/expand all functionality
 - Toolbar visibility toggle
 - localStorage persistence across page reloads
+- Nested checkbox behavior
+- Link clicks don't toggle checkboxes
+- Multiple recipes maintain independent state
 
-Run with: uv run pytest test_browser.py
-Or via mise: mise run test-browser
+Test Recipes:
+- /main/fried_rice.html - Primary test recipe
+- /drinks/margarita.html - Has nested task-list (parent checkbox with nested checkboxes)
+- /main/chickpea_tikka_masala.html - Has links within ingredients
+
+Run with: uv run --with pytest --with pytest-playwright pytest test_browser.py -v
+Or via helper script: ./run_browser_tests.sh
+Or via mise: mise run test-browser (requires server on :8000)
 
 Requires: Site must be built and served on http://localhost:8000
-Build with: mise run build
-Serve with: mise run serve (in separate terminal)
 """
 
 import re
-import subprocess
-import time
-from pathlib import Path
 
 import pytest
 from playwright.sync_api import Page, expect
@@ -32,6 +36,8 @@ from playwright.sync_api import Page, expect
 
 BASE_URL = "http://localhost:8000"
 TEST_RECIPE = "/main/fried_rice.html"  # Known recipe with ingredients and steps
+RECIPE_WITH_NESTED = "/drinks/margarita.html"  # Has task-list with nested task-list
+RECIPE_WITH_LINKS = "/main/chickpea_tikka_masala.html"  # Has links in ingredients
 
 
 @pytest.fixture(scope="session")
@@ -101,20 +107,37 @@ def test_ingredient_checkbox_persistence(recipe_page: Page):
     expect(first_ingredient_after).to_have_class(re.compile("completed"))
 
 
-def test_nested_checkbox_toggle(recipe_page: Page):
+def test_nested_checkbox_toggle(page: Page):
     """Test that toggling parent checkbox also toggles nested checkboxes."""
-    # Find an ingredient with nested items (if exists)
-    nested_list = recipe_page.locator(".task-list ul.task-list").first
-    if nested_list.count() == 0:
-        pytest.skip("No nested checkboxes in test recipe")
+    # Use recipe known to have nested checkboxes
+    page.goto(BASE_URL + RECIPE_WITH_NESTED)
+    page.evaluate("localStorage.clear()")
+    page.reload()
 
-    parent_item = recipe_page.locator(".task-list li:has(ul.task-list)").first
+    # Find an ingredient with nested items
+    nested_list = page.locator(".task-list ul.task-list").first
+    if nested_list.count() == 0:
+        pytest.skip("No nested checkboxes in recipe")
+
+    parent_item = page.locator(".task-list li:has(ul.task-list)").first
+    parent_checkbox = parent_item.locator("> input[type='checkbox']").first
     nested_items = parent_item.locator("ul.task-list li")
 
-    # Click parent
-    parent_item.click()
+    # Verify parent initially unchecked
+    expect(parent_checkbox).not_to_be_checked()
 
-    # All nested checkboxes should be checked
+    # Click parent item's em element (the text before nested list)
+    # This avoids triggering the nested li closest() check in JS
+    parent_em = parent_item.locator("> em").first
+    parent_em.click()
+
+    # Wait for JS to complete
+    page.wait_for_timeout(100)
+
+    # Parent should be checked
+    expect(parent_checkbox).to_be_checked()
+
+    # All nested checkboxes should also be checked
     nested_count = nested_items.count()
     for i in range(nested_count):
         nested_checkbox = nested_items.nth(i).locator("input[type='checkbox']")
@@ -123,16 +146,19 @@ def test_nested_checkbox_toggle(recipe_page: Page):
 
 def test_recipe_step_margin_click(recipe_page: Page):
     """Test clicking step margin (first 30px) toggles completion."""
-    # Find first recipe step
-    first_step = recipe_page.locator("ol.recipe-steps > li").first
+    # Find section containing recipe steps
+    section = recipe_page.locator("section").filter(has=recipe_page.locator("ol.recipe-steps")).first
+    first_step = section.locator("ol.recipe-steps > li").first
 
     # Initially not completed
     expect(first_step).not_to_have_class(re.compile("completed"))
 
     # Click in margin (left edge, within 30px)
+    # Note: JS code listens on section, not individual li elements
     box = first_step.bounding_box()
     assert box is not None
-    recipe_page.mouse.click(box["x"] + 15, box["y"] + box["height"] / 2)
+    # Click at 10px from left edge (well within 30px margin)
+    section.click(position={"x": 10, "y": box["y"] - section.bounding_box()["y"] + box["height"] / 2})
 
     # Should be marked completed
     expect(first_step).to_have_class(re.compile("completed"))
@@ -205,7 +231,9 @@ def test_section_progress_summary(recipe_page: Page):
         pytest.skip("No collapsible sections in test recipe")
 
     # Mark some items complete
-    first_item = collapsible_section.locator(".task-list li, ol.recipe-steps > li").first
+    first_item = collapsible_section.locator(
+        ".task-list li, ol.recipe-steps > li"
+    ).first
     first_item.click()
 
     # Collapse section
@@ -331,19 +359,34 @@ def test_header_anchors(recipe_page: Page):
     expect(recipe_page).to_have_url(re.compile("#.+"))
 
 
-def test_link_clicks_dont_toggle_checkboxes(recipe_page: Page):
+def test_link_clicks_dont_toggle_checkboxes(page: Page):
     """Test clicking links inside ingredients doesn't toggle checkbox."""
+    # Use recipe known to have links in ingredients
+    page.goto(BASE_URL + RECIPE_WITH_LINKS)
+    page.evaluate("localStorage.clear()")
+    page.reload()
+
     # Find ingredient with a link
-    ingredient_with_link = recipe_page.locator(".task-list li:has(a)").first
+    ingredient_with_link = page.locator(".task-list li:has(a)").first
 
-    if ingredient_with_link.count() == 0:
-        pytest.skip("No ingredient with link in test recipe")
-
-    checkbox = ingredient_with_link.locator("input[type='checkbox']")
+    # Verify we found an ingredient with a link
     link = ingredient_with_link.locator("a").first
+    if link.count() == 0:
+        pytest.skip("No ingredient with link in recipe")
 
-    # Click link (should not toggle checkbox)
+    # Find checkbox in same list item
+    checkbox = ingredient_with_link.locator("input[type='checkbox']").first
+
+    # Verify checkbox initially unchecked
+    expect(checkbox).not_to_be_checked()
+
+    # Prevent link navigation so we can verify checkbox state
+    page.evaluate("document.querySelectorAll('a').forEach(a => a.addEventListener('click', e => e.preventDefault()))")
+
+    # Click link (should not toggle checkbox due to JS check: if (e.target.tagName === "A") return;)
     link.click()
+
+    # Checkbox should still be unchecked (not toggled by click)
     expect(checkbox).not_to_be_checked()
 
 
@@ -357,24 +400,8 @@ def test_multiple_recipes_independent_state(page: Page):
     first_ingredient = page.locator(".task-list li").first
     first_ingredient.click()
 
-    # Get storage key for first recipe
-    storage_key_1 = page.evaluate("window.location.pathname")
-
-    # Visit another recipe (home page, then find another recipe link)
-    page.goto(BASE_URL)
-    recipe_links = page.locator("a[href*='/main/']")
-
-    if recipe_links.count() < 2:
-        pytest.skip("Need at least 2 recipes for this test")
-
-    # Find a different recipe
-    for i in range(recipe_links.count()):
-        href = recipe_links.nth(i).get_attribute("href")
-        if href and TEST_RECIPE not in href:
-            page.goto(BASE_URL + href)
-            break
-    else:
-        pytest.skip("Could not find different recipe")
+    # Visit second recipe (use known different recipe)
+    page.goto(BASE_URL + RECIPE_WITH_NESTED)
 
     # Second recipe should have no checked items
     expect(page.locator("input[type='checkbox']:checked")).to_have_count(0)
