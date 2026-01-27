@@ -78,15 +78,20 @@ templ page(title string, contents templ.Component, pageType string, socialMeta S
 			}
 			if pageType == CONTENT_PAGE {
 				<div id="recipe-toolbar" class="recipe-toolbar">
-					<button id="back-btn" class="toolbar-btn" title="Return to previous position" style="display:none">
-						<span aria-hidden="true">&#8630;</span> Back
+					<button id="toolbar-toggle" class="toolbar-toggle" title="Show/hide toolbar buttons" aria-label="Toggle toolbar">
+						<span class="toggle-icon">‹</span>
 					</button>
-					<button id="toggle-collapse-btn" class="toolbar-btn" title="Toggle collapse all sections" style="display:none">
-						Collapse All
-					</button>
-					<button id="reset-btn" class="toolbar-btn" title="Uncheck all items" style="display:none">
-						Reset
-					</button>
+					<div id="toolbar-buttons" class="toolbar-buttons">
+						<button id="back-btn" class="toolbar-btn" title="Return to previous position" style="display:none">
+							<span aria-hidden="true">&#8630;</span> Back
+						</button>
+						<button id="toggle-collapse-btn" class="toolbar-btn" title="Toggle collapse all sections" style="display:none">
+							Collapse All
+						</button>
+						<button id="reset-btn" class="toolbar-btn" title="Uncheck all items" style="display:none">
+							Reset
+						</button>
+					</div>
 				</div>
 				<script src="/_static/recipe.js"></script>
 			}
@@ -249,7 +254,6 @@ templ filtersContent(data FilterData) {
 			<a href="#not-yet">Not Yet...</a>
 			<a href="#random">Random</a>
 			<a href="#recency">Recency</a>
-			<a href="#rating">Rating</a>
 		</nav>
 		<div id="not-yet" class="tab-content">
 			<h2>Not Yet... ({ fmt.Sprintf("%d", len(data.NotYet)) } recipes)</h2>
@@ -272,15 +276,6 @@ templ filtersContent(data FilterData) {
 			<h3>Least Recently Updated ({ fmt.Sprintf("%d", len(data.LeastUpdated)) } recipes)</h3>
 			<p>Recipes that haven't been updated in a while.</p>
 			@recipeGrid(data.LeastUpdated)
-		</div>
-		<div id="rating" class="tab-content">
-			<h2>Rating Filters</h2>
-			<h3>Highest Rated ({ fmt.Sprintf("%d", len(data.HighestRated)) } recipes)</h3>
-			<p>Top rated recipes (4-5 stars) sorted by least recently updated.</p>
-			@recipeGrid(data.HighestRated)
-			<h3>Lowest Rated ({ fmt.Sprintf("%d", len(data.LowestRated)) } recipes)</h3>
-			<p>Lower rated recipes (0-2 stars) sorted by oldest.</p>
-			@recipeGrid(data.LowestRated)
 		</div>
 	</div>
 	<script>

@@ -92,8 +92,6 @@ type FilterData struct {
 	RandomByCategory map[string][]Recipe
 	RecentlyAdded    []Recipe
 	LeastUpdated     []Recipe
-	HighestRated     []Recipe
-	LowestRated      []Recipe
 }
 
 type CachedRecipe struct {

@@ -447,8 +447,53 @@ body.trmnl-mode .no-match-details {
     right: 20px;
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     gap: 8px;
     z-index: 100;
+}
+
+.toolbar-toggle {
+    border: 2px solid var(--color-text);
+    background: var(--color-back);
+    color: var(--color-text);
+    padding: 8px 6px;
+    font-size: 18px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    min-width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toolbar-toggle:hover {
+    background: rgba(180, 180, 180, 0.3);
+}
+
+.toolbar-toggle .toggle-icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.recipe-toolbar.hidden .toolbar-toggle .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.toolbar-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+    transform-origin: bottom right;
+}
+
+.recipe-toolbar.hidden .toolbar-buttons {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
 }
 
 .toolbar-btn {
@@ -586,5 +631,11 @@ body.trmnl-mode section.collapsible.collapsed li.completed {
     .toolbar-btn {
         padding: 10px 14px;
         font-size: 16px;
+    }
+
+    .toolbar-toggle {
+        padding: 10px 8px;
+        font-size: 20px;
+        min-width: 36px;
     }
 }

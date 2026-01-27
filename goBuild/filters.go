@@ -11,8 +11,6 @@ const (
 	randomRecipesPerCategory = 3
 	maxRecentlyAdded         = 8
 	maxLeastUpdated          = 8
-	maxHighRated             = 8
-	maxLowRated              = 8
 	secondsPerDay            = 86400
 
 	categoryDrinks    = "drinks"
@@ -21,8 +19,18 @@ const (
 
 func enrichRecipesWithMetadata(rMap RecipeMap, contentDir string) {
 	for path, recipe := range rMap {
+		// Convert absolute path to relative path
+		// path is like: /Users/.../recipes/public/main/recipe.dj
+		// We need: content/main/recipe.dj
 		djFilePath := strings.Replace(path, ".html", ".dj", 1)
-		djFilePath = strings.Replace(djFilePath, "public/", contentDir+"/", 1)
+
+		// Extract the relative path after "public/"
+		if idx := strings.Index(djFilePath, "/public/"); idx >= 0 {
+			djFilePath = contentDir + djFilePath[idx+len("/public"):]
+		} else if idx := strings.Index(djFilePath, "public/"); idx >= 0 {
+			djFilePath = contentDir + djFilePath[idx+len("public"):]
+		}
+
 		enrichRecipeWithGitInfo(&recipe, djFilePath)
 		rMap[path] = recipe
 	}
@@ -135,24 +143,10 @@ func generateFilterData(rMap RecipeMap) FilterData {
 	sortByModifiedAsc(leastUpdated)
 	leastUpdated = limitRecipes(leastUpdated, maxLeastUpdated)
 
-	highRated := filterRecipes(allRecipes, func(r Recipe) bool {
-		return r.rating >= 4 && excludesDrinksAndReference(r)
-	})
-	sortByModifiedAsc(highRated)
-	highRated = limitRecipes(highRated, maxHighRated)
-
-	lowRated := filterRecipes(allRecipes, func(r Recipe) bool {
-		return r.rating <= 2 && excludesDrinksAndReference(r)
-	})
-	sortByCreatedAsc(lowRated)
-	lowRated = limitRecipes(lowRated, maxLowRated)
-
 	return FilterData{
 		NotYet:           notYet,
 		RandomByCategory: randomByCategory,
 		RecentlyAdded:    recentlyAdded,
 		LeastUpdated:     leastUpdated,
-		HighestRated:     highRated,
-		LowestRated:      lowRated,
 	}
 }

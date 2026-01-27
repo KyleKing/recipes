@@ -245,19 +245,4 @@ func TestGenerateFilterData(t *testing.T) {
 		}
 	})
 
-	t.Run("low rated contains low ratings", func(t *testing.T) {
-		if len(filterData.LowestRated) > 0 {
-			for _, r := range filterData.LowestRated {
-				assert.LessOrEqual(t, r.rating, 2)
-			}
-		}
-	})
-
-	t.Run("high rated contains high ratings", func(t *testing.T) {
-		if len(filterData.HighestRated) > 0 {
-			for _, r := range filterData.HighestRated {
-				assert.GreaterOrEqual(t, r.rating, 4)
-			}
-		}
-	})
 }

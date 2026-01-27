@@ -154,14 +154,10 @@ func TestFilterDataStructure(t *testing.T) {
 		RandomByCategory: map[string][]Recipe{"main": {recipe1, recipe2}},
 		RecentlyAdded:    []Recipe{recipe1, recipe2},
 		LeastUpdated:     []Recipe{recipe2},
-		HighestRated:     []Recipe{recipe1},
-		LowestRated:      []Recipe{recipe2},
 	}
 
 	assert.Len(t, filterData.NotYet, 1)
 	assert.Len(t, filterData.RandomByCategory["main"], 2)
 	assert.Len(t, filterData.RecentlyAdded, 2)
 	assert.Len(t, filterData.LeastUpdated, 1)
-	assert.Len(t, filterData.HighestRated, 1)
-	assert.Len(t, filterData.LowestRated, 1)
 }

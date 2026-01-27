@@ -34,14 +34,18 @@
   function setupIngredientCheckboxes() {
     var state = loadState();
     var taskLists = document.querySelectorAll(".task-list");
+    var globalIndex = 0;
 
     taskLists.forEach(function (list) {
       var items = list.querySelectorAll(":scope > li");
-      items.forEach(function (li, index) {
-        var cb = li.querySelector("input[type='checkbox']");
+      items.forEach(function (li) {
+        var cb = li.querySelector(":scope > input[type='checkbox']");
         if (!cb) return;
 
-        var key = "ingredient-" + index;
+        var key = "ingredient-" + globalIndex;
+        globalIndex++;
+        cb.dataset.storageKey = key;
+
         if (state[key]) {
           cb.checked = true;
           li.classList.add("completed");
@@ -50,10 +54,32 @@
         li.style.cursor = "pointer";
         li.addEventListener("click", function (e) {
           if (e.target.tagName === "A") return;
+
+          // Don't toggle if click originated from a nested list item
+          if (e.target.closest("li") !== li) return;
+
           cb.checked = !cb.checked;
           li.classList.toggle("completed", cb.checked);
+
           var currentState = loadState();
           currentState[key] = cb.checked;
+
+          // Toggle all nested checkboxes
+          var nestedCheckboxes = li.querySelectorAll(
+            "ul.task-list input[type='checkbox']",
+          );
+          nestedCheckboxes.forEach(function (nestedCb) {
+            nestedCb.checked = cb.checked;
+            var nestedLi = nestedCb.closest("li");
+            if (nestedLi) {
+              nestedLi.classList.toggle("completed", cb.checked);
+            }
+            var nestedKey = nestedCb.dataset.storageKey;
+            if (nestedKey) {
+              currentState[nestedKey] = cb.checked;
+            }
+          });
+
           saveState(currentState);
           updateSectionSummaries();
           updateButtonVisibility();
@@ -414,10 +440,10 @@
   function toggleCollapseAll() {
     var collapsibleSections = document.querySelectorAll("section.collapsible");
     var collapsedSections = document.querySelectorAll("section.collapsed");
-    
+
     // Only proceed if there are collapsible sections
     if (collapsibleSections.length === 0) return;
-    
+
     var allCollapsed = collapsedSections.length === collapsibleSections.length;
 
     if (allCollapsed) {
@@ -425,6 +451,25 @@
     } else {
       collapseAll();
     }
+  }
+
+  function setupToolbarToggle() {
+    var toolbar = document.getElementById("recipe-toolbar");
+    var toggleBtn = document.getElementById("toolbar-toggle");
+    if (!toolbar || !toggleBtn) return;
+
+    // Load toolbar visibility state from localStorage
+    var state = loadState();
+    if (state["toolbar-hidden"]) {
+      toolbar.classList.add("hidden");
+    }
+
+    toggleBtn.addEventListener("click", function () {
+      toolbar.classList.toggle("hidden");
+      var currentState = loadState();
+      currentState["toolbar-hidden"] = toolbar.classList.contains("hidden");
+      saveState(currentState);
+    });
   }
 
   function init() {
@@ -435,6 +480,7 @@
     trackScroll();
     setupSectionFolding();
     setupHeaderAnchors();
+    setupToolbarToggle();
 
     var backBtn = document.getElementById("back-btn");
     if (backBtn) {
