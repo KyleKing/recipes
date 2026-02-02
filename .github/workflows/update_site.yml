@@ -31,6 +31,8 @@ jobs:
       - uses: jdx/mise-action@v2
         with:
           experimental: true # required for go backend
+        env:
+          MISE_HTTP_TIMEOUT: "120" # Increase timeout for slow downloads (default: 30s)
 
       # https://github.com/mkdocs/mkdocs/discussions/2369#discussioncomment-625475
       - name: Configure git user
