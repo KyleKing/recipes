@@ -54,7 +54,7 @@ Use this template structure:
 
 Based on [URL](URL)
 
-{ rating=0 image="None.jpeg" }
+{ rating=0 image="None" }
 :::
 :::
 
@@ -90,7 +90,7 @@ Based on [URL](URL)
 
 - **Title**: Original title in Title Case
 - **URL**: Truncate if very long (`https://cooking.nytimes.com/recipes/...`)
-- **Metadata**: `rating=0 image="None.jpeg"`
+- **Metadata**: `rating=0 image="None"`
 - **Ingredients**:
     - Checkbox format: `- [ ]`
     - Order in preparation order (as used in steps)

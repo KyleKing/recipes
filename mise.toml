@@ -72,8 +72,8 @@ description = "Compare two or more recipes pairwise"
 run = ["go build -o ./bin/recipe_debug ./cmd/recipe_debug/main.go", "./bin/recipe_debug compare"]
 
 [tasks.nits]
-description = "Various nit fixes, like correcting `None.jpeg`"
-run = ["fd --exclude mise\\.toml | sad --exact --commit 'None.jpeg' 'None'"]
+description = "Various nit fixes, like correcting `None`"
+run = ["fd --exclude mise\\.toml | sad --exact --commit 'None' 'None'"]
 
 [tasks.pre-push]
 depends = ["build", "nits", "test"]
