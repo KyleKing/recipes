@@ -35,6 +35,7 @@ Environment variables are automatically loaded by mise from the `.env` file (con
 ### Testing
 
 **Unit tests (Go):**
+
 ```bash
 go test -coverprofile=coverage.out -coverpkg=./... ./...  # Run all tests
 go test ./goBuild -run TestSpecificTest                    # Run single test
@@ -42,6 +43,7 @@ mise run test                                              # Run via mise (inclu
 ```
 
 **Browser tests (Python + Playwright):**
+
 ```bash
 # One-time setup: install Playwright browsers
 mise run browser-install
@@ -57,6 +59,7 @@ uv run --with pytest --with pytest-playwright pytest test_browser.py::test_ingre
 ```
 
 Browser tests verify interactive features:
+
 - Ingredient checkbox toggling and localStorage persistence
 - Recipe step marking (margin click and double-click)
 - Section collapse/expand with progress summaries
@@ -64,6 +67,7 @@ Browser tests verify interactive features:
 
 **Pre-commit hooks:**
 Browser tests run automatically via `hk` pre-commit hook when code files are modified:
+
 - Triggers on: `**/*.go`, `**/*.templ`, `**/*.js`, `**/*.css`, `goBuild/**/*`
 - Skips on: Recipe files (`**/*.dj`) and other content changes
 - Install hooks: `hk install --mise`
@@ -75,18 +79,19 @@ Browser tests run automatically via `hk` pre-commit hook when code files are mod
 1. **Copy content/** → **public/** (includes `.dj` files, images, `_static/`, `styles.css`)
 2. **Generate Go code**: `templ generate` creates `templates_templ.go` from `templates.templ`
 3. **Build**: `go run .` executes build pipeline:
-   - Parse `.dj` files (Djot markup) to AST
-   - Convert AST to HTML with custom node converters
-   - Wrap HTML in templ components
-   - Generate category index pages (`/main/index.html`, etc.)
-   - Generate home page (`/index.html`)
-   - Skip files prefixed with `_` (templates)
+    - Parse `.dj` files (Djot markup) to AST
+    - Convert AST to HTML with custom node converters
+    - Wrap HTML in templ components
+    - Generate category index pages (`/main/index.html`, etc.)
+    - Generate home page (`/index.html`)
+    - Skip files prefixed with `_` (templates)
 4. **Minify**: HTML/CSS/JS minification
 5. **Index**: Pagefind creates search index
 
 ### Key Components
 
 **goBuild/build.go** - Core build orchestration:
+
 - `Build(publicDir)`: Entry point, writes static pages, walks directory tree
 - `replaceDjWithHtml()`: Converts `.dj` → `.html`, populates `RecipeMap`
 - `renderDjot()`: Parses Djot with custom node converters
@@ -95,17 +100,20 @@ Browser tests run automatically via `hk` pre-commit hook when code files are mod
 - `writeIndexes()`: Generates all index pages from `RecipeMap`
 
 **goBuild/schemas.go** - Data structures:
+
 - `Recipe`: `{dirUrl, imagePath, name, url}`
 - `Subdir`: `{url, name}` for category directories
 - `RecipeMap`: `map[string]Recipe` keyed by file path
 
 **goBuild/templates.templ** - HTML generation (templ syntax):
+
 - `page()`: Base layout with nav, conditionally loads Pagefind
 - `recipePage()`: Individual recipe wrapper
 - `dirIndexPage()`: Category index with image grid
 - `homePage()`: Site home with category links
 
 **goBuild/helpers.go**:
+
 - `toTitleCase()`: `"chocolate_chip_cookies"` → `"Chocolate Chip Cookies"`
 - `withHtmlExt()`: Replace extension with `.html`
 
@@ -142,13 +150,16 @@ Based on [URL](URL)
 ```
 
 **Djot syntax deviations from Markdown**:
+
 - **Blank lines required** before all block elements (headings, lists, code blocks, block quotes)
 - **Nested lists** require blank line before indentation:
-  ```
-  - Parent item
 
-    - Nested item (blank line above required)
-  ```
+    ```
+    - Parent item
+
+      - Nested item (blank line above required)
+    ```
+
 - **Only fenced code blocks** (` ``` `) supported; indented code blocks not recognized
 - **Headings** use only `#` style (no underline style); must have blank line after
 - **Emphasis**: `_text_` for italic, `*text*` for bold (opposite of Markdown)
@@ -156,38 +167,44 @@ Based on [URL](URL)
 - **Block quotes** require space after `>` unless followed by newline
 
 **Metadata extraction** (goBuild/build.go:42-83):
+
 - `rating`: Integer 0-5 (0 = "Not yet rated", 1-5 = "X / 5")
 - `image`: Filename (with extension) or `"None"` for placeholder
 
 **Ingredient ordering**:
+
 - List ingredients in preparation order (order they are used in recipe steps)
 - Group related ingredients when recipe has distinct components using either:
-  - Subheaders: `### Component Name` (e.g., `### Chicken`, `### White sauce`)
-  - Nested lists: One level of indentation with descriptive parent item (e.g., `- In a small bowl, whisk together`)
+    - Subheaders: `### Component Name` (e.g., `### Chicken`, `### White sauce`)
+    - Nested lists: One level of indentation with descriptive parent item (e.g., `- In a small bowl, whisk together`)
 - Use grouping sparingly - only when components are clearly distinct
 
 **Categories**: Subdirectories in `content/`:
+
 - `main/`, `dessert/`, `pasta/`, `soup/`, `drinks/`, `breakfast/`, `poultry/`, `sushi/`, `seafood/`, `bread/`, `sides/`, `reference/`
 
 ### Common Patterns
 
 **Adding a new recipe**:
+
 1. **Check for duplicates**: Search for existing similar recipes first
-   - Use Glob to list files in relevant category directories
-   - Use Grep to search for similar recipe names/titles in existing files
-   - If a similar recipe exists, either update the existing one or confirm with user that a new variant is warranted
+    - Use Glob to list files in relevant category directories
+    - Use Grep to search for similar recipe names/titles in existing files
+    - If a similar recipe exists, either update the existing one or confirm with user that a new variant is warranted
 2. Create `content/<category>/<recipe_name>.dj` following template
 3. Use `snake_case` for filenames
 4. Optionally add matching image (same basename, `.jpeg`/`.jpg`/`.png`)
 5. Run `mise run build` to generate HTML
 
 **Modifying build logic**:
+
 1. Edit `.templ` files for HTML structure changes
 2. Edit `build.go` for Djot processing or metadata handling
 3. Run `mise run format` (regenerates `templates_templ.go`)
 4. Run `mise run test` to verify
 
 **Custom Djot node conversion**:
+
 - Registered in `renderDjot()` via `map[djot_parser.DjotNode]djot_parser.Conversion`
 - Example: `DivNode` → `formattedDivPartial()` extracts metadata
 - Example: `ListItemNode` → `listItemConversion()` renders checkboxes
@@ -200,6 +217,7 @@ Based on [URL](URL)
 ## Recipe Link Maintenance
 
 Use `check_links.py` (Python script with uv inline dependencies) to:
+
 - Verify recipe source URLs are still available
 - Add Wayback Machine archive links for working URLs
 - Replace dead links with archive versions

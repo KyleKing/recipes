@@ -1,9 +1,9 @@
 // Install with `hk install --mise` to ensure local tools are available
 
-amends "package://github.com/jdx/hk/releases/download/v1.29.0/hk@1.29.0#/Config.pkl"
-import "package://github.com/jdx/hk/releases/download/v1.29.0/hk@1.29.0#/Builtins.pkl"
+amends "package://github.com/jdx/hk/releases/download/v1.35.0/hk@1.35.0#/Config.pkl"
+import "package://github.com/jdx/hk/releases/download/v1.35.0/hk@1.35.0#/Builtins.pkl"
 
-min_hk_version = "1.29.0"
+min_hk_version = "1.35.0"
 
 exclude = List("goBuild/test_expected/**/*.*")
 

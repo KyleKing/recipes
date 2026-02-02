@@ -13,6 +13,7 @@ When creating a recipe from a URL, follow these steps:
 ### 1. Check for Existing Similar Recipes
 
 Before creating a new recipe:
+
 1. Use Glob/Grep to search for similar recipe names in relevant categories
 2. If duplicate found, ask user to update existing, create variant, or skip
 3. Only proceed if confirmed or clearly distinct
@@ -91,15 +92,15 @@ Based on [URL](URL)
 - **URL**: Truncate if very long (`https://cooking.nytimes.com/recipes/...`)
 - **Metadata**: `rating=0 image="None.jpeg"`
 - **Ingredients**:
-  - Checkbox format: `- [ ]`
-  - Order in preparation order (as used in steps)
-  - **Conversions (apply automatically)**:
-    - Fractional characters to plain text: `½` → `1/2`, `¼` → `1/4`, `¾` → `3/4`, `⅓` → `1/3`, `⅔` → `2/3`, `⅛` → `1/8`, `⅜` → `3/8`, `⅝` → `5/8`, `⅞` → `7/8`
-    - Mixed numbers: `1 ½` → `1.5`, `2 ¼` → `2.25`, `1 ⅓` → `1.33`, `2 ⅔` → `2.67`
-    - "teaspoon(s)" → `tsp`
-    - "tablespoon" → `Tbsp`, "tablespoons" → `Tbsps`
-  - **Track quantity changes**: Note any changes to measurements/amounts to report after saving
-  - Group using `### [Label]` subheaders or nested lists (2-space indent) only for distinct components
+    - Checkbox format: `- [ ]`
+    - Order in preparation order (as used in steps)
+    - **Conversions (apply automatically)**:
+        - Fractional characters to plain text: `½` → `1/2`, `¼` → `1/4`, `¾` → `3/4`, `⅓` → `1/3`, `⅔` → `2/3`, `⅛` → `1/8`, `⅜` → `3/8`, `⅝` → `5/8`, `⅞` → `7/8`
+        - Mixed numbers: `1 ½` → `1.5`, `2 ¼` → `2.25`, `1 ⅓` → `1.33`, `2 ⅔` → `2.67`
+        - "teaspoon(s)" → `tsp`
+        - "tablespoon" → `Tbsp`, "tablespoons" → `Tbsps`
+    - **Track quantity changes**: Note any changes to measurements/amounts to report after saving
+    - Group using `### [Label]` subheaders or nested lists (2-space indent) only for distinct components
 - **Recipe Steps**: Numbered lists (`1.`), preserve details, minimal rewording
 - **Notes**: Include tips, variations, or important details
 
@@ -116,6 +117,7 @@ Kyle's style: Direct, concise, minimal changes. Preserve measurements and techni
 ## Examples
 
 **Simple Recipe:**
+
 1. WebFetch URL → Extract title, ingredients (apply conversions: "½ cup" → "1/2 cup", "2 teaspoons" → "2 tsp"), steps
 2. Category: `pasta`, Filename: `simple_pasta.dj`
 3. Format and write to `content/pasta/simple_pasta.dj`
