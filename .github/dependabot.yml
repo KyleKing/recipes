@@ -1,0 +1,23 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  # Enable version updates for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Group all action updates into a single PR
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+    # Add labels to PRs
+    labels:
+      - "dependencies"
+      - "github-actions"
+    # Set max number of open PRs
+    open-pull-requests-limit: 10
