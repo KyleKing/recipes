@@ -2,7 +2,7 @@
 name: Format Djot Files
 
 "on":
-  workflow_dispatch: null # For manual runs
+  workflow_dispatch: {} # For manual runs
   pull_request:
     branches: [main]
     paths:
@@ -25,7 +25,7 @@ jobs:
 
       - uses: jdx/mise-action@v2
         with:
-          experimental: true # required for go backend
+          experimental: true # required for Go backend
 
       - name: Format djot files
         run: mise run format-djot
