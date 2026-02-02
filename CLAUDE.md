@@ -11,12 +11,13 @@ Personal recipe collection site built with Go and templ, generating static HTML 
 All commands use `mise` task runner. Common tasks:
 
 ```bash
-mise run build      # Build website (format → go run . → minify → pagefind index)
-mise run format     # Format code (templ generate → templ fmt → go fmt)
-mise run lint       # Run testifylint (depends on format)
-mise run test       # Run tests with coverage (depends on format, lint)
-mise run coverage   # View test coverage from most recent test run
-mise run serve      # Serve built site on port 8000
+mise run build        # Build website (format → go run . → minify → pagefind index)
+mise run format       # Format code (templ generate → templ fmt → go fmt)
+mise run format-djot  # Format djot recipe files (djot-fmt)
+mise run lint         # Run testifylint (depends on format)
+mise run test         # Run tests with coverage (depends on format, lint)
+mise run coverage     # View test coverage from most recent test run
+mise run serve        # Serve built site on port 8000
 ```
 
 Additional utilities:
