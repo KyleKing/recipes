@@ -15,6 +15,11 @@ local linters = new Mapping<String, Step> {
     ["check-merge-conflict"] = Builtins.check_merge_conflict
     ["check-symlinks"] = Builtins.check_symlinks
     ["detect-private-key"] = Builtins.detect_private_key
+    ["djot-fmt"] {
+        glob = List("**/*.dj")
+        check = "djot-fmt -c {{ files }}"
+        fix = "djot-fmt -w {{ files }}"
+    }
     ["fix-byte-order-marker"] = Builtins.fix_byte_order_marker
     ["mixed-line-ending"] = Builtins.mixed_line_ending
     ["newlines"] = Builtins.newlines

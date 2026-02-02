@@ -96,10 +96,11 @@ Required tools:
 ### Common Commands
 
 ```bash
-mise run build      # Build website (format → go run . → minify → pagefind index)
-mise run format     # Format code (templ generate → templ fmt → go fmt)
-mise run test       # Run tests with coverage
-mise run serve      # Serve built site on port 8000
+mise run build        # Build website (format → go run . → minify → pagefind index)
+mise run format       # Format code (templ generate → templ fmt → go fmt)
+mise run format-djot  # Format djot recipe files (djot-fmt)
+mise run test         # Run tests with coverage
+mise run serve        # Serve built site on port 8000
 
 mise run compress <path>   # Compress images
 ./check_links.py          # Check/fix recipe links, add Wayback archive links
