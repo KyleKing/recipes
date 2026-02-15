@@ -91,7 +91,7 @@ run = ["go get -u .", "go mod tidy"]
 [tools]
 "go:github.com/Antonboom/testifylint" = "1.6.4"
 "go:github.com/a-h/templ/cmd/templ" = "0.3.977"
-"go:github.com/kyleking/djot-fmt" = "latest"
+"go:github.com/KyleKing/djot-fmt" = "latest"
 "go:github.com/tdewolff/minify/v2/cmd/minify" = "2.24.8"
 "npm:pagefind" = "1.5.0-beta.1"
 "pipx:commitizen" = "latest"

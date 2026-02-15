@@ -2,6 +2,10 @@
 version = "1.6.4"
 backend = "go:github.com/Antonboom/testifylint"
 
+[[tools."go:github.com/KyleKing/djot-fmt"]]
+version = "latest"
+backend = "go:github.com/KyleKing/djot-fmt"
+
 [[tools."go:github.com/a-h/templ/cmd/templ"]]
 version = "0.3.977"
 backend = "go:github.com/a-h/templ/cmd/templ"
