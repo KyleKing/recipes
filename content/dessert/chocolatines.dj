@@ -1,8 +1,8 @@
 # Chocolatines
 
-Source: Alex's family recipe
+Source: Alex’s family recipe
 
-{ rating=5 image="chocolatines.jpeg" }
+{ rating="5" image="chocolatines.jpeg" }
 :::
 :::
 

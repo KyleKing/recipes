@@ -1,8 +1,8 @@
 # Tomato-Butter Pasta
 
-Based on [https://cooking.nytimes.com/recipes/...](https://cooking.nytimes.com/recipes/1022464-tomato-butter-pasta) ([wayback](http://web.archive.org/web/20251019015728/https://cooking.nytimes.com/recipes/1022464-tomato-butter-pasta))
+Based on [https://cooking.nytimes.com/recipes/…](https://cooking.nytimes.com/recipes/1022464-tomato-butter-pasta) ([wayback](http://web.archive.org/web/20251019015728/https://cooking.nytimes.com/recipes/1022464-tomato-butter-pasta))
 
-{ rating=4 image="tomato_butter_pasta.jpeg" }
+{ rating="4" image="tomato_butter_pasta.jpeg" }
 :::
 :::
 
@@ -22,9 +22,9 @@ Based on [https://cooking.nytimes.com/recipes/...](https://cooking.nytimes.com/r
 1. Start a pot to boil and cook the pasta. Make sure to reserve 1 cup pasta cooking water
 1. Meanwhile, using the large holes of a box grater:
 
-  1. Grate the cut ends of the tomato into a large bowl
-  1. Grate the butter
-  1. Switch to the small holes and grate the garlic
+   1. Grate the cut ends of the tomato into a large bowl
+   1. Grate the butter
+   1. Switch to the small holes and grate the garlic
 1. Add the red-pepper flakes and season generously with salt
 1. Return the drained pasta to the pot, along with the bowl of grated tomato and butter
 1. Set over medium-high heat and stir constantly to thicken (2-3 min). Add pasta water as needed

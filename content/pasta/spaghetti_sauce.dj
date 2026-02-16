@@ -1,6 +1,6 @@
 # Spaghetti Sauce
 
-{ rating=4 image="spaghetti_sauce.jpg" }
+{ rating="4" image="spaghetti_sauce.jpg" }
 :::
 :::
 

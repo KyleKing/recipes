@@ -2,7 +2,7 @@
 
 Based on this [recipe from the Washington Post](https://www.washingtonpost.com/recipes/speedy-homemade-hummus/16549) ([wayback](http://web.archive.org/web/20220328081832/https://www.washingtonpost.com/recipes/speedy-homemade-hummus/16549)). Another alternative is this [recipe from the NYT](https://cooking.nytimes.com/recipes/12703-hummus) ([wayback](http://web.archive.org/web/20251114211435/https://cooking.nytimes.com/recipes/12703-hummus))
 
-{ rating=5 image="hummus.jpeg" }
+{ rating="5" image="hummus.jpeg" }
 :::
 :::
 
@@ -28,7 +28,7 @@ Based on this [recipe from the Washington Post](https://www.washingtonpost.com/r
       - [ ] Extra Virgin Olive Oil
       - [ ] Harissa
       - [ ] Parsley
-      - [ ] Za'atar
+      - [ ] Za’atar
       - [ ] Roasted Red Peppers
 
 ## Recipe

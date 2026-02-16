@@ -2,7 +2,7 @@
 
 Based on [Little Spice Jar](https://www.littlespicejar.com/best-ever-chicken-fajitas) ([wayback](http://web.archive.org/web/20251206221020/https://www.littlespicejar.com/best-ever-chicken-fajitas/)) and [Homesick Texan](https://www.homesicktexan.com/chicken-fajitas-recipe) ([wayback](http://web.archive.org/web/20251027220421/https://www.homesicktexan.com/chicken-fajitas-recipe/))
 
-{ rating=3 image="fajitas.jpg" }
+{ rating="3" image="fajitas.jpg" }
 :::
 :::
 
@@ -52,7 +52,7 @@ Based on [Little Spice Jar](https://www.littlespicejar.com/best-ever-chicken-faj
 
 ## Notes
 
-- Pineapple juice acts as a natural tenderizer—don't marinate longer than 6 hours or chicken becomes tough
+- Pineapple juice acts as a natural tenderizer—don’t marinate longer than 6 hours or chicken becomes tough
 - For more heat, substitute 4 dried chiles de arbol in the marinade or add sliced jalapeños when cooking vegetables
 - Cast iron skillet gives the best char and sizzle
 
@@ -67,4 +67,5 @@ For a quick weeknight version, skip the marinade and use an Instant Pot:
 1. Optional: transfer chicken and vegetables to hot skillet for 2-3 minutes to add char
 1. Serve immediately with warm tortillas and toppings
 
-Note: Pressure cooking infuses flavor without marinating. Save the cooking liquid to make fajita-flavored rice.
+Note: Pressure cooking infuses flavor without marinating.
+Save the cooking liquid to make fajita-flavored rice.

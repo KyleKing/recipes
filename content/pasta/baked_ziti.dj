@@ -1,6 +1,6 @@
 # Baked Ziti
 
-{ rating=4 image="baked_ziti.jpeg" }
+{ rating="4" image="baked_ziti.jpeg" }
 :::
 :::
 
@@ -26,4 +26,4 @@
 ## Notes
 
 1. If put in the fridge, extend cook time by 10-15 min!
-1. Alex's family recipe and great for groups
+1. Alex’s family recipe and great for groups

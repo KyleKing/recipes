@@ -2,7 +2,7 @@
 
 Based on a Keebler Recipe
 
-{ rating=3 image="double_layer_pumpkin_pie.jpeg" }
+{ rating="3" image="double_layer_pumpkin_pie.jpeg" }
 :::
 :::
 

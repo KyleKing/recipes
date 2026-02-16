@@ -2,7 +2,7 @@
 
 Based on a recipe shared by Becky Harder from Monument, CO
 
-{ rating=5 image="slow_cooker_chicken_tortilla_soup.jpg" }
+{ rating="5" image="slow_cooker_chicken_tortilla_soup.jpg" }
 :::
 :::
 
@@ -20,7 +20,7 @@ Based on a recipe shared by Becky Harder from Monument, CO
 - [ ] 2 cans of black beans (30 oz)
 - [ ] 3 cans of Original Rotel Diced Tomatoes and Green Chilies (30 oz)
 
-    - Or 3-4 large tomatoes, diced
+      - Or 3-4 large tomatoes, diced
 - [ ] 1 cup salsa
 - [ ] 4 oz green chilies, chopped
 - [ ] 14.5 oz can tomato sauce

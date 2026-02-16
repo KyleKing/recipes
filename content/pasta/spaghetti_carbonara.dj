@@ -2,7 +2,7 @@
 
 Based on [a recipe from the New York Times](https://cooking.nytimes.com/recipes/12965-spaghetti-carbonara) ([wayback](http://web.archive.org/web/20251112065556/https://cooking.nytimes.com/recipes/12965-spaghetti-carbonara))
 
-{ rating=5 image="spaghetti_carbonara.jpeg" }
+{ rating="5" image="spaghetti_carbonara.jpeg" }
 :::
 :::
 
@@ -30,9 +30,9 @@ Based on [a recipe from the New York Times](https://cooking.nytimes.com/recipes/
 1. Cook the spaghetti and turn up the heat on the pancetta to medium
 1. Set one cup of pasta water aside
 
-  1. In the sink, place a large stainless steel mixing bowl under the colander and drain the pasta
-  1. Allow the hot water to warm the bowl and discard
-  1. Mix the pasta, sauce, and pancetta together in the warmed mixing bowl. Add some of the pasta water if needed for a creamier sauce
+   1. In the sink, place a large stainless steel mixing bowl under the colander and drain the pasta
+   1. Allow the hot water to warm the bowl and discard
+   1. Mix the pasta, sauce, and pancetta together in the warmed mixing bowl. Add some of the pasta water if needed for a creamier sauce
 1. Serve immediately with a garnish of pecorino Romano and black pepper
 
 ## Notes

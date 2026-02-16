@@ -1,8 +1,8 @@
 # Jambon Beurre: The essential French ham sandwich
 
-Based on [https://www.youtube.com/watch?v=ge49xawecJ/...](https://www.youtube.com/watch?v=ge49xawecJk)
+Based on [https://www.youtube.com/watch?v=ge49xawecJ/…](https://www.youtube.com/watch?v=ge49xawecJk)
 
-{ rating=3 image="jambon_beurre.jpg" }
+{ rating="3" image="jambon_beurre.jpg" }
 :::
 :::
 
@@ -15,5 +15,5 @@ Based on [https://www.youtube.com/watch?v=ge49xawecJ/...](https://www.youtube.co
 
 ## Recipe
 
-1. Don't skimp on the butter
+1. Don’t skimp on the butter
 1. Needs something _more_ for more flavor

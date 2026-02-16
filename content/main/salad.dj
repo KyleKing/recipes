@@ -1,6 +1,6 @@
 # Salad
 
-{ rating=3 image="salad.jpg" }
+{ rating="3" image="salad.jpg" }
 :::
 :::
 
@@ -32,15 +32,15 @@
 ### Notes
 
 1. Typically, cut tomatoes into orange-sized slices
-1. Dressings: Ken's Steak House LITE Northern Italian or LITE Zesty Italian
+1. Dressings: Ken’s Steak House LITE Northern Italian or LITE Zesty Italian
 1. Improvements
 
-  1. Try olive oil and lemon
-  1. Add sliced nuts, such as almonds or walnuts
-  1. Add beans, such as Chickpeas (drained), which could also be roasted in paprika. Also try black beans, cannelini, etc.
-  1. Mix in grains such as Quinoa, couscous, brown rice, farro, etc.
-  1. Make sure to add spinach, mustard greens, and kale
-  1. Add melons, pears, etc.
+   1. Try olive oil and lemon
+   1. Add sliced nuts, such as almonds or walnuts
+   1. Add beans, such as Chickpeas (drained), which could also be roasted in paprika. Also try black beans, cannelini, etc.
+   1. Mix in grains such as Quinoa, couscous, brown rice, farro, etc.
+   1. Make sure to add spinach, mustard greens, and kale
+   1. Add melons, pears, etc.
 
 ## More
 
@@ -55,4 +55,4 @@ From the [Washington Post](https://www.washingtonpost.com/food/interactive/2022/
 
 Some [examples for Spring](https://www.washingtonpost.com/food/2024/04/29/salad-recipes-spring-dinner-hearty) (wayback unavailable) (wayback unavailable)
 
-For a broader framework, see [https://newsletter.ethanchlebowski.com/p/...](https://newsletter.ethanchlebowski.com/p/satisfying-salad-blueprint) ([wayback](http://web.archive.org/web/20251018234729/https://newsletter.ethanchlebowski.com/p/satisfying-salad-blueprint))
+For a broader framework, see [https://newsletter.ethanchlebowski.com/p/…](https://newsletter.ethanchlebowski.com/p/satisfying-salad-blueprint) ([wayback](http://web.archive.org/web/20251018234729/https://newsletter.ethanchlebowski.com/p/satisfying-salad-blueprint))
