@@ -3,7 +3,7 @@ version = "1.6.4"
 backend = "go:github.com/Antonboom/testifylint"
 
 [[tools."go:github.com/KyleKing/djot-fmt"]]
-version = "latest"
+version = "4152a1dba770fd264913ddd90c3da28d4e80d6b8"
 backend = "go:github.com/KyleKing/djot-fmt"
 
 [[tools."go:github.com/a-h/templ/cmd/templ"]]
