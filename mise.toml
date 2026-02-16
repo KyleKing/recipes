@@ -95,7 +95,7 @@ run = ["go get -u .", "go mod tidy"]
 
 [tools]
 "go:github.com/Antonboom/testifylint" = "1.6.4"
-"go:github.com/KyleKing/djot-fmt" = "4152a1dba770fd264913ddd90c3da28d4e80d6b8"
+"go:github.com/KyleKing/djot-fmt" = "f2c2f82af320"
 "go:github.com/a-h/templ/cmd/templ" = "0.3.977"
 "go:github.com/tdewolff/minify/v2/cmd/minify" = "2.24.8"
 "npm:@biomejs/biome" = "latest"

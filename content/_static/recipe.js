@@ -205,16 +205,17 @@
 
 			var sectionId = section.id || heading.textContent.trim().toLowerCase().replace(/\s+/g, "-");
 			section.classList.add("collapsible");
+			section.classList.add("collapsed");
 
 			var toggle = document.createElement("span");
 			toggle.className = "collapse-toggle";
-			toggle.textContent = "-";
+			toggle.textContent = "+";
 			toggle.setAttribute("aria-label", "Toggle section");
 			heading.appendChild(toggle);
 
-			if (state[`collapsed-${sectionId}`]) {
-				section.classList.add("collapsed");
-				toggle.textContent = "+";
+			if (state[`collapsed-${sectionId}`] === false) {
+				section.classList.remove("collapsed");
+				toggle.textContent = "-";
 			}
 
 			toggle.addEventListener("click", (e) => {
@@ -437,8 +438,8 @@
 
 		// Load toolbar visibility state from localStorage
 		var state = loadState();
-		if (state["toolbar-hidden"]) {
-			toolbar.classList.add("hidden");
+		if (state["toolbar-hidden"] === false) {
+			toolbar.classList.remove("hidden");
 		}
 
 		toggleBtn.addEventListener("click", () => {

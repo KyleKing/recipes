@@ -41,9 +41,9 @@ echo "Starting server on port $PORT..."
 "$SERVER_BIN" -port "$PORT" -directory ./public &
 SERVER_PID=$!
 
-# Wait for server to be ready (timeout: 5s)
+# Wait for server to be ready (timeout: 3s)
 echo "Waiting for server to start..."
-for i in {1..10}; do
+for i in {1..6}; do
     if ! kill -0 "$SERVER_PID" 2>/dev/null; then
         echo "Server process died unexpectedly"
         exit 1
@@ -52,8 +52,8 @@ for i in {1..10}; do
         echo "Server ready"
         break
     fi
-    if [ $i -eq 10 ]; then
-        echo "Server failed to start within 5s"
+    if [ $i -eq 6 ]; then
+        echo "Server failed to start within 3s"
         exit 1
     fi
     sleep 0.5

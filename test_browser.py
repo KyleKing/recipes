@@ -67,6 +67,13 @@ def test_server_is_running(page: Page):
 
 def test_ingredient_checkbox_toggle(recipe_page: Page):
     """Test clicking ingredient item toggles checkbox and adds strikethrough."""
+    # Expand section first (sections start collapsed, completed items hidden when collapsed)
+    collapsible_section = recipe_page.locator("section.collapsible").first
+    if collapsible_section.count() > 0:
+        toggle_button = collapsible_section.locator(".collapse-toggle")
+        toggle_button.click()
+        recipe_page.wait_for_timeout(100)
+
     # Find first ingredient
     first_ingredient = recipe_page.locator(".task-list li").first
     checkbox = first_ingredient.locator("input[type='checkbox']")
@@ -166,7 +173,16 @@ def test_recipe_step_margin_click(recipe_page: Page):
 
 def test_recipe_step_double_click(recipe_page: Page):
     """Test double-clicking step toggles completion."""
-    first_step = recipe_page.locator("ol.recipe-steps > li").first
+    # Find section containing recipe steps
+    section = recipe_page.locator("section").filter(has=recipe_page.locator("ol.recipe-steps")).first
+
+    # Expand section if it's collapsible (sections start collapsed, completed items hidden when collapsed)
+    if section.locator(".collapse-toggle").count() > 0:
+        toggle_button = section.locator(".collapse-toggle")
+        toggle_button.click()
+        recipe_page.wait_for_timeout(100)
+
+    first_step = section.locator("ol.recipe-steps > li").first
 
     # Double-click step text
     first_step.dblclick()
@@ -204,24 +220,24 @@ def test_section_collapse_toggle(recipe_page: Page):
 
     toggle_button = collapsible_section.locator(".collapse-toggle")
 
-    # Initially expanded (toggle shows "-")
-    expect(toggle_button).to_have_text("-")
-    expect(collapsible_section).not_to_have_class(re.compile("collapsed"))
-
-    # Click to collapse
-    toggle_button.click()
-
-    # Wait for animation
-    recipe_page.wait_for_timeout(500)
-
-    # Should be collapsed (toggle shows "+")
+    # Initially collapsed (toggle shows "+")
     expect(toggle_button).to_have_text("+")
     expect(collapsible_section).to_have_class(re.compile("collapsed"))
 
     # Click to expand
     toggle_button.click()
+
+    # Wait for animation
+    recipe_page.wait_for_timeout(100)
+
+    # Should be expanded (toggle shows "-")
     expect(toggle_button).to_have_text("-")
     expect(collapsible_section).not_to_have_class(re.compile("collapsed"))
+
+    # Click to collapse
+    toggle_button.click()
+    expect(toggle_button).to_have_text("+")
+    expect(collapsible_section).to_have_class(re.compile("collapsed"))
 
 
 def test_section_progress_summary(recipe_page: Page):
@@ -230,6 +246,11 @@ def test_section_progress_summary(recipe_page: Page):
     if collapsible_section.count() == 0:
         pytest.skip("No collapsible sections in test recipe")
 
+    # Expand section first (since it starts collapsed)
+    toggle_button = collapsible_section.locator(".collapse-toggle")
+    toggle_button.click()
+    recipe_page.wait_for_timeout(100)
+
     # Mark some items complete
     first_item = collapsible_section.locator(
         ".task-list li, ol.recipe-steps > li"
@@ -237,9 +258,8 @@ def test_section_progress_summary(recipe_page: Page):
     first_item.click()
 
     # Collapse section
-    toggle_button = collapsible_section.locator(".collapse-toggle")
     toggle_button.click()
-    recipe_page.wait_for_timeout(500)
+    recipe_page.wait_for_timeout(100)
 
     # Should show progress summary like "(1/5)"
     summary = collapsible_section.locator(".section-summary")
@@ -249,36 +269,54 @@ def test_section_progress_summary(recipe_page: Page):
 
 def test_collapse_all_button(recipe_page: Page):
     """Test collapse all / expand all button."""
+    # Show toolbar first (starts hidden)
+    toolbar_toggle = recipe_page.locator("#toolbar-toggle")
+    toolbar_toggle.click()
+    recipe_page.wait_for_timeout(100)
+
     collapse_button = recipe_page.locator("#toggle-collapse-btn")
 
     if collapse_button.count() == 0:
         pytest.skip("No collapsible sections in test recipe")
 
-    # Button should say "Collapse All" initially
-    expect(collapse_button).to_contain_text("Collapse All")
+    # Button should say "Expand All" initially (sections start collapsed)
+    expect(collapse_button).to_contain_text("Expand All")
 
-    # Click to collapse all
-    collapse_button.click()
-    recipe_page.wait_for_timeout(500)
-
-    # All collapsible sections should be collapsed
+    # All collapsible sections should be collapsed initially
     all_sections = recipe_page.locator("section.collapsible")
     collapsed_sections = recipe_page.locator("section.collapsed")
     expect(collapsed_sections).to_have_count(all_sections.count())
 
-    # Button should now say "Expand All"
-    expect(collapse_button).to_contain_text("Expand All")
-
     # Click to expand all
     collapse_button.click()
+    recipe_page.wait_for_timeout(100)
 
     # No sections should be collapsed
     expect(recipe_page.locator("section.collapsed")).to_have_count(0)
     expect(collapse_button).to_contain_text("Collapse All")
 
+    # Click to collapse all
+    collapse_button.click()
+
+    # All collapsible sections should be collapsed
+    expect(recipe_page.locator("section.collapsed")).to_have_count(all_sections.count())
+    expect(collapse_button).to_contain_text("Expand All")
+
 
 def test_reset_progress_button(recipe_page: Page):
     """Test reset button clears all progress."""
+    # Expand section first (sections start collapsed)
+    collapsible_section = recipe_page.locator("section.collapsible").first
+    if collapsible_section.count() > 0:
+        toggle_button = collapsible_section.locator(".collapse-toggle")
+        toggle_button.click()
+        recipe_page.wait_for_timeout(100)
+
+    # Show toolbar (starts hidden)
+    toolbar_toggle = recipe_page.locator("#toolbar-toggle")
+    toolbar_toggle.click()
+    recipe_page.wait_for_timeout(100)
+
     reset_button = recipe_page.locator("#reset-btn")
 
     # Mark some items complete
@@ -312,16 +350,16 @@ def test_toolbar_toggle(recipe_page: Page):
     if toolbar.count() == 0 or toggle_button.count() == 0:
         pytest.skip("No toolbar in test recipe")
 
-    # Initially visible
-    expect(toolbar).not_to_have_class(re.compile("hidden"))
-
-    # Click to hide
-    toggle_button.click()
+    # Initially hidden
     expect(toolbar).to_have_class(re.compile("hidden"))
 
     # Click to show
     toggle_button.click()
     expect(toolbar).not_to_have_class(re.compile("hidden"))
+
+    # Click to hide
+    toggle_button.click()
+    expect(toolbar).to_have_class(re.compile("hidden"))
 
 
 def test_toolbar_toggle_persistence(recipe_page: Page):
@@ -332,16 +370,16 @@ def test_toolbar_toggle_persistence(recipe_page: Page):
     if toolbar.count() == 0 or toggle_button.count() == 0:
         pytest.skip("No toolbar in test recipe")
 
-    # Hide toolbar
+    # Show toolbar (starts hidden)
     toggle_button.click()
-    expect(toolbar).to_have_class(re.compile("hidden"))
+    expect(toolbar).not_to_have_class(re.compile("hidden"))
 
     # Reload page
     recipe_page.reload()
 
-    # Should still be hidden
+    # Should still be visible
     toolbar_after = recipe_page.locator("#recipe-toolbar")
-    expect(toolbar_after).to_have_class(re.compile("hidden"))
+    expect(toolbar_after).not_to_have_class(re.compile("hidden"))
 
 
 def test_header_anchors(recipe_page: Page):
