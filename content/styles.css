@@ -21,56 +21,52 @@
 
 html,
 body {
-    margin: 0;
+	margin: 0;
 }
 
 /* Root */
 
 :root {
-    --color-back: #eaeaea;
-    --color-text: #454545;
-    --color-link: #07a;
-    --color-link-visited: #07a;
+	--color-back: #eaeaea;
+	--color-text: #454545;
+	--color-link: #07a;
+	--color-link-visited: #07a;
 }
 
 /* Minimum set of used fonts from Atkinson Hyperlegible fonts
    https://www.brailleinstitute.org/freefont */
 @font-face {
-    font-family: "Atkinson Hyperlegible Mono";
-    src: url("./resources/AtkinsonHyperlegibleMono-Regular.woff2")
-        format("woff2");
+	font-family: "Atkinson Hyperlegible Mono";
+	src: url("./resources/AtkinsonHyperlegibleMono-Regular.woff2") format("woff2");
 }
 @font-face {
-    font-family: "Atkinson Hyperlegible Next";
-    src: url("./resources/AtkinsonHyperlegibleNext-BoldItalic.woff2")
-        format("woff2");
-    font-weight: bold;
-    font-style: italic;
+	font-family: "Atkinson Hyperlegible Next";
+	src: url("./resources/AtkinsonHyperlegibleNext-BoldItalic.woff2") format("woff2");
+	font-weight: bold;
+	font-style: italic;
 }
 @font-face {
-    font-family: "Atkinson Hyperlegible Next";
-    src: url("./resources/AtkinsonHyperlegibleNext-Bold.woff2") format("woff2");
-    font-weight: bold;
+	font-family: "Atkinson Hyperlegible Next";
+	src: url("./resources/AtkinsonHyperlegibleNext-Bold.woff2") format("woff2");
+	font-weight: bold;
 }
 @font-face {
-    font-family: "Atkinson Hyperlegible Next";
-    src: url("./resources/AtkinsonHyperlegibleNext-RegularItalic.woff2")
-        format("woff2");
-    font-style: italic;
+	font-family: "Atkinson Hyperlegible Next";
+	src: url("./resources/AtkinsonHyperlegibleNext-RegularItalic.woff2") format("woff2");
+	font-style: italic;
 }
 @font-face {
-    font-family: "Atkinson Hyperlegible Next";
-    src: url("./resources/AtkinsonHyperlegibleNext-Regular.woff2")
-        format("woff2");
+	font-family: "Atkinson Hyperlegible Next";
+	src: url("./resources/AtkinsonHyperlegibleNext-Regular.woff2") format("woff2");
 }
 
 body {
-    background: var(--color-back);
-    color: var(--color-text);
-    font-family: "Atkinson Hyperlegible Next"; /* Palatino, serif; */
-    font-size: 18px;
-    line-height: 1.45;
-    margin-bottom: 40%;
+	background: var(--color-back);
+	color: var(--color-text);
+	font-family: "Atkinson Hyperlegible Next"; /* Palatino, serif; */
+	font-size: 18px;
+	line-height: 1.45;
+	margin-bottom: 40%;
 }
 
 /* Content sectioning */
@@ -81,132 +77,132 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Atkinson Hyperlegible Next"; /* Optima, sans-serif; */
-    line-height: 0.9;
+	font-family: "Atkinson Hyperlegible Next"; /* Optima, sans-serif; */
+	line-height: 0.9;
 }
 
 nav {
-    padding: 10px 0;
+	padding: 10px 0;
 }
 
 /* Text block content */
 
 ol:nth-child(odd) {
-    list-style: lower-alpha;
+	list-style: lower-alpha;
 }
 
 ul.task-list {
-    list-style: disc;
-    padding-left: 20px;
+	list-style: disc;
+	padding-left: 20px;
 }
 
 ul.task-list input[type="checkbox"] {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
 }
 
 ul.flat-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 ul.flat-list li {
-    position: relative;
-    display: inline-block;
-    margin-right: 20px;
+	position: relative;
+	display: inline-block;
+	margin-right: 20px;
 }
 
 pre {
-    background: rgba(180, 180, 180, 0.1);
-    font-family: "Atkinson Hyperlegible Mono"; /* monospace; */
-    padding: 5px;
+	background: rgba(180, 180, 180, 0.1);
+	font-family: "Atkinson Hyperlegible Mono"; /* monospace; */
+	padding: 5px;
 }
 pre code {
-    max-width: 100%;
-    white-space: pre-wrap;
+	max-width: 100%;
+	white-space: pre-wrap;
 }
 
 /* Inline text semantics */
 
 a {
-    color: var(--color-link);
-    text-decoration: none;
+	color: var(--color-link);
+	text-decoration: none;
 }
 a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 a:visited {
-    color: var(--color-link-visited);
+	color: var(--color-link-visited);
 }
 
 /* Embedded content */
 
 img.fullsize {
-    max-height: 300px;
-    max-width: 100%;
+	max-height: 300px;
+	max-width: 100%;
 }
 
 .wrapped-images-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 15px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	gap: 15px;
 }
 
 .wrapped-images-container figcaption {
-    margin-top: 5px;
+	margin-top: 5px;
 }
 
 /* `square-img` from: https://stackoverflow.com/a/55966300/3219667 */
 
 .square-img-container {
-    position: relative;
+	position: relative;
 }
 
 .square-img-container::after {
-    content: "";
-    display: block;
-    padding-bottom: 100%;
+	content: "";
+	display: block;
+	padding-bottom: 100%;
 }
 
 img.square-img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: #959595 0.5px solid;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border: #959595 0.5px solid;
 }
 
 /* Media queries */
 
 nav div,
 main {
-    margin: auto;
+	margin: auto;
 }
 @media (min-width: 760px) {
-    nav div,
-    main {
-        max-width: 650px;
-    }
+	nav div,
+	main {
+		max-width: 650px;
+	}
 }
 @media (max-width: 759px) {
-    nav div,
-    main {
-        max-width: 85%;
-    }
+	nav div,
+	main {
+		max-width: 85%;
+	}
 }
 
 /* E-ink Display Optimizations for TRMNL (800x480 landscape) */
 /* Trigger with ?trmnl=1 query parameter or use .trmnl-mode class */
 
 body.trmnl-mode {
-    font-size: 14px;
-    line-height: 1.25;
-    margin: 0;
-    padding: 8px;
-    background: white;
-    color: black;
-    margin-bottom: 0;
+	font-size: 14px;
+	line-height: 1.25;
+	margin: 0;
+	padding: 8px;
+	background: white;
+	color: black;
+	margin-bottom: 0;
 }
 
 /* Hide navigation and images for cleaner e-ink display */
@@ -215,399 +211,399 @@ body.trmnl-mode img,
 body.trmnl-mode img.fullsize,
 body.trmnl-mode .wrapped-images-container,
 body.trmnl-mode .square-img-container {
-    display: none;
+	display: none;
 }
 
 /* Compact headings for limited vertical space */
 body.trmnl-mode h1 {
-    font-size: 22px;
-    margin: 4px 0;
-    line-height: 1.1;
+	font-size: 22px;
+	margin: 4px 0;
+	line-height: 1.1;
 }
 
 body.trmnl-mode h2 {
-    font-size: 17px;
-    margin: 6px 0 3px 0;
-    line-height: 1.1;
+	font-size: 17px;
+	margin: 6px 0 3px 0;
+	line-height: 1.1;
 }
 
 body.trmnl-mode h3 {
-    font-size: 15px;
-    margin: 5px 0 2px 0;
-    line-height: 1.1;
+	font-size: 15px;
+	margin: 5px 0 2px 0;
+	line-height: 1.1;
 }
 
 body.trmnl-mode h4,
 body.trmnl-mode h5,
 body.trmnl-mode h6 {
-    font-size: 14px;
-    margin: 4px 0 2px 0;
+	font-size: 14px;
+	margin: 4px 0 2px 0;
 }
 
 /* Compact lists for ingredient and recipe steps */
 body.trmnl-mode ul,
 body.trmnl-mode ol {
-    margin: 3px 0;
-    padding-left: 18px;
+	margin: 3px 0;
+	padding-left: 18px;
 }
 
 body.trmnl-mode li {
-    margin: 1px 0;
-    line-height: 1.2;
+	margin: 1px 0;
+	line-height: 1.2;
 }
 
 /* Hide checkboxes and show as regular list */
 body.trmnl-mode .task-list input[type="checkbox"] {
-    display: none;
+	display: none;
 }
 
 body.trmnl-mode .task-list {
-    list-style: disc;
-    padding-left: 15px;
+	list-style: disc;
+	padding-left: 15px;
 }
 
 /* Ensure main content uses full width */
 body.trmnl-mode main {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 /* Compact sections */
 body.trmnl-mode section {
-    margin-bottom: 8px;
+	margin-bottom: 8px;
 }
 
 /* Reduce paragraph spacing */
 body.trmnl-mode p {
-    margin: 3px 0;
+	margin: 3px 0;
 }
 
 /* Make links readable on e-ink (no colors, just underline) */
 body.trmnl-mode a {
-    color: black;
-    text-decoration: underline;
+	color: black;
+	text-decoration: underline;
 }
 
 body.trmnl-mode a:visited {
-    color: black;
+	color: black;
 }
 
 body.trmnl-mode a:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 /* Compact code blocks if present */
 body.trmnl-mode pre {
-    font-size: 12px;
-    padding: 3px;
-    margin: 3px 0;
+	font-size: 12px;
+	padding: 3px;
+	margin: 3px 0;
 }
 
 body.trmnl-mode code {
-    font-size: 13px;
+	font-size: 13px;
 }
 
 /* Hide navigation flat list */
 body.trmnl-mode ul.flat-list {
-    display: none;
+	display: none;
 }
 
 /* Optimize nested lists in recipes */
 body.trmnl-mode ol ol,
 body.trmnl-mode ul ul {
-    margin: 2px 0;
-    padding-left: 15px;
+	margin: 2px 0;
+	padding-left: 15px;
 }
 
 /* Ensure proper rendering on grayscale e-ink */
 body.trmnl-mode {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 /* Tab UI Styles */
 
 .tabs-container {
-    margin-top: 20px;
+	margin-top: 20px;
 }
 
 .tab-nav {
-    display: flex;
-    gap: 15px;
-    border-bottom: 2px solid #ccc;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
+	display: flex;
+	gap: 15px;
+	border-bottom: 2px solid #ccc;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
 }
 
 .tab-nav a {
-    padding: 8px 16px;
-    text-decoration: none;
-    border: 1px solid transparent;
-    border-radius: 4px 4px 0 0;
-    transition: all 0.2s ease;
+	padding: 8px 16px;
+	text-decoration: none;
+	border: 1px solid transparent;
+	border-radius: 4px 4px 0 0;
+	transition: all 0.2s ease;
 }
 
 .tab-nav a:hover {
-    background: rgba(180, 180, 180, 0.1);
-    border-color: #ccc;
+	background: rgba(180, 180, 180, 0.1);
+	border-color: #ccc;
 }
 
 .tab-content {
-    display: none;
+	display: none;
 }
 
 .tab-content:target {
-    display: block;
-    animation: fadeIn 0.3s ease;
+	display: block;
+	animation: fadeIn 0.3s ease;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 .tab-content h2 {
-    margin-top: 0;
+	margin-top: 0;
 }
 
 .tab-content h3 {
-    margin-top: 30px;
-    margin-bottom: 10px;
+	margin-top: 30px;
+	margin-bottom: 10px;
 }
 
 /* Related Recipes Match Details */
 
 .match-details,
 .no-match-details {
-    margin-top: 8px;
-    font-size: 14px;
+	margin-top: 8px;
+	font-size: 14px;
 }
 
 .match-details summary,
 .no-match-details summary {
-    cursor: pointer;
-    color: var(--color-link);
-    font-size: 13px;
-    padding: 4px 0;
-    user-select: none;
+	cursor: pointer;
+	color: var(--color-link);
+	font-size: 13px;
+	padding: 4px 0;
+	user-select: none;
 }
 
 .match-details summary:hover,
 .no-match-details summary:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 .match-info,
 .no-match-info {
-    margin-top: 8px;
-    padding: 8px;
-    background: rgba(180, 180, 180, 0.1);
-    border-left: 3px solid var(--color-link);
-    font-size: 13px;
-    line-height: 1.4;
+	margin-top: 8px;
+	padding: 8px;
+	background: rgba(180, 180, 180, 0.1);
+	border-left: 3px solid var(--color-link);
+	font-size: 13px;
+	line-height: 1.4;
 }
 
 .match-info p,
 .no-match-info p {
-    margin: 6px 0;
+	margin: 6px 0;
 }
 
 .match-info strong,
 .no-match-info strong {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .score-breakdown {
-    color: #666;
-    margin-top: 8px !important;
+	color: #666;
+	margin-top: 8px;
 }
 
 .ingredient-tokens {
-    font-family: "Atkinson Hyperlegible Mono";
-    font-size: 12px;
-    line-height: 1.5;
+	font-family: "Atkinson Hyperlegible Mono";
+	font-size: 12px;
+	line-height: 1.5;
 }
 
 /* Hide details for e-ink display */
 body.trmnl-mode .match-details,
 body.trmnl-mode .no-match-details {
-    display: none;
+	display: none;
 }
 
 /* Recipe Navigation - Floating Toolbar */
 
 .recipe-toolbar {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 8px;
-    z-index: 100;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 8px;
+	z-index: 100;
 }
 
 .toolbar-toggle {
-    border: 2px solid var(--color-text);
-    background: var(--color-back);
-    color: var(--color-text);
-    padding: 4px 16px;
-    font-size: 14px;
-    font-family: inherit;
-    cursor: pointer;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	border: 2px solid var(--color-text);
+	background: var(--color-back);
+	color: var(--color-text);
+	padding: 4px 16px;
+	font-size: 14px;
+	font-family: inherit;
+	cursor: pointer;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .toolbar-toggle:hover {
-    background: rgba(180, 180, 180, 0.3);
+	background: rgba(180, 180, 180, 0.3);
 }
 
 .toolbar-toggle .toggle-icon {
-    display: inline-block;
-    transition: transform 0.3s ease;
+	display: inline-block;
+	transition: transform 0.3s ease;
 }
 
 .recipe-toolbar.hidden .toolbar-toggle .toggle-icon {
-    transform: rotate(180deg);
+	transform: rotate(180deg);
 }
 
 .toolbar-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    transition:
-        opacity 0.3s ease,
-        transform 0.3s ease;
-    transform-origin: bottom right;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	transition:
+		opacity 0.3s ease,
+		transform 0.3s ease;
+	transform-origin: bottom right;
 }
 
 .recipe-toolbar.hidden .toolbar-buttons {
-    opacity: 0;
-    transform: scale(0.8);
-    pointer-events: none;
+	opacity: 0;
+	transform: scale(0.8);
+	pointer-events: none;
 }
 
 .toolbar-btn {
-    border: 2px solid var(--color-text);
-    background: var(--color-back);
-    color: var(--color-text);
-    padding: 8px 12px;
-    font-size: 14px;
-    font-family: inherit;
-    cursor: pointer;
-    transition: opacity 1s ease;
+	border: 2px solid var(--color-text);
+	background: var(--color-back);
+	color: var(--color-text);
+	padding: 8px 12px;
+	font-size: 14px;
+	font-family: inherit;
+	cursor: pointer;
+	transition: opacity 1s ease;
 }
 
 .toolbar-btn:hover {
-    background: rgba(180, 180, 180, 0.3);
+	background: rgba(180, 180, 180, 0.3);
 }
 
 .toolbar-btn.fading {
-    opacity: 0;
-    pointer-events: none;
+	opacity: 0;
+	pointer-events: none;
 }
 
 /* Recipe Steps - Click on number to toggle */
 
 .recipe-steps li::marker {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 /* Completed Items */
 
 .recipe-steps li.completed,
 .task-list li.completed {
-    opacity: 0.6;
-    text-decoration: line-through;
-    transition: opacity 0.3s ease;
+	opacity: 0.6;
+	text-decoration: line-through;
+	transition: opacity 0.3s ease;
 }
 
 .task-list li.completed {
-    list-style-type: "✓ ";
+	list-style-type: "✓ ";
 }
 
 /* Hiding animation for collapse */
 
 li.hiding {
-    animation: fadeOutHide 0.4s ease forwards;
+	animation: fadeOutHide 0.4s ease forwards;
 }
 
 @keyframes fadeOutHide {
-    0% {
-        opacity: 0.6;
-        max-height: 100px;
-    }
-    70% {
-        opacity: 0;
-        max-height: 100px;
-    }
-    100% {
-        opacity: 0;
-        max-height: 0;
-        padding: 0;
-        margin: 0;
-        overflow: hidden;
-    }
+	0% {
+		opacity: 0.6;
+		max-height: 100px;
+	}
+	70% {
+		opacity: 0;
+		max-height: 100px;
+	}
+	100% {
+		opacity: 0;
+		max-height: 0;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+	}
 }
 
 /* Section Folding */
 
 section.collapsible.collapsed > *:not(h2):not(h3):not(ul):not(ol) {
-    display: none;
+	display: none;
 }
 
 section.collapsible.collapsed li.completed {
-    display: none;
+	display: none;
 }
 
 .collapse-toggle {
-    margin-left: 0.5em;
-    font-family: monospace;
-    font-weight: normal;
-    cursor: pointer;
-    color: var(--color-link);
-    user-select: none;
+	margin-left: 0.5em;
+	font-family: monospace;
+	font-weight: normal;
+	cursor: pointer;
+	color: var(--color-link);
+	user-select: none;
 }
 
 .collapse-toggle:hover {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 .section-summary {
-    font-size: 0.7em;
-    font-weight: normal;
-    color: #666;
-    font-style: italic;
+	font-size: 0.7em;
+	font-weight: normal;
+	color: #666;
+	font-style: italic;
 }
 
 /* Header Anchors */
 
 .header-anchor {
-    margin-left: 0.3em;
-    opacity: 0;
-    color: var(--color-link);
-    text-decoration: none;
-    font-weight: normal;
-    transition: opacity 0.2s ease;
+	margin-left: 0.3em;
+	opacity: 0;
+	color: var(--color-link);
+	text-decoration: none;
+	font-weight: normal;
+	transition: opacity 0.2s ease;
 }
 
 h2:hover .header-anchor,
 h3:hover .header-anchor,
 .header-anchor:focus {
-    opacity: 0.5;
+	opacity: 0.5;
 }
 
 .header-anchor:hover {
-    opacity: 1;
-    text-decoration: underline;
+	opacity: 1;
+	text-decoration: underline;
 }
 
 /* E-ink Mode - Hide Interactive Elements */
@@ -616,24 +612,24 @@ body.trmnl-mode .recipe-toolbar,
 body.trmnl-mode .section-summary,
 body.trmnl-mode .collapse-toggle,
 body.trmnl-mode .header-anchor {
-    display: none;
+	display: none;
 }
 
 body.trmnl-mode section.collapsible.collapsed > *,
 body.trmnl-mode section.collapsible.collapsed li.completed {
-    display: block;
+	display: block;
 }
 
 /* Mobile - Larger Touch Targets */
 
 @media (max-width: 759px) {
-    .toolbar-btn {
-        padding: 10px 14px;
-        font-size: 16px;
-    }
+	.toolbar-btn {
+		padding: 10px 14px;
+		font-size: 16px;
+	}
 
-    .toolbar-toggle {
-        padding: 6px 16px;
-        font-size: 16px;
-    }
+	.toolbar-toggle {
+		padding: 6px 16px;
+		font-size: 16px;
+	}
 }

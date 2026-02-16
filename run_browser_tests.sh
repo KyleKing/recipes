@@ -6,11 +6,15 @@ set -e
 
 PORT=8000
 SERVER_PID=""
+SERVER_BIN=""
 
 cleanup() {
     if [[ -n "$SERVER_PID" ]]; then
         echo "Stopping server (PID: $SERVER_PID)..."
         kill "$SERVER_PID" 2>/dev/null || true
+    fi
+    if [[ -n "$SERVER_BIN" ]]; then
+        rm -f "$SERVER_BIN"
     fi
 }
 
@@ -27,14 +31,19 @@ fi
 echo "Building site..."
 mise run build
 
+# Build server binary
+echo "Compiling server..."
+SERVER_BIN=$(mktemp)
+go build -o "$SERVER_BIN" ./goServe/main.go
+
 # Start server in background
 echo "Starting server on port $PORT..."
-go run ./goServe/main.go -port "$PORT" -directory ./public &
+"$SERVER_BIN" -port "$PORT" -directory ./public &
 SERVER_PID=$!
 
-# Wait for server to be ready
+# Wait for server to be ready (timeout: 5s)
 echo "Waiting for server to start..."
-for i in {1..30}; do
+for i in {1..10}; do
     if ! kill -0 "$SERVER_PID" 2>/dev/null; then
         echo "Server process died unexpectedly"
         exit 1
@@ -43,8 +52,8 @@ for i in {1..30}; do
         echo "Server ready"
         break
     fi
-    if [ $i -eq 30 ]; then
-        echo "Server failed to start within 15s"
+    if [ $i -eq 10 ]; then
+        echo "Server failed to start within 5s"
         exit 1
     fi
     sleep 0.5
