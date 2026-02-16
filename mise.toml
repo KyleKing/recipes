@@ -37,6 +37,11 @@ description = "Format djot recipe files"
 run = "fd -e dj . content/ -x djot-fmt -w {}"
 sources = ['content/**/*.dj']
 
+[tasks.format-js]
+description = "Format and lint JavaScript/CSS files with biome"
+run = "biome check --write content/_static/*.js content/styles.css"
+sources = ['content/_static/**/*.js', 'content/**/*.css']
+
 [tasks.lint]
 depends = ["format"]
 description = "Run linters"
@@ -93,6 +98,7 @@ run = ["go get -u .", "go mod tidy"]
 "go:github.com/a-h/templ/cmd/templ" = "0.3.977"
 "go:github.com/KyleKing/djot-fmt" = "latest"
 "go:github.com/tdewolff/minify/v2/cmd/minify" = "2.24.8"
+"npm:@biomejs/biome" = "latest"
 "npm:pagefind" = "1.5.0-beta.1"
 "pipx:commitizen" = "latest"
 "pipx:optimize-images" = "latest"

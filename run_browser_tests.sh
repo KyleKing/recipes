@@ -29,21 +29,25 @@ mise run build
 
 # Start server in background
 echo "Starting server on port $PORT..."
-go run ./goServe/main.go --port=$PORT --directory=./public &
+go run ./goServe/main.go -port "$PORT" -directory ./public &
 SERVER_PID=$!
 
 # Wait for server to be ready
 echo "Waiting for server to start..."
 for i in {1..30}; do
-    if curl -s http://localhost:$PORT >/dev/null 2>&1; then
+    if ! kill -0 "$SERVER_PID" 2>/dev/null; then
+        echo "Server process died unexpectedly"
+        exit 1
+    fi
+    if curl -s --max-time 1 http://localhost:$PORT >/dev/null 2>&1; then
         echo "Server ready"
         break
     fi
-    sleep 0.5
     if [ $i -eq 30 ]; then
-        echo "Server failed to start"
+        echo "Server failed to start within 15s"
         exit 1
     fi
+    sleep 0.5
 done
 
 # Run tests

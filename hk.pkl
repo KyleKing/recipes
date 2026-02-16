@@ -23,8 +23,11 @@ local linters = new Mapping<String, Step> {
     ["fix-byte-order-marker"] = Builtins.fix_byte_order_marker
     ["mixed-line-ending"] = Builtins.mixed_line_ending
     ["newlines"] = Builtins.newlines
-    ["prettier"] = (Builtins.prettier) {
-        exclude = List("templates/**/*.html")
+    ["biome"] {
+        glob = List("**/*.js", "**/*.css", "**/*.json")
+        exclude = List("templates/**/*.html", "goBuild/test_expected/**/*.json")
+        check = "mise exec -- biome check {{ files }}"
+        fix = "mise exec -- biome check --write {{ files }}"
     }
     ["shellcheck"] = (Builtins.shellcheck) {
         check = "shellcheck --severity=warning {{ files }}"
