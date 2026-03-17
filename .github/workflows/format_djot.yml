@@ -23,7 +23,7 @@ jobs:
           ref: ${{ github.head_ref }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: jdx/mise-action@v3
+      - uses: jdx/mise-action@v4
         with:
           experimental: true # required for Go backend
 
