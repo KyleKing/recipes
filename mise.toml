@@ -96,7 +96,7 @@ run = ["go get -u .", "go mod tidy"]
 [tools]
 "go:github.com/Antonboom/testifylint" = "1.6.4"
 "go:github.com/KyleKing/djot-fmt" = "latest"
-"go:github.com/a-h/templ/cmd/templ" = "0.3.977"
+"go:github.com/a-h/templ/cmd/templ" = "0.3.1020" # Keep insync with https://github.com/a-h/templ/releases and go.mod
 "go:github.com/tdewolff/minify/v2/cmd/minify" = "latest"
 "npm:@biomejs/biome" = "latest"
 "npm:pagefind" = "latest"

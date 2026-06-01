@@ -9,7 +9,7 @@ version = "0.0.0-20260601221519-8e69d6588d95"
 backend = "go:github.com/KyleKing/djot-fmt"
 
 [[tools."go:github.com/a-h/templ/cmd/templ"]]
-version = "0.3.977"
+version = "0.3.1020"
 backend = "go:github.com/a-h/templ/cmd/templ"
 
 [[tools."go:github.com/tdewolff/minify/v2/cmd/minify"]]

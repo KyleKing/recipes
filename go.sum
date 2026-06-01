@@ -1,5 +1,5 @@
-github.com/a-h/templ v0.3.977 h1:kiKAPXTZE2Iaf8JbtM21r54A8bCNsncrfnokZZSrSDg=
-github.com/a-h/templ v0.3.977/go.mod h1:oCZcnKRf5jjsGpf2yELzQfodLphd2mwecwG4Crk5HBo=
+github.com/a-h/templ v0.3.1020 h1:ypAT/L5ySWEnZ6Zft/5yfoWXYYkhFNvEFOeeqecg4tw=
+github.com/a-h/templ v0.3.1020/go.mod h1:A2DlK61v+K+NRoGnhmYbNYVmtYHcFO5/AisMvBdDxTM=
 github.com/am-sokolov/go-spacy v0.0.0-20250919212123-1d3a142ac336 h1:0LX3tEKOkNTgB1c6F0S1+3zqrI3bB68/KFxEmwl/O5Y=
 github.com/am-sokolov/go-spacy v0.0.0-20250919212123-1d3a142ac336/go.mod h1:L/pJuM7j1CpMnrSisGhJ6Zysv8LNBL2jjhdNOd8RMCg=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
