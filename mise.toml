@@ -95,11 +95,11 @@ run = ["go get -u .", "go mod tidy"]
 
 [tools]
 "go:github.com/Antonboom/testifylint" = "1.6.4"
-"go:github.com/KyleKing/djot-fmt" = "f2c2f82af320"
+"go:github.com/KyleKing/djot-fmt" = "latest"
 "go:github.com/a-h/templ/cmd/templ" = "0.3.977"
-"go:github.com/tdewolff/minify/v2/cmd/minify" = "2.24.8"
+"go:github.com/tdewolff/minify/v2/cmd/minify" = "latest"
 "npm:@biomejs/biome" = "latest"
-"npm:pagefind" = "1.5.0-beta.1"
+"npm:pagefind" = "latest"
 "pipx:commitizen" = "latest"
 "pipx:optimize-images" = "latest"
 python = { version = "3.13.11", postinstall = "python -m pip install spacy" }
