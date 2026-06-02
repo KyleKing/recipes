@@ -7,6 +7,7 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"regexp"
 	"slices"
 	"sort"
 	"strconv"
@@ -37,6 +38,59 @@ func listItemConversion(s djot_parser.ConversionState, n func(c djot_parser.Chil
 	} else {
 		s.BlockNodeConverter("li", n)
 	}
+}
+
+// Rewrite .dj hrefs to .html so cross-recipe links resolve after build
+func linkNodeConversion(s djot_parser.ConversionState, n func(c djot_parser.Children)) {
+	href := s.Node.Attributes.Get(djot_parser.LinkHrefKey)
+	if strings.HasSuffix(href, ".dj") {
+		s.Node.Attributes.Set(djot_parser.LinkHrefKey, strings.TrimSuffix(href, ".dj")+".html")
+	}
+	s.InlineNodeConverter("a", n)
+}
+
+var relativeHrefRe = regexp.MustCompile(`href="([^"]+)"`)
+
+// Walk all generated HTML files and fail if any relative href targets a missing file
+func validateInternalLinks(publicDir string) error {
+	var broken []string
+	err := filepath.Walk(publicDir, func(path string, info os.FileInfo, walkErr error) error {
+		if walkErr != nil || filepath.Ext(path) != ".html" {
+			return walkErr
+		}
+		content, err := os.ReadFile(path)
+		if err != nil {
+			return err
+		}
+		dir := filepath.Dir(path)
+		for _, m := range relativeHrefRe.FindAllSubmatch(content, -1) {
+			href := string(m[1])
+			if strings.HasPrefix(href, "http://") || strings.HasPrefix(href, "https://") ||
+				strings.HasPrefix(href, "#") || strings.HasPrefix(href, "mailto:") ||
+				strings.HasPrefix(href, "/") {
+				continue
+			}
+			// Strip fragment
+			if idx := strings.Index(href, "#"); idx != -1 {
+				href = href[:idx]
+			}
+			if href == "" {
+				continue
+			}
+			target := filepath.Join(dir, href)
+			if _, err := os.Stat(target); os.IsNotExist(err) {
+				broken = append(broken, fmt.Sprintf("  %s: broken link %q -> %s", path, string(m[1]), target))
+			}
+		}
+		return nil
+	})
+	if err != nil {
+		return err
+	}
+	if len(broken) > 0 {
+		return fmt.Errorf("broken internal links:\n%s", strings.Join(broken, "\n"))
+	}
+	return nil
 }
 
 // Curry conditionally converting `<div>` based on attached attributes
@@ -129,6 +183,7 @@ func renderDjot(text []byte, publicDir string, path string, rMap RecipeMap) stri
 		djot_parser.DefaultConversionRegistry,
 		map[djot_parser.DjotNode]djot_parser.Conversion{
 			djot_parser.DivNode:      formattedDivPartial(publicDir, path, rMap),
+			djot_parser.LinkNode:     linkNodeConversion,
 			djot_parser.ListItemNode: listItemConversion,
 		},
 	).ConvertDjotToHtml(&html_writer.HtmlWriter{}, ast...)
@@ -211,6 +266,7 @@ func generateRecipePages(publicDir string, rMap RecipeMap, cache *RecipeCache) e
 			djot_parser.DefaultConversionRegistry,
 			map[djot_parser.DjotNode]djot_parser.Conversion{
 				djot_parser.DivNode:      formattedDivPartial(publicDir, path, rMap),
+				djot_parser.LinkNode:     linkNodeConversion,
 				djot_parser.ListItemNode: listItemConversion,
 			},
 		).ConvertDjotToHtml(&html_writer.HtmlWriter{}, ast...)
@@ -360,6 +416,11 @@ func Build(publicDir string) {
 	err = writeIndexes(publicDir, rMap)
 	ExitOnError(err)
 	log.Printf("[TIMING] Index generation: %v", time.Since(indexStart))
+
+	validateStart := time.Now()
+	err = validateInternalLinks(publicDir)
+	ExitOnError(err)
+	log.Printf("[TIMING] Link validation: %v", time.Since(validateStart))
 
 	log.Printf("[TIMING] Total build time: %v", time.Since(buildStart))
 }
