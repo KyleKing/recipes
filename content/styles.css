@@ -394,6 +394,22 @@ main {
 	list-style-type: "✓ ";
 }
 
+.task-list li.completed > ul {
+	text-decoration: none;
+	opacity: 1;
+}
+
+.task-list li.completed > ul li.completed {
+	text-decoration: line-through;
+	opacity: 0.6;
+}
+
+@media (pointer: coarse) {
+	ul.task-list > li {
+		padding: 8px 0;
+	}
+}
+
 /* Hiding animation for collapse */
 
 li.hiding {
