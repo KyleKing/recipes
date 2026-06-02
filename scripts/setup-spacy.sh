@@ -3,7 +3,7 @@
 # Writes environment configuration to .env for mise to load
 set -e
 
-PROJECT_ROOT="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 LIB_DIR="$PROJECT_ROOT/lib"
 BUILD_DIR="/tmp/go-spacy-build"
 ENV_FILE="$PROJECT_ROOT/.env"
@@ -11,26 +11,25 @@ ENV_FILE="$PROJECT_ROOT/.env"
 echo "Setting up go-spacy C++ wrapper..."
 
 # Verify spacy is installed
-if ! python3 -c "import spacy" 2>/dev/null; then
+if ! python -c "import spacy" 2>/dev/null; then
     echo "ERROR: spacy is not installed in the current Python environment"
     echo "Install with: pip install spacy"
     exit 1
 fi
 
-# Verify model is installed
-if ! python3 -c "import spacy; spacy.load('en_core_web_sm')" 2>/dev/null; then
-    echo "ERROR: en_core_web_sm model is not installed"
-    echo "Install with: python -m spacy download en_core_web_sm"
-    exit 1
+# Verify model is installed, download if missing
+if ! python -c "import spacy; spacy.load('en_core_web_sm')" 2>/dev/null; then
+    echo "en_core_web_sm model not found, downloading..."
+    python -m spacy download en_core_web_sm
 fi
 
-echo "Python: $(which python3)"
-echo "spacy version: $(python3 -c 'import spacy; print(spacy.__version__)')"
+echo "Python: $(which python)"
+echo "spacy version: $(python -c 'import spacy; print(spacy.__version__)')"
 
 # Get Python library path and embed flags
-PYTHON_LIB_PATH=$(python3-config --prefix)/lib
+PYTHON_LIB_PATH=$(python -c "import sys; print(sys.prefix)")/lib
 # Get Python embed library name (e.g., python3.13) for linking - use version info as most reliable source
-PYTHON_EMBED_LIB=$(python3 -c "import sys; print(f'python{sys.version_info.major}.{sys.version_info.minor}')")
+PYTHON_EMBED_LIB=$(python -c "import sys; print(f'python{sys.version_info.major}.{sys.version_info.minor}')")
 echo "Python library path: $PYTHON_LIB_PATH"
 echo "Python embed library: $PYTHON_EMBED_LIB"
 
@@ -38,7 +37,7 @@ echo "Python embed library: $PYTHON_EMBED_LIB"
 if [ ! -f "$PYTHON_LIB_PATH/lib${PYTHON_EMBED_LIB}.so" ] && [ ! -f "$PYTHON_LIB_PATH/lib${PYTHON_EMBED_LIB}.dylib" ] && [ ! -f "$PYTHON_LIB_PATH/lib${PYTHON_EMBED_LIB}.a" ]; then
     echo "WARNING: Python library not found at expected path, checking alternative locations..."
     # Try the config directory path
-    PYTHON_CONFIG_LIB_PATH=$(python3 -c "import sysconfig; print(sysconfig.get_config_var('LIBDIR'))")
+    PYTHON_CONFIG_LIB_PATH=$(python -c "import sysconfig; print(sysconfig.get_config_var('LIBDIR'))")
     if [ -n "$PYTHON_CONFIG_LIB_PATH" ] && [ -d "$PYTHON_CONFIG_LIB_PATH" ]; then
         echo "Using alternative library path: $PYTHON_CONFIG_LIB_PATH"
         PYTHON_LIB_PATH="$PYTHON_CONFIG_LIB_PATH"
@@ -142,7 +141,7 @@ mkdir -p build lib
 echo "Compiling..."
 
 # Get Python include path using sysconfig (more reliable than python3-config)
-PYTHON_INCLUDE=$(python3 -c 'import sysconfig; print(sysconfig.get_path("include"))')
+PYTHON_INCLUDE=$(python -c 'import sysconfig; print(sysconfig.get_path("include"))')
 echo "Python include directory: $PYTHON_INCLUDE"
 
 # Verify Python.h exists
@@ -153,13 +152,7 @@ if [ ! -f "$PYTHON_INCLUDE/Python.h" ]; then
     exit 1
 fi
 
-# Try python3-config first, fall back to manual flags
-if PYTHON_CFLAGS=$(python3-config --cflags 2>/dev/null); then
-    echo "Using python3-config --cflags: $PYTHON_CFLAGS"
-else
-    echo "python3-config not available, using sysconfig"
-    PYTHON_CFLAGS="-I$PYTHON_INCLUDE"
-fi
+PYTHON_CFLAGS="-I$PYTHON_INCLUDE"
 
 echo "Full compile command:"
 echo "c++ -Wall -Wextra -fPIC -std=c++17 -Iinclude -O3 -DNDEBUG $PYTHON_CFLAGS -c cpp/spacy_wrapper.cpp -o build/spacy_wrapper.o"
@@ -169,7 +162,7 @@ c++ -Wall -Wextra -fPIC -std=c++17 -Iinclude -O3 -DNDEBUG \
 
 # Link
 echo "Linking..."
-PYTHON_LDFLAGS=$(python3-config --ldflags)
+PYTHON_LDFLAGS=$(python -c "import sysconfig; libs = sysconfig.get_config_var('LIBS') or ''; syslibs = sysconfig.get_config_var('SYSLIBS') or ''; print(f'{libs} {syslibs}'.strip())")
 echo "Python ldflags: $PYTHON_LDFLAGS"
 
 if [[ "$OSTYPE" == "darwin"* ]]; then

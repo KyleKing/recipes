@@ -98,6 +98,7 @@ description = "Update go dependencies"
 run = ["go get -u .", "go mod tidy"]
 
 [tools]
+go = "1.25"
 "go:github.com/Antonboom/testifylint" = "1.6.4"
 "go:github.com/KyleKing/djot-fmt" = "latest"
 "go:github.com/a-h/templ/cmd/templ" = "0.3.1020" # Keep insync with https://github.com/a-h/templ/releases and go.mod
@@ -107,5 +108,5 @@ run = ["go get -u .", "go mod tidy"]
 "pipx:commitizen" = "latest"
 "pipx:optimize-images" = "latest"
 # PLANNED: remove click when: https://github.com/explosion/spaCy/pull/13973
-python = { version = "3.13.11", postinstall = "python -m pip install spacy==3.8.14 click" }
+python = { version = "3.13.12", postinstall = "python -m pip install spacy==3.8.14 click && python -m spacy download en_core_web_sm" }
 taplo = "latest"

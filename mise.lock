@@ -33,12 +33,12 @@ version = "2.0.0"
 backend = "pipx:optimize-images"
 
 [[tools.python]]
-version = "3.13.11"
+version = "3.13.12"
 backend = "core:python"
 
 [tools.python."platforms.macos-arm64"]
-checksum = "sha256:718a87bf84d81cb81355488ca37be1f66c2252304be2090721016948de96e7ca"
-url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260127/cpython-3.13.11+20260127-aarch64-apple-darwin-install_only_stripped.tar.gz"
+checksum = "blake3:bb8e3ad4827e8079326073cef7742a7e87904cff38f955455203dd3409efa5eb"
+url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260324/cpython-3.13.12+20260324-aarch64-apple-darwin-install_only_stripped.tar.gz"
 provenance = "github-attestations"
 
 [[tools.taplo]]
