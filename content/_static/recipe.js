@@ -451,8 +451,6 @@
 	}
 
 	function init() {
-		if (document.body.classList.contains("trmnl-mode")) return;
-
 		setupIngredientCheckboxes();
 		setupStepToggles();
 		trackScroll();

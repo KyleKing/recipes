@@ -39,17 +39,6 @@ templ page(title string, contents templ.Component, pageType string, socialMeta S
 				<link href="/pagefind/pagefind-ui.css" rel="stylesheet"/>
 				<script src="/pagefind/pagefind-ui.js"></script>
 			}
-			if pageType == CONTENT_PAGE {
-				<script>
-					// Detect ?trmnl=1 query parameter and enable e-ink mode
-					const params = new URLSearchParams(window.location.search);
-					if (params.get("trmnl") === "1") {
-						document.addEventListener("DOMContentLoaded", function () {
-							document.body.classList.add("trmnl-mode");
-						});
-					}
-				</script>
-			}
 		</head>
 		<body>
 			<nav>
