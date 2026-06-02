@@ -1,0 +1,19 @@
+{
+  "version": "1",
+  "recipes": {
+    "/home/runner/work/recipes/recipes/goBuild/test_content/test/test.dj": {
+      "file_path": "/home/runner/work/recipes/recipes/goBuild/test_content/test/test.dj",
+      "file_hash": "d342482342df59e2525c5d44702335603e0b7e8254b856d5ce71d925c853da07",
+      "tokens": {
+        "ingredient": true,
+        "nested ingredient": true
+      },
+      "ingredients": [
+        "Ingredients 1",
+        "Nested Ingredient",
+        "(Optional) Ingredient 2 ( https://github.com/KyleKing/recipes )"
+      ],
+      "cached_at": "2026-06-02T04:11:49.348606876Z"
+    }
+  }
+}
