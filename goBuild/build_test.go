@@ -36,20 +36,15 @@ func initTestDir() (string, error) {
 	return publicTestDir, nil
 }
 
-// Replace expected directory with output from test for comparison in git
-func gitDiffChanges(expectDir, publicTestDir string) {
-	cmd := exec.Command("mv", expectDir+"/", expectDir+"-backup/")
-	out, err := cmd.Output()
-	if err != nil {
-		fmt.Println("Error running:", cmd, out, err)
+// updateSnapshots replaces test_expected/ with actual build output on mismatch.
+// The test still fails; set FREEZE_SNAPSHOTS=1 to skip the update entirely.
+func updateSnapshots(expectDir, publicTestDir string) {
+	os.RemoveAll(expectDir)
+	cmd := exec.Command("cp", "-R", publicTestDir+"/", expectDir+"/")
+	if out, err := cmd.Output(); err != nil {
+		fmt.Println("Error updating snapshots:", cmd, out, err)
 	}
-
-	cmd = exec.Command("cp", "-R", publicTestDir+"/", expectDir+"/")
-	out, err = cmd.Output()
-	if err != nil {
-		fmt.Println("Error running:", cmd, out, err)
-	}
-	fmt.Println("See git diff for changes")
+	fmt.Println("Snapshots updated — review with git diff before committing")
 }
 
 func TestValidateNoDuplicateHeaders(t *testing.T) {
@@ -120,9 +115,10 @@ func TestBuild(t *testing.T) {
 	cmd := exec.Command("diff", "-arq", expectDir+"/", publicTestDir+"/")
 	out, err := cmd.Output()
 	if err != nil {
-		// Show detailed diff for each file that differs
 		detailedDiff := getDetailedDiff(expectDir, publicTestDir)
-		gitDiffChanges(expectDir, publicTestDir)
+		if os.Getenv("FREEZE_SNAPSHOTS") != "1" {
+			updateSnapshots(expectDir, publicTestDir)
+		}
 		t.Errorf("Build output differs from expected:\n%s\nDetailed differences:\n%s", string(out), detailedDiff)
 	}
 	assert.Equal(t, "", string(out), "Build output should match expected (run 'git diff' to see changes)")
