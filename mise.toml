@@ -14,8 +14,8 @@ description = "Interactive tool to link recipe images. Optionally specify argume
 run = "./scripts/_link_images.py"
 
 [tasks.browser-install]
-description = "Install Playwright browsers (one-time setup)"
-run = "uv run --with playwright playwright install chromium"
+description = "Install Playwright chromium-headless-shell (smaller than full chromium)"
+run = "uvx playwright install chromium-headless-shell"
 
 [tasks.build]
 depends = ["format"]
@@ -66,7 +66,7 @@ run = "go test -race ./..."
 [tasks.test-browser]
 depends = ["build"]
 description = "Run browser tests (requires server on :8000)"
-run = "uv run --with pytest --with pytest-playwright pytest scripts/test_browser.py -v"
+run = "uv run scripts/test_browser.py -v"
 
 [tasks.test-browser-auto]
 description = "Run browser tests with auto server management"

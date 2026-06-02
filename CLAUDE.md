@@ -56,7 +56,7 @@ mise run browser-install
 mise run test-browser
 
 # Run specific test
-uv run --with pytest --with pytest-playwright pytest scripts/test_browser.py::test_ingredient_checkbox_toggle -v
+uv run scripts/test_browser.py -k test_ingredient_checkbox_toggle -v
 ```
 
 Browser tests verify interactive features:

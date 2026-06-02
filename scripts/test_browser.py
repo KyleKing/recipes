@@ -1,6 +1,9 @@
-#!/usr/bin/env -S uv run --quiet --script
+#!/usr/bin/env -S uv run
 # /// script
-# dependencies = ["pytest", "pytest-playwright"]
+# requires-python = ">=3.13"
+# dependencies = [
+#   "pytest-playwright",
+# ]
 # ///
 """Browser tests for recipe site interactive features.
 
@@ -21,7 +24,7 @@ Test Recipes:
 - /drinks/margarita.html - Has nested task-list (parent checkbox with nested checkboxes)
 - /main/chickpea_tikka_masala.html - Has links within ingredients
 
-Run with: uv run --with pytest --with pytest-playwright pytest test_browser.py -v
+Run with: uv run scripts/test_browser.py -v
 Or via helper script: ./run_browser_tests.sh
 Or via mise: mise run test-browser (requires server on :8000)
 
@@ -454,4 +457,5 @@ def test_multiple_recipes_independent_state(page: Page):
 
 
 if __name__ == "__main__":
-    pytest.main([__file__, "-v"])
+    import sys
+    pytest.main([__file__, *sys.argv[1:]])

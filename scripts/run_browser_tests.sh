@@ -20,10 +20,17 @@ cleanup() {
 
 trap cleanup EXIT INT TERM
 
+# Auto-install Playwright chromium-headless-shell if missing
+INSTALL_LOCATION=$(uvx playwright install --dry-run chromium-headless-shell 2>&1 | awk '/Install location:/ {print $NF; exit}')
+if [[ ! -d "$INSTALL_LOCATION" ]]; then
+    echo "Playwright chromium-headless-shell not found, installing..."
+    mise run browser-install
+fi
+
 # Check if port is already in use
 if lsof -Pi :$PORT -sTCP:LISTEN -t >/dev/null 2>&1; then
     echo "Server already running on port $PORT, using existing instance"
-    uv run --with pytest --with pytest-playwright pytest scripts/test_browser.py -v "$@"
+    uv run scripts/test_browser.py -v "$@"
     exit $?
 fi
 
@@ -61,7 +68,7 @@ done
 
 # Run tests
 echo "Running browser tests..."
-uv run --with pytest --with pytest-playwright pytest scripts/test_browser.py -v "$@"
+uv run scripts/test_browser.py -v "$@"
 TEST_EXIT_CODE=$?
 
 exit $TEST_EXIT_CODE
