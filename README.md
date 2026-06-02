@@ -66,7 +66,7 @@ Required tools:
 
     ```bash
     # This creates lib/libspacy_wrapper.dylib (macOS) or lib/libspacy_wrapper.so (Linux)
-    ./setup-spacy.sh
+    ./scripts/setup-spacy.sh
 
     # Source the generated .env file to set environment variables for local development
     source .env
@@ -103,12 +103,42 @@ mise run compress <path>   # Compress images
 ./check_links.py          # Check/fix recipe links, add Wayback archive links
 ```
 
+### Browser Testing
+
+Browser tests verify interactive features using Python + Playwright.
+
+```bash
+# One-time setup
+mise run browser-install
+
+# Run tests (auto-manages server and build)
+./scripts/run_browser_tests.sh
+
+# Or with server already running on :8000
+mise run test-browser
+
+# Run a single test
+uv run --with pytest --with pytest-playwright pytest scripts/test_browser.py::test_ingredient_checkbox_toggle -v
+```
+
+**Debugging options:**
+
+```bash
+# See the browser while tests run
+uv run --with pytest --with pytest-playwright pytest scripts/test_browser.py --headed --slowmo 1000
+
+# Playwright inspector
+PWDEBUG=1 uv run --with pytest --with pytest-playwright pytest scripts/test_browser.py
+```
+
+**What's tested:** ingredient checkbox toggling and localStorage persistence, recipe step marking (margin click and double-click), section collapse/expand with progress summaries, reset progress, collapse all / expand all, toolbar toggle, header anchors, and multi-recipe state independence.
+
 ### Troubleshooting
 
 **C++ compilation errors:**
 
 - Ensure Python development headers are installed (`python3-config --includes` should work)
-- Run `./setup-spacy.sh` to rebuild the C++ wrapper
+- Run `./scripts/setup-spacy.sh` to rebuild the C++ wrapper
 - Check that `lib/libspacy_wrapper.dylib` (macOS) or `lib/libspacy_wrapper.so` (Linux) exists
 
 **Missing Python dependencies:**

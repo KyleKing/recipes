@@ -56,7 +56,7 @@ local linters = new Mapping<String, Step> {
 local tests = new Mapping<String, Step> {
     ["browser-tests"] {
         glob = List("**/*.go", "**/*.templ", "**/*.js", "**/*.css", "goBuild/**/*")
-        check = "./run_browser_tests.sh"
+        check = "./scripts/run_browser_tests.sh"
     }
 }
 

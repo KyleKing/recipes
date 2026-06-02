@@ -7,11 +7,11 @@ run = "optimize-images -mh 900 --convert-all --force-delete"
 
 [tasks.wayback]
 description = "Update Wayback Machine Links. Optionally specify arguments (see 'mise run wayback --help')"
-run = "./_update_wayback_links.py"
+run = "./scripts/_update_wayback_links.py"
 
 [tasks.link-images]
 description = "Interactive tool to link recipe images. Optionally specify arguments (see 'mise run link-images --help')"
-run = "./_link_images.py"
+run = "./scripts/_link_images.py"
 
 [tasks.browser-install]
 description = "Install Playwright browsers (one-time setup)"
@@ -20,11 +20,11 @@ run = "uv run --with playwright playwright install chromium"
 [tasks.build]
 depends = ["format"]
 description = "Build website"
-run = "./build.sh"
+run = "./scripts/build.sh"
 
 [tasks.setup-spacy]
 description = "Build go-spacy C++ wrapper library and generate .env"
-run = "./setup-spacy.sh"
+run = "./scripts/setup-spacy.sh"
 
 [tasks.format]
 depends = ["setup-spacy"]
@@ -66,11 +66,11 @@ run = "go test -race ./..."
 [tasks.test-browser]
 depends = ["build"]
 description = "Run browser tests (requires server on :8000)"
-run = "uv run --with pytest --with pytest-playwright pytest test_browser.py -v"
+run = "uv run --with pytest --with pytest-playwright pytest scripts/test_browser.py -v"
 
 [tasks.test-browser-auto]
 description = "Run browser tests with auto server management"
-run = "./run_browser_tests.sh"
+run = "./scripts/run_browser_tests.sh"
 
 [tasks.coverage]
 description = "View test coverage of most recent test run"
