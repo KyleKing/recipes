@@ -106,5 +106,6 @@ run = ["go get -u .", "go mod tidy"]
 "npm:pagefind" = "latest"
 "pipx:commitizen" = "latest"
 "pipx:optimize-images" = "latest"
-python = { version = "3.13.11", postinstall = "python -m pip install spacy==3.8.14" }
+# PLANNED: remove click when: https://github.com/explosion/spaCy/pull/13973
+python = { version = "3.13.11", postinstall = "python -m pip install spacy==3.8.14 click" }
 taplo = "latest"
