@@ -1,7 +1,7 @@
 ---
 name: recipe-from-url
 description: Create a recipe file from a URL by fetching content, formatting it according to the project template, and saving it to the appropriate category directory. Use when asked to add, create, or save a recipe from a URL.
-allowed-tools: WebFetch, Read, Write, Glob, Grep, Bash, AskUserQuestion
+allowed-tools: WebFetch, Read, Write, Glob, Grep, Bash, AskUserQuestion, mcp__claude-in-chrome__navigate, mcp__claude-in-chrome__get_page_text, mcp__claude-in-chrome__tabs_create_mcp, mcp__claude-in-chrome__tabs_context_mcp
 ---
 
 # Recipe from URL
@@ -25,30 +25,15 @@ Try fetching in this order, stopping at the first success:
 **Step 2a — WebFetch (fast, no browser needed):**
 Use WebFetch. If it returns a 403, bot-detection page ("Just a moment...", "Checking your browser..."), or clearly empty/truncated content, proceed to Step 2b.
 
-**Step 2b — Browser fetch via `scripts/fetch_with_browser.py` (Option A):**
+**Step 2b — claude-in-chrome (real browser, your existing session):**
 
-Tell the user:
+Invoke the `claude-in-chrome` skill, then:
 
-> This site is blocking automated access. I'll use a real browser to fetch it.
-> **Please disconnect your VPN if you have one active**, then confirm to proceed (or type 'skip' to paste the content manually).
+1. `tabs_create_mcp` to open the URL in a new tab (your real Chrome session already passes bot/Cloudflare checks)
+2. `get_page_text` to extract the rendered page content
+3. If a challenge page appears ("Just a moment...", CAPTCHA), tell the user to solve it in the open tab, then retry `get_page_text`
 
-Once confirmed, run:
-
-```bash
-uv run scripts/fetch_with_browser.py <URL> --headful --channel chrome --format html --output /tmp/recipe_fetch.html
-```
-
-Then read `/tmp/recipe_fetch.html` and parse it for recipe content.
-
-If the output still contains a Cloudflare/bot challenge page (title "Just a moment..." or "Checking your browser..."), tell the user:
-
-> The browser fetch was also blocked. This can happen if the VPN is still active or the site uses an interactive CAPTCHA.
-> Options:
-> 1. Disable VPN and retry
-> 2. Open the URL in Chrome manually, then run:
->    `uv run scripts/fetch_with_browser.py <URL> --cdp --format html --output /tmp/recipe_fetch.html`
->    (requires Chrome launched with `--remote-debugging-port=9222`)
-> 3. Paste the page content directly into this chat
+If `claude-in-chrome` tools are unavailable (no extension connected) or the user prefers not to use it, ask the user to paste the page content directly into the chat.
 
 ### 3. Determine Category
 
@@ -154,8 +139,8 @@ Kyle's style: Direct, concise, minimal changes. Preserve measurements and techni
 **403/Bot-blocked Recipe:**
 
 1. WebFetch returns 403 or bot-detection page
-2. Prompt user to disconnect VPN, then run `fetch_with_browser.py --headful --channel chrome --output /tmp/recipe_fetch.html`
-3. Read `/tmp/recipe_fetch.html`, extract content, continue from step 3 (category) as normal
+2. Invoke `claude-in-chrome` skill, open the URL in a new tab, extract with `get_page_text`
+3. Continue from step 3 (category) as normal
 
 **Recipe with Quantity Changes:**
 If source has "4 ounces butter" but you convert to "1 stick butter", report: "Changed '4 ounces butter' to '1 stick butter'"
