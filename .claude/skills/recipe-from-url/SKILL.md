@@ -20,7 +20,35 @@ Before creating a new recipe:
 
 ### 2. Fetch and Parse Recipe Content
 
-Use WebFetch to retrieve recipe title, ingredients (exact measurements), steps, and notes from the URL.
+Try fetching in this order, stopping at the first success:
+
+**Step 2a — WebFetch (fast, no browser needed):**
+Use WebFetch. If it returns a 403, bot-detection page ("Just a moment...", "Checking your browser..."), or clearly empty/truncated content, proceed to Step 2b.
+
+**Step 2b — Browser fetch via `scripts/fetch_with_browser.py` (Option A):**
+
+Tell the user:
+
+> This site is blocking automated access. I'll use a real browser to fetch it.
+> **Please disconnect your VPN if you have one active**, then confirm to proceed (or type 'skip' to paste the content manually).
+
+Once confirmed, run:
+
+```bash
+uv run scripts/fetch_with_browser.py <URL> --headful --channel chrome --format html --output /tmp/recipe_fetch.html
+```
+
+Then read `/tmp/recipe_fetch.html` and parse it for recipe content.
+
+If the output still contains a Cloudflare/bot challenge page (title "Just a moment..." or "Checking your browser..."), tell the user:
+
+> The browser fetch was also blocked. This can happen if the VPN is still active or the site uses an interactive CAPTCHA.
+> Options:
+> 1. Disable VPN and retry
+> 2. Open the URL in Chrome manually, then run:
+>    `uv run scripts/fetch_with_browser.py <URL> --cdp --format html --output /tmp/recipe_fetch.html`
+>    (requires Chrome launched with `--remote-debugging-port=9222`)
+> 3. Paste the page content directly into this chat
 
 ### 3. Determine Category
 
@@ -122,6 +150,12 @@ Kyle's style: Direct, concise, minimal changes. Preserve measurements and techni
 2. Category: `pasta`, Filename: `simple_pasta.dj`
 3. Format and write to `content/pasta/simple_pasta.dj`
 4. Report: "Created simple_pasta.dj" (standard conversions applied, no substantive quantity changes)
+
+**403/Bot-blocked Recipe:**
+
+1. WebFetch returns 403 or bot-detection page
+2. Prompt user to disconnect VPN, then run `fetch_with_browser.py --headful --channel chrome --output /tmp/recipe_fetch.html`
+3. Read `/tmp/recipe_fetch.html`, extract content, continue from step 3 (category) as normal
 
 **Recipe with Quantity Changes:**
 If source has "4 ounces butter" but you convert to "1 stick butter", report: "Changed '4 ounces butter' to '1 stick butter'"
