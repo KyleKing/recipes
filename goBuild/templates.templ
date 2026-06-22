@@ -36,8 +36,8 @@ templ page(title string, contents templ.Component, pageType string, socialMeta S
 				<meta name="twitter:image" content={ socialMeta.image }/>
 			}
 			if pageType == SEARCH_PAGE {
-				<link href="/pagefind/pagefind-ui.css" rel="stylesheet"/>
-				<script src="/pagefind/pagefind-ui.js"></script>
+				<link href="/pagefind/pagefind-component-ui.css" rel="stylesheet"/>
+				<script src="/pagefind/pagefind-component-ui.js" type="module"></script>
 			}
 		</head>
 		<body>
@@ -53,18 +53,6 @@ templ page(title string, contents templ.Component, pageType string, socialMeta S
 			<main data-pagefind-body?={ pageType == CONTENT_PAGE }>
 				@contents
 			</main>
-			if pageType == SEARCH_PAGE {
-				<script>
-					window.addEventListener("DOMContentLoaded", (event) => {
-						new PagefindUI({
-							autofocus: true,
-							element: "#pagefind-search",
-							highlightParam: "highlight",
-							showSubResults: true,
-						});
-					});
-				</script>
-			}
 			if pageType == CONTENT_PAGE {
 				<div id="recipe-toolbar" class="recipe-toolbar hidden">
 					<div id="toolbar-buttons" class="toolbar-buttons">
@@ -219,7 +207,8 @@ templ noMatchesSection(recipe Recipe) {
 }
 
 templ searchContents() {
-	<div style="margin-top: 10px" id="pagefind-search"></div>
+	<pagefind-input autofocus style="margin-top: 10px"></pagefind-input>
+	<pagefind-results show-images></pagefind-results>
 }
 
 templ searchPage() {

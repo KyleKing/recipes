@@ -2,20 +2,57 @@
 	var SCROLL_PAUSE_MS = 800;
 	var SCROLL_MIN_DISTANCE = 100;
 	var BACK_BUTTON_FADE_MS = 5000;
+	var CACHE_MAX_AGE_MS = 48 * 60 * 60 * 1000;
 
 	var scrollStack = [];
 	var scrollTimer = null;
 	var fadeTimer = null;
 	var lastScrollY = 0;
+	var cachedContentHash = null;
 
 	function getStorageKey() {
 		return `recipe-progress-${window.location.pathname}`;
 	}
 
+	function computeContentHash() {
+		if (cachedContentHash !== null) return cachedContentHash;
+		var main = document.querySelector("main") || document.body;
+		var text = main.textContent || "";
+		var hash = 5381;
+		for (var i = 0; i < text.length; i++) {
+			hash = ((hash << 5) + hash) ^ text.charCodeAt(i);
+			hash = hash & hash;
+		}
+		cachedContentHash = hash.toString(36);
+		return cachedContentHash;
+	}
+
+	function clearProgressKeys(state) {
+		var cleaned = {};
+		Object.keys(state).forEach((key) => {
+			if (!key.startsWith("ingredient-") && !key.startsWith("step-")) {
+				cleaned[key] = state[key];
+			}
+		});
+		return cleaned;
+	}
+
 	function loadState() {
 		try {
 			var data = localStorage.getItem(getStorageKey());
-			return data ? JSON.parse(data) : {};
+			if (!data) return {};
+			var parsed = JSON.parse(data);
+
+			var currentHash = computeContentHash();
+			if (parsed._contentHash && parsed._contentHash !== currentHash) {
+				return {};
+			}
+
+			if (parsed._savedAt && Date.now() - parsed._savedAt > CACHE_MAX_AGE_MS) {
+				return clearProgressKeys(parsed);
+			}
+
+			return parsed;
 		} catch (_e) {
 			return {};
 		}
@@ -23,6 +60,8 @@
 
 	function saveState(state) {
 		try {
+			state._savedAt = Date.now();
+			state._contentHash = computeContentHash();
 			localStorage.setItem(getStorageKey(), JSON.stringify(state));
 		} catch (_e) {
 			// Storage unavailable
@@ -205,17 +244,16 @@
 
 			var sectionId = section.id || heading.textContent.trim().toLowerCase().replace(/\s+/g, "-");
 			section.classList.add("collapsible");
-			section.classList.add("collapsed");
 
 			var toggle = document.createElement("span");
 			toggle.className = "collapse-toggle";
-			toggle.textContent = "+";
+			toggle.textContent = "-";
 			toggle.setAttribute("aria-label", "Toggle section");
 			heading.appendChild(toggle);
 
-			if (state[`collapsed-${sectionId}`] === false) {
-				section.classList.remove("collapsed");
-				toggle.textContent = "-";
+			if (state[`collapsed-${sectionId}`] === true) {
+				section.classList.add("collapsed");
+				toggle.textContent = "+";
 			}
 
 			toggle.addEventListener("click", (e) => {
