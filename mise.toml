@@ -93,7 +93,12 @@ run = ["fd --exclude mise\\.toml | sad --exact --commit 'None' 'None'"]
 depends = ["build", "nits", "test"]
 description = "Run all checks before pushing"
 
+[tasks.lock]
+description = "Regenerate mise.lock for all CI platforms"
+run = "mise lock --platform linux-x64,macos-arm64"
+
 [tasks.update]
+depends = ["lock"]
 description = "Update go dependencies"
 run = ["go get -u .", "go mod tidy"]
 

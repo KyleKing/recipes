@@ -4,6 +4,10 @@
 version = "1.25.10"
 backend = "core:go"
 
+[tools.go."platforms.linux-x64"]
+checksum = "sha256:42d4f7a32316aa66591eca7e89867256057a4264451aca10570a715b3637ba70"
+url = "https://dl.google.com/go/go1.25.10.linux-amd64.tar.gz"
+
 [tools.go."platforms.macos-arm64"]
 checksum = "sha256:795691a425de7e7cdba3544f354dcd2cebcf52e87dc6898193878f34eb6d634f"
 url = "https://dl.google.com/go/go1.25.10.darwin-arm64.tar.gz"
@@ -44,14 +48,22 @@ backend = "pipx:optimize-images"
 version = "3.13.12"
 backend = "core:python"
 
+[tools.python."platforms.linux-x64"]
+checksum = "sha256:91c8920a197c3f7c562612eb4537e18e0c52c1c918bb39912cbd0b1b3c154229"
+url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260324/cpython-3.13.12+20260324-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz"
+provenance = "github-attestations"
+
 [tools.python."platforms.macos-arm64"]
-checksum = "blake3:bb8e3ad4827e8079326073cef7742a7e87904cff38f955455203dd3409efa5eb"
+checksum = "sha256:3de7059c87c0e7604e3e9397a547020c161f65c8d51d358e230d3a7d3a456aaa"
 url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260324/cpython-3.13.12+20260324-aarch64-apple-darwin-install_only_stripped.tar.gz"
 provenance = "github-attestations"
 
 [[tools.taplo]]
 version = "0.10.0"
 backend = "aqua:tamasfe/taplo"
+
+[tools.taplo."platforms.linux-x64"]
+url = "https://github.com/tamasfe/taplo/releases/download/0.10.0/taplo-linux-x86_64.gz"
 
 [tools.taplo."platforms.macos-arm64"]
 checksum = "blake3:353ecb1ed7d279dec5e2fd388d292ef97db08a651405fa664ffec1b2896c05f0"
