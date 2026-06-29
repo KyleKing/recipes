@@ -1,0 +1,30 @@
+{
+  "version": "1",
+  "recipes": {
+    "/home/runner/work/recipes/recipes/goBuild/test_content/test/linked.dj": {
+      "file_path": "/home/runner/work/recipes/recipes/goBuild/test_content/test/linked.dj",
+      "file_hash": "ecec829dca42f836f7dd9a58980a8f10d7c1d309525090b28a5e3ebed7739f2b",
+      "tokens": {
+        "ingredient": true
+      },
+      "ingredients": [
+        "Linked Ingredient"
+      ],
+      "cached_at": "2026-06-29T19:46:14.029732555Z"
+    },
+    "/home/runner/work/recipes/recipes/goBuild/test_content/test/test.dj": {
+      "file_path": "/home/runner/work/recipes/recipes/goBuild/test_content/test/test.dj",
+      "file_hash": "240a3f73fb566c387ad82925c24ef2600ee5c5c3164bf938e97f6fccf0567c33",
+      "tokens": {
+        "ingredient": true,
+        "nested ingredient": true
+      },
+      "ingredients": [
+        "Ingredients 1",
+        "Nested Ingredient",
+        "(Optional) Ingredient 2 ( https://github.com/KyleKing/recipes )"
+      ],
+      "cached_at": "2026-06-29T19:46:14.058908597Z"
+    }
+  }
+}
