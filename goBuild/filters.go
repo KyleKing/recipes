@@ -68,7 +68,7 @@ func filterRecipes(recipes []Recipe, predicate func(Recipe) bool) []Recipe {
 }
 
 func sortByCreatedDesc(recipes []Recipe) {
-	sort.Slice(recipes, func(i, j int) bool {
+	sort.SliceStable(recipes, func(i, j int) bool {
 		if recipes[i].createdAt.IsZero() && !recipes[j].createdAt.IsZero() {
 			return false
 		}
@@ -80,7 +80,7 @@ func sortByCreatedDesc(recipes []Recipe) {
 }
 
 func sortByCreatedAsc(recipes []Recipe) {
-	sort.Slice(recipes, func(i, j int) bool {
+	sort.SliceStable(recipes, func(i, j int) bool {
 		if recipes[i].createdAt.IsZero() && !recipes[j].createdAt.IsZero() {
 			return false
 		}
@@ -92,7 +92,7 @@ func sortByCreatedAsc(recipes []Recipe) {
 }
 
 func sortByModifiedAsc(recipes []Recipe) {
-	sort.Slice(recipes, func(i, j int) bool {
+	sort.SliceStable(recipes, func(i, j int) bool {
 		if recipes[i].modifiedAt.IsZero() && !recipes[j].modifiedAt.IsZero() {
 			return false
 		}
@@ -111,9 +111,15 @@ func limitRecipes(recipes []Recipe, max int) []Recipe {
 }
 
 func generateFilterData(rMap RecipeMap) FilterData {
+	paths := make([]string, 0, len(rMap))
+	for path := range rMap {
+		paths = append(paths, path)
+	}
+	sort.Strings(paths)
+
 	allRecipes := make([]Recipe, 0, len(rMap))
-	for _, recipe := range rMap {
-		allRecipes = append(allRecipes, recipe)
+	for _, path := range paths {
+		allRecipes = append(allRecipes, rMap[path])
 	}
 
 	byCategory := make(map[string][]Recipe)
