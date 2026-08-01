@@ -640,10 +640,17 @@ func getSharedTokens(a, b map[string]bool) []string {
 func findRelatedRecipes(target RecipeIngredients, allRecipes IngredientIndex, idf map[string]float64, maxResults int) []RelatedRecipe {
 	scores := []RelatedRecipe{}
 
-	for filePath, candidate := range allRecipes {
+	filePaths := make([]string, 0, len(allRecipes))
+	for filePath := range allRecipes {
+		filePaths = append(filePaths, filePath)
+	}
+	sort.Strings(filePaths)
+
+	for _, filePath := range filePaths {
 		if filePath == target.filePath {
 			continue
 		}
+		candidate := allRecipes[filePath]
 
 		ingredientScore := calculateIngredientSimilarity(target, candidate, idf)
 		titleScore := calculateTitleSimilarity(target.title, candidate.title, idf)
@@ -671,7 +678,7 @@ func findRelatedRecipes(target RecipeIngredients, allRecipes IngredientIndex, id
 		}
 	}
 
-	sort.Slice(scores, func(i, j int) bool {
+	sort.SliceStable(scores, func(i, j int) bool {
 		return scores[i].similarityScore > scores[j].similarityScore
 	})
 

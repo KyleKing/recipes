@@ -300,8 +300,10 @@ func writeDirIndex(subDir string, recipes []Recipe) error {
 	template := func() templ.Component {
 		// Order recipes alphabetically
 		sort.Slice(recipes, func(i, j int) bool {
-			r := recipes
-			return sort.StringsAreSorted([]string{r[i].name, r[j].name})
+			if recipes[i].name != recipes[j].name {
+				return recipes[i].name < recipes[j].name
+			}
+			return recipes[i].url < recipes[j].url
 		})
 		return dirIndexPage(toTitleName(subDir), recipes)
 	}
