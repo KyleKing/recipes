@@ -25,8 +25,8 @@ Additional utilities:
 ```bash
 mise run compress <path>   # Compress images (optimize-images -mh 900)
 mise run update           # Update dependencies (mise, go modules)
-./scripts/check_links.py          # Check/fix recipe links, add Wayback archive links
-./scripts/check_links.py --dry-run --file content/main/recipe.dj  # Preview changes for single file
+mise run wayback          # Check recipe links, append Wayback archive links
+mise run wayback --dry-run --file content/main/recipe.dj  # Preview changes for single file
 ```
 
 ### Environment Setup
@@ -236,11 +236,14 @@ Based on [URL](URL)
 
 ## Recipe Link Maintenance
 
-Use `scripts/check_links.py` (Python script with uv inline dependencies) to:
+Use `mise run wayback` (`scripts/_update_wayback_links.py`, a Python script with uv inline
+dependencies) to:
 
 - Verify recipe source URLs are still available
-- Add Wayback Machine archive links for working URLs
-- Replace dead links with archive versions
-- Flag unavailable links
+- Append a Wayback Machine link after each source URL
+- Mark a dead URL with no snapshot as `(wayback unavailable)`
+
+The original URL is always preserved, never swapped for the archive. Links that already carry a
+wayback link are skipped unless `--force` is passed, and social media domains are skipped outright.
 
 Run before committing recipe changes to ensure link integrity.
