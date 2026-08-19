@@ -404,7 +404,7 @@ ol.recipe-steps > li::before {
 	content: "";
 	position: absolute;
 	top: 0;
-	bottom: 0;
+	height: var(--zone-height, 100%);
 	left: calc(-1 * var(--step-gutter));
 	width: calc(var(--step-gutter) + var(--step-zone));
 	background: var(--color-zone-hint);

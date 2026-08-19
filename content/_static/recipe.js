@@ -194,22 +194,37 @@
 		return window.matchMedia("(pointer: coarse)").matches ? STEP_ZONE_TOUCH_PX : STEP_ZONE_PX;
 	}
 
-	// Returns the most deeply nested step whose marker gutter or leading text edge was
-	// clicked, so a click inside a sub-step never falls through to its parent
+	// A step owns only the rows it renders itself: the rows below a nested list belong to
+	// the sub-steps drawn there, so the parent's clickable band stops where that list starts
+	function ownExtent(li) {
+		var rect = li.getBoundingClientRect();
+		var nested = li.querySelector(":scope > ol");
+		return {
+			top: rect.top,
+			bottom: nested ? nested.getBoundingClientRect().top : rect.bottom,
+			left: rect.left,
+		};
+	}
+
 	function stepAtClick(section, e) {
 		var zone = stepZoneWidth();
 		var match = null;
 		section.querySelectorAll("ol.recipe-steps > li").forEach((li) => {
-			var rect = li.getBoundingClientRect();
-			if (e.clientY < rect.top || e.clientY > rect.bottom) return;
-			if (e.clientX >= rect.left + zone) return;
+			var extent = ownExtent(li);
+			if (e.clientY < extent.top || e.clientY > extent.bottom) return;
+			if (e.clientX >= extent.left + zone) return;
 			if (e.clientX < li.parentElement.getBoundingClientRect().left) return;
-			if (!match || rect.left > match.getBoundingClientRect().left) match = li;
+			if (!match || extent.left > match.left) match = { li: li, left: extent.left };
 		});
-		return match;
+		return match?.li;
 	}
 
+	// Sizes each tint to the band that actually responds to a click, then reveals them all
 	function flashStepZones() {
+		document.querySelectorAll("ol.recipe-steps > li").forEach((li) => {
+			var extent = ownExtent(li);
+			li.style.setProperty("--zone-height", `${extent.bottom - extent.top}px`);
+		});
 		document.body.classList.add("show-step-zones");
 		clearTimeout(zoneHintTimer);
 		zoneHintTimer = setTimeout(() => {

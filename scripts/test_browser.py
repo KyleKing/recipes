@@ -263,6 +263,45 @@ def test_nested_marker_column_targets_the_nested_step(demo_page: Page):
     expect(parent_step).not_to_have_class(re.compile("completed"))
 
 
+def test_parent_step_zone_ends_at_its_nested_list(demo_page: Page):
+    """The parent's own gutter is dead on rows occupied by its sub-steps."""
+    parent_step = demo_page.locator("ol.recipe-steps > li:has(ol)").first
+    nested_step = parent_step.locator("ol.recipe-steps > li").first
+
+    nested_step.scroll_into_view_if_needed()
+    outer_ol_left = demo_page.evaluate(
+        "document.querySelector('ol.recipe-steps').getBoundingClientRect().left"
+    )
+    nested_box = nested_step.bounding_box()
+    assert nested_box is not None
+
+    # The outer list's marker gutter, on a row that belongs to the nested list
+    demo_page.mouse.click(outer_ol_left + 5, nested_box["y"] + nested_box["height"] / 2)
+
+    expect(demo_page.locator("ol.recipe-steps li.completed")).to_have_count(0)
+
+
+def test_step_zone_highlight_stops_at_nested_list(demo_page: Page):
+    """The tint shows the real clickable band, so a parent's tint excludes its sub-steps."""
+    parent_step = demo_page.locator("ol.recipe-steps > li:has(ol)").first
+    click_step_at(demo_page, parent_step, 5, offset_y=10)
+    demo_page.wait_for_timeout(400)
+
+    measured = demo_page.evaluate(
+        """(() => {
+            var li = document.querySelector('ol.recipe-steps > li:has(ol)');
+            var nested = li.querySelector(':scope > ol');
+            return {
+                tint: parseFloat(getComputedStyle(li, '::before').height),
+                own: nested.getBoundingClientRect().top - li.getBoundingClientRect().top,
+                full: li.getBoundingClientRect().height,
+            };
+        })()"""
+    )
+    assert measured["own"] < measured["full"], "expected the parent to be taller than its own row"
+    assert abs(measured["tint"] - measured["own"]) < 2
+
+
 def test_step_zone_click_on_wrapped_row(demo_page: Page):
     """The click zone covers continuation rows of a step that wraps."""
     long_step = demo_page.locator("ol.recipe-steps > li").filter(
