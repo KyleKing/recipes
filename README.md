@@ -45,3 +45,18 @@ mise run browser-install              # One-time Playwright setup
 mise run test-browser                 # With server already running
 PWDEBUG=1 ./scripts/run_browser_tests.sh  # Debug mode with inspector
 ```
+
+## TODO
+
+- Move the unit converters out of `recipePageContent`. They render after the whole recipe
+    body because `content` arrives as a single `templ.Raw` blob, so templ can only place a
+    component before it or after it, and before it put the widget above the `<h1>`. On a
+    conversion page the converter is the reason you opened the page, so it belongs under the
+    title instead of below the charts. Two ways to get there:
+
+    - Emit it during Djot conversion as its own node, so a converter in the registry places
+        it at a known point in the document. This also drops the
+        `strings.Contains(recipe.url, ...)` filename sniffing, which decides page identity in
+        three separate places. Preferred
+    - Relocate it client-side on load from the existing converter scripts. Cheaper, though it
+        adds a layout shift and moves page structure into JS

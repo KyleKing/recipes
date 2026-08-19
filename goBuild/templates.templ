@@ -97,13 +97,15 @@ func recipePageType(recipe Recipe) string {
 }
 
 templ recipePageContent(content string, recipe Recipe) {
+	@templ.Raw(content)
+	// Converters follow the content blob because templ can only wrap it, and leading it puts
+	// the widget above the page title; see the README TODO for moving it under the heading
 	if strings.Contains(recipe.url, "measurement_conversions") {
 		@measurementConverterHtml()
 	}
 	if strings.Contains(recipe.url, "oven_temperature_conversions") {
 		@temperatureConverterHtml()
 	}
-	@templ.Raw(content)
 	if len(recipe.relatedRecipes) > 0 {
 		@relatedRecipesSection(recipe.relatedRecipes)
 	} else {
