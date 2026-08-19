@@ -469,7 +469,13 @@ body.show-step-zones ol.recipe-steps > li::before {
 		padding-bottom: 24px;
 	}
 
-	main.split-layout .split-pane > section:first-child > h2 {
+	/* Must clear .recipe-toolbar's rendered footprint (buttons + bottom offset), or its
+	   last scroll position permanently hides content instead of just floating over it. */
+	main.split-layout .split-pane-body {
+		padding-bottom: 220px;
+	}
+
+	main.split-layout .split-pane-ingredients > section:first-child > h2 {
 		margin-top: 0;
 	}
 
