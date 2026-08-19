@@ -105,6 +105,10 @@ Browser tests run automatically via `hk` pre-commit hook when code files are mod
 - `formattedDivPartial()`: Extracts metadata (`rating=X image="file.jpg"`)
 - `listItemConversion()`: Renders checkboxes for task lists
 - `writeIndexes()`: Generates all index pages from `RecipeMap`
+- `validateInternalLinks()`: Fails the build on any `href` or `src` pointing at a missing
+    file. Runs before minification, so it matches quoted attributes. Off-site schemes and
+    `/pagefind/` (written later by the pagefind CLI) are exempt; URL fragments are stripped
+    rather than checked, because recipe.js injects header anchor ids at runtime
 
 **goBuild/schemas.go** - Data structures:
 

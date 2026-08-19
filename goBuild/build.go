@@ -49,9 +49,31 @@ func linkNodeConversion(s djot_parser.ConversionState, n func(c djot_parser.Chil
 	s.InlineNodeConverter("a", n)
 }
 
-var relativeHrefRe = regexp.MustCompile(`href="([^"]+)"`)
+var internalRefRe = regexp.MustCompile(`(?:href|src)="([^"]+)"`)
 
-// Walk all generated HTML files and fail if any relative href targets a missing file
+// Pagefind writes this directory after the Go build finishes, so it cannot be resolved here
+const pagefindPrefix = "/pagefind/"
+
+// Resolve one href or src to a path on disk, or report that it needs no checking
+func resolveInternalRef(publicDir string, dir string, ref string) (string, bool) {
+	if strings.HasPrefix(ref, "http://") || strings.HasPrefix(ref, "https://") ||
+		strings.HasPrefix(ref, "#") || strings.HasPrefix(ref, "mailto:") ||
+		strings.HasPrefix(ref, "data:") || strings.HasPrefix(ref, pagefindPrefix) {
+		return "", false
+	}
+	if idx := strings.Index(ref, "#"); idx != -1 {
+		ref = ref[:idx]
+	}
+	if ref == "" {
+		return "", false
+	}
+	if strings.HasPrefix(ref, "/") {
+		return filepath.Join(publicDir, ref), true
+	}
+	return filepath.Join(dir, ref), true
+}
+
+// Walk all generated HTML files and fail if any href or src targets a missing file
 func validateInternalLinks(publicDir string) error {
 	var broken []string
 	err := filepath.Walk(publicDir, func(path string, info os.FileInfo, walkErr error) error {
@@ -63,23 +85,14 @@ func validateInternalLinks(publicDir string) error {
 			return err
 		}
 		dir := filepath.Dir(path)
-		for _, m := range relativeHrefRe.FindAllSubmatch(content, -1) {
-			href := string(m[1])
-			if strings.HasPrefix(href, "http://") || strings.HasPrefix(href, "https://") ||
-				strings.HasPrefix(href, "#") || strings.HasPrefix(href, "mailto:") ||
-				strings.HasPrefix(href, "/") {
+		for _, m := range internalRefRe.FindAllSubmatch(content, -1) {
+			ref := string(m[1])
+			target, needsCheck := resolveInternalRef(publicDir, dir, ref)
+			if !needsCheck {
 				continue
 			}
-			// Strip fragment
-			if idx := strings.Index(href, "#"); idx != -1 {
-				href = href[:idx]
-			}
-			if href == "" {
-				continue
-			}
-			target := filepath.Join(dir, href)
 			if _, err := os.Stat(target); os.IsNotExist(err) {
-				broken = append(broken, fmt.Sprintf("  %s: broken link %q -> %s", path, string(m[1]), target))
+				broken = append(broken, fmt.Sprintf("  %s: broken reference %q -> %s", path, ref, target))
 			}
 		}
 		return nil

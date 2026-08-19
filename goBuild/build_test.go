@@ -104,6 +104,50 @@ More content
 	})
 }
 
+func TestValidateInternalLinks(t *testing.T) {
+	publicDir := t.TempDir()
+	require.NoError(t, os.MkdirAll(filepath.Join(publicDir, "main"), 0o755))
+	require.NoError(t, os.WriteFile(filepath.Join(publicDir, "main", "target.html"), []byte("ok"), 0o644))
+	require.NoError(t, os.WriteFile(filepath.Join(publicDir, "main", "photo.jpg"), []byte("ok"), 0o644))
+
+	write := func(t *testing.T, body string) {
+		t.Helper()
+		require.NoError(t, os.WriteFile(filepath.Join(publicDir, "main", "page.html"), []byte(body), 0o644))
+	}
+
+	t.Run("resolvable references pass", func(t *testing.T) {
+		write(t, `<a href="target.html">x</a><a href="/main/target.html">y</a><img src="photo.jpg"/>`)
+		assert.NoError(t, validateInternalLinks(publicDir))
+	})
+
+	t.Run("off-site and generated references are skipped", func(t *testing.T) {
+		write(t, `<a href="https://example.com/missing.html">x</a><a href="#anchor">y</a>`+
+			`<a href="mailto:a@b.c">z</a><script src="/pagefind/pagefind.js"></script>`)
+		assert.NoError(t, validateInternalLinks(publicDir))
+	})
+
+	t.Run("missing relative href fails", func(t *testing.T) {
+		write(t, `<a href="gone.html">x</a>`)
+		err := validateInternalLinks(publicDir)
+		require.Error(t, err)
+		assert.Contains(t, err.Error(), "gone.html")
+	})
+
+	t.Run("missing root-relative href fails", func(t *testing.T) {
+		write(t, `<a href="/main/gone.html">x</a>`)
+		err := validateInternalLinks(publicDir)
+		require.Error(t, err)
+		assert.Contains(t, err.Error(), "/main/gone.html")
+	})
+
+	t.Run("missing image src fails", func(t *testing.T) {
+		write(t, `<img src="/main/None.jpeg"/>`)
+		err := validateInternalLinks(publicDir)
+		require.Error(t, err)
+		assert.Contains(t, err.Error(), "None.jpeg")
+	})
+}
+
 func TestBuild(t *testing.T) {
 	publicTestDir, errInit := initTestDir()
 	require.NoError(t, errInit)
