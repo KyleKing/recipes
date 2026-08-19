@@ -177,10 +177,14 @@ Based on [URL](URL)
 - **Hard line breaks** use backslash: `text\` (not two trailing spaces)
 - **Block quotes** require space after `>` unless followed by newline
 
-**Metadata extraction** (goBuild/build.go:42-83):
+**Metadata extraction** (`formattedDivPartial`): a `.dj` file without a metadata block
+generates no page at all, so the build fails naming the file rather than skipping it
+silently.
 
 - `rating`: Integer 0-5 (0 = "Not yet rated", 1-5 = "X / 5")
-- `image`: Filename (with extension) or `"None"` for placeholder
+- `image`: Filename (with extension) or `"None"` for placeholder. Anything containing a `.`
+    is read as a real filename and must exist on disk, so a typo like `"None.jpeg"` fails
+    the build rather than emitting a broken image
 - `search`: Set to `"none"` to keep the page out of the Pagefind index (it still renders
     and still loads the interactive toolbar)
 
@@ -232,11 +236,6 @@ Based on [URL](URL)
 - Registered in `renderDjot()` via `map[djot_parser.DjotNode]djot_parser.Conversion`
 - Example: `DivNode` → `formattedDivPartial()` extracts metadata
 - Example: `ListItemNode` → `listItemConversion()` renders checkboxes
-
-## TODOs from README
-
-- Validate no duplicate headers (commit 23822717)
-- Better error messages on test failures for test file commits (commit 2c206a8c)
 
 ## Recipe Link Maintenance
 

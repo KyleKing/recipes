@@ -135,6 +135,10 @@ func formattedDivPartial(publicDir string, path string, rMap RecipeMap) func(djo
 		if imageName != "" {
 			if strings.Contains(imageName, ".") {
 				imagePath = "/" + filepath.Join(dirUrl, imageName)
+				if _, err := os.Stat(filepath.Join(publicDir, dirUrl, imageName)); os.IsNotExist(err) {
+					log.Printf("%s: image %q not found (use image=\"None\" for the placeholder)", path, imageName)
+					os.Exit(1)
+				}
 				s.Writer.WriteString("<img class=\"fullsize\" data-pagefind-meta=\"image[src]\" alt=\"" + imageName + "\" src=\"" + imagePath + "\">")
 			} else {
 				imagePath = IMAGE_PLACEHOLDER
@@ -243,6 +247,11 @@ func parseDjotFiles(publicDir string, rMap RecipeMap, cache *RecipeCache) filepa
 					djot_parser.ListItemNode: listItemConversion,
 				},
 			).ConvertDjotToHtml(&html_writer.HtmlWriter{}, ast...)
+
+			// Without a metadata block no page is emitted, which would otherwise pass silently
+			if _, registered := rMap[path]; !registered {
+				return fmt.Errorf("%s: no page generated, add a `{ rating=\"0\" image=\"None\" }` block", path)
+			}
 		}
 
 		if err := os.Remove(path); err != nil {
