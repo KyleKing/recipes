@@ -10,6 +10,7 @@
 	var COPY_FEEDBACK_MS = 1500;
 	var SPLIT_QUERY =
 		"(pointer: coarse) and (orientation: landscape) and (min-width: 900px) and (max-height: 900px)";
+	var SPLIT_DISABLED_KEY = "recipe-split-disabled";
 
 	var scrollStack = [];
 	var scrollTimer = null;
@@ -353,11 +354,32 @@
 		}
 
 		var query = window.matchMedia(SPLIT_QUERY);
-		function apply() {
-			if (query.matches) enterSplit();
-			else exitSplit();
+		var toggleBtn = document.getElementById("split-toggle-btn");
+
+		function userDisabled() {
+			return localStorage.getItem(SPLIT_DISABLED_KEY) === "1";
 		}
+
+		function updateToggleBtn() {
+			if (!toggleBtn) return;
+			toggleBtn.style.display = query.matches ? "inline-block" : "none";
+			toggleBtn.textContent = userDisabled() ? "Split View: Off" : "Split View: On";
+		}
+
+		function apply() {
+			if (query.matches && !userDisabled()) enterSplit();
+			else exitSplit();
+			updateToggleBtn();
+		}
+
 		query.addEventListener("change", apply);
+		if (toggleBtn) {
+			toggleBtn.addEventListener("click", () => {
+				if (userDisabled()) localStorage.removeItem(SPLIT_DISABLED_KEY);
+				else localStorage.setItem(SPLIT_DISABLED_KEY, "1");
+				apply();
+			});
+		}
 		apply();
 	}
 

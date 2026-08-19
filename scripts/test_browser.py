@@ -17,7 +17,7 @@ Tests verify:
 - Floating toolbar: visibility, persistence, per-button visibility rules, inertness when hidden
 - localStorage persistence across reloads, 48h progress expiry, and cross-recipe sweeping
 - Copying remaining ingredients as djot
-- iPad landscape split layout
+- iPad landscape split layout, its floating-toolbar clearance, and the split-view toggle
 
 Test Recipes:
 - /main/fried_rice.html - Primary test recipe
@@ -800,6 +800,37 @@ def test_split_layout_keeps_progress_working(ipad_page: Page):
     ipad_page.reload()
 
     expect(ipad_page.locator("ul.task-list > li").first.locator("input")).to_be_checked()
+
+
+def test_split_pane_body_clears_the_floating_toolbar(ipad_page: Page):
+    """Scrolled to its end, the body pane's content must not sit under the fixed toolbar."""
+    ipad_page.locator(".split-pane-body").evaluate("el => el.scrollTop = el.scrollHeight")
+
+    last_content_bottom = ipad_page.locator(".split-pane-body > :last-child").last.evaluate(
+        "el => el.getBoundingClientRect().bottom"
+    )
+    toolbar_top = ipad_page.locator("#recipe-toolbar").evaluate("el => el.getBoundingClientRect().top")
+    assert last_content_bottom <= toolbar_top
+
+
+def test_split_toggle_btn_forces_single_column(ipad_page: Page):
+    """The split-view toggle lets a user opt out even though their device qualifies."""
+    main = ipad_page.locator("main")
+    toggle = ipad_page.locator("#split-toggle-btn")
+    expect(main).to_have_class(re.compile("split-layout"))
+    expect(toggle).to_have_text("Split View: On")
+
+    ipad_page.locator("#toolbar-toggle").click()
+    toggle.click()
+
+    expect(main).not_to_have_class(re.compile("split-layout"))
+    expect(toggle).to_have_text("Split View: Off")
+
+    ipad_page.reload()
+    expect(ipad_page.locator("main")).not_to_have_class(re.compile("split-layout"))
+
+    ipad_page.locator("#split-toggle-btn").click()
+    expect(ipad_page.locator("main")).to_have_class(re.compile("split-layout"))
 
 
 # --- reference converters ---------------------------------------------------

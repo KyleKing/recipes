@@ -66,11 +66,17 @@ Browser tests verify interactive features:
 - Section collapse/expand with progress summaries
 - Reset progress, collapse all, toolbar toggle, copy remaining ingredients
 - 48h progress expiry and cross-recipe sweeping of stale localStorage keys
-- iPad landscape split layout
+- iPad landscape split layout, its floating-toolbar clearance, and the split-view toggle
 
 `content/reference/nested_list_demo.dj` exists solely for these tests. It carries the
 nested ingredient groups, nested numbered steps, wrapping lines, and inline links that
 make click handling hard, and is excluded from the search index.
+
+Testing the iPad split layout requires a real `pointer: coarse` match, not just a resized
+viewport. Playwright's `has_touch=True` context (the `ipad_page` fixture) handles this
+correctly. A Chrome DevTools window resize does not set `pointer: coarse`, and no CDP
+media-feature override is reachable through the Claude-in-Chrome browser tools either, so
+that path can't verify this feature at all.
 
 **Pre-commit hooks:**
 Browser tests run automatically via `hk` pre-commit hook when code files are modified:
@@ -198,6 +204,13 @@ silently.
 - A drag that produces a text selection never toggles anything
 - Progress keys expire 48h after the last progress change. Collapsing a section or
     hiding the toolbar is not progress and does not restart that window
+- On a coarse-pointer device in landscape (iPad-sized), ingredients and the rest of the
+    recipe split into side-by-side scrolling panes. A `Split View: On/Off` toolbar button
+    (only shown when the device already qualifies) lets a user force single-column instead;
+    the choice persists in `localStorage` under `recipe-split-disabled`. The split pane
+    reserves `padding-bottom` in `content/styles.css` to clear the floating toolbar's
+    footprint — widen it if the toolbar ever grows another button, or the pane's last
+    content will end up trapped underneath it again
 
 **Ingredient ordering**:
 
