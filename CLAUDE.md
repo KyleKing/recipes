@@ -204,13 +204,16 @@ silently.
 - A drag that produces a text selection never toggles anything
 - Progress keys expire 48h after the last progress change. Collapsing a section or
     hiding the toolbar is not progress and does not restart that window
-- On a coarse-pointer device in landscape (iPad-sized), ingredients and the rest of the
-    recipe split into side-by-side scrolling panes. A `Split View: On/Off` toolbar button
-    (only shown when the device already qualifies) lets a user force single-column instead;
-    the choice persists in `localStorage` under `recipe-split-disabled`. The split pane
-    reserves `padding-bottom` in `content/styles.css` to clear the floating toolbar's
-    footprint — widen it if the toolbar ever grows another button, or the pane's last
-    content will end up trapped underneath it again
+- On a coarse-pointer device in landscape (iPad-sized), the recipe splits into a shared
+    full-width header (title, description, rating, image note) above two scrolling panes:
+    steps on the wider left, ingredients as a narrower reference rail on the right. A
+    `Split View: On/Off` toolbar button (only shown when the device already qualifies) lets
+    a user force single-column instead; the choice persists in `localStorage` under
+    `recipe-split-disabled`. The ingredients pane sits next to the floating toolbar and
+    reserves `padding-bottom` in `content/styles.css` to clear its footprint — widen it if
+    the toolbar ever grows another button, or the pane's last content will end up trapped
+    underneath it again. If ingredients ever move back to the left pane, move that
+    `padding-bottom` with them
 
 **Ingredient ordering**:
 

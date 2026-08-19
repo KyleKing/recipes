@@ -452,7 +452,8 @@ body.show-step-zones ol.recipe-steps > li::before {
 
 	main.split-layout {
 		display: grid;
-		grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+		grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+		grid-template-rows: auto 1fr;
 		gap: 24px;
 		flex: 1 1 auto;
 		min-height: 0;
@@ -462,6 +463,10 @@ body.show-step-zones ol.recipe-steps > li::before {
 		box-sizing: border-box;
 	}
 
+	main.split-layout .split-header {
+		grid-column: 1 / -1;
+	}
+
 	main.split-layout .split-pane {
 		overflow-y: auto;
 		overscroll-behavior: contain;
@@ -469,13 +474,14 @@ body.show-step-zones ol.recipe-steps > li::before {
 		padding-bottom: 24px;
 	}
 
-	/* Must clear .recipe-toolbar's rendered footprint (buttons + bottom offset), or its
-	   last scroll position permanently hides content instead of just floating over it. */
-	main.split-layout .split-pane-body {
+	/* Ingredients sits next to the floating toolbar; its scroll room must clear the
+	   toolbar's rendered footprint (buttons + bottom offset), or its last scroll
+	   position permanently hides content instead of just floating over it. */
+	main.split-layout .split-pane-ingredients {
 		padding-bottom: 220px;
 	}
 
-	main.split-layout .split-pane-ingredients > section:first-child > h2 {
+	main.split-layout .split-pane > section:first-child > h2 {
 		margin-top: 0;
 	}
 

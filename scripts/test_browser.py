@@ -802,15 +802,37 @@ def test_split_layout_keeps_progress_working(ipad_page: Page):
     expect(ipad_page.locator("ul.task-list > li").first.locator("input")).to_be_checked()
 
 
-def test_split_pane_body_clears_the_floating_toolbar(ipad_page: Page):
-    """Scrolled to its end, the body pane's content must not sit under the fixed toolbar."""
-    ipad_page.locator(".split-pane-body").evaluate("el => el.scrollTop = el.scrollHeight")
+def test_split_pane_ingredients_clears_the_floating_toolbar(ipad_page: Page):
+    """Scrolled to its end, the ingredients pane's content must not sit under the fixed toolbar."""
+    ipad_page.locator(".split-pane-ingredients").evaluate("el => el.scrollTop = el.scrollHeight")
 
-    last_content_bottom = ipad_page.locator(".split-pane-body > :last-child").last.evaluate(
+    last_content_bottom = ipad_page.locator(".split-pane-ingredients > :last-child").last.evaluate(
         "el => el.getBoundingClientRect().bottom"
     )
     toolbar_top = ipad_page.locator("#recipe-toolbar").evaluate("el => el.getBoundingClientRect().top")
     assert last_content_bottom <= toolbar_top
+
+
+def test_split_header_spans_both_panes(ipad_page: Page):
+    """Title, description, and rating sit above the columns instead of inside either pane."""
+    header = ipad_page.locator(".split-header")
+    expect(header).to_be_visible()
+    expect(header.locator("h1")).to_have_text("Nested List Demo")
+
+    header_box = header.evaluate("el => el.getBoundingClientRect()")
+    steps_box = ipad_page.locator(".split-pane-body").evaluate("el => el.getBoundingClientRect()")
+    ingredients_box = ipad_page.locator(".split-pane-ingredients").evaluate("el => el.getBoundingClientRect()")
+
+    assert header_box["width"] > steps_box["width"], "the header spans wider than either pane"
+    assert header_box["bottom"] <= steps_box["top"] + 1
+    assert header_box["bottom"] <= ingredients_box["top"] + 1
+
+    first_section_ids = ipad_page.evaluate(
+        """[".split-pane-body", ".split-pane-ingredients"].map(
+            sel => document.querySelector(sel + " > :first-child").id
+        )"""
+    )
+    assert first_section_ids == ["Recipe", "Ingredients"]
 
 
 def test_split_toggle_btn_forces_single_column(ipad_page: Page):
