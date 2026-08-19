@@ -2,6 +2,7 @@
 # /// script
 # requires-python = ">=3.13"
 # dependencies = [
+#   "playwright==1.60.0",
 #   "pytest-playwright",
 # ]
 # ///
@@ -703,6 +704,21 @@ def test_copy_ingredients_omits_checked(demo_page: Page):
     expect(demo_page.locator("#copy-ingredients-btn")).to_have_text("Copied")
 
     assert "- Short leaf ingredient" not in _clipboard_text(demo_page).splitlines()
+
+
+def test_copy_reports_a_refused_clipboard(demo_page: Page):
+    """A rejected clipboard write must say so instead of silently doing nothing."""
+    demo_page.locator("#toolbar-toggle").click()
+    demo_page.evaluate(
+        """() => {
+            navigator.clipboard.writeText = () =>
+                Promise.reject(new DOMException("refused", "NotAllowedError"));
+        }"""
+    )
+
+    demo_page.locator("#copy-ingredients-btn").click()
+
+    expect(demo_page.locator("#copy-ingredients-btn")).to_have_text("Copy failed")
 
 
 def test_copy_button_absent_without_ingredients(page: Page):

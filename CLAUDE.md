@@ -62,9 +62,15 @@ uv run scripts/test_browser.py -k test_ingredient_checkbox_toggle -v
 Browser tests verify interactive features:
 
 - Ingredient checkbox toggling and localStorage persistence
-- Recipe step marking (margin click and double-click)
+- Recipe step marking (margin click and double-click), including nested sub-steps
 - Section collapse/expand with progress summaries
-- Reset progress, collapse all, toolbar toggle
+- Reset progress, collapse all, toolbar toggle, copy remaining ingredients
+- 48h progress expiry and cross-recipe sweeping of stale localStorage keys
+- iPad landscape split layout
+
+`content/reference/nested_list_demo.dj` exists solely for these tests. It carries the
+nested ingredient groups, nested numbered steps, wrapping lines, and inline links that
+make click handling hard, and is excluded from the search index.
 
 **Pre-commit hooks:**
 Browser tests run automatically via `hk` pre-commit hook when code files are modified:
@@ -171,6 +177,19 @@ Based on [URL](URL)
 
 - `rating`: Integer 0-5 (0 = "Not yet rated", 1-5 = "X / 5")
 - `image`: Filename (with extension) or `"None"` for placeholder
+- `search`: Set to `"none"` to keep the page out of the Pagefind index (it still renders
+    and still loads the interactive toolbar)
+
+**Interaction rules** (`content/_static/recipe.js`):
+
+- An item toggles only itself. Checking a parent ingredient or step never cascades to its
+    nested children, and clicking a child never marks the parent
+- A step responds to clicks in its left zone (30px, 44px on a coarse pointer) measured
+    from its own left edge, plus the marker gutter. A step that contains sub-steps owns
+    only the rows it renders itself, so the rows below belong to the sub-steps
+- A drag that produces a text selection never toggles anything
+- Progress keys expire 48h after the last progress change. Collapsing a section or
+    hiding the toolbar is not progress and does not restart that window
 
 **Ingredient ordering**:
 

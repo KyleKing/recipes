@@ -631,14 +631,26 @@
 	function copyIngredients() {
 		var btn = document.getElementById("copy-ingredients-btn");
 		var djot = uncheckedIngredientsAsDjot();
-		navigator.clipboard.writeText(djot).then(() => {
+
+		function report(label) {
 			if (!btn) return;
-			btn.textContent = djot === "" ? "Nothing to copy" : "Copied";
+			btn.textContent = label;
 			clearTimeout(copyTimer);
 			copyTimer = setTimeout(() => {
 				btn.textContent = "Copy Ingredients";
 			}, COPY_FEEDBACK_MS);
-		});
+		}
+
+		navigator.clipboard.writeText(djot).then(
+			() => {
+				report(djot === "" ? "Nothing to copy" : "Copied");
+			},
+			() => {
+				// The clipboard is refused when the document is not focused; say so rather
+				// than leaving the button looking as though nothing was asked of it
+				report("Copy failed");
+			},
+		);
 	}
 
 	function setupToolbarToggle() {

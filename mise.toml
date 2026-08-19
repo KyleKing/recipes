@@ -15,7 +15,9 @@ run = "./scripts/_link_images.py"
 
 [tasks.browser-install]
 description = "Install Playwright chromium-headless-shell (smaller than full chromium)"
-run = "uvx playwright install chromium-headless-shell"
+# Installed through the test script's own environment: `uvx playwright` resolves an
+# independent playwright version and evicts the browser build the tests ask for
+run = "uv run --with playwright==1.60.0 --with pytest-playwright --no-project playwright install chromium-headless-shell"
 
 [tasks.build]
 depends = ["format"]

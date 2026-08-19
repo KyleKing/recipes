@@ -3,7 +3,10 @@ revision = 3
 requires-python = ">=3.13"
 
 [manifest]
-requirements = [{ name = "pytest-playwright" }]
+requirements = [
+    { name = "playwright", specifier = "==1.60.0" },
+    { name = "pytest-playwright" },
+]
 
 [[package]]
 name = "certifi"
