@@ -1,1 +1,32 @@
+# Oven Temperature Conversions
 
+Gas mark and fan equivalents from [Which?
+oven temperature conversion table](https://www.which.co.uk/reviews/built-in-ovens/article/oven-temperature-conversion-table-aA5Ol9b157On)
+
+{ rating="0" image="None" }
+:::
+:::
+
+## Common Temperatures
+
+Listed as Fahrenheit, conventional Celsius, fan Celsius, and gas mark.
+
+- 275 °F / 140 °C / 120 °C fan / gas 1 (cool)
+- 300 °F / 150 °C / 130 °C fan / gas 2 (cool)
+- 325 °F / 160 °C / 140 °C fan / gas 3 (moderate)
+- 350 °F / 180 °C / 160 °C fan / gas 4 (moderate)
+- 375 °F / 190 °C / 170 °C fan / gas 5 (moderately hot)
+- 400 °F / 200 °C / 180 °C fan / gas 6 (moderately hot)
+- 425 °F / 220 °C / 200 °C fan / gas 7 (hot)
+- 450 °F / 230 °C / 210 °C fan / gas 8 (hot)
+- 475 °F / 240 °C / 220 °C fan / gas 9 (very hot)
+
+## Formulas
+
+- °C = (°F − 32) × 5 / 9
+- °F = (°C × 9 / 5) + 32
+
+## Notes
+
+- A fan (convection) oven runs about 20 °C hotter than the dial suggests, so drop the conventional Celsius figure by 20 °C or the Fahrenheit figure by 25 °F
+- Oven thermostats drift, so an oven thermometer is worth more than any conversion chart
