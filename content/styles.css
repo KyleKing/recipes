@@ -421,8 +421,10 @@ body.show-step-zones ol.recipe-steps > li::before {
 
 /* Completed Items */
 
-.recipe-steps li.completed,
-.task-list li.completed {
+/* Styling the label rather than the item keeps a completed parent from painting its
+   line-through over nested children; recipe.js wraps each item's own content in it */
+.recipe-steps li.completed > .item-label,
+.task-list li.completed > .item-label {
 	color: var(--color-text-done);
 	text-decoration: line-through;
 	transition: color 0.3s ease;
@@ -430,18 +432,6 @@ body.show-step-zones ol.recipe-steps > li::before {
 
 .task-list li.completed {
 	list-style-type: "✓ ";
-}
-
-/* A completed item paints its line-through across every in-flow descendant, which would
-   falsely strike unchecked children. An atomic inline box is exempt from that
-   propagation, so a nested list opts out of it without shifting layout. */
-.task-list li > ul,
-.recipe-steps li > ol {
-	display: inline-block;
-	width: 100%;
-	vertical-align: top;
-	color: var(--color-text);
-	text-decoration: none;
 }
 
 @media (pointer: coarse) {
@@ -482,6 +472,11 @@ body.show-step-zones ol.recipe-steps > li::before {
 
 	main.split-layout .split-pane > section:first-child > h2 {
 		margin-top: 0;
+	}
+
+	body:has(main.split-layout) nav div {
+		max-width: none;
+		padding: 0 16px;
 	}
 }
 

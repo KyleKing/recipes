@@ -144,6 +144,22 @@
 		return Boolean(selection) && !selection.isCollapsed && selection.toString().trim() !== "";
 	}
 
+	// A completed item paints its line-through across every in-flow descendant, which would
+	// falsely strike unchecked children. Giving an item's own content its own box keeps
+	// nested lists outside the decorated subtree.
+	function wrapOwnLabel(li) {
+		if (li.querySelector(":scope > .item-label")) return;
+		var nested = li.querySelector(":scope > ul, :scope > ol");
+		var label = document.createElement("span");
+		label.className = "item-label";
+		Array.from(li.childNodes).forEach((node) => {
+			if (node === nested) return;
+			if (node.nodeType === Node.ELEMENT_NODE && node.tagName === "INPUT") return;
+			label.appendChild(node);
+		});
+		li.insertBefore(label, nested);
+	}
+
 	function ownText(li) {
 		var clone = li.cloneNode(true);
 		clone.querySelectorAll("ul, ol, input").forEach((node) => {
@@ -164,6 +180,7 @@
 				var key = `ingredient-${globalIndex}`;
 				globalIndex++;
 				cb.dataset.storageKey = key;
+				wrapOwnLabel(li);
 
 				if (state[key]) {
 					cb.checked = true;
@@ -244,6 +261,7 @@
 					var key = `step-${stepIndex}`;
 					stepIndex++;
 					stepMap.set(li, key);
+					wrapOwnLabel(li);
 					if (state[key]) {
 						li.classList.add("completed");
 					}

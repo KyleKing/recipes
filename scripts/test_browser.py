@@ -178,10 +178,7 @@ def _paints_strikethrough(page: Page, selector: str) -> bool:
         """(sel) => {
             var node = document.querySelector(sel);
             while (node && node !== document.body) {
-                var decoration = getComputedStyle(node).textDecorationLine;
-                if (decoration.includes("line-through")) return true;
-                var display = getComputedStyle(node).display;
-                if (display === "inline-block" || display === "inline-table") return false;
+                if (getComputedStyle(node).textDecorationLine.includes("line-through")) return true;
                 node = node.parentElement;
             }
             return false;
@@ -198,7 +195,10 @@ def test_completed_parent_does_not_strike_nested_children(demo_page: Page):
 
     child = "ul.task-list > li:has(ul.task-list) ul.task-list > li"
     assert _paints_strikethrough(demo_page, child) is False
-    assert _paints_strikethrough(demo_page, "ul.task-list > li:has(ul.task-list)") is True
+    assert (
+        _paints_strikethrough(demo_page, "ul.task-list > li:has(ul.task-list) > .item-label")
+        is True
+    )
 
 
 def test_completed_parent_step_does_not_strike_nested_steps(demo_page: Page):
@@ -208,6 +208,7 @@ def test_completed_parent_step_does_not_strike_nested_steps(demo_page: Page):
     expect(parent_step).to_have_class(re.compile("completed"))
 
     assert _paints_strikethrough(demo_page, "ol.recipe-steps > li:has(ol) > ol > li") is False
+    assert _paints_strikethrough(demo_page, "ol.recipe-steps > li:has(ol) > .item-label") is True
 
 
 def test_link_clicks_dont_toggle_checkboxes(page: Page):
