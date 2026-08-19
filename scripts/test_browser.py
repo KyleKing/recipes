@@ -167,6 +167,48 @@ def test_nested_ingredient_does_not_toggle_parent(demo_page: Page):
     expect(parent.locator("> input[type='checkbox']")).not_to_be_checked()
 
 
+def _paints_strikethrough(page: Page, selector: str) -> bool:
+    """Whether the element is inside a box that paints a line-through over it.
+
+    `text-decoration: none` on a descendant cannot undo an ancestor's line, so the
+    computed style of the item itself does not answer this - walk the ancestors.
+    """
+    return page.evaluate(
+        """(sel) => {
+            var node = document.querySelector(sel);
+            while (node && node !== document.body) {
+                var decoration = getComputedStyle(node).textDecorationLine;
+                if (decoration.includes("line-through")) return true;
+                var display = getComputedStyle(node).display;
+                if (display === "inline-block" || display === "inline-table") return false;
+                node = node.parentElement;
+            }
+            return false;
+        }""",
+        selector,
+    )
+
+
+def test_completed_parent_does_not_strike_nested_children(demo_page: Page):
+    """A checked parent must not paint its line-through over unchecked children."""
+    parent = demo_page.locator("ul.task-list > li:has(ul.task-list)").first
+    parent.click(position={"x": 40, "y": 8})
+    expect(parent.locator("> input[type='checkbox']")).to_be_checked()
+
+    child = "ul.task-list > li:has(ul.task-list) ul.task-list > li"
+    assert _paints_strikethrough(demo_page, child) is False
+    assert _paints_strikethrough(demo_page, "ul.task-list > li:has(ul.task-list)") is True
+
+
+def test_completed_parent_step_does_not_strike_nested_steps(demo_page: Page):
+    """A completed step must not paint its line-through over its sub-steps."""
+    parent_step = demo_page.locator("ol.recipe-steps > li:has(ol)").first
+    click_step_at(demo_page, parent_step, 5, offset_y=10)
+    expect(parent_step).to_have_class(re.compile("completed"))
+
+    assert _paints_strikethrough(demo_page, "ol.recipe-steps > li:has(ol) > ol > li") is False
+
+
 def test_link_clicks_dont_toggle_checkboxes(page: Page):
     """Clicking a link inside an ingredient does not toggle its checkbox."""
     _fresh(page, RECIPE_WITH_LINKS)

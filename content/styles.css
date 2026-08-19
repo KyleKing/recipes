@@ -31,6 +31,7 @@ body {
 	--color-text: #454545;
 	--color-link: #07a;
 	--color-link-visited: #07a;
+	--color-text-done: #878787;
 	--color-zone-hint: rgba(180, 180, 180, 0.45);
 	--step-gutter: 40px;
 	--step-zone: 30px;
@@ -422,34 +423,31 @@ body.show-step-zones ol.recipe-steps > li::before {
 
 .recipe-steps li.completed,
 .task-list li.completed {
-	opacity: 0.6;
+	color: var(--color-text-done);
 	text-decoration: line-through;
-	transition: opacity 0.3s ease;
+	transition: color 0.3s ease;
 }
 
 .task-list li.completed {
 	list-style-type: "✓ ";
 }
 
-.task-list li.completed > ul {
+/* A completed item paints its line-through across every in-flow descendant, which would
+   falsely strike unchecked children. An atomic inline box is exempt from that
+   propagation, so a nested list opts out of it without shifting layout. */
+.task-list li > ul,
+.recipe-steps li > ol {
+	display: inline-block;
+	width: 100%;
+	vertical-align: top;
+	color: var(--color-text);
 	text-decoration: none;
-	opacity: 1;
-}
-
-.task-list li.completed > ul li.completed {
-	text-decoration: line-through;
-	opacity: 0.6;
 }
 
 @media (pointer: coarse) {
 	ul.task-list > li {
 		padding: 8px 0;
 	}
-}
-
-.recipe-steps li.completed > ol,
-.recipe-steps li.completed > ol li:not(.completed) {
-	text-decoration: none;
 }
 
 /* Split layout - iPad landscape */
@@ -495,7 +493,7 @@ li.hiding {
 
 @keyframes fadeOutHide {
 	0% {
-		opacity: 0.6;
+		opacity: 1;
 		max-height: 100px;
 	}
 	70% {
