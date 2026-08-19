@@ -1,4 +1,4 @@
-function _convertMeasurement() {
+function convertMeasurement() {
 	const value = parseFloat(document.getElementById("inputValue").value);
 	const fromUnit = document.getElementById("inputUnit").value;
 	const toUnit = document.getElementById("outputUnit").value;
@@ -23,3 +23,5 @@ function _convertMeasurement() {
 	document.getElementById("result").innerHTML =
 		`${value} ${fromUnit} = ${result.toFixed(2)} ${toUnit}`;
 }
+
+document.getElementById("convertMeasurementBtn").addEventListener("click", convertMeasurement);

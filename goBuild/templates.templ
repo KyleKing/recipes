@@ -141,7 +141,7 @@ templ measurementConverterHtml() {
 				<option value="oz">fluid ounces</option>
 			</select>
 		</div>
-		<button onclick="convertMeasurement()" style="padding: 10px 20px; background: #4a5568; color: white; border: none; border-radius: 4px; cursor: pointer;">Convert</button>
+		<button type="button" id="convertMeasurementBtn" style="padding: 10px 20px; background: #4a5568; color: white; border: none; border-radius: 4px; cursor: pointer;">Convert</button>
 		<div id="result" style="margin-top: 15px; font-size: 18px; font-weight: bold; color: #2d3748;"></div>
 	</div>
 }
@@ -157,7 +157,7 @@ templ temperatureConverterHtml() {
 				<option value="c">Celsius (°C)</option>
 			</select>
 		</div>
-		<button onclick="convertTemp()" style="padding: 10px 20px; background: #4a5568; color: white; border: none; border-radius: 4px; cursor: pointer;">Convert</button>
+		<button type="button" id="convertTempBtn" style="padding: 10px 20px; background: #4a5568; color: white; border: none; border-radius: 4px; cursor: pointer;">Convert</button>
 		<div id="tempResult" style="margin-top: 15px; font-size: 18px; font-weight: bold; color: #2d3748;"></div>
 	</div>
 }

@@ -1,4 +1,4 @@
-function _convertTemp() {
+function convertTemp() {
 	const value = parseFloat(document.getElementById("tempValue").value);
 	const unit = document.getElementById("tempUnit").value;
 
@@ -21,3 +21,5 @@ function _convertTemp() {
 			`${value}°C = ${result.toFixed(1)}${resultUnit}`;
 	}
 }
+
+document.getElementById("convertTempBtn").addEventListener("click", convertTemp);

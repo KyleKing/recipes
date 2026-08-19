@@ -802,6 +802,30 @@ def test_split_layout_keeps_progress_working(ipad_page: Page):
     expect(ipad_page.locator("ul.task-list > li").first.locator("input")).to_be_checked()
 
 
+# --- reference converters ---------------------------------------------------
+
+
+def test_measurement_converter_computes(page: Page):
+    """The converter button is wired to the script that ships with the page."""
+    _fresh(page, "/reference/measurement_conversions.html")
+    page.locator("#inputValue").fill("2")
+    page.select_option("#inputUnit", "cup")
+    page.select_option("#outputUnit", "tbsp")
+    page.locator("#convertMeasurementBtn").click()
+
+    expect(page.locator("#result")).to_have_text("2 cup = 32.00 tbsp")
+
+
+def test_temperature_converter_computes(page: Page):
+    """The converter button is wired to the script that ships with the page."""
+    _fresh(page, "/reference/oven_temperature_conversions.html")
+    page.locator("#tempValue").fill("350")
+    page.select_option("#tempUnit", "f")
+    page.locator("#convertTempBtn").click()
+
+    expect(page.locator("#tempResult")).to_have_text("350\u00b0F = 176.7\u00b0C")
+
+
 if __name__ == "__main__":
     import sys
 
