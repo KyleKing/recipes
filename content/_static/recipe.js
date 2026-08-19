@@ -2,18 +2,29 @@
 	var SCROLL_PAUSE_MS = 800;
 	var SCROLL_MIN_DISTANCE = 100;
 	var BACK_BUTTON_FADE_MS = 5000;
-	var CACHE_MAX_AGE_MS = 48 * 60 * 60 * 1000;
+	var PROGRESS_MAX_AGE_MS = 48 * 60 * 60 * 1000;
+	var STORAGE_PREFIX = "recipe-progress-";
+	var STEP_ZONE_PX = 30;
+	var STEP_ZONE_TOUCH_PX = 44;
+	var ZONE_HINT_MS = 2000;
+	var COPY_FEEDBACK_MS = 1500;
+	var SPLIT_QUERY =
+		"(pointer: coarse) and (orientation: landscape) and (min-width: 900px) and (max-height: 900px)";
 
 	var scrollStack = [];
 	var scrollTimer = null;
 	var fadeTimer = null;
+	var zoneHintTimer = null;
+	var copyTimer = null;
 	var lastScrollY = 0;
 	var cachedContentHash = null;
 
 	function getStorageKey() {
-		return `recipe-progress-${window.location.pathname}`;
+		return STORAGE_PREFIX + window.location.pathname;
 	}
 
+	// Must be primed before any script-injected DOM (toggles, anchors, split panes) exists,
+	// otherwise the stored hash never matches the hash recomputed on the next page load.
 	function computeContentHash() {
 		if (cachedContentHash !== null) return cachedContentHash;
 		var main = document.querySelector("main") || document.body;
@@ -27,55 +38,126 @@
 		return cachedContentHash;
 	}
 
+	function isProgressKey(key) {
+		return key.startsWith("ingredient-") || key.startsWith("step-");
+	}
+
 	function clearProgressKeys(state) {
 		var cleaned = {};
 		Object.keys(state).forEach((key) => {
-			if (!key.startsWith("ingredient-") && !key.startsWith("step-")) {
+			if (!isProgressKey(key) && key !== "_progressAt") {
 				cleaned[key] = state[key];
 			}
 		});
 		return cleaned;
 	}
 
-	function loadState() {
+	function readState(key) {
 		try {
-			var data = localStorage.getItem(getStorageKey());
-			if (!data) return {};
-			var parsed = JSON.parse(data);
-
-			var currentHash = computeContentHash();
-			if (parsed._contentHash && parsed._contentHash !== currentHash) {
-				return {};
-			}
-
-			if (parsed._savedAt && Date.now() - parsed._savedAt > CACHE_MAX_AGE_MS) {
-				return clearProgressKeys(parsed);
-			}
-
-			return parsed;
+			var data = localStorage.getItem(key);
+			if (!data) return null;
+			return JSON.parse(data);
 		} catch (_e) {
-			return {};
+			return null;
 		}
 	}
 
-	function saveState(state) {
+	function writeState(key, state) {
 		try {
-			state._savedAt = Date.now();
-			state._contentHash = computeContentHash();
-			localStorage.setItem(getStorageKey(), JSON.stringify(state));
+			localStorage.setItem(key, JSON.stringify(state));
 		} catch (_e) {
 			// Storage unavailable
 		}
 	}
 
+	function isExpired(state) {
+		var stamp = state._progressAt;
+		return Boolean(stamp) && Date.now() - stamp > PROGRESS_MAX_AGE_MS;
+	}
+
+	function loadState() {
+		var key = getStorageKey();
+		var parsed = readState(key);
+		if (!parsed) return {};
+
+		if (parsed._contentHash && parsed._contentHash !== computeContentHash()) {
+			try {
+				localStorage.removeItem(key);
+			} catch (_e) {
+				// Storage unavailable
+			}
+			return {};
+		}
+
+		if (isExpired(parsed)) {
+			var cleaned = clearProgressKeys(parsed);
+			writeState(key, cleaned);
+			return cleaned;
+		}
+
+		return parsed;
+	}
+
+	// `touchedProgress` marks a save that changed a checkbox or step, which is the only
+	// kind of save that restarts the expiry window
+	function saveState(state, touchedProgress) {
+		if (touchedProgress) {
+			state._progressAt = Date.now();
+		}
+		if (!Object.keys(state).some(isProgressKey)) {
+			delete state._progressAt;
+		}
+		state._savedAt = Date.now();
+		state._contentHash = computeContentHash();
+		writeState(getStorageKey(), state);
+	}
+
+	function purgeExpiredRecipes() {
+		var keys = [];
+		try {
+			for (var i = 0; i < localStorage.length; i++) {
+				var key = localStorage.key(i);
+				if (key?.startsWith(STORAGE_PREFIX)) keys.push(key);
+			}
+		} catch (_e) {
+			return;
+		}
+
+		keys.forEach((key) => {
+			var state = readState(key);
+			if (!state || !isExpired(state)) return;
+			var cleaned = clearProgressKeys(state);
+			if (Object.keys(cleaned).some((k) => !k.startsWith("_"))) {
+				writeState(key, cleaned);
+			} else {
+				try {
+					localStorage.removeItem(key);
+				} catch (_e) {
+					// Storage unavailable
+				}
+			}
+		});
+	}
+
+	function hasTextSelection() {
+		var selection = window.getSelection();
+		return Boolean(selection) && !selection.isCollapsed && selection.toString().trim() !== "";
+	}
+
+	function ownText(li) {
+		var clone = li.cloneNode(true);
+		clone.querySelectorAll("ul, ol, input").forEach((node) => {
+			node.remove();
+		});
+		return clone.textContent.replace(/\s+/g, " ").trim();
+	}
+
 	function setupIngredientCheckboxes() {
 		var state = loadState();
-		var taskLists = document.querySelectorAll(".task-list");
 		var globalIndex = 0;
 
-		taskLists.forEach((list) => {
-			var items = list.querySelectorAll(":scope > li");
-			items.forEach((li) => {
+		document.querySelectorAll("ul.task-list").forEach((list) => {
+			list.querySelectorAll(":scope > li").forEach((li) => {
 				var cb = li.querySelector(":scope > input[type='checkbox']");
 				if (!cb) return;
 
@@ -90,32 +172,17 @@
 
 				li.style.cursor = "pointer";
 				li.addEventListener("click", (e) => {
-					if (e.target.tagName === "A") return;
-
-					// Don't toggle if click originated from a nested list item
+					if (e.target.closest("a")) return;
+					// A nested item handles its own click; the parent never cascades to children
 					if (e.target.closest("li") !== li) return;
+					if (hasTextSelection()) return;
 
 					cb.checked = !cb.checked;
 					li.classList.toggle("completed", cb.checked);
 
 					var currentState = loadState();
 					currentState[key] = cb.checked;
-
-					// Toggle all nested checkboxes
-					var nestedCheckboxes = li.querySelectorAll("ul.task-list input[type='checkbox']");
-					nestedCheckboxes.forEach((nestedCb) => {
-						nestedCb.checked = cb.checked;
-						var nestedLi = nestedCb.closest("li");
-						if (nestedLi) {
-							nestedLi.classList.toggle("completed", cb.checked);
-						}
-						var nestedKey = nestedCb.dataset.storageKey;
-						if (nestedKey) {
-							currentState[nestedKey] = cb.checked;
-						}
-					});
-
-					saveState(currentState);
+					saveState(currentState, true);
 					updateSectionSummaries();
 					updateButtonVisibility();
 				});
@@ -123,22 +190,45 @@
 		});
 	}
 
+	function stepZoneWidth() {
+		return window.matchMedia("(pointer: coarse)").matches ? STEP_ZONE_TOUCH_PX : STEP_ZONE_PX;
+	}
+
+	// Returns the most deeply nested step whose marker gutter or leading text edge was
+	// clicked, so a click inside a sub-step never falls through to its parent
+	function stepAtClick(section, e) {
+		var zone = stepZoneWidth();
+		var match = null;
+		section.querySelectorAll("ol.recipe-steps > li").forEach((li) => {
+			var rect = li.getBoundingClientRect();
+			if (e.clientY < rect.top || e.clientY > rect.bottom) return;
+			if (e.clientX >= rect.left + zone) return;
+			if (e.clientX < li.parentElement.getBoundingClientRect().left) return;
+			if (!match || rect.left > match.getBoundingClientRect().left) match = li;
+		});
+		return match;
+	}
+
+	function flashStepZones() {
+		document.body.classList.add("show-step-zones");
+		clearTimeout(zoneHintTimer);
+		zoneHintTimer = setTimeout(() => {
+			document.body.classList.remove("show-step-zones");
+		}, ZONE_HINT_MS);
+	}
+
 	function setupStepToggles() {
 		var state = loadState();
-		var allStepSections = document.querySelectorAll("section");
 		var stepIndex = 0;
 		var stepMap = new Map();
 
-		allStepSections.forEach((section) => {
-			var orderedLists = section.querySelectorAll("ol");
-			orderedLists.forEach((ol) => {
+		document.querySelectorAll("section").forEach((section) => {
+			section.querySelectorAll("ol").forEach((ol) => {
 				ol.classList.add("recipe-steps");
-				var items = ol.querySelectorAll(":scope > li");
-				items.forEach((li) => {
+				ol.querySelectorAll(":scope > li").forEach((li) => {
 					var key = `step-${stepIndex}`;
 					stepIndex++;
 					stepMap.set(li, key);
-
 					if (state[key]) {
 						li.classList.add("completed");
 					}
@@ -147,34 +237,95 @@
 
 			function toggleLi(li) {
 				li.classList.toggle("completed");
-				var key = stepMap.get(li);
 				var currentState = loadState();
-				currentState[key] = li.classList.contains("completed");
-				saveState(currentState);
+				currentState[stepMap.get(li)] = li.classList.contains("completed");
+				saveState(currentState, true);
+				flashStepZones();
 				updateSectionSummaries();
 				updateButtonVisibility();
 			}
 
 			section.addEventListener("click", (e) => {
-				var allItems = section.querySelectorAll("ol.recipe-steps > li");
-				for (var i = 0; i < allItems.length; i++) {
-					var li = allItems[i];
-					var rect = li.getBoundingClientRect();
-					var clickX = e.clientX - rect.left;
-					if (e.clientY >= rect.top && e.clientY <= rect.bottom && clickX < 30) {
-						toggleLi(li);
-						break;
-					}
+				if (e.target.closest("a")) return;
+				if (hasTextSelection()) return;
+				var li = stepAtClick(section, e);
+				if (li && stepMap.has(li)) {
+					toggleLi(li);
 				}
 			});
 
 			section.addEventListener("dblclick", (e) => {
+				if (e.target.closest("a")) return;
 				var li = e.target.closest("ol.recipe-steps > li");
 				if (li && stepMap.has(li)) {
 					toggleLi(li);
 				}
 			});
 		});
+
+		document.addEventListener("selectionchange", () => {
+			if (hasTextSelection()) {
+				clearTimeout(zoneHintTimer);
+				document.body.classList.remove("show-step-zones");
+			}
+		});
+	}
+
+	// Ingredient sections are the `Ingredients` h2 section plus the h3 sub-group sections
+	// that follow it, which djot emits as siblings rather than as children
+	function ingredientSections(main) {
+		var collected = [];
+		var inRun = false;
+		Array.from(main.children).forEach((el) => {
+			if (el.tagName !== "SECTION") return;
+			var h2 = el.querySelector(":scope > h2");
+			if (h2) {
+				inRun = /ingredient/i.test(h2.textContent);
+			}
+			if (inRun) collected.push(el);
+		});
+		return collected;
+	}
+
+	function setupSplitLayout() {
+		var main = document.querySelector("main");
+		if (!main) return;
+
+		var sourceOrder = Array.from(main.children);
+		var ingredients = ingredientSections(main);
+		if (ingredients.length === 0 || ingredients.length === sourceOrder.length) return;
+
+		var left = document.createElement("div");
+		left.className = "split-pane split-pane-ingredients";
+		var right = document.createElement("div");
+		right.className = "split-pane split-pane-body";
+
+		function enterSplit() {
+			if (main.classList.contains("split-layout")) return;
+			sourceOrder.forEach((el) => {
+				(ingredients.includes(el) ? left : right).appendChild(el);
+			});
+			main.append(left, right);
+			main.classList.add("split-layout");
+		}
+
+		function exitSplit() {
+			if (!main.classList.contains("split-layout")) return;
+			sourceOrder.forEach((el) => {
+				main.appendChild(el);
+			});
+			left.remove();
+			right.remove();
+			main.classList.remove("split-layout");
+		}
+
+		var query = window.matchMedia(SPLIT_QUERY);
+		function apply() {
+			if (query.matches) enterSplit();
+			else exitSplit();
+		}
+		query.addEventListener("change", apply);
+		apply();
 	}
 
 	function trackScroll() {
@@ -232,14 +383,10 @@
 
 	function setupSectionFolding() {
 		var state = loadState();
-		var sections = document.querySelectorAll("section");
 
-		sections.forEach((section) => {
-			var h2 = section.querySelector("h2");
-			var h3 = section.querySelector("h3");
-			var heading = h2 || h3;
+		document.querySelectorAll("section").forEach((section) => {
+			var heading = section.querySelector("h2") || section.querySelector("h3");
 			if (!heading) return;
-
 			if (!hasCompletableContent(section)) return;
 
 			var sectionId = section.id || heading.textContent.trim().toLowerCase().replace(/\s+/g, "-");
@@ -281,7 +428,7 @@
 
 				var currentState = loadState();
 				currentState[`collapsed-${sectionId}`] = isCollapsing;
-				saveState(currentState);
+				saveState(currentState, false);
 				updateButtonVisibility();
 			});
 		});
@@ -290,9 +437,7 @@
 	}
 
 	function updateSectionSummaries() {
-		var sections = document.querySelectorAll("section.collapsible");
-
-		sections.forEach((section) => {
+		document.querySelectorAll("section.collapsible").forEach((section) => {
 			var heading = section.querySelector("h2, h3");
 			if (!heading) return;
 
@@ -312,11 +457,10 @@
 			var completedSteps = Array.from(steps).filter((li) =>
 				li.classList.contains("completed"),
 			).length;
-			var completed = completedCheckboxes + completedSteps;
 
 			var summary = document.createElement("span");
 			summary.className = "section-summary";
-			summary.textContent = ` (${completed}/${total})`;
+			summary.textContent = ` (${completedCheckboxes + completedSteps}/${total})`;
 
 			var toggle = heading.querySelector(".collapse-toggle");
 			if (toggle) {
@@ -328,9 +472,7 @@
 	}
 
 	function setupHeaderAnchors() {
-		var sections = document.querySelectorAll("section[id]");
-
-		sections.forEach((section) => {
+		document.querySelectorAll("section[id]").forEach((section) => {
 			var heading = section.querySelector("h2, h3");
 			if (!heading) return;
 
@@ -352,6 +494,7 @@
 	function updateButtonVisibility() {
 		var toggleCollapseBtn = document.getElementById("toggle-collapse-btn");
 		var resetBtn = document.getElementById("reset-btn");
+		var copyBtn = document.getElementById("copy-ingredients-btn");
 
 		var collapsibleSections = document.querySelectorAll("section.collapsible");
 		var collapsedSections = document.querySelectorAll("section.collapsed");
@@ -361,7 +504,6 @@
 
 		if (toggleCollapseBtn && collapsibleSections.length > 0) {
 			toggleCollapseBtn.style.display = "inline-block";
-			// Update button text based on current state
 			if (allCollapsed) {
 				toggleCollapseBtn.textContent = "Expand All";
 				toggleCollapseBtn.title = "Expand all collapsed sections";
@@ -372,6 +514,10 @@
 		}
 		if (resetBtn) {
 			resetBtn.style.display = hasCheckedBoxes || hasCompletedSteps ? "inline-block" : "none";
+		}
+		if (copyBtn) {
+			var hasIngredients = document.querySelectorAll("ul.task-list li").length > 0;
+			copyBtn.style.display = hasIngredients ? "inline-block" : "none";
 		}
 	}
 
@@ -388,19 +534,17 @@
 				delete state[key];
 			}
 		});
-		saveState(state);
+		saveState(state, false);
 
 		updateSectionSummaries();
 		updateButtonVisibility();
 	}
 
 	function collapseAll() {
-		var sections = document.querySelectorAll("section.collapsible:not(.collapsed)");
 		var allCompletedItems = [];
 		var state = loadState();
 
-		sections.forEach((section) => {
-			// Add collapsed class immediately to fix double-click issue
+		document.querySelectorAll("section.collapsible:not(.collapsed)").forEach((section) => {
 			section.classList.add("collapsed");
 			var toggle = section.querySelector(".collapse-toggle");
 			if (toggle) toggle.textContent = "+";
@@ -410,15 +554,13 @@
 				section.querySelector("h2, h3").textContent.trim().toLowerCase().replace(/\s+/g, "-");
 			state[`collapsed-${sectionId}`] = true;
 
-			var completedItems = section.querySelectorAll("li.completed");
-			completedItems.forEach((li) => {
+			section.querySelectorAll("li.completed").forEach((li) => {
 				li.classList.add("hiding");
 				allCompletedItems.push(li);
 			});
 		});
 
-		// Save state immediately
-		saveState(state);
+		saveState(state, false);
 
 		setTimeout(() => {
 			allCompletedItems.forEach((li) => {
@@ -442,12 +584,7 @@
 			li.classList.remove("completed");
 		});
 
-		Object.keys(state).forEach((key) => {
-			if (key.startsWith("ingredient-") || key.startsWith("step-")) {
-				delete state[key];
-			}
-		});
-		saveState(state);
+		saveState(clearProgressKeys(state), false);
 
 		updateSectionSummaries();
 		updateButtonVisibility();
@@ -455,18 +592,38 @@
 
 	function toggleCollapseAll() {
 		var collapsibleSections = document.querySelectorAll("section.collapsible");
-		var collapsedSections = document.querySelectorAll("section.collapsed");
-
-		// Only proceed if there are collapsible sections
 		if (collapsibleSections.length === 0) return;
 
-		var allCollapsed = collapsedSections.length === collapsibleSections.length;
-
-		if (allCollapsed) {
+		var collapsedSections = document.querySelectorAll("section.collapsed");
+		if (collapsedSections.length === collapsibleSections.length) {
 			expandAll();
 		} else {
 			collapseAll();
 		}
+	}
+
+	function uncheckedIngredientsAsDjot() {
+		var lines = [];
+		document.querySelectorAll("ul.task-list li").forEach((li) => {
+			var cb = li.querySelector(":scope > input[type='checkbox']");
+			if (!cb || cb.checked) return;
+			var text = ownText(li);
+			if (text !== "") lines.push(`- ${text}`);
+		});
+		return lines.join("\n");
+	}
+
+	function copyIngredients() {
+		var btn = document.getElementById("copy-ingredients-btn");
+		var djot = uncheckedIngredientsAsDjot();
+		navigator.clipboard.writeText(djot).then(() => {
+			if (!btn) return;
+			btn.textContent = djot === "" ? "Nothing to copy" : "Copied";
+			clearTimeout(copyTimer);
+			copyTimer = setTimeout(() => {
+				btn.textContent = "Copy Ingredients";
+			}, COPY_FEEDBACK_MS);
+		});
 	}
 
 	function setupToolbarToggle() {
@@ -474,7 +631,6 @@
 		var toggleBtn = document.getElementById("toolbar-toggle");
 		if (!toolbar || !toggleBtn) return;
 
-		// Load toolbar visibility state from localStorage
 		var state = loadState();
 		if (state["toolbar-hidden"] === false) {
 			toolbar.classList.remove("hidden");
@@ -484,17 +640,20 @@
 			toolbar.classList.toggle("hidden");
 			var currentState = loadState();
 			currentState["toolbar-hidden"] = toolbar.classList.contains("hidden");
-			saveState(currentState);
+			saveState(currentState, false);
 		});
 	}
 
 	function init() {
+		computeContentHash();
+		purgeExpiredRecipes();
 		setupIngredientCheckboxes();
 		setupStepToggles();
-		trackScroll();
+		setupSplitLayout();
 		setupSectionFolding();
 		setupHeaderAnchors();
 		setupToolbarToggle();
+		trackScroll();
 
 		var backBtn = document.getElementById("back-btn");
 		if (backBtn) {
@@ -509,6 +668,11 @@
 		var resetBtn = document.getElementById("reset-btn");
 		if (resetBtn) {
 			resetBtn.addEventListener("click", resetProgress);
+		}
+
+		var copyBtn = document.getElementById("copy-ingredients-btn");
+		if (copyBtn) {
+			copyBtn.addEventListener("click", copyIngredients);
 		}
 
 		updateButtonVisibility();
