@@ -1,0 +1,45 @@
+# Nested List Demo
+
+A synthetic recipe used by the browser regression tests.
+It deliberately contains the
+structures that make click handling hard: nested ingredient groups, nested numbered
+steps, wrapping lines, and links inside list items.
+
+{ rating="0" image="None" search="none" }
+:::
+:::
+
+## Ingredients
+
+- [ ] Short leaf ingredient
+- [ ] An intentionally long ingredient line that wraps across more than one rendered row so the click target on the second and third visual rows can be checked against the same list item, which is exactly where a naive bounding-box hit test goes wrong
+- [ ] Ingredient linking to [Vegetable Cuts](./vegetable_cuts.dj) for the click-through case
+- [ ] Parent with nested children
+
+      - [ ] First nested child
+      - [ ] Second nested child
+      - [ ] Third nested child
+
+### Sub Group
+
+- [ ] Grouped ingredient one
+- [ ] Grouped ingredient two
+
+## Recipe
+
+1. Plain first step
+
+1. Parent step with nested sub-steps
+
+   1. First nested sub-step
+
+   1. Second nested sub-step
+
+1. An intentionally long step that wraps across several rendered rows so that the margin
+click zone can be verified on a continuation row rather than only on the first row of
+the list item, since the bounding box of a wrapped item covers every row
+1. Step containing a [link to Instant Pot Broth](./instant_pot_broth.dj)
+
+## Notes
+
+- This page is excluded from the search index and exists only for regression tests

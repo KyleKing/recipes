@@ -133,6 +133,7 @@ func formattedDivPartial(publicDir string, path string, rMap RecipeMap) func(djo
 		if len(imagePath) > 0 {
 			recipe := NewRecipe(dirUrl, path, imagePath)
 			recipe.rating = ratingInt
+			recipe.searchable = s.Node.Attributes.Get("search") != "none"
 			rMap[path] = recipe
 		}
 

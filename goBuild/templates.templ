@@ -12,8 +12,14 @@ import (
 const (
 	GENERATED_PAGE = "gen"
 	CONTENT_PAGE   = "content"
-	SEARCH_PAGE    = "search"
+	// Recipe page with the full interactive toolbar but omitted from the search index
+	CONTENT_PAGE_NOINDEX = "content-noindex"
+	SEARCH_PAGE          = "search"
 )
+
+func isRecipePage(pageType string) bool {
+	return pageType == CONTENT_PAGE || pageType == CONTENT_PAGE_NOINDEX
+}
 
 templ page(title string, contents templ.Component, pageType string, socialMeta SocialMeta) {
 	<!DOCTYPE html>
@@ -53,7 +59,7 @@ templ page(title string, contents templ.Component, pageType string, socialMeta S
 			<main data-pagefind-body?={ pageType == CONTENT_PAGE }>
 				@contents
 			</main>
-			if pageType == CONTENT_PAGE {
+			if isRecipePage(pageType) {
 				<div id="recipe-toolbar" class="recipe-toolbar hidden">
 					<div id="toolbar-buttons" class="toolbar-buttons">
 						<button id="back-btn" class="toolbar-btn" title="Return to previous position" style="display:none">
@@ -77,7 +83,14 @@ templ page(title string, contents templ.Component, pageType string, socialMeta S
 }
 
 templ recipePage(title string, content string, recipe Recipe) {
-	@page(title, recipePageContent(content, recipe), CONTENT_PAGE, NewSocialMeta(title, "Recipe from Kyle and Alex's Personal Recipes", recipe.imagePath, recipe.url))
+	@page(title, recipePageContent(content, recipe), recipePageType(recipe), NewSocialMeta(title, "Recipe from Kyle and Alex's Personal Recipes", recipe.imagePath, recipe.url))
+}
+
+func recipePageType(recipe Recipe) string {
+	if recipe.searchable {
+		return CONTENT_PAGE
+	}
+	return CONTENT_PAGE_NOINDEX
 }
 
 templ recipePageContent(content string, recipe Recipe) {

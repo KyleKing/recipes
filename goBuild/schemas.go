@@ -51,6 +51,7 @@ type Recipe struct {
 	relatedRecipes   []RelatedRecipe
 	ingredientTokens []string
 	totalRecipeCount int
+	searchable       bool
 }
 
 func NewRecipe(dirUrl string, path string, imagePath string) Recipe {
@@ -60,6 +61,7 @@ func NewRecipe(dirUrl string, path string, imagePath string) Recipe {
 		name:       toTitleName(path),
 		url:        "/" + filepath.Join(dirUrl, withHtmlExt(filepath.Base(path))),
 		rating:     -1,
+		searchable: true,
 		createdAt:  time.Time{},
 		modifiedAt: time.Time{},
 		category:   toTitleName(dirUrl),
