@@ -219,7 +219,7 @@ templ noMatchesSection(recipe Recipe) {
 					<p class="ingredient-tokens">{ strings.Join(recipe.ingredientTokens, ", ") }</p>
 					<p>
 						This recipe may have a unique combination of ingredients that doesn't strongly match any other recipe in the collection.
-						Try browsing the <a href={ templ.URL("/" + recipe.category) }>{ recipe.category }</a> category.
+						Try browsing the <a href={ templ.URL("/" + recipe.dirUrl) }>{ recipe.category }</a> category.
 					</p>
 				</div>
 			</details>
