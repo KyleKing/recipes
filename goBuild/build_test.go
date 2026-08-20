@@ -146,6 +146,13 @@ func TestValidateInternalLinks(t *testing.T) {
 		require.Error(t, err)
 		assert.Contains(t, err.Error(), "None.jpeg")
 	})
+
+	t.Run("case-mismatched href fails even on a case-insensitive filesystem", func(t *testing.T) {
+		write(t, `<a href="/Main/target.html">x</a>`)
+		err := validateInternalLinks(publicDir)
+		require.Error(t, err)
+		assert.Contains(t, err.Error(), "/Main/target.html")
+	})
 }
 
 func TestBuild(t *testing.T) {

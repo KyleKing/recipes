@@ -73,6 +73,35 @@ func resolveInternalRef(publicDir string, dir string, ref string) (string, bool)
 	return filepath.Join(dir, ref), true
 }
 
+// Check target exists under base with exact path-component casing, so a macOS or Windows
+// checkout (case-insensitive filesystem) still catches a mismatched-case reference the way
+// Linux CI would
+func existsCaseSensitive(base string, target string) bool {
+	rel, err := filepath.Rel(base, target)
+	if err != nil || rel == "." || strings.HasPrefix(rel, "..") {
+		return rel == "."
+	}
+	current := base
+	for _, part := range strings.Split(rel, string(filepath.Separator)) {
+		entries, err := os.ReadDir(current)
+		if err != nil {
+			return false
+		}
+		found := false
+		for _, entry := range entries {
+			if entry.Name() == part {
+				found = true
+				break
+			}
+		}
+		if !found {
+			return false
+		}
+		current = filepath.Join(current, part)
+	}
+	return true
+}
+
 // Walk all generated HTML files and fail if any href or src targets a missing file
 func validateInternalLinks(publicDir string) error {
 	var broken []string
@@ -91,7 +120,7 @@ func validateInternalLinks(publicDir string) error {
 			if !needsCheck {
 				continue
 			}
-			if _, err := os.Stat(target); os.IsNotExist(err) {
+			if !existsCaseSensitive(publicDir, target) {
 				broken = append(broken, fmt.Sprintf("  %s: broken reference %q -> %s", path, ref, target))
 			}
 		}

@@ -54,6 +54,10 @@ local linters = new Mapping<String, Step> {
 // Browser tests run on code changes (not recipe updates)
 // Verifies interactive features: checkboxes, collapse, localStorage, etc.
 local tests = new Mapping<String, Step> {
+    ["go-test"] {
+        glob = List("**/*.go", "**/*.templ", "goBuild/**/*")
+        check = "go test ./..."
+    }
     ["browser-tests"] {
         glob = List("**/*.go", "**/*.templ", "**/*.js", "**/*.css", "goBuild/**/*")
         check = "./scripts/run_browser_tests.sh"
