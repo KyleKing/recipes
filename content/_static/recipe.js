@@ -329,12 +329,6 @@
 		var ingredients = ingredientSections(main);
 		if (ingredients.length === 0 || ingredients.length === sourceOrder.length) return;
 
-		// Title, description, rating, and image note sit before Ingredients in source
-		// order; they get their own full-width strip so neither pane starts buried under them
-		var header = sourceOrder.slice(0, sourceOrder.indexOf(ingredients[0]));
-
-		var headerPane = document.createElement("div");
-		headerPane.className = "split-header";
 		var stepsPane = document.createElement("div");
 		stepsPane.className = "split-pane split-pane-body";
 		var ingredientsPane = document.createElement("div");
@@ -343,10 +337,8 @@
 		function enterSplit() {
 			if (main.classList.contains("split-layout")) return;
 			sourceOrder.forEach((el) => {
-				if (header.includes(el)) headerPane.appendChild(el);
-				else (ingredients.includes(el) ? ingredientsPane : stepsPane).appendChild(el);
+				(ingredients.includes(el) ? ingredientsPane : stepsPane).appendChild(el);
 			});
-			if (header.length > 0) main.append(headerPane);
 			main.append(stepsPane, ingredientsPane);
 			main.classList.add("split-layout");
 		}
@@ -356,7 +348,6 @@
 			sourceOrder.forEach((el) => {
 				main.appendChild(el);
 			});
-			headerPane.remove();
 			stepsPane.remove();
 			ingredientsPane.remove();
 			main.classList.remove("split-layout");

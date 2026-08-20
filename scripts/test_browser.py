@@ -813,26 +813,15 @@ def test_split_pane_ingredients_clears_the_floating_toolbar(ipad_page: Page):
     assert last_content_bottom <= toolbar_top
 
 
-def test_split_header_spans_both_panes(ipad_page: Page):
-    """Title, description, and rating sit above the columns instead of inside either pane."""
-    header = ipad_page.locator(".split-header")
-    expect(header).to_be_visible()
-    expect(header.locator("h1")).to_have_text("Nested List Demo")
+def test_split_pane_body_keeps_title_inline(ipad_page: Page):
+    """Title, description, and rating stay with the recipe pane instead of a separate strip."""
+    expect(ipad_page.locator(".split-header")).to_have_count(0)
+    expect(ipad_page.locator(".split-pane-body h1")).to_have_text("Nested List Demo")
 
-    header_box = header.evaluate("el => el.getBoundingClientRect()")
-    steps_box = ipad_page.locator(".split-pane-body").evaluate("el => el.getBoundingClientRect()")
+    body_box = ipad_page.locator(".split-pane-body").evaluate("el => el.getBoundingClientRect()")
     ingredients_box = ipad_page.locator(".split-pane-ingredients").evaluate("el => el.getBoundingClientRect()")
-
-    assert header_box["width"] > steps_box["width"], "the header spans wider than either pane"
-    assert header_box["bottom"] <= steps_box["top"] + 1
-    assert header_box["bottom"] <= ingredients_box["top"] + 1
-
-    first_section_ids = ipad_page.evaluate(
-        """[".split-pane-body", ".split-pane-ingredients"].map(
-            sel => document.querySelector(sel + " > :first-child").id
-        )"""
-    )
-    assert first_section_ids == ["Recipe", "Ingredients"]
+    assert body_box["width"] > ingredients_box["width"], "steps get the wider column"
+    assert body_box["right"] <= ingredients_box["left"] + 1, "ingredients sit on the right"
 
 
 def test_split_toggle_btn_forces_single_column(ipad_page: Page):

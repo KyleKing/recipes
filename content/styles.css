@@ -453,7 +453,6 @@ body.show-step-zones ol.recipe-steps > li::before {
 	main.split-layout {
 		display: grid;
 		grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-		grid-template-rows: auto 1fr;
 		gap: 24px;
 		flex: 1 1 auto;
 		min-height: 0;
@@ -461,10 +460,6 @@ body.show-step-zones ol.recipe-steps > li::before {
 		max-width: none;
 		padding: 0 16px;
 		box-sizing: border-box;
-	}
-
-	main.split-layout .split-header {
-		grid-column: 1 / -1;
 	}
 
 	main.split-layout .split-pane {
