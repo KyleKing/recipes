@@ -62,7 +62,7 @@ uv run scripts/test_browser.py -k test_ingredient_checkbox_toggle -v
 Browser tests verify interactive features:
 
 - Ingredient checkbox toggling and localStorage persistence
-- Recipe step marking (margin click and double-click), including nested sub-steps
+- Recipe step marking, including nested sub-steps
 - Section collapse/expand with progress summaries
 - Reset progress, collapse all, toolbar toggle, copy remaining ingredients
 - 48h progress expiry and cross-recipe sweeping of stale localStorage keys
@@ -196,12 +196,19 @@ silently.
 
 **Interaction rules** (`content/_static/recipe.js`):
 
+- Ingredients and steps share one row model. A row's `.item-label` is its only toggle
+    target and is at least 44px tall; `--row-gap` in `content/styles.css` keeps adjacent
+    toggles from abutting. Widen `--row-control` and the label's `max-width` together, or
+    the trailing button starts overlapping the text
+- A row that references ingredients also carries a `.row-link` button beside its label.
+    It selects rather than toggles: one selection at a time, mutual, and the docked panel
+    shows the other side (a step's amounts, or an ingredient's substitutes)
 - An item toggles only itself. Checking a parent ingredient or step never cascades to its
     nested children, and clicking a child never marks the parent
-- A step responds to clicks in its left zone (30px, 44px on a coarse pointer) measured
-    from its own left edge, plus the marker gutter. A step that contains sub-steps owns
-    only the rows it renders itself, so the rows below belong to the sub-steps
 - A drag that produces a text selection never toggles anything
+- `unmeasured` -> `measured` -> `spent` are three separate ingredient states. Checking a
+    row means measured; completing a step marks the ingredients it references as spent.
+    Spent is derived from step state on every load, never stored
 - Progress keys expire 48h after the last progress change. Collapsing a section or
     hiding the toolbar is not progress and does not restart that window
 - On a coarse-pointer device in landscape (iPad-sized), the recipe splits into two
@@ -221,6 +228,20 @@ silently.
     - Subheaders: `### Component Name` (e.g., `### Chicken`, `### White sauce`)
     - Nested lists: One level of indentation with descriptive parent item (e.g., `- In a small bowl, whisk together`)
 - Use grouping sparingly - only when components are clearly distinct
+
+### Ingredient references
+
+Steps bind to ingredients through an explicit djot span, `[brown sugar]{ing="brown-sugar"}`,
+on both the ingredient that declares the key and the step prose that uses it. One span may
+name several keys (`ing="brown-sugar granulated-sugar"`). The build fails when a step
+references a key no ingredient in that file declares, since retirement would otherwise do
+nothing. Name matching was rejected: it binds only 72% of steps.
+
+`goBuild/substitutions.go` parses `content/reference/*substitutions*.dj` into
+`public/_static/substitutions.json`, keyed by ingredient. A heading follows
+`### <amount> <Name>[, <use>]`; add `{ing="..."}` above a heading the pattern cannot read.
+`goBuild/ingredient_refs.go` writes `public/_static/ingredient-index.json`, mapping each
+key to the recipes declaring it. The page fetches both lazily on the first panel open.
 
 **Categories**: Subdirectories in `content/`:
 

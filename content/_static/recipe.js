@@ -4,10 +4,9 @@
 	var BACK_BUTTON_FADE_MS = 5000;
 	var PROGRESS_MAX_AGE_MS = 48 * 60 * 60 * 1000;
 	var STORAGE_PREFIX = "recipe-progress-";
-	var STEP_ZONE_PX = 30;
-	var STEP_ZONE_TOUCH_PX = 44;
-	var ZONE_HINT_MS = 2000;
 	var COPY_FEEDBACK_MS = 1500;
+	var SUBSTITUTIONS_URL = "/_static/substitutions.json";
+	var INGREDIENT_INDEX_URL = "/_static/ingredient-index.json";
 	var SPLIT_QUERY =
 		"(pointer: coarse) and (orientation: landscape) and (min-width: 900px) and (max-height: 900px)";
 	var SPLIT_DISABLED_KEY = "recipe-split-disabled";
@@ -15,7 +14,6 @@
 	var scrollStack = [];
 	var scrollTimer = null;
 	var fadeTimer = null;
-	var zoneHintTimer = null;
 	var copyTimer = null;
 	var lastScrollY = 0;
 	var cachedContentHash = null;
@@ -163,145 +161,322 @@
 
 	function ownText(li) {
 		var clone = li.cloneNode(true);
-		clone.querySelectorAll("ul, ol, input").forEach((node) => {
+		clone.querySelectorAll("ul, ol, input, .row-link").forEach((node) => {
 			node.remove();
 		});
 		return clone.textContent.replace(/\s+/g, " ").trim();
 	}
 
-	function setupIngredientCheckboxes() {
+	var ingredientRows = [];
+	var stepRows = [];
+	var rowsByKey = new Map();
+	var selectedRow = null;
+
+	function keysOf(label) {
+		var keys = [];
+		label.querySelectorAll(".ing-ref").forEach((span) => {
+			span.dataset.ing.split(/\s+/).forEach((key) => {
+				if (key !== "" && !keys.includes(key)) keys.push(key);
+			});
+		});
+		return keys;
+	}
+
+	function registerRow(row) {
+		(row.kind === "ingredient" ? ingredientRows : stepRows).push(row);
+		row.keys.forEach((key) => {
+			if (!rowsByKey.has(key)) rowsByKey.set(key, { ingredient: [], step: [] });
+			rowsByKey.get(key)[row.kind].push(row);
+		});
+	}
+
+	// Every row carries the same two controls: the label toggles it done, the trailing
+	// button selects it. No row responds to a click anywhere else.
+	function buildRow(li, kind, key) {
+		wrapOwnLabel(li);
+		var label = li.querySelector(":scope > .item-label");
+		var row = { li: li, label: label, kind: kind, storageKey: key, keys: keysOf(label) };
+		li.classList.add("recipe-row");
+
+		label.addEventListener("click", (e) => {
+			if (e.target.closest("a")) return;
+			if (hasTextSelection()) return;
+			toggleRow(row);
+		});
+
+		if (row.keys.length > 0) {
+			var link = document.createElement("button");
+			link.type = "button";
+			link.className = "row-link";
+			link.setAttribute(
+				"aria-label",
+				kind === "ingredient"
+					? "Show substitutes and the steps using this"
+					: "Show this step's ingredients",
+			);
+			link.textContent = kind === "ingredient" ? "?" : "\u2261";
+			link.addEventListener("click", () => {
+				selectRow(selectedRow === row ? null : row);
+			});
+			label.after(link);
+			row.link = link;
+		}
+
+		registerRow(row);
+		return row;
+	}
+
+	function isDone(row) {
+		return row.li.classList.contains("completed");
+	}
+
+	function toggleRow(row) {
+		var done = !isDone(row);
+		row.li.classList.toggle("completed", done);
+		if (row.kind === "ingredient") {
+			var cb = row.li.querySelector(":scope > input[type='checkbox']");
+			if (cb) cb.checked = done;
+		}
+
 		var state = loadState();
-		var globalIndex = 0;
+		state[row.storageKey] = done;
+		saveState(state, true);
+
+		applyRetirement();
+		updateSectionSummaries();
+		updateButtonVisibility();
+	}
+
+	// A step consumes its ingredients: completing it spends them, and an ingredient stays
+	// spent only while some completed step still claims it
+	function applyRetirement() {
+		var spent = new Set();
+		stepRows.forEach((row) => {
+			if (isDone(row)) {
+				row.keys.forEach((key) => {
+					spent.add(key);
+				});
+			}
+		});
+		ingredientRows.forEach((row) => {
+			row.li.classList.toggle(
+				"spent",
+				row.keys.some((key) => spent.has(key)),
+			);
+		});
+	}
+
+	function setupIngredientRows() {
+		var state = loadState();
+		var index = 0;
 
 		document.querySelectorAll("ul.task-list").forEach((list) => {
 			list.querySelectorAll(":scope > li").forEach((li) => {
 				var cb = li.querySelector(":scope > input[type='checkbox']");
 				if (!cb) return;
 
-				var key = `ingredient-${globalIndex}`;
-				globalIndex++;
+				var key = `ingredient-${index}`;
+				index++;
 				cb.dataset.storageKey = key;
-				wrapOwnLabel(li);
-
 				if (state[key]) {
 					cb.checked = true;
 					li.classList.add("completed");
 				}
-
-				li.style.cursor = "pointer";
-				li.addEventListener("click", (e) => {
-					if (e.target.closest("a")) return;
-					// A nested item handles its own click; the parent never cascades to children
-					if (e.target.closest("li") !== li) return;
-					if (hasTextSelection()) return;
-
-					cb.checked = !cb.checked;
-					li.classList.toggle("completed", cb.checked);
-
-					var currentState = loadState();
-					currentState[key] = cb.checked;
-					saveState(currentState, true);
-					updateSectionSummaries();
-					updateButtonVisibility();
-				});
+				buildRow(li, "ingredient", key);
 			});
 		});
 	}
 
-	function stepZoneWidth() {
-		return window.matchMedia("(pointer: coarse)").matches ? STEP_ZONE_TOUCH_PX : STEP_ZONE_PX;
-	}
-
-	// A step owns only the rows it renders itself: the rows below a nested list belong to
-	// the sub-steps drawn there, so the parent's clickable band stops where that list starts
-	function ownExtent(li) {
-		var rect = li.getBoundingClientRect();
-		var nested = li.querySelector(":scope > ol");
-		return {
-			top: rect.top,
-			bottom: nested ? nested.getBoundingClientRect().top : rect.bottom,
-			left: rect.left,
-		};
-	}
-
-	function stepAtClick(section, e) {
-		var zone = stepZoneWidth();
-		var match = null;
-		section.querySelectorAll("ol.recipe-steps > li").forEach((li) => {
-			var extent = ownExtent(li);
-			if (e.clientY < extent.top || e.clientY > extent.bottom) return;
-			if (e.clientX >= extent.left + zone) return;
-			if (e.clientX < li.parentElement.getBoundingClientRect().left) return;
-			if (!match || extent.left > match.left) match = { li: li, left: extent.left };
-		});
-		return match?.li;
-	}
-
-	// Sizes each tint to the band that actually responds to a click, then reveals them all
-	function flashStepZones() {
-		document.querySelectorAll("ol.recipe-steps > li").forEach((li) => {
-			var extent = ownExtent(li);
-			li.style.setProperty("--zone-height", `${extent.bottom - extent.top}px`);
-		});
-		document.body.classList.add("show-step-zones");
-		clearTimeout(zoneHintTimer);
-		zoneHintTimer = setTimeout(() => {
-			document.body.classList.remove("show-step-zones");
-		}, ZONE_HINT_MS);
-	}
-
-	function setupStepToggles() {
+	function setupStepRows() {
 		var state = loadState();
-		var stepIndex = 0;
-		var stepMap = new Map();
+		var index = 0;
 
-		document.querySelectorAll("section").forEach((section) => {
-			section.querySelectorAll("ol").forEach((ol) => {
-				ol.classList.add("recipe-steps");
-				ol.querySelectorAll(":scope > li").forEach((li) => {
-					var key = `step-${stepIndex}`;
-					stepIndex++;
-					stepMap.set(li, key);
-					wrapOwnLabel(li);
-					if (state[key]) {
-						li.classList.add("completed");
-					}
-				});
+		document.querySelectorAll("section ol").forEach((ol) => {
+			ol.classList.add("recipe-steps");
+			ol.querySelectorAll(":scope > li").forEach((li) => {
+				var key = `step-${index}`;
+				index++;
+				if (state[key]) li.classList.add("completed");
+				var row = buildRow(li, "step", key);
+				row.number = Array.from(ol.children).indexOf(li) + 1;
 			});
+		});
+	}
 
-			function toggleLi(li) {
-				li.classList.toggle("completed");
-				var currentState = loadState();
-				currentState[stepMap.get(li)] = li.classList.contains("completed");
-				saveState(currentState, true);
-				flashStepZones();
-				updateSectionSummaries();
-				updateButtonVisibility();
-			}
+	var referenceData = null;
 
-			section.addEventListener("click", (e) => {
-				if (e.target.closest("a")) return;
-				if (hasTextSelection()) return;
-				var li = stepAtClick(section, e);
-				if (li && stepMap.has(li)) {
-					toggleLi(li);
-				}
+	// Both tables are static build output, so one fetch per page load serves every dossier
+	function loadReferenceData() {
+		if (referenceData) return referenceData;
+		referenceData = Promise.all([
+			fetch(SUBSTITUTIONS_URL).then((r) => r.json()),
+			fetch(INGREDIENT_INDEX_URL).then((r) => r.json()),
+		])
+			.then(([substitutions, index]) => ({ substitutions: substitutions, index: index }))
+			.catch(() => ({ substitutions: {}, index: {} }));
+		return referenceData;
+	}
+
+	function panelElement() {
+		var panel = document.getElementById("recipe-panel");
+		if (panel) return panel;
+		panel = document.createElement("aside");
+		panel.id = "recipe-panel";
+		panel.className = "recipe-panel";
+		panel.hidden = true;
+		var close = document.createElement("button");
+		close.type = "button";
+		close.className = "panel-close";
+		close.setAttribute("aria-label", "Close");
+		close.textContent = "\u00d7";
+		close.addEventListener("click", () => {
+			selectRow(null);
+		});
+		var body = document.createElement("div");
+		body.className = "panel-body";
+		panel.append(close, body);
+		document.body.appendChild(panel);
+		return panel;
+	}
+
+	function heading(body, text) {
+		var el = document.createElement("h2");
+		el.className = "panel-title";
+		el.textContent = text;
+		body.appendChild(el);
+	}
+
+	function paragraph(body, text, className) {
+		var el = document.createElement("p");
+		if (className) el.className = className;
+		el.textContent = text;
+		body.appendChild(el);
+	}
+
+	function jumpButton(body, row, text) {
+		var btn = document.createElement("button");
+		btn.type = "button";
+		btn.className = "panel-jump";
+		btn.textContent = text;
+		btn.addEventListener("click", () => {
+			selectRow(row);
+			row.li.scrollIntoView({ behavior: "smooth", block: "center" });
+		});
+		body.appendChild(btn);
+	}
+
+	function renderStepPanel(body, row) {
+		heading(body, `Step ${row.number} needs`);
+		row.keys.forEach((key) => {
+			(rowsByKey.get(key)?.ingredient || []).forEach((ingredient) => {
+				jumpButton(body, ingredient, ownText(ingredient.li));
 			});
+		});
+	}
 
-			section.addEventListener("dblclick", (e) => {
-				if (e.target.closest("a")) return;
-				var li = e.target.closest("ol.recipe-steps > li");
-				if (li && stepMap.has(li)) {
-					toggleLi(li);
-				}
+	function renderSubstitution(body, entry) {
+		var block = document.createElement("div");
+		block.className = "panel-substitution";
+		var title = document.createElement("h3");
+		title.textContent = entry.use
+			? `${entry.amount} ${entry.name} (${entry.use})`
+			: `${entry.amount} ${entry.name}`;
+		block.appendChild(title);
+		var list = document.createElement("ul");
+		entry.items.forEach((item) => {
+			var li = document.createElement("li");
+			li.textContent = item;
+			list.appendChild(li);
+		});
+		block.appendChild(list);
+		if (entry.note) {
+			var note = document.createElement("p");
+			note.className = "panel-note";
+			note.textContent = entry.note;
+			block.appendChild(note);
+		}
+		var link = document.createElement("a");
+		link.href = entry.href;
+		link.textContent = "Full entry";
+		block.appendChild(link);
+		body.appendChild(block);
+	}
+
+	function renderIngredientPanel(body, row, data) {
+		heading(body, ownText(row.li));
+
+		var entries = row.keys.flatMap((key) => data.substitutions[key] || []);
+		if (entries.length > 0) {
+			entries.forEach((entry) => {
+				renderSubstitution(body, entry);
+			});
+		} else {
+			paragraph(body, "No substitute recorded for this ingredient.", "panel-empty");
+		}
+
+		var steps = row.keys.flatMap((key) => rowsByKey.get(key)?.step || []);
+		if (steps.length > 0) {
+			paragraph(body, "Used in", "panel-label");
+			steps.forEach((step) => {
+				jumpButton(body, step, `Step ${step.number}: ${ownText(step.li)}`);
+			});
+		}
+
+		var elsewhere = row.keys
+			.flatMap((key) => data.index[key] || [])
+			.filter((use) => use.url !== window.location.pathname);
+		if (elsewhere.length > 0) {
+			paragraph(body, "Also used in", "panel-label");
+			var list = document.createElement("ul");
+			list.className = "panel-recipes";
+			elsewhere.forEach((use) => {
+				var li = document.createElement("li");
+				var link = document.createElement("a");
+				link.href = use.url;
+				link.textContent = use.name;
+				li.appendChild(link);
+				list.appendChild(li);
+			});
+			body.appendChild(list);
+		}
+	}
+
+	// One selection at a time and mutual: a selected step lights its ingredients, a selected
+	// ingredient lights the steps that use it, and the panel shows the other side's detail
+	function selectRow(row) {
+		selectedRow = row;
+		document.querySelectorAll(".recipe-row.selected, .recipe-row.lit").forEach((li) => {
+			li.classList.remove("selected", "lit");
+		});
+		document.body.classList.toggle("has-selection", Boolean(row));
+
+		var panel = panelElement();
+		if (!row) {
+			panel.hidden = true;
+			return;
+		}
+
+		row.li.classList.add("selected");
+		var counterpart = row.kind === "ingredient" ? "step" : "ingredient";
+		row.keys.forEach((key) => {
+			(rowsByKey.get(key)?.[counterpart] || []).forEach((other) => {
+				other.li.classList.add("lit");
 			});
 		});
 
-		document.addEventListener("selectionchange", () => {
-			if (hasTextSelection()) {
-				clearTimeout(zoneHintTimer);
-				document.body.classList.remove("show-step-zones");
-			}
+		var body = panel.querySelector(".panel-body");
+		body.textContent = "";
+		panel.hidden = false;
+
+		if (row.kind === "step") {
+			renderStepPanel(body, row);
+			return;
+		}
+		paragraph(body, "Loading\u2026", "panel-empty");
+		loadReferenceData().then((data) => {
+			if (selectedRow !== row) return;
+			body.textContent = "";
+			renderIngredientPanel(body, row, data);
 		});
 	}
 
@@ -641,6 +816,9 @@
 
 		saveState(clearProgressKeys(state), false);
 
+		selectRow(null);
+		applyRetirement();
+
 		updateSectionSummaries();
 		updateButtonVisibility();
 	}
@@ -714,8 +892,9 @@
 	function init() {
 		computeContentHash();
 		purgeExpiredRecipes();
-		setupIngredientCheckboxes();
-		setupStepToggles();
+		setupIngredientRows();
+		setupStepRows();
+		applyRetirement();
 		setupSplitLayout();
 		setupSectionFolding();
 		setupHeaderAnchors();

@@ -10,8 +10,10 @@
 
 Tests verify:
 - Ingredient checkbox toggling, and that a parent never cascades to nested children
-- Recipe step marking via the left click zone and via double-click, including nested steps
-- Click zone width, its touch-sized variant, and the post-toggle highlight affordance
+- Recipe step marking, including nested steps, via the same row model as ingredients
+- Row geometry: a touch-sized label target, a separate trailing selector, no abutting targets
+- Retirement: completing a step spends the ingredients it references
+- Mutual selection and the ingredient dossier built from the reference substitution pages
 - Text selection never toggles an item
 - Section collapse/expand with progress summaries
 - Floating toolbar: visibility, persistence, per-button visibility rules, inertness when hidden
@@ -42,13 +44,14 @@ BASE_URL = "http://localhost:8000"
 TEST_RECIPE = "/main/fried_rice.html"
 DEMO_RECIPE = "/reference/nested_list_demo.html"  # Nested lists, wrapping lines, links
 RECIPE_WITH_LINKS = "/main/chickpea_tikka_masala.html"
+KEYED_RECIPE = "/dessert/chocolate_chip_cookies.html"  # Carries `ing=` step references
 
 IPAD_MINI_LANDSCAPE = {"width": 1133, "height": 744}
 EXPIRY_MS = 48 * 60 * 60 * 1000
 
-# Matches the JS constants in content/_static/recipe.js
-STEP_ZONE_PX = 30
-STEP_ZONE_TOUCH_PX = 44
+# Matches `--row-control` and `--row-gap` in content/styles.css
+ROW_CONTROL_PX = 44
+ROW_GAP_PX = 6
 
 
 @pytest.fixture(scope="session")
@@ -79,6 +82,12 @@ def demo_page(page: Page):
     return _fresh(page, DEMO_RECIPE)
 
 
+@pytest.fixture
+def keyed_page(page: Page):
+    """Navigate to the recipe whose steps carry explicit ingredient references."""
+    return _fresh(page, KEYED_RECIPE)
+
+
 def storage_key(page: Page) -> str:
     return page.evaluate("`recipe-progress-${location.pathname}`")
 
@@ -101,17 +110,11 @@ def age_progress(page: Page, hours: float, key: str | None = None) -> None:
     )
 
 
-def click_step_at(page: Page, step, offset_x: float, offset_y: float | None = None) -> None:
-    """Click a step `offset_x` px from its own left edge, `offset_y` px from its top.
-
-    A step containing sub-steps is only its own first row; the rows below it belong to
-    the nested list, so pass `offset_y` to target a specific row.
-    """
-    step.scroll_into_view_if_needed()
-    box = step.bounding_box()
-    assert box is not None
-    y = box["y"] + (box["height"] / 2 if offset_y is None else offset_y)
-    page.mouse.click(box["x"] + offset_x, y)
+def toggle(item) -> None:
+    """Mark an item done by clicking its own label, the only target that toggles it."""
+    label = item.locator("> .item-label")
+    label.scroll_into_view_if_needed()
+    label.click()
 
 
 def test_server_is_running(page: Page):
@@ -132,11 +135,11 @@ def test_ingredient_checkbox_toggle(recipe_page: Page):
     expect(checkbox).not_to_be_checked()
     expect(first_ingredient).not_to_have_class(re.compile("completed"))
 
-    first_ingredient.click()
+    toggle(first_ingredient)
     expect(checkbox).to_be_checked()
     expect(first_ingredient).to_have_class(re.compile("completed"))
 
-    first_ingredient.click()
+    toggle(first_ingredient)
     expect(checkbox).not_to_be_checked()
     expect(first_ingredient).not_to_have_class(re.compile("completed"))
 
@@ -151,7 +154,7 @@ def test_ingredient_parent_does_not_cascade_to_nested(demo_page: Page):
     expect(nested).to_have_count(3)
 
     # Click the parent's own text row, above the nested list
-    parent.click(position={"x": 40, "y": 8})
+    toggle(parent)
 
     expect(parent_checkbox).to_be_checked()
     expect(parent.locator("ul.task-list input[type='checkbox']:checked")).to_have_count(0)
@@ -162,7 +165,7 @@ def test_nested_ingredient_does_not_toggle_parent(demo_page: Page):
     parent = demo_page.locator("ul.task-list > li:has(ul.task-list)").first
     child = parent.locator("ul.task-list > li").first
 
-    child.click()
+    toggle(child)
 
     expect(child.locator("input[type='checkbox']")).to_be_checked()
     expect(parent.locator("> input[type='checkbox']")).not_to_be_checked()
@@ -190,7 +193,7 @@ def _paints_strikethrough(page: Page, selector: str) -> bool:
 def test_completed_parent_does_not_strike_nested_children(demo_page: Page):
     """A checked parent must not paint its line-through over unchecked children."""
     parent = demo_page.locator("ul.task-list > li:has(ul.task-list)").first
-    parent.click(position={"x": 40, "y": 8})
+    toggle(parent)
     expect(parent.locator("> input[type='checkbox']")).to_be_checked()
 
     child = "ul.task-list > li:has(ul.task-list) ul.task-list > li"
@@ -204,7 +207,7 @@ def test_completed_parent_does_not_strike_nested_children(demo_page: Page):
 def test_completed_parent_step_does_not_strike_nested_steps(demo_page: Page):
     """A completed step must not paint its line-through over its sub-steps."""
     parent_step = demo_page.locator("ol.recipe-steps > li:has(ol)").first
-    click_step_at(demo_page, parent_step, 5, offset_y=10)
+    toggle(parent_step)
     expect(parent_step).to_have_class(re.compile("completed"))
 
     assert _paints_strikethrough(demo_page, "ol.recipe-steps > li:has(ol) > ol > li") is False
@@ -232,13 +235,14 @@ def test_link_clicks_dont_toggle_checkboxes(page: Page):
 def test_text_selection_does_not_toggle_ingredient(demo_page: Page):
     """Dragging to select ingredient text must not check the item off."""
     long_item = demo_page.locator("ul.task-list > li").nth(1)
-    long_item.scroll_into_view_if_needed()
-    box = long_item.bounding_box()
+    label = long_item.locator("> .item-label")
+    label.scroll_into_view_if_needed()
+    box = label.bounding_box()
     assert box is not None
 
-    demo_page.mouse.move(box["x"] + 30, box["y"] + 8)
+    demo_page.mouse.move(box["x"] + 30, box["y"] + 20)
     demo_page.mouse.down()
-    demo_page.mouse.move(box["x"] + 260, box["y"] + 8, steps=10)
+    demo_page.mouse.move(box["x"] + 260, box["y"] + 20, steps=10)
     demo_page.mouse.up()
 
     assert demo_page.evaluate("window.getSelection().toString().trim()") != ""
@@ -248,187 +252,243 @@ def test_text_selection_does_not_toggle_ingredient(demo_page: Page):
 # --- Recipe steps -----------------------------------------------------------
 
 
-def test_recipe_step_margin_click(demo_page: Page):
-    """Clicking the left zone of a step toggles completion."""
+def test_recipe_step_toggle(demo_page: Page):
+    """Clicking a step's label toggles completion, the same gesture ingredients use."""
     first_step = demo_page.locator("ol.recipe-steps > li").first
 
     expect(first_step).not_to_have_class(re.compile("completed"))
-    click_step_at(demo_page, first_step, 5)
+    toggle(first_step)
     expect(first_step).to_have_class(re.compile("completed"))
-
-
-def test_step_click_beyond_zone_does_not_toggle(demo_page: Page):
-    """Clicking in the body of a step leaves it alone, so text stays selectable."""
-    first_step = demo_page.locator("ol.recipe-steps > li").first
-
-    click_step_at(demo_page, first_step, STEP_ZONE_PX + 20)
-
+    toggle(first_step)
     expect(first_step).not_to_have_class(re.compile("completed"))
 
 
-def test_nested_step_click_does_not_toggle_parent(demo_page: Page):
-    """Clicking a sub-step's zone toggles the sub-step, never the enclosing step."""
-    parent_step = demo_page.locator("ol.recipe-steps > li:has(ol)").first
-    nested_step = parent_step.locator("ol.recipe-steps > li").first
-
-    click_step_at(demo_page, nested_step, 5)
-
-    expect(nested_step).to_have_class(re.compile("completed"))
-    expect(parent_step).not_to_have_class(re.compile("completed"))
-
-
-def test_parent_step_click_does_not_toggle_nested(demo_page: Page):
-    """Toggling a step that contains sub-steps leaves the sub-steps unmarked."""
-    parent_step = demo_page.locator("ol.recipe-steps > li:has(ol)").first
-    nested_steps = parent_step.locator("ol.recipe-steps > li")
-
-    # The parent owns only its first row; lower rows are occupied by the nested list
-    click_step_at(demo_page, parent_step, 5, offset_y=10)
-
-    expect(parent_step).to_have_class(re.compile("completed"))
-    expect(parent_step.locator("ol.recipe-steps > li.completed")).to_have_count(0)
-    expect(nested_steps).to_have_count(2)
-
-
-def test_nested_marker_column_targets_the_nested_step(demo_page: Page):
-    """On a nested row, the parent's text column is where the sub-step's number is drawn,
-    so a click there belongs to the sub-step rather than falling through to the parent."""
-    parent_step = demo_page.locator("ol.recipe-steps > li:has(ol)").first
-    nested_step = parent_step.locator("ol.recipe-steps > li").first
-
-    nested_step.scroll_into_view_if_needed()
-    parent_box = parent_step.bounding_box()
-    nested_box = nested_step.bounding_box()
-    assert parent_box is not None and nested_box is not None
-
-    demo_page.mouse.click(parent_box["x"] + 5, nested_box["y"] + nested_box["height"] / 2)
-
-    expect(nested_step).to_have_class(re.compile("completed"))
-    expect(parent_step).not_to_have_class(re.compile("completed"))
-
-
-def test_parent_step_zone_ends_at_its_nested_list(demo_page: Page):
-    """The parent's own gutter is dead on rows occupied by its sub-steps."""
-    parent_step = demo_page.locator("ol.recipe-steps > li:has(ol)").first
-    nested_step = parent_step.locator("ol.recipe-steps > li").first
-
-    nested_step.scroll_into_view_if_needed()
-    outer_ol_left = demo_page.evaluate(
-        "document.querySelector('ol.recipe-steps').getBoundingClientRect().left"
-    )
-    nested_box = nested_step.bounding_box()
-    assert nested_box is not None
-
-    # The outer list's marker gutter, on a row that belongs to the nested list
-    demo_page.mouse.click(outer_ol_left + 5, nested_box["y"] + nested_box["height"] / 2)
-
-    expect(demo_page.locator("ol.recipe-steps li.completed")).to_have_count(0)
-
-
-def test_step_zone_highlight_stops_at_nested_list(demo_page: Page):
-    """The tint shows the real clickable band, so a parent's tint excludes its sub-steps."""
-    parent_step = demo_page.locator("ol.recipe-steps > li:has(ol)").first
-    click_step_at(demo_page, parent_step, 5, offset_y=10)
-    demo_page.wait_for_timeout(400)
-
-    measured = demo_page.evaluate(
-        """(() => {
-            var li = document.querySelector('ol.recipe-steps > li:has(ol)');
-            var nested = li.querySelector(':scope > ol');
-            return {
-                tint: parseFloat(getComputedStyle(li, '::before').height),
-                own: nested.getBoundingClientRect().top - li.getBoundingClientRect().top,
-                full: li.getBoundingClientRect().height,
-            };
-        })()"""
-    )
-    assert measured["own"] < measured["full"], "expected the parent to be taller than its own row"
-    assert abs(measured["tint"] - measured["own"]) < 2
-
-
-def test_step_zone_click_on_wrapped_row(demo_page: Page):
-    """The click zone covers continuation rows of a step that wraps."""
+def test_step_toggles_from_a_wrapped_continuation_row(demo_page: Page):
+    """A step that wraps responds on its last visual row, not only its first."""
     long_step = demo_page.locator("ol.recipe-steps > li").filter(
         has_text="An intentionally long step"
     ).first
-    long_step.scroll_into_view_if_needed()
-    box = long_step.bounding_box()
+    label = long_step.locator("> .item-label")
+    label.scroll_into_view_if_needed()
+    box = label.bounding_box()
     assert box is not None
     assert box["height"] > 50, "expected the long step to wrap onto multiple rows"
 
-    # Click the last visual row rather than the first
-    demo_page.mouse.click(box["x"] + 5, box["y"] + box["height"] - 8)
+    demo_page.mouse.click(box["x"] + 30, box["y"] + box["height"] - 10)
 
     expect(long_step).to_have_class(re.compile("completed"))
 
 
-def test_step_zone_is_wider_on_touch(browser: Browser):
-    """A coarse pointer gets a wider zone than a mouse at the same offset."""
-    offset = (STEP_ZONE_PX + STEP_ZONE_TOUCH_PX) / 2  # inside touch zone, outside mouse zone
+def test_nested_step_does_not_toggle_parent(demo_page: Page):
+    """Marking a sub-step toggles the sub-step, never the enclosing step."""
+    parent_step = demo_page.locator("ol.recipe-steps > li:has(ol)").first
+    nested_step = parent_step.locator("ol.recipe-steps > li").first
 
-    results = {}
-    for label, touch in (("mouse", False), ("touch", True)):
-        context = browser.new_context(viewport={"width": 1280, "height": 900}, has_touch=touch)
-        page = context.new_page()
-        _fresh(page, DEMO_RECIPE)
-        step = page.locator("ol.recipe-steps > li").first
-        click_step_at(page, step, offset)
-        page.wait_for_timeout(100)
-        results[label] = "completed" in (step.get_attribute("class") or "")
-        context.close()
+    toggle(nested_step)
 
-    assert results == {"mouse": False, "touch": True}
+    expect(nested_step).to_have_class(re.compile("completed"))
+    expect(parent_step).not_to_have_class(re.compile("completed"))
 
 
-def test_step_toggle_flashes_click_zones(demo_page: Page):
-    """Toggling a step highlights every step's click zone, then clears it."""
-    first_step = demo_page.locator("ol.recipe-steps > li").first
+def test_parent_step_does_not_toggle_nested(demo_page: Page):
+    """Marking a step that contains sub-steps leaves the sub-steps unmarked."""
+    parent_step = demo_page.locator("ol.recipe-steps > li:has(ol)").first
 
-    assert demo_page.evaluate("document.body.classList.contains('show-step-zones')") is False
+    toggle(parent_step)
 
-    click_step_at(demo_page, first_step, 5)
-    assert demo_page.evaluate("document.body.classList.contains('show-step-zones')") is True
-    # The tint fades in over a transition, so let it settle before reading opacity
-    demo_page.wait_for_timeout(400)
-    assert (
-        demo_page.evaluate(
-            "getComputedStyle(document.querySelector('ol.recipe-steps > li'), '::before').opacity"
-        )
-        == "1"
+    expect(parent_step).to_have_class(re.compile("completed"))
+    expect(parent_step.locator("ol.recipe-steps > li.completed")).to_have_count(0)
+
+
+# --- Row geometry -----------------------------------------------------------
+
+
+def test_row_targets_are_touch_sized_and_separated(keyed_page: Page):
+    """Every toggle target clears the touch floor and no two adjacent targets abut."""
+    measured = keyed_page.evaluate(
+        """(() => {
+            var labels = Array.from(document.querySelectorAll("li.recipe-row > .item-label"));
+            var boxes = labels.map((el) => el.getBoundingClientRect());
+            var gaps = [];
+            for (var i = 1; i < boxes.length; i++) {
+                var gap = boxes[i].top - boxes[i - 1].bottom;
+                if (gap >= 0) gaps.push(gap);
+            }
+            var links = Array.from(document.querySelectorAll("li.recipe-row > .row-link"));
+            return {
+                count: labels.length,
+                minHeight: Math.min(...boxes.map((b) => b.height)),
+                minGap: Math.min(...gaps),
+                linkCount: links.length,
+                minLink: Math.min(...links.map((el) => {
+                    var b = el.getBoundingClientRect();
+                    return Math.min(b.width, b.height);
+                })),
+            };
+        })()"""
+    )
+    assert measured["count"] > 0
+    assert measured["linkCount"] > 0
+    assert measured["minHeight"] >= ROW_CONTROL_PX
+    assert measured["minLink"] >= ROW_CONTROL_PX
+    assert measured["minGap"] >= ROW_GAP_PX
+
+
+def test_label_text_stops_before_the_selector(keyed_page: Page):
+    """The label reserves the selector's column, so a word never sits under the button."""
+    encroaching = keyed_page.evaluate(
+        """(() => {
+            return Array.from(document.querySelectorAll("li.recipe-row")).filter((li) => {
+                var link = li.querySelector(":scope > .row-link");
+                if (!link) return false;
+                var label = li.querySelector(":scope > .item-label");
+                var linkBox = link.getBoundingClientRect();
+                var range = document.createRange();
+                range.selectNodeContents(label);
+                return Array.from(range.getClientRects()).some((r) => r.right > linkBox.left);
+            }).length;
+        })()"""
+    )
+    assert encroaching == 0
+
+
+# --- Retirement -------------------------------------------------------------
+
+
+def _spent_names(page: Page) -> list[str]:
+    return page.evaluate(
+        """Array.from(document.querySelectorAll("ul.task-list > li.spent"))
+               .map((li) => li.querySelector(".ing-ref").textContent)"""
     )
 
-    demo_page.wait_for_function(
-        "() => !document.body.classList.contains('show-step-zones')", timeout=5000
+
+def test_completing_a_step_retires_its_ingredients(keyed_page: Page):
+    """One touch on a multi-ingredient step spends every ingredient it names."""
+    step = keyed_page.locator("ol.recipe-steps > li").filter(has_text="In a small bowl").first
+
+    assert _spent_names(keyed_page) == []
+    toggle(step)
+
+    assert sorted(_spent_names(keyed_page)) == ["all-purpose flour", "baking soda", "salt"]
+
+
+def test_retirement_is_reversible(keyed_page: Page):
+    """Unmarking the step returns its ingredients to the unspent state."""
+    step = keyed_page.locator("ol.recipe-steps > li").filter(has_text="In a small bowl").first
+
+    toggle(step)
+    assert _spent_names(keyed_page) != []
+    toggle(step)
+    assert _spent_names(keyed_page) == []
+
+
+def test_ingredient_stays_spent_while_another_step_claims_it(keyed_page: Page):
+    """Flour is used twice, so unmarking one of its steps must not un-spend it."""
+    first = keyed_page.locator("ol.recipe-steps > li").filter(has_text="In a small bowl").first
+    second = keyed_page.locator("ol.recipe-steps ol.recipe-steps > li").filter(
+        has_text="Beat in flour"
+    ).first
+
+    toggle(first)
+    toggle(second)
+    toggle(first)
+
+    assert _spent_names(keyed_page) == ["all-purpose flour"]
+
+
+def test_spent_is_distinct_from_measured(keyed_page: Page):
+    """Checking an ingredient means measured; retirement must not reuse that state."""
+    ingredient = keyed_page.locator("ul.task-list > li").filter(has_text="baking soda").first
+    step = keyed_page.locator("ol.recipe-steps > li").filter(has_text="In a small bowl").first
+
+    toggle(step)
+
+    expect(ingredient).to_have_class(re.compile("spent"))
+    expect(ingredient).not_to_have_class(re.compile("completed"))
+    expect(ingredient.locator("input[type='checkbox']")).not_to_be_checked()
+
+
+# --- Selection and the ingredient dossier -----------------------------------
+
+
+def select(item) -> None:
+    item.locator("> .row-link").click()
+
+
+def test_selecting_a_step_lists_its_amounts(keyed_page: Page):
+    """The panel answers the measurement question without scrolling back up."""
+    step = keyed_page.locator("ol.recipe-steps > li").filter(has_text="In a small bowl").first
+
+    select(step)
+
+    panel = keyed_page.locator("#recipe-panel")
+    expect(panel).to_be_visible()
+    expect(panel).to_contain_text("2.25 cups all-purpose flour")
+    expect(panel).to_contain_text("1 tsp baking soda")
+
+
+def test_selecting_a_step_lights_its_ingredients(keyed_page: Page):
+    """Selection is mutual: a lit ingredient marks what the selected step uses."""
+    step = keyed_page.locator("ol.recipe-steps > li").filter(has_text="In a small bowl").first
+
+    select(step)
+
+    expect(step).to_have_class(re.compile("selected"))
+    expect(keyed_page.locator("ul.task-list > li.lit")).to_have_count(3)
+
+
+def test_selecting_an_ingredient_lights_its_steps(keyed_page: Page):
+    """The other direction works from the same control."""
+    ingredient = keyed_page.locator("ul.task-list > li").filter(has_text="brown sugar").first
+
+    select(ingredient)
+
+    expect(ingredient).to_have_class(re.compile("selected"))
+    expect(keyed_page.locator("ol.recipe-steps > li.lit")).to_have_count(1)
+
+
+def test_only_one_row_is_selected_at_a_time(keyed_page: Page):
+    """Selecting elsewhere clears the previous selection, and re-selecting clears it."""
+    first = keyed_page.locator("ul.task-list > li").filter(has_text="brown sugar").first
+    second = keyed_page.locator("ul.task-list > li").filter(has_text="baking soda").first
+
+    select(first)
+    select(second)
+    expect(keyed_page.locator("li.selected")).to_have_count(1)
+    expect(second).to_have_class(re.compile("selected"))
+
+    select(second)
+    expect(keyed_page.locator("li.selected")).to_have_count(0)
+    expect(keyed_page.locator("#recipe-panel")).to_be_hidden()
+
+
+def test_dossier_shows_substitutes_from_the_reference_pages(keyed_page: Page):
+    """Brown sugar has an entry, so its substitute, caveat, and deep link all render."""
+    ingredient = keyed_page.locator("ul.task-list > li").filter(has_text="brown sugar").first
+
+    select(ingredient)
+
+    panel = keyed_page.locator("#recipe-panel")
+    expect(panel).to_contain_text("1 Tbsp molasses")
+    expect(panel).to_contain_text("dark brown sugar")
+    expect(panel.locator("a")).to_have_attribute(
+        "href", "/reference/ingredient_substitutions.html#1-cup-Brown-Sugar"
     )
 
 
-def test_selection_clears_step_zone_highlight(demo_page: Page):
-    """Starting a text selection cancels the click-zone highlight."""
-    first_step = demo_page.locator("ol.recipe-steps > li").first
-    click_step_at(demo_page, first_step, 5)
-    assert demo_page.evaluate("document.body.classList.contains('show-step-zones')") is True
+def test_dossier_says_when_no_substitute_is_recorded(keyed_page: Page):
+    """With 22 entries against hundreds of ingredients, this is the common state."""
+    ingredient = keyed_page.locator("ul.task-list > li").filter(has_text="chocolate chips").first
 
-    long_step = demo_page.locator("ol.recipe-steps > li").nth(2)
-    long_step.scroll_into_view_if_needed()
-    box = long_step.bounding_box()
-    assert box is not None
-    demo_page.mouse.move(box["x"] + 60, box["y"] + 8)
-    demo_page.mouse.down()
-    demo_page.mouse.move(box["x"] + 300, box["y"] + 8, steps=10)
-    demo_page.mouse.up()
+    select(ingredient)
 
-    assert demo_page.evaluate("document.body.classList.contains('show-step-zones')") is False
+    expect(keyed_page.locator("#recipe-panel")).to_contain_text("No substitute recorded")
 
 
-def test_recipe_step_double_click(demo_page: Page):
-    """Double-clicking a step's text toggles completion."""
-    first_step = demo_page.locator("ol.recipe-steps > li").first
-
-    first_step.dblclick()
-    expect(first_step).to_have_class(re.compile("completed"))
-
-    first_step.dblclick()
-    expect(first_step).not_to_have_class(re.compile("completed"))
+def test_dossier_deep_link_lands_on_the_entry(keyed_page: Page):
+    """The build emits the heading ids the dossier links to."""
+    keyed_page.goto(BASE_URL + "/reference/ingredient_substitutions.html#1-cup-Brown-Sugar")
+    expect(keyed_page.locator('[id="1-cup-Brown-Sugar"]')).to_be_visible()
 
 
 # --- Persistence and expiry -------------------------------------------------
@@ -437,7 +497,7 @@ def test_recipe_step_double_click(demo_page: Page):
 def test_ingredient_checkbox_persistence(recipe_page: Page):
     """Ingredient state survives a reload."""
     first_ingredient = recipe_page.locator("ul.task-list > li").first
-    first_ingredient.click()
+    toggle(first_ingredient)
     expect(first_ingredient.locator("input[type='checkbox']")).to_be_checked()
 
     recipe_page.reload()
@@ -450,7 +510,7 @@ def test_ingredient_checkbox_persistence(recipe_page: Page):
 def test_recipe_step_persistence(demo_page: Page):
     """Step completion survives a reload."""
     first_step = demo_page.locator("ol.recipe-steps > li").first
-    first_step.dblclick()
+    toggle(first_step)
     expect(first_step).to_have_class(re.compile("completed"))
 
     demo_page.reload()
@@ -460,7 +520,7 @@ def test_recipe_step_persistence(demo_page: Page):
 
 def test_progress_expires_and_is_erased_from_storage(demo_page: Page):
     """Progress older than 48h clears from the DOM and from localStorage."""
-    demo_page.locator("ul.task-list > li").first.click()
+    toggle(demo_page.locator("ul.task-list > li").first)
     expect(demo_page.locator("input[type='checkbox']:checked")).to_have_count(1)
 
     age_progress(demo_page, hours=49)
@@ -472,7 +532,7 @@ def test_progress_expires_and_is_erased_from_storage(demo_page: Page):
 
 def test_progress_within_window_is_kept(demo_page: Page):
     """Progress younger than 48h is left alone."""
-    demo_page.locator("ul.task-list > li").first.click()
+    toggle(demo_page.locator("ul.task-list > li").first)
 
     age_progress(demo_page, hours=47)
     demo_page.reload()
@@ -482,7 +542,7 @@ def test_progress_within_window_is_kept(demo_page: Page):
 
 def test_expiry_window_is_not_extended_by_collapsing(demo_page: Page):
     """Collapsing a section is not progress, so it must not restart the 48h window."""
-    demo_page.locator("ul.task-list > li").first.click()
+    toggle(demo_page.locator("ul.task-list > li").first)
     age_progress(demo_page, hours=47.9)
     before = stored_state(demo_page)["_progressAt"]
 
@@ -520,7 +580,7 @@ def test_stale_keys_for_other_recipes_are_swept(demo_page: Page):
 def test_multiple_recipes_independent_state(page: Page):
     """Different recipes keep independent localStorage state."""
     _fresh(page, TEST_RECIPE)
-    page.locator("ul.task-list > li").first.click()
+    toggle(page.locator("ul.task-list > li").first)
 
     page.goto(BASE_URL + DEMO_RECIPE)
     expect(page.locator("input[type='checkbox']:checked")).to_have_count(0)
@@ -565,7 +625,7 @@ def test_section_collapse_persistence(demo_page: Page):
 def test_section_progress_summary(demo_page: Page):
     """A collapsed section reports its completed/total counts."""
     section = demo_page.locator("section.collapsible").first
-    demo_page.locator("ul.task-list > li").first.click()
+    toggle(demo_page.locator("ul.task-list > li").first)
 
     section.locator(".collapse-toggle").click()
     demo_page.wait_for_timeout(500)
@@ -659,8 +719,8 @@ def test_reset_progress_button(demo_page: Page):
 
     expect(reset_button).to_be_hidden()
 
-    demo_page.locator("ul.task-list > li").first.click()
-    click_step_at(demo_page, demo_page.locator("ol.recipe-steps > li").first, 5)
+    toggle(demo_page.locator("ul.task-list > li").first)
+    toggle(demo_page.locator("ol.recipe-steps > li").first)
 
     expect(reset_button).to_be_visible()
     reset_button.click()
@@ -700,7 +760,7 @@ def test_copy_ingredients_omits_checked(demo_page: Page):
     demo_page.context.grant_permissions(["clipboard-read", "clipboard-write"])
     demo_page.locator("#toolbar-toggle").click()
 
-    demo_page.locator("ul.task-list > li").first.click()
+    toggle(demo_page.locator("ul.task-list > li").first)
     demo_page.locator("#copy-ingredients-btn").click()
     expect(demo_page.locator("#copy-ingredients-btn")).to_have_text("Copied")
 
@@ -794,7 +854,7 @@ def test_split_layout_absent_in_portrait(browser: Browser):
 def test_split_layout_keeps_progress_working(ipad_page: Page):
     """Re-parenting sections into panes must not break toggling or persistence."""
     ingredient = ipad_page.locator("ul.task-list > li").first
-    ingredient.click()
+    toggle(ingredient)
     expect(ingredient.locator("input[type='checkbox']")).to_be_checked()
 
     ipad_page.reload()

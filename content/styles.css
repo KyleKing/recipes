@@ -32,15 +32,11 @@ body {
 	--color-link: #07a;
 	--color-link-visited: #07a;
 	--color-text-done: #878787;
-	--color-zone-hint: rgba(180, 180, 180, 0.45);
+	--color-lit: rgba(0, 119, 170, 0.14);
+	--color-selected: rgba(0, 119, 170, 0.28);
 	--step-gutter: 40px;
-	--step-zone: 30px;
-}
-
-@media (pointer: coarse) {
-	:root {
-		--step-zone: 44px;
-	}
+	--row-control: 44px;
+	--row-gap: 6px;
 }
 
 /* Minimum set of used fonts from Atkinson Hyperlegible fonts
@@ -384,38 +380,53 @@ main {
 	pointer-events: none;
 }
 
-/* Recipe Steps - Click on the marker or the leading edge of the line to toggle */
+/* One row geometry for ingredients and steps: the label is the toggle, the trailing
+   button is the selector, and `--row-gap` keeps two adjacent toggles from abutting */
 
 .recipe-steps {
 	padding-left: var(--step-gutter);
 }
 
-.recipe-steps li::marker {
+li.recipe-row > .item-label {
+	display: inline-block;
+	vertical-align: top;
+	max-width: calc(100% - var(--row-control) - 12px);
+	min-height: var(--row-control);
+	box-sizing: border-box;
+	padding: 8px 4px;
+	margin-bottom: var(--row-gap);
+	border-radius: 3px;
 	cursor: pointer;
 }
 
-ol.recipe-steps > li {
-	position: relative;
-}
-
-/* Tinted overlay revealing where a step toggle click registers; opacity is driven by
-   `body.show-step-zones`, which recipe.js adds for a moment after any step is toggled */
-ol.recipe-steps > li::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	height: var(--zone-height, 100%);
-	left: calc(-1 * var(--step-gutter));
-	width: calc(var(--step-gutter) + var(--step-zone));
-	background: var(--color-zone-hint);
+/* Sits beside the text it belongs to rather than at the column edge, where a wide screen
+   would strand it far from its own row */
+.row-link {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 8px;
+	width: var(--row-control);
+	height: var(--row-control);
+	border: 1px solid var(--color-text-done);
 	border-radius: 3px;
-	opacity: 0;
-	transition: opacity 0.25s ease;
-	pointer-events: none;
+	background: transparent;
+	color: var(--color-link);
+	font-family: inherit;
+	font-size: 20px;
+	line-height: 1;
+	cursor: pointer;
 }
 
-body.show-step-zones ol.recipe-steps > li::before {
-	opacity: 1;
+li.recipe-row.selected > .row-link {
+	background: var(--color-selected);
+}
+
+li.recipe-row.selected > .item-label {
+	background: var(--color-selected);
+}
+
+li.recipe-row.lit > .item-label {
+	background: var(--color-lit);
 }
 
 /* Completed Items */
@@ -433,10 +444,19 @@ body.show-step-zones ol.recipe-steps > li::before {
 	list-style-type: "✓ ";
 }
 
-@media (pointer: coarse) {
-	ul.task-list > li {
-		padding: 8px 0;
-	}
+/* Measured and spent are separate facts: an ingredient is measured when its own row is
+   checked and spent when a completed step consumed it, and either can hold alone */
+.task-list li.spent > .item-label {
+	opacity: 0.5;
+	font-style: italic;
+}
+
+.task-list li.spent {
+	list-style-type: "· ";
+}
+
+.task-list li.spent.completed {
+	list-style-type: "✓ ";
 }
 
 /* Split layout - iPad landscape */
@@ -631,4 +651,89 @@ h3:hover .header-anchor,
 .converter-result {
 	margin-top: 15px;
 	font-weight: bold;
+}
+
+/* Selection panel - docked so the lit rows behind it stay visible */
+
+.recipe-panel {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 90;
+	max-height: 45vh;
+	overflow-y: auto;
+	box-sizing: border-box;
+	padding: 12px 200px 12px 16px;
+	background: var(--color-back);
+	border-top: 2px solid var(--color-text);
+}
+
+.recipe-panel .panel-title {
+	font-size: 18px;
+	margin: 0 0 8px;
+}
+
+.recipe-panel h3 {
+	font-size: 16px;
+	margin: 0 0 4px;
+}
+
+.panel-close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	width: var(--row-control);
+	height: var(--row-control);
+	border: 1px solid var(--color-text-done);
+	border-radius: 3px;
+	background: transparent;
+	color: var(--color-text);
+	font-size: 20px;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.panel-jump {
+	display: block;
+	width: 100%;
+	min-height: var(--row-control);
+	margin-bottom: var(--row-gap);
+	padding: 8px;
+	text-align: left;
+	border: 1px solid var(--color-text-done);
+	border-radius: 3px;
+	background: transparent;
+	color: var(--color-text);
+	font-family: inherit;
+	font-size: inherit;
+	cursor: pointer;
+}
+
+.panel-label {
+	margin: 12px 0 4px;
+	font-weight: bold;
+}
+
+.panel-empty {
+	color: var(--color-text-done);
+}
+
+.panel-substitution {
+	margin-bottom: 12px;
+}
+
+.panel-substitution ul,
+.panel-recipes {
+	margin: 0 0 4px;
+	padding-left: 20px;
+}
+
+.panel-note {
+	margin: 4px 0;
+	font-style: italic;
+}
+
+body.has-selection {
+	scroll-padding-bottom: 45vh;
 }
