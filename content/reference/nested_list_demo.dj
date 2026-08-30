@@ -11,7 +11,7 @@ steps, wrapping lines, and links inside list items.
 
 ## Ingredients
 
-- [ ] Short leaf ingredient
+- [ ] Short [leaf ingredient]{ ing="leaf-ingredient" }
 - [ ] An intentionally long ingredient line that wraps across more than one rendered row so the click target on the second and third visual rows can be checked against the same list item, which is exactly where a naive bounding-box hit test goes wrong
 - [ ] Ingredient linking to [Vegetable Cuts](./vegetable_cuts.dj) for the click-through case
 - [ ] Parent with nested children
@@ -22,14 +22,14 @@ steps, wrapping lines, and links inside list items.
 
 ### Sub Group
 
-- [ ] Grouped ingredient one
+- [ ] [Grouped ingredient one]{ ing="grouped-one" }
 - [ ] Grouped ingredient two
 
 ## Recipe
 
-1. Plain first step
+1. Plain first step using [leaf ingredient]{ ing="leaf-ingredient" }
 
-1. Parent step with nested sub-steps
+1. Parent step with nested sub-steps and [grouped ingredient one]{ ing="grouped-one" }
 
    1. First nested sub-step
 

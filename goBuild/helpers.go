@@ -41,3 +41,9 @@ func sortedKeys(m map[string][]Recipe) []string {
 	sort.Strings(keys)
 	return keys
 }
+
+// The build copies `content/` to `public/`, so the source tree sits beside the output
+func contentDir(publicDir string) string {
+	dir, base := filepath.Split(strings.TrimSuffix(publicDir, string(filepath.Separator)))
+	return filepath.Join(dir, strings.Replace(base, "public", "content", 1))
+}

@@ -232,6 +232,7 @@ func renderDjot(text []byte, publicDir string, path string, rMap RecipeMap) stri
 			djot_parser.DivNode:      formattedDivPartial(publicDir, path, rMap),
 			djot_parser.LinkNode:     linkNodeConversion,
 			djot_parser.ListItemNode: listItemConversion,
+			djot_parser.SpanNode:     spanNodeConversion,
 		},
 	).ConvertDjotToHtml(&html_writer.HtmlWriter{}, ast...)
 	return section
@@ -255,6 +256,7 @@ func parseDjotFiles(publicDir string, rMap RecipeMap, cache *RecipeCache) filepa
 			ast := djot_parser.BuildDjotAst(text)
 			err = validateNoDuplicateHeaders(ast, path)
 			ExitOnError(err)
+			ExitOnError(validateIngredientRefs(ast, path))
 
 			// Extract ingredients for caching
 			ingredients := extractIngredientsFromDjot(ast)
@@ -274,6 +276,7 @@ func parseDjotFiles(publicDir string, rMap RecipeMap, cache *RecipeCache) filepa
 				map[djot_parser.DjotNode]djot_parser.Conversion{
 					djot_parser.DivNode:      formattedDivPartial(publicDir, path, rMap),
 					djot_parser.ListItemNode: listItemConversion,
+					djot_parser.SpanNode:     spanNodeConversion,
 				},
 			).ConvertDjotToHtml(&html_writer.HtmlWriter{}, ast...)
 
@@ -320,6 +323,7 @@ func generateRecipePages(publicDir string, rMap RecipeMap, cache *RecipeCache) e
 				djot_parser.DivNode:      formattedDivPartial(publicDir, path, rMap),
 				djot_parser.LinkNode:     linkNodeConversion,
 				djot_parser.ListItemNode: listItemConversion,
+				djot_parser.SpanNode:     spanNodeConversion,
 			},
 		).ConvertDjotToHtml(&html_writer.HtmlWriter{}, ast...)
 
@@ -457,6 +461,11 @@ func Build(publicDir string) {
 	err = generateRecipePages(publicDir, rMap, cache)
 	ExitOnError(err)
 	log.Printf("[TIMING] Pass 3 (generate HTML): %v", time.Since(pass3Start))
+
+	err = writeSubstitutions(publicDir, contentDir(publicDir))
+	ExitOnError(err)
+	err = writeIngredientIndex(publicDir, rMap, cache)
+	ExitOnError(err)
 
 	// Generate other pages
 	indexStart := time.Now()
