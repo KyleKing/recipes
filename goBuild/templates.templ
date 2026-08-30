@@ -74,6 +74,9 @@ templ page(title string, contents templ.Component, pageType string, socialMeta S
 						<button id="split-toggle-btn" class="toolbar-btn" title="Toggle side-by-side ingredients and steps" style="display:none">
 							Split View: On
 						</button>
+						<button id="edit-btn" class="toolbar-btn" title="Edit this recipe and open a pull request" style="display:none">
+							Edit
+						</button>
 						<button id="reset-btn" class="toolbar-btn" title="Uncheck all items" style="display:none">
 							Reset
 						</button>
@@ -83,6 +86,7 @@ templ page(title string, contents templ.Component, pageType string, socialMeta S
 					</button>
 				</div>
 				<script src="/_static/recipe.js"></script>
+				<script src="/_static/recipe-edit.js"></script>
 			}
 		</body>
 	</html>

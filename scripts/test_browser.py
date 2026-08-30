@@ -14,6 +14,7 @@ Tests verify:
 - Row geometry: a touch-sized label target, a separate trailing selector, no abutting targets
 - Retirement: completing a step spends the ingredients it references
 - Mutual selection and the ingredient dossier built from the reference substitution pages
+- Editing: token handling, the offline block, and the rating/photo pull request flow
 - Text selection never toggles an item
 - Section collapse/expand with progress summaries
 - Floating toolbar: visibility, persistence, per-button visibility rules, inertness when hidden
@@ -33,7 +34,9 @@ Or via mise: mise run test-browser (requires server on :8000)
 Requires: Site must be built and served on http://localhost:8000
 """
 
+import base64
 import json
+import pathlib
 import re
 
 import pytest
@@ -932,3 +935,229 @@ if __name__ == "__main__":
     import sys
 
     sys.exit(pytest.main([__file__, *sys.argv[1:]]))
+
+
+# --- Editing ----------------------------------------------------------------
+
+GITHUB_TOKEN = "github_pat_test"
+SOURCE = "content/dessert/chocolate_chip_cookies.dj"
+BRANCH = "edit/dessert-chocolate_chip_cookies"
+
+
+class FakeGitHub:
+    """Stands in for api.github.com at the network boundary.
+
+    Records every write so a test can assert on what would reach the repository,
+    including the committed djot source and the re-encoded photo bytes.
+    """
+
+    def __init__(self, source_text: str, *, existing_pr: bool = False, branch_exists: bool = False):
+        self.files = {SOURCE: {"content": source_text, "sha": "sha-source"}}
+        self.commits: list[dict] = []
+        self.created_branches: list[str] = []
+        self.created_prs: list[dict] = []
+        self.pulls = (
+            [{"number": 12, "html_url": "https://github.test/pr/12", "head": {"ref": BRANCH}}]
+            if existing_pr
+            else []
+        )
+        self.branch_exists = branch_exists
+
+    def install(self, page: Page) -> None:
+        page.route("https://api.github.com/**", self._handle)
+
+    def _json(self, route, status: int, body) -> None:
+        route.fulfill(status=status, content_type="application/json", body=json.dumps(body))
+
+    def _handle(self, route):
+        request = route.request
+        path = request.url.removeprefix("https://api.github.com")
+        method = request.method
+
+        if path.endswith(f"/git/ref/heads/{BRANCH}"):
+            if not self.branch_exists:
+                return self._json(route, 404, {"message": "Not Found"})
+            return self._json(route, 200, {"object": {"sha": "sha-branch"}})
+
+        if path.endswith("/git/ref/heads/main"):
+            return self._json(route, 200, {"object": {"sha": "sha-main"}})
+
+        if method == "POST" and path.endswith("/git/refs"):
+            self.created_branches.append(json.loads(request.post_data)["ref"])
+            self.branch_exists = True
+            return self._json(route, 201, {})
+
+        if path.startswith("/repos/KyleKing/recipes/contents/"):
+            file_path = path.removeprefix("/repos/KyleKing/recipes/contents/").split("?")[0]
+            if method == "GET":
+                stored = self.files.get(file_path)
+                if stored is None:
+                    return self._json(route, 404, {"message": "Not Found"})
+                encoded = base64.b64encode(stored["content"].encode()).decode()
+                return self._json(route, 200, {"content": encoded, "sha": stored["sha"]})
+            payload = json.loads(request.post_data)
+            self.commits.append({"path": file_path, **payload})
+            return self._json(route, 200, {"content": {}})
+
+        if path.startswith("/repos/KyleKing/recipes/pulls"):
+            if method == "GET":
+                return self._json(route, 200, self.pulls)
+            created = {"number": 34, "html_url": "https://github.test/pr/34"}
+            self.created_prs.append(json.loads(request.post_data))
+            self.pulls.append({**created, "head": {"ref": BRANCH}})
+            return self._json(route, 201, created)
+
+        return self._json(route, 404, {"message": "Unrouted: " + path})
+
+    def committed(self, suffix: str) -> dict:
+        return next(c for c in self.commits if c["path"].endswith(suffix))
+
+    def committed_source(self) -> str:
+        return base64.b64decode(self.committed(".dj")["content"]).decode()
+
+
+def read_source() -> str:
+    return pathlib.Path(SOURCE).read_text()
+
+
+def open_editor(page: Page, *, token: str | None = GITHUB_TOKEN) -> None:
+    if token is not None:
+        page.evaluate(f"localStorage.setItem('recipe-github-token', {json.dumps(token)})")
+    page.locator("#toolbar-toggle").click()
+    page.locator("#edit-btn").click()
+
+
+def test_editing_asks_for_a_token_first(keyed_page: Page):
+    """With no token the dialog collects one rather than offering to save."""
+    open_editor(keyed_page, token=None)
+
+    expect(keyed_page.locator("#edit-token")).to_be_visible()
+    expect(keyed_page.locator("#edit-submit")).to_have_count(0)
+
+
+def test_saved_token_unlocks_the_edit_form(keyed_page: Page):
+    """A stored token moves the dialog straight to the editable fields."""
+    open_editor(keyed_page)
+
+    expect(keyed_page.locator("#edit-rating")).to_be_visible()
+    expect(keyed_page.locator("#edit-photo")).to_be_visible()
+    expect(keyed_page.locator("#edit-token")).to_have_count(0)
+
+
+def test_forgetting_the_token_clears_it_from_storage(keyed_page: Page):
+    """The revoke path has to actually remove the credential, not just hide the form."""
+    open_editor(keyed_page)
+    keyed_page.locator("#edit-forget-token").click()
+
+    assert keyed_page.evaluate("localStorage.getItem('recipe-github-token')") is None
+    expect(keyed_page.locator("#edit-token")).to_be_visible()
+
+
+def test_editing_is_blocked_offline(keyed_page: Page):
+    """Nothing half-saves on the device, so with no network the dialog says so."""
+    keyed_page.evaluate("Object.defineProperty(navigator, 'onLine', {get: () => false})")
+    open_editor(keyed_page)
+
+    expect(keyed_page.locator("#edit-offline")).to_be_visible()
+    expect(keyed_page.locator("#edit-submit")).to_have_count(0)
+
+
+def test_rating_edit_opens_a_pull_request(keyed_page: Page):
+    """One rating change creates the branch, commits the djot, and opens the PR."""
+    github = FakeGitHub(read_source())
+    github.install(keyed_page)
+
+    open_editor(keyed_page)
+    keyed_page.locator("#edit-rating").select_option("2")
+    keyed_page.locator("#edit-submit").click()
+
+    expect(keyed_page.locator("#edit-status a")).to_have_text("Saved to pull request #34")
+    assert github.created_branches == [f"refs/heads/{BRANCH}"]
+    assert 'rating="2"' in github.committed_source()
+    assert github.created_prs[0]["head"] == BRANCH
+    assert github.created_prs[0]["base"] == "main"
+
+
+def test_editing_reuses_an_open_pull_request(keyed_page: Page):
+    """A second edit lands on the same branch instead of opening a rival PR."""
+    github = FakeGitHub(read_source(), existing_pr=True, branch_exists=True)
+    github.install(keyed_page)
+
+    open_editor(keyed_page)
+    keyed_page.locator("#edit-rating").select_option("1")
+    keyed_page.locator("#edit-submit").click()
+
+    expect(keyed_page.locator("#edit-status a")).to_have_text("Saved to pull request #12")
+    assert github.created_branches == []
+    assert github.created_prs == []
+
+
+def test_open_pull_request_is_surfaced_on_load(page: Page):
+    """Opening a recipe shows the edits already in flight for it."""
+    page.goto(BASE_URL + KEYED_RECIPE)
+    page.evaluate(f"localStorage.setItem('recipe-github-token', {json.dumps(GITHUB_TOKEN)})")
+    FakeGitHub(read_source(), existing_pr=True).install(page)
+    page.reload()
+
+    expect(page.locator("#edit-banner a")).to_have_text("Edits in progress: pull request #12")
+
+
+def test_photo_upload_is_shrunk_and_stripped(keyed_page: Page):
+    """The photo is re-encoded on the device, so it arrives resized and without EXIF."""
+    github = FakeGitHub(read_source())
+    github.install(keyed_page)
+
+    open_editor(keyed_page)
+    keyed_page.locator("#edit-photo").set_input_files(
+        files=[{
+            "name": "counter.jpg",
+            "mimeType": "image/jpeg",
+            "buffer": _tall_jpeg_bytes(keyed_page),
+        }]
+    )
+    keyed_page.locator("#edit-submit").click()
+    expect(keyed_page.locator("#edit-status a")).to_have_text("Saved to pull request #34")
+
+    photo = github.committed(".jpeg")
+    raw = base64.b64decode(photo["content"])
+    assert raw[:2] == b"\xff\xd8", "expected a JPEG"
+    assert b"Exif" not in raw and b"GPS" not in raw
+    assert _jpeg_height(raw) == 900, "expected the 1800px source to be halved to 900px"
+    assert 'image="chocolate_chip_cookies.jpeg"' in github.committed_source()
+
+
+def _tall_jpeg_bytes(page: Page) -> bytes:
+    """A 1200x1800 JPEG carrying an EXIF block, built in the browser to avoid a dependency."""
+    encoded = page.evaluate(
+        """(async () => {
+            var canvas = document.createElement("canvas");
+            canvas.width = 1200;
+            canvas.height = 1800;
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = "#c33";
+            ctx.fillRect(0, 0, 1200, 1800);
+            var blob = await new Promise((r) => canvas.toBlob(r, "image/jpeg", 0.9));
+            var bytes = new Uint8Array(await blob.arrayBuffer());
+            var binary = "";
+            bytes.forEach((b) => { binary += String.fromCharCode(b); });
+            return btoa(binary);
+        })()"""
+    )
+    jpeg = base64.b64decode(encoded)
+    exif = b"Exif\x00\x00" + b"\x00" * 40
+    app1 = b"\xff\xe1" + (len(exif) + 2).to_bytes(2, "big") + exif
+    return jpeg[:2] + app1 + jpeg[2:]
+
+
+def _jpeg_height(data: bytes) -> int:
+    """Read the height out of the first start-of-frame marker."""
+    i = 2
+    while i < len(data):
+        if data[i] != 0xFF:
+            i += 1
+            continue
+        marker = data[i + 1]
+        if 0xC0 <= marker <= 0xCF and marker not in (0xC4, 0xC8, 0xCC):
+            return int.from_bytes(data[i + 5 : i + 7], "big")
+        i += 2 + int.from_bytes(data[i + 2 : i + 4], "big")
+    raise AssertionError("no start-of-frame marker found")

@@ -737,3 +737,87 @@ h3:hover .header-anchor,
 body.has-selection {
 	scroll-padding-bottom: 45vh;
 }
+
+/* Editing - a deliberate mode, so it takes over the screen rather than sitting inline */
+
+.edit-dialog {
+	position: relative;
+	width: min(560px, 92vw);
+	padding: 20px;
+	border: 2px solid var(--color-text);
+	background: var(--color-back);
+	color: var(--color-text);
+	font-family: inherit;
+	font-size: inherit;
+}
+
+.edit-dialog::backdrop {
+	background: rgba(0, 0, 0, 0.4);
+}
+
+.edit-dialog h2 {
+	margin: 0 32px 12px 0;
+	font-size: 20px;
+}
+
+.edit-close {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	width: var(--row-control);
+	height: var(--row-control);
+	border: 1px solid var(--color-text-done);
+	border-radius: 3px;
+	background: transparent;
+	color: var(--color-text);
+	font-size: 20px;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.edit-field {
+	display: block;
+	margin-bottom: 12px;
+	font-weight: bold;
+}
+
+.edit-field > * {
+	display: block;
+	width: 100%;
+	min-height: var(--row-control);
+	margin-top: 4px;
+	box-sizing: border-box;
+	padding: 8px;
+	border: 1px solid var(--color-text-done);
+	border-radius: 3px;
+	background: var(--color-back);
+	color: var(--color-text);
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: normal;
+}
+
+.edit-btn {
+	min-height: var(--row-control);
+	margin-right: 8px;
+	padding: 8px 16px;
+	border: 2px solid var(--color-text);
+	border-radius: 3px;
+	background: var(--color-back);
+	color: var(--color-text);
+	font-family: inherit;
+	font-size: inherit;
+	cursor: pointer;
+}
+
+.edit-help {
+	margin: 8px 0;
+	color: var(--color-text-done);
+}
+
+.edit-banner {
+	margin: 0 0 12px;
+	padding: 8px 12px;
+	border-left: 4px solid var(--color-link);
+	background: var(--color-lit);
+}

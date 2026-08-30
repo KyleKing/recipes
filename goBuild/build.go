@@ -156,7 +156,7 @@ func formattedDivPartial(publicDir string, path string, rMap RecipeMap) func(djo
 				log.Println(fmt.Sprintf("Rating is not within [0,5] (%d)", ratingInt))
 				os.Exit(1)
 			}
-			s.Writer.WriteString("<p>Personal rating: " + displayedRating + "</p>")
+			s.Writer.WriteString("<p class=\"recipe-rating\" data-rating=\"" + rating + "\">Personal rating: " + displayedRating + "</p>")
 		}
 
 		imagePath := ""
@@ -168,10 +168,10 @@ func formattedDivPartial(publicDir string, path string, rMap RecipeMap) func(djo
 					log.Printf("%s: image %q not found (use image=\"None\" for the placeholder)", path, imageName)
 					os.Exit(1)
 				}
-				s.Writer.WriteString("<img class=\"fullsize\" data-pagefind-meta=\"image[src]\" alt=\"" + imageName + "\" src=\"" + imagePath + "\">")
+				s.Writer.WriteString("<img class=\"fullsize\" data-pagefind-meta=\"image[src]\" data-image=\"" + imageName + "\" alt=\"" + imageName + "\" src=\"" + imagePath + "\">")
 			} else {
 				imagePath = IMAGE_PLACEHOLDER
-				s.Writer.WriteString("<p><i>No image yet</i></p>")
+				s.Writer.WriteString("<p class=\"recipe-no-image\" data-image=\"\"><i>No image yet</i></p>")
 				s.Writer.WriteString("<img data-pagefind-meta=\"image[src]\" src=\"" + imagePath + "\" alt=\"Placeholder\" style=\"display: none;\">")
 			}
 		}

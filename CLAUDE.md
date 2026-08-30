@@ -243,6 +243,32 @@ nothing. Name matching was rejected: it binds only 72% of steps.
 `goBuild/ingredient_refs.go` writes `public/_static/ingredient-index.json`, mapping each
 key to the recipes declaring it. The page fetches both lazily on the first panel open.
 
+### Editing and pull requests
+
+`content/_static/recipe-edit.js` writes recipe changes back to GitHub from the browser. The
+Edit toolbar button opens a modal, deliberately unlike reading, so a wet-handed cooking
+touch can never mutate a recipe. Auth is a fine-grained token scoped to this repository's
+Contents and Pull requests, pasted per device into `localStorage` under
+`recipe-github-token`, with a visible forget button. GitHub's device flow was ruled out: it
+cannot be called from a browser and would need a server this project will not have.
+
+Edits accumulate on one branch per recipe (`edit/<category>-<name>`) and land as a single
+open pull request that waits for a desk review. Nothing auto-merges. An open pull request is
+matched by its `head.ref`, not its title, so rewording a title never orphans the edits, and
+it is surfaced as a banner when the recipe loads.
+
+Editing requires a connection and says so when offline; nothing is ever half-saved on the
+device. The recorded consequence is that a note thought of on bad kitchen wifi is lost.
+
+Photos are decoded with `imageOrientation: "from-image"` (without which phone photos upload
+sideways), scaled to 900px height, and re-encoded through a canvas. The canvas carries no
+metadata, so GPS is gone before the file leaves the device and no cloud intermediary is
+needed. `scripts/test_browser.py` proves this with a `FakeGitHub` route stub that asserts on
+the committed bytes.
+
+The build emits what editing needs to read: `data-rating` on the rating paragraph and
+`data-image` on the image (empty on the placeholder).
+
 **Categories**: Subdirectories in `content/`:
 
 - `main/`, `dessert/`, `pasta/`, `soup/`, `drinks/`, `breakfast/`, `poultry/`, `sushi/`, `seafood/`, `bread/`, `sides/`, `reference/`
