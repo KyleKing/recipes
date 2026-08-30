@@ -196,13 +196,18 @@ silently.
 
 **Interaction rules** (`content/_static/recipe.js`):
 
-- Ingredients and steps share one row model. A row's `.item-label` is its only toggle
-    target and is at least 44px tall; `--row-gap` in `content/styles.css` keeps adjacent
-    toggles from abutting. Widen `--row-control` and the label's `max-width` together, or
-    the trailing button starts overlapping the text
-- A row that references ingredients also carries a `.row-link` button beside its label.
-    It selects rather than toggles: one selection at a time, mutual, and the docked panel
-    shows the other side (a step's amounts, or an ingredient's substitutes)
+- Ingredients and steps share one row model. A row's `.item-label` is its only tap target
+    and is at least 44px tall; `--row-gap` in `content/styles.css` keeps adjacent targets
+    from abutting. A row carries no control of its own, so reading is plain text
+- A row that references ingredients gets a `.has-info` class, and the `.ing-ref` spans
+    inside it a dotted underline. The underline is a hint only. Making it its own tap
+    target was tried and reverted: on an ingredient row it covers most of the label, which
+    left the row with nowhere reliable to check off
+- The `Info: On/Off` toolbar button is what makes those rows tappable. In info mode a
+    `.has-info` row's whole label selects instead of toggling: one selection at a time,
+    mutual, and the docked panel shows the other side (a step's amounts, or an
+    ingredient's substitutes). The mode is never persisted, because it changes what a tap
+    means and a page must always open where a tap checks off
 - An item toggles only itself. Checking a parent ingredient or step never cascades to its
     nested children, and clicking a child never marks the parent
 - A drag that produces a text selection never toggles anything
