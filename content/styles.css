@@ -27,6 +27,9 @@ body {
 /* Root */
 
 :root {
+	/* Scroll room a page reserves for the floating toolbar. It clears the collapsed
+	   toolbar only: reaching content under the expanded one means collapsing it. */
+	--toolbar-clearance: 60px;
 	--color-back: #eaeaea;
 	--color-text: #454545;
 	--color-link: #07a;
@@ -72,7 +75,7 @@ body {
 	font-family: "Atkinson Hyperlegible Next"; /* Palatino, serif; */
 	font-size: 18px;
 	line-height: 1.45;
-	margin-bottom: 40%;
+	margin-bottom: var(--toolbar-clearance);
 }
 
 /* Content sectioning */
@@ -348,16 +351,22 @@ main {
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
+	max-height: 60vh;
+	overflow: hidden;
 	transition:
 		opacity 0.3s ease,
-		transform 0.3s ease;
+		transform 0.3s ease,
+		max-height 0.3s ease;
 	transform-origin: bottom right;
 }
 
+/* Collapsing gives the box back rather than only fading it, so the clearance every page
+   reserves stays the height of the toggle alone */
 .recipe-toolbar.hidden .toolbar-buttons {
 	opacity: 0;
 	transform: scale(0.8);
 	pointer-events: none;
+	max-height: 0;
 }
 
 .toolbar-btn {
@@ -473,6 +482,8 @@ li.recipe-row.lit > .item-label {
 	main.split-layout {
 		display: grid;
 		grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+		/* Row 1 collapses to nothing unless a banner claims it */
+		grid-template-rows: auto minmax(0, 1fr);
 		gap: 24px;
 		flex: 1 1 auto;
 		min-height: 0;
@@ -482,18 +493,23 @@ li.recipe-row.lit > .item-label {
 		box-sizing: border-box;
 	}
 
+	main.split-layout > .edit-banner {
+		grid-row: 1;
+		grid-column: 1 / -1;
+	}
+
 	main.split-layout .split-pane {
+		grid-row: 2;
 		overflow-y: auto;
 		overscroll-behavior: contain;
 		min-height: 0;
 		padding-bottom: 24px;
 	}
 
-	/* Ingredients sits next to the floating toolbar; its scroll room must clear the
-	   toolbar's rendered footprint (buttons + bottom offset), or its last scroll
-	   position permanently hides content instead of just floating over it. */
+	/* Ingredients sits next to the floating toolbar, so it needs the clearance the
+	   single-column body gets from its bottom margin */
 	main.split-layout .split-pane-ingredients {
-		padding-bottom: 220px;
+		padding-bottom: var(--toolbar-clearance);
 	}
 
 	main.split-layout .split-pane > section:first-child > h2 {

@@ -209,6 +209,10 @@ silently.
 - `unmeasured` -> `measured` -> `spent` are three separate ingredient states. Checking a
     row means measured; completing a step marks the ingredients it references as spent.
     Spent is derived from step state on every load, never stored
+- Every page reserves `--toolbar-clearance` (the collapsed toolbar's height plus its bottom
+    offset) as scroll room and no more, on `body` in single column and on the ingredients pane
+    in split view. Collapsing the toolbar gives its box back rather than only fading it, so
+    reaching content under the expanded toolbar means collapsing it
 - Progress keys expire 48h after the last progress change. Collapsing a section or
     hiding the toolbar is not progress and does not restart that window
 - On a coarse-pointer device in landscape (iPad-sized), the recipe splits into two

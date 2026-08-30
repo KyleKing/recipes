@@ -876,6 +876,58 @@ def test_split_pane_ingredients_clears_the_floating_toolbar(ipad_page: Page):
     assert last_content_bottom <= toolbar_top
 
 
+def test_collapsing_the_toolbar_gives_its_box_back(recipe_page: Page):
+    """Expanding must be what costs the space, or every page reserves the tall footprint."""
+    height = "el => el.getBoundingClientRect().height"
+    collapsed = recipe_page.locator("#recipe-toolbar").evaluate(height)
+
+    recipe_page.locator("#toolbar-toggle").click()
+    recipe_page.wait_for_timeout(400)
+    expanded = recipe_page.locator("#recipe-toolbar").evaluate(height)
+
+    assert expanded > collapsed * 2, f"collapsed {collapsed} should be far shorter than {expanded}"
+
+
+@pytest.mark.parametrize("recipe", [KEYED_RECIPE, "/reference/nested_list_demo.html"])
+def test_scroll_room_stops_at_the_collapsed_toolbar(page: Page, recipe: str):
+    """Overscroll clears the collapsed toolbar and no more; the expanded one is reached by
+    collapsing it, not by padding every page for its full height."""
+    page.goto(BASE_URL + recipe)
+    page.wait_for_selector("#recipe-toolbar")
+    page.evaluate("document.scrollingElement.scrollTop = document.scrollingElement.scrollHeight")
+
+    gap = page.evaluate(
+        """() => {
+            var toolbar = document.querySelector('#recipe-toolbar').getBoundingClientRect();
+            var main = document.querySelector('main').getBoundingClientRect();
+            return {below: innerHeight - main.bottom, clears: main.bottom <= toolbar.top};
+        }"""
+    )
+    assert gap["clears"], "content must not end underneath the collapsed toolbar"
+    assert gap["below"] <= 80, f"reserved {gap['below']}px below the content, expected the toolbar's ~58px"
+
+
+def test_pr_banner_spans_the_split_grid(ipad_page: Page):
+    """As a plain grid child the banner claimed a whole column and stretched down the page."""
+    ipad_page.evaluate(
+        """() => {
+            var p = document.createElement("p");
+            p.id = "edit-banner";
+            p.className = "edit-banner";
+            p.textContent = "Edits in progress";
+            document.querySelector("main").prepend(p);
+        }"""
+    )
+
+    banner = ipad_page.locator("#edit-banner").evaluate("el => el.getBoundingClientRect().toJSON()")
+    main = ipad_page.locator("main").evaluate("el => el.getBoundingClientRect().toJSON()")
+    assert banner["height"] < 80, f"banner should hug its text, got {banner['height']}px"
+    assert banner["width"] > main["width"] * 0.9, "banner should span both panes"
+    assert ipad_page.locator(".split-pane").first.evaluate(
+        "el => el.getBoundingClientRect().top"
+    ) >= banner["bottom"], "panes must sit below the banner, not beside it"
+
+
 def test_split_pane_body_keeps_title_inline(ipad_page: Page):
     """Title, description, and rating stay with the recipe pane instead of a separate strip."""
     expect(ipad_page.locator(".split-header")).to_have_count(0)
