@@ -317,42 +317,78 @@ def test_row_targets_are_touch_sized_and_separated(keyed_page: Page):
                 var gap = boxes[i].top - boxes[i - 1].bottom;
                 if (gap >= 0) gaps.push(gap);
             }
-            var links = Array.from(document.querySelectorAll("li.recipe-row > .row-link"));
             return {
                 count: labels.length,
                 minHeight: Math.min(...boxes.map((b) => b.height)),
                 minGap: Math.min(...gaps),
-                linkCount: links.length,
-                minLink: Math.min(...links.map((el) => {
-                    var b = el.getBoundingClientRect();
-                    return Math.min(b.width, b.height);
-                })),
             };
         })()"""
     )
     assert measured["count"] > 0
-    assert measured["linkCount"] > 0
     assert measured["minHeight"] >= ROW_CONTROL_PX
-    assert measured["minLink"] >= ROW_CONTROL_PX
     assert measured["minGap"] >= ROW_GAP_PX
 
 
-def test_label_text_stops_before_the_selector(keyed_page: Page):
-    """The label reserves the selector's column, so a word never sits under the button."""
-    encroaching = keyed_page.evaluate(
-        """(() => {
-            return Array.from(document.querySelectorAll("li.recipe-row")).filter((li) => {
-                var link = li.querySelector(":scope > .row-link");
-                if (!link) return false;
-                var label = li.querySelector(":scope > .item-label");
-                var linkBox = link.getBoundingClientRect();
-                var range = document.createRange();
-                range.selectNodeContents(label);
-                return Array.from(range.getClientRects()).some((r) => r.right > linkBox.left);
-            }).length;
-        })()"""
+def test_rows_carry_no_control_of_their_own(keyed_page: Page):
+    """Reading is plain text: the only mark on a row is the dotted underline on the words
+    that open the panel."""
+    expect(keyed_page.locator("li.recipe-row button")).to_have_count(0)
+
+    hinted = keyed_page.locator("li.recipe-row.has-info").first
+    assert hinted.locator(".ing-ref").count() > 0
+    style = hinted.locator(".ing-ref").first.evaluate(
+        "(el) => getComputedStyle(el).textDecorationStyle"
     )
-    assert encroaching == 0
+    assert style == "dotted"
+
+
+def info_mode(page: Page, on: bool) -> None:
+    """The toolbar starts collapsed, so reaching the Info button means opening it first."""
+    if "hidden" in (page.locator("#recipe-toolbar").get_attribute("class") or ""):
+        page.locator("#toolbar-toggle").click()
+    btn = page.locator("#info-btn")
+    expect(btn).to_be_visible()
+    if (btn.text_content() == "Info: On") != on:
+        btn.click()
+
+
+def test_info_mode_makes_the_whole_row_the_target(keyed_page: Page):
+    """Off, a tap checks the row off. On, the same tap opens the panel instead, so a wet
+    finger never has to find the underlined words."""
+    row = keyed_page.locator("ul.task-list li.recipe-row.has-info").first
+    label = row.locator("> .item-label")
+
+    label.click()
+    expect(row).to_have_class(re.compile("completed"))
+    label.click()
+
+    info_mode(keyed_page, True)
+
+    label.click()
+    expect(keyed_page.locator("#recipe-panel")).to_be_visible()
+    expect(row).not_to_have_class(re.compile("completed"))
+    expect(row).to_have_class(re.compile("selected"))
+
+
+def test_leaving_info_mode_drops_the_selection(keyed_page: Page):
+    """The panel belongs to the mode, so it never outlives it."""
+    info_mode(keyed_page, True)
+    keyed_page.locator("ul.task-list li.recipe-row.has-info > .item-label").first.click()
+    expect(keyed_page.locator("#recipe-panel")).to_be_visible()
+
+    info_mode(keyed_page, False)
+
+    expect(keyed_page.locator("#recipe-panel")).to_be_hidden()
+    expect(keyed_page.locator("#info-btn")).to_have_text("Info: Off")
+
+
+def test_info_mode_does_not_survive_a_reload(keyed_page: Page):
+    """The mode changes what a tap means, so a page always opens where a tap checks off."""
+    info_mode(keyed_page, True)
+    keyed_page.reload()
+    keyed_page.wait_for_selector("#info-btn")
+
+    expect(keyed_page.locator("#info-btn")).to_have_text("Info: Off")
 
 
 # --- Retirement -------------------------------------------------------------
@@ -415,7 +451,9 @@ def test_spent_is_distinct_from_measured(keyed_page: Page):
 
 
 def select(item) -> None:
-    item.locator("> .row-link").click()
+    """Selection lives in info mode, so reach it the way a user does."""
+    info_mode(item.page, True)
+    item.locator("> .item-label").click()
 
 
 def test_selecting_a_step_lists_its_amounts(keyed_page: Page):

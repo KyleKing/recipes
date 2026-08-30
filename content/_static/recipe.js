@@ -161,7 +161,7 @@
 
 	function ownText(li) {
 		var clone = li.cloneNode(true);
-		clone.querySelectorAll("ul, ol, input, .row-link").forEach((node) => {
+		clone.querySelectorAll("ul, ol, input").forEach((node) => {
 			node.remove();
 		});
 		return clone.textContent.replace(/\s+/g, " ").trim();
@@ -171,6 +171,12 @@
 	var stepRows = [];
 	var rowsByKey = new Map();
 	var selectedRow = null;
+
+	// Info mode is deliberately not persisted: it changes what a tap does, so a page must
+	// always open in the state where tapping a row checks it off
+	function infoMode() {
+		return document.body.classList.contains("info-mode");
+	}
 
 	function keysOf(label) {
 		var keys = [];
@@ -201,26 +207,17 @@
 		label.addEventListener("click", (e) => {
 			if (e.target.closest("a")) return;
 			if (hasTextSelection()) return;
+			if (infoMode() && row.keys.length > 0) {
+				selectRow(selectedRow === row ? null : row);
+				return;
+			}
 			toggleRow(row);
 		});
 
-		if (row.keys.length > 0) {
-			var link = document.createElement("button");
-			link.type = "button";
-			link.className = "row-link";
-			link.setAttribute(
-				"aria-label",
-				kind === "ingredient"
-					? "Show substitutes and the steps using this"
-					: "Show this step's ingredients",
-			);
-			link.textContent = kind === "ingredient" ? "?" : "\u2261";
-			link.addEventListener("click", () => {
-				selectRow(selectedRow === row ? null : row);
-			});
-			label.after(link);
-			row.link = link;
-		}
+		// The underline on an `.ing-ref` is a hint, never its own target: on an ingredient
+		// row it covers most of the label, so making it tappable would leave the row with
+		// no reliable place to check off
+		if (row.keys.length > 0) li.classList.add("has-info");
 
 		registerRow(row);
 		return row;
@@ -871,6 +868,26 @@
 		);
 	}
 
+	function setupInfoMode() {
+		var btn = document.getElementById("info-btn");
+		if (!btn) return;
+		if (document.querySelectorAll(".recipe-row.has-info").length === 0) return;
+
+		function paint() {
+			var on = infoMode();
+			btn.textContent = on ? "Info: On" : "Info: Off";
+			btn.setAttribute("aria-pressed", String(on));
+		}
+
+		btn.style.display = "inline-block";
+		paint();
+		btn.addEventListener("click", () => {
+			document.body.classList.toggle("info-mode");
+			if (!infoMode()) selectRow(null);
+			paint();
+		});
+	}
+
 	function setupToolbarToggle() {
 		var toolbar = document.getElementById("recipe-toolbar");
 		var toggleBtn = document.getElementById("toolbar-toggle");
@@ -898,6 +915,7 @@
 		setupSplitLayout();
 		setupSectionFolding();
 		setupHeaderAnchors();
+		setupInfoMode();
 		setupToolbarToggle();
 		trackScroll();
 

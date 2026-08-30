@@ -380,6 +380,11 @@ main {
 	transition: opacity 1s ease;
 }
 
+.toolbar-btn[aria-pressed="true"] {
+	background: var(--color-text);
+	color: var(--color-back);
+}
+
 .toolbar-btn:hover {
 	background: rgba(180, 180, 180, 0.3);
 }
@@ -389,8 +394,9 @@ main {
 	pointer-events: none;
 }
 
-/* One row geometry for ingredients and steps: the label is the toggle, the trailing
-   button is the selector, and `--row-gap` keeps two adjacent toggles from abutting */
+/* One row geometry for ingredients and steps: the label is the toggle, an underlined
+   `.ing-ref` inside it is the selector, and `--row-gap` keeps two adjacent toggles from
+   abutting */
 
 .recipe-steps {
 	padding-left: var(--step-gutter);
@@ -399,7 +405,7 @@ main {
 li.recipe-row > .item-label {
 	display: inline-block;
 	vertical-align: top;
-	max-width: calc(100% - var(--row-control) - 12px);
+	max-width: 100%;
 	min-height: var(--row-control);
 	box-sizing: border-box;
 	padding: 8px 4px;
@@ -408,26 +414,21 @@ li.recipe-row > .item-label {
 	cursor: pointer;
 }
 
-/* Sits beside the text it belongs to rather than at the column edge, where a wide screen
-   would strand it far from its own row */
-.row-link {
-	display: inline-block;
-	vertical-align: top;
-	margin-left: 8px;
-	width: var(--row-control);
-	height: var(--row-control);
-	border: 1px solid var(--color-text-done);
-	border-radius: 3px;
-	background: transparent;
-	color: var(--color-link);
-	font-family: inherit;
-	font-size: 20px;
-	line-height: 1;
-	cursor: pointer;
+/* A hint, not a target. It marks which rows have more behind them and points at the Info
+   button; the mode is what makes them tappable, because on an ingredient row the underline
+   covers most of the label and would leave nowhere to check off */
+li.recipe-row .ing-ref {
+	text-decoration: underline dotted var(--color-text-done);
+	text-underline-offset: 3px;
 }
 
-li.recipe-row.selected > .row-link {
-	background: var(--color-selected);
+body.info-mode li.recipe-row.has-info > .item-label {
+	background: var(--color-lit);
+	box-shadow: inset 0 0 0 1px var(--color-link);
+}
+
+body.info-mode li.recipe-row.has-info .ing-ref {
+	text-decoration-color: var(--color-link);
 }
 
 li.recipe-row.selected > .item-label {
