@@ -8,7 +8,10 @@ PORT=8000
 SERVER_PID=""
 SERVER_BIN=""
 
+# Without re-exiting on the captured status, the trap swallows a pytest failure and the
+# script reports success, leaving the pre-commit gate unable to fail
 cleanup() {
+    local status=$?
     if [[ -n "$SERVER_PID" ]]; then
         echo "Stopping server (PID: $SERVER_PID)..."
         kill "$SERVER_PID" 2>/dev/null || true
@@ -16,6 +19,7 @@ cleanup() {
     if [[ -n "$SERVER_BIN" ]]; then
         rm -f "$SERVER_BIN"
     fi
+    exit "$status"
 }
 
 trap cleanup EXIT INT TERM
@@ -69,6 +73,3 @@ done
 # Run tests
 echo "Running browser tests..."
 uv run scripts/test_browser.py -v "$@"
-TEST_EXIT_CODE=$?
-
-exit $TEST_EXIT_CODE

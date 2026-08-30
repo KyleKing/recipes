@@ -931,4 +931,4 @@ def test_temperature_converter_computes(page: Page):
 if __name__ == "__main__":
     import sys
 
-    pytest.main([__file__, *sys.argv[1:]])
+    sys.exit(pytest.main([__file__, *sys.argv[1:]]))
