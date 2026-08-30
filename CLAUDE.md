@@ -252,6 +252,12 @@ Contents and Pull requests, pasted per device into `localStorage` under
 `recipe-github-token`, with a visible forget button. GitHub's device flow was ruled out: it
 cannot be called from a browser and would need a server this project will not have.
 
+The modal holds the recipe's own `.dj` source in a textarea rather than a field per
+attribute, so anything in the file is editable through one control and the rating needs no
+widget of its own. Saving goes through a confirm step first: a line diff (LCS, with two lines
+of context and the rest collapsed) showing removed lines dim and struck and added lines bold.
+Photos stay a separate file input, since a photo cannot be typed.
+
 Edits accumulate on one branch per recipe (`edit/<category>-<name>`) and land as a single
 open pull request that waits for a desk review. Nothing auto-merges. An open pull request is
 matched by its `head.ref`, not its title, so rewording a title never orphans the edits, and
@@ -266,8 +272,13 @@ metadata, so GPS is gone before the file leaves the device and no cloud intermed
 needed. `scripts/test_browser.py` proves this with a `FakeGitHub` route stub that asserts on
 the committed bytes.
 
-The build emits what editing needs to read: `data-rating` on the rating paragraph and
-`data-image` on the image (empty on the placeholder).
+An open pull request also marks itself against the recipe being read: the page diffs `main`
+against the branch and, for each changed line, strikes through the row showing the old text
+and inserts the new one after it. Rows are matched by their rendered words, because godjot's
+`TreeNode` drops the source offsets the tokenizer had, so there is no build-time line map to
+key off. A change with no row to match (metadata, prose outside a list, an indentation-only
+edit) is counted in the banner instead of being guessed at. A proposed step carries
+`counter-increment: list-item 0` so it never consumes a real step's number.
 
 **Categories**: Subdirectories in `content/`:
 

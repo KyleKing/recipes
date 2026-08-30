@@ -951,8 +951,16 @@ class FakeGitHub:
     including the committed djot source and the re-encoded photo bytes.
     """
 
-    def __init__(self, source_text: str, *, existing_pr: bool = False, branch_exists: bool = False):
+    def __init__(
+        self,
+        source_text: str,
+        *,
+        existing_pr: bool = False,
+        branch_exists: bool = False,
+        branch_source: str | None = None,
+    ):
         self.files = {SOURCE: {"content": source_text, "sha": "sha-source"}}
+        self.branch_files = {SOURCE: {"content": branch_source, "sha": "sha-branch-source"}} if branch_source else {}
         self.commits: list[dict] = []
         self.created_branches: list[str] = []
         self.created_prs: list[dict] = []
@@ -988,9 +996,12 @@ class FakeGitHub:
             return self._json(route, 201, {})
 
         if path.startswith("/repos/KyleKing/recipes/contents/"):
+            query = path.split("?")[1] if "?" in path else ""
             file_path = path.removeprefix("/repos/KyleKing/recipes/contents/").split("?")[0]
             if method == "GET":
-                stored = self.files.get(file_path)
+                on_branch = f"ref={BRANCH}" in query
+                stored = self.branch_files.get(file_path) if on_branch else None
+                stored = stored or self.files.get(file_path)
                 if stored is None:
                     return self._json(route, 404, {"message": "Not Found"})
                 encoded = base64.b64encode(stored["content"].encode()).decode()
@@ -1002,9 +1013,9 @@ class FakeGitHub:
         if path.startswith("/repos/KyleKing/recipes/pulls"):
             if method == "GET":
                 return self._json(route, 200, self.pulls)
-            created = {"number": 34, "html_url": "https://github.test/pr/34"}
+            created = {"number": 34, "html_url": "https://github.test/pr/34", "head": {"ref": BRANCH}}
             self.created_prs.append(json.loads(request.post_data))
-            self.pulls.append({**created, "head": {"ref": BRANCH}})
+            self.pulls.append(created)
             return self._json(route, 201, created)
 
         return self._json(route, 404, {"message": "Unrouted: " + path})
@@ -1018,6 +1029,18 @@ class FakeGitHub:
 
 def read_source() -> str:
     return pathlib.Path(SOURCE).read_text()
+
+
+def edit_source(page: Page, text: str) -> None:
+    page.locator("#edit-source").fill(text)
+
+
+def open_with_pr(page: Page, github: FakeGitHub) -> None:
+    """Load a recipe with the fake already routed and a token in place."""
+    page.goto(BASE_URL + KEYED_RECIPE)
+    page.evaluate(f"localStorage.setItem('recipe-github-token', {json.dumps(GITHUB_TOKEN)})")
+    github.install(page)
+    page.reload()
 
 
 def open_editor(page: Page, *, token: str | None = GITHUB_TOKEN) -> None:
@@ -1035,17 +1058,19 @@ def test_editing_asks_for_a_token_first(keyed_page: Page):
     expect(keyed_page.locator("#edit-submit")).to_have_count(0)
 
 
-def test_saved_token_unlocks_the_edit_form(keyed_page: Page):
-    """A stored token moves the dialog straight to the editable fields."""
+def test_saved_token_unlocks_the_source_editor(keyed_page: Page):
+    """A stored token moves the dialog straight to the recipe's own djot source."""
+    FakeGitHub(read_source()).install(keyed_page)
     open_editor(keyed_page)
 
-    expect(keyed_page.locator("#edit-rating")).to_be_visible()
+    expect(keyed_page.locator("#edit-source")).to_have_value(read_source())
     expect(keyed_page.locator("#edit-photo")).to_be_visible()
     expect(keyed_page.locator("#edit-token")).to_have_count(0)
 
 
 def test_forgetting_the_token_clears_it_from_storage(keyed_page: Page):
     """The revoke path has to actually remove the credential, not just hide the form."""
+    FakeGitHub(read_source()).install(keyed_page)
     open_editor(keyed_page)
     keyed_page.locator("#edit-forget-token").click()
 
@@ -1059,16 +1084,52 @@ def test_editing_is_blocked_offline(keyed_page: Page):
     open_editor(keyed_page)
 
     expect(keyed_page.locator("#edit-offline")).to_be_visible()
+    expect(keyed_page.locator("#edit-source")).to_have_count(0)
+
+
+def test_review_shows_removed_and_added_lines(keyed_page: Page):
+    """The confirm step spells out every changed line before anything is committed."""
+    FakeGitHub(read_source()).install(keyed_page)
+    open_editor(keyed_page)
+    edit_source(keyed_page, read_source().replace("Preheat oven to 375F", "Preheat oven to 400F"))
+    keyed_page.locator("#edit-review").click()
+
+    expect(keyed_page.locator("#edit-diff .diff-del")).to_have_text(["1. Preheat oven to 375F\n"])
+    expect(keyed_page.locator("#edit-diff .diff-add")).to_have_text(["1. Preheat oven to 400F\n"])
+    expect(keyed_page.locator("#edit-diff .diff-skip")).to_have_count(2)
+    assert keyed_page.locator("#edit-diff .diff-same").count() == 4, "two lines of context each side"
+
+
+def test_review_reports_an_untouched_source(keyed_page: Page):
+    """Opening and closing the editor without typing must not offer to commit."""
+    FakeGitHub(read_source()).install(keyed_page)
+    open_editor(keyed_page)
+    keyed_page.locator("#edit-review").click()
+
+    expect(keyed_page.locator("#edit-status")).to_have_text("Nothing changed yet.")
     expect(keyed_page.locator("#edit-submit")).to_have_count(0)
 
 
-def test_rating_edit_opens_a_pull_request(keyed_page: Page):
-    """One rating change creates the branch, commits the djot, and opens the PR."""
+def test_review_can_return_to_the_editor_with_the_draft_intact(keyed_page: Page):
+    """Backing out of the confirm step keeps what was typed rather than refetching."""
+    FakeGitHub(read_source()).install(keyed_page)
+    open_editor(keyed_page)
+    draft = read_source().replace("Preheat oven to 375F", "Preheat oven to 400F")
+    edit_source(keyed_page, draft)
+    keyed_page.locator("#edit-review").click()
+    keyed_page.locator("#edit-back").click()
+
+    expect(keyed_page.locator("#edit-source")).to_have_value(draft)
+
+
+def test_source_edit_opens_a_pull_request(keyed_page: Page):
+    """An approved edit creates the branch, commits the djot, and opens the PR."""
     github = FakeGitHub(read_source())
     github.install(keyed_page)
 
     open_editor(keyed_page)
-    keyed_page.locator("#edit-rating").select_option("2")
+    edit_source(keyed_page, read_source().replace('rating="4"', 'rating="2"'))
+    keyed_page.locator("#edit-review").click()
     keyed_page.locator("#edit-submit").click()
 
     expect(keyed_page.locator("#edit-status a")).to_have_text("Saved to pull request #34")
@@ -1084,7 +1145,8 @@ def test_editing_reuses_an_open_pull_request(keyed_page: Page):
     github.install(keyed_page)
 
     open_editor(keyed_page)
-    keyed_page.locator("#edit-rating").select_option("1")
+    edit_source(keyed_page, read_source().replace('rating="4"', 'rating="1"'))
+    keyed_page.locator("#edit-review").click()
     keyed_page.locator("#edit-submit").click()
 
     expect(keyed_page.locator("#edit-status a")).to_have_text("Saved to pull request #12")
@@ -1094,12 +1156,41 @@ def test_editing_reuses_an_open_pull_request(keyed_page: Page):
 
 def test_open_pull_request_is_surfaced_on_load(page: Page):
     """Opening a recipe shows the edits already in flight for it."""
-    page.goto(BASE_URL + KEYED_RECIPE)
-    page.evaluate(f"localStorage.setItem('recipe-github-token', {json.dumps(GITHUB_TOKEN)})")
-    FakeGitHub(read_source(), existing_pr=True).install(page)
-    page.reload()
+    open_with_pr(page, FakeGitHub(read_source(), existing_pr=True))
 
     expect(page.locator("#edit-banner a")).to_have_text("Edits in progress: pull request #12")
+
+
+def test_pending_edits_are_marked_against_the_recipe(page: Page):
+    """A step the open PR rewrites shows struck through with the replacement beside it."""
+    head = read_source().replace(
+        "1. Preheat oven to 375F",
+        "1. Preheat oven to 400F\n1. Line the sheet with parchment",
+    )
+    open_with_pr(page, FakeGitHub(read_source(), existing_pr=True, branch_source=head))
+
+    removed = page.locator("li.pending-removed")
+    expect(removed).to_have_count(1)
+    expect(removed.locator("> .item-label")).to_have_text("Preheat oven to 375F")
+    expect(page.locator("li.pending-added")).to_have_text(
+        ["Preheat oven to 400F", "Line the sheet with parchment"]
+    )
+    assert "line-through" in removed.locator("> .item-label").evaluate(
+        "el => getComputedStyle(el).textDecorationLine"
+    )
+    assert (
+        page.locator("li.pending-added").first.evaluate("el => getComputedStyle(el).counterIncrement")
+        == "list-item 0"
+    ), "a proposed step must not consume a real step's number"
+
+
+def test_pending_changes_off_the_recipe_body_are_counted(page: Page):
+    """A metadata edit has no row to hang on, so the banner says so instead of hiding it."""
+    head = read_source().replace('rating="4"', 'rating="5"')
+    open_with_pr(page, FakeGitHub(read_source(), existing_pr=True, branch_source=head))
+
+    expect(page.locator("#edit-banner")).to_contain_text("2 more changed lines only in the diff")
+    expect(page.locator("li.pending-added")).to_have_count(0)
 
 
 def test_photo_upload_is_shrunk_and_stripped(keyed_page: Page):
@@ -1115,6 +1206,7 @@ def test_photo_upload_is_shrunk_and_stripped(keyed_page: Page):
             "buffer": _tall_jpeg_bytes(keyed_page),
         }]
     )
+    keyed_page.locator("#edit-review").click()
     keyed_page.locator("#edit-submit").click()
     expect(keyed_page.locator("#edit-status a")).to_have_text("Saved to pull request #34")
 

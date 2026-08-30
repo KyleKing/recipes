@@ -78,9 +78,13 @@
 		return body;
 	}
 
+	async function branchExists(branch) {
+		return Boolean(await api(`/repos/${REPO}/git/ref/heads/${branch}`));
+	}
+
 	async function ensureBranch() {
 		var branch = branchName();
-		if (await api(`/repos/${REPO}/git/ref/heads/${branch}`)) return branch;
+		if (await branchExists(branch)) return branch;
 
 		var base = await api(`/repos/${REPO}/git/ref/heads/${BASE_BRANCH}`);
 		if (!base) throw new Error(`${BASE_BRANCH} not found in ${REPO}`);
@@ -93,6 +97,11 @@
 
 	async function readFile(path, branch) {
 		return api(`/repos/${REPO}/contents/${path}?ref=${branch}`);
+	}
+
+	async function readSource(branch) {
+		var file = await readFile(sourcePath(), branch);
+		return file ? { text: decodeBase64(file.content), sha: file.sha } : null;
 	}
 
 	async function commitFile(path, branch, contentBase64, sha, message) {
@@ -127,10 +136,6 @@
 		return document.querySelector("h1")?.textContent.trim() || sourcePath();
 	}
 
-	function currentRating() {
-		return document.querySelector(".recipe-rating")?.dataset.rating ?? "";
-	}
-
 	function imageBasename() {
 		return sourcePath().split("/").pop().replace(/\.dj$/, "");
 	}
@@ -141,6 +146,210 @@
 			throw new Error(`No ${key} in ${sourcePath()} to edit`);
 		}
 		return source.replace(pattern, `$1${value}$2`);
+	}
+
+	// Reduce a source line to the words the page renders, so a changed line can be matched
+	// against the row showing it
+	function plainText(line) {
+		return line
+			.replace(/^\s*(?:[-*+]|\d+[.)])\s+/, "")
+			.replace(/^\[[ xX]\]\s*/, "")
+			.replace(/^#+\s+/, "")
+			.replace(/\[([^\]]*)\]\{[^}]*\}/g, "$1")
+			.replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
+			.replace(/\s+/g, " ")
+			.trim();
+	}
+
+	// Longest common subsequence over lines. Recipes run to tens of lines, so the quadratic
+	// table costs nothing and reordering, indentation, and insertions all fall out of it.
+	function diffLines(before, after) {
+		var table = [];
+		for (var row = 0; row <= before.length; row++) table.push(new Array(after.length + 1).fill(0));
+		for (var i = before.length - 1; i >= 0; i--) {
+			for (var j = after.length - 1; j >= 0; j--) {
+				table[i][j] =
+					before[i] === after[j]
+						? table[i + 1][j + 1] + 1
+						: Math.max(table[i + 1][j], table[i][j + 1]);
+			}
+		}
+
+		var ops = [];
+		var x = 0;
+		var y = 0;
+		while (x < before.length && y < after.length) {
+			if (before[x] === after[y]) {
+				ops.push({ type: "same", text: before[x] });
+				x++;
+				y++;
+			} else if (table[x + 1][y] >= table[x][y + 1]) {
+				ops.push({ type: "del", text: before[x] });
+				x++;
+			} else {
+				ops.push({ type: "add", text: after[y] });
+				y++;
+			}
+		}
+		while (x < before.length) ops.push({ type: "del", text: before[x++] });
+		while (y < after.length) ops.push({ type: "add", text: after[y++] });
+		return ops;
+	}
+
+	function splitLines(text) {
+		return text.replace(/\n$/, "").split("\n");
+	}
+
+	function changedOps(ops) {
+		return ops.filter((op) => op.type !== "same");
+	}
+
+	// ----- Pending changes marked up on the rendered recipe -----
+
+	// Rows are matched by their rendered words, consumed in document order so a recipe that
+	// repeats a line still annotates the right one
+	function rowIndex() {
+		var index = new Map();
+		document.querySelectorAll(".recipe-row").forEach((li) => {
+			var label = li.querySelector(":scope > .item-label");
+			if (!label) return;
+			var key = label.textContent.replace(/\s+/g, " ").trim();
+			if (!index.has(key)) index.set(key, []);
+			index.get(key).push(li);
+		});
+		return index;
+	}
+
+	function takeRow(index, text) {
+		var rows = index.get(text);
+		return rows && rows.length > 0 ? rows.shift() : null;
+	}
+
+	function pendingLine(text) {
+		var line = document.createElement("li");
+		line.className = "pending-added";
+		line.textContent = text;
+		return line;
+	}
+
+	function clearPending() {
+		document.querySelectorAll(".pending-added").forEach((el) => {
+			el.remove();
+		});
+		document.querySelectorAll(".pending-removed").forEach((el) => {
+			el.classList.remove("pending-removed");
+		});
+	}
+
+	// Walk the diff in order, anchoring each change to the last row it could be placed
+	// against. A change with no row to hang on (metadata, prose outside a list, an
+	// indentation-only edit) is counted for the banner instead of being shown twice.
+	function markPending(ops) {
+		clearPending();
+		var index = rowIndex();
+		var anchor = null;
+		var unplaced = 0;
+
+		// `tail` trails `anchor` so a run of added lines keeps its order instead of each one
+		// landing directly under the row and reversing the run
+		var tail = null;
+
+		ops.forEach((op) => {
+			var text = plainText(op.text);
+			if (op.type !== "add") {
+				var row = takeRow(index, text);
+				if (!row) {
+					if (op.type === "del") unplaced++;
+					return;
+				}
+				if (op.type === "del") row.classList.add("pending-removed");
+				anchor = row;
+				tail = row;
+				return;
+			}
+			if (!text || !anchor || text === anchorText(anchor)) {
+				unplaced++;
+				return;
+			}
+			var line = pendingLine(text);
+			tail.after(line);
+			tail = line;
+		});
+		return unplaced;
+	}
+
+	function anchorText(row) {
+		var label = row.querySelector(":scope > .item-label");
+		return label ? label.textContent.replace(/\s+/g, " ").trim() : "";
+	}
+
+	async function showPending() {
+		if (!openPr) return 0;
+		var base = await readSource(BASE_BRANCH);
+		var head = await readSource(openPr.head.ref);
+		if (!base || !head || base.text === head.text) return 0;
+		return markPending(diffLines(splitLines(base.text), splitLines(head.text)));
+	}
+
+	function showPrBanner(unplaced) {
+		var banner = document.getElementById("edit-banner");
+		if (!openPr) {
+			banner?.remove();
+			return;
+		}
+		if (!banner) {
+			banner = document.createElement("p");
+			banner.id = "edit-banner";
+			banner.className = "edit-banner";
+			document.querySelector("main")?.prepend(banner);
+		}
+		banner.textContent = "";
+		var link = document.createElement("a");
+		link.href = openPr.html_url;
+		link.textContent = `Edits in progress: pull request #${openPr.number}`;
+		banner.appendChild(link);
+		if (unplaced > 0) {
+			banner.append(
+				` (${unplaced} more changed line${unplaced === 1 ? "" : "s"} only in the diff)`,
+			);
+		}
+	}
+
+	// ----- The editor -----
+
+	async function saveEdits(text, sha, photo, report) {
+		report("Preparing the branch…");
+		var branch = await ensureBranch();
+
+		if (photo) {
+			report("Resizing the photo…");
+			var photoName = `${imageBasename()}.jpeg`;
+			var photoPath = sourcePath().replace(/[^/]+$/, photoName);
+			var encoded = await shrinkPhoto(photo);
+			var existing = await readFile(photoPath, branch);
+			report("Uploading the photo…");
+			await commitFile(
+				photoPath,
+				branch,
+				encoded,
+				existing?.sha,
+				`feat(recipe): add a photo of ${recipeTitle()}`,
+			);
+			text = replaceMetadata(text, "image", photoName);
+		}
+
+		report("Committing…");
+		await commitFile(
+			sourcePath(),
+			branch,
+			encodeBase64(text),
+			sha,
+			`feat(recipe): update ${recipeTitle()}`,
+		);
+
+		report("Opening the pull request…");
+		openPr = await ensurePr(branch, `Recipe edits: ${recipeTitle()}`);
+		return openPr;
 	}
 
 	// A canvas re-encode carries no metadata, so GPS never leaves the device. Decoding with
@@ -161,83 +370,14 @@
 		return bytesToBase64(await blob.arrayBuffer());
 	}
 
-	async function saveEdits(rating, photo, report) {
-		report("Preparing the branch…");
-		var branch = await ensureBranch();
-
-		var source = await readFile(sourcePath(), branch);
-		if (!source) throw new Error(`${sourcePath()} not found on ${branch}`);
-		var text = decodeBase64(source.content);
-
-		if (photo) {
-			report("Resizing the photo…");
-			var photoName = `${imageBasename()}.jpeg`;
-			var photoPath = sourcePath().replace(/[^/]+$/, photoName);
-			var encoded = await shrinkPhoto(photo);
-			var existing = await readFile(photoPath, branch);
-			report("Uploading the photo…");
-			await commitFile(
-				photoPath,
-				branch,
-				encoded,
-				existing?.sha,
-				`feat(recipe): add a photo of ${recipeTitle()}`,
-			);
-			text = replaceMetadata(text, "image", photoName);
-		}
-
-		if (rating !== currentRating()) {
-			text = replaceMetadata(text, "rating", rating);
-		}
-
-		report("Committing…");
-		await commitFile(
-			sourcePath(),
-			branch,
-			encodeBase64(text),
-			source.sha,
-			`feat(recipe): update ${recipeTitle()}`,
-		);
-
-		report("Opening the pull request…");
-		openPr = await ensurePr(branch, `Recipe edits: ${recipeTitle()}`);
-		showPrBanner();
-		return openPr;
-	}
-
-	function showPrBanner() {
-		var banner = document.getElementById("edit-banner");
-		if (!openPr) {
-			banner?.remove();
-			return;
-		}
-		if (!banner) {
-			banner = document.createElement("p");
-			banner.id = "edit-banner";
-			banner.className = "edit-banner";
-			document.querySelector("main")?.prepend(banner);
-		}
-		banner.textContent = "";
-		var link = document.createElement("a");
-		link.href = openPr.html_url;
-		link.textContent = `Edits in progress: pull request #${openPr.number}`;
-		banner.appendChild(link);
-	}
-
-	function field(parent, labelText, control) {
-		var label = document.createElement("label");
-		label.className = "edit-field";
-		label.append(labelText, control);
-		parent.appendChild(label);
-		return control;
-	}
-
 	function renderTokenForm(body, refresh) {
 		var input = document.createElement("input");
 		input.type = "password";
 		input.id = "edit-token";
+		input.className = "edit-input";
 		input.autocomplete = "off";
-		field(body, "Fine-grained token", input);
+		input.placeholder = "github_pat_…";
+		body.appendChild(input);
 
 		var help = document.createElement("p");
 		help.className = "edit-help";
@@ -252,75 +392,167 @@
 		var save = document.createElement("button");
 		save.type = "button";
 		save.id = "edit-save-token";
-		save.className = "edit-btn";
+		save.className = "edit-btn edit-primary";
 		save.textContent = "Save token";
 		save.addEventListener("click", () => {
 			if (!input.value.trim()) return;
 			writeToken(input.value.trim());
 			refresh();
 		});
-		body.appendChild(save);
+		body.appendChild(footer(save));
 	}
 
-	function renderEditForm(body, refresh) {
-		var rating = document.createElement("select");
-		rating.id = "edit-rating";
-		["0", "1", "2", "3", "4", "5"].forEach((value) => {
-			var option = document.createElement("option");
-			option.value = value;
-			option.textContent = value === "0" ? "Not yet rated" : `${value} / 5`;
-			rating.appendChild(option);
-		});
-		rating.value = currentRating() || "0";
-		field(body, "Rating", rating);
+	function footer(...controls) {
+		var row = document.createElement("div");
+		row.className = "edit-footer";
+		row.append(...controls);
+		return row;
+	}
 
-		var photo = document.createElement("input");
-		photo.type = "file";
-		photo.id = "edit-photo";
-		photo.accept = "image/*";
-		field(body, "Photo", photo);
+	// A recipe is mostly unchanged, so the review shows the changed lines with a little
+	// context and collapses the rest rather than making the reader hunt through the file
+	var DIFF_CONTEXT = 2;
+
+	function keptLines(ops) {
+		var kept = new Set();
+		ops.forEach((op, i) => {
+			if (op.type === "same") return;
+			for (var j = i - DIFF_CONTEXT; j <= i + DIFF_CONTEXT; j++) kept.add(j);
+		});
+		return kept;
+	}
+
+	function renderDiff(ops) {
+		var view = document.createElement("pre");
+		view.id = "edit-diff";
+		view.className = "edit-diff";
+		var kept = keptLines(ops);
+		var skipped = 0;
+
+		function flush() {
+			if (skipped === 0) return;
+			var gap = document.createElement("span");
+			gap.className = "diff-skip";
+			gap.textContent = `⋯ ${skipped} unchanged line${skipped === 1 ? "" : "s"}\n`;
+			view.appendChild(gap);
+			skipped = 0;
+		}
+
+		ops.forEach((op, i) => {
+			if (!kept.has(i)) {
+				skipped++;
+				return;
+			}
+			flush();
+			var line = document.createElement("span");
+			line.className = `diff-${op.type}`;
+			line.textContent = `${op.text}\n`;
+			view.appendChild(line);
+		});
+		flush();
+		return view;
+	}
+
+	function renderReview(body, source, text, photo, refresh) {
+		var ops = diffLines(splitLines(source.text), splitLines(text));
+		var changes = changedOps(ops);
 
 		var status = document.createElement("p");
 		status.id = "edit-status";
 		status.className = "edit-help";
-		body.appendChild(status);
 
-		function report(message) {
-			status.textContent = message;
+		if (changes.length === 0 && !photo) {
+			status.textContent = "Nothing changed yet.";
+			body.append(status, footer(backButton(refresh, source, text)));
+			return;
 		}
+
+		body.appendChild(renderDiff(ops));
+		if (photo) {
+			var note = document.createElement("p");
+			note.className = "edit-help";
+			note.textContent = `Plus a new photo, resized to ${PHOTO_MAX_HEIGHT}px and stripped of its metadata.`;
+			body.appendChild(note);
+		}
+		body.appendChild(status);
 
 		var save = document.createElement("button");
 		save.type = "button";
 		save.id = "edit-submit";
-		save.className = "edit-btn";
+		save.className = "edit-btn edit-primary";
 		save.textContent = "Save to a pull request";
 		save.addEventListener("click", async () => {
 			save.disabled = true;
 			try {
-				var pr = await saveEdits(rating.value, photo.files[0] || null, report);
-				report("");
+				var pr = await saveEdits(text, source.sha, photo, (message) => {
+					status.textContent = message;
+				});
+				status.textContent = "";
 				var done = document.createElement("a");
 				done.href = pr.html_url;
 				done.textContent = `Saved to pull request #${pr.number}`;
 				status.appendChild(done);
+				showPrBanner(await showPending());
 			} catch (error) {
-				report(error.message);
+				status.textContent = error.message;
 			} finally {
 				save.disabled = false;
 			}
 		});
-		body.appendChild(save);
+
+		body.appendChild(footer(backButton(refresh, source, text), save));
+	}
+
+	function backButton(refresh, source, text) {
+		var back = document.createElement("button");
+		back.type = "button";
+		back.id = "edit-back";
+		back.className = "edit-btn";
+		back.textContent = "Back to editing";
+		back.addEventListener("click", () => {
+			refresh(source, text);
+		});
+		return back;
+	}
+
+	function renderEditor(body, source, draft, review) {
+		var editor = document.createElement("textarea");
+		editor.id = "edit-source";
+		editor.className = "edit-source";
+		editor.spellcheck = false;
+		editor.value = draft ?? source.text;
+		body.appendChild(editor);
+
+		var photo = document.createElement("input");
+		photo.type = "file";
+		photo.id = "edit-photo";
+		photo.className = "edit-input";
+		photo.accept = "image/*";
+		var photoField = document.createElement("label");
+		photoField.className = "edit-field";
+		photoField.append("Photo", photo);
+		body.appendChild(photoField);
+
+		var next = document.createElement("button");
+		next.type = "button";
+		next.id = "edit-review";
+		next.className = "edit-btn edit-primary";
+		next.textContent = "Review changes";
+		next.addEventListener("click", () => {
+			review(editor.value, photo.files[0] || null);
+		});
 
 		var revoke = document.createElement("button");
 		revoke.type = "button";
 		revoke.id = "edit-forget-token";
-		revoke.className = "edit-btn";
-		revoke.textContent = "Forget token on this device";
+		revoke.className = "edit-quiet";
+		revoke.textContent = "Forget token";
 		revoke.addEventListener("click", () => {
 			writeToken("");
-			refresh();
+			openDialog();
 		});
-		body.appendChild(revoke);
+
+		body.appendChild(footer(revoke, next));
 	}
 
 	function dialogElement() {
@@ -344,27 +576,52 @@
 		return dialog;
 	}
 
-	function renderDialog() {
+	function dialogBody() {
 		var dialog = dialogElement();
 		var body = dialog.querySelector(".edit-body");
 		body.textContent = "";
-
 		var heading = document.createElement("h2");
-		heading.textContent = `Edit ${recipeTitle()}`;
+		heading.textContent = recipeTitle();
 		body.appendChild(heading);
+		return body;
+	}
+
+	function message(body, id, text) {
+		var note = document.createElement("p");
+		note.id = id;
+		note.className = "edit-help";
+		note.textContent = text;
+		body.appendChild(note);
+	}
+
+	async function openDialog() {
+		var body = dialogBody();
+		var dialog = dialogElement();
+		if (!dialog.open) dialog.showModal();
 
 		if (!navigator.onLine) {
-			var offline = document.createElement("p");
-			offline.id = "edit-offline";
-			offline.className = "edit-help";
-			offline.textContent = "Editing needs a connection. Nothing is saved on this device.";
-			body.appendChild(offline);
-			return dialog;
+			message(body, "edit-offline", "Editing needs a connection. Nothing is saved on this device.");
+			return;
+		}
+		if (!readToken()) {
+			renderTokenForm(body, openDialog);
+			return;
 		}
 
-		if (readToken()) renderEditForm(body, renderDialog);
-		else renderTokenForm(body, renderDialog);
-		return dialog;
+		message(body, "edit-status", "Loading the source…");
+		var branch = (await branchExists(branchName())) ? branchName() : BASE_BRANCH;
+		var source = await readSource(branch);
+		if (!source) {
+			message(dialogBody(), "edit-status", `${sourcePath()} not found`);
+			return;
+		}
+		showEditor(source);
+	}
+
+	function showEditor(source, draft) {
+		renderEditor(dialogBody(), source, draft, (text, photo) => {
+			renderReview(dialogBody(), source, text, photo, showEditor);
+		});
 	}
 
 	async function loadOpenPr() {
@@ -373,17 +630,22 @@
 			openPr = await findOpenPr();
 		} catch (_e) {
 			openPr = null;
+			return;
 		}
-		showPrBanner();
+		var unplaced = 0;
+		try {
+			unplaced = await showPending();
+		} catch (_e) {
+			unplaced = 0;
+		}
+		showPrBanner(unplaced);
 	}
 
 	function init() {
 		var button = document.getElementById("edit-btn");
 		if (!button) return;
 		button.style.display = "inline-block";
-		button.addEventListener("click", () => {
-			renderDialog().showModal();
-		});
+		button.addEventListener("click", openDialog);
 		loadOpenPr();
 	}
 
