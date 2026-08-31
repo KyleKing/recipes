@@ -408,11 +408,16 @@
 	// context and collapses the rest rather than making the reader hunt through the file
 	var DIFF_CONTEXT = 2;
 
+	// A lone line between two hunks is kept: "1 unchanged line" reads longer than the line it
+	// stands in for, and it splits one edit into two on the screen
 	function keptLines(ops) {
 		var kept = new Set();
 		ops.forEach((op, i) => {
 			if (op.type === "same") return;
 			for (var j = i - DIFF_CONTEXT; j <= i + DIFF_CONTEXT; j++) kept.add(j);
+		});
+		ops.forEach((_op, i) => {
+			if (!kept.has(i) && kept.has(i - 1) && kept.has(i + 1)) kept.add(i);
 		});
 		return kept;
 	}

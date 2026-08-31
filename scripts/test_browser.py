@@ -1355,6 +1355,72 @@ def test_review_shows_removed_and_added_lines(keyed_page: Page):
     assert keyed_page.locator("#edit-diff .diff-same").count() == 4, "two lines of context each side"
 
 
+def test_review_handles_edits_spread_across_the_file(keyed_page: Page):
+    """Four edits from one cooking session: a rating, an amount, a step, and a note.
+
+    Each has to reach the commit, and each has to read as its own hunk rather than being
+    swallowed into one wall of context.
+    """
+    source = read_source()
+    edited = (
+        source.replace('rating="4"', 'rating="5"')
+        .replace("- [ ] 1 tsp [salt]", "- [ ] 1.5 tsp [salt]")
+        .replace("Preheat oven to 375F", "Preheat oven to 350F")
+        .replace("1. Avoid over mixing", "1. Chill the dough overnight\n1. Avoid over mixing")
+    )
+    assert edited != source
+
+    github = FakeGitHub(source)
+    github.install(keyed_page)
+    open_editor(keyed_page)
+    edit_source(keyed_page, edited)
+    keyed_page.locator("#edit-review").click()
+
+    diff = keyed_page.locator("#edit-diff")
+    expect(diff.locator(".diff-del")).to_have_text(
+        [
+            '{ rating="4" image="chocolate_chip_cookies.jpeg" }\n',
+            "- [ ] 1 tsp [salt]{ ing=\"salt\" }\n",
+            "1. Preheat oven to 375F\n",
+        ]
+    )
+    expect(diff.locator(".diff-add")).to_have_text(
+        [
+            '{ rating="5" image="chocolate_chip_cookies.jpeg" }\n',
+            "- [ ] 1.5 tsp [salt]{ ing=\"salt\" }\n",
+            "1. Preheat oven to 350F\n",
+            "1. Chill the dough overnight\n",
+        ]
+    )
+    # Four separated edits, so the unchanged runs between them stay collapsed
+    assert diff.locator(".diff-skip").count() >= 3, "hunks must stay visually separate"
+
+    keyed_page.locator("#edit-submit").click()
+    expect(keyed_page.locator("#edit-status a")).to_contain_text("pull request")
+
+    assert github.committed_source() == edited, "every hunk must survive, not just the first"
+
+
+def test_review_keeps_a_lone_line_between_two_hunks(keyed_page: Page):
+    """Two edits six lines apart leave exactly one line between their context windows, and
+    "1 unchanged line" reads longer than the line it would replace."""
+    source = read_source()
+    edited = source.replace("2.25 cups", "2.5 cups").replace("1 cup (2 sticks)", "1.25 cups")
+    assert edited != source
+
+    FakeGitHub(source).install(keyed_page)
+    open_editor(keyed_page)
+    edit_source(keyed_page, edited)
+    keyed_page.locator("#edit-review").click()
+
+    diff = keyed_page.locator("#edit-diff")
+    expect(diff.locator(".diff-add")).to_have_count(2)
+    gaps = diff.locator(".diff-skip").all_text_contents()
+    assert not any("1 unchanged line" in gap for gap in gaps), gaps
+    # Only the runs before and after, so the two hunks read as one rather than being split
+    expect(diff.locator(".diff-skip")).to_have_count(2)
+
+
 def test_review_reports_an_untouched_source(keyed_page: Page):
     """Opening and closing the editor without typing must not offer to commit."""
     FakeGitHub(read_source()).install(keyed_page)
