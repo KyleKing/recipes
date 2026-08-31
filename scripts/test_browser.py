@@ -616,9 +616,11 @@ def test_dossier_shows_substitutes_from_the_reference_pages(keyed_page: Page):
     panel = keyed_page.locator("#recipe-panel")
     expect(panel).to_contain_text("1 Tbsp molasses")
     expect(panel).to_contain_text("dark brown sugar")
-    expect(panel.locator("a")).to_have_attribute(
+    expect(panel.get_by_role("link", name="Full entry")).to_have_attribute(
         "href", "/reference/ingredient_substitutions.html#1-cup-Brown-Sugar"
     )
+    # Now that the references are backfilled, the panel also lists the recipes sharing it
+    assert panel.locator("a").count() > 1
 
 
 def test_dossier_says_when_no_substitute_is_recorded(keyed_page: Page):

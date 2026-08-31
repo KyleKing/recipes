@@ -257,6 +257,15 @@ name several keys (`ing="brown-sugar granulated-sugar"`). The build fails when a
 references a key no ingredient in that file declares, since retirement would otherwise do
 nothing. Name matching was rejected: it binds only 72% of steps.
 
+`scripts/_backfill_ingredient_refs.py` writes the first pass of these spans across the
+corpus (99.6% of ingredients keyed, 65% of steps bound; the unbound remainder is mostly
+steps that name no ingredient, such as "Preheat oven to 350F"). It reads the ingredient's
+name out of the line by stripping quantities, units, parentheticals, and trailing
+qualifiers, then wraps matching prose in the steps. Name matching is an authoring aid, not
+an answer: run it, read the diff, fix what it missed. Already-keyed lines are left alone, so
+a hand-corrected file survives a rerun, and `content/reference/nested_list_demo.dj` is kept
+out of it because the browser tests pin its exact shape.
+
 `goBuild/substitutions.go` parses `content/reference/*substitutions*.dj` into
 `public/_static/substitutions.json`, keyed by ingredient. A heading follows
 `### <amount> <Name>[, <use>]`; add `{ing="..."}` above a heading the pattern cannot read.
