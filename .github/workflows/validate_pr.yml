@@ -1,0 +1,98 @@
+---
+name: Validate PR
+
+"on":
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.head_ref }}
+  cancel-in-progress: true
+
+jobs:
+  optimize-images:
+    # Recompressing on the branch keeps the oversized blob out of main only under a squash
+    # merge. A merge commit carries the branch's own history, blob included.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.head_ref }}
+          # The three-dot diff below needs the merge base, which a shallow clone lacks
+          fetch-depth: 0
+
+      - uses: jdx/mise-action@v4
+        with:
+          experimental: true
+        env:
+          MISE_HTTP_TIMEOUT: "120"
+
+      # Branch names reach the shell only through the environment: interpolating them into
+      # an inline script is a command-injection path.
+      - name: Collect images changed by this pull request
+        id: changed
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          git diff --name-only --diff-filter=d "origin/$BASE_REF"...HEAD \
+            -- 'content/**/*.jpeg' 'content/**/*.jpg' 'content/**/*.png' > changed.txt
+          echo "count=$(wc -l < changed.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
+          cat changed.txt
+
+      # A photo added from the browser is a canvas re-encode, which runs ~17% larger than
+      # what optimize-images produces for the same pixels. Unlike `mise run compress` this
+      # omits --convert-all, which would rename a PNG to .jpeg and break every reference.
+      - name: Compress them
+        if: steps.changed.outputs.count != '0'
+        run: xargs -r -a changed.txt mise exec -- optimize-images -mh 900
+
+      - name: Commit the result
+        if: steps.changed.outputs.count != '0'
+        env:
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          if git diff --quiet; then
+            echo "Already optimal, nothing to commit"
+            exit 0
+          fi
+          git commit -am 'chore(images): compress photos added in this pull request'
+          git push origin "HEAD:$HEAD_REF"
+
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: jdx/mise-action@v4
+        with:
+          experimental: true
+        env:
+          MISE_HTTP_TIMEOUT: "120"
+
+      - name: Install spaCy Model
+        run: python -m spacy download en_core_web_sm
+
+      - name: Build go-spacy C++ wrapper
+        run: mise run setup-spacy
+
+      - name: Run unit tests
+        run: mise run test
+
+      # The build is the validator: a missing metadata block, a missing image, an unknown
+      # ingredient key, or a broken internal link all fail here rather than on main.
+      - name: Build Site
+        run: mise run build
+
+      - name: Install Playwright browser
+        run: mise run browser-install
+
+      - name: Run browser tests
+        run: ./scripts/run_browser_tests.sh

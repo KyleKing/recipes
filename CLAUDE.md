@@ -330,6 +330,20 @@ edit) is counted in the banner instead of being guessed at. A proposed step carr
 - Example: `DivNode` → `formattedDivPartial()` extracts metadata
 - Example: `ListItemNode` → `listItemConversion()` renders checkboxes
 
+## Continuous integration
+
+`update_site.yml` builds and deploys on push to `main`. `validate_pr.yml` runs on every
+pull request, which is the only check a browser edit ever gets: the build itself is the
+validator, failing on a missing metadata block, a missing image, an unknown ingredient key,
+or a broken internal link.
+
+It also recompresses images the pull request added and pushes the result back to the same
+branch. A canvas re-encode at `PHOTO_QUALITY = 0.85` runs about 17% larger than
+`optimize-images -mh 900` produces for the same pixels, and running the tool over that
+output recovers 12.9% (~28KB per photo), landing within 3% of the local `mise run compress`
+pipeline. This keeps the oversized blob out of `main` only under a squash merge, because a
+merge commit carries the branch's own history along with it.
+
 ## Recipe Link Maintenance
 
 Use `mise run wayback` (`scripts/_update_wayback_links.py`, a Python script with uv inline
