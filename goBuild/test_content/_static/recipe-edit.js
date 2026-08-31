@@ -338,17 +338,12 @@
 			text = replaceMetadata(text, "image", photoName);
 		}
 
+		var commitMsg = `feat(recipe): ${recipeTitle()}`;
 		report("Committing…");
-		await commitFile(
-			sourcePath(),
-			branch,
-			encodeBase64(text),
-			sha,
-			`feat(recipe): update ${recipeTitle()}`,
-		);
+		await commitFile(sourcePath(), branch, encodeBase64(text), sha, commitMsg);
 
 		report("Opening the pull request…");
-		openPr = await ensurePr(branch, `Recipe edits: ${recipeTitle()}`);
+		openPr = await ensurePr(branch, commitMsg);
 		return openPr;
 	}
 
