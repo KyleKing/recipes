@@ -7,8 +7,9 @@
 	var COPY_FEEDBACK_MS = 1500;
 	var SUBSTITUTIONS_URL = "/_static/substitutions.json";
 	var INGREDIENT_INDEX_URL = "/_static/ingredient-index.json";
-	var SPLIT_QUERY =
-		"(pointer: coarse) and (orientation: landscape) and (min-width: 900px) and (max-height: 900px)";
+	// Width and shape decide the split, never the pointer: a desktop window wide enough to
+	// hold both panes benefits from the reference rail exactly as an iPad does
+	var SPLIT_QUERY = "(min-width: 1000px) and (min-aspect-ratio: 4/3)";
 	var SPLIT_DISABLED_KEY = "recipe-split-disabled";
 
 	var scrollStack = [];
@@ -630,8 +631,12 @@
 				toggle.textContent = "+";
 			}
 
-			toggle.addEventListener("click", (e) => {
-				e.stopPropagation();
+			// The whole heading toggles, matching the row model. The glyph alone measured
+			// 13x24, so a tap aimed at it landed on the anchor beside it or on nothing
+			heading.classList.add("collapse-target");
+			heading.addEventListener("click", (e) => {
+				if (e.target.closest("a")) return;
+				if (hasTextSelection()) return;
 				var isCollapsing = !section.classList.contains("collapsed");
 
 				if (isCollapsing) {
@@ -898,11 +903,29 @@
 			toolbar.classList.remove("hidden");
 		}
 
-		toggleBtn.addEventListener("click", () => {
-			toolbar.classList.toggle("hidden");
+		function setHidden(hidden) {
+			toolbar.classList.toggle("hidden", hidden);
 			var currentState = loadState();
-			currentState["toolbar-hidden"] = toolbar.classList.contains("hidden");
+			currentState["toolbar-hidden"] = hidden;
 			saveState(currentState, false);
+		}
+
+		toggleBtn.addEventListener("click", () => {
+			setHidden(!toolbar.classList.contains("hidden"));
+		});
+
+		// The toggle button is hidden on a fine pointer (see `styles.css`), so the shortcut is
+		// the only way in there. Escape closes but never opens, to keep it out of the way
+		document.addEventListener("keydown", (e) => {
+			if (e.key === "Escape" && !toolbar.classList.contains("hidden")) {
+				setHidden(true);
+				return;
+			}
+			if (e.key.toLowerCase() !== "e" || !(e.metaKey || e.ctrlKey) || e.shiftKey || e.altKey) {
+				return;
+			}
+			e.preventDefault();
+			setHidden(!toolbar.classList.contains("hidden"));
 		});
 	}
 

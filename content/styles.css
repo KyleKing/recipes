@@ -29,7 +29,7 @@ body {
 :root {
 	/* Scroll room a page reserves for the floating toolbar. It clears the collapsed
 	   toolbar only: reaching content under the expanded one means collapsing it. */
-	--toolbar-clearance: 60px;
+	--toolbar-clearance: 68px;
 	--color-back: #eaeaea;
 	--color-text: #454545;
 	--color-link: #07a;
@@ -338,6 +338,34 @@ main {
 	background: rgba(180, 180, 180, 0.3);
 }
 
+/* Collapsed, the toggle shrinks to its own square instead of keeping the width of the
+   widest button, which otherwise floats an empty box over the recipe text */
+/* The gap separates visible buttons. Collapsed there are none, and it was still adding 8px
+   of pinned height that every page then had to reserve */
+.recipe-toolbar.hidden {
+	gap: 0;
+}
+
+.recipe-toolbar.hidden .toolbar-toggle {
+	width: auto;
+	min-width: var(--row-control);
+	min-height: var(--row-control);
+	box-sizing: border-box;
+	padding: 4px;
+}
+
+/* A keyboard makes the button redundant, so Cmd/Ctrl+E is the only way in on a desktop.
+   With nothing pinned over the content there, no page owes the toolbar scroll room either */
+@media (pointer: fine) {
+	:root {
+		--toolbar-clearance: 0px;
+	}
+
+	.toolbar-toggle {
+		display: none;
+	}
+}
+
 .toolbar-toggle .toggle-icon {
 	display: inline-block;
 	transition: transform 0.3s ease;
@@ -469,9 +497,10 @@ li.recipe-row.lit > .item-label {
 	list-style-type: "✓ ";
 }
 
-/* Split layout - iPad landscape */
+/* Split layout - any window wide and wide-shaped enough to hold both panes.
+   Must stay in step with `SPLIT_QUERY` in content/_static/recipe.js */
 
-@media (pointer: coarse) and (orientation: landscape) and (min-width: 900px) and (max-height: 900px) {
+@media (min-width: 1000px) and (min-aspect-ratio: 4 / 3) {
 	body:has(main.split-layout) {
 		margin-bottom: 0;
 		height: 100dvh;
@@ -557,17 +586,23 @@ section.collapsible.collapsed li.completed {
 	display: none;
 }
 
+/* The heading is the collapse target; the glyph only reports the state, so it must never
+   swallow a tap aimed at the heading around it */
+h2.collapse-target,
+h3.collapse-target {
+	display: block;
+	min-height: var(--row-control);
+	padding: 4px 0;
+	cursor: pointer;
+}
+
 .collapse-toggle {
 	margin-left: 0.5em;
 	font-family: monospace;
 	font-weight: normal;
-	cursor: pointer;
 	color: var(--color-link);
 	user-select: none;
-}
-
-.collapse-toggle:hover {
-	text-decoration: underline;
+	pointer-events: none;
 }
 
 .section-summary {
@@ -579,9 +614,13 @@ section.collapsible.collapsed li.completed {
 
 /* Header Anchors */
 
+/* An indicator, never a pointer target. It sits mid-heading, so any press it accepts is a
+   press stolen from the collapse target around it. Keyboard focus still activates it, at the
+   cost of right-click "copy link address" on the `#` itself */
 .header-anchor {
 	margin-left: 0.3em;
 	opacity: 0;
+	pointer-events: none;
 	color: var(--color-link);
 	text-decoration: none;
 	font-weight: normal;

@@ -214,16 +214,27 @@ silently.
 - `unmeasured` -> `measured` -> `spent` are three separate ingredient states. Checking a
     row means measured; completing a step marks the ingredients it references as spent.
     Spent is derived from step state on every load, never stored
-- Every page reserves `--toolbar-clearance` (the collapsed toolbar's height plus its bottom
-    offset) as scroll room and no more, on `body` in single column and on the ingredients pane
-    in split view. Collapsing the toolbar gives its box back rather than only fading it, so
-    reaching content under the expanded toolbar means collapsing it
+- A section's whole heading is its collapse target, and both the `+`/`-` glyph and the `#`
+    header anchor inside it are indicators that take no pointer events at all. The glyph alone
+    measured 13x24 with the anchor beside it, so a tap that drifted right jumped the page and
+    the toggle looked like it needed three tries. The anchor is still reachable by keyboard;
+    the cost is no right-click "copy link address" on the `#`
+- On a fine pointer there is no toolbar button. `Cmd/Ctrl+E` opens and closes the toolbar and
+    `Escape` closes it, so nothing is pinned over the recipe on a desktop
+- A coarse pointer keeps the button, and every page there reserves `--toolbar-clearance` (the
+    collapsed toolbar's height plus its bottom offset) as scroll room and no more, on `body`
+    in single column and on the ingredients pane in split view. Collapsing the toolbar gives
+    its box and its flex gap back rather than only fading them, so reaching content under the
+    expanded toolbar means collapsing it. The clearance is `0` on a fine pointer, which pins
+    nothing
 - Progress keys expire 48h after the last progress change. Collapsing a section or
     hiding the toolbar is not progress and does not restart that window
-- On a coarse-pointer device in landscape (iPad-sized), the recipe splits into two
-    scrolling panes: title/description/rating/steps on the wider left, ingredients as a
-    narrower reference rail on the right. A `Split View: On/Off` toolbar button (only shown
-    when the device already qualifies) lets a user force single-column instead; the choice
+- Any window at least 1000px wide and at least 4:3 splits into two scrolling panes:
+    title/description/rating/steps on the wider left, ingredients as a narrower reference rail
+    on the right. Width and shape decide this, never the pointer, so a desktop window gets the
+    rail exactly as an iPad does. `SPLIT_QUERY` in `recipe.js` and the media query in
+    `styles.css` must stay in step. A `Split View: On/Off` toolbar button (only shown
+    when the window already qualifies) lets a user force single-column instead; the choice
     persists in `localStorage` under `recipe-split-disabled`. The ingredients pane sits next
     to the floating toolbar and reserves `padding-bottom` in `content/styles.css` to clear
     its footprint — widen it if the toolbar ever grows another button, or the pane's last

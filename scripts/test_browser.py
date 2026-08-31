@@ -113,11 +113,45 @@ def age_progress(page: Page, hours: float, key: str | None = None) -> None:
     )
 
 
+def tap(locator, dx: float = -0.3, dy: float = 0.0) -> None:
+    """Click through the compositor at a real viewport point, offset from center.
+
+    `locator.click()` dispatches at the element regardless of what is painted over it or
+    how small it is, which is why a 13x24 collapse glyph with an invisible anchor beside it
+    passed every test and took three taps in the kitchen.
+    """
+    locator.scroll_into_view_if_needed()
+    box = locator.bounding_box()
+    assert box is not None, "target has no box to tap"
+    locator.page.mouse.click(
+        box["x"] + box["width"] * (0.5 + dx),
+        box["y"] + box["height"] * (0.5 + dy),
+    )
+
+
 def toggle(item) -> None:
-    """Mark an item done by clicking its own label, the only target that toggles it."""
-    label = item.locator("> .item-label")
-    label.scroll_into_view_if_needed()
-    label.click()
+    """Mark an item done by tapping its own label, the only target that toggles it."""
+    tap(item.locator("> .item-label"))
+
+
+def heading_of(section):
+    """The collapse target is the whole heading; the glyph inside it is only an indicator."""
+    return section.locator("h2.collapse-target, h3.collapse-target").first
+
+
+def open_toolbar(page: Page) -> None:
+    """Open the floating toolbar the way the current pointer allows.
+
+    A fine pointer has no button at all, only Cmd/Ctrl+E, so a test that reached for
+    `#toolbar-toggle` would silently be testing a control the user cannot see.
+    """
+    if "hidden" not in (page.locator("#recipe-toolbar").get_attribute("class") or ""):
+        return
+    if page.locator("#toolbar-toggle").is_visible():
+        page.locator("#toolbar-toggle").click()
+    else:
+        page.keyboard.press("ControlOrMeta+e")
+    expect(page.locator("#recipe-toolbar")).not_to_have_class(re.compile("hidden"))
 
 
 def test_server_is_running(page: Page):
@@ -329,6 +363,77 @@ def test_row_targets_are_touch_sized_and_separated(keyed_page: Page):
     assert measured["minGap"] >= ROW_GAP_PX
 
 
+# Everything a cook is meant to be able to hit. Anything paintable but inert (the `#`
+# anchor, the collapse glyph) is deliberately absent, and must stay that way.
+TAP_TARGETS = "h2.collapse-target, h3.collapse-target, li.recipe-row > .item-label"
+
+
+SAMPLE_POINTS = [(0.5, 0.5), (0.08, 0.2), (0.5, 0.2), (0.92, 0.2), (0.08, 0.8), (0.92, 0.8)]
+
+
+def _audit_targets(page: Page) -> list[dict]:
+    """For each target: its box, and which element actually receives a press at points spread
+    across it.
+
+    The mouse is really moved to each point before asking. A rule like
+    `h2:hover .header-anchor { pointer-events: auto }` re-arms an interceptor only while the
+    heading is hovered, which a bare `elementFromPoint` call never sees.
+    """
+    targets = page.locator(TAP_TARGETS)
+    audited = []
+    for i in range(targets.count()):
+        el = targets.nth(i)
+        el.scroll_into_view_if_needed()
+        box = el.bounding_box()
+        if box is None:
+            continue
+        stolen = []
+        for fx, fy in SAMPLE_POINTS:
+            x, y = box["x"] + box["width"] * fx, box["y"] + box["height"] * fy
+            page.mouse.move(x, y)
+            hit = el.evaluate(
+                """(el, [x, y]) => {
+                    var target = document.elementFromPoint(x, y);
+                    if (!target || target === el || el.contains(target)) return null;
+                    return target.tagName + "." + String(target.className);
+                }""",
+                [x, y],
+            )
+            if hit:
+                stolen.append(hit)
+        audited.append(
+            {
+                "text": (el.text_content() or "").strip()[:40],
+                "width": box["width"],
+                "height": box["height"],
+                "stolen": stolen,
+            }
+        )
+    return audited
+
+
+@pytest.mark.parametrize("recipe", [DEMO_RECIPE, KEYED_RECIPE, TEST_RECIPE])
+def test_every_tap_target_is_touch_sized(page: Page, recipe: str):
+    """A control smaller than a fingertip is a control that takes three tries."""
+    targets = _audit_targets(_fresh(page, recipe))
+    assert targets
+
+    small = [t for t in targets if t["height"] < ROW_CONTROL_PX]
+    assert not small, f"targets under {ROW_CONTROL_PX}px tall: {small}"
+
+
+@pytest.mark.parametrize("recipe", [DEMO_RECIPE, KEYED_RECIPE, TEST_RECIPE])
+def test_no_tap_target_is_covered_by_a_neighbour(page: Page, recipe: str):
+    """A press anywhere inside a target must reach that target.
+
+    The heading collapse regressed exactly here: an invisible `.header-anchor` sat inside the
+    heading box still taking pointer events, so a tap that drifted right jumped the page
+    instead of collapsing the section, and it looked like the toggle needed three clicks.
+    """
+    stolen = [t for t in _audit_targets(_fresh(page, recipe)) if t["stolen"]]
+    assert not stolen, f"presses intercepted before reaching the target: {stolen}"
+
+
 def test_rows_carry_no_control_of_their_own(keyed_page: Page):
     """Reading is plain text: the only mark on a row is the dotted underline on the words
     that open the panel."""
@@ -344,8 +449,7 @@ def test_rows_carry_no_control_of_their_own(keyed_page: Page):
 
 def info_mode(page: Page, on: bool) -> None:
     """The toolbar starts collapsed, so reaching the Info button means opening it first."""
-    if "hidden" in (page.locator("#recipe-toolbar").get_attribute("class") or ""):
-        page.locator("#toolbar-toggle").click()
+    open_toolbar(page)
     btn = page.locator("#info-btn")
     expect(btn).to_be_visible()
     if (btn.text_content() == "Info: On") != on:
@@ -587,7 +691,7 @@ def test_expiry_window_is_not_extended_by_collapsing(demo_page: Page):
     age_progress(demo_page, hours=47.9)
     before = stored_state(demo_page)["_progressAt"]
 
-    demo_page.locator("section.collapsible .collapse-toggle").first.click()
+    tap(heading_of(demo_page.locator("section.collapsible").first))
     demo_page.wait_for_timeout(500)
 
     assert stored_state(demo_page)["_progressAt"] == before
@@ -636,25 +740,25 @@ def test_multiple_recipes_independent_state(page: Page):
 def test_section_collapse_toggle(demo_page: Page):
     """Sections start expanded and toggle on click."""
     section = demo_page.locator("section.collapsible").first
-    toggle = section.locator(".collapse-toggle")
+    glyph = section.locator(".collapse-toggle")
 
-    expect(toggle).to_have_text("-")
+    expect(glyph).to_have_text("-")
     expect(section).not_to_have_class(re.compile("collapsed"))
 
-    toggle.click()
+    tap(heading_of(section))
     demo_page.wait_for_timeout(500)
-    expect(toggle).to_have_text("+")
+    expect(glyph).to_have_text("+")
     expect(section).to_have_class(re.compile("collapsed"))
 
-    toggle.click()
-    expect(toggle).to_have_text("-")
+    tap(heading_of(section))
+    expect(glyph).to_have_text("-")
     expect(section).not_to_have_class(re.compile("collapsed"))
 
 
 def test_section_collapse_persistence(demo_page: Page):
     """Collapsed sections stay collapsed across a reload."""
     section = demo_page.locator("section.collapsible").first
-    section.locator(".collapse-toggle").click()
+    tap(heading_of(section))
     demo_page.wait_for_timeout(500)
     expect(section).to_have_class(re.compile("collapsed"))
 
@@ -668,7 +772,7 @@ def test_section_progress_summary(demo_page: Page):
     section = demo_page.locator("section.collapsible").first
     toggle(demo_page.locator("ul.task-list > li").first)
 
-    section.locator(".collapse-toggle").click()
+    tap(heading_of(section))
     demo_page.wait_for_timeout(500)
 
     summary = section.locator(".section-summary")
@@ -678,7 +782,7 @@ def test_section_progress_summary(demo_page: Page):
 
 def test_collapse_all_button(demo_page: Page):
     """Collapse all / expand all flips every collapsible section."""
-    demo_page.locator("#toolbar-toggle").click()
+    open_toolbar(demo_page)
     button = demo_page.locator("#toggle-collapse-btn")
     all_sections = demo_page.locator("section.collapsible")
 
@@ -696,31 +800,59 @@ def test_collapse_all_button(demo_page: Page):
 
 
 def test_header_anchors(demo_page: Page):
-    """Header anchors put the section id in the URL."""
-    demo_page.locator(".header-anchor").first.click()
+    """Header anchors put the section id in the URL, reached by keyboard.
+
+    They take no pointer events at all, because they sit inside the heading's collapse
+    target and any press they accept is one stolen from it.
+    """
+    demo_page.locator(".header-anchor").first.focus()
+    demo_page.keyboard.press("Enter")
     expect(demo_page).to_have_url(re.compile("#.+"))
 
 
 # --- Floating toolbar -------------------------------------------------------
 
 
-def test_toolbar_toggle(demo_page: Page):
-    """The floating panel opens and closes."""
+def test_toolbar_opens_and_closes(demo_page: Page):
+    """The floating panel opens and closes through whichever door this pointer has."""
     toolbar = demo_page.locator("#recipe-toolbar")
-    toggle = demo_page.locator("#toolbar-toggle")
 
     expect(toolbar).to_have_class(re.compile("hidden"))
-
-    toggle.click()
+    open_toolbar(demo_page)
     expect(toolbar).not_to_have_class(re.compile("hidden"))
 
-    toggle.click()
+    demo_page.keyboard.press("ControlOrMeta+e")
     expect(toolbar).to_have_class(re.compile("hidden"))
+
+
+def test_desktop_has_no_toolbar_button_only_the_shortcut(demo_page: Page):
+    """A keyboard makes the button redundant, and the empty box it left floated over the
+    recipe text. Escape closes the panel but never opens it."""
+    expect(demo_page.locator("#toolbar-toggle")).to_be_hidden()
+
+    demo_page.keyboard.press("Escape")
+    expect(demo_page.locator("#recipe-toolbar")).to_have_class(re.compile("hidden"))
+
+    demo_page.keyboard.press("ControlOrMeta+e")
+    expect(demo_page.locator("#recipe-toolbar")).not_to_have_class(re.compile("hidden"))
+
+    demo_page.keyboard.press("Escape")
+    expect(demo_page.locator("#recipe-toolbar")).to_have_class(re.compile("hidden"))
+
+
+def test_touch_keeps_the_toolbar_button(ipad_page: Page):
+    """There is no keyboard on the counter, so the button has to stay there."""
+    expect(ipad_page.locator("#toolbar-toggle")).to_be_visible()
+
+    box = ipad_page.locator("#toolbar-toggle").bounding_box()
+    assert box is not None
+    assert box["height"] >= ROW_CONTROL_PX
+    assert box["width"] <= 2 * ROW_CONTROL_PX, "collapsed, the toggle must not keep the panel width"
 
 
 def test_toolbar_toggle_persistence(demo_page: Page):
     """Panel visibility survives a reload."""
-    demo_page.locator("#toolbar-toggle").click()
+    open_toolbar(demo_page)
     expect(demo_page.locator("#recipe-toolbar")).not_to_have_class(re.compile("hidden"))
 
     demo_page.reload()
@@ -742,20 +874,20 @@ def test_toolbar_buttons_are_inert_when_hidden(demo_page: Page):
 
 def test_toolbar_stays_fixed_while_scrolling(demo_page: Page):
     """The panel is pinned to the viewport, not the document."""
-    toggle = demo_page.locator("#toolbar-toggle")
-    before = toggle.bounding_box()
+    toolbar = demo_page.locator("#recipe-toolbar")
+    before = toolbar.bounding_box()
 
     demo_page.mouse.wheel(0, 600)
     demo_page.wait_for_timeout(200)
 
-    after = toggle.bounding_box()
+    after = toolbar.bounding_box()
     assert before is not None and after is not None
     assert abs(before["y"] - after["y"]) < 1
 
 
 def test_reset_progress_button(demo_page: Page):
     """Reset appears once there is progress, clears it, then hides again."""
-    demo_page.locator("#toolbar-toggle").click()
+    open_toolbar(demo_page)
     reset_button = demo_page.locator("#reset-btn")
 
     expect(reset_button).to_be_hidden()
@@ -782,7 +914,7 @@ def _clipboard_text(page: Page) -> str:
 def test_copy_ingredients_writes_djot(demo_page: Page):
     """Copy emits every unchecked ingredient as a flat djot bullet list."""
     demo_page.context.grant_permissions(["clipboard-read", "clipboard-write"])
-    demo_page.locator("#toolbar-toggle").click()
+    open_toolbar(demo_page)
 
     demo_page.locator("#copy-ingredients-btn").click()
     expect(demo_page.locator("#copy-ingredients-btn")).to_have_text("Copied")
@@ -799,7 +931,7 @@ def test_copy_ingredients_writes_djot(demo_page: Page):
 def test_copy_ingredients_omits_checked(demo_page: Page):
     """Crossed-out ingredients are left out of the copied list."""
     demo_page.context.grant_permissions(["clipboard-read", "clipboard-write"])
-    demo_page.locator("#toolbar-toggle").click()
+    open_toolbar(demo_page)
 
     toggle(demo_page.locator("ul.task-list > li").first)
     demo_page.locator("#copy-ingredients-btn").click()
@@ -810,7 +942,7 @@ def test_copy_ingredients_omits_checked(demo_page: Page):
 
 def test_copy_reports_a_refused_clipboard(demo_page: Page):
     """A rejected clipboard write must say so instead of silently doing nothing."""
-    demo_page.locator("#toolbar-toggle").click()
+    open_toolbar(demo_page)
     demo_page.evaluate(
         """() => {
             navigator.clipboard.writeText = () =>
@@ -826,7 +958,7 @@ def test_copy_reports_a_refused_clipboard(demo_page: Page):
 def test_copy_button_absent_without_ingredients(page: Page):
     """A page with no task list does not offer the copy action."""
     _fresh(page, "/reference/vegetable_cuts.html")
-    page.locator("#toolbar-toggle").click()
+    open_toolbar(page)
 
     if page.locator("ul.task-list li").count() > 0:
         pytest.skip("reference page unexpectedly has a task list")
@@ -834,6 +966,14 @@ def test_copy_button_absent_without_ingredients(page: Page):
 
 
 # --- iPad split layout ------------------------------------------------------
+
+
+@pytest.fixture
+def phone_context(browser: Browser):
+    """A phone-sized, touch-capable context: the only place the pinned toolbar toggle exists."""
+    context = browser.new_context(viewport={"width": 430, "height": 900}, has_touch=True)
+    yield context
+    context.close()
 
 
 @pytest.fixture
@@ -873,10 +1013,20 @@ def test_split_layout_uses_full_width(ipad_page: Page):
     assert width > IPAD_MINI_LANDSCAPE["width"] * 0.9
 
 
-def test_split_layout_absent_on_desktop(demo_page: Page):
-    """A desktop browser keeps the single-column layout at any window size."""
-    expect(demo_page.locator("main")).not_to_have_class(re.compile("split-layout"))
-    expect(demo_page.locator(".split-pane")).to_have_count(0)
+def test_split_layout_follows_the_window_not_the_pointer(demo_page: Page):
+    """A desktop window wide and wide-shaped enough gets the reference rail too."""
+    expect(demo_page.locator("main")).to_have_class(re.compile("split-layout"))
+    expect(demo_page.locator(".split-pane")).to_have_count(2)
+
+
+def test_split_layout_absent_in_a_narrow_window(browser: Browser):
+    """Below the width that fits both panes, a desktop stays single column."""
+    context = browser.new_context(viewport={"width": 900, "height": 700})
+    page = context.new_page()
+    _fresh(page, DEMO_RECIPE)
+    expect(page.locator("main")).not_to_have_class(re.compile("split-layout"))
+    expect(page.locator(".split-pane")).to_have_count(0)
+    context.close()
 
 
 def test_split_layout_absent_in_portrait(browser: Browser):
@@ -919,17 +1069,22 @@ def test_collapsing_the_toolbar_gives_its_box_back(recipe_page: Page):
     height = "el => el.getBoundingClientRect().height"
     collapsed = recipe_page.locator("#recipe-toolbar").evaluate(height)
 
-    recipe_page.locator("#toolbar-toggle").click()
+    open_toolbar(recipe_page)
     recipe_page.wait_for_timeout(400)
     expanded = recipe_page.locator("#recipe-toolbar").evaluate(height)
 
     assert expanded > collapsed * 2, f"collapsed {collapsed} should be far shorter than {expanded}"
 
 
-@pytest.mark.parametrize("recipe", [KEYED_RECIPE, "/reference/nested_list_demo.html"])
-def test_scroll_room_stops_at_the_collapsed_toolbar(page: Page, recipe: str):
+@pytest.mark.parametrize("recipe", [KEYED_RECIPE, DEMO_RECIPE])
+def test_scroll_room_stops_at_the_collapsed_toolbar(phone_context, recipe: str):
     """Overscroll clears the collapsed toolbar and no more; the expanded one is reached by
-    collapsing it, not by padding every page for its full height."""
+    collapsing it, not by padding every page for its full height.
+
+    Only a coarse pointer has a pinned toggle to clear. A desktop reaches the toolbar by
+    keyboard, so it reserves nothing.
+    """
+    page = phone_context.new_page()
     page.goto(BASE_URL + recipe)
     page.wait_for_selector("#recipe-toolbar")
     page.evaluate("document.scrollingElement.scrollTop = document.scrollingElement.scrollHeight")
@@ -943,6 +1098,16 @@ def test_scroll_room_stops_at_the_collapsed_toolbar(page: Page, recipe: str):
     )
     assert gap["clears"], "content must not end underneath the collapsed toolbar"
     assert gap["below"] <= 80, f"reserved {gap['below']}px below the content, expected the toolbar's ~58px"
+
+
+def test_desktop_reserves_no_room_for_a_toolbar_it_does_not_pin(recipe_page: Page):
+    """The clearance pays for the collapsed toggle. There is no toggle on a desktop."""
+    assert (
+        recipe_page.evaluate(
+            "getComputedStyle(document.documentElement).getPropertyValue('--toolbar-clearance').trim()"
+        )
+        == "0px"
+    )
 
 
 def test_pr_banner_spans_the_split_grid(ipad_page: Page):
@@ -984,7 +1149,7 @@ def test_split_toggle_btn_forces_single_column(ipad_page: Page):
     expect(main).to_have_class(re.compile("split-layout"))
     expect(toggle).to_have_text("Split View: On")
 
-    ipad_page.locator("#toolbar-toggle").click()
+    open_toolbar(ipad_page)
     toggle.click()
 
     expect(main).not_to_have_class(re.compile("split-layout"))
@@ -1136,7 +1301,7 @@ def open_with_pr(page: Page, github: FakeGitHub) -> None:
 def open_editor(page: Page, *, token: str | None = GITHUB_TOKEN) -> None:
     if token is not None:
         page.evaluate(f"localStorage.setItem('recipe-github-token', {json.dumps(token)})")
-    page.locator("#toolbar-toggle").click()
+    open_toolbar(page)
     page.locator("#edit-btn").click()
 
 
