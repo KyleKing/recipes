@@ -10,49 +10,49 @@ Based on [https://www.cookwell.com/recipe/keema-matar](https://www.cookwell.com/
 
 ### Spice Base
 
-- [ ] 15 g Cooking oil (a drizzle)
-- [ ] 5 g Mustard seeds (a spoonful, whole or ground)
-- [ ] 5 g Cumin (a spoonful, whole or ground)
-- [ ] 3 g Black peppercorns (1/2 spoonful, whole or ground)
-- [ ] 2-3 Whole cloves
-- [ ] 1 Bay leaf
-- [ ] 1/2 stick Ground cinnamon (whole)
-- [ ] 5 g Turmeric powder (a spoonful)
-- [ ] 5 g Chili powder (a spoonful)
-- [ ] 2 g Garam masala (a sprinkle)
+- [ ] 15 g [Cooking oil]{ ing="cooking-oil" } (a drizzle)
+- [ ] 5 g [Mustard seeds]{ ing="mustard-seeds" } (a spoonful, whole or ground)
+- [ ] 5 g [Cumin]{ ing="cumin" } (a spoonful, whole or ground)
+- [ ] 3 g [Black peppercorns]{ ing="black-peppercorns" } (1/2 spoonful, whole or ground)
+- [ ] 2-3 [Whole cloves]{ ing="whole-cloves" }
+- [ ] 1 [Bay leaf]{ ing="bay-leaf" }
+- [ ] 1/2 stick [Ground cinnamon]{ ing="ground-cinnamon" } (whole)
+- [ ] 5 g [Turmeric powder]{ ing="turmeric-powder" } (a spoonful)
+- [ ] 5 g [Chili powder]{ ing="chili-powder" } (a spoonful)
+- [ ] 2 g [Garam masala]{ ing="garam-masala" } (a sprinkle)
 
 ### Aromatics
 
-- [ ] 1/2 Onion, diced
-- [ ] 2 cloves Garlic, grated or minced
-- [ ] 1” knob Fresh ginger, grated or minced
-- [ ] 2-3 Green chilies, minced
-- [ ] 2-3 Roma tomatoes, grated
-- [ ] Salt, a sprinkle
+- [ ] 1/2 [Onion]{ ing="onion" }, diced
+- [ ] 2 cloves [Garlic]{ ing="garlic" }, grated or minced
+- [ ] 1[” knob Fresh ginger]{ ing="knob-fresh-ginger" }, grated or minced
+- [ ] 2-3 [Green chilies]{ ing="green-chilies" }, minced
+- [ ] 2-3 [Roma tomatoes]{ ing="roma-tomatoes" }, grated
+- [ ] [Salt]{ ing="salt" }, a sprinkle
 
 ### Beef Base
 
-- [ ] 450 g Ground beef
-- [ ] 200 g Water
-- [ ] Salt, a sprinkle
-- [ ] 200 g Frozen peas
-- [ ] Lemon juice, a squeeze
-- [ ] Garam masala, a sprinkle
+- [ ] 450 g [Ground beef]{ ing="ground-beef" }
+- [ ] 200 g [Water]{ ing="water" }
+- [ ] [Salt]{ ing="salt" }, a sprinkle
+- [ ] 200 g [Frozen peas]{ ing="frozen-peas" }
+- [ ] [Lemon juice]{ ing="lemon-juice" }, a squeeze
+- [ ] [Garam masala]{ ing="garam-masala" }, a sprinkle
 
 ### For Serving
 
-- [ ] Basmati rice, cooked
-- [ ] Cilantro, roughly chopped (for garnish)
-- [ ] Roti flatbreads (optional)
+- [ ] [Basmati rice]{ ing="basmati-rice" }, cooked
+- [ ] [Cilantro]{ ing="cilantro" }, roughly chopped (for garnish)
+- [ ] [Roti flatbreads]{ ing="roti-flatbreads" } (optional)
 
 ## Recipe
 
-1. Prep the spices and beef base by crushing mustard seeds, cumin seeds, and peppercorns in a mortar and pestle if whole. Leave cinnamon stick, cloves, and bay leaf whole for removal later. Grate tomatoes and set aside. Soften ground beef by mixing with 50% water in a bowl until smooth and clump-free.
-1. Toast the spices and aromatics by heating oil in a pan over medium heat. Add cinnamon stick, cloves, bay leaf, ground peppercorns, mustard seed, and cumin; bloom for 10-20 seconds until fragrant. Add remaining aromatics (except tomato) and sauté 1-2 minutes until softened.
-1. Add tomato and remaining spices by stirring in chili powder, turmeric, garam masala, and salt; cook 30 seconds. Add grated tomatoes and reduce for 5 minutes. Deglaze with water if dry.
-1. Add the beef by turning heat to high. Add ground meat mixture with salt; break apart while simmering 8-10 minutes until cooked through and thickened.
-1. Add peas and finish by lowering heat to low. Toss in peas and stir until cooked through. Turn off heat. Add lemon juice and final garam masala sprinkle. Taste and adjust seasonings as needed.
-1. Serve with rice or flatbreads; garnish with fresh cilantro.
+1. Prep the spices and beef base by crushing [mustard seeds]{ ing="mustard-seeds" }, [cumin]{ ing="cumin" } seeds, and [peppercorns]{ ing="black-peppercorns" } in a mortar and pestle if whole. Leave [cinnamon]{ ing="ground-cinnamon" } stick, [cloves]{ ing="whole-cloves" }, and [bay leaf]{ ing="bay-leaf" } whole for removal later. Grate [tomatoes]{ ing="roma-tomatoes" } and set aside. Soften [ground beef]{ ing="ground-beef" } by mixing with 50% [water]{ ing="water" } in a bowl until smooth and clump-free.
+1. Toast the spices and aromatics by heating [oil]{ ing="cooking-oil" } in a pan over medium heat. Add [cinnamon]{ ing="ground-cinnamon" } stick, [cloves]{ ing="whole-cloves" }, [bay leaf]{ ing="bay-leaf" }, ground [peppercorns]{ ing="black-peppercorns" }, [mustard seed]{ ing="mustard-seeds" }, and [cumin]{ ing="cumin" }; bloom for 10-20 seconds until fragrant. Add remaining aromatics (except tomato) and sauté 1-2 minutes until softened.
+1. Add tomato and remaining spices by stirring in [chili powder]{ ing="chili-powder" }, turmeric, [garam masala]{ ing="garam-masala" }, and [salt]{ ing="salt" }; cook 30 seconds. Add grated [tomatoes]{ ing="roma-tomatoes" } and reduce for 5 minutes. Deglaze with [water]{ ing="water" } if dry.
+1. Add the [beef]{ ing="ground-beef" } by turning heat to high. Add ground meat mixture with [salt]{ ing="salt" }; break apart while simmering 8-10 minutes until cooked through and thickened.
+1. Add [peas]{ ing="frozen-peas" } and finish by lowering heat to low. Toss in peas and stir until cooked through. Turn off heat. Add [lemon juice]{ ing="lemon-juice" } and final [garam masala]{ ing="garam-masala" } sprinkle. Taste and adjust seasonings as needed.
+1. Serve with [rice]{ ing="basmati-rice" } or [flatbreads]{ ing="roti-flatbreads" }; garnish with fresh [cilantro]{ ing="cilantro" }.
 
 ## Notes
 

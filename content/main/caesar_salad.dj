@@ -10,27 +10,27 @@ Based on [https://www.seriouseats.com/caesar-salad-recipe](https://www.seriousea
 
 ### Dressing
 
-- [ ] 2 garlic cloves, minced
-- [ ] 1 tsp Dijon mustard
-- [ ] 2 tsp lemon juice
-- [ ] 1 tsp Worcestershire sauce
-- [ ] 1/4 cup mayonnaise
-- [ ] 1/4 cup grated Parmesan cheese
-- [ ] 2 Tbsp olive oil
-- [ ] Salt and black pepper, to taste
+- [ ] 2 [garlic cloves]{ ing="garlic-cloves" }, minced
+- [ ] 1 tsp [Dijon mustard]{ ing="dijon-mustard" }
+- [ ] 2 tsp [lemon juice]{ ing="lemon-juice" }
+- [ ] 1 tsp [Worcestershire sauce]{ ing="worcestershire-sauce" }
+- [ ] 1/4 cup [mayonnaise]{ ing="mayonnaise" }
+- [ ] 1/4 cup [grated Parmesan cheese]{ ing="grated-parmesan-cheese" }
+- [ ] 2 Tbsp [olive oil]{ ing="olive-oil" }
+- [ ] [Salt and black pepper]{ ing="salt-and-black-pepper" }, to taste
 
 ### Salad
 
-- [ ] 2 heads romaine lettuce, chopped into bite-sized pieces
-- [ ] 1/2 cup Parmesan cheese, shaved or grated
-- [ ] 1.5 cups croutons
-- [ ] (Optional) Grilled chicken breast, sliced
+- [ ] 2 heads [romaine lettuce]{ ing="romaine-lettuce" }, chopped into bite-sized pieces
+- [ ] 1/2 cup [Parmesan cheese]{ ing="parmesan-cheese" }, shaved or grated
+- [ ] 1.5 cups [croutons]{ ing="croutons" }
+- [ ] (Optional) [Grilled chicken breast]{ ing="grilled-chicken-breast" }, sliced
 
 ## Recipe
 
-1. Make the dressing: In a medium bowl, whisk together garlic, Dijon mustard, lemon juice, and Worcestershire sauce. Add mayonnaise and Parmesan, whisk until smooth. Slowly drizzle in olive oil while whisking. Season with salt and pepper
-1. Prep the lettuce: Wash and dry romaine thoroughly. Chop into bite-sized pieces
-1. Assemble: In a large bowl, toss romaine with dressing until well coated. Add croutons and Parmesan, toss gently
+1. Make the dressing: In a medium bowl, whisk together garlic, [Dijon mustard]{ ing="dijon-mustard" }, [lemon juice]{ ing="lemon-juice" }, and [Worcestershire sauce]{ ing="worcestershire-sauce" }. Add [mayonnaise]{ ing="mayonnaise" } and Parmesan, whisk until smooth. Slowly drizzle in [olive oil]{ ing="olive-oil" } while whisking. Season with salt and [pepper]{ ing="salt-and-black-pepper" }
+1. Prep the [lettuce]{ ing="romaine-lettuce" }: Wash and dry romaine thoroughly. Chop into bite-sized pieces
+1. Assemble: In a large bowl, toss romaine with dressing until well coated. Add [croutons]{ ing="croutons" } and Parmesan, toss gently
 1. Serve immediately
 
 ## Notes

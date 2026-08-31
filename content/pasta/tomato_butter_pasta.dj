@@ -8,14 +8,14 @@ Based on [https://cooking.nytimes.com/recipes/…](https://cooking.nytimes.com/r
 
 ## Ingredients
 
-- [ ] 1 lb Cavatappi, Rigatoni, Fettuccine
-- [ ] 2-3 tomatoes, halved horizontally (really need ripe and flavorful tomatoes)
-- [ ] 4 Tbsp butter, cold
-- [ ] 1 large garlic clove, peeled
-- [ ] Salt and Pepper
-- [ ] 1/4 tsp red pepper flakes, plus more for serving
-- [ ] (Optional) Torn basil leaves, for serving
-- [ ] Parmesan, for serving
+- [ ] 1 lb [Cavatappi]{ ing="cavatappi" }, Rigatoni, Fettuccine
+- [ ] 2-3 [tomatoes]{ ing="tomatoes" }, halved horizontally (really need ripe and flavorful tomatoes)
+- [ ] 4 Tbsp [butter]{ ing="butter" }, cold
+- [ ] 1 large [garlic clove]{ ing="garlic-clove" }, peeled
+- [ ] [Salt and Pepper]{ ing="salt-and-pepper" }
+- [ ] 1/4 tsp [red pepper flakes]{ ing="red-pepper-flakes" }, plus more for serving
+- [ ] (Optional) [Torn basil leaves]{ ing="torn-basil-leaves" }, for serving
+- [ ] [Parmesan]{ ing="parmesan" }, for serving
 
 ## Recipe
 
@@ -23,9 +23,9 @@ Based on [https://cooking.nytimes.com/recipes/…](https://cooking.nytimes.com/r
 1. Meanwhile, using the large holes of a box grater:
 
    1. Grate the cut ends of the tomato into a large bowl
-   1. Grate the butter
+   1. Grate the [butter]{ ing="butter" }
    1. Switch to the small holes and grate the garlic
-1. Add the red-pepper flakes and season generously with salt
-1. Return the drained pasta to the pot, along with the bowl of grated tomato and butter
+1. Add the red-[pepper flakes]{ ing="red-pepper-flakes" } and season generously with salt
+1. Return the drained pasta to the pot, along with the bowl of grated tomato and [butter]{ ing="butter" }
 1. Set over medium-high heat and stir constantly to thicken (2-3 min). Add pasta water as needed
-1. Season to taste with salt and pepper. Serve with more red-pepper flakes, black pepper, basil and Parmesan as desired
+1. Season to taste with [salt and pepper]{ ing="salt-and-pepper" }. Serve with more red-[pepper flakes]{ ing="red-pepper-flakes" }, black pepper, basil and [Parmesan]{ ing="parmesan" } as desired

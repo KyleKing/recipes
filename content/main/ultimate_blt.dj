@@ -8,23 +8,23 @@ Based on [https://www.cookwell.com/recipe/…](https://www.cookwell.com/recipe/b
 
 ## Ingredients
 
-- [ ] 2 slices/sandwich bacon (look for no sugar added)
-- [ ] Sandwich bread
-- [ ] Tomato
-- [ ] Romaine lettuce, thinly sliced
-- [ ] Mayonnaise, spoonful
-- [ ] Pickled Onions
-- [ ] Vinegar, splash
-- [ ] Salt and pepper
+- [ ] 2 slices[/sandwich bacon]{ ing="sandwich-bacon" } (look for no sugar added)
+- [ ] [Sandwich bread]{ ing="sandwich-bread" }
+- [ ] [Tomato]{ ing="tomato" }
+- [ ] [Romaine lettuce]{ ing="romaine-lettuce" }, thinly sliced
+- [ ] [Mayonnaise]{ ing="mayonnaise" }, spoonful
+- [ ] [Pickled Onions]{ ing="pickled-onions" }
+- [ ] [Vinegar]{ ing="vinegar" }, splash
+- [ ] [Salt and pepper]{ ing="salt-and-pepper" }
 
 ## Recipe
 
-1. Bacon
+1. [Bacon]{ ing="sandwich-bacon" }
 
    1. Place 4-5 slices on an unheated skillet
    1. Heat on medium high until brown on one side (~5 min)
    1. Flip with tongs and cook until crispy (4-6 min)
    1. Place on a plate with a paper towel
-1. Slice the tomato into 1/2” thick pieces. Sprinkle with salt and pepper and let sit for 10 min
-1. Finely slice the lettuce
-1. Toast the bread, add mayo, lettuce, pickled onions, splash of vinegar, bacon, and tomatoes
+1. Slice the [tomato]{ ing="tomato" } into 1/2” thick pieces. Sprinkle with [salt and pepper]{ ing="salt-and-pepper" } and let sit for 10 min
+1. Finely slice the [lettuce]{ ing="romaine-lettuce" }
+1. Toast the [bread]{ ing="sandwich-bread" }, add mayo, [lettuce]{ ing="romaine-lettuce" }, [pickled onions]{ ing="pickled-onions" }, splash of [vinegar]{ ing="vinegar" }, [bacon]{ ing="sandwich-bacon" }, and tomatoes

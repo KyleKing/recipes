@@ -11,52 +11,52 @@ Cauliflower in Instant Pot inspired by [https://www.pressurecookrecipes.com/inst
 
 ### Bowl
 
-- [ ] 1 head cauliflower
-- [ ] 1 cup basmati rice, quinoa, etc.
-- [ ] 1 yellow onion, diced
-- [ ] 1 (15 oz) can black beans, rinsed
-- [ ] 1 (15 oz) can corn, rinsed
+- [ ] 1 head [cauliflower]{ ing="cauliflower" }
+- [ ] 1 cup [basmati rice]{ ing="basmati-rice" }, quinoa, etc.
+- [ ] 1 [yellow onion]{ ing="yellow-onion" }, diced
+- [ ] 1 (15 oz) can [black beans]{ ing="black-beans" }, rinsed
+- [ ] 1 (15 oz) can [corn]{ ing="corn" }, rinsed
 
 ### Chili Powder Spices
 
 Previously included 1 Tbsp chili powder and 1/2 tsp of the rest, but I calculated an approximate substitute based on: [https://www.spendwithpennies.com/homemade-chili-powde/…](https://www.spendwithpennies.com/homemade-chili-powder) ([wayback](http://web.archive.org/web/20251207224944/https://www.spendwithpennies.com/homemade-chili-powder/))
 
-- [ ] 1 tsp smoked paprika
-- [ ] 1 tsp garlic powder
-- [ ] 1 tsp onion powder
-- [ ] 3/4 tsp cumin
-- [ ] 1/2 tsp cayenne pepper
-- [ ] 1/2 tsp salt
-- [ ] 1/4 tsp dried oregano
+- [ ] 1 tsp [smoked paprika]{ ing="smoked-paprika" }
+- [ ] 1 tsp [garlic powder]{ ing="garlic-powder" }
+- [ ] 1 tsp [onion powder]{ ing="onion-powder" }
+- [ ] 3/4 tsp [cumin]{ ing="cumin" }
+- [ ] 1/2 tsp [cayenne pepper]{ ing="cayenne-pepper" }
+- [ ] 1/2 tsp [salt]{ ing="salt" }
+- [ ] 1/4 tsp [dried oregano]{ ing="dried-oregano" }
 
 ### Toppings
 
 Note: this serves 4, so save one of each for the 2nd day
 
-- [ ] 2 avocados, diced
-- [ ] 2 limes, diced
-- [ ] 2 tomatoes, diced
-- [ ] 1 small bunch cilantro, remove and mince the leaves
-- [ ] (Optional) salsa
+- [ ] 2 [avocados]{ ing="avocados" }, diced
+- [ ] 2 [limes]{ ing="limes" }, diced
+- [ ] 2 [tomatoes]{ ing="tomatoes" }, diced
+- [ ] 1 small bunch [cilantro]{ ing="cilantro" }, remove and mince the leaves
+- [ ] (Optional) [salsa]{ ing="salsa" }
 
 ## Recipe
 
 1. Pour 1 cup of water and place the trivet in the Instant Pot
 
-   1. Remove _most of_ the leaves from the Cauliflower
+   1. Remove _most of_ the leaves from the [Cauliflower]{ ing="cauliflower" }
    1. Cook for “0” min at high pressure (if longer, will be too soft)
    1. Once at pressure, quick release
-   1. Remove the cauliflower to cool
+   1. Remove the [cauliflower]{ ing="cauliflower" } to cool
 1. Prep the spice mix
-1. In a large skillet, on medium heat, saute the onion with half of the spices
-1. Rinse the rice and store in 2-cup measure (and save strainer for beans and corn)
+1. In a large skillet, on medium heat, saute the [onion]{ ing="yellow-onion" } with half of the spices
+1. Rinse the [rice]{ ing="basmati-rice" } and store in 2-cup measure (and save strainer for [beans]{ ing="black-beans" } and [corn]{ ing="corn" })
 
-   1. In the Instant Pot, combine rice and water at a 1:1.5 ratio with broth or water
+   1. In the Instant Pot, combine [rice]{ ing="basmati-rice" } and water at a 1:1.5 ratio with broth or water
    1. Cook for 8 min at high pressure
    1. Quick release
-   1. Add juice of 1 lime per cup of rice and fluff
-1. Add the beans and corn to the pan
-1. Once cool enough, remove the remaining leaves, chop the cauliflower into bite size pieces, and add to the pan
+   1. Add juice of 1 [lime]{ ing="limes" } per cup of [rice]{ ing="basmati-rice" } and fluff
+1. Add the [beans]{ ing="black-beans" } and [corn]{ ing="corn" } to the pan
+1. Once cool enough, remove the remaining leaves, chop the [cauliflower]{ ing="cauliflower" } into bite size pieces, and add to the pan
 
    1. Coat with remaining spices
 1. Serve in bowls with diced toppings

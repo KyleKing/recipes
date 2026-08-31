@@ -10,48 +10,48 @@ Based on [Immigrants Table](https://immigrantstable.com/argentinian-empanada-dou
 
 ### Dough (Makes 12-14 empanadas)
 
-- [ ] 3 cups all-purpose flour
-- [ ] 1/2 teaspoon salt
-- [ ] 3/4 cup vegetable oil (or use 10 tablespoons butter for flakier dough)
-- [ ] 1/2 cup cold water
-- [ ] 1 egg beaten with 2 tablespoons water (for egg wash)
+- [ ] 3 cups [all-purpose flour]{ ing="all-purpose-flour" }
+- [ ] 1/2 teaspoon [salt]{ ing="salt" }
+- [ ] 3/4 cup [vegetable oil]{ ing="vegetable-oil" } (or use 10 tablespoons butter for flakier dough)
+- [ ] 1/2 cup [cold water]{ ing="cold-water" }
+- [ ] 1 [egg beaten]{ ing="egg-beaten" } with 2 tablespoons water (for egg wash)
 
 ### Traditional Beef Filling
 
-- [ ] 2 tablespoons olive oil
-- [ ] 1 large onion, finely chopped
-- [ ] 3 cloves garlic, minced
-- [ ] 1 pound ground beef (93/7 lean recommended)
-- [ ] 2 teaspoons ground cumin
-- [ ] 1 tablespoon sweet paprika
-- [ ] 2 teaspoons dried oregano
-- [ ] 1 teaspoon salt
-- [ ] 1/2 teaspoon black pepper
-- [ ] 1/2 cup green olives, sliced
-- [ ] 2 hard-boiled eggs, chopped (optional but traditional)
-- [ ] 1/2 cup fresh flat-leaf parsley, chopped
-- [ ] 1 tablespoon fresh cilantro, chopped
-- [ ] 2 green onions, sliced
+- [ ] 2 tablespoons [olive oil]{ ing="olive-oil" }
+- [ ] 1 large [onion]{ ing="onion" }, finely chopped
+- [ ] 3 cloves [garlic]{ ing="garlic" }, minced
+- [ ] 1 pound [ground beef]{ ing="ground-beef" } (93/7 lean recommended)
+- [ ] 2 teaspoons [ground cumin]{ ing="ground-cumin" }
+- [ ] 1 tablespoon [sweet paprika]{ ing="sweet-paprika" }
+- [ ] 2 teaspoons [dried oregano]{ ing="dried-oregano" }
+- [ ] 1 teaspoon [salt]{ ing="salt" }
+- [ ] 1/2 teaspoon [black pepper]{ ing="black-pepper" }
+- [ ] 1/2 cup [green olives]{ ing="green-olives" }, sliced
+- [ ] 2 [hard-boiled eggs]{ ing="hard-boiled-eggs" }, chopped (optional but traditional)
+- [ ] 1/2 cup fresh [flat-leaf parsley]{ ing="flat-leaf-parsley" }, chopped
+- [ ] 1 tablespoon fresh [cilantro]{ ing="cilantro" }, chopped
+- [ ] 2 [green onions]{ ing="green-onions" }, sliced
 
 ## Recipe
 
 ### Make the Dough
 
-1. In a large bowl, whisk together flour and salt
-1. Add vegetable oil and cold water, mixing with a fork until combined
+1. In a large bowl, whisk together [flour]{ ing="all-purpose-flour" } and [salt]{ ing="salt" }
+1. Add [vegetable oil]{ ing="vegetable-oil" } and [cold water]{ ing="cold-water" }, mixing with a fork until combined
 1. Use your hands to bring mixture together into a dough
 1. Knead gently on a clean surface for 3-5 minutes until soft and pliable
 1. Wrap dough in plastic wrap and refrigerate for at least 30 minutes (up to 24 hours)
 
 ### Make the Filling
 
-1. Heat olive oil in a large skillet over medium heat
-1. Add onion and cook until softened, about 5 minutes
-1. Add garlic and cook for 1 minute until fragrant
-1. Add ground beef, cumin, paprika, oregano, salt, and pepper
-1. Cook, breaking up meat with a spoon, until beef is no longer pink, about 8 minutes
+1. Heat [olive oil]{ ing="olive-oil" } in a large skillet over medium heat
+1. Add [onion]{ ing="green-onions" } and cook until softened, about 5 minutes
+1. Add [garlic]{ ing="garlic" } and cook for 1 minute until fragrant
+1. Add [ground beef]{ ing="ground-beef" }, [cumin]{ ing="ground-cumin" }, [paprika]{ ing="sweet-paprika" }, [oregano]{ ing="dried-oregano" }, [salt]{ ing="salt" }, and [pepper]{ ing="black-pepper" }
+1. Cook, breaking up meat with a spoon, until [beef]{ ing="ground-beef" } is no longer pink, about 8 minutes
 1. Drain excess fat thoroughly (this prevents soggy empanadas)
-1. Remove from heat and stir in olives, hard-boiled eggs if using, parsley, cilantro, and green onions
+1. Remove from heat and stir in [olives]{ ing="green-olives" }, [hard-boiled eggs]{ ing="hard-boiled-eggs" } if using, [parsley]{ ing="flat-leaf-parsley" }, [cilantro]{ ing="cilantro" }, and [green onions]{ ing="green-onions" }
 1. Let filling cool completely before assembling (can refrigerate up to 2 days)
 
 ### Assemble
@@ -62,7 +62,7 @@ Based on [Immigrants Table](https://immigrantstable.com/argentinian-empanada-dou
 1. Fold dough over to create a half-moon shape, pressing edges to seal
 1. Crimp edges with a fork or make a decorative rope braid (repulgue) by folding and pinching
 1. Place empanadas on parchment-lined baking sheets, spacing 1 inch apart
-1. Brush tops with egg wash for golden color
+1. Brush tops with [egg]{ ing="hard-boiled-eggs" } wash for golden color
 
 ### Bake
 
@@ -75,7 +75,7 @@ Based on [Immigrants Table](https://immigrantstable.com/argentinian-empanada-dou
 1. Preheat air fryer to 370°F
 1. Lightly spray air fryer basket with cooking spray
 1. Arrange empanadas in a single layer, not touching (work in batches)
-1. Brush with egg wash
+1. Brush with [egg]{ ing="hard-boiled-eggs" } wash
 1. Air fry for 10-12 minutes, flipping halfway through, until golden brown
 
 ## Notes

@@ -8,29 +8,29 @@ Based on [https://www.delish.com/cooking/…](https://www.delish.com/cooking/rec
 
 ## Ingredients
 
-- [ ] 4 Tbsp butter
-- [ ] 3 cloves garlic, minced
-- [ ] 2 cup halved cherry tomatoes
-- [ ] 1 tsp dried oregano
-- [ ] Kosher salt
-- [ ] Freshly ground black pepper
-- [ ] Pinch red pepper flakes
-- [ ] 4 cup baby spinach
-- [ ] 1 cup low-sodium chicken broth
-- [ ] 1 cup heavy cream
-- [ ] 1/2 cup freshly grated Parmesan
-- [ ] 1/4 cup freshly chopped herbs (such as basil and parsley), plus more for garnish
-- [ ] 2 (17.5-oz.) packages gnocchi
-- [ ] 1 cup shredded mozzarella
-- [ ] Lemon wedges, for serving
+- [ ] 4 Tbsp [butter]{ ing="butter" }
+- [ ] 3 cloves [garlic]{ ing="garlic" }, minced
+- [ ] 2 cup [halved cherry tomatoes]{ ing="halved-cherry-tomatoes" }
+- [ ] 1 tsp [dried oregano]{ ing="dried-oregano" }
+- [ ] [Kosher salt]{ ing="kosher-salt" }
+- [ ] Freshly [ground black pepper]{ ing="ground-black-pepper" }
+- [ ] Pinch [red pepper flakes]{ ing="red-pepper-flakes" }
+- [ ] 4 cup [baby spinach]{ ing="baby-spinach" }
+- [ ] 1 cup [low-sodium chicken broth]{ ing="low-sodium-chicken-broth" }
+- [ ] 1 cup [heavy cream]{ ing="heavy-cream" }
+- [ ] 1/2 cup freshly [grated Parmesan]{ ing="grated-parmesan" }
+- [ ] 1/4 cup freshly [chopped herbs]{ ing="chopped-herbs" } (such as basil and parsley), plus more for garnish
+- [ ] 2 (17.5-oz.) packages [gnocchi]{ ing="gnocchi" }
+- [ ] 1 cup [shredded mozzarella]{ ing="shredded-mozzarella" }
+- [ ] [Lemon wedges]{ ing="lemon-wedges" }, for serving
 
 ## Recipe
 
 1. Preheat oven to 350F
-1. In a large skillet over medium heat, melt butter. Add garlic and cook until fragrant (1 min)
-1. Add cherry tomatoes and season with oregano, salt, pepper, and a pinch of red pepper flakes
-1. Cook until tomatoes are beginning to burst then add spinach and cook until beginning to wilt
-1. Stir in broth, heavy cream, Parmesan, and herbs. Bring to a simmer on low heat for about 3 min to reduce the sauce
-1. Add gnocchi and toss to coat. Pour everything into a 9”-x-13” baking pan and top with mozzarella
-1. Bake until gnocchi is cooked through (30 min)
-1. Garnish with more herbs and squeeze lemon on top before serving
+1. In a large skillet over medium heat, melt [butter]{ ing="butter" }. Add [garlic]{ ing="garlic" } and cook until fragrant (1 min)
+1. Add [cherry tomatoes]{ ing="halved-cherry-tomatoes" } and season with [oregano]{ ing="dried-oregano" }, [salt]{ ing="kosher-salt" }, [pepper]{ ing="ground-black-pepper" }, and a pinch of [red pepper flakes]{ ing="red-pepper-flakes" }
+1. Cook until [tomatoes]{ ing="halved-cherry-tomatoes" } are beginning to burst then add [spinach]{ ing="baby-spinach" } and cook until beginning to wilt
+1. Stir in [broth]{ ing="low-sodium-chicken-broth" }, [heavy cream]{ ing="heavy-cream" }, [Parmesan]{ ing="grated-parmesan" }, and [herbs]{ ing="chopped-herbs" }. Bring to a simmer on low heat for about 3 min to reduce the sauce
+1. Add [gnocchi]{ ing="gnocchi" } and toss to coat. Pour everything into a 9”-x-13” baking pan and top with [mozzarella]{ ing="shredded-mozzarella" }
+1. Bake until [gnocchi]{ ing="gnocchi" } is cooked through (30 min)
+1. Garnish with more [herbs]{ ing="chopped-herbs" } and squeeze lemon on top before serving

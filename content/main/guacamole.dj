@@ -8,16 +8,16 @@ Based on [https://www.mexicoinmykitchen.com/guacamole-recipe](https://www.mexico
 
 ## Ingredients
 
-- [ ] 6 ripe avocados, mashed
-- [ ] 1/4 cup minced red onion, diced
-- [ ] 1/4 cup tomatoes, diced
-- [ ] Serrano pepper, diced
-- [ ] 2 Tbsp cilantro, finely chopped
-- [ ] 1/2 tsp Kosher salt
-- [ ] 1.5 limes, juiced
-- [ ] Serve with sturdy chips, such as Tostitos
+- [ ] 6 [ripe avocados]{ ing="ripe-avocados" }, mashed
+- [ ] 1/4 cup [minced red onion]{ ing="minced-red-onion" }, diced
+- [ ] 1/4 cup [tomatoes]{ ing="tomatoes" }, diced
+- [ ] [Serrano pepper]{ ing="serrano-pepper" }, diced
+- [ ] 2 Tbsp [cilantro]{ ing="cilantro" }, finely chopped
+- [ ] 1/2 tsp [Kosher salt]{ ing="kosher-salt" }
+- [ ] 1.5 [limes]{ ing="limes" }, juiced
+- [ ] [Serve with sturdy chips]{ ing="serve-with-sturdy-chips" }, such as Tostitos
 
 ## Recipe
 
-1. Cut the avocados in half, remove the core, then scoop out the flesh with a spoon in one pass. Mash with a fork until only some chunks remain
+1. Cut the [avocados]{ ing="ripe-avocados" } in half, remove the core, then scoop out the flesh with a spoon in one pass. Mash with a fork until only some chunks remain
 1. Mix in the pico de gallo

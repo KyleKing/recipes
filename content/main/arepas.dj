@@ -10,50 +10,50 @@ Based on [Panning the Globe](https://www.panningtheglobe.com/reina-pepiada-arepa
 
 ### Arepa Dough (makes 6-8 arepas)
 
-- [ ] 2 cups masarepa (pre-cooked white corn flour; see Notes for sourcing)
-- [ ] 2 to 2.5 cups warm water
-- [ ] 1 tsp salt
-- [ ] 1 Tbsp neutral oil or butter (optional, for richer/more tender arepas)
+- [ ] 2 cups [masarepa]{ ing="masarepa" } (pre-cooked white corn flour; see Notes for sourcing)
+- [ ] 2 to 2.5 [cups warm water]{ ing="cups-warm-water" }
+- [ ] 1 tsp [salt]{ ing="salt" }
+- [ ] 1 Tbsp [neutral oil]{ ing="neutral-oil" } or butter (optional, for richer/more tender arepas)
 
 ### Reina Pepiada Filling (chicken-avocado)
 
-- [ ] 2 cups shredded cooked chicken (rotisserie works well)
-- [ ] 2 ripe avocados
-- [ ] 3 Tbsp mayonnaise
-- [ ] Juice of 1 lime
-- [ ] 1/4 cup fresh cilantro, chopped
-- [ ] 2 Tbsp red onion, finely minced
-- [ ] 1/2 jalapeño, seeded and minced (optional)
-- [ ] Salt and pepper to taste
+- [ ] 2 cups [shredded cooked chicken]{ ing="shredded-cooked-chicken" } (rotisserie works well)
+- [ ] 2 [ripe avocados]{ ing="ripe-avocados" }
+- [ ] 3 Tbsp [mayonnaise]{ ing="mayonnaise" }
+- [ ] [Juice of 1 lime]{ ing="juice-of-1-lime" }
+- [ ] 1/4 cup fresh [cilantro]{ ing="cilantro" }, chopped
+- [ ] 2 Tbsp [red onion]{ ing="red-onion" }, finely minced
+- [ ] 1/2 [jalapeño]{ ing="jalape-o" }, seeded and minced (optional)
+- [ ] [Salt and pepper]{ ing="salt-and-pepper" } to taste
 
 ### Con Queso Filling
 
-- [ ] 1.5 cups queso blanco or low-moisture mozzarella, shredded (see Notes for options)
-- [ ] Butter for spreading (optional)
+- [ ] 1.5 cups [queso blanco]{ ing="queso-blanco" } or low-moisture mozzarella, shredded (see Notes for options)
+- [ ] [Butter for spreading]{ ing="butter-for-spreading" } (optional)
 
 ## Recipe
 
 ### Make the Dough
 
-1. Combine masarepa, salt, and oil in a bowl
-1. Add warm water gradually, mixing with hands until a smooth pliable dough forms — it should not crack at the edges when pressed flat
-1. Rest 5 minutes (dough stiffens slightly; add a splash of water if too dry after resting)
+1. Combine [masarepa]{ ing="masarepa" }, [salt]{ ing="salt" }, and [oil]{ ing="neutral-oil" } in a bowl
+1. Add [warm water]{ ing="cups-warm-water" } gradually, mixing with hands until a smooth pliable dough forms — it should not crack at the edges when pressed flat
+1. Rest 5 minutes (dough stiffens slightly; add a splash of [water]{ ing="cups-warm-water" } if too dry after resting)
 1. Divide into 6-8 equal portions and press each between palms into a disc ~3/4 inch thick and 3-4 inches wide
 
 ### Cook the Arepas (Cast Iron + Oven)
 
 1. Preheat oven to 375°F
-1. Heat a cast iron skillet over medium heat with a thin film of oil
+1. Heat a cast iron skillet over medium heat with a thin film of [oil]{ ing="neutral-oil" }
 1. Cook arepas 4-5 minutes per side until a golden-brown crust forms and the edges look dry
 1. Transfer the cast iron to the oven and bake 10-12 minutes until arepas sound hollow when tapped
 1. Remove and cool 2 minutes before splitting
 
 ### Make the Reina Pepiada Filling
 
-1. Mash avocados until mostly smooth (some texture is good)
-1. Fold in mayonnaise, lime juice, cilantro, onion, and jalapeño
-1. Add shredded chicken and mix to combine. Season with salt and pepper
-1. Let rest 15-30 minutes for flavors to meld (the lime juice also keeps avocado from browning)
+1. Mash [avocados]{ ing="ripe-avocados" } until mostly smooth (some texture is good)
+1. Fold in [mayonnaise]{ ing="mayonnaise" }, [lime]{ ing="juice-of-1-lime" } juice, [cilantro]{ ing="cilantro" }, [onion]{ ing="red-onion" }, and [jalapeño]{ ing="jalape-o" }
+1. Add shredded [chicken]{ ing="shredded-cooked-chicken" } and mix to combine. Season with [salt and pepper]{ ing="salt-and-pepper" }
+1. Let rest 15-30 minutes for flavors to meld (the [lime]{ ing="juice-of-1-lime" } juice also keeps [avocado]{ ing="ripe-avocados" } from browning)
 
 ### Make the Con Queso Filling
 
@@ -63,7 +63,7 @@ Based on [Panning the Globe](https://www.panningtheglobe.com/reina-pepiada-arepa
 
 ### Assemble
 
-1. Fill Reina Pepiada arepas with the chicken-avocado mixture and serve immediately
+1. Fill Reina Pepiada arepas with the [chicken]{ ing="shredded-cooked-chicken" }-[avocado]{ ing="ripe-avocados" } mixture and serve immediately
 1. Serve Con Queso arepas with optional butter spread inside
 
 ## Notes

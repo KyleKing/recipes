@@ -8,31 +8,31 @@ Based on this [recipe from the Washington Post](https://www.washingtonpost.com/r
 
 ## Ingredients
 
-- [ ] Process (1 Minute)
+- [ ] [Process]{ ing="process" } (1 Minute)
 
-      - [ ] 3/4 cup tahini (shake to mix)
-      - [ ] 1/2 cup water
-      - [ ] 3 Tbsp lemon juice
-      - [ ] 1 tsp cumin
-      - [ ] 1/2 tsp salt
-      - [ ] 2 garlic cloves, diced
-      - [ ] 1 Tbsp extra virgin olive oil
-      - [ ] (Optional) 2-3 Tbsp Harissa, additional for topping
-      - [ ] Optional Additional Seasonings: Coriander, Caraway, Cayenne Pepper, Smoked Paprika, Chopped Mint, etc.
-- [ ] Process (3 Minutes)
+      - [ ] 3/4 cup [tahini]{ ing="tahini" } (shake to mix)
+      - [ ] 1/2 cup [water]{ ing="water" }
+      - [ ] 3 Tbsp [lemon juice]{ ing="lemon-juice" }
+      - [ ] 1 tsp [cumin]{ ing="cumin" }
+      - [ ] 1/2 tsp [salt]{ ing="salt" }
+      - [ ] 2 [garlic cloves]{ ing="garlic-cloves" }, diced
+      - [ ] 1 Tbsp extra [virgin olive oil]{ ing="virgin-olive-oil" }
+      - [ ] (Optional) 2-3 Tbsp [Harissa]{ ing="harissa" }, additional for topping
+      - [ ] [Optional Additional Seasonings: Coriander]{ ing="optional-additional-seasonings-coriander" }, Caraway, Cayenne Pepper, Smoked Paprika, Chopped Mint, etc.
+- [ ] [Process]{ ing="process" } (3 Minutes)
 
-      - [ ] 2 can chickpea, rinsed and drained
-      - [ ] (Optional) up to 1/4 cup of water if too thick
-- [ ] Optional Toppings
+      - [ ] 2 can [chickpea]{ ing="chickpea" }, rinsed and drained
+      - [ ] (Optional) up to 1/4 cup of water [if too thick]{ ing="if-too-thick" }
+- [ ] [Optional Toppings]{ ing="optional-toppings" }
 
-      - [ ] Extra Virgin Olive Oil
-      - [ ] Harissa
-      - [ ] Parsley
-      - [ ] Za’atar
-      - [ ] Roasted Red Peppers
+      - [ ] Extra [Virgin Olive Oil]{ ing="virgin-olive-oil" }
+      - [ ] [Harissa]{ ing="harissa" }
+      - [ ] [Parsley]{ ing="parsley" }
+      - [ ] [Za’atar]{ ing="za-atar" }
+      - [ ] [Roasted Red Peppers]{ ing="roasted-red-peppers" }
 
 ## Recipe
 
-1. (Optional) to roast red peppers, remove core and cut peppers into large flat pieces. Place skin-side up on baking sheet and broil or air fry at 400°F for 5–10 minutes until skin chars. Transfer to sealed bag or covered bowl for 10–15 minutes to steam, then peel away charred skin before cutting into smaller pieces to use as a topping
-1. In a food process, combine the first set of ingredients until combined, then add the chickpeas and process until smooth
-1. Serve at room temperature. Can serve in a shallow dish and make a small well for the optional toppings
+1. (Optional) to roast [red peppers]{ ing="roasted-red-peppers" }, remove core and cut peppers into large flat pieces. Place skin-side up on baking sheet and broil or air fry at 400°F for 5–10 minutes until skin chars. Transfer to sealed bag or covered bowl for 10–15 minutes to steam, then peel away charred skin before cutting into smaller pieces to use as a [topping]{ ing="optional-toppings" }
+1. In a food [process]{ ing="process" }, combine the first set of ingredients until combined, then add the [chickpeas]{ ing="chickpea" } and process until smooth
+1. Serve at room temperature. Can serve in a shallow dish and make a small well for the [optional toppings]{ ing="optional-toppings" }

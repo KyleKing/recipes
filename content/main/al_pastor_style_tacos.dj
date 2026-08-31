@@ -10,63 +10,63 @@ Based on [https://www.seriouseats.com/tacos-al-pastor-recipe](https://www.seriou
 
 ### Marinade
 
-- [ ] 3 dried guajillo chiles (or 2 Tbsp chili powder if unavailable)
-- [ ] 2 dried ancho chiles (or substitute more guajillo)
-- [ ] 1/2 cup pineapple juice (from canned pineapple or fresh)
-- [ ] 1/4 cup white vinegar or apple cider vinegar
-- [ ] 4 cloves garlic
-- [ ] 1 tsp ground cumin
-- [ ] 1 tsp dried oregano (Mexican oregano preferred)
-- [ ] 1/2 tsp ground cinnamon
-- [ ] 1/4 tsp ground cloves
-- [ ] 1 tsp salt
-- [ ] 1/2 tsp black pepper
-- [ ] 2 Tbsp achiote paste (or 1 tsp paprika + 1/2 tsp turmeric for color)
+- [ ] 3 [dried guajillo chiles]{ ing="dried-guajillo-chiles" } (or 2 Tbsp chili powder if unavailable)
+- [ ] 2 [dried ancho chiles]{ ing="dried-ancho-chiles" } (or substitute more guajillo)
+- [ ] 1/2 cup [pineapple juice]{ ing="pineapple-juice" } (from canned pineapple or fresh)
+- [ ] 1/4 cup [white vinegar]{ ing="white-vinegar" } or apple cider vinegar
+- [ ] 4 cloves [garlic]{ ing="garlic" }
+- [ ] 1 tsp [ground cumin]{ ing="ground-cumin" }
+- [ ] 1 tsp [dried oregano]{ ing="dried-oregano" } (Mexican oregano preferred)
+- [ ] 1/2 tsp [ground cinnamon]{ ing="ground-cinnamon" }
+- [ ] 1/4 tsp [ground cloves]{ ing="ground-cloves" }
+- [ ] 1 tsp [salt]{ ing="salt" }
+- [ ] 1/2 tsp [black pepper]{ ing="black-pepper" }
+- [ ] 2 Tbsp [achiote paste]{ ing="achiote-paste" } (or 1 tsp paprika + 1/2 tsp turmeric for color)
 
 ### Protein (choose one)
 
-- [ ] 2 lbs pork shoulder, thinly sliced (traditional)
-- [ ] 2 lbs boneless chicken thighs, thinly sliced
-- [ ] 2 blocks (14-16 oz each) extra-firm tofu, pressed and cubed (vegan)
-- [ ] 2 cans (15 oz each) pinto or black beans, drained (bean-based option)
+- [ ] 2 lbs [pork shoulder]{ ing="pork-shoulder" }, thinly sliced (traditional)
+- [ ] 2 lbs [boneless chicken thighs]{ ing="boneless-chicken-thighs" }, thinly sliced
+- [ ] 2 [blocks]{ ing="blocks" } (14-16 oz each) extra-firm tofu, pressed and cubed (vegan)
+- [ ] 2 cans (15 oz each) [pinto or black beans]{ ing="pinto-or-black-beans" }, drained (bean-based option)
 
 ### For Cooking and Serving
 
-- [ ] 2 Tbsp vegetable oil
-- [ ] 1 cup fresh pineapple, diced (or canned, drained)
-- [ ] 1/2 medium white onion, finely diced
-- [ ] 1/4 cup fresh cilantro, chopped
-- [ ] 2 limes, cut into wedges
-- [ ] Corn tortillas (small, street taco size)
-- [ ] Optional: salsa, hot sauce, radishes, avocado
+- [ ] 2 Tbsp [vegetable oil]{ ing="vegetable-oil" }
+- [ ] 1 cup fresh [pineapple]{ ing="pineapple" }, diced (or canned, drained)
+- [ ] 1/2 medium [white onion]{ ing="white-onion" }, finely diced
+- [ ] 1/4 cup fresh [cilantro]{ ing="cilantro" }, chopped
+- [ ] 2 [limes]{ ing="limes" }, cut into wedges
+- [ ] [Corn tortillas]{ ing="corn-tortillas" } (small, street taco size)
+- [ ] [Optional: salsa]{ ing="optional-salsa" }, hot sauce, radishes, avocado
 
 ## Recipe
 
 ### Prepare the Marinade
 
-1. If using dried chiles: Remove stems and seeds, tear into pieces, and toast in a dry skillet over medium heat for 1-2 minutes until fragrant (do not burn). Soak in hot water for 15 minutes until softened
-1. Add softened chiles (or chili powder), pineapple juice, vinegar, garlic, cumin, oregano, cinnamon, cloves, salt, pepper, and achiote paste to a blender. Blend until smooth
+1. If using dried [chiles]{ ing="dried-ancho-chiles" }: Remove stems and seeds, tear into pieces, and toast in a dry skillet over medium heat for 1-2 minutes until fragrant (do not burn). Soak in hot water for 15 minutes until softened
+1. Add softened [chiles]{ ing="dried-ancho-chiles" } (or chili powder), [pineapple juice]{ ing="pineapple-juice" }, [vinegar]{ ing="white-vinegar" }, [garlic]{ ing="garlic" }, [cumin]{ ing="ground-cumin" }, [oregano]{ ing="dried-oregano" }, [cinnamon]{ ing="ground-cinnamon" }, [cloves]{ ing="ground-cloves" }, [salt]{ ing="salt" }, [pepper]{ ing="black-pepper" }, and [achiote paste]{ ing="achiote-paste" } to a blender. Blend until smooth
 
 ### Marinate the Protein
 
 1. For pork or chicken: Place sliced meat in a bowl or zip-top bag, pour marinade over, and toss to coat. Marinate for at least 2 hours or overnight in refrigerator
 1. For tofu: Press tofu to remove excess moisture, cut into cubes, and marinate for at least 1 hour (or up to 8 hours)
-1. For beans: Toss beans with marinade and let sit for 30 minutes to 2 hours
+1. For [beans]{ ing="pinto-or-black-beans" }: Toss beans with marinade and let sit for 30 minutes to 2 hours
 
 ### Cook
 
-1. Heat oil in a large skillet or griddle over medium-high heat
+1. Heat [oil]{ ing="vegetable-oil" } in a large skillet or griddle over medium-high heat
 1. For pork/chicken: Cook marinated meat in batches until edges are charred and meat is cooked through (6-8 minutes per batch). Remove and let rest, then chop into smaller pieces
 1. For tofu: Cook cubes until edges are crispy and caramelized (8-10 minutes), turning occasionally
-1. For beans: Cook beans with marinade over medium heat until liquid reduces and beans are slightly crispy on edges (8-10 minutes)
-1. In the same pan, add diced pineapple and cook until caramelized and slightly charred (3-4 minutes)
+1. For [beans]{ ing="pinto-or-black-beans" }: Cook beans with marinade over medium heat until liquid reduces and beans are slightly crispy on edges (8-10 minutes)
+1. In the same pan, add diced [pineapple]{ ing="pineapple" } and cook until caramelized and slightly charred (3-4 minutes)
 
 ### Assemble
 
-1. Warm tortillas on a griddle or directly over a gas flame
-1. Fill tortillas with cooked protein and caramelized pineapple
-1. Top with diced onion, fresh cilantro, and a squeeze of lime
-1. Serve with additional lime wedges and optional toppings
+1. Warm [tortillas]{ ing="corn-tortillas" } on a griddle or directly over a gas flame
+1. Fill [tortillas]{ ing="corn-tortillas" } with cooked protein and caramelized [pineapple]{ ing="pineapple" }
+1. Top with diced [onion]{ ing="white-onion" }, fresh [cilantro]{ ing="cilantro" }, and a squeeze of [lime]{ ing="limes" }
+1. Serve with additional [lime]{ ing="limes" } wedges and optional toppings
 
 ## Notes
 

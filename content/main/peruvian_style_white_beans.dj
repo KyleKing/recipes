@@ -8,31 +8,31 @@ Based on [https://www.goya.com/en/recipes/peruvian-style-beans](https://www.goya
 
 ## Ingredients
 
-- [ ] 2 Tbsp olive oil or vegetable oil
-- [ ] 1 medium onion, diced
-- [ ] 3 cloves garlic, minced
-- [ ] 1 tsp ground cumin
-- [ ] 1/2 tsp paprika (smoked or sweet)
-- [ ] 1/4 tsp ground turmeric (for color)
-- [ ] 2 cans (15 oz each) white beans (cannellini or Great Northern), drained and rinsed (or 3.5 cups cooked beans)
-- [ ] 1 cup vegetable broth or water
-- [ ] 1 tsp salt (or to taste)
-- [ ] 1/4 tsp black pepper
-- [ ] 1 bay leaf
-- [ ] (Optional) 1 ají amarillo pepper or jalapeño, minced
-- [ ] (Optional) 2 Tbsp fresh cilantro, chopped
-- [ ] (Optional) Juice of 1/2 lime
+- [ ] 2 Tbsp [olive oil]{ ing="olive-oil" } or vegetable oil
+- [ ] 1 medium [onion]{ ing="onion" }, diced
+- [ ] 3 cloves [garlic]{ ing="garlic" }, minced
+- [ ] 1 tsp [ground cumin]{ ing="ground-cumin" }
+- [ ] 1/2 tsp [paprika]{ ing="paprika" } (smoked or sweet)
+- [ ] 1/4 tsp [ground turmeric]{ ing="ground-turmeric" } (for color)
+- [ ] 2 cans (15 oz each) [white beans]{ ing="white-beans" } (cannellini or Great Northern), drained and rinsed (or 3.5 cups cooked beans)
+- [ ] 1 cup [vegetable broth]{ ing="vegetable-broth" } or water
+- [ ] 1 tsp [salt]{ ing="salt" } (or to taste)
+- [ ] 1/4 tsp [black pepper]{ ing="black-pepper" }
+- [ ] 1 [bay leaf]{ ing="bay-leaf" }
+- [ ] (Optional) 1 [ají amarillo pepper]{ ing="aj-amarillo-pepper" } or jalapeño, minced
+- [ ] (Optional) 2 Tbsp fresh [cilantro]{ ing="cilantro" }, chopped
+- [ ] (Optional) [Juice of 1/2 lime]{ ing="juice-of-1-2-lime" }
 
 ## Recipe
 
-1. Heat oil in a large skillet or saucepan over medium heat
-1. Add onion and cook until softened and translucent (5-7 min)
-1. Add garlic, cumin, paprika, and turmeric; cook until fragrant (~1 min)
+1. Heat [oil]{ ing="olive-oil" } in a large skillet or saucepan over medium heat
+1. Add [onion]{ ing="onion" } and cook until softened and translucent (5-7 min)
+1. Add [garlic]{ ing="garlic" }, [cumin]{ ing="ground-cumin" }, [paprika]{ ing="paprika" }, and [turmeric]{ ing="ground-turmeric" }; cook until fragrant (~1 min)
 1. Add optional ají amarillo or jalapeño if using
-1. Add beans, broth, salt, pepper, and bay leaf. Stir to combine
-1. Bring to a simmer, then reduce heat to medium-low. Cook uncovered, stirring occasionally, until liquid reduces and beans are creamy (10-15 min). Lightly mash some beans against the side of the pan for a creamier texture
-1. Remove bay leaf. Taste and adjust seasoning
-1. Optionally stir in fresh cilantro and lime juice before serving
+1. Add [beans]{ ing="white-beans" }, [broth]{ ing="vegetable-broth" }, [salt]{ ing="salt" }, [pepper]{ ing="aj-amarillo-pepper" }, and [bay leaf]{ ing="bay-leaf" }. Stir to combine
+1. Bring to a simmer, then reduce heat to medium-low. Cook uncovered, stirring occasionally, until liquid reduces and [beans]{ ing="white-beans" } are creamy (10-15 min). Lightly mash some beans against the side of the pan for a creamier texture
+1. Remove [bay leaf]{ ing="bay-leaf" }. Taste and adjust seasoning
+1. Optionally stir in fresh [cilantro]{ ing="cilantro" } and [lime]{ ing="juice-of-1-2-lime" } juice before serving
 
 ## Notes
 

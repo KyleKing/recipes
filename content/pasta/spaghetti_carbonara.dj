@@ -10,30 +10,30 @@ Based on [a recipe from the New York Times](https://cooking.nytimes.com/recipes/
 
 ### Sauce
 
-- [ ] 2 large eggs
-- [ ] 2 yolks
-- [ ] 1/3 cup grated pecorino Romano (~1 oz), plus additional for serving
-- [ ] 1/3 cup grated Parmesan (~1 oz)
-- [ ] Black Pepper
+- [ ] 2 large [eggs]{ ing="egg" }
+- [ ] 2 [yolks]{ ing="yolks" }
+- [ ] 1/3 cup [grated pecorino Romano]{ ing="grated-pecorino-romano" } (~1 oz), plus additional for serving
+- [ ] 1/3 cup [grated Parmesan]{ ing="grated-parmesan" } (~1 oz)
+- [ ] [Black Pepper]{ ing="black-pepper" }
 
 ### Pasta
 
-- [ ] 1 Tbsp olive oil
-- [ ] 3.5 ounces Pancetta, sliced into small pieces
-- [ ] 12 ounces spaghetti (about 3/4 box)
+- [ ] 1 Tbsp [olive oil]{ ing="olive-oil" }
+- [ ] 3.5 ounces [Pancetta]{ ing="pancetta" }, sliced into small pieces
+- [ ] 12 ounces [spaghetti]{ ing="spaghetti" } (about 3/4 box)
 
 ## Recipe
 
 1. Boil a large pot of water
 1. Prep the sauce in a glass mixing bowl, whisk, and set aside
-1. With the olive oil, in a small pan, heat the pancetta under medium-low heat
-1. Cook the spaghetti and turn up the heat on the pancetta to medium
+1. With the [olive oil]{ ing="olive-oil" }, in a small pan, heat the [pancetta]{ ing="pancetta" } under medium-low heat
+1. Cook the [spaghetti]{ ing="spaghetti" } and turn up the heat on the [pancetta]{ ing="pancetta" } to medium
 1. Set one cup of pasta water aside
 
    1. In the sink, place a large stainless steel mixing bowl under the colander and drain the pasta
    1. Allow the hot water to warm the bowl and discard
-   1. Mix the pasta, sauce, and pancetta together in the warmed mixing bowl. Add some of the pasta water if needed for a creamier sauce
-1. Serve immediately with a garnish of pecorino Romano and black pepper
+   1. Mix the pasta, sauce, and [pancetta]{ ing="pancetta" } together in the warmed mixing bowl. Add some of the pasta water if needed for a creamier sauce
+1. Serve immediately with a garnish of [pecorino Romano]{ ing="grated-pecorino-romano" } and [black pepper]{ ing="black-pepper" }
 
 ## Notes
 
