@@ -6,15 +6,15 @@
 
 ## Ingredients
 
-- [ ] 1 large can chicken
-- [ ] 1 cup Frank’s Red Hot Sauce
-- [ ] 8 oz block cream cheese
-- [ ] 1/2 cup ranch dressing
-- [ ] 1/4 cup cheddar cheese
+- [ ] 1 large can [chicken]{ ing="chicken" }
+- [ ] 1 cup [Frank’s Red Hot Sauce]{ ing="frank-s-red-hot-sauce" }
+- [ ] 8 oz block [cream cheese]{ ing="cream-cheese" }
+- [ ] 1/2 cup [ranch dressing]{ ing="ranch-dressing" }
+- [ ] 1/4 cup [cheddar cheese]{ ing="cheddar-cheese" }
 
 ## Recipe
 
-1. Heat chicken and franks until hot
-1. Stir in cream cheese and ranch
-1. Mix in 1/2 of cheese and use the rest on top
+1. Heat [chicken]{ ing="chicken" } and franks until hot
+1. Stir in [cream cheese]{ ing="cream-cheese" } and ranch
+1. Mix in 1/2 of [cheese]{ ing="cheddar-cheese" } and use the rest on top
 1. Broil to heat thoroughly

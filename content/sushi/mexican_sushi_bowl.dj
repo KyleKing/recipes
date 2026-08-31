@@ -8,39 +8,39 @@ A deconstructed approach inspired by Mexico City’s fusion sushi scene
 
 ## Ingredients
 
-- [ ] Smoked salmon, sliced
-- [ ] Sushi rice
-- [ ] Black beans, cooked
-- [ ] Corn kernels (fresh, frozen, or grilled)
-- [ ] Avocado, diced or sliced
-- [ ] Pico de gallo or salsa
-- [ ] Pickled jalapeño slices
-- [ ] Cucumber, diced
-- [ ] Radishes, thinly sliced
-- [ ] Cilantro, fresh
-- [ ] Queso fresco, crumbled
-- [ ] Lime wedges
+- [ ] [Smoked salmon]{ ing="smoked-salmon" }, sliced
+- [ ] [Sushi rice]{ ing="sushi-rice" }
+- [ ] [Black beans]{ ing="black-beans" }, cooked
+- [ ] [Corn kernels]{ ing="corn-kernels" } (fresh, frozen, or grilled)
+- [ ] [Avocado]{ ing="avocado" }, diced or sliced
+- [ ] [Pico de gallo]{ ing="pico-de-gallo" } or salsa
+- [ ] [Pickled jalapeño slices]{ ing="pickled-jalape-o-slices" }
+- [ ] [Cucumber]{ ing="cucumber" }, diced
+- [ ] [Radishes]{ ing="radishes" }, thinly sliced
+- [ ] [Cilantro]{ ing="cilantro" }, fresh
+- [ ] [Queso fresco]{ ing="queso-fresco" }, crumbled
+- [ ] [Lime wedges]{ ing="lime-wedges" }
 
 ### Chipotle-Avocado Dressing
 
-- [ ] 1 ripe avocado
-- [ ] 2 Tbsp lime juice
-- [ ] 1 Tbsp olive oil
-- [ ] 1 tsp chipotle powder or chipotle in adobo
-- [ ] 1 clove garlic
-- [ ] Salt to taste
-- [ ] 2-3 Tbsp water to thin
+- [ ] 1 [ripe avocado]{ ing="ripe-avocado" }
+- [ ] 2 Tbsp [lime juice]{ ing="lime-juice" }
+- [ ] 1 Tbsp [olive oil]{ ing="olive-oil" }
+- [ ] 1 tsp [chipotle powder]{ ing="chipotle-powder" } or chipotle in adobo
+- [ ] 1 clove [garlic]{ ing="garlic" }
+- [ ] [Salt]{ ing="salt" } to taste
+- [ ] 2-3 Tbsp [water to thin]{ ing="water-to-thin" }
 
 ## Recipe
 
-1. Prepare sushi rice and let cool
-1. Make the chipotle-avocado dressing by blending all ingredients until smooth
-1. Arrange rice in bowls
-1. Top with black beans, corn, cucumber, radishes
-1. Add smoked salmon, avocado, and pico de gallo
-1. Garnish with pickled jalapeños, fresh cilantro, and queso fresco
-1. Drizzle with chipotle-avocado dressing
-1. Serve with lime wedges
+1. Prepare [sushi rice]{ ing="sushi-rice" } and let cool
+1. Make the chipotle-[avocado]{ ing="avocado" } dressing by blending all ingredients until smooth
+1. Arrange [rice]{ ing="sushi-rice" } in bowls
+1. Top with [black beans]{ ing="black-beans" }, corn, [cucumber]{ ing="cucumber" }, [radishes]{ ing="radishes" }
+1. Add [smoked salmon]{ ing="smoked-salmon" }, [avocado]{ ing="avocado" }, and [pico de gallo]{ ing="pico-de-gallo" }
+1. Garnish with pickled jalapeños, fresh [cilantro]{ ing="cilantro" }, and [queso fresco]{ ing="queso-fresco" }
+1. Drizzle with chipotle-[avocado]{ ing="avocado" } dressing
+1. Serve with [lime wedges]{ ing="lime-wedges" }
 
 ## Notes
 

@@ -8,15 +8,15 @@ Based on [https://www.geniuskitchen.com/recipe/…](https://www.geniuskitchen.co
 
 ## Ingredients
 
-- [ ] cooked shrimp
-- [ ] cucumber
-- [ ] 1/5 avocado, peeled and mashed
-- [ ] 1 Tbsps fresh cilantro, finely chopped
-- [ ] chives
-- [ ] sushi rice
-- [ ] wasabi
-- [ ] nori
+- [ ] [cooked shrimp]{ ing="cooked-shrimp" }
+- [ ] [cucumber]{ ing="cucumber" }
+- [ ] 1/5 [avocado]{ ing="avocado" }, peeled and mashed
+- [ ] 1 Tbsps fresh [cilantro]{ ing="cilantro" }, finely chopped
+- [ ] [chives]{ ing="chives" }
+- [ ] [sushi rice]{ ing="sushi-rice" }
+- [ ] [wasabi]{ ing="wasabi" }
+- [ ] [nori]{ ing="nori" }
 
 ## Recipe
 
-1. Spread rice over the nori, then with rice-side up, add the fillings. Roll
+1. Spread [rice]{ ing="sushi-rice" } over the [nori]{ ing="nori" }, then with rice-side up, add the fillings. Roll

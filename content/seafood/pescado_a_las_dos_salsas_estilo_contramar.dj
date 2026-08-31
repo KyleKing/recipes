@@ -10,40 +10,40 @@ Based on [https://mesasanamx.com/2022/07/27/pescado-a-las-dos-salsas-estilo-cont
 
 ### Salsa Talla
 
-- [ ] 4 cascabel chiles or 1 pasilla chile, seeds removed
-- [ ] 2 árbol chiles, seeds removed
-- [ ] 1 guajillo chile, seeds removed
-- [ ] 1 pasilla chile, seeds removed
-- [ ] 1 ancho chile, seeds removed
-- [ ] Juice of 1 orange
-- [ ] Juice of 1 lemon
+- [ ] 4 [cascabel chiles]{ ing="cascabel-chiles" } or 1 pasilla chile, seeds removed
+- [ ] 2 [árbol chiles]{ ing="rbol-chiles" }, seeds removed
+- [ ] 1 [guajillo chile]{ ing="guajillo-chile" }, seeds removed
+- [ ] 1 [pasilla chile]{ ing="pasilla-chile" }, seeds removed
+- [ ] 1 [ancho chile]{ ing="ancho-chile" }, seeds removed
+- [ ] [Juice of 1 orange]{ ing="juice-of-1-orange" }
+- [ ] [Juice of 1 lemon]{ ing="juice-of-1-lemon" }
 - [ ] 2 cloves
-- [ ] 5 garlic cloves, peeled
-- [ ] 3-4 saladette tomatoes
-- [ ] 1/4 white onion
-- [ ] 1/2 tsp oregano
-- [ ] 1/4 tsp cumin
-- [ ] 1 tsp achiote
-- [ ] 1/2 cup olive oil
-- [ ] Salt and pepper
+- [ ] 5 [garlic cloves]{ ing="garlic-cloves" }, peeled
+- [ ] 3-4 [saladette tomatoes]{ ing="saladette-tomatoes" }
+- [ ] 1/4 [white onion]{ ing="white-onion" }
+- [ ] 1/2 tsp [oregano]{ ing="oregano" }
+- [ ] 1/4 tsp [cumin]{ ing="cumin" }
+- [ ] 1 tsp [achiote]{ ing="achiote" }
+- [ ] 1/2 cup [olive oil]{ ing="olive-oil" }
+- [ ] [Salt and pepper]{ ing="salt-and-pepper" }
 
 ### Parsley Sauce
 
-- [ ] 4 garlic cloves
-- [ ] 2 cups parsley with stems
-- [ ] 1/2 cup olive oil
-- [ ] Pinch of cumin
-- [ ] Salt
+- [ ] 4 [garlic cloves]{ ing="garlic-cloves" }
+- [ ] 2 cups [parsley with stems]{ ing="parsley-with-stems" }
+- [ ] 1/2 cup [olive oil]{ ing="olive-oil" }
+- [ ] Pinch of [cumin]{ ing="cumin" }
+- [ ] [Salt]{ ing="salt" }
 
 ### Fish
 
-- [ ] 1.5 to 2 kg red snapper (huachinango), butterfly cut, descaled
+- [ ] 1.5 to 2 [kg red snapper]{ ing="kg-red-snapper" } (huachinango), butterfly cut, descaled
 
 ## Recipe
 
-1. Toast chiles on a griddle; blend with all salsa talla ingredients. Taste and adjust seasoning.
-1. Blend all parsley sauce ingredients. Adjust seasoning and consistency with olive oil if needed.
-1. Wash and dry fish; place open on foil-lined baking sheet. Add salt.
-1. Spread sauce on each side; add more salt and pepper.
+1. Toast [chiles]{ ing="ancho-chile" } on a griddle; blend with all salsa talla ingredients. Taste and adjust seasoning.
+1. Blend all parsley sauce ingredients. Adjust seasoning and consistency with [olive oil]{ ing="olive-oil" } if needed.
+1. Wash and dry fish; place open on foil-lined baking sheet. Add [salt]{ ing="salt" }.
+1. Spread sauce on each side; add more [salt and pepper]{ ing="salt-and-pepper" }.
 1. Bake at 200°C for 15-20 minutes, being careful not to overcook.
 1. Serve with rice, beans, avocado, lime, and tortillas.

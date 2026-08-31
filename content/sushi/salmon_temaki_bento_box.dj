@@ -10,47 +10,47 @@ Based on [https://www.cookwell.com/recipe/salmon-temaki-bento-box](https://www.c
 
 ### Bento Box Components
 
-- [ ] 160 g salmon
-- [ ] 100 g sushi rice
-- [ ] 50 g edamame
-- [ ] 3 seaweed handroll sheets (nori)
-- [ ] Kewpie mayo
-- [ ] Sriracha
-- [ ] Black sesame seeds
-- [ ] Salt to taste
+- [ ] 160 g [salmon]{ ing="salmon" }
+- [ ] 100 g [sushi rice]{ ing="sushi-rice" }
+- [ ] 50 g [edamame]{ ing="edamame" }
+- [ ] 3 [seaweed handroll sheets]{ ing="seaweed-handroll-sheets" } (nori)
+- [ ] [Kewpie mayo]{ ing="kewpie-mayo" }
+- [ ] [Sriracha]{ ing="sriracha" }
+- [ ] [Black sesame seeds]{ ing="black-sesame-seeds" }
+- [ ] [Salt]{ ing="salt" } to taste
 
 ### Pickled Carrots & Serranos
 
-- [ ] 2-3 carrots, peeled and julienned
-- [ ] 3 serrano peppers, thinly sliced
-- [ ] 100 g water (2 parts)
-- [ ] 50 g rice vinegar (1 part)
-- [ ] 50 g white vinegar (1 part)
-- [ ] Salt, a sprinkle
-- [ ] MSG, a pinch
+- [ ] 2-3 [carrots]{ ing="carrots" }, peeled and julienned
+- [ ] 3 [serrano peppers]{ ing="serrano-peppers" }, thinly sliced
+- [ ] 100 g [water]{ ing="water" } (2 parts)
+- [ ] 50 g [rice vinegar]{ ing="rice-vinegar" } (1 part)
+- [ ] 50 g [white vinegar]{ ing="white-vinegar" } (1 part)
+- [ ] [Salt]{ ing="salt" }, a sprinkle
+- [ ] [MSG]{ ing="msg" }, a pinch
 
 ## Recipe
 
-1. Prepare the sushi rice according to package directions and let cool
+1. Prepare the [sushi rice]{ ing="sushi-rice" } according to package directions and let cool
 
-1. While rice is cooking, prepare the pickled vegetables:
+1. While [rice]{ ing="sushi-rice" } is cooking, prepare the pickled vegetables:
 
-   1. Combine water, rice vinegar, white vinegar, salt, and MSG in a bowl
-   1. Add julienned carrots and sliced serrano peppers
+   1. Combine [water]{ ing="water" }, [rice vinegar]{ ing="rice-vinegar" }, [white vinegar]{ ing="white-vinegar" }, [salt]{ ing="salt" }, and [MSG]{ ing="msg" } in a bowl
+   1. Add julienned [carrots]{ ing="carrots" } and sliced [serrano peppers]{ ing="serrano-peppers" }
    1. Let marinate for at least 15 minutes
-1. Cook edamame according to package directions and season with salt
-1. Prepare salmon:
-1. If using raw salmon for sashimi, ensure it is sushi-grade and thinly slice
-1. Smoked salmon also works well in temaki and adds a rich, smoky flavor
-1. Alternatively, pan-sear or bake salmon (see [Salmon Baked with Asparagus](../seafood/salmon_baked_with_asparagus.html) for baking instructions) and let cool
+1. Cook [edamame]{ ing="edamame" } according to package directions and season with [salt]{ ing="salt" }
+1. Prepare [salmon]{ ing="salmon" }:
+1. If using raw [salmon]{ ing="salmon" } for sashimi, ensure it is sushi-grade and thinly slice
+1. Smoked [salmon]{ ing="salmon" } also works well in temaki and adds a rich, smoky flavor
+1. Alternatively, pan-sear or bake [salmon]{ ing="salmon" } (see [Salmon Baked with Asparagus](../seafood/salmon_baked_with_asparagus.html) for baking instructions) and let cool
 1. Assemble the temaki (hand rolls):
 
-   1. Place a sheet of nori on your palm, shiny side down
-   1. Add a small amount of rice to the left third of the nori
-   1. Top with salmon, pickled vegetables, and a drizzle of kewpie mayo and sriracha
+   1. Place a [sheet]{ ing="seaweed-handroll-sheets" } of nori on your palm, shiny side down
+   1. Add a small amount of [rice]{ ing="sushi-rice" } to the left third of the nori
+   1. Top with [salmon]{ ing="salmon" }, pickled vegetables, and a drizzle of [kewpie mayo]{ ing="kewpie-mayo" } and [sriracha]{ ing="sriracha" }
    1. Roll from the bottom left corner to form a cone shape
-1. Garnish with black sesame seeds
-1. Serve with edamame on the side
+1. Garnish with [black sesame seeds]{ ing="black-sesame-seeds" }
+1. Serve with [edamame]{ ing="edamame" } on the side
 
 ## Notes
 

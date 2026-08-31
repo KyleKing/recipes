@@ -8,27 +8,27 @@
 
 - In a small bowl, whisk together
 
-  - [ ] Olive Oil (~1/4 cup)
-  - [ ] 1/8 tsp of paprika
-  - [ ] 1/8 tsp cayenne pepper
-  - [ ] 2/3 Tbsp lemon juice
-  - [ ] pinch of salt
+  - [ ] [Olive Oil]{ ing="olive-oil" } (~1/4 cup)
+  - [ ] 1/8 tsp of [paprika]{ ing="paprika" }
+  - [ ] 1/8 tsp [cayenne pepper]{ ing="cayenne-pepper" }
+  - [ ] 2/3 Tbsp [lemon juice]{ ing="lemon-juice" }
+  - [ ] pinch of [salt]{ ing="salt" }
 
-- [ ] Salmon filet
-- [ ] Tomato, thinly sliced
-- [ ] (Optional) Asparagus
-- [ ] Parmesan cheese
-- [ ] Rosemary
-- [ ] Thyme
-- [ ] Oregano
-- [ ] Salt and Pepper
-- [ ] Could also add Parsley and/or Basil
+- [ ] [Salmon filet]{ ing="salmon-filet" }
+- [ ] [Tomato]{ ing="tomato" }, thinly sliced
+- [ ] (Optional) [Asparagus]{ ing="asparagus" }
+- [ ] [Parmesan cheese]{ ing="parmesan-cheese" }
+- [ ] [Rosemary]{ ing="rosemary" }
+- [ ] [Thyme]{ ing="thyme" }
+- [ ] [Oregano]{ ing="oregano" }
+- [ ] [Salt and Pepper]{ ing="salt-and-pepper" }
+- [ ] Could also add [Parsley and/or Basil]{ ing="parsley-and-or-basil" }
 
 ## Recipe
 
 1. Preheat oven to 400F
-1. Whisk together the olive oil and lemon juice
-1. Cover a baking sheet with tin foil and lay out the fish, asparagus, tomatoes, and/or any other baked items
-1. Spread out the oil with a spoon and roll to coat
-1. Sprinkle on the additional herbs and cheese
+1. Whisk together the [olive oil]{ ing="olive-oil" } and [lemon juice]{ ing="lemon-juice" }
+1. Cover a baking sheet with tin foil and lay out the fish, [asparagus]{ ing="asparagus" }, tomatoes, and/or any other baked items
+1. Spread out the [oil]{ ing="olive-oil" } with a spoon and roll to coat
+1. Sprinkle on the additional herbs and [cheese]{ ing="parmesan-cheese" }
 1. Bake for 15-25 min depending on thickness with most being around 20 min

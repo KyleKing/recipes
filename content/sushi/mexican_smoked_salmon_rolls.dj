@@ -8,33 +8,33 @@ Inspired by Mexico City’s sushi fusion scene, particularly Sinaloan-style “c
 
 ## Ingredients
 
-- [ ] Smoked salmon (cold-smoked preferred)
-- [ ] Ripe avocado
-- [ ] Cucumber, julienned
-- [ ] Pickled jalapeño slices
-- [ ] Fresh cilantro
-- [ ] Queso fresco (optional crumbled topping)
-- [ ] Sushi rice
-- [ ] Nori
+- [ ] [Smoked salmon]{ ing="smoked-salmon" } (cold-smoked preferred)
+- [ ] [Ripe avocado]{ ing="ripe-avocado" }
+- [ ] [Cucumber]{ ing="cucumber" }, julienned
+- [ ] [Pickled jalapeño slices]{ ing="pickled-jalape-o-slices" }
+- [ ] Fresh [cilantro]{ ing="cilantro" }
+- [ ] [Queso fresco]{ ing="queso-fresco" } (optional crumbled topping)
+- [ ] [Sushi rice]{ ing="sushi-rice" }
+- [ ] [Nori]{ ing="nori" }
 
 ### Chipotle-Soy Sauce
 
-- [ ] 2 Tbsp soy sauce
-- [ ] 1 tsp chipotle powder or 1 tsp minced chipotle in adobo
-- [ ] 1 tsp lime juice
-- [ ] 1 tsp rice vinegar
-- [ ] 1/2 tsp honey or agave syrup (optional)
+- [ ] 2 Tbsp [soy sauce]{ ing="soy-sauce" }
+- [ ] 1 tsp [chipotle powder]{ ing="chipotle-powder" } or 1 tsp minced chipotle in adobo
+- [ ] 1 tsp [lime juice]{ ing="lime-juice" }
+- [ ] 1 tsp [rice vinegar]{ ing="rice-vinegar" }
+- [ ] 1/2 tsp [honey or agave syrup]{ ing="honey-or-agave-syrup" } (optional)
 
 ## Recipe
 
-1. Make the chipotle-soy sauce by mixing all ingredients
-1. Prepare sushi rice and let cool
-1. Cut nori sheets in half
-1. Spread rice over nori, flip so rice side is down
-1. Add smoked salmon, avocado slices, cucumber strips, and jalapeño
-1. Roll tightly and slice into pieces
-1. Top with fresh cilantro and crumbled queso fresco (optional)
-1. Serve with chipotle-soy sauce
+1. Make the chipotle-[soy sauce]{ ing="soy-sauce" } by mixing all ingredients
+1. Prepare [sushi rice]{ ing="sushi-rice" } and let cool
+1. Cut [nori]{ ing="nori" } sheets in half
+1. Spread [rice]{ ing="sushi-rice" } over [nori]{ ing="nori" }, flip so rice side is down
+1. Add [smoked salmon]{ ing="smoked-salmon" }, [avocado]{ ing="ripe-avocado" } [slices]{ ing="pickled-jalape-o-slices" }, [cucumber]{ ing="cucumber" } strips, and jalapeño
+1. Roll tightly and [slice]{ ing="pickled-jalape-o-slices" } into pieces
+1. Top with fresh [cilantro]{ ing="cilantro" } and crumbled [queso fresco]{ ing="queso-fresco" } (optional)
+1. Serve with chipotle-[soy sauce]{ ing="soy-sauce" }
 
 ## Notes
 

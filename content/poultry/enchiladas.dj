@@ -10,39 +10,39 @@ Based on multiple recipes, like this one: [https://12tomatoes.com/spinach-and-ch
 
 ### Core Ingredients
 
-- [ ] Rotisserie chicken
-- [ ] Burrito size Tortillas
-- [ ] 1-2 cans of enchilada sauce (~20 oz)
-- [ ] 1 or 2 cans of black beans, strained
-- [ ] Can of diced green chilies
-- [ ] 1/2 lb. Shredded Mexican cheese
-- [ ] Sour cream (or cottage cheese), for serving
-- [ ] (Optional) 1/2 cup cottage cheese mixed into the filling for extra protein
+- [ ] [Rotisserie chicken]{ ing="rotisserie-chicken" }
+- [ ] [Burrito size Tortillas]{ ing="burrito-size-tortillas" }
+- [ ] 1-2 cans of [enchilada sauce]{ ing="enchilada-sauce" } (~20 oz)
+- [ ] 1 or 2 cans of [black beans]{ ing="black-beans" }, strained
+- [ ] Can of [diced green chilies]{ ing="diced-green-chilies" }
+- [ ] 1/2 lb[. Shredded Mexican cheese]{ ing="shredded-mexican-cheese" }
+- [ ] [Sour cream]{ ing="sour-cream" } (or cottage cheese), for serving
+- [ ] (Optional) 1/2 cup cottage cheese mixed [into the filling]{ ing="into-the-filling" } for extra protein
 
 ### Vegetarian Ingredients
 
 The chicken can be substituted with all veggies based on [https://cookieandkate.com/vegetarian-enchiladas-recipe/…](https://cookieandkate.com/vegetarian-enchiladas-recipe) ([wayback](http://web.archive.org/web/20251116083100/https://cookieandkate.com/vegetarian-enchiladas-recipe/))
 
-- [ ] 6 oz (5 cups) baby spinach
-- [ ] 1 red onion, diced
-- [ ] 1 red bell pepper, chopped
-- [ ] 1 lb of broccoli or cauliflower, remove florets and slice into bite-size pieces
-- [ ] 1 tsp Ground Cumin
-- [ ] 1/4 tsp Ground Cinnamon
+- [ ] 6 oz (5 cups) [baby spinach]{ ing="baby-spinach" }
+- [ ] 1 [red onion]{ ing="red-onion" }, diced
+- [ ] 1 [red bell pepper]{ ing="red-bell-pepper" }, chopped
+- [ ] 1 lb of [broccoli or cauliflower]{ ing="broccoli-or-cauliflower" }, remove florets and slice into bite-size pieces
+- [ ] 1 tsp [Ground Cumin]{ ing="ground-cumin" }
+- [ ] 1/4 tsp [Ground Cinnamon]{ ing="ground-cinnamon" }
 
 ## Recipe
 
 ### Core Recipe
 
-1. Bake the chicken (if not already cooked)
+1. Bake the [chicken]{ ing="rotisserie-chicken" } (if not already cooked)
 1. Preheat the oven to 375F
-1. Roll the cooked chicken, cheese, beans, and other vegetables into burritos. Place flap side down and then pour enchilada sauce over top
+1. Roll the cooked [chicken]{ ing="rotisserie-chicken" }, [cheese]{ ing="shredded-mexican-cheese" }, [beans]{ ing="black-beans" }, and other vegetables into burritos. Place flap side down and then pour [enchilada sauce]{ ing="enchilada-sauce" } over top
 1. Bake for 25 minutes
 
 ### Vegetarian Recipe
 
-1. In a large skillet over medium heat, saute the onions in olive oil (5-7 min)
-1. Add broccoli and bell pepper. Reduce heat to medium-low and cover. Cook for 8 min
-1. Add the cumin and cinnamon
-1. Add the spinach in handfuls and heat until all wilted
-1. Spoon into each enchilada in place of the chicken
+1. In a large skillet over medium heat, saute the [onions]{ ing="red-onion" } in olive oil (5-7 min)
+1. Add broccoli and [bell pepper]{ ing="red-bell-pepper" }. Reduce heat to medium-low and cover. Cook for 8 min
+1. Add the [cumin]{ ing="ground-cumin" } and [cinnamon]{ ing="ground-cinnamon" }
+1. Add the [spinach]{ ing="baby-spinach" } in handfuls and heat until all wilted
+1. Spoon into each enchilada in place of the [chicken]{ ing="rotisserie-chicken" }

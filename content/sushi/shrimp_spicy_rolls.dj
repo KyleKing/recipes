@@ -8,15 +8,15 @@ Based on [http://fromgatetoplate.com/2014/04/14/…](http://fromgatetoplate.com/
 
 ## Ingredients
 
-- [ ] cooked shrimp, chopped
-- [ ] cucumber
-- [ ] mayo
-- [ ] Sriracha
-- [ ] sushi rice
-- [ ] wasabi
-- [ ] nori
+- [ ] [cooked shrimp]{ ing="cooked-shrimp" }, chopped
+- [ ] [cucumber]{ ing="cucumber" }
+- [ ] [mayo]{ ing="mayo" }
+- [ ] [Sriracha]{ ing="sriracha" }
+- [ ] [sushi rice]{ ing="sushi-rice" }
+- [ ] [wasabi]{ ing="wasabi" }
+- [ ] [nori]{ ing="nori" }
 
 ## Recipe
 
-1. Cut the Nori sheet in half. Spread rice over the nori, then flip rice side down
-1. Add the fillings and roll. Drizzle with extra spicy mayo sauce on top
+1. Cut the [Nori]{ ing="nori" } sheet in half. Spread [rice]{ ing="sushi-rice" } over the nori, then flip rice side down
+1. Add the fillings and roll. Drizzle with extra spicy [mayo]{ ing="mayo" } sauce on top

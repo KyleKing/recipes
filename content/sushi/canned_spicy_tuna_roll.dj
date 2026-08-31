@@ -8,22 +8,22 @@ Based on [https://makemysushi.com/Recipes/…](https://makemysushi.com/Recipes/c
 
 ## Ingredients
 
-- [ ] 1 Tbsp mayo
-- [ ] 1 tsp Chili sauce (Sriracha)
-- [ ] 1 tsp toasted sesame oil
-- [ ] 1/2 tsp lemon juice (optional)
-- [ ] spoon of masago (fish roe) (optional)
-- [ ] a bit of soy sauce (optional)
-- [ ] can tuna
-- [ ] sesame seeds
-- [ ] cucumber (cut into quarters, remove wet seeds, cut into thirds)
-- [ ] 2 green onions, cut into thin rounds for topping
-- [ ] sushi rice
-- [ ] nori
+- [ ] 1 Tbsp [mayo]{ ing="mayo" }
+- [ ] 1 tsp [Chili sauce]{ ing="chili-sauce" } (Sriracha)
+- [ ] 1 tsp [toasted sesame oil]{ ing="toasted-sesame-oil" }
+- [ ] 1/2 tsp [lemon juice]{ ing="lemon-juice" } (optional)
+- [ ] [spoon of masago]{ ing="spoon-of-masago" } (fish roe) (optional)
+- [ ] a [bit of soy sauce]{ ing="bit-of-soy-sauce" } (optional)
+- [ ] can [tuna]{ ing="tuna" }
+- [ ] [sesame seeds]{ ing="sesame-seeds" }
+- [ ] [cucumber]{ ing="cucumber" } (cut into quarters, remove wet seeds, cut into thirds)
+- [ ] 2 [green onions]{ ing="green-onions" }, cut into thin rounds for topping
+- [ ] [sushi rice]{ ing="sushi-rice" }
+- [ ] [nori]{ ing="nori" }
 
 ## Recipe
 
-1. Mix the sauce, then add and mix with the canned tuna
-1. Cut the Nori sheet in half. Spread rice over the nori and top with sesame seeds, then flip rice side down
-1. Add the spicy tuna and cucumber and roll
-1. Top with a dab of spicy mayo and green onion round
+1. Mix the [sauce]{ ing="chili-sauce" }, then add and mix with the canned [tuna]{ ing="tuna" }
+1. Cut the [Nori]{ ing="nori" } sheet in half. Spread [rice]{ ing="sushi-rice" } over the nori and top with [sesame seeds]{ ing="sesame-seeds" }, then flip rice side down
+1. Add the spicy [tuna]{ ing="tuna" } and [cucumber]{ ing="cucumber" } and roll
+1. Top with a dab of spicy [mayo]{ ing="mayo" } and [green onion]{ ing="green-onions" } round

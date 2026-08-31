@@ -8,36 +8,36 @@ Based on [https://themodernproper.com/salmon-sushi-bowl](https://themodernproper
 
 ## Ingredients
 
-- [ ] Smoked salmon, sliced
-- [ ] Sushi rice
-- [ ] Cucumber, diced or julienned
-- [ ] Avocado, sliced
-- [ ] Edamame, shelled
-- [ ] Carrots, julienned or shredded
-- [ ] Seaweed salad (optional)
-- [ ] Pickled ginger
-- [ ] Sesame seeds
-- [ ] Nori sheets, cut into strips
-- [ ] Soy sauce
-- [ ] Sriracha or spicy mayo (optional)
-- [ ] Rice vinegar
+- [ ] [Smoked salmon]{ ing="smoked-salmon" }, sliced
+- [ ] [Sushi rice]{ ing="sushi-rice" }
+- [ ] [Cucumber]{ ing="cucumber" }, diced or julienned
+- [ ] [Avocado]{ ing="avocado" }, sliced
+- [ ] [Edamame]{ ing="edamame" }, shelled
+- [ ] [Carrots]{ ing="carrots" }, julienned or shredded
+- [ ] [Seaweed salad]{ ing="seaweed-salad" } (optional)
+- [ ] [Pickled ginger]{ ing="pickled-ginger" }
+- [ ] [Sesame seeds]{ ing="sesame-seeds" }
+- [ ] [Nori sheets]{ ing="nori-sheets" }, cut into strips
+- [ ] [Soy sauce]{ ing="soy-sauce" }
+- [ ] [Sriracha or spicy mayo]{ ing="sriracha-or-spicy-mayo" } (optional)
+- [ ] [Rice vinegar]{ ing="rice-vinegar" }
 
 ### Seasoning
 
-- [ ] 2 Tbsp rice vinegar
-- [ ] 1 tsp sugar
-- [ ] 1/2 tsp salt
+- [ ] 2 Tbsp [rice vinegar]{ ing="rice-vinegar" }
+- [ ] 1 tsp [sugar]{ ing="sugar" }
+- [ ] 1/2 tsp [salt]{ ing="salt" }
 
 ## Recipe
 
-1. Prepare sushi rice according to package directions
-1. While rice is cooking, prepare the seasoning by mixing rice vinegar, sugar, and salt
-1. Once rice is cooked, fold in the seasoning mixture and let cool
-1. Arrange cooled rice in bowls
-1. Top with smoked salmon, cucumber, avocado, edamame, and carrots
-1. Add seaweed salad, pickled ginger, and nori strips
-1. Sprinkle with sesame seeds
-1. Serve with soy sauce and optional sriracha or spicy mayo
+1. Prepare [sushi rice]{ ing="sushi-rice" } according to package directions
+1. While [rice]{ ing="sushi-rice" } is cooking, prepare the seasoning by mixing [rice vinegar]{ ing="rice-vinegar" }, [sugar]{ ing="sugar" }, and [salt]{ ing="salt" }
+1. Once [rice]{ ing="sushi-rice" } is cooked, fold in the seasoning mixture and let cool
+1. Arrange cooled [rice]{ ing="sushi-rice" } in bowls
+1. Top with [smoked salmon]{ ing="smoked-salmon" }, [cucumber]{ ing="cucumber" }, [avocado]{ ing="avocado" }, [edamame]{ ing="edamame" }, and [carrots]{ ing="carrots" }
+1. Add [seaweed salad]{ ing="seaweed-salad" }, [pickled ginger]{ ing="pickled-ginger" }, and nori strips
+1. Sprinkle with [sesame seeds]{ ing="sesame-seeds" }
+1. Serve with [soy sauce]{ ing="soy-sauce" } and optional [sriracha or spicy mayo]{ ing="sriracha-or-spicy-mayo" }
 
 ## Notes
 
