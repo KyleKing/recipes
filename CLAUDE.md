@@ -219,14 +219,23 @@ silently.
     measured 13x24 with the anchor beside it, so a tap that drifted right jumped the page and
     the toggle looked like it needed three tries. The anchor is still reachable by keyboard;
     the cost is no right-click "copy link address" on the `#`
-- On a fine pointer there is no toolbar button. `Cmd/Ctrl+E` opens and closes the toolbar and
-    `Escape` closes it, so nothing is pinned over the recipe on a desktop
-- A coarse pointer keeps the button, and every page there reserves `--toolbar-clearance` (the
-    collapsed toolbar's height plus its bottom offset) as scroll room and no more, on `body`
-    in single column and on the ingredients pane in split view. Collapsing the toolbar gives
-    its box and its flex gap back rather than only fading them, so reaching content under the
-    expanded toolbar means collapsing it. The clearance is `0` on a fine pointer, which pins
-    nothing
+- The toolbar button is present on every format. A keyboard is an addition to it, never a
+    replacement, because a desktop with no visible control drifts away from what the same page
+    offers on the counter
+- A `data-key` attribute on a button declares its shortcut, and `recipe.js` fires that button
+    with `Cmd/Ctrl+<key>`: `E` toolbar, `I` info, `B` copy ingredients, `\` split view. Escape
+    closes the toolbar but never opens it. A shortcut expands the toolbar before acting, so the
+    button's own feedback ("Copied", "Info: On") is visible. `Cmd/Ctrl+Shift+C` would read
+    better for copy, but Chrome reserves it for devtools on both platforms
+- The `::after` hint naming each shortcut is drawn only under `(pointer: fine)` and only while
+    the toolbar is expanded, so the collapsed toggle stays a square. It is generated content, so
+    a button whose label JS rewrites keeps its hint
+- Every page reserves `--toolbar-clearance` (the collapsed toolbar's height plus its bottom
+    offset) as scroll room and no more, on `body` in single column and on the ingredients pane
+    in split view. Collapsing the toolbar gives its box and its flex gap back rather than only
+    fading them, so reaching content under the expanded toolbar means collapsing it
+- A floating control's hover fill must be opaque (`--color-hover`). A translucent one lets the
+    recipe text underneath show through the button
 - Progress keys expire 48h after the last progress change. Collapsing a section or
     hiding the toolbar is not progress and does not restart that window
 - Any window at least 1000px wide and at least 4:3 splits into two scrolling panes:

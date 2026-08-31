@@ -140,17 +140,10 @@ def heading_of(section):
 
 
 def open_toolbar(page: Page) -> None:
-    """Open the floating toolbar the way the current pointer allows.
-
-    A fine pointer has no button at all, only Cmd/Ctrl+E, so a test that reached for
-    `#toolbar-toggle` would silently be testing a control the user cannot see.
-    """
+    """Open the floating toolbar through the button every format shows."""
     if "hidden" not in (page.locator("#recipe-toolbar").get_attribute("class") or ""):
         return
-    if page.locator("#toolbar-toggle").is_visible():
-        page.locator("#toolbar-toggle").click()
-    else:
-        page.keyboard.press("ControlOrMeta+e")
+    page.locator("#toolbar-toggle").click()
     expect(page.locator("#recipe-toolbar")).not_to_have_class(re.compile("hidden"))
 
 
@@ -827,11 +820,15 @@ def test_toolbar_opens_and_closes(demo_page: Page):
     expect(toolbar).to_have_class(re.compile("hidden"))
 
 
-def test_desktop_has_no_toolbar_button_only_the_shortcut(demo_page: Page):
-    """A keyboard makes the button redundant, and the empty box it left floated over the
-    recipe text. Escape closes the panel but never opens it."""
-    expect(demo_page.locator("#toolbar-toggle")).to_be_hidden()
+def test_the_toolbar_button_is_there_on_every_format(demo_page: Page, ipad_page: Page):
+    """One affordance, same place, whatever the pointer. The keyboard is an addition to the
+    button, never a replacement that leaves a desktop with no visible way in."""
+    expect(demo_page.locator("#toolbar-toggle")).to_be_visible()
+    expect(ipad_page.locator("#toolbar-toggle")).to_be_visible()
 
+
+def test_escape_closes_the_toolbar_but_never_opens_it(demo_page: Page):
+    """Escape is a dismissal, so it must not be a way to summon the panel."""
     demo_page.keyboard.press("Escape")
     expect(demo_page.locator("#recipe-toolbar")).to_have_class(re.compile("hidden"))
 
@@ -842,14 +839,65 @@ def test_desktop_has_no_toolbar_button_only_the_shortcut(demo_page: Page):
     expect(demo_page.locator("#recipe-toolbar")).to_have_class(re.compile("hidden"))
 
 
-def test_touch_keeps_the_toolbar_button(ipad_page: Page):
-    """There is no keyboard on the counter, so the button has to stay there."""
-    expect(ipad_page.locator("#toolbar-toggle")).to_be_visible()
-
+def test_collapsed_toggle_is_a_touch_sized_square(ipad_page: Page):
+    """Collapsed it must still be hittable, without keeping the width of the whole panel."""
     box = ipad_page.locator("#toolbar-toggle").bounding_box()
     assert box is not None
     assert box["height"] >= ROW_CONTROL_PX
     assert box["width"] <= 2 * ROW_CONTROL_PX, "collapsed, the toggle must not keep the panel width"
+
+
+def test_shortcuts_reach_the_toolbar_buttons(demo_page: Page):
+    """Every shortcut opens the panel it acts in, so the button's own feedback is visible."""
+    demo_page.keyboard.press("ControlOrMeta+i")
+    expect(demo_page.locator("#recipe-toolbar")).not_to_have_class(re.compile("hidden"))
+    expect(demo_page.locator("#info-btn")).to_have_attribute("aria-pressed", "true")
+
+    demo_page.keyboard.press("ControlOrMeta+i")
+    expect(demo_page.locator("#info-btn")).to_have_attribute("aria-pressed", "false")
+
+
+def test_split_shortcut_forces_single_column(ipad_page: Page):
+    """The split toggle answers to the keyboard wherever the button itself is offered."""
+    expect(ipad_page.locator("main")).to_have_class(re.compile("split-layout"))
+
+    ipad_page.keyboard.press("ControlOrMeta+\\")
+
+    expect(ipad_page.locator("main")).not_to_have_class(re.compile("split-layout"))
+    assert ipad_page.evaluate("localStorage.getItem('recipe-split-disabled')") == "1"
+
+
+def test_shortcut_hints_name_the_key_beside_each_button(demo_page: Page):
+    """The panel teaches its own shortcuts; nothing else does."""
+    open_toolbar(demo_page)
+    hints = demo_page.evaluate(
+        """() => [...document.querySelectorAll('[data-key]')].map(
+            el => [el.id, el.dataset.hint, getComputedStyle(el, '::after').content])"""
+    )
+    assert {h[0] for h in hints} == {
+        "toolbar-toggle",
+        "copy-ingredients-btn",
+        "info-btn",
+        "split-toggle-btn",
+    }
+    for element_id, hint, rendered in hints:
+        assert hint and hint.endswith(("E", "B", "I", "\\")), (element_id, hint)
+        assert hint in rendered, f"{element_id} does not show its shortcut: {rendered}"
+
+
+def test_a_shortcut_never_fires_while_typing(demo_page: Page):
+    """The edit modal holds the recipe source, where Cmd+B belongs to the textarea."""
+    demo_page.evaluate(
+        """() => {
+            var box = document.createElement('textarea');
+            box.id = 'typing-probe';
+            document.body.append(box);
+            box.focus();
+        }"""
+    )
+    demo_page.keyboard.press("ControlOrMeta+i")
+
+    expect(demo_page.locator("#recipe-toolbar")).to_have_class(re.compile("hidden"))
 
 
 def test_toolbar_toggle_persistence(demo_page: Page):
@@ -1082,9 +1130,6 @@ def test_collapsing_the_toolbar_gives_its_box_back(recipe_page: Page):
 def test_scroll_room_stops_at_the_collapsed_toolbar(phone_context, recipe: str):
     """Overscroll clears the collapsed toolbar and no more; the expanded one is reached by
     collapsing it, not by padding every page for its full height.
-
-    Only a coarse pointer has a pinned toggle to clear. A desktop reaches the toolbar by
-    keyboard, so it reserves nothing.
     """
     page = phone_context.new_page()
     page.goto(BASE_URL + recipe)
@@ -1102,13 +1147,13 @@ def test_scroll_room_stops_at_the_collapsed_toolbar(phone_context, recipe: str):
     assert gap["below"] <= 80, f"reserved {gap['below']}px below the content, expected the toolbar's ~58px"
 
 
-def test_desktop_reserves_no_room_for_a_toolbar_it_does_not_pin(recipe_page: Page):
-    """The clearance pays for the collapsed toggle. There is no toggle on a desktop."""
+def test_every_format_reserves_the_same_toolbar_clearance(recipe_page: Page):
+    """The toggle is pinned everywhere, so every format owes it the same scroll room."""
     assert (
         recipe_page.evaluate(
             "getComputedStyle(document.documentElement).getPropertyValue('--toolbar-clearance').trim()"
         )
-        == "0px"
+        == "68px"
     )
 
 

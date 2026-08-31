@@ -68,13 +68,13 @@ templ page(title string, contents templ.Component, pageType string, socialMeta S
 						<button id="toggle-collapse-btn" class="toolbar-btn" title="Toggle collapse all sections" style="display:none">
 							Collapse All
 						</button>
-						<button id="copy-ingredients-btn" class="toolbar-btn" title="Copy remaining ingredients as djot" style="display:none">
+						<button id="copy-ingredients-btn" class="toolbar-btn" data-key="b" title="Copy remaining ingredients as djot" style="display:none">
 							Copy Ingredients
 						</button>
-						<button id="info-btn" class="toolbar-btn" title="Tap any highlighted row for substitutes and cross-references" style="display:none">
+						<button id="info-btn" class="toolbar-btn" data-key="i" title="Tap any highlighted row for substitutes and cross-references" style="display:none">
 							Info: Off
 						</button>
-						<button id="split-toggle-btn" class="toolbar-btn" title="Toggle side-by-side ingredients and steps" style="display:none">
+						<button id="split-toggle-btn" class="toolbar-btn" data-key={ "\\" } title="Toggle side-by-side ingredients and steps" style="display:none">
 							Split View: On
 						</button>
 						<button id="edit-btn" class="toolbar-btn" title="Edit this recipe and open a pull request" style="display:none">
@@ -84,7 +84,7 @@ templ page(title string, contents templ.Component, pageType string, socialMeta S
 							Reset
 						</button>
 					</div>
-					<button id="toolbar-toggle" class="toolbar-toggle" title="Show/hide toolbar buttons" aria-label="Toggle toolbar">
+					<button id="toolbar-toggle" class="toolbar-toggle" data-key="e" title="Show/hide toolbar buttons" aria-label="Toggle toolbar">
 						<span class="toggle-icon">▼</span>
 					</button>
 				</div>

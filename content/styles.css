@@ -36,6 +36,9 @@ body {
 	--color-link-visited: #07a;
 	--color-text-done: #878787;
 	--color-lit: rgba(0, 119, 170, 0.14);
+	/* Opaque: a translucent hover on a floating control lets the page text under it show
+	   through the button */
+	--color-hover: #dadada;
 	--color-selected: rgba(0, 119, 170, 0.28);
 	--step-gutter: 40px;
 	--row-control: 44px;
@@ -335,7 +338,7 @@ main {
 }
 
 .toolbar-toggle:hover {
-	background: rgba(180, 180, 180, 0.3);
+	background: var(--color-hover);
 }
 
 /* Collapsed, the toggle shrinks to its own square instead of keeping the width of the
@@ -352,18 +355,6 @@ main {
 	min-height: var(--row-control);
 	box-sizing: border-box;
 	padding: 4px;
-}
-
-/* A keyboard makes the button redundant, so Cmd/Ctrl+E is the only way in on a desktop.
-   With nothing pinned over the content there, no page owes the toolbar scroll room either */
-@media (pointer: fine) {
-	:root {
-		--toolbar-clearance: 0px;
-	}
-
-	.toolbar-toggle {
-		display: none;
-	}
 }
 
 .toolbar-toggle .toggle-icon {
@@ -414,7 +405,24 @@ main {
 }
 
 .toolbar-btn:hover {
-	background: rgba(180, 180, 180, 0.3);
+	background: var(--color-hover);
+}
+
+/* A hint beside the label, never a control. It names the shortcut that does the same thing
+   without reaching for the button, and is dropped where there is unlikely to be a keyboard */
+@media (pointer: fine) {
+	.toolbar-btn[data-hint]::after,
+	.toolbar-toggle[data-hint]::after {
+		content: attr(data-hint);
+		margin-left: 0.6em;
+		font-family: "Atkinson Hyperlegible Mono";
+		font-size: 11px;
+		opacity: 0.55;
+	}
+}
+
+.recipe-toolbar.hidden .toolbar-toggle::after {
+	content: none;
 }
 
 .toolbar-btn.fading {

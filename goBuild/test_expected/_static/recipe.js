@@ -914,18 +914,34 @@
 			setHidden(!toolbar.classList.contains("hidden"));
 		});
 
-		// The toggle button is hidden on a fine pointer (see `styles.css`), so the shortcut is
-		// the only way in there. Escape closes but never opens, to keep it out of the way
+		var isMac = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent);
+		document.querySelectorAll("[data-key]").forEach((el) => {
+			el.dataset.hint = (isMac ? "\u2318" : "Ctrl+") + el.dataset.key.toUpperCase();
+		});
+
+		function fire(button) {
+			if (button === toggleBtn) {
+				setHidden(!toolbar.classList.contains("hidden"));
+				return;
+			}
+			if (button.style.display === "none") return;
+			// Acting on a collapsed toolbar would hide the button's own feedback ("Copied",
+			// "Info: On"), so a shortcut opens the panel it belongs to
+			setHidden(false);
+			button.click();
+		}
+
 		document.addEventListener("keydown", (e) => {
 			if (e.key === "Escape" && !toolbar.classList.contains("hidden")) {
 				setHidden(true);
 				return;
 			}
-			if (e.key.toLowerCase() !== "e" || !(e.metaKey || e.ctrlKey) || e.shiftKey || e.altKey) {
-				return;
-			}
+			if (!(e.metaKey || e.ctrlKey) || e.shiftKey || e.altKey) return;
+			if (e.target.closest("input, textarea, select, [contenteditable]")) return;
+			var button = document.querySelector(`[data-key="${CSS.escape(e.key.toLowerCase())}"]`);
+			if (!button) return;
 			e.preventDefault();
-			setHidden(!toolbar.classList.contains("hidden"));
+			fire(button);
 		});
 	}
 
