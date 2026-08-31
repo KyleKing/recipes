@@ -8,27 +8,27 @@
 
 - Hot Coffee
 
-  - [ ] Starbucks Cafe Verona
+  - [ ] [Starbucks Cafe Verona]{ ing="starbucks-cafe-verona" }
 - Iced
 
-  - [ ] Starbucks Dark Roast Unsweetened Iced Coffee (Purple Band, Green Lid)
-  - [ ] Stok Unsweetened Extra Bold Cold Brew (Vertical Purple Strip)
+  - [ ] Starbucks Dark Roast [Unsweetened Iced Coffee]{ ing="unsweetened-iced-coffee" } (Purple Band, Green Lid)
+  - [ ] Stok Unsweetened Extra [Bold Cold Brew]{ ing="bold-cold-brew" } (Vertical Purple Strip)
 - Accompaniments
 
-  - [ ] Original Nestle Coffee Mate
-  - [ ] Caramel Macchiato International Delight Coffee Creamer
+  - [ ] [Original Nestle Coffee Mate]{ ing="original-nestle-coffee-mate" }
+  - [ ] Caramel Macchiato International [Delight Coffee Creamer]{ ing="delight-coffee-creamer" }
 
 ## Recipe
 
-1. Per cup of coffee:
+1. Per cup of [coffee]{ ing="unsweetened-iced-coffee" }:
 
-   1. 2 scoops of ground coffee
+   1. 2 scoops of ground [coffee]{ ing="unsweetened-iced-coffee" }
    1. fill to the “2” line for water
    1. switch to the “mug” setting, if making a single cup
-   1. Add 2 tsp coffee mate
+   1. Add 2 tsp [coffee mate]{ ing="original-nestle-coffee-mate" }
    1. 1.5 tsp sugar
-1. To make ice coffee:
+1. To make ice [coffee]{ ing="unsweetened-iced-coffee" }:
 
    1. Fill a small cup with ice
-   1. Fill with ice coffee
-   1. Add a small amount of creamer to taste
+   1. Fill with ice [coffee]{ ing="unsweetened-iced-coffee" }
+   1. Add a small amount of [creamer]{ ing="delight-coffee-creamer" } to taste

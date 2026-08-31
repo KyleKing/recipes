@@ -11,35 +11,35 @@ Banana Bread Cockaigne (Note: removed the lemon zest from the recipe)
 
 ### Dry
 
-- [ ] 1.5 cups Flour
-- [ ] 1.5 tsp baking powder
-- [ ] 1/2 tsp salt
+- [ ] 1.5 cups [Flour]{ ing="flour" }
+- [ ] 1.5 tsp [baking powder]{ ing="baking-powder" }
+- [ ] 1/2 tsp [salt]{ ing="salt" }
 
 ### Wet
 
-- [ ] 2/3 cup sugar
-- [ ] 6 Tbsp butter, softened
+- [ ] 2/3 cup [sugar]{ ing="sugar" }
+- [ ] 6 Tbsp [butter]{ ing="butter" }, softened
 
 ### Beat-In
 
-- [ ] 1-2 large eggs, beaten
-- [ ] 1-1.25 cups bananas (about 3 medium or 2 large, ripe bananas), mashed
+- [ ] 1-2 large [eggs]{ ing="egg" }, beaten
+- [ ] 1-1.25 cups [bananas]{ ing="bananas" } (about 3 medium or 2 large, ripe bananas), mashed
 
 ### Fold In
 
-- [ ] 1/2 cup chocolate chips
-- [ ] 1/2 cup chopped walnuts (optional)
-- [ ] 1/4 cup finely chopped dried apricots (optional)
-- [ ] etc (optional)
+- [ ] 1/2 cup [chocolate chips]{ ing="chocolate-chips" }
+- [ ] 1/2 cup [chopped walnuts]{ ing="chopped-walnuts" } (optional)
+- [ ] 1/4 cup [finely chopped dried apricots]{ ing="finely-chopped-dried-apricots" } (optional)
+- [ ] [etc]{ ing="etc" } (optional)
 
 ## Recipe
 
 1. Have all ingredients at room temperature. Preheat the oven to 350°F. Grease an 8.5 x 4.5 in loaf pan
 1. Whisk together the dry ingredients in a medium bowl
-1. In a large bowl, beat the sugar and butter at medium speed until light and fluffy (about 2-3 minutes)
-1. Beat in the eggs one at a time, then mix in the mashed bananas until well combined
+1. In a large bowl, beat the [sugar]{ ing="sugar" } and [butter]{ ing="butter" } at medium speed until light and fluffy (about 2-3 minutes)
+1. Beat in the [eggs]{ ing="egg" } one at a time, then mix in the mashed [bananas]{ ing="bananas" } until well combined
 1. Add the dry ingredients in 3 parts, mixing on low speed just until combined after each addition. Do not overmix
-1. Gently fold in optional ingredients (chocolate chips, chopped nuts, etc.) with a spatula
+1. Gently fold in optional ingredients ([chocolate chips]{ ing="chocolate-chips" }, chopped nuts, [etc]{ ing="etc" }.) with a spatula
 1. Scrape batter into the greased pan, smooth the top, and bake for 55-65 minutes or until a toothpick inserted in the center comes out clean or with just a few moist crumbs
 1. Cool in the pan for 10 minutes, then turn out onto a wire rack to cool completely
 

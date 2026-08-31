@@ -6,20 +6,20 @@
 
 ## Ingredients
 
-- [ ] 2 cups apple cider
-- [ ] 1/2 cup rum
-- [ ] Optional
+- [ ] 2 cups [apple cider]{ ing="apple-cider" }
+- [ ] 1/2 cup [rum]{ ing="rum" }
+- [ ] [Optional]{ ing="optional" }
 
-      - [ ] 1/2 teaspoon whole cloves
-      - [ ] 1/4 teaspoon allspice
-      - [ ] 1 pinch nutmeg
-      - [ ] 2 tsp light brown sugar
-- [ ] Orange slices, garnish
+      - [ ] 1/2 teaspoon [whole cloves]{ ing="whole-cloves" }
+      - [ ] 1/4 teaspoon [allspice]{ ing="allspice" }
+      - [ ] 1 pinch [nutmeg]{ ing="nutmeg" }
+      - [ ] 2 tsp [light brown sugar]{ ing="light-brown-sugar" }
+- [ ] [Orange slices]{ ing="orange-slices" }, garnish
 
 ## Recipe
 
-1. In a pot, heat the cider and any chosen spices
-1. Add the rum and serve hot with an Orange slice garnish
+1. In a pot, heat the [cider]{ ing="apple-cider" } and any chosen spices
+1. Add the [rum]{ ing="rum" } and serve hot with an [Orange slice]{ ing="orange-slices" } garnish
 
 ## Notes
 

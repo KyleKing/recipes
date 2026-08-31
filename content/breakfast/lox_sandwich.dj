@@ -8,13 +8,13 @@ Based on [https://newsletter.ethanchlebowski.com/p/…](https://newsletter.ethan
 
 ## Ingredients
 
-- [ ] Toasted bagel
-- [ ] Creamy & tangy cream cheese spread. Alternatively, Avocado isn’t traditional, but works
-- [ ] Cured salmon or lox*
-- [ ] Crispy & pungent onions
-- [ ] Salty & acidic capers
-- [ ] Optionally add herbs or cucumber slices
+- [ ] [Toasted bagel]{ ing="toasted-bagel" }
+- [ ] Creamy & tangy cream [cheese spread. Alternatively]{ ing="cheese-spread-alternatively" }, Avocado isn’t traditional, but works
+- [ ] [Cured salmon]{ ing="cured-salmon" } or lox*
+- [ ] [Crispy & pungent onions]{ ing="crispy-pungent-onions" }
+- [ ] [Salty & acidic capers]{ ing="salty-acidic-capers" }
+- [ ] [Optionally add herbs]{ ing="optionally-add-herbs" } or cucumber slices
 
 ## Recipe
 
-1. Cut a bagel in half and toast the slices to warm them through. Add layers of your desired fillings.
+1. Cut a [bagel]{ ing="toasted-bagel" } in half and toast the slices to warm them through. Add layers of your desired fillings.

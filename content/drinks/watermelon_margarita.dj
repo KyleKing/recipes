@@ -8,16 +8,16 @@ Based on a [Watermelon Mock-a-rita posted by jesskeys](https://www.instagram.com
 
 ## Ingredients
 
-- [ ] 3 oz Watermelon (strained) (about 3 slices of medium watermelon blended)
-- [ ] 3/4 oz lime juice
-- [ ] 1 oz tequila
-- [ ] 1 oz cointreau
-- [ ] pinch of sugar
+- [ ] 3 oz [Watermelon]{ ing="watermelon" } (strained) (about 3 slices of medium watermelon blended)
+- [ ] 3/4 oz [lime juice]{ ing="lime-juice" }
+- [ ] 1 oz [tequila]{ ing="tequila" }
+- [ ] 1 oz [cointreau]{ ing="cointreau" }
+- [ ] pinch of [sugar]{ ing="sugar" }
 
 ## Recipe
 
 1. Salt glasses
-1. Blend watermelon into a juice
-1. In a shaker, measure out the alcohol, lime juice, and watermelon juice
+1. Blend [watermelon]{ ing="watermelon" } into a [juice]{ ing="lime-juice" }
+1. In a shaker, measure out the alcohol, [lime juice]{ ing="lime-juice" }, and [watermelon]{ ing="watermelon" } juice
 1. Add ice and shake
-1. Serve with an ice cube and lime (or watermelon) garnish
+1. Serve with an ice cube and lime (or [watermelon]{ ing="watermelon" }) garnish

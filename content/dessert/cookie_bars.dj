@@ -6,11 +6,11 @@
 
 ## Ingredients
 
-- [ ] 1 pkg cake mix
-- [ ] 2 eggs
-- [ ] 5 Tbsp melted butter
-- [ ] 1 bag chocolate chips
+- [ ] 1 pkg [cake mix]{ ing="cake-mix" }
+- [ ] 2 [eggs]{ ing="egg" }
+- [ ] 5 Tbsp [melted butter]{ ing="melted-butter" }
+- [ ] 1 bag [chocolate chips]{ ing="chocolate-chips" }
 
 ## Recipe
 
-1. Mix all together in a 9x13 pan and bake at 350 for 20-25 minutes
+1. [Mix]{ ing="cake-mix" } all together in a 9x13 pan and bake at 350 for 20-25 minutes

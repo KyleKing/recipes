@@ -8,10 +8,10 @@ Based on [https://newsletter.ethanchlebowski.com/p/…](https://newsletter.ethan
 
 ## Ingredients
 
-- [ ] 1 Part Frozen Base
-- [ ] 1 Part Liquid Base
-- [ ] 1/2 Part Flavor Adjuster
-- [ ] Up to 1/3 Part Supporting Flavors
+- [ ] 1 [Part Frozen Base]{ ing="part-frozen-base" }
+- [ ] 1 [Part Liquid Base]{ ing="part-liquid-base" }
+- [ ] 1/2 [Part Flavor Adjuster]{ ing="part-flavor-adjuster" }
+- [ ] Up to 1/3 [Part Supporting Flavors]{ ing="part-supporting-flavors" }
 
 ## Recipe
 

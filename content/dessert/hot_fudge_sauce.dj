@@ -8,19 +8,19 @@ Alex’s Family recipe
 
 ## Ingredients
 
-- [ ] 2 oz unsweetened chocolate
-- [ ] 2 Tbsp butter
-- [ ] 1/3 cup boiling water
-- [ ] 1 cup sugar
-- [ ] 2 Tbsp corn syrup
-- [ ] 1 tsp vanilla
+- [ ] 2 oz [unsweetened chocolate]{ ing="unsweetened-chocolate" }
+- [ ] 2 Tbsp [butter]{ ing="butter" }
+- [ ] 1/3 cup [boiling water]{ ing="boiling-water" }
+- [ ] 1 cup [sugar]{ ing="sugar" }
+- [ ] 2 Tbsp [corn syrup]{ ing="corn-syrup" }
+- [ ] 1 tsp [vanilla]{ ing="vanilla" }
 
 ## Recipe
 
-1. Melt butter and chocolate over low heat. Stir and blend well, then add the boiling water
-1. Stir and blend well, then add the sugar and corn syrup
+1. Melt [butter]{ ing="butter" } and [chocolate]{ ing="unsweetened-chocolate" } over low heat. Stir and blend well, then add the [boiling water]{ ing="boiling-water" }
+1. Stir and blend well, then add the [sugar]{ ing="sugar" } and [corn syrup]{ ing="corn-syrup" }
 1. Let the sauce come to a boil, stirring slowly over low heat. Simmer for about 5 minutes, stirring occasionally
-1. Add vanilla
+1. Add [vanilla]{ ing="vanilla" }
 
 ## Notes
 

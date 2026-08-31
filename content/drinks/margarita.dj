@@ -10,11 +10,11 @@ Cocktail Codex - SideCar Variant
 
 Variations from the Cocktail Codex only modify the amount of simple syrup added
 
-- [ ] Lime wedge
-- [ ] Kosher salt, for rim
-- [ ] 2 oz Siembra Azul (blanco tequila)
-- [ ] 3/4 oz Cointreau
-- [ ] 3/4 oz fresh lime juice
+- [ ] [Lime wedge]{ ing="lime-wedge" }
+- [ ] [Kosher salt]{ ing="kosher-salt" }, for rim
+- [ ] 2 oz [Siembra Azul]{ ing="siembra-azul" } (blanco tequila)
+- [ ] 3/4 oz [Cointreau]{ ing="cointreau" }
+- [ ] 3/4 oz fresh [lime juice]{ ing="lime-juice" }
 - [ ] _simple syrup (see recipe in Drinks section)_
 
       - [ ] Dry: _none_
@@ -23,8 +23,8 @@ Variations from the Cocktail Codex only modify the amount of simple syrup added
 
 ## Recipe
 
-1. Run the lime wedge along the upper 1/2 in of an Old Fashioned glass halfway around the circumference
-1. Roll wet portion in salt and put 1 large ice cube in the glass
+1. Run the [lime wedge]{ ing="lime-wedge" } along the upper 1/2 in of an Old Fashioned glass halfway around the circumference
+1. Roll wet portion in [salt]{ ing="kosher-salt" } and put 1 large ice cube in the glass
 1. Shake the ingredients with ice, then strain into the prepared glass. No garnish
 
 ## Other Types of Margaritas

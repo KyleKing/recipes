@@ -10,26 +10,26 @@ Based on [https://www.simplyrecipes.com/recipes/…](https://www.simplyrecipes.c
 
 ### Wet
 
-- [ ] 1/2 cup butter, room temperature
-- [ ] 1/2 cup granulated sugar
-- [ ] 1/2 cup packed brown sugar
-- [ ] 1/2 cup peanut butter
-- [ ] 1 large egg
+- [ ] 1/2 cup [butter]{ ing="butter" }, room temperature
+- [ ] 1/2 cup [granulated sugar]{ ing="granulated-sugar" }
+- [ ] 1/2 cup [packed brown sugar]{ ing="packed-brown-sugar" }
+- [ ] 1/2 cup [peanut butter]{ ing="peanut-butter" }
+- [ ] 1 large [egg]{ ing="egg" }
 
 ### Dry
 
-- [ ] 1.25 cups flour
-- [ ] 3/4 tsp baking soda
-- [ ] 1/2 tsp baking powder
-- [ ] 1/4 tsp salt
+- [ ] 1.25 cups [flour]{ ing="flour" }
+- [ ] 3/4 tsp [baking soda]{ ing="baking-soda" }
+- [ ] 1/2 tsp [baking powder]{ ing="baking-powder" }
+- [ ] 1/4 tsp [salt]{ ing="salt" }
 
 ## Recipe
 
 1. In the KitchenAid:
 
-   1. Beat the butter until creamy (~2 min)
-   1. Add brown sugar and white sugar (~2 min)
-   1. Mix in the peanut butter and the egg
+   1. Beat the [butter]{ ing="peanut-butter" } until creamy (~2 min)
+   1. Add [brown sugar]{ ing="packed-brown-sugar" } and white [sugar]{ ing="granulated-sugar" } (~2 min)
+   1. Mix in the [peanut butter]{ ing="peanut-butter" } and the [egg]{ ing="egg" }
 1. In the smallest bowl, whisk together the dry ingredients
 1. Mix in the dry ingredients
 1. Wrap dough and refrigerate for several hours

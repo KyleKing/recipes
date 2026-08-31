@@ -21,25 +21,25 @@ Based on [Bread Baking for Beginners](https://www.alchemybread.com/book) ([wayba
 
 ### Bread Ingredients
 
-- [ ] 8 g instant yeast
-- [ ] 375 g water
-- [ ] 500 g all purpose flour
-- [ ] 10 g salt
+- [ ] 8 g [instant yeast]{ ing="instant-yeast" }
+- [ ] 375 g [water]{ ing="water" }
+- [ ] 500 g [all purpose flour]{ ing="all-purpose-flour" }
+- [ ] 10 g [salt]{ ing="salt" }
 
 ## Recipe
 
-1. Find the ambient temperature, which can be done by taking the temperature of the flour when sitting at room temperature
-1. Calculate the desired water temperature based on the equation below. This dough should be at 76F
+1. Find the ambient temperature, which can be done by taking the temperature of the [flour]{ ing="all-purpose-flour" } when sitting at room temperature
+1. Calculate the desired [water]{ ing="water" } temperature based on the equation below. This dough should be at 76F
 
-   1. The water temperature can be achieved by filling a jar with hot top water, then using a second cup full of cold water. Slowly add the cold water until at the ideal temperature
+   1. The [water]{ ing="water" } temperature can be achieved by filling a jar with hot top water, then using a second cup full of cold water. Slowly add the cold water until at the ideal temperature
 1. Weigh all ingredients separately using an appropriately sized bowl
-1. Fill a large bowl with the water. Dispense the yeast in the bowl with a gentle swish. Let see for a couple of minutes until a light foam from the yeast begins to form
-1. Add the flour on top of the water and sprinkle salt on top of the flour. It is important to keep the salt on top of the flour as it could inhibit the rise of the yeast
+1. Fill a large bowl with the [water]{ ing="water" }. Dispense the [yeast]{ ing="instant-yeast" } in the bowl with a gentle swish. Let see for a couple of minutes until a light foam from the yeast begins to form
+1. Add the [flour]{ ing="all-purpose-flour" } on top of the [water]{ ing="water" } and sprinkle [salt]{ ing="salt" } on top of the flour. It is important to keep the salt on top of the flour as it could inhibit the rise of the [yeast]{ ing="instant-yeast" }
 1. Mix with your hands or a wooden spoon to ensure that the ingredients are well combined. The ingredients should form a slack wet dough
-1. Let the dough relax for 20 minutes so that the flour can absorb the water
+1. Let the dough relax for 20 minutes so that the [flour]{ ing="all-purpose-flour" } can absorb the [water]{ ing="water" }
 1. Stretch and fold the dough. Imagine that the dough has “four corners.” Pull each up and stretch over the top of the dough to meet the opposite corner. Work your way around the corners two or three times until the dough has become a tight ball and is no longer loose and stretchy
 1. Place a floured kitchen towel over the bowl and let rise for 90 minutes
-1. The dough should now be lighter and filled with air bubbles. To check, pinch off a small amount of dough and drop into a cup of cold water. If the dough floats it is ready, but if not, the room might be cold and the dough could use another 30 minutes
+1. The dough should now be lighter and filled with air bubbles. To check, pinch off a small amount of dough and drop into a cup of cold [water]{ ing="water" }. If the dough floats it is ready, but if not, the room might be cold and the dough could use another 30 minutes
 1. (Stop here for focaccia. This would have been step 8 in the book)
 1. Gently turn the dough onto a floured counter top with the sticky bottom facing up. You may need your hand or a plastic scraper to remove
 1. Shape the dough by making a gentle letter fold
@@ -50,7 +50,7 @@ Based on [Bread Baking for Beginners](https://www.alchemybread.com/book) ([wayba
 1. Place the dough, seam-side down, into a basked lined with a floured kitchen towel. Let the dough proof for 60-90 minutes
 1. While the dough is proofing, place the empty dutch oven in the oven and pre-heat to 475. Make sure that there is enough time for the oven to fully pre-heat
 1. Check that the dough is airy like a marshmallow and when pressed leave a small indent rather than springing back up. Note that it is very common that bread needs additional time to proof
-1. Flour your work surface and tip the loaf out of the basket, seam-side (bottom) up
+1. [Flour]{ ing="all-purpose-flour" } your work surface and tip the loaf out of the basket, seam-side (bottom) up
 1. Safely, move the hot dutch oven onto the stove top, placing the lid to the side. Transfer the dough into the dutch oven, seam-side up (the bread will open at the seam resulting in a classic rustic loaf)
 1. Cover the dutch oven with the lid and return to the oven for 25 minutes
 1. At 25 minutes, remove the lid. The pale loaf should have risen. Continue baking for 15-20 minutes uncovered

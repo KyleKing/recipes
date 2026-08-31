@@ -10,20 +10,20 @@ Based on [https://www.thecocktaildb.com/drink/…](https://www.thecocktaildb.com
 
 Note: serves 6
 
-- [ ] 2 oz syrup (60 mL)
+- [ ] 2 oz [syrup]{ ing="syrup" } (60 mL)
 
-      - [ ] 4 Tbsp sugar (60 mL)
-      - [ ] 2 Tbsp water (30 mL)
-      - [ ] 1 Tbsp allspice
-- [ ] 6 3/4 oz rum (200 mL)
-- [ ] 3 oz lime juice (90 mL)
-- [ ] 20 oz Champagne (600 mL)
-- [ ] Orange Spiral garnish
+      - [ ] 4 Tbsp [sugar]{ ing="sugar" } (60 mL)
+      - [ ] 2 Tbsp [water]{ ing="water" } (30 mL)
+      - [ ] 1 Tbsp [allspice]{ ing="allspice" }
+- [ ] 6 3/4 oz [rum]{ ing="rum" } (200 mL)
+- [ ] 3 oz [lime juice]{ ing="lime-juice" } (90 mL)
+- [ ] 20 oz [Champagne]{ ing="champagne" } (600 mL)
+- [ ] [Orange Spiral garnish]{ ing="orange-spiral-garnish" }
 
 ## Recipe
 
-1. In a pan, warm the sugar, water, and allspice until the sugar dissolves. Let cool and strain
+1. In a pan, warm the [sugar]{ ing="sugar" }, [water]{ ing="water" }, and [allspice]{ ing="allspice" } until the sugar dissolves. Let cool and strain
 1. Prep the orange spirals
-1. Pout the spiced syrup into a cocktail shaker with rum and lime juice
-1. Add ice and shake. Strain into six champagne flutes
-1. Top with champagne and add garnish
+1. Pout the spiced [syrup]{ ing="syrup" } into a cocktail shaker with [rum]{ ing="rum" } and [lime juice]{ ing="lime-juice" }
+1. Add ice and shake. Strain into six [champagne]{ ing="champagne" } flutes
+1. Top with [champagne]{ ing="champagne" } and add [garnish]{ ing="orange-spiral-garnish" }
