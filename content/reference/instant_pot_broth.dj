@@ -10,48 +10,48 @@ Based on [Serious Eats Pressure Cooker Chicken Stock](https://www.seriouseats.co
 
 ### Chicken Broth
 
-- [ ] 2-3 lbs chicken parts (backs, wings, necks, carcass from rotisserie chicken)
-- [ ] 1 onion, quartered (no need to peel)
-- [ ] 2 carrots, roughly chopped
-- [ ] 2 celery stalks, roughly chopped
-- [ ] 4 cloves garlic, smashed
-- [ ] 2 bay leaves
-- [ ] 1 tsp black peppercorns
-- [ ] Fresh herbs (parsley, thyme, or rosemary)
-- [ ] Water to fill (about 8-10 cups)
-- [ ] 1 tbsp apple cider vinegar (helps extract minerals)
+- [ ] 2-3 lbs [chicken parts]{ ing="chicken-parts" } (backs, wings, necks, carcass from rotisserie chicken)
+- [ ] 1 [onion]{ ing="onion" }, quartered (no need to peel)
+- [ ] 2 [carrots]{ ing="carrots" }, roughly chopped
+- [ ] 2 [celery stalks]{ ing="celery-stalks" }, roughly chopped
+- [ ] 4 cloves [garlic]{ ing="garlic" }, smashed
+- [ ] 2 [bay leaves]{ ing="bay-leaves" }
+- [ ] 1 tsp [black peppercorns]{ ing="black-peppercorns" }
+- [ ] Fresh [herbs]{ ing="herbs" } (parsley, thyme, or rosemary)
+- [ ] [Water to fill]{ ing="water-to-fill" } (about 8-10 cups)
+- [ ] 1 tbsp [apple cider vinegar]{ ing="apple-cider-vinegar" } (helps extract minerals)
 
 ### Vegetable Broth
 
-- [ ] 2 onions, quartered
-- [ ] 3 carrots, roughly chopped
-- [ ] 3 celery stalks, roughly chopped
-- [ ] 8 oz mushrooms, halved
-- [ ] 6 cloves garlic, smashed
-- [ ] 2 bay leaves
-- [ ] 1 tsp black peppercorns
-- [ ] Fresh herbs (parsley, thyme)
-- [ ] 2 tbsp tomato paste
-- [ ] 2 tbsp soy sauce (adds umami)
-- [ ] Water to fill (about 8-10 cups)
+- [ ] 2 [onions]{ ing="onions" }, quartered
+- [ ] 3 [carrots]{ ing="carrots" }, roughly chopped
+- [ ] 3 [celery stalks]{ ing="celery-stalks" }, roughly chopped
+- [ ] 8 oz [mushrooms]{ ing="mushrooms" }, halved
+- [ ] 6 cloves [garlic]{ ing="garlic" }, smashed
+- [ ] 2 [bay leaves]{ ing="bay-leaves" }
+- [ ] 1 tsp [black peppercorns]{ ing="black-peppercorns" }
+- [ ] Fresh [herbs]{ ing="herbs" } (parsley, thyme)
+- [ ] 2 tbsp [tomato paste]{ ing="tomato-paste" }
+- [ ] 2 tbsp [soy sauce]{ ing="soy-sauce" } (adds umami)
+- [ ] [Water to fill]{ ing="water-to-fill" } (about 8-10 cups)
 
 ### Bone Broth
 
-- [ ] 3-4 lbs beef bones (marrow bones, knuckles, oxtail) or chicken feet
-- [ ] 1 onion, quartered
-- [ ] 2 carrots, roughly chopped
-- [ ] 2 celery stalks, roughly chopped
-- [ ] 4 cloves garlic, smashed
-- [ ] 2 bay leaves
-- [ ] 1 tsp black peppercorns
-- [ ] 2 tbsp apple cider vinegar (critical for extracting collagen)
-- [ ] Fresh herbs
-- [ ] Water to fill (about 8-10 cups)
+- [ ] 3-4 lbs [beef bones]{ ing="beef-bones" } (marrow bones, knuckles, oxtail) or chicken feet
+- [ ] 1 [onion]{ ing="onion" }, quartered
+- [ ] 2 [carrots]{ ing="carrots" }, roughly chopped
+- [ ] 2 [celery stalks]{ ing="celery-stalks" }, roughly chopped
+- [ ] 4 cloves [garlic]{ ing="garlic" }, smashed
+- [ ] 2 [bay leaves]{ ing="bay-leaves" }
+- [ ] 1 tsp [black peppercorns]{ ing="black-peppercorns" }
+- [ ] 2 tbsp [apple cider vinegar]{ ing="apple-cider-vinegar" } (critical for extracting collagen)
+- [ ] Fresh [herbs]{ ing="herbs" }
+- [ ] [Water to fill]{ ing="water-to-fill" } (about 8-10 cups)
 
 ## Recipe
 
-1. Optional but recommended: Roast bones/vegetables at 400°F for 30-40 minutes until browned for deeper flavor
-1. Add all ingredients to Instant Pot. Fill with water to max fill line (do not exceed)
+1. Optional but recommended: Roast [bones]{ ing="beef-bones" }/vegetables at 400°F for 30-40 minutes until browned for deeper flavor
+1. Add all ingredients to Instant Pot. [Fill]{ ing="water-to-fill" } with water to max fill line (do not exceed)
 1. Close lid, set valve to sealing
 1. Cook on high pressure:
 

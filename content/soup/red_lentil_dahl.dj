@@ -10,40 +10,40 @@ Inspired by traditional Indian dahl recipes
 
 ### Dahl Base
 
-- [ ] 1 cup red lentils, rinsed
-- [ ] 3 cups water or vegetable broth
-- [ ] 1/2 tsp ground turmeric
-- [ ] 1/2 tsp salt
+- [ ] 1 cup [red lentils]{ ing="red-lentils" }, rinsed
+- [ ] 3 cups [water or vegetable broth]{ ing="water-or-vegetable-broth" }
+- [ ] 1/2 tsp [ground turmeric]{ ing="ground-turmeric" }
+- [ ] 1/2 tsp [salt]{ ing="salt" }
 
 ### Tempering (Tadka)
 
-- [ ] 2 Tbsp ghee or oil
-- [ ] 1 tsp cumin seeds
-- [ ] 1 tsp mustard seeds
-- [ ] 3 cloves garlic, minced
-- [ ] 1 small onion, finely diced
-- [ ] 1 tsp grated fresh ginger
-- [ ] 1 tsp ground coriander
-- [ ] 1/2 tsp garam masala
-- [ ] 1/4 tsp red chili powder (adjust to taste)
+- [ ] 2 Tbsp [ghee or oil]{ ing="ghee-or-oil" }
+- [ ] 1 tsp [cumin seeds]{ ing="cumin-seeds" }
+- [ ] 1 tsp [mustard seeds]{ ing="mustard-seeds" }
+- [ ] 3 cloves [garlic]{ ing="garlic" }, minced
+- [ ] 1 small [onion]{ ing="onion" }, finely diced
+- [ ] 1 tsp [grated fresh ginger]{ ing="grated-fresh-ginger" }
+- [ ] 1 tsp [ground coriander]{ ing="ground-coriander" }
+- [ ] 1/2 tsp [garam masala]{ ing="garam-masala" }
+- [ ] 1/4 tsp [red chili powder]{ ing="red-chili-powder" } (adjust to taste)
 
 ### For Serving
 
-- [ ] Fresh cilantro, chopped
-- [ ] Lime or lemon wedges
-- [ ] Basmati rice or naan bread
+- [ ] Fresh [cilantro]{ ing="cilantro" }, chopped
+- [ ] [Lime or lemon wedges]{ ing="lime-or-lemon-wedges" }
+- [ ] [Basmati rice]{ ing="basmati-rice" } or naan bread
 
 ## Recipe
 
-1. Combine red lentils, water, turmeric, and salt in a pot
-1. Bring to a boil, then reduce heat and simmer for 15-20 minutes until lentils break down into a creamy consistency, stirring occasionally
-1. While lentils cook, prepare the tempering: heat ghee in a small pan over medium heat
-1. Add cumin and mustard seeds, cook until they start to pop (30 seconds)
-1. Add onion and cook until softened and golden (5-7 minutes)
-1. Add garlic and ginger, cook for 1 minute
-1. Add coriander, garam masala, and chili powder, cook for 30 seconds
-1. Pour the tempering mixture into the cooked lentils and stir to combine
-1. Serve garnished with cilantro and lime wedges, alongside rice or naan
+1. Combine [red lentils]{ ing="red-lentils" }, water, [turmeric]{ ing="ground-turmeric" }, and [salt]{ ing="salt" } in a pot
+1. Bring to a boil, then reduce heat and simmer for 15-20 minutes until [lentils]{ ing="red-lentils" } break down into a creamy consistency, stirring occasionally
+1. While [lentils]{ ing="red-lentils" } cook, prepare the tempering: heat ghee in a small pan over medium heat
+1. Add cumin and [mustard seeds]{ ing="mustard-seeds" }, cook until they start to pop (30 seconds)
+1. Add [onion]{ ing="onion" } and cook until softened and golden (5-7 minutes)
+1. Add [garlic]{ ing="garlic" } and [ginger]{ ing="grated-fresh-ginger" }, cook for 1 minute
+1. Add [coriander]{ ing="ground-coriander" }, [garam masala]{ ing="garam-masala" }, and [chili powder]{ ing="red-chili-powder" }, cook for 30 seconds
+1. Pour the tempering mixture into the cooked [lentils]{ ing="red-lentils" } and stir to combine
+1. Serve garnished with [cilantro]{ ing="cilantro" } and lime [wedges]{ ing="lime-or-lemon-wedges" }, alongside [rice]{ ing="basmati-rice" } or naan
 
 ## Notes
 
