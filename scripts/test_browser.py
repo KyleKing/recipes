@@ -1495,6 +1495,28 @@ def test_saved_token_unlocks_the_source_editor(keyed_page: Page):
     expect(keyed_page.locator("#edit-token")).to_have_count(0)
 
 
+SUBSTITUTIONS_SOURCE = "content/reference/ingredient_substitutions.dj"
+SUBSTITUTIONS_PAGE = "/reference/ingredient_substitutions.html"
+
+
+def test_adding_a_substitute_opens_the_editor_on_a_scaffold(page: Page):
+    """The dossier's empty state has to land in a usable draft, not merely the right page."""
+    source = pathlib.Path(SUBSTITUTIONS_SOURCE).read_text()
+    github = FakeGitHub(source)
+    github.files[SUBSTITUTIONS_SOURCE] = {"content": source, "sha": "sha-subs"}
+    page.goto(BASE_URL + SUBSTITUTIONS_PAGE)
+    page.evaluate(f"localStorage.setItem('recipe-github-token', {json.dumps(GITHUB_TOKEN)})")
+    github.install(page)
+    page.goto(BASE_URL + SUBSTITUTIONS_PAGE + "?add-substitute=salmon&name=Salmon")
+
+    drafted = page.locator("#edit-source")
+    expect(drafted).to_be_visible()
+    text = drafted.input_value()
+    assert text.startswith(source.rstrip())
+    assert '### 1 cup [Salmon]{ ing="salmon" }' in text
+    assert "- amount and ingredient it stands in for" in text
+
+
 def test_forgetting_the_token_clears_it_from_storage(keyed_page: Page):
     """The revoke path has to actually remove the credential, not just hide the form."""
     FakeGitHub(read_source()).install(keyed_page)
