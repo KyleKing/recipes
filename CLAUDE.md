@@ -284,7 +284,7 @@ references a key no ingredient in that file declares, since retirement would oth
 nothing. Name matching was rejected: it binds only 72% of steps.
 
 `scripts/_backfill_ingredient_refs.py` writes the first pass of these spans across the
-corpus (99.6% of ingredients keyed, 65% of steps bound; the unbound remainder is mostly
+corpus (99.8% of ingredients keyed, 66% of steps bound; the unbound remainder is mostly
 steps that name no ingredient, such as "Preheat oven to 350F"). It reads the ingredient's
 name out of the line by stripping quantities, units, parentheticals, and trailing
 qualifiers, then wraps matching prose in the steps. Name matching is an authoring aid, not
@@ -399,7 +399,8 @@ edit) is counted in the banner instead of being guessed at. A proposed step carr
 `update_site.yml` builds and deploys on push to `main`. `validate_pr.yml` runs on every
 pull request, which is the only check a browser edit ever gets: the build itself is the
 validator, failing on a missing metadata block, a missing image, an unknown ingredient key,
-or a broken internal link.
+a key that names a measurement, a step that writes an ingredient without linking it, or a
+broken internal link.
 
 It also recompresses images the pull request added and pushes the result back to the same
 branch. A canvas re-encode at `PHOTO_QUALITY = 0.85` runs about 17% larger than

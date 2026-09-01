@@ -87,7 +87,8 @@ jobs:
         run: mise run test
 
       # The build is the validator: a missing metadata block, a missing image, an unknown
-      # ingredient key, or a broken internal link all fail here rather than on main.
+      # ingredient key, a key naming a measurement, a step that writes an ingredient
+      # without linking it, or a broken internal link all fail here rather than on main.
       - name: Build Site
         run: mise run build
 
