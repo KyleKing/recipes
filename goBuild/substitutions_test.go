@@ -59,3 +59,23 @@ func TestValidateIngredientRefs(t *testing.T) {
 	require.Error(t, err)
 	assert.Contains(t, err.Error(), "butter")
 }
+
+func TestValidateIngredientKeyShape(t *testing.T) {
+	tests := map[string]string{
+		"brown-sugar":       "",
+		"all-purpose-flour": "",
+		"orange-juice":      "",
+		"cup-baking-soda":   "starts with a measurement word",
+		"of-black-beans":    "starts with a measurement word",
+		"basmati-rice-200g": "carries a quantity",
+		"juice-of-1-lemon":  "carries a quantity",
+	}
+	for key, reason := range tests {
+		assert.Equal(t, reason, malformedKey(key), key)
+	}
+
+	err := validateIngredientRefs(
+		djot_parser.BuildDjotAst([]byte("## Ingredients\n\n- [ ] 1/3 [cup baking soda]{ing=\"cup-baking-soda\"}\n")), "bad.dj")
+	require.Error(t, err)
+	assert.Contains(t, err.Error(), "cup-baking-soda (starts with a measurement word)")
+}

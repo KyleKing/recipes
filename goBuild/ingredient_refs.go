@@ -72,15 +72,50 @@ func ingredientKeys(ast []djot_parser.TreeNode[djot_parser.DjotNode]) (declared 
 	return declared, referenced
 }
 
+// Words that belong to a quantity rather than to an ingredient. A key beginning with one
+// means the span swallowed part of the measurement, which spells the same ingredient
+// differently in every recipe and so hides it from substitution and temperature lookup.
+var measurementWords = map[string]bool{
+	"a": true, "about": true, "an": true, "and": true, "bag": true, "bags": true,
+	"block": true, "blocks": true, "box": true, "can": true, "cans": true, "cup": true,
+	"cups": true, "gram": true, "grams": true, "jar": true, "jars": true, "kg": true,
+	"lb": true, "lbs": true, "ml": true, "of": true, "one": true, "optional": true,
+	"or": true, "ounce": true, "ounces": true, "oz": true, "package": true,
+	"packages": true, "per": true, "plus": true, "pound": true, "pounds": true,
+	"some": true, "tablespoon": true, "tablespoons": true, "tbsp": true, "tbsps": true,
+	"teaspoon": true, "teaspoons": true, "to": true, "tsp": true, "tsps": true,
+}
+
+var digitRe = regexp.MustCompile(`[0-9]`)
+
+func malformedKey(key string) string {
+	if digitRe.MatchString(key) {
+		return "carries a quantity"
+	}
+	if measurementWords[strings.SplitN(key, "-", 2)[0]] {
+		return "starts with a measurement word"
+	}
+	return ""
+}
+
 // A step may only reference a key that an ingredient in the same file declares, otherwise
 // retirement would silently do nothing
 func validateIngredientRefs(ast []djot_parser.TreeNode[djot_parser.DjotNode], path string) error {
 	declared, referenced := ingredientKeys(ast)
-	var unknown []string
+	var unknown, malformed []string
 	for key := range referenced {
 		if !declared[key] {
 			unknown = append(unknown, key)
 		}
+	}
+	for key := range declared {
+		if reason := malformedKey(key); reason != "" {
+			malformed = append(malformed, fmt.Sprintf("%s (%s)", key, reason))
+		}
+	}
+	if len(malformed) > 0 {
+		sort.Strings(malformed)
+		return fmt.Errorf("%s: ingredient keys name a measurement, not an ingredient: %s", path, strings.Join(malformed, ", "))
 	}
 	if len(unknown) == 0 {
 		return nil
