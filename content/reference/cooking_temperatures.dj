@@ -1,0 +1,113 @@
+# Cooking Temperatures
+
+Safe minimums from the [USDA safe temperature chart](https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart)
+
+{ rating="0" image="None" }
+:::
+:::
+
+Every figure is the temperature at the thickest part, read with an instant-read thermometer and away from bone.
+The recommended line is what we actually cook to, which for whole-muscle beef, pork, and salmon sits below the USDA minimum by choice.
+Carryover keeps climbing 3-5 °F while the meat rests, so pull it early.
+
+## Fish and Shellfish
+
+### [Salmon]{ ing="salmon salmon-filet skinless-salmon-filets" }
+
+- 120 °F rare, translucent through the center
+- 130 °F medium-rare (recommended)
+- 140 °F medium, firm and flaking
+- 145 °F USDA safe minimum, fully opaque
+
+Farmed salmon carries enough fat to forgive a few degrees past medium-rare.
+Wild sockeye is lean and dries out fast, so pull it nearer 120 °F.
+
+### [White Fish]{ ing="white-fish white-fish-of-choice cod-fillets skinless-tilapia-fillets" }
+
+- 130 °F barely set, still glossy
+- 137 °F just flaking (recommended)
+- 145 °F USDA safe minimum
+
+Cod, tilapia, and halibut have no fat to hide overcooking, so the window between flaking and chalky is only a few degrees.
+
+### [Tuna]{ ing="tuna" }
+
+- 115 °F rare, cool red center (recommended)
+- 125 °F medium-rare
+- 145 °F USDA safe minimum, gray throughout
+
+Searing a tuna steak past medium-rare wastes it.
+Canned tuna is already cooked and needs no temperature.
+
+### [Shrimp]{ ing="shrimp raw-shrimp raw-jumbo-shrimp raw-shrimp-defrosted" }
+
+- 120 °F just opaque, still tender (recommended)
+- 145 °F USDA safe minimum
+
+Shrimp go from tender to rubbery in under a minute.
+The shape is a better cue than the thermometer: a C is done, an O is overcooked.
+
+## Poultry
+
+### [Chicken Breast]{ ing="chicken chicken-breast chicken-breasts chicken-parts chicken-tenders boneless-chicken boneless-chicken-breasts boneless-skinless-chicken boneless-skinless-chicken-breasts" }
+
+- 150 °F pasteurized after roughly 3 minutes held, still juicy (recommended)
+- 157 °F pasteurized on contact
+- 165 °F USDA safe minimum, instant
+
+Pasteurization is time at temperature, not a single number.
+Breast held at 150 °F for 3 minutes is as safe as breast that touched 165 °F, and it is noticeably less dry.
+
+### [Chicken Thigh]{ ing="chicken-thighs boneless-chicken-thighs boneless-skinless-chicken-thighs" }
+
+- 165 °F USDA safe minimum
+- 180 °F connective tissue rendered (recommended)
+
+Dark meat is full of collagen that only breaks down well past done, so a thigh pulled at 165 °F is safe but chewy.
+
+### [Ground Turkey]{ ing="ground-turkey" }
+
+- 165 °F USDA safe minimum (recommended)
+
+Grinding spreads surface bacteria through the meat, so ground poultry has no range below the minimum.
+
+## Beef and Pork
+
+### [Steak]{ ing="flank-steak skirt-steak" }
+
+- 120 °F rare
+- 130 °F medium-rare (recommended)
+- 140 °F medium
+- 150 °F medium-well
+- 160 °F well done
+
+Skirt and flank are thin enough that carryover overshoots easily, so pull them 5 °F under the target.
+
+### [Beef for Braising]{ ing="boneless-beef-chuck cubed-beef-stew-meat" }
+
+- 145 °F USDA safe minimum
+- 203 °F collagen fully rendered, shreds with a fork (recommended)
+
+A braise is not cooked to safe, it is cooked to tender.
+Chuck and stew meat need hours above 190 °F before they stop being tough.
+
+### [Pork Shoulder]{ ing="pork-shoulder" }
+
+- 145 °F USDA safe minimum
+- 203 °F pulls apart (recommended)
+
+Like beef chuck, shoulder is a collagen cut and the safe minimum is nowhere near done.
+
+### [Ground Beef]{ ing="ground-beef lean-ground-beef meat-ground-beef" }
+
+- 160 °F USDA safe minimum (recommended)
+
+### [Ground Pork]{ ing="ground-pork sweet-italian-pork-sausage" }
+
+- 160 °F USDA safe minimum (recommended)
+
+## Notes
+
+- An instant-read thermometer disagreeing with the oven dial is right and the dial is wrong
+- Carryover cooking runs 3-5 °F in a fillet or chop and 10 °F or more in a roast, so the number to aim for is always below the number you want
+- Reheated leftovers and anything with a sauce go to 165 °F regardless of what the raw ingredient wanted

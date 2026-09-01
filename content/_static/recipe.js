@@ -7,6 +7,7 @@
 	var COPY_FEEDBACK_MS = 1500;
 	var SUBSTITUTIONS_URL = "/_static/substitutions.json";
 	var INGREDIENT_INDEX_URL = "/_static/ingredient-index.json";
+	var TEMPERATURES_URL = "/_static/temperatures.json";
 	// Width and shape decide the split, never the pointer: a desktop window wide enough to
 	// hold both panes benefits from the reference rail exactly as an iPad does
 	var SPLIT_QUERY = "(min-width: 1000px) and (min-aspect-ratio: 4/3)";
@@ -162,7 +163,7 @@
 
 	function ownText(li) {
 		var clone = li.cloneNode(true);
-		clone.querySelectorAll("ul, ol, input").forEach((node) => {
+		clone.querySelectorAll("ul, ol, input, .temp-hint").forEach((node) => {
 			node.remove();
 		});
 		return clone.textContent.replace(/\s+/g, " ").trim();
@@ -301,6 +302,41 @@
 		});
 	}
 
+	var temperatures = {};
+
+	function temperatureFor(row) {
+		for (var i = 0; i < row.keys.length; i += 1) {
+			if (temperatures[row.keys[i]]) return temperatures[row.keys[i]];
+		}
+		return null;
+	}
+
+	// The recommended reading rides on the ingredient row itself. Following a step must not
+	// cost a lookup, and the dossier carries the rest of the range for when it does
+	function showTemperatureHints() {
+		ingredientRows.forEach((row) => {
+			var entry = temperatureFor(row);
+			if (!entry?.recommended) return;
+			if (row.label.querySelector(".temp-hint")) return;
+			var hint = document.createElement("span");
+			hint.className = "temp-hint";
+			hint.textContent = entry.recommended;
+			hint.title = `${entry.name}: cook to ${entry.recommended}`;
+			row.label.appendChild(hint);
+		});
+	}
+
+	function loadTemperatures() {
+		if (ingredientRows.length === 0) return;
+		fetch(TEMPERATURES_URL)
+			.then((r) => r.json())
+			.then((table) => {
+				temperatures = table;
+				showTemperatureHints();
+			})
+			.catch(() => {});
+	}
+
 	var referenceData = null;
 
 	// Both tables are static build output, so one fetch per page load serves every dossier
@@ -400,8 +436,40 @@
 		body.appendChild(block);
 	}
 
+	function renderTemperature(body, entry) {
+		var block = document.createElement("div");
+		block.className = "panel-temperature";
+		var title = document.createElement("h3");
+		title.textContent = `Cook ${entry.name} to`;
+		block.appendChild(title);
+		var list = document.createElement("ul");
+		entry.levels.forEach((level) => {
+			var li = document.createElement("li");
+			li.textContent = level;
+			if (entry.recommended && level.startsWith(entry.recommended)) {
+				li.className = "temp-recommended";
+			}
+			list.appendChild(li);
+		});
+		block.appendChild(list);
+		if (entry.note) {
+			var note = document.createElement("p");
+			note.className = "panel-note";
+			note.textContent = entry.note;
+			block.appendChild(note);
+		}
+		var link = document.createElement("a");
+		link.href = entry.href;
+		link.textContent = "Full entry";
+		block.appendChild(link);
+		body.appendChild(block);
+	}
+
 	function renderIngredientPanel(body, row, data) {
 		heading(body, ownText(row.li));
+
+		var temperature = temperatureFor(row);
+		if (temperature) renderTemperature(body, temperature);
 
 		var entries = row.keys.flatMap((key) => data.substitutions[key] || []);
 		if (entries.length > 0) {
@@ -951,6 +1019,7 @@
 		setupIngredientRows();
 		setupStepRows();
 		applyRetirement();
+		loadTemperatures();
 		setupSplitLayout();
 		setupSectionFolding();
 		setupHeaderAnchors();

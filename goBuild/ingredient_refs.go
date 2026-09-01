@@ -94,13 +94,34 @@ type ingredientUse struct {
 	Url  string `json:"url"`
 }
 
+func declaredIngredientKeys(rMap RecipeMap, cache *RecipeCache) map[string]bool {
+	keys := map[string]bool{}
+	for path := range rMap {
+		cached, exists := cache.Get(path)
+		if !exists {
+			continue
+		}
+		declared, _ := ingredientKeys(cached.ast)
+		for key := range declared {
+			keys[key] = true
+		}
+	}
+	return keys
+}
+
+// A reference page declares keys so substitutions and temperatures can be looked up by
+// ingredient, but it is not a recipe and does not belong in "also used in"
+func isReferencePage(path string) bool {
+	return filepath.Base(filepath.Dir(path)) == "reference"
+}
+
 // Map every declared ingredient key to the recipes that use it, for the dossier's
 // "other recipes" list
 func writeIngredientIndex(publicDir string, rMap RecipeMap, cache *RecipeCache) error {
 	index := map[string][]ingredientUse{}
 	for path, recipe := range rMap {
 		cached, exists := cache.Get(path)
-		if !exists {
+		if !exists || isReferencePage(path) {
 			continue
 		}
 		declared, _ := ingredientKeys(cached.ast)

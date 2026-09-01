@@ -787,10 +787,29 @@ h3:hover .header-anchor,
 	margin-bottom: 12px;
 }
 
+.panel-temperature {
+	margin-bottom: 12px;
+}
+
 .panel-substitution ul,
+.panel-temperature ul,
 .panel-recipes {
 	margin: 0 0 4px;
 	padding-left: 20px;
+}
+
+.panel-temperature .temp-recommended {
+	font-weight: bold;
+}
+
+/* The reading a step needs, sitting on the ingredient rather than behind a tap. Dimmed
+   because it is a reference, not part of the quantity */
+.temp-hint {
+	margin-left: 0.5em;
+	font-family: "Atkinson Hyperlegible Mono";
+	font-size: 0.72em;
+	color: var(--color-text-done);
+	white-space: nowrap;
 }
 
 .panel-note {

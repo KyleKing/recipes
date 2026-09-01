@@ -466,6 +466,8 @@ func Build(publicDir string) {
 	ExitOnError(err)
 	err = writeIngredientIndex(publicDir, rMap, cache)
 	ExitOnError(err)
+	err = writeTemperatures(publicDir, contentDir(publicDir), declaredIngredientKeys(rMap, cache))
+	ExitOnError(err)
 
 	// Generate other pages
 	indexStart := time.Now()

@@ -48,6 +48,7 @@ TEST_RECIPE = "/main/fried_rice.html"
 DEMO_RECIPE = "/reference/nested_list_demo.html"  # Nested lists, wrapping lines, links
 RECIPE_WITH_LINKS = "/main/chickpea_tikka_masala.html"
 KEYED_RECIPE = "/dessert/chocolate_chip_cookies.html"  # Carries `ing=` step references
+TEMPERATURE_RECIPE = "/seafood/salmon_with_blackened_seasoning.html"  # Salmon has a chart
 
 IPAD_MINI_LANDSCAPE = {"width": 1133, "height": 744}
 EXPIRY_MS = 48 * 60 * 60 * 1000
@@ -486,6 +487,51 @@ def test_info_mode_does_not_survive_a_reload(keyed_page: Page):
     keyed_page.wait_for_selector("#info-btn")
 
     expect(keyed_page.locator("#info-btn")).to_have_text("Info: Off")
+
+
+# --- Cooking temperatures ---------------------------------------------------
+
+
+@pytest.fixture
+def salmon_page(page: Page):
+    """Navigate to a recipe whose ingredient carries a cooking temperature."""
+    return _fresh(page, TEMPERATURE_RECIPE)
+
+
+def _salmon_row(page: Page):
+    return page.locator("ul.task-list li.recipe-row:has(.ing-ref[data-ing~='salmon'])").first
+
+
+def test_a_cooking_temperature_rides_on_the_ingredient_row(salmon_page: Page):
+    """Following a step must not cost a lookup, so the reading we cook to sits on the row."""
+    hint = _salmon_row(salmon_page).locator(".temp-hint")
+    expect(hint).to_have_text("130 °F")
+
+
+def test_the_temperature_hint_stays_out_of_the_copied_ingredients(salmon_page: Page):
+    """The hint is reference, not part of the quantity, so it must not follow a paste."""
+    salmon_page.context.grant_permissions(["clipboard-read", "clipboard-write"])
+    open_toolbar(salmon_page)
+    salmon_page.locator("#copy-ingredients-btn").click()
+    expect(salmon_page.locator("#copy-ingredients-btn")).to_have_text("Copied")
+    copied = salmon_page.evaluate("navigator.clipboard.readText()")
+    assert "Salmon" in copied
+    assert "130 °F" not in copied
+
+
+def test_the_dossier_carries_the_whole_doneness_range(salmon_page: Page):
+    """The row shows one reading; the panel is where the rest of the range lives."""
+    info_mode(salmon_page, True)
+    _salmon_row(salmon_page).locator("> .item-label").click()
+
+    block = salmon_page.locator(".panel-temperature")
+    expect(block.locator("h3")).to_have_text("Cook Salmon to")
+    expect(block.locator("li")).to_have_count(4)
+    expect(block.locator("li.temp-recommended")).to_have_text(re.compile("^130 °F"))
+    expect(block.locator("a")).to_have_attribute(
+        "href", "/reference/cooking_temperatures.html#Salmon"
+    )
+
 
 
 # --- Retirement -------------------------------------------------------------
