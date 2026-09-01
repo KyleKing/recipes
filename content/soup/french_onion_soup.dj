@@ -12,7 +12,7 @@ _Note_: this recipe has been cut in half
 
 - [ ] 1.5 Tbsp [olive oil]{ ing="olive-oil" }
 - [ ] 3.5 Tbsp [butter]{ ing="butter" }
-- [ ] 5 cups _yellow_ onions (~1.5 lbs), thinly sliced
+- [ ] 5 cups _yellow_ [onions]{ ing="onions" } (~1.5 lbs), thinly sliced
 - [ ] 3 [thyme sprigs]{ ing="thyme-sprigs" }, bound with Chef’s twine
 - [ ] 4 cloves [garlic]{ ing="garlic" }
 - [ ] 1 Tbsp [flour]{ ing="flour" }
@@ -25,9 +25,9 @@ _Note_: this recipe has been cut in half
 
 ## Recipe
 
-1. In a Cuisinart, attach a 4mm blade and thinly slice the onions (and then can reuse the Cuisinart for grating the [cheese]{ ing="gruyere-or-swiss-cheese" })
-1. In pot, heat the [oil]{ ing="olive-oil" } and [butter]{ ing="butter" } on high. Add the onions and thyme. Stir often and cook for ~15 minutes until the onions begin to shrink, but light in color
-1. Reduce the heat to medium, add the [garlic]{ ing="garlic" } and cook until the onions are golden brown and tender (~20 min)
+1. In a Cuisinart, attach a 4mm blade and thinly slice the [onions]{ ing="onions" } (and then can reuse the Cuisinart for grating the [cheese]{ ing="gruyere-or-swiss-cheese" })
+1. In pot, heat the [oil]{ ing="olive-oil" } and [butter]{ ing="butter" } on high. Add the [onions]{ ing="onions" } and [thyme]{ ing="thyme-sprigs" }. Stir often and cook for ~15 minutes until the onions begin to shrink, but light in color
+1. Reduce the heat to medium, add the [garlic]{ ing="garlic" } and cook until the [onions]{ ing="onions" } are golden brown and tender (~20 min)
 1. Add the [flour]{ ing="flour" } and cook for about 3 min
 1. Increase the heat to medium, add the [wine]{ ing="dry-red-wine" } and bring to a boil. Cook until evaporated (~5 min). Discard the Thyme
 1. Increase the heat to high, add the [broth]{ ing="beef-broth" }, Worcestershire [sauce]{ ing="worcestershire-or-soy-sauce" }, and [salt]{ ing="kosher-salt" }. Bring to a boil then reduce to a simmer. Simmer for 45 minutes
