@@ -125,6 +125,10 @@ func existsCaseSensitive(base string, target string) bool {
 }
 
 // Walk all generated HTML files and fail if any href or src targets a missing file
+// An underscore inside a word is djot emphasis, so a snake_case filename written as prose
+// or as a link's text silently loses the underscores it needs to stay correct
+var midWordEmphasisRe = regexp.MustCompile(`\w<em>[^<]{1,40}</em>\w`)
+
 func validateInternalLinks(publicDir string) error {
 	var broken []string
 	idCache := map[string]map[string]bool{}
@@ -150,6 +154,9 @@ func validateInternalLinks(publicDir string) error {
 			if fragment != "" && !pageIds(target, idCache)[fragment] {
 				broken = append(broken, fmt.Sprintf("  %s: reference %q names no id in %s", path, ref, target))
 			}
+		}
+		for _, m := range midWordEmphasisRe.FindAllSubmatch(content, -1) {
+			broken = append(broken, fmt.Sprintf("  %s: %q reads a snake_case name as emphasis", path, m[0]))
 		}
 		return nil
 	})

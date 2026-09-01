@@ -120,7 +120,10 @@ Browser tests run automatically via `hk` pre-commit hook when code files are mod
     it matches quoted attributes. Off-site schemes and `/pagefind/` (written later by the
     pagefind CLI) are exempt. Section ids come from the build, so a deep link into a
     substitution or temperature entry is checked; only recipe.js's header anchors are
-    injected at runtime, and those are never written into the HTML
+    injected at runtime, and those are never written into the HTML. It also fails on a
+    snake_case name written as prose or as a link's text, because djot reads the underscores
+    as emphasis and renders `dump_chicken_pot_pie` as `dumpchickenpotpie`, which a reader
+    copying the visible text cannot paste anywhere
 
 **goBuild/schemas.go** - Data structures:
 
