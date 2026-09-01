@@ -54,23 +54,45 @@ var internalRefRe = regexp.MustCompile(`(?:href|src)="([^"]+)"`)
 // Pagefind writes this directory after the Go build finishes, so it cannot be resolved here
 const pagefindPrefix = "/pagefind/"
 
-// Resolve one href or src to a path on disk, or report that it needs no checking
-func resolveInternalRef(publicDir string, dir string, ref string) (string, bool) {
+// Resolve one href or src to the file it targets and the fragment it wants inside that
+// file, or report that it needs no checking
+func resolveInternalRef(publicDir string, dir string, self string, ref string) (target string, fragment string, needsCheck bool) {
 	if strings.HasPrefix(ref, "http://") || strings.HasPrefix(ref, "https://") ||
-		strings.HasPrefix(ref, "#") || strings.HasPrefix(ref, "mailto:") ||
-		strings.HasPrefix(ref, "data:") || strings.HasPrefix(ref, pagefindPrefix) {
-		return "", false
+		strings.HasPrefix(ref, "mailto:") || strings.HasPrefix(ref, "data:") ||
+		strings.HasPrefix(ref, pagefindPrefix) {
+		return "", "", false
 	}
 	if idx := strings.Index(ref, "#"); idx != -1 {
-		ref = ref[:idx]
+		fragment, ref = ref[idx+1:], ref[:idx]
 	}
 	if ref == "" {
-		return "", false
+		if fragment == "" {
+			return "", "", false
+		}
+		return self, fragment, true
 	}
 	if strings.HasPrefix(ref, "/") {
-		return filepath.Join(publicDir, ref), true
+		return filepath.Join(publicDir, ref), fragment, true
 	}
-	return filepath.Join(dir, ref), true
+	return filepath.Join(dir, ref), fragment, true
+}
+
+var htmlIdRe = regexp.MustCompile(`\bid="([^"]+)"`)
+
+// Ids are read straight off the generated markup, so the check runs before minification
+// while every attribute is still quoted
+func pageIds(path string, cache map[string]map[string]bool) map[string]bool {
+	if ids, seen := cache[path]; seen {
+		return ids
+	}
+	ids := map[string]bool{}
+	if content, err := os.ReadFile(path); err == nil {
+		for _, m := range htmlIdRe.FindAllSubmatch(content, -1) {
+			ids[string(m[1])] = true
+		}
+	}
+	cache[path] = ids
+	return ids
 }
 
 // Check target exists under base with exact path-component casing, so a macOS or Windows
@@ -105,6 +127,7 @@ func existsCaseSensitive(base string, target string) bool {
 // Walk all generated HTML files and fail if any href or src targets a missing file
 func validateInternalLinks(publicDir string) error {
 	var broken []string
+	idCache := map[string]map[string]bool{}
 	err := filepath.Walk(publicDir, func(path string, info os.FileInfo, walkErr error) error {
 		if walkErr != nil || filepath.Ext(path) != ".html" {
 			return walkErr
@@ -116,12 +139,16 @@ func validateInternalLinks(publicDir string) error {
 		dir := filepath.Dir(path)
 		for _, m := range internalRefRe.FindAllSubmatch(content, -1) {
 			ref := string(m[1])
-			target, needsCheck := resolveInternalRef(publicDir, dir, ref)
+			target, fragment, needsCheck := resolveInternalRef(publicDir, dir, path, ref)
 			if !needsCheck {
 				continue
 			}
 			if !existsCaseSensitive(publicDir, target) {
 				broken = append(broken, fmt.Sprintf("  %s: broken reference %q -> %s", path, ref, target))
+				continue
+			}
+			if fragment != "" && !pageIds(target, idCache)[fragment] {
+				broken = append(broken, fmt.Sprintf("  %s: reference %q names no id in %s", path, ref, target))
 			}
 		}
 		return nil

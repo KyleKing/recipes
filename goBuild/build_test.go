@@ -107,7 +107,7 @@ More content
 func TestValidateInternalLinks(t *testing.T) {
 	publicDir := t.TempDir()
 	require.NoError(t, os.MkdirAll(filepath.Join(publicDir, "main"), 0o755))
-	require.NoError(t, os.WriteFile(filepath.Join(publicDir, "main", "target.html"), []byte("ok"), 0o644))
+	require.NoError(t, os.WriteFile(filepath.Join(publicDir, "main", "target.html"), []byte(`<section id="Sauces">ok</section>`), 0o644))
 	require.NoError(t, os.WriteFile(filepath.Join(publicDir, "main", "photo.jpg"), []byte("ok"), 0o644))
 
 	write := func(t *testing.T, body string) {
@@ -121,9 +121,28 @@ func TestValidateInternalLinks(t *testing.T) {
 	})
 
 	t.Run("off-site and generated references are skipped", func(t *testing.T) {
-		write(t, `<a href="https://example.com/missing.html">x</a><a href="#anchor">y</a>`+
+		write(t, `<a href="https://example.com/missing.html">x</a>`+
 			`<a href="mailto:a@b.c">z</a><script src="/pagefind/pagefind.js"></script>`)
 		assert.NoError(t, validateInternalLinks(publicDir))
+	})
+
+	t.Run("a fragment naming a real id passes", func(t *testing.T) {
+		write(t, `<section id="Here">x</section><a href="#Here">x</a><a href="target.html#Sauces">y</a>`)
+		assert.NoError(t, validateInternalLinks(publicDir))
+	})
+
+	t.Run("a fragment naming no id fails", func(t *testing.T) {
+		write(t, `<a href="target.html#Gone">x</a>`)
+		err := validateInternalLinks(publicDir)
+		require.Error(t, err)
+		assert.Contains(t, err.Error(), "names no id")
+	})
+
+	t.Run("a same-page fragment naming no id fails", func(t *testing.T) {
+		write(t, `<a href="#Gone">x</a>`)
+		err := validateInternalLinks(publicDir)
+		require.Error(t, err)
+		assert.Contains(t, err.Error(), "names no id")
 	})
 
 	t.Run("missing relative href fails", func(t *testing.T) {
