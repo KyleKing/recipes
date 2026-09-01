@@ -82,8 +82,21 @@ var measurementWords = map[string]bool{
 	"lb": true, "lbs": true, "ml": true, "of": true, "one": true, "optional": true,
 	"or": true, "ounce": true, "ounces": true, "oz": true, "package": true,
 	"packages": true, "per": true, "plus": true, "pound": true, "pounds": true,
-	"some": true, "tablespoon": true, "tablespoons": true, "tbsp": true, "tbsps": true,
-	"teaspoon": true, "teaspoons": true, "to": true, "tsp": true, "tsps": true,
+	"piece": true, "pieces": true, "some": true, "tablespoon": true,
+	"tablespoons": true, "tbsp": true, "tbsps": true, "teaspoon": true,
+	"teaspoons": true, "to": true, "tsp": true, "tsps": true,
+}
+
+// Words that describe an ingredient without ever being one. A key built only from these
+// named the qualifier and left the ingredient outside the span, which is how "packed light"
+// stood in for brown sugar and how "steamed brown" bound the rice to browning a chicken.
+var qualifierOnlyWords = map[string]bool{
+	"brown": true, "packed": true, "pickled": true, "rounds": true, "steamed": true,
+	"very": true,
+}
+
+func isQualifierOnly(word string) bool {
+	return qualifierOnlyWords[word] || isQualifier(word)
 }
 
 var digitRe = regexp.MustCompile(`[0-9]`)
@@ -94,6 +107,13 @@ func malformedKey(key string) string {
 	}
 	if measurementWords[strings.SplitN(key, "-", 2)[0]] {
 		return "starts with a measurement word"
+	}
+	allQualifiers := true
+	for _, word := range strings.Split(key, "-") {
+		allQualifiers = allQualifiers && isQualifierOnly(word)
+	}
+	if allQualifiers {
+		return "names only a qualifier"
 	}
 	return ""
 }
@@ -115,7 +135,7 @@ func validateIngredientRefs(ast []djot_parser.TreeNode[djot_parser.DjotNode], pa
 	}
 	if len(malformed) > 0 {
 		sort.Strings(malformed)
-		return fmt.Errorf("%s: ingredient keys name a measurement, not an ingredient: %s", path, strings.Join(malformed, ", "))
+		return fmt.Errorf("%s: ingredient keys do not name an ingredient: %s", path, strings.Join(malformed, ", "))
 	}
 	if len(unknown) == 0 {
 		return nil

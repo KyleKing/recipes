@@ -36,7 +36,7 @@ func isQualifier(word string) bool {
 	return preparationWords[word] || otherQualifiers[word]
 }
 
-var alphaWordRe = regexp.MustCompile(`[a-z][a-z']*`)
+var alphaWordRe = regexp.MustCompile(`\p{L}[\p{L}']*`)
 
 // How a step is likely to write this ingredient: the whole declared name, then the same
 // name with each leading qualifier peeled off. Never a bare qualifier and never a single

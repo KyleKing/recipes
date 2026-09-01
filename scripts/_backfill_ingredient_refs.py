@@ -21,6 +21,7 @@ import json
 import pathlib
 import re
 import sys
+import unicodedata
 
 
 SUBSTITUTIONS = pathlib.Path("public/_static/substitutions.json")
@@ -116,7 +117,11 @@ def ingredient_span(body: str) -> tuple[int, int] | None:
 
 
 def key_for(name: str, known: set[str]) -> str:
-    slug = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+    # Decompose so an accent drops rather than becoming a hyphen, which spelled jalapeño
+    # as "jalape-o" and hid it from every lookup keyed by the ingredient's name
+    decomposed = unicodedata.normalize("NFKD", name.lower())
+    folded = "".join(c for c in decomposed if not unicodedata.combining(c))
+    slug = re.sub(r"[^a-z0-9]+", "-", folded).strip("-")
     if slug in known:
         return slug
     # Snap to the reference pages' spelling so a substitution is actually found

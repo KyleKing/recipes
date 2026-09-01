@@ -69,6 +69,11 @@ func TestValidateIngredientKeyShape(t *testing.T) {
 		"of-black-beans":    "starts with a measurement word",
 		"basmati-rice-200g": "carries a quantity",
 		"juice-of-1-lemon":  "carries a quantity",
+		"piece-kombu":       "starts with a measurement word",
+		"packed-light":      "names only a qualifier",
+		"steamed-brown":     "names only a qualifier",
+		"sliced-pickled":    "names only a qualifier",
+		"skinless":          "names only a qualifier",
 	}
 	for key, reason := range tests {
 		assert.Equal(t, reason, malformedKey(key), key)
@@ -87,6 +92,8 @@ func TestMentionAliases(t *testing.T) {
 	// A short lone word matches ordinary cooking prose rather than the ingredient
 	assert.Equal(t, []string{"flour"}, mentionAliases("flour"))
 	assert.Empty(t, mentionAliases("oil"))
+	// An accented name is one word, not two split around the accent
+	assert.Equal(t, []string{"jalapeño"}, mentionAliases("jalapeño"))
 }
 
 func TestValidateIngredientMentions(t *testing.T) {
