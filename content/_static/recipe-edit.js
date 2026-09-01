@@ -612,9 +612,9 @@
 
 ### 1 cup [${request.name}]{ ing="${request.key}" }
 
--
+- amount and ingredient it stands in for
 
-When this stands in and when it does not.
+When this substitution works and when it does not.
 `;
 	}
 
