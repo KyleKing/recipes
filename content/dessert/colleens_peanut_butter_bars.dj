@@ -6,16 +6,16 @@
 
 ## Ingredients
 
-- [ ] [Base]{ ing="base" }
+- [ ] Base
 
       - [ ] 24 [cookie dough pieces]{ ing="cookie-dough-pieces" }
-- [ ] [Combine-Cookie Spread]{ ing="combine-cookie-spread" }
+- [ ] Combine-Cookie Spread
 
       - [ ] 1 cup [Peanut Butter]{ ing="peanut-butter" }
       - [ ] 3 cup [powdered sugar]{ ing="powdered-sugar" }
       - [ ] 1/3 cup of [milk]{ ing="milk" }
       - [ ] 1/2 tsp [vanilla]{ ing="vanilla" }
-- [ ] [Combine-Cookie Topping]{ ing="combine-cookie-topping" }
+- [ ] Combine-Cookie Topping
 
       - [ ] 1 cup [chocolate chips]{ ing="chocolate-chips" }
       - [ ] 2 Tbsp [butter]{ ing="butter" }
@@ -25,6 +25,6 @@
 1. Preheat oven to 350
 1. Press 24 [cookie dough pieces]{ ing="cookie-dough-pieces" } into a 9x13 pan
 1. Bake 15-20 minutes. Let cool
-1. Combine “Cookie [Spread]{ ing="combine-cookie-spread" }” ingredients and spread over cooled cookies. Refrigerate for 15 min
-1. In another bowl, melt the [chocolate chips]{ ing="chocolate-chips" } and [butter]{ ing="butter" }. [Spread]{ ing="combine-cookie-spread" } liquid mixture over the [peanut butter]{ ing="peanut-butter" }.
+1. Combine “Cookie Spread” ingredients and spread over cooled cookies. Refrigerate for 15 min
+1. In another bowl, melt the [chocolate chips]{ ing="chocolate-chips" } and [butter]{ ing="butter" }. Spread liquid mixture over the [peanut butter]{ ing="peanut-butter" }.
 1. Refrigerate for an hour before serving
