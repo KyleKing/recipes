@@ -43,6 +43,7 @@ body {
 	--step-gutter: 40px;
 	--row-control: 44px;
 	--row-gap: 6px;
+	--row-pad: 5px;
 }
 
 /* Minimum set of used fonts from Atkinson Hyperlegible fonts
@@ -438,14 +439,15 @@ main {
 	padding-left: var(--step-gutter);
 }
 
+/* Block-level, so the outside marker aligns with the label's own first line box. An
+   inline-block taller than its text drags the marker up to the line it sits on instead */
 li.recipe-row > .item-label {
-	display: inline-block;
-	vertical-align: top;
+	display: block;
+	width: max-content;
 	max-width: 100%;
-	min-height: var(--row-control);
 	box-sizing: border-box;
-	padding: 8px 4px;
-	margin-bottom: var(--row-gap);
+	padding: var(--row-pad) 6px;
+	margin: 0 0 var(--row-gap);
 	border-radius: 3px;
 	cursor: pointer;
 }

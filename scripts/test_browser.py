@@ -53,9 +53,11 @@ TEMPERATURE_RECIPE = "/seafood/salmon_with_blackened_seasoning.html"  # Salmon h
 IPAD_MINI_LANDSCAPE = {"width": 1133, "height": 744}
 EXPIRY_MS = 48 * 60 * 60 * 1000
 
-# Matches `--row-control` and `--row-gap` in content/styles.css
+# Matches `--row-control` and `--row-gap` in content/styles.css. A row is text with padding
+# rather than a button, so its floor is lower than a control's
 ROW_CONTROL_PX = 44
 ROW_GAP_PX = 6
+ROW_TARGET_PX = 34
 
 
 @pytest.fixture(scope="session")
@@ -264,16 +266,27 @@ def test_link_clicks_dont_toggle_checkboxes(page: Page):
 
 
 def test_text_selection_does_not_toggle_ingredient(demo_page: Page):
-    """Dragging to select ingredient text must not check the item off."""
+    """Dragging to select ingredient text must not check the item off.
+
+    The drag runs along the middle of the first rendered line rather than a fixed offset
+    from the box: a synthetic drag that starts exactly on a word boundary selects nothing
+    in Chromium, which would fail the precondition instead of the behaviour.
+    """
     long_item = demo_page.locator("ul.task-list > li").nth(1)
     label = long_item.locator("> .item-label")
     label.scroll_into_view_if_needed()
-    box = label.bounding_box()
-    assert box is not None
+    line = label.evaluate(
+        """(el) => {
+            var range = document.createRange();
+            range.selectNodeContents(el);
+            var first = range.getClientRects()[0];
+            return { x: first.x, y: first.y + first.height / 2, width: first.width };
+        }"""
+    )
 
-    demo_page.mouse.move(box["x"] + 30, box["y"] + 20)
+    demo_page.mouse.move(line["x"] + line["width"] * 0.2, line["y"])
     demo_page.mouse.down()
-    demo_page.mouse.move(box["x"] + 260, box["y"] + 20, steps=10)
+    demo_page.mouse.move(line["x"] + line["width"] * 0.8, line["y"], steps=10)
     demo_page.mouse.up()
 
     assert demo_page.evaluate("window.getSelection().toString().trim()") != ""
@@ -353,8 +366,34 @@ def test_row_targets_are_touch_sized_and_separated(keyed_page: Page):
         })()"""
     )
     assert measured["count"] > 0
-    assert measured["minHeight"] >= ROW_CONTROL_PX
+    assert measured["minHeight"] >= ROW_TARGET_PX
     assert measured["minGap"] >= ROW_GAP_PX
+
+
+def test_the_list_marker_sits_on_its_own_row(keyed_page: Page):
+    """An outside marker aligns to the label's first line box. An inline-block label taller
+    than its text drags the marker up to the line the box sits on, leaving the bullet
+    floating above and left of the words it belongs to."""
+    measured = keyed_page.evaluate(
+        """(() => {
+            var labels = Array.from(document.querySelectorAll("li.recipe-row > .item-label"));
+            return labels.map((el) => {
+                var box = el.getBoundingClientRect();
+                var range = document.createRange();
+                range.selectNodeContents(el);
+                var text = range.getBoundingClientRect();
+                return {
+                    display: getComputedStyle(el).display,
+                    above: text.top - box.top,
+                    below: box.bottom - text.bottom,
+                };
+            });
+        })()"""
+    )
+    assert measured
+    for row in measured:
+        assert row["display"] == "block", row
+        assert abs(row["above"] - row["below"]) <= 4, row
 
 
 # Everything a cook is meant to be able to hit. Anything paintable but inert (the `#`
@@ -377,7 +416,11 @@ def _audit_targets(page: Page) -> list[dict]:
     audited = []
     for i in range(targets.count()):
         el = targets.nth(i)
-        el.scroll_into_view_if_needed()
+        # Centred rather than merely visible: the toolbar is pinned to the bottom-right
+        # corner and is meant to float over whatever is under it, so a row left resting at
+        # the bottom edge would report the toolbar as an interceptor. In-flow neighbours,
+        # which is what this audit is for, move with the row
+        el.evaluate("(el) => el.scrollIntoView({ block: 'center' })")
         box = el.bounding_box()
         if box is None:
             continue
@@ -412,8 +455,8 @@ def test_every_tap_target_is_touch_sized(page: Page, recipe: str):
     targets = _audit_targets(_fresh(page, recipe))
     assert targets
 
-    small = [t for t in targets if t["height"] < ROW_CONTROL_PX]
-    assert not small, f"targets under {ROW_CONTROL_PX}px tall: {small}"
+    small = [t for t in targets if t["height"] < ROW_TARGET_PX]
+    assert not small, f"targets under {ROW_TARGET_PX}px tall: {small}"
 
 
 @pytest.mark.parametrize("recipe", [DEMO_RECIPE, KEYED_RECIPE, TEST_RECIPE])
