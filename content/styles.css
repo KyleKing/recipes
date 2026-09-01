@@ -141,6 +141,9 @@ pre code {
 a {
 	color: var(--color-link);
 	text-decoration: none;
+	/* A source link often shows its bare URL, which has nothing to wrap on and pushes a
+	   phone into sideways scrolling */
+	overflow-wrap: anywhere;
 }
 a:hover {
 	text-decoration: underline;

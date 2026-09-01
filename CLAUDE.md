@@ -70,6 +70,7 @@ Browser tests verify interactive features:
 - List markers sitting beside their own text, and rows clearing the target floor
 - Inline cooking-temperature hints, the dossier's doneness range, and the flash a row
     gives when a completed step retires it
+- A bare source URL wrapping instead of widening the page on a phone
 
 `content/reference/nested_list_demo.dj` exists solely for these tests. It carries the
 nested ingredient groups, nested numbered steps, wrapping lines, and inline links that
@@ -305,9 +306,16 @@ is that a step naming an ingredient by a word the declaration does not lead with
 "shrimp" for "raw shrimp, defrosted") passes unflagged.
 
 A key must also name the ingredient itself. `validateIngredientRefs` rejects one carrying a
-digit or beginning with a measurement word, which is how `cup-baking-soda` and
-`juice-of-1-lime` spelled the same ingredient differently in every recipe and hid it from
-both reference tables.
+digit, beginning with a measurement word, or built only from qualifiers, which is how
+`cup-baking-soda`, `juice-of-1-lime`, and `packed-light` spelled the same ingredient
+differently in every recipe and hid it from both reference tables. The qualifier-only rule
+is what catches a span that stopped at "or": `[Steamed brown]{ing="steamed-brown"} or white
+rice` left the rice unkeyed and bound browning a chicken to it. A broken key also blinds the
+mention check, since the ingredient it should match is spelled as something else, so the two
+rules are worth reading together.
+
+Keys are slugged with accents folded away, never dropped: `jalapeño` is `jalapeno`, and the
+`jalape-o` a naive slug produces answers to nothing.
 
 `goBuild/substitutions.go` parses `content/reference/*substitutions*.dj` into
 `public/_static/substitutions.json`, keyed by ingredient. A heading follows

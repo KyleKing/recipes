@@ -21,6 +21,7 @@ Tests verify:
 - localStorage persistence across reloads, 48h progress expiry, and cross-recipe sweeping
 - Copying remaining ingredients as djot
 - iPad landscape split layout, its floating-toolbar clearance, and the split-view toggle
+- A bare source URL wrapping rather than widening the page on a phone
 
 Test Recipes:
 - /main/fried_rice.html - Primary test recipe
@@ -49,6 +50,7 @@ DEMO_RECIPE = "/reference/nested_list_demo.html"  # Nested lists, wrapping lines
 RECIPE_WITH_LINKS = "/main/chickpea_tikka_masala.html"
 KEYED_RECIPE = "/dessert/chocolate_chip_cookies.html"  # Carries `ing=` step references
 TEMPERATURE_RECIPE = "/seafood/salmon_with_blackened_seasoning.html"  # Salmon has a chart
+BARE_URL_RECIPE = "/sides/asparagus.html"  # Its source link shows the whole URL as its text
 
 IPAD_MINI_LANDSCAPE = {"width": 1133, "height": 744}
 EXPIRY_MS = 48 * 60 * 60 * 1000
@@ -1270,6 +1272,18 @@ def test_scroll_room_stops_at_the_collapsed_toolbar(phone_context, recipe: str):
     )
     assert gap["clears"], "content must not end underneath the collapsed toolbar"
     assert gap["below"] <= 80, f"reserved {gap['below']}px below the content, expected the toolbar's ~58px"
+
+
+def test_a_bare_url_does_not_widen_the_page(phone_context):
+    """A source link written as its own URL has nothing to wrap on, so without a wrapping
+    rule it drags the whole page sideways on a phone.
+    """
+    page = phone_context.new_page()
+    page.goto(BASE_URL + BARE_URL_RECIPE)
+    width = page.evaluate(
+        "() => [document.documentElement.scrollWidth, document.documentElement.clientWidth]"
+    )
+    assert width[0] <= width[1] + 1, f"page scrolls sideways: content {width[0]}px in {width[1]}px"
 
 
 def test_every_format_reserves_the_same_toolbar_clearance(recipe_page: Page):
