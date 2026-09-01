@@ -533,6 +533,18 @@ def test_the_dossier_carries_the_whole_doneness_range(salmon_page: Page):
     )
 
 
+def test_a_missing_substitute_offers_to_add_one(salmon_page: Page):
+    """With 21 entries against a few hundred ingredients, missing is the common state, so it
+    hands off to the reference page's own editor rather than being a dead end."""
+    info_mode(salmon_page, True)
+    _salmon_row(salmon_page).locator("> .item-label").click()
+
+    expect(salmon_page.locator(".panel-empty")).to_be_visible()
+    link = salmon_page.locator(".panel-add-substitute")
+    expect(link).to_have_attribute(
+        "href", "/reference/ingredient_substitutions.html?add-substitute=salmon&name=Salmon"
+    )
+
 
 # --- Retirement -------------------------------------------------------------
 

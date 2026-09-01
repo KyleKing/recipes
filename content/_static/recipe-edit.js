@@ -594,6 +594,30 @@
 		body.appendChild(note);
 	}
 
+	// The dossier's "no substitute recorded" state links here, so adding one runs through the
+	// same branch and pull request as any other edit rather than a second write path
+	function requestedSubstitution() {
+		var params = new URLSearchParams(window.location.search);
+		var key = (params.get("add-substitute") || "").replace(/[^a-z0-9-]/g, "");
+		if (!key) return null;
+		var name = (params.get("name") || key)
+			.replace(/[^\w %()./,'-]/g, "")
+			.slice(0, 80)
+			.trim();
+		return { key: key, name: name || key };
+	}
+
+	function scaffoldSubstitution(text, request) {
+		return `${text.replace(/\s+$/, "")}
+
+### 1 cup [${request.name}]{ ing="${request.key}" }
+
+-
+
+When this stands in and when it does not.
+`;
+	}
+
 	async function openDialog() {
 		var body = dialogBody();
 		var dialog = dialogElement();
@@ -615,7 +639,8 @@
 			message(dialogBody(), "edit-status", `${sourcePath()} not found`);
 			return;
 		}
-		showEditor(source);
+		var request = requestedSubstitution();
+		showEditor(source, request ? scaffoldSubstitution(source.text, request) : undefined);
 	}
 
 	function showEditor(source, draft) {
@@ -646,6 +671,7 @@
 		if (!button) return;
 		button.style.display = "inline-block";
 		button.addEventListener("click", openDialog);
+		if (requestedSubstitution()) openDialog();
 		loadOpenPr();
 	}
 

@@ -817,6 +817,11 @@ h3:hover .header-anchor,
 	font-style: italic;
 }
 
+.panel-add-substitute {
+	display: inline-block;
+	margin-bottom: 8px;
+}
+
 body.has-selection {
 	scroll-padding-bottom: 45vh;
 }

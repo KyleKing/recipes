@@ -8,6 +8,7 @@
 	var SUBSTITUTIONS_URL = "/_static/substitutions.json";
 	var INGREDIENT_INDEX_URL = "/_static/ingredient-index.json";
 	var TEMPERATURES_URL = "/_static/temperatures.json";
+	var SUBSTITUTIONS_PAGE = "/reference/ingredient_substitutions.html";
 	// Width and shape decide the split, never the pointer: a desktop window wide enough to
 	// hold both panes benefits from the reference rail exactly as an iPad does
 	var SPLIT_QUERY = "(min-width: 1000px) and (min-aspect-ratio: 4/3)";
@@ -465,6 +466,18 @@
 		body.appendChild(block);
 	}
 
+	// With 21 entries against a few hundred ingredients, missing is the common state, so it
+	// hands off to the reference page's own editor rather than being a dead end
+	function addSubstituteLink(body, row) {
+		var span = row.label.querySelector(".ing-ref");
+		var name = span ? span.textContent.trim() : ownText(row.li);
+		var link = document.createElement("a");
+		link.className = "panel-add-substitute";
+		link.href = `${SUBSTITUTIONS_PAGE}?add-substitute=${encodeURIComponent(row.keys[0])}&name=${encodeURIComponent(name)}`;
+		link.textContent = "Add a substitute";
+		body.appendChild(link);
+	}
+
 	function renderIngredientPanel(body, row, data) {
 		heading(body, ownText(row.li));
 
@@ -478,6 +491,7 @@
 			});
 		} else {
 			paragraph(body, "No substitute recorded for this ingredient.", "panel-empty");
+			addSubstituteLink(body, row);
 		}
 
 		var steps = row.keys.flatMap((key) => rowsByKey.get(key)?.step || []);
