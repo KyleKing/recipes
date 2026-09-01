@@ -67,6 +67,9 @@ Browser tests verify interactive features:
 - Reset progress, collapse all, toolbar toggle, copy remaining ingredients
 - 48h progress expiry and cross-recipe sweeping of stale localStorage keys
 - iPad landscape split layout, its floating-toolbar clearance, and the split-view toggle
+- List markers sitting beside their own text, and rows clearing the target floor
+- Inline cooking-temperature hints, the dossier's doneness range, and the flash a row
+    gives when a completed step retires it
 
 `content/reference/nested_list_demo.dj` exists solely for these tests. It carries the
 nested ingredient groups, nested numbered steps, wrapping lines, and inline links that
@@ -112,9 +115,11 @@ Browser tests run automatically via `hk` pre-commit hook when code files are mod
 - `listItemConversion()`: Renders checkboxes for task lists
 - `writeIndexes()`: Generates all index pages from `RecipeMap`
 - `validateInternalLinks()`: Fails the build on any `href` or `src` pointing at a missing
-    file. Runs before minification, so it matches quoted attributes. Off-site schemes and
-    `/pagefind/` (written later by the pagefind CLI) are exempt; URL fragments are stripped
-    rather than checked, because recipe.js injects header anchor ids at runtime
+    file, or at a fragment naming no `id` in the target page. Runs before minification, so
+    it matches quoted attributes. Off-site schemes and `/pagefind/` (written later by the
+    pagefind CLI) are exempt. Section ids come from the build, so a deep link into a
+    substitution or temperature entry is checked; only recipe.js's header anchors are
+    injected at runtime, and those are never written into the HTML
 
 **goBuild/schemas.go** - Data structures:
 
@@ -196,9 +201,13 @@ silently.
 
 **Interaction rules** (`content/_static/recipe.js`):
 
-- Ingredients and steps share one row model. A row's `.item-label` is its only tap target
-    and is at least 44px tall; `--row-gap` in `content/styles.css` keeps adjacent targets
-    from abutting. A row carries no control of its own, so reading is plain text
+- Ingredients and steps share one row model. A row's `.item-label` is its only tap target;
+    `--row-gap` in `content/styles.css` keeps adjacent targets from abutting. A row carries
+    no control of its own, so reading is plain text
+- The label is a block box with symmetric `--row-pad`, which is what puts the list marker
+    beside its own text. An inline-block taller than its line drags the marker up to the
+    line the box sits on, leaving the bullet floating above and left of the words. A row is
+    text with padding rather than a button, so its height floor is lower than a control's
 - A row that references ingredients gets a `.has-info` class, and the `.ing-ref` spans
     inside it a dotted underline. The underline is a hint only. Making it its own tap
     target was tried and reverted: on an ingredient row it covers most of the label, which
@@ -214,6 +223,14 @@ silently.
 - `unmeasured` -> `measured` -> `spent` are three separate ingredient states. Checking a
     row means measured; completing a step marks the ingredients it references as spent.
     Spent is derived from step state on every load, never stored
+- A row that goes spent because a step was just completed flashes once (`just-spent`). In
+    split view that change happens in the other pane, where the cook is not looking. Only a
+    toggle announces itself: restoring stored progress on load must not light the page up,
+    or the flash stops meaning anything
+- An ingredient with a recorded cooking temperature carries the recommended reading inline,
+    dimmed, so following a step never costs a lookup. The dossier holds the rest of the
+    range. The hint is generated after load, so `ownText` strips it and it never follows a
+    copy or a panel title
 - A section's whole heading is its collapse target, and both the `+`/`-` glyph and the `#`
     header anchor inside it are indicators that take no pointer events at all. The glyph alone
     measured 13x24 with the anchor beside it, so a tap that drifted right jumped the page and
@@ -279,7 +296,19 @@ out of it because the browser tests pin its exact shape.
 `public/_static/substitutions.json`, keyed by ingredient. A heading follows
 `### <amount> <Name>[, <use>]`; add `{ing="..."}` above a heading the pattern cannot read.
 `goBuild/ingredient_refs.go` writes `public/_static/ingredient-index.json`, mapping each
-key to the recipes declaring it. The page fetches both lazily on the first panel open.
+key to the recipes declaring it. Reference pages declare keys so they can be looked up by
+ingredient, and are left out of that index because they are not recipes. The page fetches
+both lazily on the first panel open. An ingredient with no entry offers to add one, which
+opens the reference page's own editor through
+`?add-substitute=<key>&name=<name>`, so it lands on the same branch and pull request as any
+other edit.
+
+`goBuild/temperatures.go` parses `content/reference/cooking_temperatures.dj` into
+`public/_static/temperatures.json`. A `### [Name]{ing="a b c"}` heading answers to every
+name an ingredient is written under across the corpus, and the item marked `(recommended)`
+supplies the reading the recipe page hints beside the ingredient. The build fails on an
+alias no recipe declares, since it could never surface. Unlike the dossier tables this one
+is fetched on load, because the inline hint must not wait for a tap.
 
 ### Editing and pull requests
 
