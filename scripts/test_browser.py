@@ -556,6 +556,30 @@ def _spent_names(page: Page) -> list[str]:
     )
 
 
+def test_a_retiring_ingredient_announces_itself(keyed_page: Page):
+    """In split view the step is in one pane and the ingredients it just retired are in the
+    other, so a row that changes off-screen has to say so on its own."""
+    step = keyed_page.locator("ol.recipe-steps > li.recipe-row.has-info").first
+    toggle(step)
+
+    flashed = keyed_page.locator("ul.task-list > li.just-spent")
+    expect(flashed.first).to_be_attached()
+    expect(flashed.first).to_have_class(re.compile("spent"))
+    expect(keyed_page.locator("ul.task-list > li.just-spent")).to_have_count(0, timeout=3000)
+
+
+def test_reopening_a_recipe_does_not_flash_what_was_already_spent(keyed_page: Page):
+    """The flash reports a change. Restored progress is not one, and a page that lit up on
+    every load would train the cook to ignore it."""
+    toggle(keyed_page.locator("ol.recipe-steps > li.recipe-row.has-info").first)
+    expect(keyed_page.locator("ul.task-list > li.spent").first).to_be_attached()
+
+    keyed_page.reload()
+    keyed_page.wait_for_selector("ul.task-list > li.spent")
+
+    assert keyed_page.locator("ul.task-list > li.just-spent").count() == 0
+
+
 def test_completing_a_step_retires_its_ingredients(keyed_page: Page):
     """One touch on a multi-ingredient step spends every ingredient it names."""
     step = keyed_page.locator("ol.recipe-steps > li").filter(has_text="In a small bowl").first

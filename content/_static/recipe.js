@@ -5,6 +5,7 @@
 	var PROGRESS_MAX_AGE_MS = 48 * 60 * 60 * 1000;
 	var STORAGE_PREFIX = "recipe-progress-";
 	var COPY_FEEDBACK_MS = 1500;
+	var RETIRE_FLASH_MS = 1200;
 	var SUBSTITUTIONS_URL = "/_static/substitutions.json";
 	var INGREDIENT_INDEX_URL = "/_static/ingredient-index.json";
 	var TEMPERATURES_URL = "/_static/temperatures.json";
@@ -242,14 +243,14 @@
 		state[row.storageKey] = done;
 		saveState(state, true);
 
-		applyRetirement();
+		applyRetirement(true);
 		updateSectionSummaries();
 		updateButtonVisibility();
 	}
 
 	// A step consumes its ingredients: completing it spends them, and an ingredient stays
 	// spent only while some completed step still claims it
-	function applyRetirement() {
+	function applyRetirement(announce) {
 		var spent = new Set();
 		stepRows.forEach((row) => {
 			if (isDone(row)) {
@@ -259,11 +260,22 @@
 			}
 		});
 		ingredientRows.forEach((row) => {
-			row.li.classList.toggle(
-				"spent",
-				row.keys.some((key) => spent.has(key)),
-			);
+			var was = row.li.classList.contains("spent");
+			var now = row.keys.some((key) => spent.has(key));
+			row.li.classList.toggle("spent", now);
+			if (announce && now && !was) flashRetired(row);
 		});
+	}
+
+	// In split view the step is in one pane and the ingredients it just retired are in the
+	// other, so a row that changes off-screen has to say so on its own
+	function flashRetired(row) {
+		row.li.classList.remove("just-spent");
+		void row.li.offsetWidth;
+		row.li.classList.add("just-spent");
+		setTimeout(() => {
+			row.li.classList.remove("just-spent");
+		}, RETIRE_FLASH_MS);
 	}
 
 	function setupIngredientRows() {

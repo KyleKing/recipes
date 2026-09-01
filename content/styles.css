@@ -501,6 +501,28 @@ li.recipe-row.lit > .item-label {
 	list-style-type: "· ";
 }
 
+/* A step completed in the other pane retires ingredients where the cook is not looking, so
+   the row marks itself once as it goes */
+@keyframes retire-flash {
+	from {
+		background: var(--color-lit);
+	}
+	to {
+		background: transparent;
+	}
+}
+
+li.recipe-row.just-spent > .item-label {
+	animation: retire-flash 1.2s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	li.recipe-row.just-spent > .item-label {
+		animation: none;
+		background: var(--color-lit);
+	}
+}
+
 .task-list li.spent.completed {
 	list-style-type: "✓ ";
 }

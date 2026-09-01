@@ -612,7 +612,7 @@
 
 ### 1 cup [${request.name}]{ ing="${request.key}" }
 
-- 
+-
 
 When this stands in and when it does not.
 `;
