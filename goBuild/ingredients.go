@@ -332,31 +332,10 @@ func isSkippablePOS(pos string) bool {
 	return skip[pos]
 }
 
-// isIngredientQualifier returns true if the adjective is meaningful for ingredients
-// (not a size, prep method, or generic descriptor)
+// isIngredientQualifier reports whether an adjective distinguishes one ingredient from
+// another, as "white" beans and "black" pepper do, rather than merely describing it
 func isIngredientQualifier(adj string) bool {
-	// Skip sizes
-	sizes := map[string]bool{
-		"large": true, "medium": true, "small": true,
-		"whole": true, "half": true,
-	}
-	if sizes[adj] {
-		return false
-	}
-
-	// Skip preparation methods (past participles used as adjectives)
-	prepMethods := map[string]bool{
-		"chopped": true, "diced": true, "minced": true, "sliced": true,
-		"grated": true, "shredded": true, "crushed": true, "cooked": true,
-		"fresh": true, "dried": true, "ground": true,
-	}
-	if prepMethods[adj] {
-		return false
-	}
-
-	// Include color/type qualifiers that distinguish ingredients
-	// e.g., "white" beans, "black" pepper, "red" pepper
-	return true
+	return !preparationWords[adj] && adj != "half"
 }
 
 func removeParenthetical(s string) string {

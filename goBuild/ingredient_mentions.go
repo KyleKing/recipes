@@ -9,22 +9,31 @@ import (
 	"github.com/sivukhin/godjot/djot_parser"
 )
 
-// Words that qualify an ingredient rather than name it. Peeling them off the front of a
-// declared name is what lets "light brown sugar" answer a step that writes "brown sugar".
-var ingredientQualifiers = map[string]bool{
-	"baby": true, "chilled": true, "chopped": true, "coarsely": true, "cold": true,
-	"cooked": true, "crumbled": true, "crushed": true, "cubed": true, "diced": true,
-	"dried": true, "drained": true, "dry": true, "extra": true, "finely": true,
-	"firm": true, "fresh": true, "freshly": true, "frozen": true, "grated": true,
-	"ground": true, "halved": true, "hot": true, "jumbo": true, "kosher": true,
-	"large": true, "lean": true, "light": true, "low": true, "medium": true,
-	"melted": true, "mild": true, "minced": true, "packed": true, "peeled": true,
-	"plain": true, "pure": true, "raw": true, "refrigerated": true, "ripe": true,
-	"roasted": true, "room": true, "salted": true, "shredded": true, "sifted": true,
-	"skinless": true, "sliced": true, "small": true, "smoked": true, "soft": true,
-	"softened": true, "sweetened": true, "thawed": true, "thin": true, "thinly": true,
-	"toasted": true, "unbleached": true, "uncooked": true, "unsalted": true,
-	"unsweetened": true, "warm": true, "whole": true,
+// Sizes and preparation methods, which describe an ingredient without naming it
+var preparationWords = map[string]bool{
+	"chopped": true, "cooked": true, "crushed": true, "diced": true, "dried": true,
+	"fresh": true, "grated": true, "ground": true, "large": true, "medium": true,
+	"minced": true, "shredded": true, "sliced": true, "small": true, "whole": true,
+}
+
+// The rest of the words that qualify an ingredient rather than name it. Peeling a qualifier
+// off the front of a declared name is what lets "light brown sugar" answer a step that
+// writes "brown sugar".
+var otherQualifiers = map[string]bool{
+	"baby": true, "chilled": true, "coarsely": true, "cold": true, "crumbled": true,
+	"cubed": true, "drained": true, "dry": true, "extra": true, "finely": true,
+	"firm": true, "freshly": true, "frozen": true, "halved": true, "hot": true,
+	"jumbo": true, "kosher": true, "lean": true, "light": true, "low": true,
+	"melted": true, "mild": true, "packed": true, "peeled": true, "plain": true,
+	"pure": true, "raw": true, "refrigerated": true, "ripe": true, "roasted": true,
+	"room": true, "salted": true, "sifted": true, "skinless": true, "smoked": true,
+	"soft": true, "softened": true, "sweetened": true, "thawed": true, "thin": true,
+	"thinly": true, "toasted": true, "unbleached": true, "uncooked": true,
+	"unsalted": true, "unsweetened": true, "warm": true,
+}
+
+func isQualifier(word string) bool {
+	return preparationWords[word] || otherQualifiers[word]
 }
 
 var alphaWordRe = regexp.MustCompile(`[a-z][a-z']*`)
@@ -36,7 +45,7 @@ func mentionAliases(name string) []string {
 	words := alphaWordRe.FindAllString(strings.ToLower(name), -1)
 	var aliases []string
 	for i := range words {
-		if i > 0 && !ingredientQualifiers[words[i-1]] {
+		if i > 0 && !isQualifier(words[i-1]) {
 			break
 		}
 		rest := words[i:]
