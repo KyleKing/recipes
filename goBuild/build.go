@@ -284,6 +284,7 @@ func parseDjotFiles(publicDir string, rMap RecipeMap, cache *RecipeCache) filepa
 			err = validateNoDuplicateHeaders(ast, path)
 			ExitOnError(err)
 			ExitOnError(validateIngredientRefs(ast, path))
+			ExitOnError(validateIngredientMentions(ast, path))
 
 			// Extract ingredients for caching
 			ingredients := extractIngredientsFromDjot(ast)

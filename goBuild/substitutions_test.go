@@ -79,3 +79,28 @@ func TestValidateIngredientKeyShape(t *testing.T) {
 	require.Error(t, err)
 	assert.Contains(t, err.Error(), "cup-baking-soda (starts with a measurement word)")
 }
+
+func TestMentionAliases(t *testing.T) {
+	// Peeling stops at the first word that is not a qualifier, so a bare "sugar" never matches
+	assert.Equal(t, []string{"light brown sugar", "brown sugar"}, mentionAliases("light brown sugar"))
+	assert.Equal(t, []string{"raw shrimp defrosted", "shrimp defrosted"}, mentionAliases("raw shrimp; defrosted"))
+	// A short lone word matches ordinary cooking prose rather than the ingredient
+	assert.Equal(t, []string{"flour"}, mentionAliases("flour"))
+	assert.Empty(t, mentionAliases("oil"))
+}
+
+func TestValidateIngredientMentions(t *testing.T) {
+	declared := "## Ingredients\n\n- [ ] 1 cup [light brown sugar]{ing=\"brown-sugar\"}\n\n## Recipe\n\n"
+
+	assert.NoError(t, validateIngredientMentions(
+		djot_parser.BuildDjotAst([]byte(declared+"1. Beat the [brown sugar]{ing=\"brown-sugar\"} in\n")), "ok.dj"))
+
+	// A hyphenated compound is a different word, and a note is not a step
+	assert.NoError(t, validateIngredientMentions(
+		djot_parser.BuildDjotAst([]byte(declared+"1. Bake until golden brown\n\n## Notes\n\n- Brown sugar keeps it moist\n")), "ok.dj"))
+
+	err := validateIngredientMentions(
+		djot_parser.BuildDjotAst([]byte(declared+"1. Beat the brown sugar in\n")), "bad.dj")
+	require.Error(t, err)
+	assert.Contains(t, err.Error(), `"brown sugar"`)
+}

@@ -292,6 +292,23 @@ an answer: run it, read the diff, fix what it missed. Already-keyed lines are le
 a hand-corrected file survives a rerun, and `content/reference/nested_list_demo.dj` is kept
 out of it because the browser tests pin its exact shape.
 
+`goBuild/ingredient_mentions.go` holds the corpus to that first pass. The build fails when a
+step in the Recipe section writes an ingredient's name without linking it, since the step
+then retires nothing and the ingredient's substitutions and temperature stay hidden. An
+ingredient answers to its whole declared name and to that name with leading qualifiers
+peeled off, so "light brown sugar" catches a step saying "brown sugar" while a bare "sugar"
+never matches. That stops one word short on purpose: matching any word of a multi-word name
+flags "baking sheet" for baking powder and "golden brown" for brown sugar, which is what
+made the first attempt unusable. Notes and other prose sections are exempt, because a
+variation mentioned there is not a step and linking it would retire the ingredient. The cost
+is that a step naming an ingredient by a word the declaration does not lead with (bare
+"shrimp" for "raw shrimp, defrosted") passes unflagged.
+
+A key must also name the ingredient itself. `validateIngredientRefs` rejects one carrying a
+digit or beginning with a measurement word, which is how `cup-baking-soda` and
+`juice-of-1-lime` spelled the same ingredient differently in every recipe and hid it from
+both reference tables.
+
 `goBuild/substitutions.go` parses `content/reference/*substitutions*.dj` into
 `public/_static/substitutions.json`, keyed by ingredient. A heading follows
 `### <amount> <Name>[, <use>]`; add `{ing="..."}` above a heading the pattern cannot read.
