@@ -32,14 +32,17 @@ UNITS = {
     "jars", "kg", "l", "lb", "lbs", "leaf", "leaves", "liter", "liters", "loaf", "ml", "oz",
     "ounce", "ounces", "package", "packages", "packet", "pinch", "pint", "pkg", "pound",
     "pounds", "quart", "quarts", "recipe", "scoop", "sheet", "sheets", "slice", "slices",
-    "sprig", "sprigs", "stalk", "stalks", "stick", "sticks", "tbsp", "tbsps", "tablespoon",
+    "block", "blocks", "sprig", "sprigs", "stalk", "stalks", "stick", "sticks", "tbsp", "tbsps", "tablespoon",
     "tablespoons", "tsp", "tsps", "teaspoon", "teaspoons", "tin", "wedge", "wedges",
 }
 # Only size and freshness. Words like "ground" or "smoked" belong to the ingredient's name.
 LEADING_ADJECTIVES = {"extra", "extra-large", "fresh", "freshly", "jumbo", "large", "medium", "small"}
-FILLER = {"a", "an", "about", "approx", "of", "or", "plus", "roughly", "some"}
+FILLER = {"a", "an", "about", "and", "approx", "of", "or", "plus", "roughly", "some", "to"}
 
-QUANTITY = re.compile(r"^[~≈]?\d+([./x×-]\d+)*(\s+\d+/\d+)?\s*")
+# Recipes write amounts as "1/2", "1⁄2", and "½" alike. Missing the unicode forms
+# leaves the unit inside the wrapped name, which keys the ingredient by its measurement.
+FRACTIONS = "½¼¾⅓⅔⅛⅜⅝⅞"
+QUANTITY = re.compile(rf"^[~≈]?[\d{FRACTIONS}]+([./⁄x×-][\d{FRACTIONS}]+)*(\s+\d+[/⁄]\d+)?\s*")
 PARENTHETICAL = re.compile(r"^\([^)]*\)\s*")
 WORD = re.compile(r"^[A-Za-z][\w'-]*\s*")
 # `[text]{...}` and `[text](...)` are already spoken for; never wrap inside one.
