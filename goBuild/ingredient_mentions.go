@@ -151,7 +151,9 @@ func collectMentionTargets(node djot_parser.TreeNode[djot_parser.DjotNode], inTa
 }
 
 // A step that writes an ingredient's name without linking it leaves that ingredient
-// unretired when the step is completed, and hides its substitutions and temperature
+// unretired when the step is completed, and hides its substitutions and temperature. Only
+// the first step naming one is held to that, because a later step works on what the first
+// already took out of the pantry rather than on the raw ingredient.
 func validateIngredientMentions(ast []djot_parser.TreeNode[djot_parser.DjotNode], path string) error {
 	var declared []declaredIngredient
 	var steps []djot_parser.TreeNode[djot_parser.DjotNode]
@@ -160,6 +162,7 @@ func validateIngredientMentions(ast []djot_parser.TreeNode[djot_parser.DjotNode]
 	}
 
 	var missed []string
+	claimed := map[string]bool{}
 	for _, step := range steps {
 		var prose strings.Builder
 		linked := map[string]bool{}
@@ -167,7 +170,7 @@ func validateIngredientMentions(ast []djot_parser.TreeNode[djot_parser.DjotNode]
 		text := prose.String()
 		reported := map[string]bool{}
 		for _, ingredient := range declared {
-			if linked[ingredient.key] || reported[ingredient.key] {
+			if linked[ingredient.key] || reported[ingredient.key] || claimed[ingredient.key] {
 				continue
 			}
 			for _, alias := range mentionAliases(ingredient.name) {
@@ -176,6 +179,11 @@ func validateIngredientMentions(ast []djot_parser.TreeNode[djot_parser.DjotNode]
 					reported[ingredient.key] = true
 					break
 				}
+			}
+		}
+		for _, keys := range []map[string]bool{linked, reported} {
+			for key := range keys {
+				claimed[key] = true
 			}
 		}
 	}

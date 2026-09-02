@@ -303,8 +303,12 @@ ingredient answers to its whole declared name and to that name with leading qual
 peeled off, so "light brown sugar" catches a step saying "brown sugar" while a bare "sugar"
 never matches. That stops one word short on purpose: matching any word of a multi-word name
 flags "baking sheet" for baking powder and "golden brown" for brown sugar, which is what
-made the first attempt unusable. Notes and other prose sections are exempt, because a
-variation mentioned there is not a step and linking it would retire the ingredient. The cost
+made the first attempt unusable. Only the first step naming an
+ingredient is held to this: a later step works on what that one already took out of the
+pantry (chopped asparagus, the sauce whisked two steps ago) rather than on the raw
+ingredient, so linking it again would claim a second draw the recipe never makes. Notes and
+other prose sections are exempt, because a variation mentioned there is not a step and
+linking it would retire the ingredient. The cost
 is that a step naming an ingredient by a word the declaration does not lead with (bare
 "shrimp" for "raw shrimp, defrosted") passes unflagged.
 

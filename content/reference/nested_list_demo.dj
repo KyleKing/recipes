@@ -33,7 +33,7 @@ steps, wrapping lines, and links inside list items.
 
    1. First nested sub-step
 
-   1. Second nested sub-step
+   1. Second nested sub-step drawing again on the [leaf ingredient]{ ing="leaf-ingredient" }
 
 1. An intentionally long step that wraps across several rendered rows so that the margin
 click zone can be verified on a continuation row rather than only on the first row of

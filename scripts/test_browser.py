@@ -645,18 +645,18 @@ def test_retirement_is_reversible(keyed_page: Page):
     assert _spent_names(keyed_page) == []
 
 
-def test_ingredient_stays_spent_while_another_step_claims_it(keyed_page: Page):
-    """Flour is used twice, so unmarking one of its steps must not un-spend it."""
-    first = keyed_page.locator("ol.recipe-steps > li").filter(has_text="In a small bowl").first
-    second = keyed_page.locator("ol.recipe-steps ol.recipe-steps > li").filter(
-        has_text="Beat in flour"
+def test_ingredient_stays_spent_while_another_step_claims_it(demo_page: Page):
+    """An ingredient two steps draw on stays spent while either of them is done."""
+    first = demo_page.locator("ol.recipe-steps > li").filter(has_text="Plain first step").first
+    second = demo_page.locator("ol.recipe-steps ol.recipe-steps > li").filter(
+        has_text="Second nested sub-step"
     ).first
 
     toggle(first)
     toggle(second)
     toggle(first)
 
-    assert _spent_names(keyed_page) == ["all-purpose flour"]
+    assert _spent_names(demo_page) == ["leaf ingredient"]
 
 
 def test_spent_is_distinct_from_measured(keyed_page: Page):

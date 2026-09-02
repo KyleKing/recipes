@@ -1,6 +1,7 @@
 package goBuild
 
 import (
+	"strings"
 	"testing"
 
 	"github.com/sivukhin/godjot/djot_parser"
@@ -110,4 +111,20 @@ func TestValidateIngredientMentions(t *testing.T) {
 		djot_parser.BuildDjotAst([]byte(declared+"1. Beat the brown sugar in\n")), "bad.dj")
 	require.Error(t, err)
 	assert.Contains(t, err.Error(), `"brown sugar"`)
+}
+
+func TestMentionsOnlyBindTheFirstStep(t *testing.T) {
+	declared := "## Ingredients\n\n- [ ] 1 lb [asparagus]{ing=\"asparagus\"}\n\n## Recipe\n\n"
+
+	// The second step works on what the first one already took, so it may write the name bare
+	assert.NoError(t, validateIngredientMentions(
+		djot_parser.BuildDjotAst([]byte(declared+
+			"1. Chop the [asparagus]{ing=\"asparagus\"}\n1. Cook the asparagus 5 minutes\n")), "ok.dj"))
+
+	// An ingredient no step ever links is still reported on the step that first names it
+	err := validateIngredientMentions(
+		djot_parser.BuildDjotAst([]byte(declared+
+			"1. Chop the asparagus\n1. Cook the asparagus 5 minutes\n")), "bad.dj")
+	require.Error(t, err)
+	assert.Equal(t, 1, strings.Count(err.Error(), "asparagus\" in"))
 }
