@@ -156,9 +156,12 @@ def free_regions(line: str) -> list[tuple[int, int]]:
     return regions
 
 
-def annotate_step(line: str, index: list[tuple[str, str]]) -> tuple[str, bool]:
-    """Wrap the first mention of each ingredient this step names."""
-    used, edits = set(), []
+def annotate_step(line: str, index: list[tuple[str, str]], used: set[str]) -> tuple[str, bool]:
+    """Wrap each ingredient this step is the first to name.
+
+    `used` carries the keys earlier steps already claimed and gains the ones this step takes.
+    """
+    edits = []
     for lo, hi in free_regions(line):
         segment = line[lo:hi]
         taken: list[tuple[int, int]] = []
@@ -221,6 +224,7 @@ def process(text: str, known: set[str]) -> tuple[str, dict]:
         reverse=True,
     )
     section = ""
+    used: set[str] = set()
     for i, line in enumerate(lines):
         if match := HEADING.match(line):
             if len(match.group(1)) == 2:
@@ -231,8 +235,9 @@ def process(text: str, known: set[str]) -> tuple[str, dict]:
         stats["steps"] += 1
         if "ing=" in line:
             stats["bound"] += 1
+            used.update(k for keys in re.findall(r'ing="([^"]+)"', line) for k in keys.split())
             continue
-        updated, changed = annotate_step(line, index)
+        updated, changed = annotate_step(line, index, used)
         lines[i] = updated
         stats["bound"] += int(changed)
 

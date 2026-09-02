@@ -291,7 +291,9 @@ nothing. Name matching was rejected: it binds only 72% of steps.
 corpus (99.8% of ingredients keyed, 66% of steps bound; the unbound remainder is mostly
 steps that name no ingredient, such as "Preheat oven to 350F"). It reads the ingredient's
 name out of the line by stripping quantities, units, parentheticals, and trailing
-qualifiers, then wraps matching prose in the steps. Name matching is an authoring aid, not
+qualifiers, then wraps the first step that mentions each one, leaving later steps bare to
+match the build's first-mention rule. Run it on the file you are adding: a sweep over the
+whole corpus overwrites hand-corrected bindings with fresh name guesses. Name matching is an authoring aid, not
 an answer: run it, read the diff, fix what it missed. Already-keyed lines are left alone, so
 a hand-corrected file survives a rerun, and `content/reference/nested_list_demo.dj` is kept
 out of it because the browser tests pin its exact shape.
