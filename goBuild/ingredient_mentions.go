@@ -2,6 +2,7 @@ package goBuild
 
 import (
 	"fmt"
+	"path/filepath"
 	"regexp"
 	"sort"
 	"strings"
@@ -87,6 +88,15 @@ type declaredIngredient struct {
 	name string
 }
 
+// Where an alias sits in the prose, excluding the boundary characters the pattern consumes
+func mentionSpans(alias, text string) [][2]int {
+	var spans [][2]int
+	for _, m := range mentionPattern(alias).FindAllStringSubmatchIndex(text, -1) {
+		spans = append(spans, [2]int{m[3], m[4]})
+	}
+	return spans
+}
+
 // Prose of one step with every already-linked span dropped, alongside the keys it links.
 // A nested sub-step is its own step, so its text never counts twice.
 func stepProse(node djot_parser.TreeNode[djot_parser.DjotNode], prose *strings.Builder, linked map[string]bool) {
@@ -161,24 +171,42 @@ func validateIngredientMentions(ast []djot_parser.TreeNode[djot_parser.DjotNode]
 		collectMentionTargets(node, false, false, false, &declared, &steps)
 	}
 
-	var missed []string
+	// Reference pages are not recipes. nested_list_demo.dj deliberately draws on one
+	// ingredient twice so the browser tests can pin what the page does with it.
+	freeToRepeat := filepath.Base(filepath.Dir(path)) == categoryReference
+
+	var missed, repeated []string
 	claimed := map[string]bool{}
 	for _, step := range steps {
 		var prose strings.Builder
 		linked := map[string]bool{}
 		stepProse(step, &prose, linked)
 		text := prose.String()
+		// A shorter declared name sitting inside a longer one is not a mention of it:
+		// "peanut butter" is not the butter, and "chickpea pasta" is not the chickpeas
+		var covering [][2]int
+		for _, ingredient := range declared {
+			for _, alias := range mentionAliases(ingredient.name) {
+				covering = append(covering, mentionSpans(alias, text)...)
+			}
+		}
 		reported := map[string]bool{}
 		for _, ingredient := range declared {
 			if linked[ingredient.key] || reported[ingredient.key] || claimed[ingredient.key] {
 				continue
 			}
 			for _, alias := range mentionAliases(ingredient.name) {
-				if mentionPattern(alias).MatchString(text) {
-					missed = append(missed, fmt.Sprintf("%q in %q", alias, strings.TrimSpace(text)))
-					reported[ingredient.key] = true
-					break
+				if !standsAlone(mentionSpans(alias, text), covering) {
+					continue
 				}
+				missed = append(missed, fmt.Sprintf("%q in %q", alias, strings.TrimSpace(text)))
+				reported[ingredient.key] = true
+				break
+			}
+		}
+		for key := range linked {
+			if claimed[key] && !freeToRepeat {
+				repeated = append(repeated, fmt.Sprintf("%q in %q", key, strings.TrimSpace(text)))
 			}
 		}
 		for _, keys := range []map[string]bool{linked, reported} {
@@ -187,9 +215,28 @@ func validateIngredientMentions(ast []djot_parser.TreeNode[djot_parser.DjotNode]
 			}
 		}
 	}
-	if len(missed) == 0 {
-		return nil
+	if len(missed) > 0 {
+		sort.Strings(missed)
+		return fmt.Errorf("%s: steps name an ingredient without linking it: %s", path, strings.Join(missed, "; "))
 	}
-	sort.Strings(missed)
-	return fmt.Errorf("%s: steps name an ingredient without linking it: %s", path, strings.Join(missed, "; "))
+	if len(repeated) > 0 {
+		sort.Strings(repeated)
+		return fmt.Errorf("%s: a later step links an ingredient an earlier step already took, so drop the span and leave the words bare: %s", path, strings.Join(repeated, "; "))
+	}
+	return nil
+}
+
+// True when at least one of an alias's matches is not swallowed by a longer name's match
+func standsAlone(spans, covering [][2]int) bool {
+	for _, span := range spans {
+		buried := false
+		for _, other := range covering {
+			wider := other[1]-other[0] > span[1]-span[0]
+			buried = buried || (wider && other[0] <= span[0] && other[1] >= span[1])
+		}
+		if !buried {
+			return true
+		}
+	}
+	return false
 }

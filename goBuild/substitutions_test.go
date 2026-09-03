@@ -63,18 +63,19 @@ func TestValidateIngredientRefs(t *testing.T) {
 
 func TestValidateIngredientKeyShape(t *testing.T) {
 	tests := map[string]string{
-		"brown-sugar":       "",
-		"all-purpose-flour": "",
-		"orange-juice":      "",
-		"cup-baking-soda":   "starts with a measurement word",
-		"of-black-beans":    "starts with a measurement word",
-		"basmati-rice-200g": "carries a quantity",
-		"juice-of-1-lemon":  "carries a quantity",
-		"piece-kombu":       "starts with a measurement word",
-		"packed-light":      "names only a qualifier",
-		"steamed-brown":     "names only a qualifier",
-		"sliced-pickled":    "names only a qualifier",
-		"skinless":          "names only a qualifier",
+		"brown-sugar":          "",
+		"all-purpose-flour":    "",
+		"orange-juice":         "",
+		"cup-baking-soda":      "starts with a measurement word",
+		"of-black-beans":       "starts with a measurement word",
+		"basmati-rice-200g":    "carries a quantity",
+		"juice-of-1-lemon":     "carries a quantity",
+		"piece-kombu":          "starts with a measurement word",
+		"boxes-chickpea-pasta": "starts with a measurement word",
+		"packed-light":         "names only a qualifier",
+		"steamed-brown":        "names only a qualifier",
+		"sliced-pickled":       "names only a qualifier",
+		"skinless":             "names only a qualifier",
 	}
 	for key, reason := range tests {
 		assert.Equal(t, reason, malformedKey(key), key)
@@ -127,4 +128,34 @@ func TestMentionsOnlyBindTheFirstStep(t *testing.T) {
 			"1. Chop the asparagus\n1. Cook the asparagus 5 minutes\n")), "bad.dj")
 	require.Error(t, err)
 	assert.Equal(t, 1, strings.Count(err.Error(), "asparagus\" in"))
+}
+
+func TestAShorterNameInsideALongerOneIsNotAMention(t *testing.T) {
+	declared := "## Ingredients\n\n- [ ] 1/2 cup [butter]{ing=\"butter\"}\n" +
+		"- [ ] 1/2 cup [peanut butter]{ing=\"peanut-butter\"}\n\n## Recipe\n\n"
+
+	assert.NoError(t, validateIngredientMentions(
+		djot_parser.BuildDjotAst([]byte(declared+
+			"1. Mix in the [peanut butter]{ing=\"peanut-butter\"}\n")), "ok.dj"))
+
+	// The dairy butter standing on its own is still caught
+	err := validateIngredientMentions(
+		djot_parser.BuildDjotAst([]byte(declared+
+			"1. Beat the [peanut butter]{ing=\"peanut-butter\"} with the butter\n")), "bad.dj")
+	require.Error(t, err)
+	assert.Contains(t, err.Error(), `"butter" in`)
+}
+
+func TestALaterStepMayNotRelinkAnIngredient(t *testing.T) {
+	declared := "## Ingredients\n\n- [ ] 1 lb [asparagus]{ing=\"asparagus\"}\n\n## Recipe\n\n"
+	linkedTwice := declared +
+		"1. Chop the [asparagus]{ing=\"asparagus\"}\n1. Cook the [asparagus]{ing=\"asparagus\"} 5 minutes\n"
+
+	err := validateIngredientMentions(djot_parser.BuildDjotAst([]byte(linkedTwice)), "main/bad.dj")
+	require.Error(t, err)
+	assert.Contains(t, err.Error(), "already took")
+
+	// The demo page draws on one ingredient twice so the browser tests can pin the behaviour
+	assert.NoError(t, validateIngredientMentions(
+		djot_parser.BuildDjotAst([]byte(linkedTwice)), "reference/nested_list_demo.dj"))
 }

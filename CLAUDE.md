@@ -306,9 +306,18 @@ peeled off, so "light brown sugar" catches a step saying "brown sugar" while a b
 never matches. That stops one word short on purpose: matching any word of a multi-word name
 flags "baking sheet" for baking powder and "golden brown" for brown sugar, which is what
 made the first attempt unusable. Only the first step naming an
-ingredient is held to this: a later step works on what that one already took out of the
-pantry (chopped asparagus, the sauce whisked two steps ago) rather than on the raw
-ingredient, so linking it again would claim a second draw the recipe never makes. Notes and
+ingredient may link it, and a later step that relinks the same key fails the build: that
+step works on what the first already took out of the pantry (chopped asparagus, the sauce
+whisked two steps ago) rather than on the raw ingredient, so a second span claims a draw the
+recipe never makes and puts a dotted underline where nothing is consumed. Write the words
+bare there. Reference pages are exempt, since `nested_list_demo.dj` draws on one ingredient
+twice to pin what the page does with it. Two genuinely separate entries (a filling cinnamon
+and a garnish cinnamon) are different keys, so each still gets its own first link.
+
+A name matched inside a longer declared name is not a mention of it, which is what lets
+"peanut butter" and "chickpea pasta" stand without flagging the butter or the chickpeas. The
+suppression is keyed on the declaration, so a span that swallows its measurement
+(`boxes chickpea pasta`) breaks it and the shorter name starts firing again. Notes and
 other prose sections are exempt, because a variation mentioned there is not a step and
 linking it would retire the ingredient. The cost
 is that a step naming an ingredient by a word the declaration does not lead with (bare
