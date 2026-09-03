@@ -7,7 +7,6 @@
 	var COPY_FEEDBACK_MS = 1500;
 	var RETIRE_FLASH_MS = 1200;
 	var SUBSTITUTIONS_URL = "/_static/substitutions.json";
-	var INGREDIENT_INDEX_URL = "/_static/ingredient-index.json";
 	var TEMPERATURES_URL = "/_static/temperatures.json";
 	var SUBSTITUTIONS_PAGE = "/reference/ingredient_substitutions.html";
 	// Width and shape decide the split, never the pointer: a desktop window wide enough to
@@ -352,15 +351,13 @@
 
 	var referenceData = null;
 
-	// Both tables are static build output, so one fetch per page load serves every dossier
+	// Static build output, so one fetch per page load serves every dossier
 	function loadReferenceData() {
 		if (referenceData) return referenceData;
-		referenceData = Promise.all([
-			fetch(SUBSTITUTIONS_URL).then((r) => r.json()),
-			fetch(INGREDIENT_INDEX_URL).then((r) => r.json()),
-		])
-			.then(([substitutions, index]) => ({ substitutions: substitutions, index: index }))
-			.catch(() => ({ substitutions: {}, index: {} }));
+		referenceData = fetch(SUBSTITUTIONS_URL)
+			.then((r) => r.json())
+			.then((substitutions) => ({ substitutions: substitutions }))
+			.catch(() => ({ substitutions: {} }));
 		return referenceData;
 	}
 
@@ -512,24 +509,6 @@
 			steps.forEach((step) => {
 				jumpButton(body, step, `Step ${step.number}: ${ownText(step.li)}`);
 			});
-		}
-
-		var elsewhere = row.keys
-			.flatMap((key) => data.index[key] || [])
-			.filter((use) => use.url !== window.location.pathname);
-		if (elsewhere.length > 0) {
-			paragraph(body, "Also used in", "panel-label");
-			var list = document.createElement("ul");
-			list.className = "panel-recipes";
-			elsewhere.forEach((use) => {
-				var li = document.createElement("li");
-				var link = document.createElement("a");
-				link.href = use.url;
-				link.textContent = use.name;
-				li.appendChild(link);
-				list.appendChild(li);
-			});
-			body.appendChild(list);
 		}
 	}
 

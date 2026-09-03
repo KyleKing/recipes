@@ -56,6 +56,41 @@ var nonIngredientRoots = map[string]bool{
 // oilSimilarityThreshold is used for vector-based oil normalization
 const oilSimilarityThreshold = 0.45
 
+var accentFold = strings.NewReplacer(
+	"á", "a", "à", "a", "â", "a", "ä", "a", "ã", "a",
+	"é", "e", "è", "e", "ê", "e", "ë", "e",
+	"í", "i", "ì", "i", "î", "i", "ï", "i",
+	"ó", "o", "ò", "o", "ô", "o", "ö", "o", "õ", "o",
+	"ú", "u", "ù", "u", "û", "u", "ü", "u",
+	"ñ", "n", "ç", "c",
+)
+
+// ingredientEquivalence collapses tokens that are interchangeable enough to count as the
+// same ingredient when scoring related recipes (e.g. any bell pepper color, or a mild white
+// fish standing in for another). Seeded by hand from the tokens this corpus actually
+// produces (see .recipe-cache/ingredient-tokens.json), not from an imported food ontology:
+// a general taxonomy assumes far more ingredients than a few hundred recipes ever use, and
+// picks equivalences a specific dish would disagree with
+var ingredientEquivalence = map[string]string{
+	"cod fillet":      "white fish",
+	"red snapper":     "white fish",
+	"red bell pepper": "bell pepper",
+	"green pepper":    "bell pepper",
+	"green peppers":   "bell pepper",
+	"red pepper":      "bell pepper",
+}
+
+// addToken folds accents and equivalence variants to one canonical spelling before a token
+// enters the similarity index, so recipes differing only in spelling or in which
+// interchangeable variant they name still register as sharing an ingredient
+func addToken(phrases map[string]bool, token string) {
+	token = accentFold.Replace(token)
+	if canonical, ok := ingredientEquivalence[token]; ok {
+		token = canonical
+	}
+	phrases[token] = true
+}
+
 // baseOilTypes are the canonical oil types we normalize to
 var baseOilTypes = []string{"olive oil", "sesame oil", "coconut oil", "vegetable oil"}
 
@@ -109,7 +144,7 @@ func extractIngredientsWithNLP(rawIngredients []string) map[string]bool {
 				phrase = normalizeOilWithSimilarity(nlp, phrase)
 
 				if len(phrase) >= 3 {
-					phrases[phrase] = true
+					addToken(phrases, phrase)
 					foundAnyToken = true
 
 					// Extract compound modifiers as separate ingredients
@@ -128,7 +163,7 @@ func extractIngredientsWithNLP(rawIngredients []string) map[string]bool {
 				if isIngredientPOS(token) && !token.IsStop {
 					lemma := strings.ToLower(token.Lemma)
 					if !measurementUnits[lemma] && len(lemma) >= 3 {
-						phrases[lemma] = true
+						addToken(phrases, lemma)
 						foundAnyToken = true
 					}
 				}
@@ -140,7 +175,7 @@ func extractIngredientsWithNLP(rawIngredients []string) map[string]bool {
 			lowerCleaned := strings.ToLower(cleaned)
 			for known := range knownIngredients {
 				if strings.Contains(lowerCleaned, known) {
-					phrases[known] = true
+					addToken(phrases, known)
 				}
 			}
 		}
@@ -271,7 +306,7 @@ func extractCompoundIngredients(tokens []spacy.Token, rootLower string, phrases 
 			// Only add if it's a noun (not adjective used as compound)
 			if (tok.POS == "NOUN" || tok.POS == "PROPN") && len(lemma) >= 3 {
 				if !measurementUnits[lemma] {
-					phrases[lemma] = true
+					addToken(phrases, lemma)
 				}
 			}
 		}

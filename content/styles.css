@@ -819,8 +819,7 @@ h3:hover .header-anchor,
 }
 
 .panel-substitution ul,
-.panel-temperature ul,
-.panel-recipes {
+.panel-temperature ul {
 	margin: 0 0 4px;
 	padding-left: 20px;
 }
@@ -1004,7 +1003,6 @@ body.has-selection {
 .edit-banner {
 	margin: 0 0 12px;
 	padding: 8px 12px;
-	border-left: 4px solid var(--color-link);
 	background: var(--color-lit);
 }
 
@@ -1017,7 +1015,6 @@ li.pending-removed > .item-label {
 li.pending-added {
 	margin: 0 0 var(--row-gap);
 	padding: 2px 6px;
-	border-left: 3px solid var(--color-link);
 	background: var(--color-lit);
 	font-weight: bold;
 	list-style-type: "+ ";

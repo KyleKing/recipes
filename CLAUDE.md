@@ -338,10 +338,10 @@ Keys are slugged with accents folded away, never dropped: `jalapeño` is `jalape
 `goBuild/substitutions.go` parses `content/reference/*substitutions*.dj` into
 `public/_static/substitutions.json`, keyed by ingredient. A heading follows
 `### <amount> <Name>[, <use>]`; add `{ing="..."}` above a heading the pattern cannot read.
-`goBuild/ingredient_refs.go` writes `public/_static/ingredient-index.json`, mapping each
-key to the recipes declaring it. Reference pages declare keys so they can be looked up by
-ingredient, and are left out of that index because they are not recipes. The page fetches
-both lazily on the first panel open. An ingredient with no entry offers to add one, which
+The page fetches it lazily on the first panel open. Finding the other recipes that use an
+ingredient goes through pagefind instead: each ingredient `li` carries
+`data-pagefind-filter="ingredient:<key>"`, and the search page offers a dropdown built from
+those keys. An ingredient with no entry offers to add one, which
 opens the reference page's own editor through
 `?add-substitute=<key>&name=<name>`, so it lands on the same branch and pull request as any
 other edit.

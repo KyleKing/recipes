@@ -18,6 +18,7 @@ import (
 	"github.com/sivukhin/godjot/djot_parser"
 	"github.com/sivukhin/godjot/djot_tokenizer"
 	"github.com/sivukhin/godjot/html_writer"
+	"github.com/sivukhin/godjot/tokenizer"
 )
 
 const IMAGE_PLACEHOLDER = "/_static/placeholder.png"
@@ -27,7 +28,15 @@ const IMAGE_PLACEHOLDER = "/_static/placeholder.png"
 func listItemConversion(s djot_parser.ConversionState, n func(c djot_parser.Children)) {
 	class := s.Node.Attributes.Get(djot_tokenizer.DjotAttributeClassKey)
 	if class == djot_parser.CheckedTaskItemClass || class == djot_parser.UncheckedTaskItemClass {
-		s.Writer.InTag("li")(func() {
+		var attrs []tokenizer.AttributeEntry
+		if keys := declaredKeysOf(s.Node); len(keys) > 0 {
+			filters := make([]string, len(keys))
+			for i, key := range keys {
+				filters[i] = "ingredient:" + key
+			}
+			attrs = append(attrs, tokenizer.AttributeEntry{Key: "data-pagefind-filter", Value: strings.Join(filters, ", ")})
+		}
+		s.Writer.InTag("li", attrs...)(func() {
 			s.Writer.WriteString("<input type=\"checkbox\"")
 			if class == djot_parser.CheckedTaskItemClass {
 				s.Writer.WriteString(" checked=\"\"")
@@ -498,8 +507,6 @@ func Build(publicDir string) {
 	log.Printf("[TIMING] Pass 3 (generate HTML): %v", time.Since(pass3Start))
 
 	err = writeSubstitutions(publicDir, contentDir(publicDir))
-	ExitOnError(err)
-	err = writeIngredientIndex(publicDir, rMap, cache)
 	ExitOnError(err)
 	err = writeTemperatures(publicDir, contentDir(publicDir), declaredIngredientKeys(rMap, cache))
 	ExitOnError(err)

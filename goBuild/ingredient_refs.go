@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
-	"path/filepath"
 	"regexp"
 	"sort"
 	"strings"
@@ -62,6 +61,19 @@ func walkIngredientKeys(node djot_parser.TreeNode[djot_parser.DjotNode], inTask 
 	for _, child := range node.Children {
 		walkIngredientKeys(child, inTask, declared, referenced)
 	}
+}
+
+// Keys declared directly on one ingredient's own task-list item, for tagging it as a
+// Pagefind filter so search can be narrowed to recipes using that ingredient
+func declaredKeysOf(node djot_parser.TreeNode[djot_parser.DjotNode]) []string {
+	declared, referenced := map[string]bool{}, map[string]bool{}
+	walkIngredientKeys(node, true, declared, referenced)
+	keys := make([]string, 0, len(declared))
+	for key := range declared {
+		keys = append(keys, key)
+	}
+	sort.Strings(keys)
+	return keys
 }
 
 func ingredientKeys(ast []djot_parser.TreeNode[djot_parser.DjotNode]) (declared map[string]bool, referenced map[string]bool) {
@@ -144,11 +156,6 @@ func validateIngredientRefs(ast []djot_parser.TreeNode[djot_parser.DjotNode], pa
 	return fmt.Errorf("%s: steps reference ingredients that no ingredient declares: %s", path, strings.Join(unknown, ", "))
 }
 
-type ingredientUse struct {
-	Name string `json:"name"`
-	Url  string `json:"url"`
-}
-
 func declaredIngredientKeys(rMap RecipeMap, cache *RecipeCache) map[string]bool {
 	keys := map[string]bool{}
 	for path := range rMap {
@@ -162,32 +169,6 @@ func declaredIngredientKeys(rMap RecipeMap, cache *RecipeCache) map[string]bool 
 		}
 	}
 	return keys
-}
-
-// A reference page declares keys so substitutions and temperatures can be looked up by
-// ingredient, but it is not a recipe and does not belong in "also used in"
-func isReferencePage(path string) bool {
-	return filepath.Base(filepath.Dir(path)) == "reference"
-}
-
-// Map every declared ingredient key to the recipes that use it, for the dossier's
-// "other recipes" list
-func writeIngredientIndex(publicDir string, rMap RecipeMap, cache *RecipeCache) error {
-	index := map[string][]ingredientUse{}
-	for path, recipe := range rMap {
-		cached, exists := cache.Get(path)
-		if !exists || isReferencePage(path) {
-			continue
-		}
-		declared, _ := ingredientKeys(cached.ast)
-		for key := range declared {
-			index[key] = append(index[key], ingredientUse{Name: recipe.name, Url: recipe.url})
-		}
-	}
-	for key := range index {
-		sort.Slice(index[key], func(i, j int) bool { return index[key][i].Name < index[key][j].Name })
-	}
-	return writeJson(filepath.Join(publicDir, "_static", "ingredient-index.json"), index)
 }
 
 func writeJson(path string, value any) error {
