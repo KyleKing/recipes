@@ -1,37 +1,44 @@
 # Kung Pao Chicken
 
-Based on [The Woks of Life](https://thewoksoflife.com/kung-pao-chicken/)
+Based on [The Woks of Life](https://thewoksoflife.com/kung-pao-chicken/) and
+[Chrissy Teigen Cravings Hungry for More](https://www.penguinrandomhouse.com/books/553580/cravings-hungry-for-more-by-chrissy-teigen-with-adeena-sussman)
+([wayback](http://web.archive.org/web/20250616010240/https://www.penguinrandomhouse.com/books/553580/cravings-hungry-for-more-by-chrissy-teigen-with-adeena-sussman/)),
+pg. 141
 
-{ rating="0" image="None" }
+{ rating="5" image="kung_pao_roasted_broccoli.jpeg" }
 :::
 :::
+
+Includes the Sichuan chicken stir-fry and a roasted broccoli variant.
 
 ## Ingredients
 
-### Peanuts
+### Chicken
 
-- [ ] 1 tsp [vegetable oil, for peanuts]{ ing="vegetable-oil-for-peanuts" }
+#### Peanuts
+
+- [ ] 1 tsp [vegetable oil]{ ing="vegetable-oil-for-peanuts" }
 - [ ] 1 cup [raw shelled peanuts]{ ing="raw-shelled-peanuts" } (with or without the skin)
 
-### Chicken and Marinade
+#### Chicken and Marinade
 
 - [ ] 12 oz [chicken breast]{ ing="chicken-breast" }, cut into 3/4-inch cubes (or boneless skinless chicken thighs)
-- [ ] 1 tsp [vegetable oil, for the marinade]{ ing="vegetable-oil-for-the-marinade" }
-- [ ] 1 tsp [cornstarch, for the marinade]{ ing="cornstarch-for-the-marinade" }
+- [ ] 1 tsp [vegetable oil]{ ing="vegetable-oil-for-the-marinade" }
+- [ ] 1 tsp [cornstarch]{ ing="cornstarch-for-the-marinade" }
 - [ ] 1 tsp [Shaoxing wine]{ ing="shaoxing-wine" }
 - [ ] 1/8 tsp [salt]{ ing="salt" }
 - [ ] 1 pinch [white pepper]{ ing="white-pepper" }
 
-### Sauce
+#### Sauce
 
 - [ ] 1 Tbsp [light soy sauce]{ ing="light-soy-sauce" }
 - [ ] 1/2 tsp [dark soy sauce]{ ing="dark-soy-sauce" }
 - [ ] 1 Tbsp [rice wine vinegar]{ ing="rice-wine-vinegar" }
 - [ ] 1 tsp [sugar]{ ing="sugar" }
 - [ ] 3 Tbsps [water]{ ing="water" }
-- [ ] 1 tsp [cornstarch, for the sauce]{ ing="cornstarch-for-the-sauce" }
+- [ ] 1 tsp [cornstarch]{ ing="cornstarch-for-the-sauce" }
 
-### Stir-Fry
+#### Stir-Fry
 
 - [ ] 3 Tbsps [oil]{ ing="oil" }
 - [ ] 3 cloves [garlic]{ ing="garlic" }, smashed and sliced
@@ -40,7 +47,36 @@ Based on [The Woks of Life](https://thewoksoflife.com/kung-pao-chicken/)
 - [ ] 1/2 tsp [Sichuan peppercorn powder]{ ing="sichuan-peppercorn-powder" }
 - [ ] 6 [scallions]{ ing="scallions" }, white portions only, cut into 3/4-inch pieces
 
+### Roasted Broccoli
+
+#### Broccoli
+
+- [ ] 1/4 cup [vegetable oil]{ ing="vegetable-oil-for-roasting-broccoli" }
+- [ ] 1 Tbsp [sesame oil]{ ing="sesame-oil-for-roasting-broccoli" }
+- [ ] 1/4 tsp [cayenne pepper]{ ing="cayenne-pepper" }
+- [ ] 2 lbs [broccoli]{ ing="broccoli" } (2 smaller heads)
+- [ ] [salt and pepper]{ ing="salt-and-pepper-for-broccoli" }
+
+#### Kung Pao Sauce
+
+- [ ] 1/4 cup [Thai sweet chili sauce]{ ing="thai-sweet-chili-sauce" }
+- [ ] 2 Tbsp [oyster sauce]{ ing="oyster-sauce" }
+- [ ] 2 Tbsp [sesame oil]{ ing="sesame-oil-for-broccoli-sauce" }
+- [ ] 2 Tbsp [vegetable oil]{ ing="vegetable-oil-for-broccoli-sauce" }
+- [ ] 1.5 Tbsp [Sriracha]{ ing="sriracha" }
+- [ ] 1 Tbsp [soy sauce]{ ing="soy-sauce-for-broccoli-sauce" }
+- [ ] 1 Tbsp [unseasoned rice vinegar]{ ing="unseasoned-rice-vinegar" }
+- [ ] 2 cloves [garlic]{ ing="garlic-for-broccoli-sauce" }, finely minced
+
+#### Garnish
+
+- [ ] 1/2 cup [chopped salted roasted peanuts]{ ing="chopped-salted-roasted-peanuts" }
+- [ ] 1 [thinly sliced scallion]{ ing="thinly-sliced-scallion" }
+- [ ] 1 fresh [jalapeno]{ ing="jalapeno" }, sliced into rings
+
 ## Recipe
+
+### Chicken Stir-Fry
 
 1. Heat 1 tsp [oil]{ ing="vegetable-oil-for-peanuts" } in a wok or pan over medium heat and add 1 cup [raw shelled peanuts]{ ing="raw-shelled-peanuts" }. Stir constantly (or they’ll burn) for 3 minutes. Turn off the heat and stir for another minute using the residual heat in the wok. Set aside to cool completely so they turn crunchy.
 1. Combine the [chicken]{ ing="chicken-breast" } with 1 tsp each of [oil]{ ing="vegetable-oil-for-the-marinade" }, [cornstarch]{ ing="cornstarch-for-the-marinade" }, and [Shaoxing wine]{ ing="shaoxing-wine" }, 1/8 tsp [salt]{ ing="salt" }, and a pinch of [white pepper]{ ing="white-pepper" }. Set aside to marinate for 20 minutes.
@@ -50,8 +86,19 @@ Based on [The Woks of Life](https://thewoksoflife.com/kung-pao-chicken/)
 1. Add the chicken back to the pan and turn the heat to high. Stir-fry for 1 minute, then stir up the prepared sauce so the settled cornstarch is incorporated. Add the sauce to the wok and stir-fry for another minute; the sauce should thicken very quickly.
 1. Add the peanuts, give everything a final stir, and serve.
 
+### Roasted Broccoli Variant
+
+1. Preheat oven or air fryer to 400°F.
+1. Cut the [broccoli]{ ing="broccoli" } into florets, stems peeled and cut into 1/4-inch thick rounds.
+1. In a bowl, whisk together the [oils]{ ing="sesame-oil-for-roasting-broccoli vegetable-oil-for-roasting-broccoli" } and [cayenne pepper]{ ing="cayenne-pepper" }. Toss the broccoli with the mixture and season with [salt and pepper]{ ing="salt-and-pepper-for-broccoli" }.
+1. **Oven:** Spread on a rimmed baking sheet and roast until edges are blackened and crisp (20-25 min). **Air Fryer:** Arrange in basket in a single layer (work in batches if needed) and cook until charred and crisp (10-12 min), shaking halfway.
+1. Meanwhile, whisk together the [sauce]{ ing="thai-sweet-chili-sauce oyster-sauce sesame-oil-for-broccoli-sauce vegetable-oil-for-broccoli-sauce sriracha soy-sauce-for-broccoli-sauce unseasoned-rice-vinegar garlic-for-broccoli-sauce" } in a medium bowl.
+1. **Oven:** Toss broccoli with sauce directly on the pan, then broil until sauce is thick and bubbling (4-5 min). **Air Fryer:** Transfer broccoli to a bowl, toss with sauce, return to air fryer and cook until sauce is thick and bubbling (2-3 min).
+1. Transfer to a serving platter and garnish with [peanuts]{ ing="chopped-salted-roasted-peanuts" }, [scallion]{ ing="thinly-sliced-scallion" }, and [jalapeno]{ ing="jalapeno" }. Optionally, serve over rice.
+
 ## Notes
 
-- Substitute roasted shelled peanuts and skip the first step.
+- Substitute roasted shelled peanuts and skip the first chicken step.
 - Boneless skinless chicken thighs can replace the chicken breast.
 - Dried red chilies can be quite spicy; adjust to taste.
+- The broccoli variant is the rated vegetarian version.
