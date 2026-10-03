@@ -17,15 +17,14 @@ Includes the Sichuan chicken stir-fry and a roasted broccoli variant.
 
 #### Peanuts
 
-- [ ] 1 tsp [vegetable oil]{ ing="vegetable-oil-for-peanuts" }
-- [ ] 1 cup [raw shelled peanuts]{ ing="raw-shelled-peanuts" } (with or without the skin)
+- [ ] 1 cup [roasted shelled peanuts]{ ing="roasted-shelled-peanuts" }
 
 #### Chicken and Marinade
 
 - [ ] 12 oz [chicken breast]{ ing="chicken-breast" }, cut into 3/4-inch cubes (or boneless skinless chicken thighs)
 - [ ] 1 tsp [vegetable oil]{ ing="vegetable-oil-for-the-marinade" }
 - [ ] 1 tsp [cornstarch]{ ing="cornstarch-for-the-marinade" }
-- [ ] 1 tsp [Shaoxing wine]{ ing="shaoxing-wine" }
+- [ ] 1 tsp [dry sherry]{ ing="dry-sherry" } (or Shaoxing wine)
 - [ ] 1/8 tsp [salt]{ ing="salt" }
 - [ ] 1 pinch [white pepper]{ ing="white-pepper" }
 
@@ -43,8 +42,9 @@ Includes the Sichuan chicken stir-fry and a roasted broccoli variant.
 - [ ] 3 Tbsps [oil]{ ing="oil" }
 - [ ] 3 cloves [garlic]{ ing="garlic" }, smashed and sliced
 - [ ] 2 thin slices [ginger]{ ing="ginger" }, minced
-- [ ] 2 [dried red chilies]{ ing="dried-red-chilies" }, deseeded and chopped
-- [ ] 1/2 tsp [Sichuan peppercorn powder]{ ing="sichuan-peppercorn-powder" }
+- [ ] 2 [chiles de árbol]{ ing="chiles-de-arbol" } or other small dried red chilies, deseeded and chopped (or 1/2 tsp red pepper flakes)
+- [ ] 1/4 tsp [ground black pepper]{ ing="ground-black-pepper" }
+- [ ] 1/4 tsp [ground coriander]{ ing="ground-coriander" }
 - [ ] 6 [scallions]{ ing="scallions" }, white portions only, cut into 3/4-inch pieces
 
 ### Roasted Broccoli
@@ -78,13 +78,12 @@ Includes the Sichuan chicken stir-fry and a roasted broccoli variant.
 
 ### Chicken Stir-Fry
 
-1. Heat 1 tsp [oil]{ ing="vegetable-oil-for-peanuts" } in a wok or pan over medium heat and add 1 cup [raw shelled peanuts]{ ing="raw-shelled-peanuts" }. Stir constantly (or they’ll burn) for 3 minutes. Turn off the heat and stir for another minute using the residual heat in the wok. Set aside to cool completely so they turn crunchy.
-1. Combine the [chicken]{ ing="chicken-breast" } with 1 tsp each of [oil]{ ing="vegetable-oil-for-the-marinade" }, [cornstarch]{ ing="cornstarch-for-the-marinade" }, and [Shaoxing wine]{ ing="shaoxing-wine" }, 1/8 tsp [salt]{ ing="salt" }, and a pinch of [white pepper]{ ing="white-pepper" }. Set aside to marinate for 20 minutes.
+1. Combine the [chicken]{ ing="chicken-breast" } with 1 tsp each of [oil]{ ing="vegetable-oil-for-the-marinade" }, [cornstarch]{ ing="cornstarch-for-the-marinade" }, and [dry sherry]{ ing="dry-sherry" }, 1/8 tsp [salt]{ ing="salt" }, and a pinch of [white pepper]{ ing="white-pepper" }. Set aside to marinate for 20 minutes.
 1. In a small bowl, mix together [light soy sauce]{ ing="light-soy-sauce" }, [dark soy sauce]{ ing="dark-soy-sauce" }, [rice wine vinegar]{ ing="rice-wine-vinegar" }, [sugar]{ ing="sugar" }, [water]{ ing="water" }, and [cornstarch]{ ing="cornstarch-for-the-sauce" }. Set aside.
 1. Heat 2 Tbsps [oil]{ ing="oil" } in a wok or large skillet over high heat. Sear the chicken, remove from the wok to a bowl, and set aside.
-1. Turn the heat to low and add another Tbsp oil. Add the [garlic]{ ing="garlic" }, [ginger]{ ing="ginger" }, [chilies]{ ing="dried-red-chilies" }, [Sichuan peppercorn powder]{ ing="sichuan-peppercorn-powder" }, and [scallions]{ ing="scallions" }. Cook for 1-2 minutes until fragrant.
+1. Turn the heat to low and add another Tbsp oil. Add the [garlic]{ ing="garlic" }, [ginger]{ ing="ginger" }, [chiles]{ ing="chiles-de-arbol" }, [black pepper]{ ing="ground-black-pepper" }, [coriander]{ ing="ground-coriander" }, and [scallions]{ ing="scallions" }. Cook for 1-2 minutes until fragrant.
 1. Add the chicken back to the pan and turn the heat to high. Stir-fry for 1 minute, then stir up the prepared sauce so the settled cornstarch is incorporated. Add the sauce to the wok and stir-fry for another minute; the sauce should thicken very quickly.
-1. Add the peanuts, give everything a final stir, and serve.
+1. Add the [peanuts]{ ing="roasted-shelled-peanuts" }, give everything a final stir, and serve.
 
 ### Roasted Broccoli Variant
 
@@ -98,7 +97,8 @@ Includes the Sichuan chicken stir-fry and a roasted broccoli variant.
 
 ## Notes
 
-- Substitute roasted shelled peanuts and skip the first chicken step.
+- Dry sherry substitutes 1:1 for Shaoxing wine; use chicken broth for alcohol-free.
+- Black pepper and coriander approximate Sichuan peppercorn’s aroma without its numbing effect; use 1/2 tsp Sichuan peppercorn powder if available.
+- Chiles de árbol are the closest common substitute for Chinese dried chilies; use red pepper flakes if unavailable.
 - Boneless skinless chicken thighs can replace the chicken breast.
-- Dried red chilies can be quite spicy; adjust to taste.
 - The broccoli variant is the rated vegetarian version.
