@@ -41,7 +41,14 @@ jobs:
         id: gomod
         run: |
           set -euo pipefail
-          go get -u ./... | tee /tmp/gomod.log
+          # a dep can demand a newer toolchain than the pin; go get go@X
+          # bumps the go directive and auto fetches it for the retry
+          if ! go get -u ./... 2>&1 | tee /tmp/gomod.log; then
+            ver=$(sed -nE 's/.*requires go >= ([0-9.]+).*/\1/p' /tmp/gomod.log | sort -V | tail -1)
+            [ -n "$ver" ] || exit 1
+            go get "go@$ver"
+            go get -u ./... 2>&1 | tee /tmp/gomod.log
+          fi
           go mod tidy
           if git diff --quiet -- go.mod go.sum; then
             echo 'upgrades=false' >> "$GITHUB_OUTPUT"
