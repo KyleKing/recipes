@@ -1,0 +1,78 @@
+// Version literals this project pins in files it owns, checked by doneram.
+// The weekly Freshness workflow patches these and opens a draft PR.
+//
+// Pins inside template-managed files (the mise tools in
+// .config/mise/conf.d/template.toml, hk.pkl, and the ci and bump_version
+// workflows) are deliberately absent: my_go_template tracks those and they
+// arrive here through a copier update, so patching them locally would only
+// make the next update a merge.
+
+amends "package://github.com/kyleking/doneram/releases/download/v0.6.1/doneram@0.6.1#/Config.pkl"
+import "package://github.com/kyleking/doneram/releases/download/v0.6.1/doneram@0.6.1#/Config.pkl"
+
+local freshnessYml = ".github/workflows/freshness.yml"
+
+/// A `uses: owner/repo@<sha> # <tag>` GitHub Action pin, one capture group
+/// spanning the sha and the tag together, since github-action patches both
+/// as a single resolved value.
+local function actionPin(action: String): Config.Site = new {
+  file = freshnessYml
+  pattern = #"\#(action)@([0-9a-f]{40} # v[\d.]+)"#
+}
+
+tools = new {
+  ["checkout"] = new {
+    resolver = "github-action"
+    resolverName = "actions/checkout"
+    sites = new {
+      actionPin("actions/checkout")
+      new Config.Site { file = ".github/workflows/update_site.yml"; pattern = #"actions/checkout@([0-9a-f]{40} # v[\d.]+|v[\d.]+)"# }
+      new Config.Site { file = ".github/workflows/validate_pr.yml"; pattern = #"actions/checkout@([0-9a-f]{40} # v[\d.]+|v[\d.]+)"# }
+      new Config.Site { file = ".github/workflows/validate_pr.yml"; pattern = #"actions/checkout@([0-9a-f]{40} # v[\d.]+|v[\d.]+)"# }
+    }
+  }
+  ["create-github-app-token"] = new {
+    resolver = "github-action"
+    resolverName = "actions/create-github-app-token"
+    sites = new {
+      actionPin("actions/create-github-app-token")
+    }
+  }
+  ["create-pull-request"] = new {
+    resolver = "github-action"
+    resolverName = "peter-evans/create-pull-request"
+    sites = new {
+      actionPin("peter-evans/create-pull-request")
+    }
+  }
+  ["doneram"] = new {
+    resolver = "github-action"
+    resolverName = "kyleking/doneram"
+    sites = new {
+      actionPin("kyleking/doneram")
+    }
+  }
+  ["mise-action"] = new {
+    resolver = "github-action"
+    resolverName = "jdx/mise-action"
+    sites = new {
+      actionPin("jdx/mise-action")
+      new Config.Site { file = ".github/workflows/update_site.yml"; pattern = #"jdx/mise\-action@([0-9a-f]{40} # v[\d.]+|v[\d.]+)"# }
+      new Config.Site { file = ".github/workflows/validate_pr.yml"; pattern = #"jdx/mise\-action@([0-9a-f]{40} # v[\d.]+|v[\d.]+)"# }
+      new Config.Site { file = ".github/workflows/validate_pr.yml"; pattern = #"jdx/mise\-action@([0-9a-f]{40} # v[\d.]+|v[\d.]+)"# }
+    }
+  }
+  ["doneram-schema"] = new {
+    resolver = "github-release"
+    resolverName = "kyleking/doneram"
+    sites = new {
+      new Config.Site { file = ".doneram.pkl"; pattern = #"releases/download/v([\d.]+)/doneram"# }
+      new Config.Site { file = ".doneram.pkl"; pattern = #"doneram@([\d.]+)#/Config\.pkl"# }
+    }
+  }
+  ["doneram-version"] = new {
+    resolver = "github-release"
+    resolverName = "kyleking/doneram"
+    sites = new { new Config.Site { file = freshnessYml; pattern = #"version: v([\d.]+)"# } }
+  }
+}
