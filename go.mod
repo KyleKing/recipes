@@ -1,6 +1,6 @@
 module github.com/KyleKing/recipes
 
-go 1.25.0
+go 1.26.0
 
 require (
 	github.com/sivukhin/godjot v1.0.6
@@ -11,4 +11,4 @@ require github.com/am-sokolov/go-spacy v0.0.0-20250919212123-1d3a142ac336
 
 require go.yaml.in/yaml/v3 v3.0.5 // indirect
 
-require github.com/a-h/templ v0.3.1020
+require github.com/a-h/templ v0.3.1118

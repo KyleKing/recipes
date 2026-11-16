@@ -7,8 +7,8 @@
 // arrive here through a copier update, so patching them locally would only
 // make the next update a merge.
 
-amends "package://github.com/kyleking/doneram/releases/download/v0.6.1/doneram@0.6.1#/Config.pkl"
-import "package://github.com/kyleking/doneram/releases/download/v0.6.1/doneram@0.6.1#/Config.pkl"
+amends "package://github.com/kyleking/doneram/releases/download/v0.5.1/doneram@0.5.1#/Config.pkl"
+import "package://github.com/kyleking/doneram/releases/download/v0.5.1/doneram@0.5.1#/Config.pkl"
 
 local freshnessYml = ".github/workflows/freshness.yml"
 
